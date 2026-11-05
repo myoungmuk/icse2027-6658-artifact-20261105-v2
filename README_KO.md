@@ -62,3 +62,7 @@ OpenHands·SWE-bench Multimodal은 ICLR 2025, LLaMA-Reviewer는 ISSRE 2023으로
 Cihan과 Qwen technical report 2편은 preprint로 유지하고 웹 자료 2건과 구분한다.
 기존 HTTP 429 두 건의 보존 응답 재사용 사실도 유지한다. 세부 출처는 `bibliography/`에 있다.
 논문은 본문 9쪽＋참고문헌 1쪽, 총 10쪽이다. 실제 학회 업로드 완료를 뜻하지 않는다.
+
+## v6 추가 설명
+
+조건명 Adjusted, 14B의 예시 역할, rationale·병합후 추적 미실시, 적용판단 예시와 결과순서를 보완했다. 기존 저장응답의 동일과제 pair 사후분석과 고정선택 rationale 예시2건을 추가했다. 과거 원시판정·수치입력은 유지했고 새 추론·사람평가는 없다. 총10쪽이며 실제 최종 학회 업로드는 미실시다.

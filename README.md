@@ -8,7 +8,7 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v5`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v5).
+Version: [`2026.11.05-v6`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v6).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
@@ -88,3 +88,14 @@ citations are the SWE-bench Verified announcement and the Codex software website
 See `bibliography/VERIFICATION.json` and `bibliography/ADDITIONAL_VERIFICATION_V5.json`.
 The earlier two HTTP 429 fallbacks remain disclosed; these are not new successful
 requests. The manuscript remains nine body pages plus one reference page.
+
+## v6 clarification and saved-response analysis
+
+The configuration is called adjusted, with historical calibrated labels preserved.
+The redundant scale plot is omitted from the manuscript layout; its source is retained.
+The text clarifies the illustrative 14B anchor, rationale and post-merge limits, and
+the worked diagnostic decision. Two deterministic hosted-rationale examples and the
+small same-task control analysis are in [analysis_supplement_v6](analysis_supplement_v6/README.md).
+These are descriptive additions, not new inference or independent maintainer validation.
+The manuscript remains 9 body pages plus one reference page, with unchanged class,
+font size, margins, numerical inputs and bibliography.
