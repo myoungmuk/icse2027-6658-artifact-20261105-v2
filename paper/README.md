@@ -1,4 +1,4 @@
-# ICSE #6658 camera-ready candidate (2026-11-05, v6)
+# ICSE #6658 camera-ready candidate (2026-11-05, v7)
 
 The approved displayed title is **Beyond %Resolved:Reassessing SWE-bench Through Human
 and LLM Code Review**. Authors: Myeongmuk Kang and Geunseok Yang, Hankyong National University.
@@ -27,7 +27,7 @@ with a new directory outside this repository. This does not perform new inferenc
 This manuscript uses IEEE `10pt,conference` with the standard margins and body font size.
 The user's binding limit is **9 body pages + 1 reference page, 10 pages total**.
 Both user-supplied ORCIDs are included. Geunseok Yang is the user-confirmed corresponding author. The public artifact is versioned at
-https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v6 .
+https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v7 .
 The new Table IX reports the prospective disjoint pilot, separately from historical data.
 Shi's formal AI-SQE 2026 citation is verified through Crossref; the experimental
 method remains pinned to arXiv:2511.10865v1.
@@ -43,3 +43,11 @@ All 26 cited formal papers now have verified page ranges: 23 exact DOI records a
 three official ICLR proceedings records. Two preprints and two web/software citations
 remain explicitly identified. v6 adds editorial clarifications and a post-hoc saved-response supplement. Historical
 numerical inputs and raw verdicts remain unchanged; there are no new inference calls.
+
+
+v7 adds six post-hoc technical rationale probes against pinned upstream source.
+Five focused claims have local support; the Django gold regular-path PK objection
+is contradicted by existing cleanup. Explicit synthetic inputs and backend stand-ins
+limit these checks; no new inference, full harness runs or human ratings are added.
+Use `python ../tools/probe_rationale_cases.py --output <new-directory>` from paper/
+to reproduce the checks. The historical v6 supplement remains available.

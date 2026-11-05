@@ -630,19 +630,23 @@ for both the maintainer and Cihan adapters, and $4/10$ vs.\ $3/10$ for Shi draft
 These small paired samples provide no evidence of control separation.
 
 \subsection{Qualitative inspection of cited concerns}
-Naive Qwen-32B objects to missing test coverage on historically merged
-\texttt{django-10914}, and to possible \texttt{field.empty\_values} behavior on
-\texttt{django-13964}. These are disagreements under reduced packets: the archive does not
-show that maintainers considered these particular objections, nor that they are false.
-Adjudication requires repository context and an explicit validity rubric.
-For the hosted reviewer, the first two non-accepted agent cases in lexical instance-ID
-order cite lost ordering semantics (\texttt{django-11555}) and a missing empty-sequence
-guard (\texttt{django-12155}). These are reported rationales, not verified defects.
-The first also names ``the one Django merged'' despite source blinding, a possible
-recognition cue rather than proof of training contamination. Saved verdicts and
-selection details are in the artifact supplement. Similar Qwen
-patterns across Lite/Verified do not remove same-cohort development bias; the splits are
-not independent calibration-validation sets.
+Naive Qwen-32B cites omitted tests on gold \texttt{django-10914} and possible
+\texttt{field.empty\_values} behavior on gold \texttt{django-13964}; these concerns were not
+independently adjudicated. For the hosted reviewer, a post-hoc technical audit selects the
+first two non-accepted instances in lexical order within each of three strata: resolved
+agent ($30$ available), gold ($3$), and failing agent ($38$). We apply archived diffs to
+pinned upstream base files and execute extracted functions or branches with synthetic
+inputs and explicit backend stand-ins, not full project harnesses.
+
+The focused claims are locally supported in five cases. However, the gold
+\texttt{django-11179} objection that regular deletion leaves stale primary keys is
+contradicted by cleanup already present in the pinned code. Conversely, the gold
+\texttt{matplotlib-26113} empty-bin reduction concern is reproduced at branch level.
+These six checks do not estimate a hallucination rate, establish maintainer judgments,
+or adjudicate every objection. Exact snippets, inputs, bindings, outputs, hashes, and
+upstream licenses are supplied in the artifact. The \texttt{django-11555} rationale also
+names ``the one Django merged'' despite source blinding: a possible recognition cue,
+not proof of training contamination.
 
 \subsection{A human-review pilot}
 Author Myeongmuk Kang, a non-independent, source-blinded rater, reviewed $40$ packets from
@@ -710,8 +714,8 @@ recovery of missing identity.
 \textbf{Construct.} Historical merge outcomes can tolerate imperfections and depend on PR
 discussion, CI, project plans, and social context absent from packets. Our binary labels
 operationalize a reviewer decision, not a verified maintainer decision or an objection's
-truth. We did not adjudicate rejection rationales or measure post-merge bugs/churn;
-historical merges can contain defects. A single non-independent rater cannot supply that
+truth. The six technical probes provide no independent rationale adjudication or
+post-merge bugs/churn measurement; historical merges can contain defects. A single non-independent rater cannot supply that
 validation. Its shorter input limits further complicate human--LLM comparisons.
 
 \textbf{Internal.} Rubric development reused the evaluation gold cohort, and intermediate
@@ -790,20 +794,19 @@ calibration tasks, truthful and appropriately selected negative controls, and in
 human validation remain necessary before using such scores for merge decisions.
 
 \section*{Data and Artifact Availability}
-The versioned artifact (\texttt{2026.11.05-v6}) is available at
+The versioned artifact (\texttt{2026.11.05-v7}) is available at
 \url{https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2}.
-It preserves historical prompts, source keys, packets, verdicts, human-pilot records,
-and analysis scripts. Its historical \texttt{REPRODUCE.md} documents table and figure
-regeneration from stored verdicts; \texttt{tools/reproduce\_pilots.py} regenerates the
-new pilot analyses without inference. Historical JSON field names are documented separately
-from corrected metric terminology. The exact hosted model snapshot and intermediate rubric
-history remain unavailable. The pilot supplement records frozen inputs, raw responses,
-parser variants, and analysis; its prompts differ from the archived instrument.
+It contains archived prompts, keys, packets, verdicts, human-pilot records, adapted-pilot
+data, and licensed technical-check sources. See \texttt{historical\_analysis/REPRODUCE.md}
+and \texttt{tools/reproduce\_pilots.py} for saved-response analysis;
+\texttt{tools/probe\_rationale\_cases.py} regenerates the focused checks.
+The exact hosted snapshot and intermediate rubric history remain unavailable.
+Fresh inference is distinct from analysis reproduction.
 
 \section*{Acknowledgments}
-OpenAI Codex~\cite{openaicodex} was used to assist with manuscript revision, analysis code, figure generation,
-reference checking, and implementation of the adapted pilot experiments. The authors are responsible for verifying the scientific claims,
-calculations, references, and final manuscript.
+OpenAI Codex~\cite{openaicodex} assisted manuscript revision, analysis, figures, reference
+checks, and implementation of adapted pilots and technical probes. The authors are
+responsible for all scientific claims, calculations, references, and the final manuscript.
 
 \clearpage
 \bibliographystyle{IEEEtran}

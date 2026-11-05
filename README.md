@@ -8,7 +8,7 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v6`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v6).
+Version: [`2026.11.05-v7`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v7).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
@@ -72,11 +72,11 @@ See `historical_analysis/THIRD_PARTY_NOTICES.md` and the upstream license snapsh
 for third-party materials. This artifact does not relicense upstream code or data;
 no blanket license is assigned across the mixed-source historical collection.
 
-## Current factual and publication checks (v5)
+## Factual and publication checks recorded in v5
 
 The existing human-pilot rater is author-confirmed as Myeongmuk Kang. Prior review
-experience and his precise rubric-development role remain undocumented. No new
-human reviews, inference or numerical results were added.
+experience and his precise rubric-development role remain undocumented. That v5
+update added no human reviews, inference or numerical results.
 
 The bibliography now has verified page ranges for all 26 cited formal papers:
 23 exact DOI records and three official ICLR proceedings records. Eight additional
@@ -99,3 +99,25 @@ small same-task control analysis are in [analysis_supplement_v6](analysis_supple
 These are descriptive additions, not new inference or independent maintainer validation.
 The manuscript remains 9 body pages plus one reference page, with unchanged class,
 font size, margins, numerical inputs and bibliography.
+
+## v7 focused technical rationale checks
+
+The new [six-case audit](rationale_case_audit/README.md) checks exact archived
+patches against pinned upstream source. Five focused claims have local support;
+the django-11179 gold objection about regular-path PK cleanup is contradicted by
+existing code. These are post-hoc source/function/branch probes with explicit
+synthetic inputs and backend stand-ins, not full integration tests, independent
+human ratings or a reviewer correctness rate. Historical outputs are preserved.
+
+    python tools/probe_rationale_cases.py --output /path/to/new-output-directory
+
+For local upload preparation and optional supplied portal evidence, use:
+
+    python tools/verify_submission.py --output /path/to/new-check.json
+
+This tool follows this checkout's metadata and PDF, checks PDF metadata and visible
+title separately, and accepts --downloaded-pdf and --system-title-file. It performs
+no network access or upload and does not authenticate the supplied files' origin.
+The six-case probe uses Python standard library; the PDF checker requires PyMuPDF.
+The historical v6 supplement remains preserved; v7 adds technical evidence for
+its two resolved-agent examples and four further cases.

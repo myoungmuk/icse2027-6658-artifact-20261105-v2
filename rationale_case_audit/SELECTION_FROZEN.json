@@ -1,0 +1,100 @@
+{
+  "selection_type": "post_hoc_deterministic_technical_case_audit",
+  "selection_rule": "First two nonaccepted instances in lexicographic instance-ID order separately for resolved agent, gold, and failing agent, within archived Claude CLI reviewer outputs.",
+  "not_preregistered": true,
+  "selection_recorded_utc": "2026-11-05T07:18:47.928904+00:00",
+  "full_harness_runs": 0,
+  "independent_human_adjudications": 0,
+  "cases": [
+    {
+      "group": "resolved_agent",
+      "group_available_nonaccepted": 30,
+      "instance_id": "django__django-11555",
+      "packet_id": "pk_6f306de8e45c",
+      "repo": "django/django",
+      "base_commit": "8dd5877f58f84f2b11126afbd0813e24545919ed",
+      "changed_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "verdict_path": "historical_analysis/data/llm_reviews/verified/reviewer-claude-frontier/pk_6f306de8e45c.json",
+      "verdict_sha256": "e4affeef53c880c93230d99b0c1013fc5869f2b8a429c5cc444863f2a3959a15",
+      "packet_json_sha256": "725197bf3b720b8985a20f65b8a119713324864cb4453a81bfe35db48aefbec7",
+      "candidate_diff_sha256": "6629fdbb1942c19e1a2451d6a28f972fbf1bd8135334cb49c8310456ed7d3bfd"
+    },
+    {
+      "group": "resolved_agent",
+      "group_available_nonaccepted": 30,
+      "instance_id": "django__django-12155",
+      "packet_id": "pk_d8856beb1f80",
+      "repo": "django/django",
+      "base_commit": "e8fcdaad5c428878d0a5d6ba820d957013f75595",
+      "changed_files": [
+        "django/contrib/admindocs/utils.py"
+      ],
+      "verdict_path": "historical_analysis/data/llm_reviews/verified/reviewer-claude-frontier/pk_d8856beb1f80.json",
+      "verdict_sha256": "d561190cdf816a5cc5cc2e0bb590624869420bedb53409e0c121b12118ddeedd",
+      "packet_json_sha256": "0950385e9f3a13d8af4cffa02eb6ce213e64135e625dca0cf3101a725ec09162",
+      "candidate_diff_sha256": "003f1aefb05c244a3534a3bc042cffb60fa7c83f91a8723d8486250dd0ea8b1d"
+    },
+    {
+      "group": "gold",
+      "group_available_nonaccepted": 3,
+      "instance_id": "django__django-11179",
+      "packet_id": "pk_2f6179af8238",
+      "repo": "django/django",
+      "base_commit": "19fc6376ce67d01ca37a91ef2f55ef769f50513a",
+      "changed_files": [
+        "django/db/models/deletion.py"
+      ],
+      "verdict_path": "historical_analysis/data/llm_reviews/verified/reviewer-claude-frontier/pk_2f6179af8238.json",
+      "verdict_sha256": "bb8553fd41aed582e9eaa7632ca4925977e67d1b52c1c6449df5e1b9058d1764",
+      "packet_json_sha256": "2bbfb4ca43fadc313951ea91986fe408abe5e6b9f8a904ca395511ab581e1aa9",
+      "candidate_diff_sha256": "a1896338de07ff4fa040d7e692a1c954e44f3cac29f6db8bd7f15820a123b45f"
+    },
+    {
+      "group": "gold",
+      "group_available_nonaccepted": 3,
+      "instance_id": "matplotlib__matplotlib-26113",
+      "packet_id": "pk_bb39d399d903",
+      "repo": "matplotlib/matplotlib",
+      "base_commit": "5ca694b38d861c0e24cd8743753427dda839b90b",
+      "changed_files": [
+        "lib/matplotlib/axes/_axes.py"
+      ],
+      "verdict_path": "historical_analysis/data/llm_reviews/verified/reviewer-claude-frontier/pk_bb39d399d903.json",
+      "verdict_sha256": "e3058cc0b54be15612260dba3b5d4c01c5bd4976bfa25692fa14deba96fde20e",
+      "packet_json_sha256": "4d60b442d6de9452766da1bd89a25a8e1b1b7a2ff524c6a9015f559383f51be3",
+      "candidate_diff_sha256": "19289b1c984a6a351dd0f0f737ec91cf37ff8dde6251f67950b00bc21cf068ba"
+    },
+    {
+      "group": "failing_agent",
+      "group_available_nonaccepted": 38,
+      "instance_id": "astropy__astropy-13236",
+      "packet_id": "pk_ce4af30f136c",
+      "repo": "astropy/astropy",
+      "base_commit": "6ed769d58d89380ebaa1ef52b300691eefda8928",
+      "changed_files": [
+        "astropy/table/table.py"
+      ],
+      "verdict_path": "historical_analysis/data/llm_reviews/verified_negctrl/reviewer-claude-frontier/pk_ce4af30f136c.json",
+      "verdict_sha256": "5a83e5e2230dc28303c1fc0527f05e3a9a51d4d0dfd8822f6e2ef9bd861cc5a6",
+      "packet_json_sha256": "443d1555d82c02119077116865b217c44560f09a885222526ddd162864aef6c7",
+      "candidate_diff_sha256": "01c54824573ddea3e1d2559dd4ffd36654763429a0fb05426dcd14ced6c1636a"
+    },
+    {
+      "group": "failing_agent",
+      "group_available_nonaccepted": 38,
+      "instance_id": "django__django-13028",
+      "packet_id": "pk_d2cabcc85df3",
+      "repo": "django/django",
+      "base_commit": "78ad4b4b0201003792bfdbf1a7781cbc9ee03539",
+      "changed_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "verdict_path": "historical_analysis/data/llm_reviews/verified_negctrl/reviewer-claude-frontier/pk_d2cabcc85df3.json",
+      "verdict_sha256": "b21a624a91e77f2dcebae725d7f93be3a0c742f4b7fc4c607b692799078cc994",
+      "packet_json_sha256": "d1ccd97634c37d8e3c7ab88bf81b9af96ad35c2569cb77b17a468392766760c4",
+      "candidate_diff_sha256": "ba8904922f36b788f53e73f6a63fb39e66ba63801a28e891ef4b4a1b587f5d89"
+    }
+  ]
+}

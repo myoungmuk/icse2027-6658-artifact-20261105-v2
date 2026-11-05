@@ -1,4 +1,4 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-05 v6
+# ICSE 2027 #6658 공개 자료 — 2026-11-05 v7
 
 논문: **Beyond %Resolved:Reassessing SWE-bench Through Human and LLM Code Review**
 
@@ -66,3 +66,14 @@ Cihan과 Qwen technical report 2편은 preprint로 유지하고 웹 자료 2건�
 ## v6 추가 설명
 
 조건명 Adjusted, 14B의 예시 역할, rationale·병합후 추적 미실시, 적용판단 예시와 결과순서를 보완했다. 기존 저장응답의 동일과제 pair 사후분석과 고정선택 rationale 예시2건을 추가했다. 과거 원시판정·수치입력은 유지했고 새 추론·사람평가는 없다. 총10쪽이며 실제 최종 학회 업로드는 미실시다.
+
+## v7 기술적 거절 사유 점검과 제출 대조
+
+agent·gold·실패 패치에서 각2건을 사전순으로 골라 당시 base commit의 코드와 대조했다.
+선택한 국소 주장5건은 근거가 있었고 django-11179의 일반삭제 PK 미정리 주장은 기존
+정리 코드와 모순됐다. 전체 프로젝트 테스트·독립 인간 adjudication·정확도 추정은 아니다.
+원본 코드·patch 적용 결과·probe 입력/바인딩·결과·해시·해당 commit의 라이선스를 보존했다.
+
+새 제출 대조 도구 tools/verify_submission.py는 이 체크아웃의 최신 metadata/PDF를
+기본으로 사용한다. PDF metadata 제목과 실제 첫 페이지 제목을 별도로 확인한다.
+기존 v5 고정 경로를 쓰는 과거 도구 대신 새 도구를 사용한다. 실제 포털 접속·업로드는 하지 않는다.
