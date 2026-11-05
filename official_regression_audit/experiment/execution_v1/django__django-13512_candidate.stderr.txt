@@ -1,0 +1,32 @@
+test_json_display_for_field (admin_utils.tests.UtilsTests.test_json_display_for_field) ... 
+  test_json_display_for_field (admin_utils.tests.UtilsTests.test_json_display_for_field) (value={'a': '你好 世界'}) ... FAIL
+test_label_for_field (admin_utils.tests.UtilsTests.test_label_for_field)
+Tests for label_for_field ... ok
+test_prepare_value (forms_tests.field_tests.test_jsonfield.JSONFieldTest.test_prepare_value) ... FAIL
+
+======================================================================
+FAIL: test_json_display_for_field (admin_utils.tests.UtilsTests.test_json_display_for_field) (value={'a': '你好 世界'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13512/candidate/tests/admin_utils/tests.py", line 194, in test_json_display_for_field
+    self.assertEqual(
+AssertionError: '{"a": "\\u4f60\\u597d \\u4e16\\u754c"}' != '{"a": "你好 世界"}'
+- {"a": "\u4f60\u597d \u4e16\u754c"}
++ {"a": "你好 世界"}
+
+
+======================================================================
+FAIL: test_prepare_value (forms_tests.field_tests.test_jsonfield.JSONFieldTest.test_prepare_value)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13512/candidate/tests/forms_tests/field_tests/test_jsonfield.py", line 32, in test_prepare_value
+    self.assertEqual(field.prepare_value('你好，世界'), '"你好，世界"')
+AssertionError: '"\\u4f60\\u597d\\uff0c\\u4e16\\u754c"' != '"你好，世界"'
+- "\u4f60\u597d\uff0c\u4e16\u754c"
++ "你好，世界"
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=2)

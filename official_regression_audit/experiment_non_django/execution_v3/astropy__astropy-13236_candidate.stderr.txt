@@ -1,0 +1,101 @@
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/_pytest/config/__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.
+Plugin: helpconfig, Hook: pytest_cmdline_parse
+UsageError: while parsing the following warning configuration:
+
+  ignore:ASDF functionality for astropy is being moved.*:astropy.utils.exceptions.AstropyDeprecationWarning:astropy.io.misc.asdf.types
+
+This error occurred:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/_dev/scm_version.py", line 7, in <module>
+    version = get_version(root=pth.join('..', '..'), relative_to=__file__)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools_scm/__init__.py", line 146, in get_version
+    _version_missing(config)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools_scm/__init__.py", line 106, in _version_missing
+    raise LookupError(
+LookupError: setuptools-scm was unable to detect version for /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate.
+
+Make sure you're either building from a fully intact git repository or PyPI tarballs. Most other sources (such as GitHub's tarballs, a git checkout without the .git folder) don't contain the necessary metadata and will not work.
+
+For example, if you're using pip, instead of https://github.com/user/proj/archive/master.zip use git+https://github.com/user/proj.git#egg=proj
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/version.py", line 6, in <module>
+    from ._dev.scm_version import version
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/_dev/scm_version.py", line 9, in <module>
+    raise ImportError('setuptools_scm broken or not installed')
+ImportError: setuptools_scm broken or not installed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/version.py", line 8, in <module>
+    from ._version import version
+ModuleNotFoundError: No module named 'astropy._version'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/_pytest/config/__init__.py", line 1761, in parse_warning_filter
+    category: Type[Warning] = _resolve_warning_category(category_)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/_pytest/config/__init__.py", line 1799, in _resolve_warning_category
+    m = __import__(module, None, None, [klass])
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/__init__.py", line 12, in <module>
+    from .version import version as __version__
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/version.py", line 11, in <module>
+    warnings.warn(
+UserWarning: could not determine astropy package version; this indicates a broken installation
+
+For more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning
+  config = pluginmanager.hook.pytest_cmdline_parse(
+ERROR: while parsing the following warning configuration:
+
+  ignore:ASDF functionality for astropy is being moved.*:astropy.utils.exceptions.AstropyDeprecationWarning:astropy.io.misc.asdf.types
+
+This error occurred:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/_dev/scm_version.py", line 7, in <module>
+    version = get_version(root=pth.join('..', '..'), relative_to=__file__)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools_scm/__init__.py", line 146, in get_version
+    _version_missing(config)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools_scm/__init__.py", line 106, in _version_missing
+    raise LookupError(
+LookupError: setuptools-scm was unable to detect version for /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate.
+
+Make sure you're either building from a fully intact git repository or PyPI tarballs. Most other sources (such as GitHub's tarballs, a git checkout without the .git folder) don't contain the necessary metadata and will not work.
+
+For example, if you're using pip, instead of https://github.com/user/proj/archive/master.zip use git+https://github.com/user/proj.git#egg=proj
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/version.py", line 6, in <module>
+    from ._dev.scm_version import version
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/_dev/scm_version.py", line 9, in <module>
+    raise ImportError('setuptools_scm broken or not installed')
+ImportError: setuptools_scm broken or not installed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/version.py", line 8, in <module>
+    from ._version import version
+ModuleNotFoundError: No module named 'astropy._version'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/_pytest/config/__init__.py", line 1761, in parse_warning_filter
+    category: Type[Warning] = _resolve_warning_category(category_)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/_pytest/config/__init__.py", line 1799, in _resolve_warning_category
+    m = __import__(module, None, None, [klass])
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/__init__.py", line 12, in <module>
+    from .version import version as __version__
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/candidate/astropy/version.py", line 11, in <module>
+    warnings.warn(
+UserWarning: could not determine astropy package version; this indicates a broken installation
+
+

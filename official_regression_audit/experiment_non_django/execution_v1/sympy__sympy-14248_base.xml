@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="11" hostname="jupyter-x-2022810001---b3c2668a" name="pytest" skipped="0" tests="12" time="1.333" timestamp="2026-11-05T19:24:44.333379"><testcase classname="sympy.printing.pretty.tests.test_pretty" file="sympy/printing/pretty/tests/test_pretty.py" line="6068" name="test_MatrixElement_printing" time="0.001"></testcase><testcase classname="sympy.printing.pretty.tests.test_pretty" file="sympy/printing/pretty/tests/test_pretty.py" line="6091" name="test_MatrixSymbol_printing" time="0.002"><failure message="AssertionError: assert &apos;-A*B + -B*C + A*B*C&apos; == &apos;-A*B -B*C + A*B*C&apos;
+  - -A*B -B*C + A*B*C
+  + -A*B + -B*C + A*B*C
+  ?      ++">sympy/printing/pretty/tests/test_pretty.py:6100: in test_MatrixSymbol_printing
+    assert pretty(A*B*C - A*B - B*C) == &quot;-A*B -B*C + A*B*C&quot;
+E   AssertionError: assert &apos;-A*B + -B*C + A*B*C&apos; == &apos;-A*B -B*C + A*B*C&apos;
+E     - -A*B -B*C + A*B*C
+E     + -A*B + -B*C + A*B*C
+E     ?      ++</failure></testcase><testcase classname="sympy.printing.tests.test_ccode" file="sympy/printing/tests/test_ccode.py" line="747" name="test_MatrixElement_printing" time="0.002"><failure message="AssertionError: assert &apos;((-1)*B + A)[0]&apos; == &apos;(-B + A)[0]&apos;
+  - (-B + A)[0]
+  + ((-1)*B + A)[0]
+  ? +  +++">sympy/printing/tests/test_ccode.py:758: in test_MatrixElement_printing
+    assert(ccode(F) == &quot;(-B + A)[0]&quot;)
+E   AssertionError: assert &apos;((-1)*B + A)[0]&apos; == &apos;(-B + A)[0]&apos;
+E     - (-B + A)[0]
+E     + ((-1)*B + A)[0]
+E     ? +  +++</failure></testcase><testcase classname="sympy.printing.tests.test_fcode" file="sympy/printing/tests/test_fcode.py" line="748" name="test_MatrixElement_printing" time="0.001"><failure message="AssertionError: assert &apos;      ((-1)*B + A)(1, 1)&apos; == &apos;      (-B + A)(1, 1)&apos;
+  -       (-B + A)(1, 1)
+  +       ((-1)*B + A)(1, 1)
+  ?       +  +++">sympy/printing/tests/test_fcode.py:759: in test_MatrixElement_printing
+    assert(fcode(F) == &quot;      (-B + A)(1, 1)&quot;)
+E   AssertionError: assert &apos;      ((-1)*B + A)(1, 1)&apos; == &apos;      (-B + A)(1, 1)&apos;
+E     -       (-B + A)(1, 1)
+E     +       ((-1)*B + A)(1, 1)
+E     ?       +  +++</failure></testcase><testcase classname="sympy.printing.tests.test_jscode" file="sympy/printing/tests/test_jscode.py" line="374" name="test_MatrixElement_printing" time="0.001"><failure message="AssertionError: assert &apos;((-1)*B + A)[0]&apos; == &apos;(-B + A)[0]&apos;
+  - (-B + A)[0]
+  + ((-1)*B + A)[0]
+  ? +  +++">sympy/printing/tests/test_jscode.py:385: in test_MatrixElement_printing
+    assert(jscode(F) == &quot;(-B + A)[0]&quot;)
+E   AssertionError: assert &apos;((-1)*B + A)[0]&apos; == &apos;(-B + A)[0]&apos;
+E     - (-B + A)[0]
+E     + ((-1)*B + A)[0]
+E     ? +  +++</failure></testcase><testcase classname="sympy.printing.tests.test_julia" file="sympy/printing/tests/test_julia.py" line="366" name="test_MatrixElement_printing" time="0.001"><failure message="AssertionError: assert &apos;((-1)*B + A)[1,1]&apos; == &apos;(-B + A)[1,1]&apos;
+  - (-B + A)[1,1]
+  + ((-1)*B + A)[1,1]
+  ? +  +++">sympy/printing/tests/test_julia.py:377: in test_MatrixElement_printing
+    assert(julia_code(F) == &quot;(-B + A)[1,1]&quot;)
+E   AssertionError: assert &apos;((-1)*B + A)[1,1]&apos; == &apos;(-B + A)[1,1]&apos;
+E     - (-B + A)[1,1]
+E     + ((-1)*B + A)[1,1]
+E     ? +  +++</failure></testcase><testcase classname="sympy.printing.tests.test_latex" file="sympy/printing/tests/test_latex.py" line="1702" name="test_MatrixElement_printing" time="0.001"><failure message="AssertionError: assert &apos;\\left(-1 B ...right)_{0, 0}&apos; == &apos;\\left(-B + A\\right)_{0, 0}&apos;
+  - \left(-B + A\right)_{0, 0}
+  + \left(-1 B + A\right)_{0, 0}
+  ?        ++">sympy/printing/tests/test_latex.py:1713: in test_MatrixElement_printing
+    assert latex(F) == r&quot;\left(-B + A\right)_{0, 0}&quot;
+E   AssertionError: assert &apos;\\left(-1 B ...right)_{0, 0}&apos; == &apos;\\left(-B + A\\right)_{0, 0}&apos;
+E     - \left(-B + A\right)_{0, 0}
+E     + \left(-1 B + A\right)_{0, 0}
+E     ?        ++</failure></testcase><testcase classname="sympy.printing.tests.test_latex" file="sympy/printing/tests/test_latex.py" line="1715" name="test_MatrixSymbol_printing" time="0.001"><failure message="AssertionError: assert &apos;-1 A&apos; == &apos;-A&apos;
+  - -A
+  + -1 A">sympy/printing/tests/test_latex.py:1722: in test_MatrixSymbol_printing
+    assert latex(-A) == r&quot;-A&quot;
+E   AssertionError: assert &apos;-1 A&apos; == &apos;-A&apos;
+E     - -A
+E     + -1 A</failure></testcase><testcase classname="sympy.printing.tests.test_octave" file="sympy/printing/tests/test_octave.py" line="386" name="test_MatrixElement_printing" time="0.001"><failure message="AssertionError: assert &apos;((-1)*B + A)(1, 1)&apos; == &apos;(-B + A)(1, 1)&apos;
+  - (-B + A)(1, 1)
+  + ((-1)*B + A)(1, 1)
+  ? +  +++">sympy/printing/tests/test_octave.py:397: in test_MatrixElement_printing
+    assert mcode(F) == &quot;(-B + A)(1, 1)&quot;
+E   AssertionError: assert &apos;((-1)*B + A)(1, 1)&apos; == &apos;(-B + A)(1, 1)&apos;
+E     - (-B + A)(1, 1)
+E     + ((-1)*B + A)(1, 1)
+E     ? +  +++</failure></testcase><testcase classname="sympy.printing.tests.test_rcode" file="sympy/printing/tests/test_rcode.py" line="480" name="test_MatrixElement_printing" time="0.001"><failure message="AssertionError: assert &apos;((-1)*B + A)[0]&apos; == &apos;(-B + A)[0]&apos;
+  - (-B + A)[0]
+  + ((-1)*B + A)[0]
+  ? +  +++">sympy/printing/tests/test_rcode.py:491: in test_MatrixElement_printing
+    assert(rcode(F) == &quot;(-B + A)[0]&quot;)
+E   AssertionError: assert &apos;((-1)*B + A)[0]&apos; == &apos;(-B + A)[0]&apos;
+E     - (-B + A)[0]
+E     + ((-1)*B + A)[0]
+E     ? +  +++</failure></testcase><testcase classname="sympy.printing.tests.test_str" file="sympy/printing/tests/test_str.py" line="776" name="test_MatrixElement_printing" time="0.001"><failure message="AssertionError: assert &apos;((-1)*B + A)[0, 0]&apos; == &apos;(-B + A)[0, 0]&apos;
+  - (-B + A)[0, 0]
+  + ((-1)*B + A)[0, 0]
+  ? +  +++">sympy/printing/tests/test_str.py:787: in test_MatrixElement_printing
+    assert str(F) == &quot;(-B + A)[0, 0]&quot;
+E   AssertionError: assert &apos;((-1)*B + A)[0, 0]&apos; == &apos;(-B + A)[0, 0]&apos;
+E     - (-B + A)[0, 0]
+E     + ((-1)*B + A)[0, 0]
+E     ? +  +++</failure></testcase><testcase classname="sympy.printing.tests.test_str" file="sympy/printing/tests/test_str.py" line="789" name="test_MatrixSymbol_printing" time="0.001"><failure message="AssertionError: assert &apos;(-1)*B + (-1)*A*B + A&apos; == &apos;-B - A*B + A&apos;
+  - -B - A*B + A
+  + (-1)*B + (-1)*A*B + A">sympy/printing/tests/test_str.py:794: in test_MatrixSymbol_printing
+    assert str(A - A*B - B) == &quot;-B - A*B + A&quot;
+E   AssertionError: assert &apos;(-1)*B + (-1)*A*B + A&apos; == &apos;-B - A*B + A&apos;
+E     - -B - A*B + A
+E     + (-1)*B + (-1)*A*B + A</failure></testcase></testsuite></testsuites>

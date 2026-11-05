@@ -1,0 +1,47 @@
+....FF..FF..FF..ssssssssssssssss                                                                                                       [100%]
+================================================================== FAILURES ==================================================================
+___________________________________________ TestDataArrayRolling.test_rolling_iter[numpy-2-True-1] ___________________________________________
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pydata__xarray-6744/candidate/xarray/tests/test_rolling.py:40: in test_rolling_iter
+    assert label == da["time"].isel(time=i)
+E   AssertionError: assert <xarray.DataArray 'time' ()>\narray('2000-01-01T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-01 == <xarray.DataArray 'time' ()>\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-02
+E    +  where <xarray.DataArray 'time' ()>\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-02 = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21>(time=1)
+E    +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21> = <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-02T00:00:00.000000000',\n       '...0000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21.isel
+___________________________________________ TestDataArrayRolling.test_rolling_iter[numpy-2-True-2] ___________________________________________
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pydata__xarray-6744/candidate/xarray/tests/test_rolling.py:40: in test_rolling_iter
+    assert label == da["time"].isel(time=i)
+E   AssertionError: assert <xarray.DataArray 'time' ()>\narray(0) == <xarray.DataArray 'time' ()>\narray(1)
+E    +  where <xarray.DataArray 'time' ()>\narray(1) = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time>(time=1)
+E    +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time> = <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time.isel
+___________________________________________ TestDataArrayRolling.test_rolling_iter[numpy-3-True-1] ___________________________________________
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pydata__xarray-6744/candidate/xarray/tests/test_rolling.py:40: in test_rolling_iter
+    assert label == da["time"].isel(time=i)
+E   AssertionError: assert <xarray.DataArray 'time' ()>\narray('2000-01-01T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-01 == <xarray.DataArray 'time' ()>\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-02
+E    +  where <xarray.DataArray 'time' ()>\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-02 = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21>(time=1)
+E    +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21> = <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-02T00:00:00.000000000',\n       '...0000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21.isel
+___________________________________________ TestDataArrayRolling.test_rolling_iter[numpy-3-True-2] ___________________________________________
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pydata__xarray-6744/candidate/xarray/tests/test_rolling.py:40: in test_rolling_iter
+    assert label == da["time"].isel(time=i)
+E   AssertionError: assert <xarray.DataArray 'time' ()>\narray(0) == <xarray.DataArray 'time' ()>\narray(1)
+E    +  where <xarray.DataArray 'time' ()>\narray(1) = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time>(time=1)
+E    +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time> = <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time.isel
+___________________________________________ TestDataArrayRolling.test_rolling_iter[numpy-7-True-1] ___________________________________________
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pydata__xarray-6744/candidate/xarray/tests/test_rolling.py:40: in test_rolling_iter
+    assert label == da["time"].isel(time=i)
+E   AssertionError: assert <xarray.DataArray 'time' ()>\narray('2000-01-01T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-01 == <xarray.DataArray 'time' ()>\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-02
+E    +  where <xarray.DataArray 'time' ()>\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\nCoordinates:\n    time     datetime64[ns] 2000-01-02 = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21>(time=1)
+E    +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21> = <xarray.DataArray 'time' (time: 21)>\narray(['2000-01-01T00:00:00.000000000', '2000-01-02T00:00:00.000000000',\n       '...0000000'], dtype='datetime64[ns]')\nCoordinates:\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21.isel
+___________________________________________ TestDataArrayRolling.test_rolling_iter[numpy-7-True-2] ___________________________________________
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pydata__xarray-6744/candidate/xarray/tests/test_rolling.py:40: in test_rolling_iter
+    assert label == da["time"].isel(time=i)
+E   AssertionError: assert <xarray.DataArray 'time' ()>\narray(0) == <xarray.DataArray 'time' ()>\narray(1)
+E    +  where <xarray.DataArray 'time' ()>\narray(1) = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time>(time=1)
+E    +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time> = <xarray.DataArray 'time' (time: 11)>\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\nDimensions without coordinates: time.isel
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/pydata__xarray-6744_candidate.xml -
+========================================================== short test summary info ===========================================================
+FAILED xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-2-True-1] - AssertionError: assert <xarray.DataArray 'ti...
+FAILED xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-2-True-2] - AssertionError: assert <xarray.DataArray 'ti...
+FAILED xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-3-True-1] - AssertionError: assert <xarray.DataArray 'ti...
+FAILED xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-3-True-2] - AssertionError: assert <xarray.DataArray 'ti...
+FAILED xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-7-True-1] - AssertionError: assert <xarray.DataArray 'ti...
+FAILED xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-7-True-2] - AssertionError: assert <xarray.DataArray 'ti...
+6 failed, 10 passed, 16 skipped in 0.34s

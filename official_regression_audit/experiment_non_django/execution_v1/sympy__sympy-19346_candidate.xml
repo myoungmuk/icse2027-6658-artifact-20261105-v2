@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="jupyter-x-2022810001---b3c2668a" name="pytest" skipped="0" tests="1" time="0.183" timestamp="2026-11-05T19:24:48.230648"><testcase classname="sympy.printing.tests.test_repr" file="sympy/printing/tests/test_repr.py" line="321" name="test_dict" time="0.002"><failure message="TypeError: cannot determine truth value of Relational">sympy/printing/tests/test_repr.py:330: in test_dict
+    assert srepr(d) in (
+sympy/printing/repr.py:352: in srepr
+    return ReprPrinter(settings).doprint(expr)
+sympy/printing/printer.py:251: in doprint
+    return self._str(self._print(expr))
+sympy/printing/printer.py:289: in _print
+    return getattr(self, printmethod)(expr, **kwargs)
+sympy/printing/repr.py:286: in _print_dict
+    items = &apos;, &apos;.join(f&apos;{self._print(k)}: {self._print(v)}&apos; for k, v in sorted(expr.items()))
+sympy/core/relational.py:384: in __nonzero__
+    raise TypeError(&quot;cannot determine truth value of Relational&quot;)
+E   TypeError: cannot determine truth value of Relational</failure></testcase></testsuite></testsuites>

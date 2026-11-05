@@ -8,7 +8,7 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v10`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v10).
+Version: [`2026.11.05-v11`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v11).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
@@ -177,3 +177,15 @@ portable offline analysis are included. This is a new finite configuration study
 not historical calibration recovery or independent maintainer validation. No
 human ratings or new harness runs are added. The paper remains 9+1 pages; earlier
 release assets and historical inputs are preserved.
+
+
+## v11 actual official regression tests
+
+The [38-case audit](official_regression_audit/README.md) runs official regression
+targets against complete pinned source variants. All candidates fail and all
+developer controls pass. There are 114 final processes, 387 executed test slots,
+60 skips and 24 preserved earlier infrastructure attempts. Raw results, frozen
+inputs, source receipts, evidence cards and offline recomputation are included.
+This supports functional rejection within one hosted-reviewer stratum; it is not
+independent adjudication of every rationale. No new inference or human ratings.
+The paper remains 9+1 pages. Prior release assets and historical results remain.

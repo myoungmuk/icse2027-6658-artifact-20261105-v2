@@ -1,0 +1,44 @@
+{
+  "started_at_utc": "2026-11-05T10:03:08.904715+00:00",
+  "finished_at_utc": "2026-11-05T10:03:09.585624+00:00",
+  "python": "3.12.13",
+  "source": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/candidate",
+  "targets": [
+    "migrations.test_operations.OperationTests.test_rename_index_unnamed_index"
+  ],
+  "events": [
+    {
+      "test_id": "migrations.test_operations.OperationTests.test_rename_index_unnamed_index",
+      "outcome": "error",
+      "exception_type": "ValueError",
+      "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/candidate/tests/migrations/test_operations.py\", line 2989, in test_rename_index_unnamed_index\n    operation.database_backwards(app_label, editor, new_state, project_state)\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/candidate/django/db/migrations/operations/models.py\", line 973, in database_backwards\n    new_index = from_model_state.get_index_by_name(self.old_name)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/candidate/django/db/migrations/state.py\", line 959, in get_index_by_name\n    raise ValueError(\"No index named %s on model %s\" % (name, self.name))\nValueError: No index named None on model Pony\n"
+    }
+  ],
+  "runner_summaries": [
+    {
+      "tests_run": 1,
+      "failures": 0,
+      "errors": 1,
+      "skipped": 0,
+      "successful": false
+    }
+  ],
+  "top_exception": null,
+  "dependencies": {
+    "PyYAML": "6.0.2",
+    "Jinja2": "3.1.6",
+    "argon2-cffi": "23.1.0",
+    "docutils": "0.20.1",
+    "argon2-cffi-bindings": "26.1.0",
+    "asgiref": "3.7.2",
+    "cffi": "2.1.1",
+    "pycparser": "3.12",
+    "pillow": "10.4.0",
+    "MarkupSafe": "3.0.4",
+    "setuptools": "80.9.0",
+    "pytz": "2023.3",
+    "sqlparse": "0.4.4",
+    "bcrypt": "4.1.1",
+    "psycopg2-binary": "2.9.9"
+  }
+}

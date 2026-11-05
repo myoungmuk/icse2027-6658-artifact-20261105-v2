@@ -1,0 +1,107 @@
+.FFFFFFFFFFF                                                                                                                           [100%]
+================================================================== FAILURES ==================================================================
+_________________________________________________________ test_MatrixSymbol_printing _________________________________________________________
+sympy/printing/pretty/tests/test_pretty.py:6100: in test_MatrixSymbol_printing
+    assert pretty(A*B*C - A*B - B*C) == "-A*B -B*C + A*B*C"
+E   AssertionError: assert '-A*B + -B*C + A*B*C' == '-A*B -B*C + A*B*C'
+E     - -A*B -B*C + A*B*C
+E     + -A*B + -B*C + A*B*C
+E     ?      ++
+________________________________________________________ test_MatrixElement_printing _________________________________________________________
+sympy/printing/tests/test_ccode.py:758: in test_MatrixElement_printing
+    assert(ccode(F) == "(-B + A)[0]")
+E   AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'
+E     - (-B + A)[0]
+E     + ((-1)*B + A)[0]
+E     ? +  +++
+________________________________________________________ test_MatrixElement_printing _________________________________________________________
+sympy/printing/tests/test_fcode.py:759: in test_MatrixElement_printing
+    assert(fcode(F) == "      (-B + A)(1, 1)")
+E   AssertionError: assert '      ((-1)*B + A)(1, 1)' == '      (-B + A)(1, 1)'
+E     -       (-B + A)(1, 1)
+E     +       ((-1)*B + A)(1, 1)
+E     ?       +  +++
+________________________________________________________ test_MatrixElement_printing _________________________________________________________
+sympy/printing/tests/test_jscode.py:385: in test_MatrixElement_printing
+    assert(jscode(F) == "(-B + A)[0]")
+E   AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'
+E     - (-B + A)[0]
+E     + ((-1)*B + A)[0]
+E     ? +  +++
+________________________________________________________ test_MatrixElement_printing _________________________________________________________
+sympy/printing/tests/test_julia.py:377: in test_MatrixElement_printing
+    assert(julia_code(F) == "(-B + A)[1,1]")
+E   AssertionError: assert '((-1)*B + A)[1,1]' == '(-B + A)[1,1]'
+E     - (-B + A)[1,1]
+E     + ((-1)*B + A)[1,1]
+E     ? +  +++
+________________________________________________________ test_MatrixElement_printing _________________________________________________________
+sympy/printing/tests/test_latex.py:1713: in test_MatrixElement_printing
+    assert latex(F) == r"\left(-B + A\right)_{0, 0}"
+E   AssertionError: assert '\\left(-1 B ...right)_{0, 0}' == '\\left(-B + A\\right)_{0, 0}'
+E     - \left(-B + A\right)_{0, 0}
+E     + \left(-1 B + A\right)_{0, 0}
+E     ?        ++
+_________________________________________________________ test_MatrixSymbol_printing _________________________________________________________
+sympy/printing/tests/test_latex.py:1722: in test_MatrixSymbol_printing
+    assert latex(-A) == r"-A"
+E   AssertionError: assert '-1 A' == '-A'
+E     - -A
+E     + -1 A
+________________________________________________________ test_MatrixElement_printing _________________________________________________________
+sympy/printing/tests/test_octave.py:397: in test_MatrixElement_printing
+    assert mcode(F) == "(-B + A)(1, 1)"
+E   AssertionError: assert '((-1)*B + A)(1, 1)' == '(-B + A)(1, 1)'
+E     - (-B + A)(1, 1)
+E     + ((-1)*B + A)(1, 1)
+E     ? +  +++
+________________________________________________________ test_MatrixElement_printing _________________________________________________________
+sympy/printing/tests/test_rcode.py:491: in test_MatrixElement_printing
+    assert(rcode(F) == "(-B + A)[0]")
+E   AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'
+E     - (-B + A)[0]
+E     + ((-1)*B + A)[0]
+E     ? +  +++
+________________________________________________________ test_MatrixElement_printing _________________________________________________________
+sympy/printing/tests/test_str.py:787: in test_MatrixElement_printing
+    assert str(F) == "(-B + A)[0, 0]"
+E   AssertionError: assert '((-1)*B + A)[0, 0]' == '(-B + A)[0, 0]'
+E     - (-B + A)[0, 0]
+E     + ((-1)*B + A)[0, 0]
+E     ? +  +++
+_________________________________________________________ test_MatrixSymbol_printing _________________________________________________________
+sympy/printing/tests/test_str.py:794: in test_MatrixSymbol_printing
+    assert str(A - A*B - B) == "-B - A*B + A"
+E   AssertionError: assert '(-1)*B + (-1)*A*B + A' == '-B - A*B + A'
+E     - -B - A*B + A
+E     + (-1)*B + (-1)*A*B + A
+============================================================== warnings summary ==============================================================
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/lib/python3.9/site-packages/_pytest/junitxml.py:417
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/lib/python3.9/site-packages/_pytest/junitxml.py:417: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+  Add 'junit_family=xunit1' to your pytest.ini file to keep the current format in future versions of pytest and silence this warning.
+    _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
+
+sympy/vector/coordsysrect.py:171
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sympy__sympy-14248/base/sympy/vector/coordsysrect.py:171: SyntaxWarning: "is" with a literal. Did you mean "=="?
+    if transformation.name is 'spherical':
+
+sympy/vector/coordsysrect.py:173
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sympy__sympy-14248/base/sympy/vector/coordsysrect.py:173: SyntaxWarning: "is" with a literal. Did you mean "=="?
+    elif transformation.name is 'cylindrical':
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/sympy__sympy-14248_base.xml -
+                                                               DO *NOT* COMMIT!                                                               
+========================================================== short test summary info ===========================================================
+FAILED sympy/printing/pretty/tests/test_pretty.py::test_MatrixSymbol_printing - AssertionError: assert '-A*B + -B*C + A*B*C' == '-A*B -B*C ...
+FAILED sympy/printing/tests/test_ccode.py::test_MatrixElement_printing - AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'
+FAILED sympy/printing/tests/test_fcode.py::test_MatrixElement_printing - AssertionError: assert '      ((-1)*B + A)(1, 1)' == '      (-B + ...
+FAILED sympy/printing/tests/test_jscode.py::test_MatrixElement_printing - AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'
+FAILED sympy/printing/tests/test_julia.py::test_MatrixElement_printing - AssertionError: assert '((-1)*B + A)[1,1]' == '(-B + A)[1,1]'
+FAILED sympy/printing/tests/test_latex.py::test_MatrixElement_printing - AssertionError: assert '\\left(-1 B ...right)_{0, 0}' == '\\left(-...
+FAILED sympy/printing/tests/test_latex.py::test_MatrixSymbol_printing - AssertionError: assert '-1 A' == '-A'
+FAILED sympy/printing/tests/test_octave.py::test_MatrixElement_printing - AssertionError: assert '((-1)*B + A)(1, 1)' == '(-B + A)(1, 1)'
+FAILED sympy/printing/tests/test_rcode.py::test_MatrixElement_printing - AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'
+FAILED sympy/printing/tests/test_str.py::test_MatrixElement_printing - AssertionError: assert '((-1)*B + A)[0, 0]' == '(-B + A)[0, 0]'
+FAILED sympy/printing/tests/test_str.py::test_MatrixSymbol_printing - AssertionError: assert '(-1)*B + (-1)*A*B + A' == '-B - A*B + A'
+11 failed, 1 passed, 3 warnings in 1.38s

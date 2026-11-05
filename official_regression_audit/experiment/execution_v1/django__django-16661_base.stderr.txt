@@ -1,0 +1,19 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+test_lookup_allowed_foreign_primary (modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary) ... FAIL
+
+======================================================================
+FAIL: test_lookup_allowed_foreign_primary (modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16661/base/django/test/utils.py", line 443, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16661/base/tests/modeladmin/tests.py", line 178, in test_lookup_allowed_foreign_primary
+    self.assertIs(ma.lookup_allowed("restaurant__place__country", "1"), True)
+AssertionError: False is not True
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...

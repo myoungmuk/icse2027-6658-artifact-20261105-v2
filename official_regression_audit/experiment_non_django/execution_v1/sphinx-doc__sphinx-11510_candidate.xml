@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.435" timestamp="2026-11-05T19:24:41.613409" hostname="jupyter-x-2022810001---b3c2668a"><testcase classname="tests.test_directive_other" name="test_include_source_read_event" time="0.335"><failure message="AssertionError: assert 'baz/baz' in {'index': '.. include:: baz/baz.rst\n   :start-line: 4\n\n.. include:: text.txt\n   :literal:    \n'}">tests/test_directive_other.py:169: in test_include_source_read_event
+    assert "baz/baz" in sources_reported
+E   AssertionError: assert 'baz/baz' in {'index': '.. include:: baz/baz.rst\n   :start-line: 4\n\n.. include:: text.txt\n   :literal:    \n'}</failure></testcase><testcase classname="tests.test_directive_other" name="test_include_source_read_event_nested_includes" time="0.026"><failure message="AssertionError: assert 'The #magical foo.' == 'The amazing foo.'&#10;  - The amazing foo.&#10;  + The #magical foo.">tests/test_directive_other.py:187: in test_include_source_read_event_nested_includes
+    assert doctree.children[1].rawsource == "The amazing foo."
+E   AssertionError: assert 'The #magical foo.' == 'The amazing foo.'
+E     - The amazing foo.
+E     + The #magical foo.</failure></testcase></testsuite></testsuites>

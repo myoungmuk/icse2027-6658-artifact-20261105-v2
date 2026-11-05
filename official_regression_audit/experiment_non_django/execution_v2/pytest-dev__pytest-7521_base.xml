@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="jupyter-x-2022810001---b3c2668a" name="pytest" skipped="0" tests="3" time="0.092" timestamp="2026-11-05T19:25:32.072317"><testcase classname="testing.test_capture.TestCaptureFixture" file="testing/test_capture.py" line="516" name="test_cafd_preserves_newlines[\n]" time="0.000"></testcase><testcase classname="testing.test_capture.TestCaptureFixture" file="testing/test_capture.py" line="516" name="test_cafd_preserves_newlines[\r\n]" time="0.000"><failure message="AssertionError: assert False
+ +  where False = &lt;built-in method endswith of str object at 0x7a707f707b30&gt;(&apos;\r\n&apos;)
+ +    where &lt;built-in method endswith of str object at 0x7a707f707b30&gt; = &apos;test\n&apos;.endswith">testing/test_capture.py:521: in test_cafd_preserves_newlines
+    assert out.endswith(nl)
+E   AssertionError: assert False
+E    +  where False = &lt;built-in method endswith of str object at 0x7a707f707b30&gt;(&apos;\r\n&apos;)
+E    +    where &lt;built-in method endswith of str object at 0x7a707f707b30&gt; = &apos;test\n&apos;.endswith</failure></testcase><testcase classname="testing.test_capture.TestCaptureFixture" file="testing/test_capture.py" line="516" name="test_cafd_preserves_newlines[\r]" time="0.000"><failure message="AssertionError: assert False
+ +  where False = &lt;built-in method endswith of str object at 0x7a707fb4b670&gt;(&apos;\r&apos;)
+ +    where &lt;built-in method endswith of str object at 0x7a707fb4b670&gt; = &apos;test\n&apos;.endswith">testing/test_capture.py:521: in test_cafd_preserves_newlines
+    assert out.endswith(nl)
+E   AssertionError: assert False
+E    +  where False = &lt;built-in method endswith of str object at 0x7a707fb4b670&gt;(&apos;\r&apos;)
+E    +    where &lt;built-in method endswith of str object at 0x7a707fb4b670&gt; = &apos;test\n&apos;.endswith</failure></testcase></testsuite></testsuites>

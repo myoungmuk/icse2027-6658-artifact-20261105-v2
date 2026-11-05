@@ -1,4 +1,4 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-05 v10
+# ICSE 2027 #6658 공개 자료 — 2026-11-05 v11
 
 v10은 기존 707개와 겹치지 않는 개발 40개·검증 100개 과제의 새 실험을 추가한다.
 예정 560개 입력 중 실제 생성 558개가 모두 유효하고 길이 초과 2개는 제외 기록을 남겼다.
@@ -129,3 +129,15 @@ portable offline analysis are included. This is a new finite configuration study
 not historical calibration recovery or independent maintainer validation. No
 human ratings or new harness runs are added. The paper remains 9+1 pages; earlier
 release assets and historical inputs are preserved.
+
+
+## v11 actual official regression tests
+
+The [38-case audit](official_regression_audit/README.md) runs official regression
+targets against complete pinned source variants. All candidates fail and all
+developer controls pass. There are 114 final processes, 387 executed test slots,
+60 skips and 24 preserved earlier infrastructure attempts. Raw results, frozen
+inputs, source receipts, evidence cards and offline recomputation are included.
+This supports functional rejection within one hosted-reviewer stratum; it is not
+independent adjudication of every rationale. No new inference or human ratings.
+The paper remains 9+1 pages. Prior release assets and historical results remain.

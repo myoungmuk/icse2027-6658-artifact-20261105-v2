@@ -1,0 +1,21 @@
+...FF                                                                                                                                  [100%]
+================================================================== FAILURES ==================================================================
+_______________ test_prepend_scheme_if_needed[http://user:pass@example.com/path?query-http://user:pass@example.com/path?query] _______________
+tests/test_utils.py:615: in test_prepend_scheme_if_needed
+    assert prepend_scheme_if_needed(value, 'http') == expected
+E   AssertionError: assert 'http://examp...om/path?query' == 'http://user:...om/path?query'
+E     - http://user:pass@example.com/path?query
+E     ?        ----------
+E     + http://example.com/path?query
+____________________ test_prepend_scheme_if_needed[http://user@example.com/path?query-http://user@example.com/path?query] ____________________
+tests/test_utils.py:615: in test_prepend_scheme_if_needed
+    assert prepend_scheme_if_needed(value, 'http') == expected
+E   AssertionError: assert 'http://examp...om/path?query' == 'http://user@...om/path?query'
+E     - http://user@example.com/path?query
+E     ?        -----
+E     + http://example.com/path?query
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/psf__requests-6028_base.xml -
+========================================================== short test summary info ===========================================================
+FAILED tests/test_utils.py::test_prepend_scheme_if_needed[http://user:pass@example.com/path?query-http://user:pass@example.com/path?query]
+FAILED tests/test_utils.py::test_prepend_scheme_if_needed[http://user@example.com/path?query-http://user@example.com/path?query] - Assertio...
+2 failed, 3 passed in 0.07s

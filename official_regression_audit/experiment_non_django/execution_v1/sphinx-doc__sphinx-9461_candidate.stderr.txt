@@ -1,0 +1,116 @@
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.
+Plugin: helpconfig, Hook: pytest_cmdline_parse
+ImportError: Error importing plugin "sphinx.testing.fixtures": No module named 'pkg_resources'
+For more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning
+  config = pluginmanager.hook.pytest_cmdline_parse(
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 781, in import_plugin
+    __import__(importspec)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sphinx-doc__sphinx-9461/candidate/sphinx/testing/fixtures.py", line 20, in <module>
+    from sphinx.testing import util
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sphinx-doc__sphinx-9461/candidate/sphinx/testing/util.py", line 23, in <module>
+    from sphinx import application, locale
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sphinx-doc__sphinx-9461/candidate/sphinx/application.py", line 43, in <module>
+    from sphinx.registry import SphinxComponentRegistry
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sphinx-doc__sphinx-9461/candidate/sphinx/registry.py", line 24, in <module>
+    from pkg_resources import iter_entry_points
+ModuleNotFoundError: No module named 'pkg_resources'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/python_runtimes/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/python_runtimes/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pytest/__main__.py", line 5, in <module>
+    raise SystemExit(pytest.console_main())
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 192, in console_main
+    code = main()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 150, in main
+    config = _prepareconfig(args, plugins)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 331, in _prepareconfig
+    config = pluginmanager.hook.pytest_cmdline_parse(
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 43, in run_old_style_hookwrapper
+    teardown.send(result)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/helpconfig.py", line 104, in pytest_cmdline_parse
+    config: Config = outcome.get_result()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 1075, in pytest_cmdline_parse
+    self.parse(args)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 1425, in parse
+    self._preparse(args, addopts=addopts)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 1327, in _preparse
+    self.hook.pytest_load_initial_conftests(
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 1153, in pytest_load_initial_conftests
+    self.pluginmanager._set_initial_conftests(
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 563, in _set_initial_conftests
+    self._try_load_conftest(anchor, importmode, rootpath)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 580, in _try_load_conftest
+    self._getconftestmodules(anchor, importmode, rootpath)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 609, in _getconftestmodules
+    mod = self._importconftest(conftestpath, importmode, rootpath)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 657, in _importconftest
+    self.consider_conftest(mod)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 739, in consider_conftest
+    self.register(conftestmodule, name=conftestmodule.__file__)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 498, in register
+    self.consider_module(plugin)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 747, in consider_module
+    self._import_plugin_specs(getattr(mod, "pytest_plugins", []))
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 754, in _import_plugin_specs
+    self.import_plugin(import_spec)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 783, in import_plugin
+    raise ImportError(
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/config/__init__.py", line 781, in import_plugin
+    __import__(importspec)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/lib/python3.9/site-packages/_pytest/assertion/rewrite.py", line 186, in exec_module
+    exec(co, module.__dict__)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sphinx-doc__sphinx-9461/candidate/sphinx/testing/fixtures.py", line 20, in <module>
+    from sphinx.testing import util
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sphinx-doc__sphinx-9461/candidate/sphinx/testing/util.py", line 23, in <module>
+    from sphinx import application, locale
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sphinx-doc__sphinx-9461/candidate/sphinx/application.py", line 43, in <module>
+    from sphinx.registry import SphinxComponentRegistry
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/sphinx-doc__sphinx-9461/candidate/sphinx/registry.py", line 24, in <module>
+    from pkg_resources import iter_entry_points
+ImportError: Error importing plugin "sphinx.testing.fixtures": No module named 'pkg_resources'

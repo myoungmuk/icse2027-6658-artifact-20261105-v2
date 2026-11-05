@@ -1,0 +1,49 @@
+test_username_partially_unique (auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique) ... ERROR
+test_username_unique_with_model_constraint (auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint) ... ERROR
+
+======================================================================
+ERROR: test_username_partially_unique (auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/django/test/utils.py", line 382, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/tests/auth_tests/test_checks.py", line 104, in test_username_partially_unique
+    errors = checks.run_checks(app_configs=self.apps.get_app_configs())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/django/core/checks/registry.py", line 71, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py", line 57, in check_user_model
+    has_unique_constraint = any(
+                            ^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py", line 58, in <genexpr>
+    isinstance(constraint, models.UniqueConstraint) and
+                           ^^^^^^
+NameError: name 'models' is not defined
+
+======================================================================
+ERROR: test_username_unique_with_model_constraint (auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/django/test/utils.py", line 382, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/tests/auth_tests/test_checks.py", line 139, in test_username_unique_with_model_constraint
+    self.assertEqual(checks.run_checks(app_configs=self.apps.get_app_configs()), [])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/django/core/checks/registry.py", line 71, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py", line 57, in check_user_model
+    has_unique_constraint = any(
+                            ^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py", line 58, in <genexpr>
+    isinstance(constraint, models.UniqueConstraint) and
+                           ^^^^^^
+NameError: name 'models' is not defined
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.015s
+
+FAILED (errors=2)

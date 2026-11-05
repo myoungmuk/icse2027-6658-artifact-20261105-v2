@@ -1,0 +1,28 @@
+F                                                                                                                                      [100%]
+================================================================== FAILURES ==================================================================
+_________________________________________________________________ test_dict __________________________________________________________________
+sympy/printing/tests/test_repr.py:330: in test_dict
+    assert srepr(d) in (
+sympy/printing/repr.py:352: in srepr
+    return ReprPrinter(settings).doprint(expr)
+sympy/printing/printer.py:251: in doprint
+    return self._str(self._print(expr))
+sympy/printing/printer.py:289: in _print
+    return getattr(self, printmethod)(expr, **kwargs)
+sympy/printing/repr.py:286: in _print_dict
+    items = ', '.join(f'{self._print(k)}: {self._print(v)}' for k, v in sorted(expr.items()))
+sympy/core/relational.py:384: in __nonzero__
+    raise TypeError("cannot determine truth value of Relational")
+E   TypeError: cannot determine truth value of Relational
+============================================================== warnings summary ==============================================================
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/lib/python3.9/site-packages/_pytest/junitxml.py:417
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/lib/python3.9/site-packages/_pytest/junitxml.py:417: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+  Add 'junit_family=xunit1' to your pytest.ini file to keep the current format in future versions of pytest and silence this warning.
+    _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/sympy__sympy-19346_candidate.xml -
+                                                               DO *NOT* COMMIT!                                                               
+========================================================== short test summary info ===========================================================
+FAILED sympy/printing/tests/test_repr.py::test_dict - TypeError: cannot determine truth value of Relational
+1 failed, 1 warning in 0.21s

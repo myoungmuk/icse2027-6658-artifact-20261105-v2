@@ -1,0 +1,31 @@
+FFF                                                                                                                                    [100%]
+================================================================== FAILURES ==================================================================
+_______________________________________________________________ test_infinity ________________________________________________________________
+sympy/core/tests/test_assumptions.py:101: in test_infinity
+    assert oo.is_integer is False
+E   assert None is False
+E    +  where None = oo.is_integer
+_____________________________________________________________ test_neg_infinity ______________________________________________________________
+sympy/core/tests/test_assumptions.py:128: in test_neg_infinity
+    assert mm.is_integer is False
+E   assert None is False
+E    +  where None = -oo.is_integer
+_____________________________________________________________ test_other_symbol ______________________________________________________________
+sympy/core/tests/test_assumptions.py:570: in test_other_symbol
+    assert x.is_finite is True
+E   assert None is True
+E    +  where None = x.is_finite
+============================================================== warnings summary ==============================================================
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/lib/python3.9/site-packages/_pytest/junitxml.py:417
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/lib/python3.9/site-packages/_pytest/junitxml.py:417: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+  Add 'junit_family=xunit1' to your pytest.ini file to keep the current format in future versions of pytest and silence this warning.
+    _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/sympy__sympy-16597_base.xml -
+                                                               DO *NOT* COMMIT!                                                               
+========================================================== short test summary info ===========================================================
+FAILED sympy/core/tests/test_assumptions.py::test_infinity - assert None is False
+FAILED sympy/core/tests/test_assumptions.py::test_neg_infinity - assert None is False
+FAILED sympy/core/tests/test_assumptions.py::test_other_symbol - assert None is True
+3 failed, 1 warning in 0.21s

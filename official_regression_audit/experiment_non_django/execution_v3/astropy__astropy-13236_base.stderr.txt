@@ -1,0 +1,15 @@
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/_pytest/config/__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.
+Plugin: helpconfig, Hook: pytest_cmdline_parse
+ConftestImportFailure: ModuleNotFoundError: No module named 'yaml' (from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/base/astropy/table/tests/conftest.py)
+For more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning
+  config = pluginmanager.hook.pytest_cmdline_parse(
+ImportError while loading conftest '/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/base/astropy/table/tests/conftest.py'.
+astropy/table/__init__.py:68: in <module>
+    import astropy.io.ascii.connect
+astropy/io/ascii/__init__.py:34: in <module>
+    from .ecsv import Ecsv
+astropy/io/ascii/ecsv.py:15: in <module>
+    from astropy.table import meta, serialize
+astropy/table/meta.py:7: in <module>
+    import yaml
+E   ModuleNotFoundError: No module named 'yaml'

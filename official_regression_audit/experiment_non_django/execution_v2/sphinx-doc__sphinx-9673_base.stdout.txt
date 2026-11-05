@@ -1,0 +1,32 @@
+F                                                                                                                                      [100%]
+================================================================== FAILURES ==================================================================
+________________________________________________ test_autodoc_typehints_description_no_undoc _________________________________________________
+tests/test_ext_autodoc_configs.py:858: in test_autodoc_typehints_description_no_undoc
+    assert ('target.typehints.incr(a, b=1)\n'
+E   AssertionError: assert 'target.typehints.incr(a, b=1)\n\ntarget.typehints.decr(a, b=1)\n\n   Returns:\n      decremented number\n\n   Return ...*Union**[**int**, **str**]**]*) -- arg\n\n   Returns:\n      another tuple\n\n   Return type:\n      Tuple[int, int]\n' in 'target.typehints.incr(a, b=1)\n\ntarget.typehints.decr(a, b=1)\n\n   Returns:\n      decremented number\n\ntarget.typ...*Union**[**int**, **str**]**]*) -- arg\n\n   Returns:\n      another tuple\n\n   Return type:\n      Tuple[int, int]\n'
+---------------------------------------------------------- Captured stdout teardown ----------------------------------------------------------
+# testroot: root
+# builder: text
+# srcdir: /tmp/pytest-of-2022810001/pytest-12/ext-autodoc
+# outdir: /tmp/pytest-of-2022810001/pytest-12/ext-autodoc/_build/text
+# status: 
+[01mRunning Sphinx v4.3.0+[39;49;00m
+[01mbuilding [mo]: [39;49;00mtargets for 0 po files that are out of date
+[01mbuilding [text]: [39;49;00mtargets for 1 source files that are out of date
+[01mupdating environment: [39;49;00m[new config] 1 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m                                                                                                              
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m                                                                                                               
+[01mbuild succeeded.[39;49;00m
+
+The text files are in ../../../../../../../../tmp/pytest-of-2022810001/pytest-12/ext-autodoc/_build/text.
+
+# warning: 
+
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v2/sphinx-doc__sphinx-9673_base.xml -
+========================================================== short test summary info ===========================================================
+FAILED tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_no_undoc - AssertionError: assert 'target.typehints.incr(a, b=...
+1 failed in 0.46s

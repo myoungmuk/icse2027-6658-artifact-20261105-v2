@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.590" timestamp="2026-11-05T19:25:32.817558" hostname="jupyter-x-2022810001---b3c2668a"><testcase classname="tests.test_domain_py" name="test_pyproperty" time="0.352"><failure message="AssertionError: The node[1][1] has 3 child nodes, not 4">tests/test_domain_py.py:825: in test_pyproperty
+    assert_node(doctree, (addnodes.index,
+sphinx/testing/util.py:68: in assert_node
+    assert_node(node[i], nodecls, xpath=path, **kwargs)
+sphinx/testing/util.py:54: in assert_node
+    assert_node(node, cls[1], xpath=xpath, **kwargs)
+sphinx/testing/util.py:68: in assert_node
+    assert_node(node[i], nodecls, xpath=path, **kwargs)
+sphinx/testing/util.py:54: in assert_node
+    assert_node(node, cls[1], xpath=xpath, **kwargs)
+sphinx/testing/util.py:64: in assert_node
+    assert len(node) == len(cls), \
+E   AssertionError: The node[1][1] has 3 child nodes, not 4</failure></testcase><testcase classname="tests.test_ext_autodoc_autoclass" name="test_properties" time="0.030"><failure message="AssertionError: assert ['', '.. py:c...ing', '', ...] == ['', '.. py:c...ing', '', ...]&#10;  Right contains 8 more items, first extra item: ''&#10;  Use -v to get more diff">tests/test_ext_autodoc_autoclass.py:207: in test_properties
+    assert list(actual) == [
+E   AssertionError: assert ['', '.. py:c...ing', '', ...] == ['', '.. py:c...ing', '', ...]
+E     Right contains 8 more items, first extra item: ''
+E     Use -v to get more diff</failure></testcase><testcase classname="tests.test_ext_autodoc_autoproperty" name="test_class_properties" time="0.007"><failure message="AssertionError: assert ['', '.. py:p...operties', ''] == ['', '.. py:p...int', '', ...]&#10;  At index 3 diff: '' != '   :classmethod:'&#10;  Right contains 4 more items, first extra item: '   :type: int'&#10;  Use -v to get more diff">tests/test_ext_autodoc_autoproperty.py:34: in test_class_properties
+    assert list(actual) == [
+E   AssertionError: assert ['', '.. py:p...operties', ''] == ['', '.. py:p...int', '', ...]
+E     At index 3 diff: '' != '   :classmethod:'
+E     Right contains 4 more items, first extra item: '   :type: int'
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,25 @@
+..F                                                                                                                                    [100%]
+================================================================== FAILURES ==================================================================
+____________________________________________ TestCaptureFixture.test_cafd_preserves_newlines[\r] _____________________________________________
+testing/test_capture.py:521: in test_cafd_preserves_newlines
+    assert out.endswith(nl)
+E   AssertionError: assert False
+E    +  where False = <built-in method endswith of str object at 0x74131b4d9370>('\r')
+E    +    where <built-in method endswith of str object at 0x74131b4d9370> = 'test\r\n'.endswith
+============================================================== warnings summary ==============================================================
+src/_pytest/config/__init__.py:1148
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pytest-dev__pytest-7521/candidate/src/_pytest/config/__init__.py:1148: PytestConfigWarning: Unknown config ini key: pytester_example_dir
+  
+    self._warn_or_fail_if_strict("Unknown config ini key: {}\n".format(key))
+
+src/_pytest/junitxml.py:446
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pytest-dev__pytest-7521/candidate/src/_pytest/junitxml.py:446: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0. See:
+    https://docs.pytest.org/en/stable/deprecations.html#junit-family-default-value-change-to-xunit2
+  for more information.
+    _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v2/pytest-dev__pytest-7521_candidate.xml -
+========================================================== short test summary info ===========================================================
+FAILED testing/test_capture.py::TestCaptureFixture::test_cafd_preserves_newlines[\r] - AssertionError: assert False
+1 failed, 2 passed, 2 warnings in 0.09s

@@ -1,0 +1,44 @@
+{
+  "started_at_utc": "2026-11-05T10:03:06.167997+00:00",
+  "finished_at_utc": "2026-11-05T10:03:06.797003+00:00",
+  "python": "3.12.13",
+  "source": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base",
+  "targets": [
+    "aggregation_regress.tests.AggregationTests.test_having_subquery_select"
+  ],
+  "events": [
+    {
+      "test_id": "aggregation_regress.tests.AggregationTests.test_having_subquery_select",
+      "outcome": "error",
+      "exception_type": "OperationalError",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/backends/utils.py\", line 84, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/backends/sqlite3/base.py\", line 416, in execute\n    return Database.Cursor.execute(self, query, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nsqlite3.OperationalError: sub-select returns 3 columns - expected 1\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/test/testcases.py\", line 1342, in skip_wrapper\n    return test_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/tests/aggregation_regress/tests.py\", line 1534, in test_having_subquery_select\n    self.assertEqual(set(books), {self.b1, self.b4})\n                     ^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/models/query.py\", line 280, in __iter__\n    self._fetch_all()\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/models/query.py\", line 1343, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/models/query.py\", line 51, in __iter__\n    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/models/sql/compiler.py\", line 1188, in execute_sql\n    cursor.execute(sql, params)\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/backends/utils.py\", line 66, in execute\n    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/backends/utils.py\", line 75, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/backends/utils.py\", line 79, in _execute\n    with self.db.wrap_database_errors:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/utils.py\", line 90, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/backends/utils.py\", line 84, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base/django/db/backends/sqlite3/base.py\", line 416, in execute\n    return Database.Cursor.execute(self, query, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: sub-select returns 3 columns - expected 1\n"
+    }
+  ],
+  "runner_summaries": [
+    {
+      "tests_run": 1,
+      "failures": 0,
+      "errors": 1,
+      "skipped": 0,
+      "successful": false
+    }
+  ],
+  "top_exception": null,
+  "dependencies": {
+    "PyYAML": "6.0.2",
+    "Jinja2": "3.1.6",
+    "argon2-cffi": "23.1.0",
+    "docutils": "0.20.1",
+    "argon2-cffi-bindings": "26.1.0",
+    "asgiref": "3.7.2",
+    "cffi": "2.1.1",
+    "pycparser": "3.12",
+    "pillow": "10.4.0",
+    "MarkupSafe": "3.0.4",
+    "setuptools": "80.9.0",
+    "pytz": "2023.3",
+    "sqlparse": "0.4.4",
+    "bcrypt": "4.1.1",
+    "psycopg2-binary": "2.9.9"
+  }
+}

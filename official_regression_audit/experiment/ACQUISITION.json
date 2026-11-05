@@ -1,0 +1,2294 @@
+{
+  "cases": [
+    {
+      "instance_id": "django__django-13028",
+      "base_commit": "78ad4b4b0201003792bfdbf1a7781cbc9ee03539",
+      "url": "https://codeload.github.com/django/django/tar.gz/78ad4b4b0201003792bfdbf1a7781cbc9ee03539",
+      "archive_sha256": "f629862682dc7f1f5b3dc827f4e50f93d9aa4627aee6c6d12a927d397b1ac59f",
+      "archive_bytes": 9117838,
+      "reused_immutable_archive": "/workspace/users/2022810001/ICSE2027_6658_FactCheck_20261105_v9/integration/django__django-13028/upstream_base.tar.gz",
+      "acquired_at_utc": "2026-11-05T09:57:47.199661+00:00",
+      "targets": [
+        "queries.tests.Queries1Tests.test_field_with_filterable"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/queries/tests.py",
+          "added_lines": [
+            59,
+            64,
+            80,
+            1213,
+            1214,
+            1215,
+            1216,
+            1217,
+            1218
+          ],
+          "targets": [
+            "queries.tests.Queries1Tests.test_field_with_filterable"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "e3421f9a747f7f9053e3a7fcf9b0b1099e892962284a81df1fa2d6e7a71c21b4",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/queries/models.py...\nChecking patch tests/queries/tests.py...\nApplied patch tests/queries/models.py cleanly.\nApplied patch tests/queries/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "queries.tests.Queries1Tests.test_field_with_filterable"
+          ],
+          "file_hashes": {
+            "django/db/models/sql/query.py": "d5827e0de182b692778e44aa89b6d2e56f2ed2d59b90ff2982bd4a3b46168edd",
+            "tests/queries/models.py": "9765550b7d882da4d9beda8773a315383b1015c23b54053daa91b73a3f475fac",
+            "tests/queries/tests.py": "15e7af3df9021ecf1c53b0b6bb1b677fc022798f47a754c97bc3e1f0b8c7bd50"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "ba8904922f36b788f53e73f6a63fb39e66ba63801a28e891ef4b4a1b587f5d89",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/sql/query.py...\nApplied patch django/db/models/sql/query.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "e3421f9a747f7f9053e3a7fcf9b0b1099e892962284a81df1fa2d6e7a71c21b4",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/queries/models.py...\nChecking patch tests/queries/tests.py...\nApplied patch tests/queries/models.py cleanly.\nApplied patch tests/queries/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "queries.tests.Queries1Tests.test_field_with_filterable"
+          ],
+          "file_hashes": {
+            "django/db/models/sql/query.py": "c79d52e260137f7adb98df09b5ab3092fb1c8ad23e8aeb3e1801d1133bd6a908",
+            "tests/queries/models.py": "9765550b7d882da4d9beda8773a315383b1015c23b54053daa91b73a3f475fac",
+            "tests/queries/tests.py": "15e7af3df9021ecf1c53b0b6bb1b677fc022798f47a754c97bc3e1f0b8c7bd50"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "0e12b55011f1fc82169c317af7dea00f71a4b608f2690fc64fac5845c5291358",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/sql/query.py...\nApplied patch django/db/models/sql/query.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "e3421f9a747f7f9053e3a7fcf9b0b1099e892962284a81df1fa2d6e7a71c21b4",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/queries/models.py...\nChecking patch tests/queries/tests.py...\nApplied patch tests/queries/models.py cleanly.\nApplied patch tests/queries/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "queries.tests.Queries1Tests.test_field_with_filterable"
+          ],
+          "file_hashes": {
+            "django/db/models/sql/query.py": "18c69a77911885539dc802c32872202919b6f9882e285e64f80e6e78c9a032f4",
+            "tests/queries/models.py": "9765550b7d882da4d9beda8773a315383b1015c23b54053daa91b73a3f475fac",
+            "tests/queries/tests.py": "15e7af3df9021ecf1c53b0b6bb1b677fc022798f47a754c97bc3e1f0b8c7bd50"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-13344",
+      "base_commit": "e39e727ded673e74016b5d3658d23cbe20234d11",
+      "url": "https://codeload.github.com/django/django/tar.gz/e39e727ded673e74016b5d3658d23cbe20234d11",
+      "archive_sha256": "e5abee1b7fa0160dfe6e77566184bcc8cb540056300acf93398c8d9d927a904d",
+      "archive_bytes": 9343436,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T09:57:59.212711+00:00",
+      "targets": [
+        "cache.tests.CacheMiddlewareTest.test_constructor",
+        "cache.tests.CacheMiddlewareTest.test_fetch_cache_middleware_constructor",
+        "cache.tests.CacheMiddlewareTest.test_update_cache_middleware_constructor",
+        "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine",
+        "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_deprecation",
+        "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_passing_explicit_none"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/cache/tests.py",
+          "added_lines": [
+            2086,
+            2096,
+            2106,
+            2107,
+            2108,
+            2109,
+            2110,
+            2111,
+            2112,
+            2113,
+            2114,
+            2115,
+            2116,
+            2117,
+            2118,
+            2119,
+            2120
+          ],
+          "targets": [
+            "cache.tests.CacheMiddlewareTest.test_constructor",
+            "cache.tests.CacheMiddlewareTest.test_update_cache_middleware_constructor",
+            "cache.tests.CacheMiddlewareTest.test_fetch_cache_middleware_constructor"
+          ]
+        },
+        {
+          "test_file": "tests/deprecation/test_middleware_mixin.py",
+          "added_lines": [
+            1,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            62,
+            63,
+            64,
+            65,
+            68,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89
+          ],
+          "targets": [
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_deprecation",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_passing_explicit_none",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13344/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "f5a64bd24eaf102fc5e6fce0aa0bcc5ce6dd8a7d3a5c63e91f52e3375dc756dd",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/cache/tests.py...\nChecking patch tests/deprecation/test_middleware_mixin.py...\nChecking patch tests/runtests.py...\nApplied patch tests/cache/tests.py cleanly.\nApplied patch tests/deprecation/test_middleware_mixin.py cleanly.\nApplied patch tests/runtests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "cache.tests.CacheMiddlewareTest.test_constructor",
+            "cache.tests.CacheMiddlewareTest.test_fetch_cache_middleware_constructor",
+            "cache.tests.CacheMiddlewareTest.test_update_cache_middleware_constructor",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_deprecation",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_passing_explicit_none"
+          ],
+          "file_hashes": {
+            "django/contrib/sessions/middleware.py": "d8d7862fd3137b15c516dff9318a252a24a39c166ea8f6c70eb3d0444f5c7051",
+            "django/core/handlers/base.py": "4c69d61d39abb5fa8ac8890a53613fa5f6310057077122fa566fe11b3419a2a9",
+            "django/middleware/cache.py": "e1d81461ecd23b123e3c46587e074e61a54f99822626684a14f4348fd1063127",
+            "django/middleware/security.py": "3f54c48284e8516ca7c516771a6906b582e28a0dfa7b15ac441a05f5bf96c32b",
+            "tests/cache/tests.py": "1de0b784c44eb16632386ceccddcda4f3326e33c75d0c89ae6510f010ae17f3e",
+            "tests/deprecation/test_middleware_mixin.py": "eb8820419aefbaa5ba0207d90eaa01e5124673a280d231366c041768556bcc4f",
+            "tests/runtests.py": "82071cd1c60b3142bda7419b8f4db323c8121c587dcff711973fbbc33c50997c"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13344/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "c2c4a182689fbda8a1715523e8f046fa7dd37e05d803a261c0f266174db928cf",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/core/handlers/base.py...\nApplied patch django/core/handlers/base.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "f5a64bd24eaf102fc5e6fce0aa0bcc5ce6dd8a7d3a5c63e91f52e3375dc756dd",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/cache/tests.py...\nChecking patch tests/deprecation/test_middleware_mixin.py...\nChecking patch tests/runtests.py...\nApplied patch tests/cache/tests.py cleanly.\nApplied patch tests/deprecation/test_middleware_mixin.py cleanly.\nApplied patch tests/runtests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "cache.tests.CacheMiddlewareTest.test_constructor",
+            "cache.tests.CacheMiddlewareTest.test_fetch_cache_middleware_constructor",
+            "cache.tests.CacheMiddlewareTest.test_update_cache_middleware_constructor",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_deprecation",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_passing_explicit_none"
+          ],
+          "file_hashes": {
+            "django/contrib/sessions/middleware.py": "d8d7862fd3137b15c516dff9318a252a24a39c166ea8f6c70eb3d0444f5c7051",
+            "django/core/handlers/base.py": "487149a6cce21fc0aed3c10c9c53bd66ce344ead250ea95555abec6841ca193f",
+            "django/middleware/cache.py": "e1d81461ecd23b123e3c46587e074e61a54f99822626684a14f4348fd1063127",
+            "django/middleware/security.py": "3f54c48284e8516ca7c516771a6906b582e28a0dfa7b15ac441a05f5bf96c32b",
+            "tests/cache/tests.py": "1de0b784c44eb16632386ceccddcda4f3326e33c75d0c89ae6510f010ae17f3e",
+            "tests/deprecation/test_middleware_mixin.py": "eb8820419aefbaa5ba0207d90eaa01e5124673a280d231366c041768556bcc4f",
+            "tests/runtests.py": "82071cd1c60b3142bda7419b8f4db323c8121c587dcff711973fbbc33c50997c"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13344/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "cd4ce142ef39fd702719df87d61b4d6c21d40a39985baf48a469c3fa9248459a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/sessions/middleware.py...\nChecking patch django/middleware/cache.py...\nChecking patch django/middleware/security.py...\nApplied patch django/contrib/sessions/middleware.py cleanly.\nApplied patch django/middleware/cache.py cleanly.\nApplied patch django/middleware/security.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "f5a64bd24eaf102fc5e6fce0aa0bcc5ce6dd8a7d3a5c63e91f52e3375dc756dd",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/cache/tests.py...\nChecking patch tests/deprecation/test_middleware_mixin.py...\nChecking patch tests/runtests.py...\nApplied patch tests/cache/tests.py cleanly.\nApplied patch tests/deprecation/test_middleware_mixin.py cleanly.\nApplied patch tests/runtests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "cache.tests.CacheMiddlewareTest.test_constructor",
+            "cache.tests.CacheMiddlewareTest.test_fetch_cache_middleware_constructor",
+            "cache.tests.CacheMiddlewareTest.test_update_cache_middleware_constructor",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_deprecation",
+            "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_passing_explicit_none"
+          ],
+          "file_hashes": {
+            "django/contrib/sessions/middleware.py": "e53e9abdb71cd0603070e628ca4598570951cf7c94f107d5f787d889c7cd76da",
+            "django/core/handlers/base.py": "4c69d61d39abb5fa8ac8890a53613fa5f6310057077122fa566fe11b3419a2a9",
+            "django/middleware/cache.py": "479df286e6dc2a5361712dae8c29ea9977301e6d344a130d033fea2d120e8769",
+            "django/middleware/security.py": "a5024651e9fe72278125f597760969276afc8ffe751676a63d89717afd4faecc",
+            "tests/cache/tests.py": "1de0b784c44eb16632386ceccddcda4f3326e33c75d0c89ae6510f010ae17f3e",
+            "tests/deprecation/test_middleware_mixin.py": "eb8820419aefbaa5ba0207d90eaa01e5124673a280d231366c041768556bcc4f",
+            "tests/runtests.py": "82071cd1c60b3142bda7419b8f4db323c8121c587dcff711973fbbc33c50997c"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-13512",
+      "base_commit": "b79088306513d5ed76d31ac40ab3c15f858946ea",
+      "url": "https://codeload.github.com/django/django/tar.gz/b79088306513d5ed76d31ac40ab3c15f858946ea",
+      "archive_sha256": "2e8822aac7298303f33d7608709ba4c5b7ceadd7a04219357688a3d92ad85a5e",
+      "archive_bytes": 9367184,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T09:57:59.316199+00:00",
+      "targets": [
+        "admin_utils.tests.UtilsTests.test_json_display_for_field",
+        "forms_tests.field_tests.test_jsonfield.JSONFieldTest.test_prepare_value"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/admin_utils/tests.py",
+          "added_lines": [
+            189
+          ],
+          "targets": [
+            "admin_utils.tests.UtilsTests.test_json_display_for_field"
+          ]
+        },
+        {
+          "test_file": "tests/forms_tests/field_tests/test_jsonfield.py",
+          "added_lines": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ],
+          "targets": [
+            "forms_tests.field_tests.test_jsonfield.JSONFieldTest.test_prepare_value"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13512/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "cd12fb4765bc07c47283100b754c74960638a395e1436c53deef811f7c647aad",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/admin_utils/tests.py...\nChecking patch tests/forms_tests/field_tests/test_jsonfield.py...\nApplied patch tests/admin_utils/tests.py cleanly.\nApplied patch tests/forms_tests/field_tests/test_jsonfield.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "admin_utils.tests.UtilsTests.test_json_display_for_field",
+            "forms_tests.field_tests.test_jsonfield.JSONFieldTest.test_prepare_value"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/utils.py": "0482247f879e7d005386533604b72a44fb8950db9936da544d1a2bf37068d9b1",
+            "django/contrib/admin/widgets.py": "fe90cd2f334791a117629869cbea7cc63cc30c76f4694e405c158141da8f01d1",
+            "django/forms/fields.py": "7e2675d83e075f0ccb252abfefc13efe853c5ac9ed4c36c9581c8f5c15db4dcf",
+            "tests/admin_utils/tests.py": "260adaa1c927e80a69736c22c27d19cf4532891d2c7038585bdb114f5567196c",
+            "tests/forms_tests/field_tests/test_jsonfield.py": "a2a5600a4d4f7c0b4df8e908b22fc1b762dfe6f27e006aaec116d0bf45ab442d"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13512/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "c3d91b03b71a79d3200bb0195360dc2cb995fa56a991c8ed25965da06c49c3b4",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/admin/widgets.py...\nApplied patch django/contrib/admin/widgets.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "cd12fb4765bc07c47283100b754c74960638a395e1436c53deef811f7c647aad",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/admin_utils/tests.py...\nChecking patch tests/forms_tests/field_tests/test_jsonfield.py...\nApplied patch tests/admin_utils/tests.py cleanly.\nApplied patch tests/forms_tests/field_tests/test_jsonfield.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "admin_utils.tests.UtilsTests.test_json_display_for_field",
+            "forms_tests.field_tests.test_jsonfield.JSONFieldTest.test_prepare_value"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/utils.py": "0482247f879e7d005386533604b72a44fb8950db9936da544d1a2bf37068d9b1",
+            "django/contrib/admin/widgets.py": "ff1328a8c26670e72cdd46283b2c074d113d80c8481dd8e1e829cf63e587d473",
+            "django/forms/fields.py": "7e2675d83e075f0ccb252abfefc13efe853c5ac9ed4c36c9581c8f5c15db4dcf",
+            "tests/admin_utils/tests.py": "260adaa1c927e80a69736c22c27d19cf4532891d2c7038585bdb114f5567196c",
+            "tests/forms_tests/field_tests/test_jsonfield.py": "a2a5600a4d4f7c0b4df8e908b22fc1b762dfe6f27e006aaec116d0bf45ab442d"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13512/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "c8370211cbf37387fa30af6468cc52c0078a51e80fa36168001daa7b7071e600",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/admin/utils.py...\nChecking patch django/forms/fields.py...\nApplied patch django/contrib/admin/utils.py cleanly.\nApplied patch django/forms/fields.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "cd12fb4765bc07c47283100b754c74960638a395e1436c53deef811f7c647aad",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/admin_utils/tests.py...\nChecking patch tests/forms_tests/field_tests/test_jsonfield.py...\nApplied patch tests/admin_utils/tests.py cleanly.\nApplied patch tests/forms_tests/field_tests/test_jsonfield.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "admin_utils.tests.UtilsTests.test_json_display_for_field",
+            "forms_tests.field_tests.test_jsonfield.JSONFieldTest.test_prepare_value"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/utils.py": "232ce2cc6ebf0156f44a7892996a978514bd47a8caf38ad73f4464254649c72a",
+            "django/contrib/admin/widgets.py": "fe90cd2f334791a117629869cbea7cc63cc30c76f4694e405c158141da8f01d1",
+            "django/forms/fields.py": "8ccbcfb2abc74ae595cc253b9fb73e4e36343e03193788f2fe9ada041364168f",
+            "tests/admin_utils/tests.py": "260adaa1c927e80a69736c22c27d19cf4532891d2c7038585bdb114f5567196c",
+            "tests/forms_tests/field_tests/test_jsonfield.py": "a2a5600a4d4f7c0b4df8e908b22fc1b762dfe6f27e006aaec116d0bf45ab442d"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-13568",
+      "base_commit": "ede9fac75807fe5810df66280a60e7068cc97e4a",
+      "url": "https://codeload.github.com/django/django/tar.gz/ede9fac75807fe5810df66280a60e7068cc97e4a",
+      "archive_sha256": "0f6e131c455e7037d77cac0403e52d87bf1520a115ebd20379f70be5318cd0ca",
+      "archive_bytes": 9371144,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T09:57:59.262145+00:00",
+      "targets": [
+        "auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique",
+        "auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/auth_tests/test_checks.py",
+          "added_lines": [
+            7,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143
+          ],
+          "targets": [
+            "auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique",
+            "auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "2af2216a4604365adaffc1e1d0cece84c96a5824c641f83414fabd8b5e81993d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/auth_tests/test_checks.py...\nApplied patch tests/auth_tests/test_checks.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique",
+            "auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint"
+          ],
+          "file_hashes": {
+            "django/contrib/auth/checks.py": "6df3c47cc7753c7f8ae87d5a308cd704359a5910beed89e7a1e17c205e17b2f7",
+            "tests/auth_tests/test_checks.py": "6878f1d5c8b639a49589dec707379fdd2b4d02924c1b991a73805d08b84241a2"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "6a85e20eb8aacba75d7405938e4cea484cf80aa1964c8a32413a5ab25f21857c",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/auth/checks.py...\nApplied patch django/contrib/auth/checks.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "2af2216a4604365adaffc1e1d0cece84c96a5824c641f83414fabd8b5e81993d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/auth_tests/test_checks.py...\nApplied patch tests/auth_tests/test_checks.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique",
+            "auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint"
+          ],
+          "file_hashes": {
+            "django/contrib/auth/checks.py": "e2ce841fa4b8ea39391c8e1f6b69dd68be9168b0ca49a48b8f6e55539a5783b3",
+            "tests/auth_tests/test_checks.py": "6878f1d5c8b639a49589dec707379fdd2b4d02924c1b991a73805d08b84241a2"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13568/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "d7d2e32da2597998ad7e0d2a104b70aa2a9232264ee4ab22be6634b3488c7c43",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/auth/checks.py...\nApplied patch django/contrib/auth/checks.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "2af2216a4604365adaffc1e1d0cece84c96a5824c641f83414fabd8b5e81993d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/auth_tests/test_checks.py...\nApplied patch tests/auth_tests/test_checks.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique",
+            "auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint"
+          ],
+          "file_hashes": {
+            "django/contrib/auth/checks.py": "b6afff7af687f7c81288ea2366407db723f1a4165bd5859a57d2a2e71bdf49eb",
+            "tests/auth_tests/test_checks.py": "6878f1d5c8b639a49589dec707379fdd2b4d02924c1b991a73805d08b84241a2"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-13807",
+      "base_commit": "89fc144dedc737a79929231438f035b1d4a993c9",
+      "url": "https://codeload.github.com/django/django/tar.gz/89fc144dedc737a79929231438f035b1d4a993c9",
+      "archive_sha256": "10701a1b0c6dca4d7368364ae91bc99ce90be6392d6c56914e366ea5145e0a60",
+      "archive_bytes": 9399123,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T09:58:34.683011+00:00",
+      "targets": [
+        "backends.tests.FkConstraintsTests.test_check_constraints_sql_keywords"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/backends/tests.py",
+          "added_lines": [
+            23,
+            628,
+            629,
+            630,
+            631,
+            632,
+            633,
+            634,
+            635,
+            636,
+            637,
+            638
+          ],
+          "targets": [
+            "backends.tests.FkConstraintsTests.test_check_constraints_sql_keywords"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "659880ed7b13d363079b33d4e863069b2ec1b1999e639279a93e739bb8c7c8cf",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/backends/models.py...\nChecking patch tests/backends/tests.py...\nApplied patch tests/backends/models.py cleanly.\nApplied patch tests/backends/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "backends.tests.FkConstraintsTests.test_check_constraints_sql_keywords"
+          ],
+          "file_hashes": {
+            "django/db/backends/sqlite3/base.py": "b4f3150f4ef7475ea0d1a031cde5f298afdcd2b0764baa18ef00dbf102447aa4",
+            "tests/backends/models.py": "d25e2005f8d521bd3fded776870ad3e990715a7e434d5460a8b41058c9770eca",
+            "tests/backends/tests.py": "8551fdf69aa08101e8493664b61fd627b22a0054f9b07cda80e378b0cc11963a"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "3f55d72d1fd655f266ad8c3a22c4d5fcb1dafd583a4769dfb95a9ae87b24be56",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/backends/sqlite3/base.py...\nApplied patch django/db/backends/sqlite3/base.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "659880ed7b13d363079b33d4e863069b2ec1b1999e639279a93e739bb8c7c8cf",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/backends/models.py...\nChecking patch tests/backends/tests.py...\nApplied patch tests/backends/models.py cleanly.\nApplied patch tests/backends/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "backends.tests.FkConstraintsTests.test_check_constraints_sql_keywords"
+          ],
+          "file_hashes": {
+            "django/db/backends/sqlite3/base.py": "a4cfade614749eaca59b08dcc38dc74b9e373af07633647f5531aef71820344d",
+            "tests/backends/models.py": "d25e2005f8d521bd3fded776870ad3e990715a7e434d5460a8b41058c9770eca",
+            "tests/backends/tests.py": "8551fdf69aa08101e8493664b61fd627b22a0054f9b07cda80e378b0cc11963a"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "92412882a72d5a32735686b66ab22c468eea8db9895225f2d535c72a00a57e4e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/backends/sqlite3/base.py...\nApplied patch django/db/backends/sqlite3/base.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "659880ed7b13d363079b33d4e863069b2ec1b1999e639279a93e739bb8c7c8cf",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/backends/models.py...\nChecking patch tests/backends/tests.py...\nApplied patch tests/backends/models.py cleanly.\nApplied patch tests/backends/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "backends.tests.FkConstraintsTests.test_check_constraints_sql_keywords"
+          ],
+          "file_hashes": {
+            "django/db/backends/sqlite3/base.py": "4c17e6ef5d0d83f8c5a6391f2eb07f82b6f7f2adb58930735037c51b03fad0ba",
+            "tests/backends/models.py": "d25e2005f8d521bd3fded776870ad3e990715a7e434d5460a8b41058c9770eca",
+            "tests/backends/tests.py": "8551fdf69aa08101e8493664b61fd627b22a0054f9b07cda80e378b0cc11963a"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-14351",
+      "base_commit": "06fd4df41afb5aa1d681b853c3c08d8c688ca3a5",
+      "url": "https://codeload.github.com/django/django/tar.gz/06fd4df41afb5aa1d681b853c3c08d8c688ca3a5",
+      "archive_sha256": "bdd74ffe64f9f18093df551fcd4e4b00986608ab2fe09eabd3432fe56eab887c",
+      "archive_bytes": 9549612,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T09:59:16.869891+00:00",
+      "targets": [
+        "aggregation_regress.tests.AggregationTests.test_having_subquery_select"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/aggregation_regress/tests.py",
+          "added_lines": [
+            1528,
+            1529,
+            1530,
+            1531,
+            1532,
+            1533,
+            1534,
+            1535
+          ],
+          "targets": [
+            "aggregation_regress.tests.AggregationTests.test_having_subquery_select"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "5e548df98763005a127dc9b686f1107fa9f6dd8af8b700390f2b40788f7fb00e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/aggregation_regress/tests.py...\nApplied patch tests/aggregation_regress/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "aggregation_regress.tests.AggregationTests.test_having_subquery_select"
+          ],
+          "file_hashes": {
+            "django/db/models/lookups.py": "3e573e5a31e68d2e435f0d3b50b0d1ad7f5edf4c23b68a0ea642d6212e4bca82",
+            "django/db/models/sql/query.py": "d5e933f629df8ab8a3af9d11a4063152b5ea68b446c3e4e67cc527bec28a37a0",
+            "tests/aggregation_regress/tests.py": "80da95b4dd779e3aeb295da25269cc1d7817002dc742c2dc9fc8a99f816e01c4"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "5f557ed7f3e5de82ce62a65df5bee9d7ab69b8593c6a5b60b2116ea595a97334",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/sql/query.py...\nApplied patch django/db/models/sql/query.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "5e548df98763005a127dc9b686f1107fa9f6dd8af8b700390f2b40788f7fb00e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/aggregation_regress/tests.py...\nApplied patch tests/aggregation_regress/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "aggregation_regress.tests.AggregationTests.test_having_subquery_select"
+          ],
+          "file_hashes": {
+            "django/db/models/lookups.py": "3e573e5a31e68d2e435f0d3b50b0d1ad7f5edf4c23b68a0ea642d6212e4bca82",
+            "django/db/models/sql/query.py": "cc5bf85b991d12b77e07182a9686d64acfae6a52413ef4a703e368b73e790617",
+            "tests/aggregation_regress/tests.py": "80da95b4dd779e3aeb295da25269cc1d7817002dc742c2dc9fc8a99f816e01c4"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14351/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "e094ac74b6c54fb4c6f5a39c319f2cf361b68c376649498b42c7ca452c6daabc",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/lookups.py...\nApplied patch django/db/models/lookups.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "5e548df98763005a127dc9b686f1107fa9f6dd8af8b700390f2b40788f7fb00e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/aggregation_regress/tests.py...\nApplied patch tests/aggregation_regress/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "aggregation_regress.tests.AggregationTests.test_having_subquery_select"
+          ],
+          "file_hashes": {
+            "django/db/models/lookups.py": "005e698a6a23891ebfadf7ec2490f96a365a7c9aa22cab28cf44f4b498df20e2",
+            "django/db/models/sql/query.py": "d5e933f629df8ab8a3af9d11a4063152b5ea68b446c3e4e67cc527bec28a37a0",
+            "tests/aggregation_regress/tests.py": "80da95b4dd779e3aeb295da25269cc1d7817002dc742c2dc9fc8a99f816e01c4"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-14631",
+      "base_commit": "84400d2e9db7c51fee4e9bb04c028f665b8e7624",
+      "url": "https://codeload.github.com/django/django/tar.gz/84400d2e9db7c51fee4e9bb04c028f665b8e7624",
+      "archive_sha256": "0d0069541cf1f8810305ee830a5170afd34584da050b9ef9e38a310f5fefc282",
+      "archive_bytes": 9596412,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T09:59:17.086737+00:00",
+      "targets": [
+        "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field",
+        "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/forms_tests/tests/test_forms.py",
+          "added_lines": [
+            2115,
+            2116,
+            2117,
+            2118,
+            2119,
+            2120,
+            2121,
+            2122,
+            2123,
+            2124,
+            2125,
+            2128,
+            2129,
+            2130,
+            2131,
+            2132,
+            2133,
+            2134,
+            2135,
+            2136,
+            2137,
+            2138,
+            2139,
+            2140,
+            2141,
+            2142,
+            2143,
+            2145,
+            2146,
+            2147,
+            2148,
+            2149,
+            2150,
+            2152,
+            2153,
+            2154,
+            2155
+          ],
+          "targets": [
+            "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds",
+            "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "e772038448f76dd6e393700751d8b84d4e607e6fd6ed1efcf6e030f3b401e20b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/forms_tests/tests/test_forms.py...\nApplied patch tests/forms_tests/tests/test_forms.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field",
+            "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds"
+          ],
+          "file_hashes": {
+            "django/forms/boundfield.py": "7f2d52bf3f0cbb0f555b89c0c88f2c2dd641519a426e14e5810903db04f18a9a",
+            "django/forms/forms.py": "8dfa68473a3d40d059260b96db3730e87cb524d477fe7518c2c5f2ee324a124f",
+            "tests/forms_tests/tests/test_forms.py": "23bc5e15ee50730b1f251f63640674b1a6c5b335ebf2af45fdf4e24a5377f52c"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "e9860c4af1950ac4fde7062f3526773a6f9f8a249d9b06a83400970ea7e62819",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/forms/forms.py...\nApplied patch django/forms/forms.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "e772038448f76dd6e393700751d8b84d4e607e6fd6ed1efcf6e030f3b401e20b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/forms_tests/tests/test_forms.py...\nApplied patch tests/forms_tests/tests/test_forms.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field",
+            "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds"
+          ],
+          "file_hashes": {
+            "django/forms/boundfield.py": "7f2d52bf3f0cbb0f555b89c0c88f2c2dd641519a426e14e5810903db04f18a9a",
+            "django/forms/forms.py": "1259a6b2407364518e27eb649a280b96f72c290deadb8aa459320632e6991f38",
+            "tests/forms_tests/tests/test_forms.py": "23bc5e15ee50730b1f251f63640674b1a6c5b335ebf2af45fdf4e24a5377f52c"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "69262a38ecda46e4919c388a92bb29beb563dab2625381708d355a98466834ec",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/forms/boundfield.py...\nChecking patch django/forms/forms.py...\nApplied patch django/forms/boundfield.py cleanly.\nApplied patch django/forms/forms.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "e772038448f76dd6e393700751d8b84d4e607e6fd6ed1efcf6e030f3b401e20b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/forms_tests/tests/test_forms.py...\nApplied patch tests/forms_tests/tests/test_forms.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field",
+            "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds"
+          ],
+          "file_hashes": {
+            "django/forms/boundfield.py": "88ab18d871a6d4d49b2abf2a23a8370c8a3bf73539ad3a78eb54f47a6a40c7a9",
+            "django/forms/forms.py": "62a47898a154f7d9495d2c843dc3d9283d44daead42c4d84afb0401e60ebbe97",
+            "tests/forms_tests/tests/test_forms.py": "23bc5e15ee50730b1f251f63640674b1a6c5b335ebf2af45fdf4e24a5377f52c"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-15127",
+      "base_commit": "9a6e2df3a8f01ea761529bec48e5a8dc0ea9575b",
+      "url": "https://codeload.github.com/django/django/tar.gz/9a6e2df3a8f01ea761529bec48e5a8dc0ea9575b",
+      "archive_sha256": "6fc9d06542e6d46871b2fb9da8f988433455c35c29b689d6e3c897b715785ce4",
+      "archive_bytes": 9657425,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T09:59:17.051338+00:00",
+      "targets": [
+        "messages_tests.tests.TestLevelTags.test_override_settings_level_tags"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/messages_tests/tests.py",
+          "added_lines": [
+            4,
+            6,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "targets": [
+            "messages_tests.tests.TestLevelTags.test_override_settings_level_tags"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15127/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "7fd092521c1177b3b6945a83f1be7b2ceb17ec0ea13d69a50959607a2dd7a434",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/messages_tests/base.py...\nChecking patch tests/messages_tests/tests.py...\nApplied patch tests/messages_tests/base.py cleanly.\nApplied patch tests/messages_tests/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "messages_tests.tests.TestLevelTags.test_override_settings_level_tags"
+          ],
+          "file_hashes": {
+            "django/contrib/messages/apps.py": "c865c129f579585fc495c3db5f8c098d7aba8f3a77f6db673bbb29f0dfc8cce4",
+            "django/contrib/messages/storage/base.py": "eea9ed0787201e047c540c136505cb109e9d201f3f76bd1db8d8f76539cef004",
+            "tests/messages_tests/base.py": "7d72d23176ac6e319e85c7fc99f7f9c619e53f16967542ff6ec304a39ef81ae1",
+            "tests/messages_tests/tests.py": "ea31500671f5823441392ced0398a8363cbe101758580a4b4b98eff97ae16dd3"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15127/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "6ec486b98e0c726dfd980e154b44f96b627500942b55bae01d9dce83a764ce4f",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/messages/storage/base.py...\nApplied patch django/contrib/messages/storage/base.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "7fd092521c1177b3b6945a83f1be7b2ceb17ec0ea13d69a50959607a2dd7a434",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/messages_tests/base.py...\nChecking patch tests/messages_tests/tests.py...\nApplied patch tests/messages_tests/base.py cleanly.\nApplied patch tests/messages_tests/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "messages_tests.tests.TestLevelTags.test_override_settings_level_tags"
+          ],
+          "file_hashes": {
+            "django/contrib/messages/apps.py": "c865c129f579585fc495c3db5f8c098d7aba8f3a77f6db673bbb29f0dfc8cce4",
+            "django/contrib/messages/storage/base.py": "c7a75278379353f8393684580ebff6dbdaea252012cb015895d8ed26bbb604af",
+            "tests/messages_tests/base.py": "7d72d23176ac6e319e85c7fc99f7f9c619e53f16967542ff6ec304a39ef81ae1",
+            "tests/messages_tests/tests.py": "ea31500671f5823441392ced0398a8363cbe101758580a4b4b98eff97ae16dd3"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15127/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "170b3d56e7911cf50bd963ad5d5e2f6f290d8b70148dc3977e6a84fbccdcdc11",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/messages/apps.py...\nApplied patch django/contrib/messages/apps.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "7fd092521c1177b3b6945a83f1be7b2ceb17ec0ea13d69a50959607a2dd7a434",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/messages_tests/base.py...\nChecking patch tests/messages_tests/tests.py...\nApplied patch tests/messages_tests/base.py cleanly.\nApplied patch tests/messages_tests/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "messages_tests.tests.TestLevelTags.test_override_settings_level_tags"
+          ],
+          "file_hashes": {
+            "django/contrib/messages/apps.py": "bb6c523c629ab5084f7f4c90a95bd157fc5bf1a91506ccd44e8906b832208503",
+            "django/contrib/messages/storage/base.py": "eea9ed0787201e047c540c136505cb109e9d201f3f76bd1db8d8f76539cef004",
+            "tests/messages_tests/base.py": "7d72d23176ac6e319e85c7fc99f7f9c619e53f16967542ff6ec304a39ef81ae1",
+            "tests/messages_tests/tests.py": "ea31500671f5823441392ced0398a8363cbe101758580a4b4b98eff97ae16dd3"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-15382",
+      "base_commit": "770d3e6a4ce8e0a91a9e27156036c1985e74d4a3",
+      "url": "https://codeload.github.com/django/django/tar.gz/770d3e6a4ce8e0a91a9e27156036c1985e74d4a3",
+      "archive_sha256": "ce82e68d9b8035fe2c322c4a044f00f19b557847c4b6272c5949d26811bf4979",
+      "archive_bytes": 9777710,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T10:00:06.861645+00:00",
+      "targets": [
+        "expressions.tests.ExistsTests.test_negated_empty_exists"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/expressions/tests.py",
+          "added_lines": [
+            1908,
+            1909,
+            1910,
+            1911,
+            1912,
+            1913,
+            1914
+          ],
+          "targets": [
+            "expressions.tests.ExistsTests.test_negated_empty_exists"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15382/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "03e835dbb5c9e4efd0d2a00cda13b41d93bfab4ee9d5414e2d2ad0fc1d9172ef",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/expressions/tests.py...\nApplied patch tests/expressions/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "expressions.tests.ExistsTests.test_negated_empty_exists"
+          ],
+          "file_hashes": {
+            "django/db/models/expressions.py": "035429fae18709c2a841cf060ed4fa4bd28a3bc26c5a40929ccca6b63c905024",
+            "tests/expressions/tests.py": "48aac6ba41f32a9020955e78605128e134ae84611f12214947fb410a5f4ee466"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15382/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "727429867628e95dfac8fc9139942ecceab2a9004e6c68bbcf8dae9b44b4f76a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/expressions.py...\nApplied patch django/db/models/expressions.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "03e835dbb5c9e4efd0d2a00cda13b41d93bfab4ee9d5414e2d2ad0fc1d9172ef",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/expressions/tests.py...\nApplied patch tests/expressions/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "expressions.tests.ExistsTests.test_negated_empty_exists"
+          ],
+          "file_hashes": {
+            "django/db/models/expressions.py": "b12c2aa718c11fab66a7ccf77ff19f54d39cd11eed31e0476b06cf96f0234426",
+            "tests/expressions/tests.py": "48aac6ba41f32a9020955e78605128e134ae84611f12214947fb410a5f4ee466"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15382/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "86ddf1a328d1fb80022b0418ffa5c5bde491634c2540d7ef60aae2b02edadd6d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/expressions.py...\nApplied patch django/db/models/expressions.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "03e835dbb5c9e4efd0d2a00cda13b41d93bfab4ee9d5414e2d2ad0fc1d9172ef",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/expressions/tests.py...\nApplied patch tests/expressions/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "expressions.tests.ExistsTests.test_negated_empty_exists"
+          ],
+          "file_hashes": {
+            "django/db/models/expressions.py": "83a56000d1bc30aad0b0c9419b0208347e507352bc3af5e86c456b35a94f8053",
+            "tests/expressions/tests.py": "48aac6ba41f32a9020955e78605128e134ae84611f12214947fb410a5f4ee466"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-15695",
+      "base_commit": "647480166bfe7532e8c471fef0146e3a17e6c0c9",
+      "url": "https://codeload.github.com/django/django/tar.gz/647480166bfe7532e8c471fef0146e3a17e6c0c9",
+      "archive_sha256": "e7a50c11ffb6749669bdd2ef9029f65c0086cb353a4e98c33559c03a6fd9fce7",
+      "archive_bytes": 10178405,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T10:00:22.443353+00:00",
+      "targets": [
+        "migrations.test_operations.OperationTests.test_rename_index_unnamed_index"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/migrations/test_operations.py",
+          "added_lines": [
+            2991,
+            2992,
+            2993,
+            2994,
+            2995
+          ],
+          "targets": [
+            "migrations.test_operations.OperationTests.test_rename_index_unnamed_index"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "963775ca96516fe831558ea2de9bf772afa173cf66a068d5f28e1ff928d6497e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/migrations/test_operations.py...\nApplied patch tests/migrations/test_operations.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "migrations.test_operations.OperationTests.test_rename_index_unnamed_index"
+          ],
+          "file_hashes": {
+            "django/db/migrations/operations/models.py": "a691dc45252b1641d025acf793fa4b27a933d03fcd454ef23fe90361c704b4e7",
+            "tests/migrations/test_operations.py": "54413bf8463dd49faca75700af848d69de19d522c000f656ed1a3ad00e8a3c67"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "8b1aa54b9dbf0a6ec7d9d62d4410accec904e283b7b0627cbae33775f5b1eb86",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/migrations/operations/models.py...\nApplied patch django/db/migrations/operations/models.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "963775ca96516fe831558ea2de9bf772afa173cf66a068d5f28e1ff928d6497e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/migrations/test_operations.py...\nApplied patch tests/migrations/test_operations.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "migrations.test_operations.OperationTests.test_rename_index_unnamed_index"
+          ],
+          "file_hashes": {
+            "django/db/migrations/operations/models.py": "f79724a1b533636e3e95212d821dca7f1e4274ce2ae7b7b16469893015a8a567",
+            "tests/migrations/test_operations.py": "54413bf8463dd49faca75700af848d69de19d522c000f656ed1a3ad00e8a3c67"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "7d0932bd7b423b787a0b7e34ef3875efcbf1e9a54987ae7e3094db2b4987f748",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/migrations/operations/models.py...\nApplied patch django/db/migrations/operations/models.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "963775ca96516fe831558ea2de9bf772afa173cf66a068d5f28e1ff928d6497e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/migrations/test_operations.py...\nApplied patch tests/migrations/test_operations.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "migrations.test_operations.OperationTests.test_rename_index_unnamed_index"
+          ],
+          "file_hashes": {
+            "django/db/migrations/operations/models.py": "c88636f1228846681b9223026d27d37a3cab43ff5fbe514cda2ecdca9f793d97",
+            "tests/migrations/test_operations.py": "54413bf8463dd49faca75700af848d69de19d522c000f656ed1a3ad00e8a3c67"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-15851",
+      "base_commit": "b4817d20b9e55df30be0b1b2ca8c8bb6d61aab07",
+      "url": "https://codeload.github.com/django/django/tar.gz/b4817d20b9e55df30be0b1b2ca8c8bb6d61aab07",
+      "archive_sha256": "a47e651196a0158e24d28cc458f2f206d6be3a54a66b79bbb5546270895f4f02",
+      "archive_bytes": 10197585,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T10:00:22.501164+00:00",
+      "targets": [
+        "dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase.test_parameters"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/dbshell/test_postgresql.py",
+          "added_lines": [
+            157
+          ],
+          "targets": [
+            "dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase.test_parameters"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15851/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "95470180dc5529e89656dd0394338e8ed4aeb0a48a5613c4522dc15abdfd1293",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/dbshell/test_postgresql.py...\nApplied patch tests/dbshell/test_postgresql.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase.test_parameters"
+          ],
+          "file_hashes": {
+            "django/core/management/commands/dbshell.py": "5d60711d02315f329dfe8f353f19a638257aed53dca9b0ebf549dde8b100b7d4",
+            "django/db/backends/postgresql/client.py": "efe43e7e920581e1703ba99b34aa2c1d961c090b24700e7c3aa5ca046d64925e",
+            "tests/dbshell/test_postgresql.py": "6e41b7670d4ed81c8703e029462a242a5d01537b51a54dbfd7451943a05c543a"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15851/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "426747cd15a832c6df12fee5e3ddeed45c401437459da0d6f747c93eec53ddd1",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/core/management/commands/dbshell.py...\nApplied patch django/core/management/commands/dbshell.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "95470180dc5529e89656dd0394338e8ed4aeb0a48a5613c4522dc15abdfd1293",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/dbshell/test_postgresql.py...\nApplied patch tests/dbshell/test_postgresql.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase.test_parameters"
+          ],
+          "file_hashes": {
+            "django/core/management/commands/dbshell.py": "7601c13c33db542b0f465a623ba44e8868ac109d0343921322eab2ca8624f317",
+            "django/db/backends/postgresql/client.py": "efe43e7e920581e1703ba99b34aa2c1d961c090b24700e7c3aa5ca046d64925e",
+            "tests/dbshell/test_postgresql.py": "6e41b7670d4ed81c8703e029462a242a5d01537b51a54dbfd7451943a05c543a"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15851/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "d23e1d4544ee70e3e7e9773d80632826d9bd3da37f5e23a2b9570826fa7023c5",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/backends/postgresql/client.py...\nApplied patch django/db/backends/postgresql/client.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "95470180dc5529e89656dd0394338e8ed4aeb0a48a5613c4522dc15abdfd1293",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/dbshell/test_postgresql.py...\nApplied patch tests/dbshell/test_postgresql.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase.test_parameters"
+          ],
+          "file_hashes": {
+            "django/core/management/commands/dbshell.py": "5d60711d02315f329dfe8f353f19a638257aed53dca9b0ebf549dde8b100b7d4",
+            "django/db/backends/postgresql/client.py": "44bb18caa4e54a5672101e12234b744ec4c8b4370ddde9f226822800aaea4c4f",
+            "tests/dbshell/test_postgresql.py": "6e41b7670d4ed81c8703e029462a242a5d01537b51a54dbfd7451943a05c543a"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-16032",
+      "base_commit": "0c3981eb5094419fe200eb46c71b5376a2266166",
+      "url": "https://codeload.github.com/django/django/tar.gz/0c3981eb5094419fe200eb46c71b5376a2266166",
+      "archive_sha256": "7d59cde0d1ea55809af6b1ee1cd09c65ace492382c385cff60ba8f9d738b2e91",
+      "archive_bytes": 9970509,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T10:00:22.447103+00:00",
+      "targets": [
+        "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_in_subquery",
+        "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_related_in_subquery"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/annotations/tests.py",
+          "added_lines": [
+            992,
+            993,
+            994,
+            995,
+            996,
+            997,
+            998,
+            999,
+            1000,
+            1001,
+            1002,
+            1003,
+            1004,
+            1005,
+            1006,
+            1007,
+            1008,
+            1009,
+            1010,
+            1011,
+            1012,
+            1013,
+            1014,
+            1015,
+            1016,
+            1017,
+            1018,
+            1019
+          ],
+          "targets": [
+            "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_in_subquery",
+            "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_related_in_subquery"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16032/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "f520ab13455158277372148fe49d42d5cc8910cdcda2cd714fa4376d2ea345c3",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/annotations/tests.py...\nApplied patch tests/annotations/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_in_subquery",
+            "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_related_in_subquery"
+          ],
+          "file_hashes": {
+            "django/db/models/fields/related_lookups.py": "c9140f75a8cd1ff73c5444e23a15a2688fe21b23ef56c2ef0e25705628067c36",
+            "django/db/models/sql/query.py": "b59151d501d35a639e2902c95ba4e7492e68d60fc1f1c08654c39422abd3077a",
+            "tests/annotations/tests.py": "306cec4ce1b43e9f83c4bfc4fc15c6491386cde80f8d085178e2e2dbd8c9389b"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16032/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "da4bba7d156e89430c7c14fab50ef0fb251282ac844375245889f1be70a6041d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/sql/query.py...\nApplied patch django/db/models/sql/query.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "f520ab13455158277372148fe49d42d5cc8910cdcda2cd714fa4376d2ea345c3",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/annotations/tests.py...\nApplied patch tests/annotations/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_in_subquery",
+            "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_related_in_subquery"
+          ],
+          "file_hashes": {
+            "django/db/models/fields/related_lookups.py": "c9140f75a8cd1ff73c5444e23a15a2688fe21b23ef56c2ef0e25705628067c36",
+            "django/db/models/sql/query.py": "9c4a62d03805053715a75d92614662e6889ee778b63f68ea6e336f4f7f6f0e38",
+            "tests/annotations/tests.py": "306cec4ce1b43e9f83c4bfc4fc15c6491386cde80f8d085178e2e2dbd8c9389b"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16032/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "6c6c9fc490767cb2fbdcb99d0da38ae6e5a84e0f1edb2577ac42f6cd619f93ea",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/fields/related_lookups.py...\nChecking patch django/db/models/sql/query.py...\nApplied patch django/db/models/fields/related_lookups.py cleanly.\nApplied patch django/db/models/sql/query.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "f520ab13455158277372148fe49d42d5cc8910cdcda2cd714fa4376d2ea345c3",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/annotations/tests.py...\nApplied patch tests/annotations/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_in_subquery",
+            "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_related_in_subquery"
+          ],
+          "file_hashes": {
+            "django/db/models/fields/related_lookups.py": "e57adc31298decde6ea928ef17a7f5456e8fe9663a8fccea74935ed7b5f837b5",
+            "django/db/models/sql/query.py": "49ef97e917bfa9bb93a1531d9eed59b5d9b782907e25a0cc18b285d00470a1e2",
+            "tests/annotations/tests.py": "306cec4ce1b43e9f83c4bfc4fc15c6491386cde80f8d085178e2e2dbd8c9389b"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-16493",
+      "base_commit": "e3a4cee081cf60650b8824f0646383b79cb110e7",
+      "url": "https://codeload.github.com/django/django/tar.gz/e3a4cee081cf60650b8824f0646383b79cb110e7",
+      "archive_sha256": "2e8c8090517be962832885f5aea4014b1cacb40649b0507fb3c8332531520b8c",
+      "archive_bytes": 9997703,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T10:01:05.134763+00:00",
+      "targets": [
+        "file_storage.tests.FieldCallableFileStorageTests.test_deconstruction_storage_callable_default"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/file_storage/tests.py",
+          "added_lines": [
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            1027,
+            1028,
+            1029,
+            1030,
+            1031,
+            1032,
+            1033,
+            1034,
+            1035
+          ],
+          "targets": [
+            "file_storage.tests.FieldCallableFileStorageTests.test_deconstruction_storage_callable_default"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16493/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "e017813e7d2c7e910337819f5065d5cc17411b8440431ee30114b62bea805d21",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/file_storage/models.py...\nChecking patch tests/file_storage/tests.py...\nApplied patch tests/file_storage/models.py cleanly.\nApplied patch tests/file_storage/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "file_storage.tests.FieldCallableFileStorageTests.test_deconstruction_storage_callable_default"
+          ],
+          "file_hashes": {
+            "django/db/models/fields/files.py": "b1862fbb2b95b8feceee92982efbfe51ccf74e02a2da07cf2ad995fceed7913e",
+            "tests/file_storage/models.py": "eb9e1ed7cbb45fa455abab2c5b6bbce38a13b358334eeff56ea62d9232b6ea14",
+            "tests/file_storage/tests.py": "84f97dfdc50ebe0bfed9fee0bb776cfff568e4ed0c39480b4018dbe1834806c3"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16493/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "330a6fc669fe9a30fb578fd6f664ca8d209a4bd310099e84e8e2e545651751cb",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/fields/files.py...\nApplied patch django/db/models/fields/files.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "e017813e7d2c7e910337819f5065d5cc17411b8440431ee30114b62bea805d21",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/file_storage/models.py...\nChecking patch tests/file_storage/tests.py...\nApplied patch tests/file_storage/models.py cleanly.\nApplied patch tests/file_storage/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "file_storage.tests.FieldCallableFileStorageTests.test_deconstruction_storage_callable_default"
+          ],
+          "file_hashes": {
+            "django/db/models/fields/files.py": "a0398c8126a1b3e284455f6f6ed76e7c5cd8356c70c0eeb7ec8154fe1604bd49",
+            "tests/file_storage/models.py": "eb9e1ed7cbb45fa455abab2c5b6bbce38a13b358334eeff56ea62d9232b6ea14",
+            "tests/file_storage/tests.py": "84f97dfdc50ebe0bfed9fee0bb776cfff568e4ed0c39480b4018dbe1834806c3"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16493/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "778ef34b5f5da69485f25325472b7213749117b13bba15a0a6190abee7029d47",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/fields/files.py...\nApplied patch django/db/models/fields/files.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "e017813e7d2c7e910337819f5065d5cc17411b8440431ee30114b62bea805d21",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/file_storage/models.py...\nChecking patch tests/file_storage/tests.py...\nApplied patch tests/file_storage/models.py cleanly.\nApplied patch tests/file_storage/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "file_storage.tests.FieldCallableFileStorageTests.test_deconstruction_storage_callable_default"
+          ],
+          "file_hashes": {
+            "django/db/models/fields/files.py": "0a418328ac6c640b347382c42f519f9b6cb8e542464588722da3f08a0c57a45b",
+            "tests/file_storage/models.py": "eb9e1ed7cbb45fa455abab2c5b6bbce38a13b358334eeff56ea62d9232b6ea14",
+            "tests/file_storage/tests.py": "84f97dfdc50ebe0bfed9fee0bb776cfff568e4ed0c39480b4018dbe1834806c3"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-16560",
+      "base_commit": "51c9bb7cd16081133af4f0ab6d06572660309730",
+      "url": "https://codeload.github.com/django/django/tar.gz/51c9bb7cd16081133af4f0ab6d06572660309730",
+      "archive_sha256": "eaf42aec956e5244d8bc82dad062af6415fe536ab16b70a25f380fadf31c3269",
+      "archive_bytes": 10009902,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T10:01:18.358602+00:00",
+      "targets": [
+        "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+        "constraints.tests.BaseConstraintTests.test_deconstruction",
+        "constraints.tests.CheckConstraintTests.test_eq",
+        "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+        "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+        "constraints.tests.UniqueConstraintTests.test_eq",
+        "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+        "constraints.tests.UniqueConstraintTests.test_validate",
+        "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error",
+        "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+        "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+        "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+        "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/constraints/tests.py",
+          "added_lines": [
+            80,
+            81,
+            82,
+            83,
+            88,
+            95,
+            96,
+            97,
+            98,
+            99,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            198,
+            199,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            275,
+            276,
+            277,
+            278,
+            279,
+            280,
+            281,
+            282,
+            283,
+            284,
+            285,
+            286,
+            287,
+            288,
+            289,
+            394,
+            395,
+            396,
+            397,
+            398,
+            399,
+            400,
+            401,
+            402,
+            403,
+            404,
+            405,
+            406,
+            407,
+            408,
+            409,
+            410,
+            411,
+            412,
+            413,
+            414,
+            415,
+            416,
+            417,
+            589,
+            590,
+            591,
+            592,
+            593,
+            594,
+            595,
+            596,
+            597,
+            598,
+            599,
+            600,
+            601,
+            602,
+            747,
+            748,
+            749,
+            754,
+            756,
+            811,
+            812,
+            813,
+            814,
+            815,
+            816,
+            817,
+            818,
+            819,
+            820,
+            821,
+            822,
+            823,
+            824
+          ],
+          "targets": [
+            "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+            "constraints.tests.BaseConstraintTests.test_deconstruction",
+            "constraints.tests.CheckConstraintTests.test_eq",
+            "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+            "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+            "constraints.tests.UniqueConstraintTests.test_eq",
+            "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+            "constraints.tests.UniqueConstraintTests.test_validate",
+            "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error"
+          ]
+        },
+        {
+          "test_file": "tests/postgres_tests/test_constraints.py",
+          "added_lines": [
+            400,
+            401,
+            402,
+            403,
+            404,
+            405,
+            406,
+            407,
+            408,
+            409,
+            410,
+            484,
+            485,
+            486,
+            487,
+            488,
+            489,
+            490,
+            491,
+            492,
+            493,
+            507,
+            509,
+            786,
+            792,
+            794,
+            799,
+            800,
+            801,
+            802,
+            803,
+            804,
+            805,
+            806,
+            807,
+            808,
+            809,
+            810,
+            811
+          ],
+          "targets": [
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16560/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "130139e65a5facb3f09d6d16d4a814d9a835965a3ed91833da13880959678d04",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/constraints/tests.py...\nChecking patch tests/postgres_tests/test_constraints.py...\nApplied patch tests/constraints/tests.py cleanly.\nApplied patch tests/postgres_tests/test_constraints.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+            "constraints.tests.BaseConstraintTests.test_deconstruction",
+            "constraints.tests.CheckConstraintTests.test_eq",
+            "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+            "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+            "constraints.tests.UniqueConstraintTests.test_eq",
+            "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+            "constraints.tests.UniqueConstraintTests.test_validate",
+            "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition"
+          ],
+          "file_hashes": {
+            "django/contrib/postgres/constraints.py": "929df3c507b2db7768a560f5550dc34624581d7978a9cdc48f08f9f6b4ea1f05",
+            "django/db/models/constraints.py": "a7a3c0e513a1a2bf7dbbc0916d1a9a2a579960537b02146478a2afbff6a84622",
+            "tests/constraints/tests.py": "67e14aa23d278c2c56f5c054b72ba75d5f42822fed26fce362c8dd33cb4ea753",
+            "tests/postgres_tests/test_constraints.py": "116772dab44d17431e291e21de0f3c3d05803f7e1ef7a6e1ecf34845bb2f6497"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16560/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "9e87dcd53d7ac0eb7c1e1c5407e2fbd910fe31559f86bcb037a84277f685d5fc",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/db/models/constraints.py...\nApplied patch django/db/models/constraints.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "130139e65a5facb3f09d6d16d4a814d9a835965a3ed91833da13880959678d04",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/constraints/tests.py...\nChecking patch tests/postgres_tests/test_constraints.py...\nApplied patch tests/constraints/tests.py cleanly.\nApplied patch tests/postgres_tests/test_constraints.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+            "constraints.tests.BaseConstraintTests.test_deconstruction",
+            "constraints.tests.CheckConstraintTests.test_eq",
+            "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+            "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+            "constraints.tests.UniqueConstraintTests.test_eq",
+            "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+            "constraints.tests.UniqueConstraintTests.test_validate",
+            "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition"
+          ],
+          "file_hashes": {
+            "django/contrib/postgres/constraints.py": "929df3c507b2db7768a560f5550dc34624581d7978a9cdc48f08f9f6b4ea1f05",
+            "django/db/models/constraints.py": "31d64d0ad98add9095f99d48c5f5df5cc1314907703ac8c7933940d6a14c28fa",
+            "tests/constraints/tests.py": "67e14aa23d278c2c56f5c054b72ba75d5f42822fed26fce362c8dd33cb4ea753",
+            "tests/postgres_tests/test_constraints.py": "116772dab44d17431e291e21de0f3c3d05803f7e1ef7a6e1ecf34845bb2f6497"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16560/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "3cfb9f5484180d2312eef8d498f60d6370c8670476cfc19c34110504e0070b39",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/postgres/constraints.py...\nChecking patch django/db/models/constraints.py...\nApplied patch django/contrib/postgres/constraints.py cleanly.\nApplied patch django/db/models/constraints.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "130139e65a5facb3f09d6d16d4a814d9a835965a3ed91833da13880959678d04",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/constraints/tests.py...\nChecking patch tests/postgres_tests/test_constraints.py...\nApplied patch tests/constraints/tests.py cleanly.\nApplied patch tests/postgres_tests/test_constraints.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+            "constraints.tests.BaseConstraintTests.test_deconstruction",
+            "constraints.tests.CheckConstraintTests.test_eq",
+            "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+            "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+            "constraints.tests.UniqueConstraintTests.test_eq",
+            "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+            "constraints.tests.UniqueConstraintTests.test_validate",
+            "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+            "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition"
+          ],
+          "file_hashes": {
+            "django/contrib/postgres/constraints.py": "6790cb42a6479e3b338a213b4a14e9041b133887d51de8a8ebf06ab13e266e93",
+            "django/db/models/constraints.py": "a1d363ff80b53057d8e6dfb7919dcd838f8ba4a098ea37cc732385e39bed0156",
+            "tests/constraints/tests.py": "67e14aa23d278c2c56f5c054b72ba75d5f42822fed26fce362c8dd33cb4ea753",
+            "tests/postgres_tests/test_constraints.py": "116772dab44d17431e291e21de0f3c3d05803f7e1ef7a6e1ecf34845bb2f6497"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-16661",
+      "base_commit": "d687febce5868545f99974d2499a91f81a32fef5",
+      "url": "https://codeload.github.com/django/django/tar.gz/d687febce5868545f99974d2499a91f81a32fef5",
+      "archive_sha256": "0bf60515e763e8684af16aa2f0301a317a738fdfbe81a911f7eac9189f2a6ce1",
+      "archive_bytes": 10028110,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T10:01:50.250938+00:00",
+      "targets": [
+        "modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/modeladmin/tests.py",
+          "added_lines": [
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185
+          ],
+          "targets": [
+            "modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16661/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "813d067605ea61fe3f85820a9a5ccb16c1f5e215c2e2686a429256fa9d2ce46d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/modeladmin/tests.py...\nApplied patch tests/modeladmin/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/options.py": "38a2148b6bd9986c75c110c8bf74319574262befdc4dc5f5baaddd4eec391320",
+            "tests/modeladmin/tests.py": "801b8e4e9015bfefd25834d83436c1f2d21b71b5c24a1663d5d154eb91bf67da"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16661/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "8690ef3b8b8d7366ce807df4b836ef19d30c5a2889f47d3023a38748a303185e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/admin/options.py...\nApplied patch django/contrib/admin/options.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "813d067605ea61fe3f85820a9a5ccb16c1f5e215c2e2686a429256fa9d2ce46d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/modeladmin/tests.py...\nApplied patch tests/modeladmin/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/options.py": "b7a3426a1d2663ab521fc4245ff6459917e4fce762357df9d6b9954a93cc2efd",
+            "tests/modeladmin/tests.py": "801b8e4e9015bfefd25834d83436c1f2d21b71b5c24a1663d5d154eb91bf67da"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16661/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "cd4664438336c0970d1f72d05a090a6614a5554d90d2c5e17af2de7582b725fd",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/admin/options.py...\nApplied patch django/contrib/admin/options.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "813d067605ea61fe3f85820a9a5ccb16c1f5e215c2e2686a429256fa9d2ce46d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/modeladmin/tests.py...\nApplied patch tests/modeladmin/tests.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/options.py": "6afbccd43a6400edc9ccd442de2715f26839343177a6f071dfcf08a70cf4c8e6",
+            "tests/modeladmin/tests.py": "801b8e4e9015bfefd25834d83436c1f2d21b71b5c24a1663d5d154eb91bf67da"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-16950",
+      "base_commit": "f64fd47a7627ed6ffe2df2a32ded6ee528a784eb",
+      "url": "https://codeload.github.com/django/django/tar.gz/f64fd47a7627ed6ffe2df2a32ded6ee528a784eb",
+      "archive_sha256": "77dd25f5b8ef235650684688bcf93f89dbd437b66ad74522eb12e8df0ae93a25",
+      "archive_bytes": 10167192,
+      "reused_immutable_archive": null,
+      "acquired_at_utc": "2026-11-05T10:01:14.981655+00:00",
+      "targets": [
+        "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_ignores_default_pks_on_submit",
+        "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_nulls_default_pks_alternate_key_relation_data"
+      ],
+      "target_mapping": [
+        {
+          "test_file": "tests/model_formsets/test_uuid.py",
+          "added_lines": [
+            46,
+            47,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117
+          ],
+          "targets": [
+            "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_ignores_default_pks_on_submit",
+            "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_nulls_default_pks_alternate_key_relation_data"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "name": "base",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16950/base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "079f23922da8477b532b835fdb4512d03e68b5fd7480b40790ba673e7536ba9a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/model_formsets/test_uuid.py...\nApplied patch tests/model_formsets/test_uuid.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_ignores_default_pks_on_submit",
+            "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_nulls_default_pks_alternate_key_relation_data"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/options.py": "79d497944ed6d6a524e5828c788106c7372a240d389306496be6f96d179f4639",
+            "django/forms/models.py": "84005b477b21398c078598cd57a3c3c83f0e65273d8571cfd14a71791fdb4dee",
+            "tests/model_formsets/test_uuid.py": "6ea680bc568f77b97404d7fe944c202b5c6f9a92f8ddfc9bdd6dec920685bc5d"
+          }
+        },
+        {
+          "name": "candidate",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16950/candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "3be33e287fcb63c6358f39a37e2e54187eb11e9ebf4c8d9672abf4d07a2181b8",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/contrib/admin/options.py...\nApplied patch django/contrib/admin/options.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "079f23922da8477b532b835fdb4512d03e68b5fd7480b40790ba673e7536ba9a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/model_formsets/test_uuid.py...\nApplied patch tests/model_formsets/test_uuid.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_ignores_default_pks_on_submit",
+            "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_nulls_default_pks_alternate_key_relation_data"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/options.py": "1cb1ec8b85777749dcf3aea09e19d44d23458b2790aca48334e2169b46c0ad4c",
+            "django/forms/models.py": "84005b477b21398c078598cd57a3c3c83f0e65273d8571cfd14a71791fdb4dee",
+            "tests/model_formsets/test_uuid.py": "6ea680bc568f77b97404d7fe944c202b5c6f9a92f8ddfc9bdd6dec920685bc5d"
+          }
+        },
+        {
+          "name": "developer",
+          "source_path": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-16950/developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "1cc066e912988ad9fc08de9da39cb0a27fe4d2e7f65586da24f0397ba387ebdd",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch django/forms/models.py...\nApplied patch django/forms/models.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "079f23922da8477b532b835fdb4512d03e68b5fd7480b40790ba673e7536ba9a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/model_formsets/test_uuid.py...\nApplied patch tests/model_formsets/test_uuid.py cleanly.\n"
+            }
+          ],
+          "targets": [
+            "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_ignores_default_pks_on_submit",
+            "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_nulls_default_pks_alternate_key_relation_data"
+          ],
+          "file_hashes": {
+            "django/contrib/admin/options.py": "79d497944ed6d6a524e5828c788106c7372a240d389306496be6f96d179f4639",
+            "django/forms/models.py": "e547a0f580da2c993ec79d08f35a3f8695a3b9ef424e6b3c5076666139aaaa21",
+            "tests/model_formsets/test_uuid.py": "6ea680bc568f77b97404d7fe944c202b5c6f9a92f8ddfc9bdd6dec920685bc5d"
+          }
+        }
+      ]
+    }
+  ],
+  "protocol_sha256": "3e54331901f2d75ec8238b703228aa94af5a0297afaf6e916df690cbd1e0f2de"
+}

@@ -1,0 +1,21 @@
+
+=================================================================== ERRORS ===================================================================
+_____________________________________________ ERROR collecting lib/matplotlib/tests/test_axes.py _____________________________________________
+ImportError while importing test module '/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/matplotlib__matplotlib-24627/developer/lib/matplotlib/tests/test_axes.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../python_runtimes/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+lib/matplotlib/tests/test_axes.py:33: in <module>
+    import matplotlib.pyplot as plt
+lib/matplotlib/pyplot.py:55: in <module>
+    from matplotlib import rcsetup, style
+lib/matplotlib/style/__init__.py:1: in <module>
+    from .core import available, context, library, reload_library, use
+lib/matplotlib/style/core.py:26: in <module>
+    import importlib_resources
+E   ModuleNotFoundError: No module named 'importlib_resources'
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v3/matplotlib__matplotlib-24627_developer.xml -
+========================================================== short test summary info ===========================================================
+ERROR lib/matplotlib/tests/test_axes.py
+1 error in 0.69s

@@ -1,0 +1,37 @@
+FF                                                                                                                                     [100%]
+================================================================== FAILURES ==================================================================
+_______________________________________________________ test_include_source_read_event _______________________________________________________
+tests/test_directive_other.py:169: in test_include_source_read_event
+    assert "baz/baz" in sources_reported
+E   AssertionError: assert 'baz/baz' in {'index': '.. include:: baz/baz.rst\n   :start-line: 4\n\n.. include:: text.txt\n   :literal:    \n'}
+---------------------------------------------------------- Captured stdout teardown ----------------------------------------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-2022810001/pytest-7/directive-include
+# outdir: /tmp/pytest-of-2022810001/pytest-7/directive-include/_build/html
+# status: 
+[01mRunning Sphinx v7.2.0[39;49;00m
+
+# warning: 
+
+_______________________________________________ test_include_source_read_event_nested_includes _______________________________________________
+tests/test_directive_other.py:187: in test_include_source_read_event_nested_includes
+    assert doctree.children[1].rawsource == "The amazing foo."
+E   AssertionError: assert 'The #magical foo.' == 'The amazing foo.'
+E     - The amazing foo.
+E     + The #magical foo.
+---------------------------------------------------------- Captured stdout teardown ----------------------------------------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-2022810001/pytest-7/directive-include
+# outdir: /tmp/pytest-of-2022810001/pytest-7/directive-include/_build/html
+# status: 
+[01mRunning Sphinx v7.2.0[39;49;00m
+
+# warning: 
+
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/sphinx-doc__sphinx-11510_candidate.xml -
+========================================================== short test summary info ===========================================================
+FAILED tests/test_directive_other.py::test_include_source_read_event - AssertionError: assert 'baz/baz' in {'index': '.. include:: baz/baz....
+FAILED tests/test_directive_other.py::test_include_source_read_event_nested_includes - AssertionError: assert 'The #magical foo.' == 'The a...
+2 failed in 0.43s

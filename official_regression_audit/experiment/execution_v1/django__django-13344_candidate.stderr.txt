@@ -1,0 +1,48 @@
+test_constructor (cache.tests.CacheMiddlewareTest.test_constructor)
+Ensure the constructor is correctly distinguishing between usage of CacheMiddleware as ... ok
+test_fetch_cache_middleware_constructor (cache.tests.CacheMiddlewareTest.test_fetch_cache_middleware_constructor) ... ok
+test_update_cache_middleware_constructor (cache.tests.CacheMiddlewareTest.test_update_cache_middleware_constructor) ... ok
+test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) ... 
+  test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='CacheMiddleware') ... FAIL
+  test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='FetchFromCacheMiddleware') ... FAIL
+  test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='SecurityMiddleware') ... FAIL
+  test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='UpdateCacheMiddleware') ... FAIL
+test_deprecation (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_deprecation) ... ok
+test_passing_explicit_none (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_passing_explicit_none) ... ok
+
+======================================================================
+FAIL: test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='CacheMiddleware')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13344/candidate/tests/deprecation/test_middleware_mixin.py", line 85, in test_coroutine
+    self.assertIs(asyncio.iscoroutinefunction(middleware_instance), True)
+AssertionError: False is not True
+
+======================================================================
+FAIL: test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='FetchFromCacheMiddleware')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13344/candidate/tests/deprecation/test_middleware_mixin.py", line 85, in test_coroutine
+    self.assertIs(asyncio.iscoroutinefunction(middleware_instance), True)
+AssertionError: False is not True
+
+======================================================================
+FAIL: test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='SecurityMiddleware')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13344/candidate/tests/deprecation/test_middleware_mixin.py", line 85, in test_coroutine
+    self.assertIs(asyncio.iscoroutinefunction(middleware_instance), True)
+AssertionError: False is not True
+
+======================================================================
+FAIL: test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='UpdateCacheMiddleware')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13344/candidate/tests/deprecation/test_middleware_mixin.py", line 85, in test_coroutine
+    self.assertIs(asyncio.iscoroutinefunction(middleware_instance), True)
+AssertionError: False is not True
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+FAILED (failures=4)

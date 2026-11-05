@@ -1,0 +1,22 @@
+F                                                                                                                                      [100%]
+================================================================== FAILURES ==================================================================
+____________________________________________________________ test_sylow_subgroup _____________________________________________________________
+sympy/combinatorics/tests/test_perm_groups.py:909: in test_sylow_subgroup
+    S = G.sylow_subgroup(p=2)
+sympy/combinatorics/perm_groups.py:4354: in sylow_subgroup
+    blocks = self.minimal_blocks()
+sympy/combinatorics/perm_groups.py:2201: in minimal_blocks
+    del num_blocks[i], blocks[i]
+E   IndexError: list assignment index out of range
+============================================================== warnings summary ==============================================================
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/lib/python3.9/site-packages/_pytest/junitxml.py:417
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/lib/python3.9/site-packages/_pytest/junitxml.py:417: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.
+  Add 'junit_family=xunit1' to your pytest.ini file to keep the current format in future versions of pytest and silence this warning.
+    _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/sympy__sympy-19954_base.xml -
+                                                               DO *NOT* COMMIT!                                                               
+========================================================== short test summary info ===========================================================
+FAILED sympy/combinatorics/tests/test_perm_groups.py::test_sylow_subgroup - IndexError: list assignment index out of range
+1 failed, 1 warning in 0.51s

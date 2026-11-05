@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.695" timestamp="2026-11-05T19:24:40.154208" hostname="jupyter-x-2022810001---b3c2668a"><testcase classname="sklearn.feature_selection.tests.test_base" name="test_output_dataframe" time="0.364"><failure message="AssertionError: assert dtype('O') == dtype('float32')">sklearn/feature_selection/tests/test_base.py:140: in test_output_dataframe
+    assert dtype == X.dtypes[name]
+E   AssertionError: assert dtype('O') == dtype('float32')</failure></testcase><testcase classname="sklearn.feature_selection.tests.test_feature_select" name="test_dataframe_output_dtypes" time="0.006"><failure message="KeyError: &quot;Only a column name can be used for the key in a dtype mappings argument. 'sepal length (cm)' not found in columns.&quot;">sklearn/feature_selection/tests/test_feature_select.py:978: in test_dataframe_output_dtypes
+    output = univariate_filter.fit_transform(X, y)
+sklearn/utils/_set_output.py:157: in wrapped
+    return _wrap_data_with_container(method, data_to_wrap, X, self)
+sklearn/utils/_set_output.py:136: in _wrap_data_with_container
+    return _wrap_in_pandas_container(
+sklearn/utils/_set_output.py:63: in _wrap_in_pandas_container
+    data_to_wrap = data_to_wrap.astype(dtypes)
+../../../../runtimes/modern_science/lib/python3.9/site-packages/pandas/core/generic.py:6212: in astype
+    raise KeyError(
+E   KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'sepal length (cm)' not found in columns."</failure></testcase></testsuite></testsuites>

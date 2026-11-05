@@ -1,0 +1,18 @@
+test_override_settings_level_tags (messages_tests.tests.TestLevelTags.test_override_settings_level_tags) ... ERROR
+
+======================================================================
+ERROR: test_override_settings_level_tags (messages_tests.tests.TestLevelTags.test_override_settings_level_tags)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15127/candidate/django/test/utils.py", line 437, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15127/candidate/tests/messages_tests/tests.py", line 33, in test_override_settings_level_tags
+    self.assertEqual(base.LEVEL_TAGS, self.message_tags)
+                     ^^^^^^^^^^^^^^^
+AttributeError: module 'django.contrib.messages.storage.base' has no attribute 'LEVEL_TAGS'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

@@ -1,0 +1,23 @@
+FF                                                                                                                                     [100%]
+================================================================== FAILURES ==================================================================
+___________________________________________________________ test_output_dataframe ____________________________________________________________
+sklearn/feature_selection/tests/test_base.py:140: in test_output_dataframe
+    assert dtype == X.dtypes[name]
+E   AssertionError: assert dtype('O') == dtype('float32')
+________________________________________________________ test_dataframe_output_dtypes ________________________________________________________
+sklearn/feature_selection/tests/test_feature_select.py:978: in test_dataframe_output_dtypes
+    output = univariate_filter.fit_transform(X, y)
+sklearn/utils/_set_output.py:157: in wrapped
+    return _wrap_data_with_container(method, data_to_wrap, X, self)
+sklearn/utils/_set_output.py:136: in _wrap_data_with_container
+    return _wrap_in_pandas_container(
+sklearn/utils/_set_output.py:63: in _wrap_in_pandas_container
+    data_to_wrap = data_to_wrap.astype(dtypes)
+../../../../runtimes/modern_science/lib/python3.9/site-packages/pandas/core/generic.py:6212: in astype
+    raise KeyError(
+E   KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'sepal length (cm)' not found in columns."
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/scikit-learn__scikit-learn-25102_candidate.xml -
+========================================================== short test summary info ===========================================================
+FAILED sklearn/feature_selection/tests/test_base.py::test_output_dataframe - AssertionError: assert dtype('O') == dtype('float32')
+FAILED sklearn/feature_selection/tests/test_feature_select.py::test_dataframe_output_dtypes - KeyError: "Only a column name can be used for...
+2 failed in 0.69s

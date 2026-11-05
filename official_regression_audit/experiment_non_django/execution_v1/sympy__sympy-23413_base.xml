@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="jupyter-x-2022810001---b3c2668a" name="pytest" skipped="0" tests="2" time="0.054" timestamp="2026-11-05T19:24:49.911708"><testcase classname="sympy.matrices.tests.test_normalforms" file="sympy/matrices/tests/test_normalforms.py" line="59" name="test_hermite_normal" time="0.001"><failure message="assert Matrix(3, 0, []) == Matrix([\n[1],\n[0],\n[0]])
+  Full diff:
+  + Matrix(3, 0, [],
+  - Matrix([
+  - [1],
+  - [0],
+  - [0]],
+    )">sympy/matrices/tests/test_normalforms.py:81: in test_hermite_normal
+    assert hermite_normal_form(m) == hnf
+E   assert Matrix(3, 0, []) == Matrix([\n[1],\n[0],\n[0]])
+E     Full diff:
+E     + Matrix(3, 0, [],
+E     - Matrix([
+E     - [1],
+E     - [0],
+E     - [0]],
+E       )</failure></testcase><testcase classname="sympy.polys.matrices.tests.test_normalforms" file="sympy/polys/matrices/tests/test_normalforms.py" line="40" name="test_hermite_normal" time="0.001"><failure message="assert DomainMatrix(...], (3, 0), ZZ) == DomainMatrix(...], (3, 1), ZZ)
+  Full diff:
+  - DomainMatrix([[1], [0], [0]], (3, 1), ZZ)
+  ?                -    -    -        ^
+  + DomainMatrix([[], [], []], (3, 0), ZZ)
+  ?                                ^">sympy/polys/matrices/tests/test_normalforms.py:66: in test_hermite_normal
+    assert hermite_normal_form(m) == hnf
+E   assert DomainMatrix(...], (3, 0), ZZ) == DomainMatrix(...], (3, 1), ZZ)
+E     Full diff:
+E     - DomainMatrix([[1], [0], [0]], (3, 1), ZZ)
+E     ?                -    -    -        ^
+E     + DomainMatrix([[], [], []], (3, 0), ZZ)
+E     ?                                ^</failure></testcase></testsuite></testsuites>

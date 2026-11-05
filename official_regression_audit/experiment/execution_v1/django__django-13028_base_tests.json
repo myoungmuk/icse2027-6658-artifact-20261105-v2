@@ -1,0 +1,51 @@
+{
+  "started_at_utc": "2026-11-05T10:03:03.695661+00:00",
+  "finished_at_utc": "2026-11-05T10:03:04.586652+00:00",
+  "python": "3.12.13",
+  "source": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base",
+  "targets": [
+    "queries.tests.Queries1Tests.test_field_with_filterable",
+    "queries.tests.Queries1Tests.test_ticket8439"
+  ],
+  "events": [
+    {
+      "test_id": "queries.tests.Queries1Tests.test_field_with_filterable",
+      "outcome": "error",
+      "exception_type": "NotSupportedError",
+      "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/tests/queries/tests.py\", line 1215, in test_field_with_filterable\n    Author.objects.filter(extra=self.e2),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/manager.py\", line 85, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/query.py\", line 942, in filter\n    return self._filter_or_exclude(False, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/query.py\", line 962, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, *args, **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/query.py\", line 969, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1356, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1375, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1269, in build_filter\n    self.check_filterable(value)\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1128, in check_filterable\n    raise NotSupportedError(\ndjango.db.utils.NotSupportedError: ExtraInfo is disallowed in the filter clause.\n"
+    },
+    {
+      "test_id": "queries.tests.Queries1Tests.test_ticket8439",
+      "outcome": "error",
+      "exception_type": "NotSupportedError",
+      "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/tests/queries/tests.py\", line 864, in test_ticket8439\n    Author.objects.filter(Q(item__note__extrainfo=self.e2) | Q(report=self.r1, name='xyz')),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/manager.py\", line 85, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/query.py\", line 942, in filter\n    return self._filter_or_exclude(False, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/query.py\", line 962, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, *args, **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/query.py\", line 969, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1356, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1375, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1235, in build_filter\n    return self._add_q(\n           ^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1375, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1269, in build_filter\n    self.check_filterable(value)\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13028/base/django/db/models/sql/query.py\", line 1128, in check_filterable\n    raise NotSupportedError(\ndjango.db.utils.NotSupportedError: ExtraInfo is disallowed in the filter clause.\n"
+    }
+  ],
+  "runner_summaries": [
+    {
+      "tests_run": 2,
+      "failures": 0,
+      "errors": 2,
+      "skipped": 0,
+      "successful": false
+    }
+  ],
+  "top_exception": null,
+  "dependencies": {
+    "PyYAML": "6.0.2",
+    "Jinja2": "3.1.6",
+    "argon2-cffi": "23.1.0",
+    "docutils": "0.20.1",
+    "argon2-cffi-bindings": "26.1.0",
+    "asgiref": "3.7.2",
+    "cffi": "2.1.1",
+    "pycparser": "3.12",
+    "pillow": "10.4.0",
+    "MarkupSafe": "3.0.4",
+    "setuptools": "80.9.0",
+    "pytz": "2023.3",
+    "sqlparse": "0.4.4",
+    "bcrypt": "4.1.1",
+    "psycopg2-binary": "2.9.9"
+  }
+}

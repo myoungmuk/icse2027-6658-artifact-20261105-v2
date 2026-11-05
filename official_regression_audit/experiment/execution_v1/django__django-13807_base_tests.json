@@ -1,0 +1,44 @@
+{
+  "started_at_utc": "2026-11-05T10:03:06.023447+00:00",
+  "finished_at_utc": "2026-11-05T10:03:06.719446+00:00",
+  "python": "3.12.13",
+  "source": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base",
+  "targets": [
+    "backends.tests.FkConstraintsTests.test_check_constraints_sql_keywords"
+  ],
+  "events": [
+    {
+      "test_id": "backends.tests.FkConstraintsTests.test_check_constraints_sql_keywords",
+      "outcome": "error",
+      "exception_type": "OperationalError",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/utils.py\", line 82, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/sqlite3/base.py\", line 414, in execute\n    return Database.Cursor.execute(self, query)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nsqlite3.OperationalError: near \"order\": syntax error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/tests/backends/tests.py\", line 636, in test_check_constraints_sql_keywords\n    connection.check_constraints(table_names=['order'])\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/sqlite3/base.py\", line 334, in check_constraints\n    for table_name, rowid, referenced_table_name, foreign_key_index in violations:\n                                                                       ^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/sqlite3/base.py\", line 330, in <genexpr>\n    cursor.execute('PRAGMA foreign_key_check(%s)' % table_name).fetchall()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/utils.py\", line 66, in execute\n    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/utils.py\", line 75, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/utils.py\", line 79, in _execute\n    with self.db.wrap_database_errors:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/utils.py\", line 82, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-13807/base/django/db/backends/sqlite3/base.py\", line 414, in execute\n    return Database.Cursor.execute(self, query)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: near \"order\": syntax error\n"
+    }
+  ],
+  "runner_summaries": [
+    {
+      "tests_run": 1,
+      "failures": 0,
+      "errors": 1,
+      "skipped": 0,
+      "successful": false
+    }
+  ],
+  "top_exception": null,
+  "dependencies": {
+    "PyYAML": "6.0.2",
+    "Jinja2": "3.1.6",
+    "argon2-cffi": "23.1.0",
+    "docutils": "0.20.1",
+    "argon2-cffi-bindings": "26.1.0",
+    "asgiref": "3.7.2",
+    "cffi": "2.1.1",
+    "pycparser": "3.12",
+    "pillow": "10.4.0",
+    "MarkupSafe": "3.0.4",
+    "setuptools": "80.9.0",
+    "pytz": "2023.3",
+    "sqlparse": "0.4.4",
+    "bcrypt": "4.1.1",
+    "psycopg2-binary": "2.9.9"
+  }
+}

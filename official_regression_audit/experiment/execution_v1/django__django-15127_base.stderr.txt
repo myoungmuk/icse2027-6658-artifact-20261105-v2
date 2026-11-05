@@ -1,0 +1,19 @@
+test_override_settings_level_tags (messages_tests.tests.TestLevelTags.test_override_settings_level_tags) ... FAIL
+
+======================================================================
+FAIL: test_override_settings_level_tags (messages_tests.tests.TestLevelTags.test_override_settings_level_tags)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15127/base/django/test/utils.py", line 437, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15127/base/tests/messages_tests/tests.py", line 33, in test_override_settings_level_tags
+    self.assertEqual(base.LEVEL_TAGS, self.message_tags)
+AssertionError: {10: 'debug', 20: 'info', 25: 'success', 30: 'warning', 40: 'error'} != {20: 'info', 10: '', 30: '', 40: 'bad', 25: '', 12: 'custom'}
+- {10: 'debug', 20: 'info', 25: 'success', 30: 'warning', 40: 'error'}
++ {10: '', 12: 'custom', 20: 'info', 25: '', 30: '', 40: 'bad'}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

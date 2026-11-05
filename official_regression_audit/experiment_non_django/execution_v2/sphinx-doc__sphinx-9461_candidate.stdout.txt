@@ -1,0 +1,71 @@
+FFF                                                                                                                                    [100%]
+================================================================== FAILURES ==================================================================
+______________________________________________________________ test_pyproperty _______________________________________________________________
+tests/test_domain_py.py:825: in test_pyproperty
+    assert_node(doctree, (addnodes.index,
+sphinx/testing/util.py:68: in assert_node
+    assert_node(node[i], nodecls, xpath=path, **kwargs)
+sphinx/testing/util.py:54: in assert_node
+    assert_node(node, cls[1], xpath=xpath, **kwargs)
+sphinx/testing/util.py:68: in assert_node
+    assert_node(node[i], nodecls, xpath=path, **kwargs)
+sphinx/testing/util.py:54: in assert_node
+    assert_node(node, cls[1], xpath=xpath, **kwargs)
+sphinx/testing/util.py:64: in assert_node
+    assert len(node) == len(cls), \
+E   AssertionError: The node[1][1] has 3 child nodes, not 4
+---------------------------------------------------------- Captured stdout teardown ----------------------------------------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-2022810001/pytest-10/root
+# outdir: /tmp/pytest-of-2022810001/pytest-10/root/_build/html
+# status: 
+[01mRunning Sphinx v4.2.0+[39;49;00m
+
+# warning: 
+[31m/tmp/pytest-of-2022810001/pytest-10/root/index.rst:7: WARNING: Error in "py:property" directive:
+unknown option: "classmethod".
+
+.. py:property:: prop2
+   :classmethod:
+   :type: str[39;49;00m
+
+______________________________________________________________ test_properties _______________________________________________________________
+tests/test_ext_autodoc_autoclass.py:207: in test_properties
+    assert list(actual) == [
+E   AssertionError: assert ['', '.. py:c...ing', '', ...] == ['', '.. py:c...ing', '', ...]
+E     Right contains 8 more items, first extra item: ''
+E     Use -v to get more diff
+---------------------------------------------------------- Captured stdout teardown ----------------------------------------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-2022810001/pytest-10/ext-autodoc
+# outdir: /tmp/pytest-of-2022810001/pytest-10/ext-autodoc/_build/html
+# status: 
+[01mRunning Sphinx v4.2.0+[39;49;00m
+
+# warning: 
+
+___________________________________________________________ test_class_properties ____________________________________________________________
+tests/test_ext_autodoc_autoproperty.py:34: in test_class_properties
+    assert list(actual) == [
+E   AssertionError: assert ['', '.. py:p...operties', ''] == ['', '.. py:p...int', '', ...]
+E     At index 3 diff: '' != '   :classmethod:'
+E     Right contains 4 more items, first extra item: '   :type: int'
+E     Use -v to get more diff
+---------------------------------------------------------- Captured stdout teardown ----------------------------------------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-2022810001/pytest-10/ext-autodoc
+# outdir: /tmp/pytest-of-2022810001/pytest-10/ext-autodoc/_build/html
+# status: 
+[01mRunning Sphinx v4.2.0+[39;49;00m
+
+# warning: 
+
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v2/sphinx-doc__sphinx-9461_candidate.xml -
+========================================================== short test summary info ===========================================================
+FAILED tests/test_domain_py.py::test_pyproperty - AssertionError: The node[1][1] has 3 child nodes, not 4
+FAILED tests/test_ext_autodoc_autoclass.py::test_properties - AssertionError: assert ['', '.. py:c...ing', '', ...] == ['', '.. py:c...ing'...
+FAILED tests/test_ext_autodoc_autoproperty.py::test_class_properties - AssertionError: assert ['', '.. py:p...operties', ''] == ['', '.. py...
+3 failed in 0.59s

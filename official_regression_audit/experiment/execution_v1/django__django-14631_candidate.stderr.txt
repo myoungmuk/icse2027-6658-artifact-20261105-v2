@@ -1,0 +1,43 @@
+test_datetime_clean_disabled_callable_initial_bound_field (forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field)
+The cleaned value for a form with a disabled DateTimeField and callable ... ERROR
+test_datetime_clean_disabled_callable_initial_microseconds (forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds)
+Cleaning a form with a disabled DateTimeField and callable initial ... ERROR
+
+======================================================================
+ERROR: test_datetime_clean_disabled_callable_initial_bound_field (forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field)
+The cleaned value for a form with a disabled DateTimeField and callable
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate/tests/forms_tests/tests/test_forms.py", line 2151, in test_datetime_clean_disabled_callable_initial_bound_field
+    self.assertEqual(form.errors, {})
+                     ^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate/django/forms/forms.py", line 385, in full_clean
+    self._clean_fields()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate/django/forms/forms.py", line 394, in _clean_fields
+    value = bf.field.clean(value, bf.initial)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Field.clean() takes 2 positional arguments but 3 were given
+
+======================================================================
+ERROR: test_datetime_clean_disabled_callable_initial_microseconds (forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds)
+Cleaning a form with a disabled DateTimeField and callable initial
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate/tests/forms_tests/tests/test_forms.py", line 2140, in test_datetime_clean_disabled_callable_initial_microseconds
+    self.assertEqual(form.errors, {})
+                     ^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate/django/forms/forms.py", line 385, in full_clean
+    self._clean_fields()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/candidate/django/forms/forms.py", line 394, in _clean_fields
+    value = bf.field.clean(value, bf.initial)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Field.clean() takes 2 positional arguments but 3 were given
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (errors=2)

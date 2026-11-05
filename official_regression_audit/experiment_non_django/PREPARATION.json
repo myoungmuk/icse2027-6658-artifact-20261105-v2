@@ -1,0 +1,3192 @@
+{
+  "cases": [
+    {
+      "instance_id": "astropy__astropy-13236",
+      "repo": "astropy/astropy",
+      "base_commit": "6ed769d58d89380ebaa1ef52b300691eefda8928",
+      "url": "https://codeload.github.com/astropy/astropy/tar.gz/6ed769d58d89380ebaa1ef52b300691eefda8928",
+      "archive_sha256": "6ecddeeb73fbe9b4280607005d6f9f50e54075c0cae04ac408b8b642d746c667",
+      "archive_bytes": 7820387,
+      "acquired_at_utc": "2026-11-05T10:19:01.954617+00:00",
+      "environment_key": "modern_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+      "native_build_required": true,
+      "native_build": {
+        "command": [
+          "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+          "setup.py",
+          "build_ext",
+          "--inplace",
+          "-j",
+          "2"
+        ],
+        "returncode": 1,
+        "started_at_utc": "2026-11-05T10:22:25.440297+00:00",
+        "finished_at_utc": "2026-11-05T10:22:25.783674+00:00",
+        "native_extension_files": []
+      },
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "bdf3a74fbfa6e071adde3a57b4ae6157461fa432ad3197f19210da5e3be4319a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch astropy/table/tests/test_mixin.py...\nChecking patch astropy/table/tests/test_table.py...\nApplied patch astropy/table/tests/test_mixin.py cleanly.\nApplied patch astropy/table/tests/test_table.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "astropy/table/table.py": "174e33f88b6aba2e6909ca16e2cf60fa24d4d06d6856754547c9a08dfb9d6efd",
+            "astropy/table/tests/test_mixin.py": "e51261433cf1ca28fe6b46b426839783bd65bb24082ce382c96b6eeed410b8a5",
+            "astropy/table/tests/test_table.py": "897fa79c0549b8c8211e4370cfd2d5b1fe6f431f367eb7248fde1035b4524e2a"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "01c54824573ddea3e1d2559dd4ffd36654763429a0fb05426dcd14ced6c1636a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch astropy/table/table.py...\nApplied patch astropy/table/table.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "bdf3a74fbfa6e071adde3a57b4ae6157461fa432ad3197f19210da5e3be4319a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch astropy/table/tests/test_mixin.py...\nChecking patch astropy/table/tests/test_table.py...\nApplied patch astropy/table/tests/test_mixin.py cleanly.\nApplied patch astropy/table/tests/test_table.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "astropy/table/table.py": "b2bff4f0933b83edbb2ffaf1e69414b596861ac3aba4c0239ce20e7505091230",
+            "astropy/table/tests/test_mixin.py": "e51261433cf1ca28fe6b46b426839783bd65bb24082ce382c96b6eeed410b8a5",
+            "astropy/table/tests/test_table.py": "897fa79c0549b8c8211e4370cfd2d5b1fe6f431f367eb7248fde1035b4524e2a"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "e3366b1923660fb0ae2bbc8fb16981184e77fc3f9e3669727f1a3e6061ddaa6d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch astropy/table/table.py...\nApplied patch astropy/table/table.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "bdf3a74fbfa6e071adde3a57b4ae6157461fa432ad3197f19210da5e3be4319a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch astropy/table/tests/test_mixin.py...\nChecking patch astropy/table/tests/test_table.py...\nApplied patch astropy/table/tests/test_mixin.py cleanly.\nApplied patch astropy/table/tests/test_table.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "astropy/table/table.py": "499cd11a626feb586010b01e9664c434183d8f5c67f338ed2e6a4094120271ee",
+            "astropy/table/tests/test_mixin.py": "e51261433cf1ca28fe6b46b426839783bd65bb24082ce382c96b6eeed410b8a5",
+            "astropy/table/tests/test_table.py": "897fa79c0549b8c8211e4370cfd2d5b1fe6f431f367eb7248fde1035b4524e2a"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24627",
+      "repo": "matplotlib/matplotlib",
+      "base_commit": "9d22ab09d52d279b125d8770967569de070913b2",
+      "url": "https://codeload.github.com/matplotlib/matplotlib/tar.gz/9d22ab09d52d279b125d8770967569de070913b2",
+      "archive_sha256": "3446bdf675888db1718db385aec2af45b977e95882f8273d189a317eae3031b1",
+      "archive_bytes": 35915398,
+      "acquired_at_utc": "2026-11-05T10:19:25.805755+00:00",
+      "environment_key": "modern_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+      "native_build_required": true,
+      "native_build": {
+        "command": [
+          "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+          "setup.py",
+          "build_ext",
+          "--inplace",
+          "-j",
+          "2"
+        ],
+        "returncode": 1,
+        "started_at_utc": "2026-11-05T10:22:25.440673+00:00",
+        "finished_at_utc": "2026-11-05T10:22:26.130190+00:00",
+        "native_extension_files": []
+      },
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "df8a423b6b2a7977f5b951cfc7e8bfe74afd2c749a09b2e5c288b388264bb23b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch lib/matplotlib/tests/test_axes.py...\nHunk #1 succeeded at 8370 (offset 11 lines).\nApplied patch lib/matplotlib/tests/test_axes.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "lib/matplotlib/axes/_base.py": "a7acf760c98260ba524de07524ff4c263dc2ca91c59fef2acadcc4e4538ebc8d",
+            "lib/matplotlib/tests/test_axes.py": "cb4744993b59ab479f7f6e4f726ba2eb7aa501cde0a4f9e0bf06f1cf7715763d"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "88e5a7b6b59542185abf96b948eaf50cc181e0e7b6bd53df8a5bb7ce57dcb89b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch lib/matplotlib/axes/_base.py...\nApplied patch lib/matplotlib/axes/_base.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "df8a423b6b2a7977f5b951cfc7e8bfe74afd2c749a09b2e5c288b388264bb23b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch lib/matplotlib/tests/test_axes.py...\nHunk #1 succeeded at 8370 (offset 11 lines).\nApplied patch lib/matplotlib/tests/test_axes.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "lib/matplotlib/axes/_base.py": "183e22b6dc687a338b42d3a838b0ac45abe3bf06431fb69a1bd15fc06bffb95c",
+            "lib/matplotlib/tests/test_axes.py": "cb4744993b59ab479f7f6e4f726ba2eb7aa501cde0a4f9e0bf06f1cf7715763d"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "9f92573bf95ae9b6aa1d4cefca099e425a1fb846c6258293f32a5f38cae5c4f0",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch lib/matplotlib/axes/_base.py...\nHunk #1 succeeded at 1308 (offset -7 lines).\nApplied patch lib/matplotlib/axes/_base.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "df8a423b6b2a7977f5b951cfc7e8bfe74afd2c749a09b2e5c288b388264bb23b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch lib/matplotlib/tests/test_axes.py...\nHunk #1 succeeded at 8370 (offset 11 lines).\nApplied patch lib/matplotlib/tests/test_axes.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "lib/matplotlib/axes/_base.py": "e4b6277b94fc331d834341ee6b5e2b936492f24a781f00f84043a6042b70c77e",
+            "lib/matplotlib/tests/test_axes.py": "cb4744993b59ab479f7f6e4f726ba2eb7aa501cde0a4f9e0bf06f1cf7715763d"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "psf__requests-6028",
+      "repo": "psf/requests",
+      "base_commit": "0192aac24123735b3eaf9b08df46429bb770c283",
+      "url": "https://codeload.github.com/psf/requests/tar.gz/0192aac24123735b3eaf9b08df46429bb770c283",
+      "archive_sha256": "acf8041195a5fdd1177612ddb93b159424de40d95b7156567c162405864a3cb8",
+      "archive_bytes": 4032864,
+      "acquired_at_utc": "2026-11-05T10:18:52.125917+00:00",
+      "environment_key": "requests",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/requests/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "cc4b0007afd140c1737b08e14d0cbb9dbccfbee483146d5112971dd7b9bcb142",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/test_utils.py...\nApplied patch tests/test_utils.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "requests/auth.py": "38ca092152b244bcbd4c7afdd72f2bc72b19b9c9703c1f8ad57835cc1a265214",
+            "requests/utils.py": "7938f802679da01f5768d41526f22b63fcef2a96c491ec030b755c87bab3958d",
+            "tests/test_utils.py": "ee75e15b6d5338db46eaa56fde5e2e34ab21fe5c97ccb6d3d7ce9c1a50a126cf"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "778aa9dcbb423f2ff72aa89d77e1b017739d2059ffbde2e16ad378b9e926812b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch requests/auth.py...\nApplied patch requests/auth.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "cc4b0007afd140c1737b08e14d0cbb9dbccfbee483146d5112971dd7b9bcb142",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/test_utils.py...\nApplied patch tests/test_utils.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "requests/auth.py": "6b0145d0f60f26d28d4835d613a5fd0ac7c3c8a10b442d4877165e7c331e4eec",
+            "requests/utils.py": "7938f802679da01f5768d41526f22b63fcef2a96c491ec030b755c87bab3958d",
+            "tests/test_utils.py": "ee75e15b6d5338db46eaa56fde5e2e34ab21fe5c97ccb6d3d7ce9c1a50a126cf"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "9cd3e2a2c10cc8b9555156f0e9cda00c67aa4e08f40ebd125f417bbeb41b2fb3",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch requests/utils.py...\nApplied patch requests/utils.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "cc4b0007afd140c1737b08e14d0cbb9dbccfbee483146d5112971dd7b9bcb142",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/test_utils.py...\nApplied patch tests/test_utils.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "requests/auth.py": "38ca092152b244bcbd4c7afdd72f2bc72b19b9c9703c1f8ad57835cc1a265214",
+            "requests/utils.py": "30a4cadddbbf5a698eda7bff4a4795f3cd15c1f2188496ef7752f3eee0e2a0ff",
+            "tests/test_utils.py": "ee75e15b6d5338db46eaa56fde5e2e34ab21fe5c97ccb6d3d7ce9c1a50a126cf"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "pydata__xarray-3095",
+      "repo": "pydata/xarray",
+      "base_commit": "1757dffac2fa493d7b9a074b84cf8c830a706688",
+      "url": "https://codeload.github.com/pydata/xarray/tar.gz/1757dffac2fa493d7b9a074b84cf8c830a706688",
+      "archive_sha256": "6cf6c469444fb89b05ad35de96ff21e4146f7bd9d50073f739f8f209f0a55754",
+      "archive_bytes": 2913670,
+      "acquired_at_utc": "2026-11-05T10:18:55.268864+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "74e9567e31b72197c929b56e94c92b21f8fb62f9b8008bee43aba3ac81d33134",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_variable.py...\nApplied patch xarray/tests/test_variable.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/dataset.py": "878d68d031b88d53cfc37e513c3b7cf4ac98b9573ab525a60eba9682f74b2089",
+            "xarray/core/indexing.py": "6a6ec850c4b810fe4bba727f540407c1da005d446235d913c48e81835fa87a72",
+            "xarray/core/variable.py": "c3061ed6832cc78197118c32e6cb647cb11a237afa3fe670d7f00eab70ca3f44",
+            "xarray/tests/test_variable.py": "3c5c9677851962a953dbeec5e68454541c2409d9d7b19e3c7a65d73e33d7d7a1"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "3cf3516cdcf0bc5f3c2c29423746a51ef4ee0bbc50e133d257331cfb6a51240b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/core/dataset.py...\nApplied patch xarray/core/dataset.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "74e9567e31b72197c929b56e94c92b21f8fb62f9b8008bee43aba3ac81d33134",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_variable.py...\nApplied patch xarray/tests/test_variable.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/dataset.py": "b4a5ce958b3e63614797c1944c619382d3d36476a724c12e5780030fe45d57e0",
+            "xarray/core/indexing.py": "6a6ec850c4b810fe4bba727f540407c1da005d446235d913c48e81835fa87a72",
+            "xarray/core/variable.py": "c3061ed6832cc78197118c32e6cb647cb11a237afa3fe670d7f00eab70ca3f44",
+            "xarray/tests/test_variable.py": "3c5c9677851962a953dbeec5e68454541c2409d9d7b19e3c7a65d73e33d7d7a1"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "15ee0073513dfa4723e55f92c67f7ca66c9651a6d627c08c06e7bada6bcd7525",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/core/indexing.py...\nChecking patch xarray/core/variable.py...\nApplied patch xarray/core/indexing.py cleanly.\nApplied patch xarray/core/variable.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "74e9567e31b72197c929b56e94c92b21f8fb62f9b8008bee43aba3ac81d33134",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_variable.py...\nApplied patch xarray/tests/test_variable.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/dataset.py": "878d68d031b88d53cfc37e513c3b7cf4ac98b9573ab525a60eba9682f74b2089",
+            "xarray/core/indexing.py": "64e760e067436e9c10380ce07fc37ba0301cb403e93d9a178ace9fb02386850d",
+            "xarray/core/variable.py": "4bf14e4230e2549b0b73e860154f4ce190c8bf7f4d08661283c4321b316f6cd0",
+            "xarray/tests/test_variable.py": "3c5c9677851962a953dbeec5e68454541c2409d9d7b19e3c7a65d73e33d7d7a1"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "pydata__xarray-3305",
+      "repo": "pydata/xarray",
+      "base_commit": "69c7e01e5167a3137c285cb50d1978252bb8bcbf",
+      "url": "https://codeload.github.com/pydata/xarray/tar.gz/69c7e01e5167a3137c285cb50d1978252bb8bcbf",
+      "archive_sha256": "bb255d2ea2687f40274ce4e8ca2b1853f619f27ff15380cb47c39d7c6bb439d8",
+      "archive_bytes": 2937183,
+      "acquired_at_utc": "2026-11-05T10:18:54.934747+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "5405369ddaae064c134b6182243156746ad866da4e900cd5358ad4d4efe6cc52",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_dataarray.py...\nApplied patch xarray/tests/test_dataarray.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/dataarray.py": "4a2aa77871afc5fdf904065e340a9df6e66bdcb96f19210aea0ec92d5d2d09aa",
+            "xarray/core/dataset.py": "7c6ba7d0b5f900fe06474b2340d0955650644f87f731634543da9deb682231d8",
+            "xarray/core/variable.py": "4c86b080db440e759b2d6af8fe95eb2fea895aa2763bfccbd79590cf240f7247",
+            "xarray/tests/test_dataarray.py": "1ad2e3c53e8db1b76f0a850039435d52ba8e30fcd980b4a0c5ced5ce366910c1"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "42cc9a161d1d24f6f62e00c6614c0699288a7a69ebdbffd1624625ca30d168d2",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/core/dataarray.py...\nApplied patch xarray/core/dataarray.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "5405369ddaae064c134b6182243156746ad866da4e900cd5358ad4d4efe6cc52",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_dataarray.py...\nApplied patch xarray/tests/test_dataarray.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/dataarray.py": "bcc2781db76690a98c420bb8054882fbb52b77f3e1e9b1b5cee4467d49453f82",
+            "xarray/core/dataset.py": "7c6ba7d0b5f900fe06474b2340d0955650644f87f731634543da9deb682231d8",
+            "xarray/core/variable.py": "4c86b080db440e759b2d6af8fe95eb2fea895aa2763bfccbd79590cf240f7247",
+            "xarray/tests/test_dataarray.py": "1ad2e3c53e8db1b76f0a850039435d52ba8e30fcd980b4a0c5ced5ce366910c1"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "6e02fe879c0a070e2ded9b70e7f88a12551beb6b3e46a5a57bd4dbb0118c2266",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/core/dataset.py...\nChecking patch xarray/core/variable.py...\nApplied patch xarray/core/dataset.py cleanly.\nApplied patch xarray/core/variable.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "5405369ddaae064c134b6182243156746ad866da4e900cd5358ad4d4efe6cc52",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_dataarray.py...\nApplied patch xarray/tests/test_dataarray.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/dataarray.py": "4a2aa77871afc5fdf904065e340a9df6e66bdcb96f19210aea0ec92d5d2d09aa",
+            "xarray/core/dataset.py": "a4ce98c2c874496a01278de688bd4713b48e0bc38bc1a0fce11a655701640023",
+            "xarray/core/variable.py": "f40f3d8d1c5943977a8b5f6fc18476bb8e5f22b4ea0de57f8d38670ae4351bd1",
+            "xarray/tests/test_dataarray.py": "1ad2e3c53e8db1b76f0a850039435d52ba8e30fcd980b4a0c5ced5ce366910c1"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "pydata__xarray-6744",
+      "repo": "pydata/xarray",
+      "base_commit": "7cc6cc991e586a6158bb656b8001234ccda25407",
+      "url": "https://codeload.github.com/pydata/xarray/tar.gz/7cc6cc991e586a6158bb656b8001234ccda25407",
+      "archive_sha256": "47908f0e5d4c315531ffff9951dfbedea0784486d4c7c54c206a5694e5d32c08",
+      "archive_bytes": 3004870,
+      "acquired_at_utc": "2026-11-05T10:18:58.335254+00:00",
+      "environment_key": "modern_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "28677c9d223b9c53a4f08fa88fbfda3c139f777255f9b29b58812acc23cc7dba",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_rolling.py...\nApplied patch xarray/tests/test_rolling.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/rolling.py": "ba39ca8233fdf5fa16fafee9f1382a49c7de77c04f215df36d3fa0dd5f94a1e2",
+            "xarray/tests/test_rolling.py": "bacb4c4cda3d1d14d6ed8469f341b011b760da24b47b1538d2eb91dd41dbb624"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "bb250d125b5ef5e23081d8b0b527c55bf549a386d16ec2a599fd04ef2baf8fa8",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/core/rolling.py...\nApplied patch xarray/core/rolling.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "28677c9d223b9c53a4f08fa88fbfda3c139f777255f9b29b58812acc23cc7dba",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_rolling.py...\nApplied patch xarray/tests/test_rolling.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/rolling.py": "bf5559671c192cfd489fd563c29f609b02a3c63d9b06bf460556e14b9731f0c0",
+            "xarray/tests/test_rolling.py": "bacb4c4cda3d1d14d6ed8469f341b011b760da24b47b1538d2eb91dd41dbb624"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "301c18e5b196a174ed02eb5f078c45d971ae51ec51d66c02472d03b4076371b1",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/core/rolling.py...\nApplied patch xarray/core/rolling.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "28677c9d223b9c53a4f08fa88fbfda3c139f777255f9b29b58812acc23cc7dba",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_rolling.py...\nApplied patch xarray/tests/test_rolling.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/rolling.py": "ce55a0c81855bfd4c9b3f35d7a385f5f2864239b83b98153e127aed7179afa59",
+            "xarray/tests/test_rolling.py": "bacb4c4cda3d1d14d6ed8469f341b011b760da24b47b1538d2eb91dd41dbb624"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "pydata__xarray-7393",
+      "repo": "pydata/xarray",
+      "base_commit": "41fef6f1352be994cd90056d47440fe9aa4c068f",
+      "url": "https://codeload.github.com/pydata/xarray/tar.gz/41fef6f1352be994cd90056d47440fe9aa4c068f",
+      "archive_sha256": "380ffd53b86a5d02c0e3dd5186810889517717746a558d07d590e9f6c467a60b",
+      "archive_bytes": 3058479,
+      "acquired_at_utc": "2026-11-05T10:18:59.472563+00:00",
+      "environment_key": "modern_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "d88494d6960e7ee73ade8eb1cedf3510cc678f8ea73424805fa51bd7c99deee2",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_indexes.py...\nApplied patch xarray/tests/test_indexes.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/indexes.py": "2be048a5c6672dfd00c021ce13c40fd32017931c87d2df511c08fd6d5394abeb",
+            "xarray/core/indexing.py": "9b2cfd092763866e197d8dce381ed93e6e00e9afb837568005b52cd09c789ee3",
+            "xarray/tests/test_indexes.py": "1d418f87183ae9e4921b8b47194aafccc420cee965c5769a1a5059aaa7304029"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "c77baceb9752404ea08d1552a52b6367e06c2396cce594553ac5804d7e2db81b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/core/indexes.py...\nApplied patch xarray/core/indexes.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "d88494d6960e7ee73ade8eb1cedf3510cc678f8ea73424805fa51bd7c99deee2",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_indexes.py...\nApplied patch xarray/tests/test_indexes.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/indexes.py": "0b620694606a21cc3ff49cd4cf06848781c8f7c1b1772be8130edc1739a0e89f",
+            "xarray/core/indexing.py": "9b2cfd092763866e197d8dce381ed93e6e00e9afb837568005b52cd09c789ee3",
+            "xarray/tests/test_indexes.py": "1d418f87183ae9e4921b8b47194aafccc420cee965c5769a1a5059aaa7304029"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "c39f78a4cc572103cb731d89d95c33742854a9645cdd0cf039906d39e06d81d5",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/core/indexing.py...\nApplied patch xarray/core/indexing.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "d88494d6960e7ee73ade8eb1cedf3510cc678f8ea73424805fa51bd7c99deee2",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch xarray/tests/test_indexes.py...\nApplied patch xarray/tests/test_indexes.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "xarray/core/indexes.py": "2be048a5c6672dfd00c021ce13c40fd32017931c87d2df511c08fd6d5394abeb",
+            "xarray/core/indexing.py": "e9319fa2f3ac4656a684f637a71438660165bef397e4759d378209874e6f38a3",
+            "xarray/tests/test_indexes.py": "1d418f87183ae9e4921b8b47194aafccc420cee965c5769a1a5059aaa7304029"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "pylint-dev__pylint-8898",
+      "repo": "pylint-dev/pylint",
+      "base_commit": "1f8c4d9eb185c16a2c1d881c054f015e1c2eb334",
+      "url": "https://codeload.github.com/pylint-dev/pylint/tar.gz/1f8c4d9eb185c16a2c1d881c054f015e1c2eb334",
+      "archive_sha256": "5b9d09aea6d13af10030ecf62def485a973d516b7dd95a8b0f9048e339a54588",
+      "archive_bytes": 1407011,
+      "acquired_at_utc": "2026-11-05T10:19:06.159919+00:00",
+      "environment_key": "pylint_3",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/pylint_3/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "0fa5d0f2e19d994ed7a5b0450f502b986cb3dc862f83ee7cbc96676210012b10",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/config/test_config.py...\nApplied patch tests/config/test_config.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "pylint/config/argument.py": "7c3deb3946f8ed66782b4a14b9337a0a323d84adee76f1bdec02ed4df93efabf",
+            "pylint/utils/__init__.py": "2c5ad55b7a347010026c2a9fcaef260cf33a9a1f7e9d8267f25662e09c59deca",
+            "pylint/utils/utils.py": "5c51fa2ecb3526b1b09f20dcadafe85f9ad34fad231535ce5ea5e142dfdb6c7d",
+            "tests/config/test_config.py": "d9ca6ad5fd28b145b0627ea0e14c3271f7720367e28887a7d4f209634b49a1cf"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "3dfacd94297832dc273976baefd1fa4f80879e8e1382246e7b7604200c56d72a",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch pylint/config/argument.py...\nApplied patch pylint/config/argument.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "0fa5d0f2e19d994ed7a5b0450f502b986cb3dc862f83ee7cbc96676210012b10",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/config/test_config.py...\nApplied patch tests/config/test_config.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "pylint/config/argument.py": "36702348e45c4dd6d7ee21ee69a4c39addc783686ec1e7f70659c4af336d4294",
+            "pylint/utils/__init__.py": "2c5ad55b7a347010026c2a9fcaef260cf33a9a1f7e9d8267f25662e09c59deca",
+            "pylint/utils/utils.py": "5c51fa2ecb3526b1b09f20dcadafe85f9ad34fad231535ce5ea5e142dfdb6c7d",
+            "tests/config/test_config.py": "d9ca6ad5fd28b145b0627ea0e14c3271f7720367e28887a7d4f209634b49a1cf"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "1ef5ef80b29bcfb5902b6818e58a576cf6d97b66fb7b354fa1392451954a6c98",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch pylint/config/argument.py...\nChecking patch pylint/utils/__init__.py...\nChecking patch pylint/utils/utils.py...\nApplied patch pylint/config/argument.py cleanly.\nApplied patch pylint/utils/__init__.py cleanly.\nApplied patch pylint/utils/utils.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "0fa5d0f2e19d994ed7a5b0450f502b986cb3dc862f83ee7cbc96676210012b10",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/config/test_config.py...\nApplied patch tests/config/test_config.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "pylint/config/argument.py": "709303ce4bc654ccf3a130b5ef462266c95053b0f25250ecd449c525d8eaca08",
+            "pylint/utils/__init__.py": "d3f38e38d855c084803b86c43200b9000d5b8e4836848549c0e9484df5306fae",
+            "pylint/utils/utils.py": "de97dac812009fd17416b844e9b2e87c023a27f39db8be7758f1c3e3239eb144",
+            "tests/config/test_config.py": "d9ca6ad5fd28b145b0627ea0e14c3271f7720367e28887a7d4f209634b49a1cf"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7324",
+      "repo": "pytest-dev/pytest",
+      "base_commit": "19ad5889353c7f5f2b65cc2acd346b7a9e95dfcd",
+      "url": "https://codeload.github.com/pytest-dev/pytest/tar.gz/19ad5889353c7f5f2b65cc2acd346b7a9e95dfcd",
+      "archive_sha256": "2de10b455d6fe82717b5752c018b53067a86213c5d1f9a0674bf34a283a7abec",
+      "archive_bytes": 1048989,
+      "acquired_at_utc": "2026-11-05T10:19:02.325463+00:00",
+      "environment_key": "pytest_self",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/pytest_self/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "75381f070c03d283a7cd948f1b6ac247e50d63554c6cce8955cd5191398fe2ab",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch testing/test_mark_expression.py...\nApplied patch testing/test_mark_expression.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "src/_pytest/debugging.py": "244a6854a01755158f23f112f166b3ce11b40c80ff3896ea80f0b2f567bdc389",
+            "src/_pytest/mark/expression.py": "b2073e0bb0cc978fb9e5f6cb939036fc72f084dc99307b8afba6945d3752eea0",
+            "testing/test_mark_expression.py": "bf62743f424aa03a86da9e4c59930b0c6f85960a85681d8ac6c214302f11c654"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "9a4891039bbc11428a8b27bff7aaafdbab2793b54714a54dc0f408fa2c290d76",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch src/_pytest/debugging.py...\nApplied patch src/_pytest/debugging.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "75381f070c03d283a7cd948f1b6ac247e50d63554c6cce8955cd5191398fe2ab",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch testing/test_mark_expression.py...\nApplied patch testing/test_mark_expression.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "src/_pytest/debugging.py": "4b85bf338db6cba4ada026199e45e023501068fa7c6eaf5ff6b4ae5d79810463",
+            "src/_pytest/mark/expression.py": "b2073e0bb0cc978fb9e5f6cb939036fc72f084dc99307b8afba6945d3752eea0",
+            "testing/test_mark_expression.py": "bf62743f424aa03a86da9e4c59930b0c6f85960a85681d8ac6c214302f11c654"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "545c77165b760409f9e3625cb5a75a5d8e4baa400b952ba1d6bed7c5fdfcf479",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch src/_pytest/mark/expression.py...\nApplied patch src/_pytest/mark/expression.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "75381f070c03d283a7cd948f1b6ac247e50d63554c6cce8955cd5191398fe2ab",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch testing/test_mark_expression.py...\nApplied patch testing/test_mark_expression.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "src/_pytest/debugging.py": "244a6854a01755158f23f112f166b3ce11b40c80ff3896ea80f0b2f567bdc389",
+            "src/_pytest/mark/expression.py": "a43f6628f66258c80beb337da2c00488d41a6cae569f9a463d56106b3f2e86c1",
+            "testing/test_mark_expression.py": "bf62743f424aa03a86da9e4c59930b0c6f85960a85681d8ac6c214302f11c654"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7521",
+      "repo": "pytest-dev/pytest",
+      "base_commit": "41d211c24a6781843b174379d6d6538f5c17adb9",
+      "url": "https://codeload.github.com/pytest-dev/pytest/tar.gz/41d211c24a6781843b174379d6d6538f5c17adb9",
+      "archive_sha256": "83ca4659a6b71b4234a2857f14bc067a4ee2b73bef5a6d67eeb2fe77503e4435",
+      "archive_bytes": 1069067,
+      "acquired_at_utc": "2026-11-05T10:19:04.492376+00:00",
+      "environment_key": "pytest_self",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/pytest_self/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "5d7b9e51ea700508725976f0643bd1c601afcb5373481118f8741e4660d64e59",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch testing/test_capture.py...\nApplied patch testing/test_capture.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "src/_pytest/capture.py": "67dc52c884bde5a6bc597aa565794661feb8a6aa1b599f2f6e11c5771abbcc48",
+            "testing/test_capture.py": "674eb5bda253adba3d18d3a8269472281da5ba6582addc37b0520a8162950a3c"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "9b168064ca33c8352edc08610fbcbcc4afeae0c5423c4fb427d9801784d52882",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch src/_pytest/capture.py...\nApplied patch src/_pytest/capture.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "5d7b9e51ea700508725976f0643bd1c601afcb5373481118f8741e4660d64e59",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch testing/test_capture.py...\nApplied patch testing/test_capture.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "src/_pytest/capture.py": "aba2da44f233f10d445cfd4a240aa23593c9f25ed8cbe9b35ead1fcf4c33a1c5",
+            "testing/test_capture.py": "674eb5bda253adba3d18d3a8269472281da5ba6582addc37b0520a8162950a3c"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "e1f62165b6ecc14c60b08bb71a59b927adba0c3b9a8393394481cc6a4f0f8f0e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch src/_pytest/capture.py...\nApplied patch src/_pytest/capture.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "5d7b9e51ea700508725976f0643bd1c601afcb5373481118f8741e4660d64e59",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch testing/test_capture.py...\nApplied patch testing/test_capture.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "src/_pytest/capture.py": "d95addd2b07a7078797ce2c627dd711bb769149dcc4c7e51234c6467a4f5b49e",
+            "testing/test_capture.py": "674eb5bda253adba3d18d3a8269472281da5ba6582addc37b0520a8162950a3c"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14629",
+      "repo": "scikit-learn/scikit-learn",
+      "base_commit": "4aded39b5663d943f6a4809abacfa9cae3d7fb6a",
+      "url": "https://codeload.github.com/scikit-learn/scikit-learn/tar.gz/4aded39b5663d943f6a4809abacfa9cae3d7fb6a",
+      "archive_sha256": "2248ea0398bd7672aed85d7e28d77882b1ffe80d4f542808068a44f35dec7cf3",
+      "archive_bytes": 6529376,
+      "acquired_at_utc": "2026-11-05T10:19:10.395757+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": true,
+      "native_build": {
+        "command": [
+          "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+          "setup.py",
+          "build_ext",
+          "--inplace",
+          "-j",
+          "2"
+        ],
+        "returncode": 0,
+        "started_at_utc": "2026-11-05T10:22:27.129252+00:00",
+        "finished_at_utc": "2026-11-05T10:23:40.170744+00:00",
+        "native_extension_files": [
+          {
+            "path": "sklearn/__check_build/_check_build.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "312234072a077884cceb74e64e118127dc7b8f5828dbe01100743cb8dc5b21ef"
+          },
+          {
+            "path": "sklearn/_isotonic.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d8a86720e6797f0d38020a0248368d6b2bee00e52a82f33650fe00d29cda74b6"
+          },
+          {
+            "path": "sklearn/cluster/_dbscan_inner.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "eac1523632bb817cf6d13b29dbad86333c29256a92f3b02e535bdd5200e6a870"
+          },
+          {
+            "path": "sklearn/cluster/_hierarchical.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b572e48bdd79c18ae52cf6e66cd12160e219153952ad4dcc4093b24f97b9e7df"
+          },
+          {
+            "path": "sklearn/cluster/_k_means.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "2bd73ae387efc876ad5a367d25be3ddb51446aa5b670133371ee43c4d7f66846"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_elkan.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c3d48aa52eb3578a00aac8d9a76fdade5af84caeebb64d909a705cb7889b1fdb"
+          },
+          {
+            "path": "sklearn/datasets/_svmlight_format.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "8f785d05573dd8b666f9a115fc863ce087bd8b1f2b30398360a8ff434a16146c"
+          },
+          {
+            "path": "sklearn/decomposition/_online_lda.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d58919cb0c6559a3f203f74cbf92db59c76e603d69f9e069de7ec4407dc0f576"
+          },
+          {
+            "path": "sklearn/decomposition/cdnmf_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "842f5ca9736f768e9766fed03d0994ac3b6a7f92f91343f2873950bded00ce83"
+          },
+          {
+            "path": "sklearn/ensemble/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c16d0cfbd1196e8770c0787573723f77a6629af5bc1c5fbd28ed074efebebf43"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_binning.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "6d755080ecc2e0cd6555730c8d66d4a95feb50a274bdc501bb516b4973f19983"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5f50c7f97e71d969eb7b5d9afbe882bba9e6240f1f299c50c01a41e6b9d19531"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_loss.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "139b48c1f06d579f8317d98f174d3d9f65ae41a1e3ea012f6097d3ad224f9974"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_predictor.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5591d9ab12fb32a757798e8df834ba229da44f65462e7f692c244b85f9c4c01d"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/histogram.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "07b7f1d5a77f44705a9eb958a9a6c6193982780b933a69aab6d18d9e60bebfef"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/splitting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "89dc3468037774e3aafe1468ffbd594cabb607c979066bba7a1c853f166a2ebb"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/types.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "fddef01a1d6325408d2851227bf2acb225846f9b24c9a36894ba9bae880564ef"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "97abacdfdde921dae20a94c48943bf70f6fa987f77215884dddb1bd4ae38d484"
+          },
+          {
+            "path": "sklearn/feature_extraction/_hashing.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "cb5906e2f5f4c8176d4c4b19c0c4328ec61460ade13b06072b2cec607da51f90"
+          },
+          {
+            "path": "sklearn/linear_model/cd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a01f33ede3a7d64568a313f3f4bca314e2d44d5cb5bd445aaaf91abb7f95a07d"
+          },
+          {
+            "path": "sklearn/linear_model/sag_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "e2a3ab6fbd5174ab5e293a8a1c8f9e902d26c6589ee1448224dd8833f1b28b54"
+          },
+          {
+            "path": "sklearn/linear_model/sgd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "82070262e724cb3c591b9fa9a5c58e22c2ff2f3122f3cb606f657070fa7e7a4a"
+          },
+          {
+            "path": "sklearn/manifold/_barnes_hut_tsne.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a3fc7d07d3643e1ce1fcfeeedf640e966381de4d1348b6b0344e34dd379633ec"
+          },
+          {
+            "path": "sklearn/manifold/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "43124ac9672d6726ee2bec08ce4a40f11d4d6b7294eb3c0dcb24fdba04bd60ea"
+          },
+          {
+            "path": "sklearn/metrics/cluster/expected_mutual_info_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0999e92602db6e6719d646c886c591690f904833a6575b60e1b5236c205f7010"
+          },
+          {
+            "path": "sklearn/metrics/pairwise_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "66d413ed3853283dac0d45ef18f6ae3803af8beb4d4acb74a49f8ca6b61c6216"
+          },
+          {
+            "path": "sklearn/neighbors/ball_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "7e21116c8db2df34adff935ccfbd6e57e320362e8f6629105e70b2c9cd1c8ef7"
+          },
+          {
+            "path": "sklearn/neighbors/dist_metrics.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b6a06c4dba46d9053e2d2b9f5a900e52b1fafd39cd2bd700ca1e4f711ea1e93d"
+          },
+          {
+            "path": "sklearn/neighbors/kd_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "3c0628da48b648e8191321ab5b16b790c4c43fdad27ae9dea7be322f76947d75"
+          },
+          {
+            "path": "sklearn/neighbors/quad_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a395aebe84f59943e3bd20eb8749b627f6c51b26022169d43241ec15c9258d22"
+          },
+          {
+            "path": "sklearn/neighbors/typedefs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "dd33143e649c536fcfd33c5e124843e69910f4a7158d76720334862e7ee88844"
+          },
+          {
+            "path": "sklearn/preprocessing/_csr_polynomial_expansion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "cbd7bd30a63de726d36ffa652112db899fd6fc3371ea196c7ca537cb04ed5dda"
+          },
+          {
+            "path": "sklearn/svm/liblinear.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "db7df01a378047e2d28bd6826318a047125c19a8854e5652166801f48e003074"
+          },
+          {
+            "path": "sklearn/svm/libsvm.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "94e18aa6b67b47718370e3aa0cc6489591c871ba9f241b5f53997d25424294d4"
+          },
+          {
+            "path": "sklearn/svm/libsvm_sparse.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "cf28e7d9f0c405fb61e39afce3a48165b6e41a441d876cbf3ee0ac378b5f43bc"
+          },
+          {
+            "path": "sklearn/tree/_criterion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "394116c341d3b4847c535770fa4a89859e16b8b4b0688b6006399331b8ecae4d"
+          },
+          {
+            "path": "sklearn/tree/_splitter.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f7a57ddd8359c6175390e33c097f2c7ca71c0f54ccdd04e8b98381412f04edb8"
+          },
+          {
+            "path": "sklearn/tree/_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "3098282a1f92c0bfa81883784a1d4de280770ee1dfaabaa780fdd28404a5f4db"
+          },
+          {
+            "path": "sklearn/tree/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "aa80f758f15f4d88844b160dbe2dacdcb0fd06ae6f4d001da7593b22c396ef94"
+          },
+          {
+            "path": "sklearn/utils/_cython_blas.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "028eeb13da1f6d0e4be16e103a86c0f6b81c44eb6e2283804cf7b0a9eb5083a8"
+          },
+          {
+            "path": "sklearn/utils/_logistic_sigmoid.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "7b2e72ec4ec9ee7be551bd7f1864798f6c2cd900abe5d21e31f5e80acdb4643e"
+          },
+          {
+            "path": "sklearn/utils/_random.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "22eadcbab48c189bf07b4c13a1e6a56887cb3ed09c14ec2039cd32367d8e37a7"
+          },
+          {
+            "path": "sklearn/utils/arrayfuncs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1590e1f7911095a36fce833f21e52aad7e82dd6f03d8e2277883e8ebe58ca3ec"
+          },
+          {
+            "path": "sklearn/utils/fast_dict.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "4843bdea116cb504f05c5f3655e088343c3a6532c15f01003f345bd18aa5da65"
+          },
+          {
+            "path": "sklearn/utils/graph_shortest_path.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "411908bd2e80719f29db85f72635748c5804a553d000b51cadee28faa6322b66"
+          },
+          {
+            "path": "sklearn/utils/murmurhash.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a8ece0fac26957b7e6d701c3a43e789f40162b1117048697997ba8c857b06368"
+          },
+          {
+            "path": "sklearn/utils/seq_dataset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c23fad9257f261e93239094c242cd1d7d565fd57128377a9a7440c2381976bcd"
+          },
+          {
+            "path": "sklearn/utils/sparsefuncs_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "291193207e7ad9e7b69653257dc59e99e644156efca2a8f9044221d60e163a83"
+          },
+          {
+            "path": "sklearn/utils/weight_vector.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "df765ff78d61cabb6dcaba08ebeccf0d46ae83acfb457870f18f2003016bbff8"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "b73cf349fbf082664eac43c91879ba6d7fb63ae64bf24e8cb75d7f8190a132e9",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/tests/test_multioutput.py...\nApplied patch sklearn/tests/test_multioutput.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/model_selection/_validation.py": "881a4780efc40d8dd53be56141fc148233ebe0dbff0796f74b2350e262ec33eb",
+            "sklearn/multioutput.py": "8ac9462a2a4bd5fb6570ae4d599a7e12929d8b324669dfe7f3f9550bf67f1f9c",
+            "sklearn/tests/test_multioutput.py": "c54eda124e52ff38d77be1b081f0e34c5bcbfb5fd1d489a97ff8e7189cff59ad"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "a312628a1938a9484699db4a41bb06dc39e0e7d5de222fd6c1fa0b08f50179dc",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/model_selection/_validation.py...\nApplied patch sklearn/model_selection/_validation.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "b73cf349fbf082664eac43c91879ba6d7fb63ae64bf24e8cb75d7f8190a132e9",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/tests/test_multioutput.py...\nApplied patch sklearn/tests/test_multioutput.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/model_selection/_validation.py": "8aa6de6a6303359590e9d5a06e9188d3e27f9771e5f2e4a525c080814c6b822c",
+            "sklearn/multioutput.py": "8ac9462a2a4bd5fb6570ae4d599a7e12929d8b324669dfe7f3f9550bf67f1f9c",
+            "sklearn/tests/test_multioutput.py": "c54eda124e52ff38d77be1b081f0e34c5bcbfb5fd1d489a97ff8e7189cff59ad"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "ca103b1d37b3bb1413176609382daee9c33ae0c2bde2dc05300a2bd5287cd8cd",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/multioutput.py...\nApplied patch sklearn/multioutput.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "b73cf349fbf082664eac43c91879ba6d7fb63ae64bf24e8cb75d7f8190a132e9",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/tests/test_multioutput.py...\nApplied patch sklearn/tests/test_multioutput.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/model_selection/_validation.py": "881a4780efc40d8dd53be56141fc148233ebe0dbff0796f74b2350e262ec33eb",
+            "sklearn/multioutput.py": "5d31995bd4037f08f526f08c3174cdd84774b35c1377484c53b4d970764fc4bc",
+            "sklearn/tests/test_multioutput.py": "c54eda124e52ff38d77be1b081f0e34c5bcbfb5fd1d489a97ff8e7189cff59ad"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25102",
+      "repo": "scikit-learn/scikit-learn",
+      "base_commit": "f9a1cf072da9d7375d6c2163f68a6038b13b310f",
+      "url": "https://codeload.github.com/scikit-learn/scikit-learn/tar.gz/f9a1cf072da9d7375d6c2163f68a6038b13b310f",
+      "archive_sha256": "03b686fcbbc67e3d08dfe07b7e5935549f66a16231d0a33cbb601f7e64e2670c",
+      "archive_bytes": 7407430,
+      "acquired_at_utc": "2026-11-05T10:19:12.465338+00:00",
+      "environment_key": "modern_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+      "native_build_required": true,
+      "native_build": {
+        "command": [
+          "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+          "setup.py",
+          "build_ext",
+          "--inplace",
+          "-j",
+          "2"
+        ],
+        "returncode": 0,
+        "started_at_utc": "2026-11-05T10:22:28.090566+00:00",
+        "finished_at_utc": "2026-11-05T10:23:46.568710+00:00",
+        "native_extension_files": [
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/__check_build/_check_build.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "08564a5ad0e131b3ac284a0ba04147128f9f409bf40ce588b0c9729969d47e05"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/_isotonic.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "88e8cee3fe800145ddad4ee79e8308ce592618ffaa8c394deabc91b143304c92"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/_loss/_loss.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0e638d64c1d3c17c6189007eaab23793d1838635035d0d5591590d5c6e36f1a3"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_dbscan_inner.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "be5430ab42f2c4099366b9737207d91826c8861116c1d26a2409e7e7e86c554a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_hierarchical_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "18c7d1e8e16bc70cf463e304a31380a53c7fac71265fbe43362fd64b9c5b3e0e"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_k_means_common.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a030da0dbfadb1470674542792f405284ac7b47bbb09d235cb278276732cf354"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_k_means_elkan.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1bb2d6a62e7c27c8228a8dc69e1424a2dd134ccc5c193f21c40fb9877b5884c2"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_k_means_lloyd.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "abeabbd55e4d49a3bb2711872809ffa562c6790e6471bb99b0e7425107ea6193"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_k_means_minibatch.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "6faef1e643cef9c2cdb9005eb8804e4e98323f8294f0e6aaa625d5ba4a0c02f7"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/datasets/_svmlight_format_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b1fc58704a18ddc1948250c5bddb1e1822dddd7f2852ca3bfa15a3de82a9e12b"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/decomposition/_cdnmf_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "18aff70425ebbadf7146eddd1b1a52309902b5c22b3b734fc910ed9a003eae6a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/decomposition/_online_lda_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "168a2500e6cc69726555d5289120cedaf9c17b230b2a328a42440ed752075d07"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5cccd590572c50b49f76bdeee43e4a5a080c13ff2c134ca4dc0e8f5e2be0e632"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/_binning.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "e59107b905933ac72b61b70f1cc18a7325345ff05a58b0e67c66d8e8aee831b8"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/_bitset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b8de3223ca596ceece2481a2682ca5440d89d5f43006883163f65e4518f20da0"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "510b2119ccf5c57971d898be25d676b7e3e8bf199dddbd705fbbfd64519fca28"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/_predictor.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58fc55ddd1830523f5c57154ff275b4fbbcbaba2c653894ea5fb54a90f1651c1"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/common.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d32abf41d5ebe7269a7a4f04df6c76c5f73de41cc502f1eabb8098296d1cef5f"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/histogram.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "66df3f972b46040e5c4fc566b8b4718810aa9702a2c9fdb235b1c22958bc94bb"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/splitting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "4280306f686262417850e3644d1a02acfcd9335aebfce947687c5f0f7cdf5a3b"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "65b7eb323cedb6fe68d77ad4937bb18b0d991091d6fb30603927bcfffafc1c6a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/feature_extraction/_hashing_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "44c4804d73b1f5e133db79ccb5222b634c112665238380b9d3d9a93fa2f7b666"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/linear_model/_cd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "751eb3cd952942f7704e04f5cb34d9760c606abbda110e79d6956e21cae7d062"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/linear_model/_sag_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "834abcd4a82e7aa3aaa77ae4ca4ee56d2df434202d056897fcaade6cc292865f"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/linear_model/_sgd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c102ba0df8dfd45c8e7cdbad1282e501f475c5517cdeada921e914faa136ec69"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/manifold/_barnes_hut_tsne.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "39ad71edce9787a1dae8ba9011f44470eab34e225f799f45724bdfa72d658fad"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/manifold/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0a9443ebab2b818e9c00ca58dd92b1fe2ceb0e81d49b00cb83486470a86599b8"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_dist_metrics.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "ae0d8c1d1d6c7dda93fe93c0a5b788d7d43b6135c3f853c94087dec8dd6b9169"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_argkmin.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "90eb89a085ca71244387e553d3b73600b7847c6fdb35447e1190eca04a1d7596"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_base.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "37445ed08a5f5816dd3548b3b757b57adf144c6fb7cb4a4cfb51f9fb16c4f509"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "2239359f6db26fec37efe3bfd8e6a0124587d2c9bd0552a4a7e1cd9d559b7f3e"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "46a2ac62235c85ff05d2f41f06a71c554c9a9403afee03cf075b131fe4480c86"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f2fea095f63b584759136604e996437d8bb36884614611529692ca51e309090c"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "73dae2721f418c8a85350ec7fd000a6a787fb5ed6bb6e7679da85493d5386963"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/cluster/_expected_mutual_info_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1977851a56a02777087ca03b74e3efb88088e975aa4b34497018e065c614740d"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/neighbors/_ball_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "8f42cb0129b7335ed5aa22d8900549110b6b6f6c013f2152c630fa208819cff5"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/neighbors/_kd_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "55aad7b7f32ca66344f495ae4ae130fcaa10c04368ece54d111da85001fc256a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/neighbors/_partition_nodes.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1ebfb7ad54de111d3124c1db2b8adae148ede48a1810a81cd79ce493ad3ab191"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/neighbors/_quad_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "fa2a1ce64a14b4098a90d6fbc1353c2f268a931e74af8ecae8239bf495198e90"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/preprocessing/_csr_polynomial_expansion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f482c3d5b5210f204093f88b7d1e26c56328a82c904cc8556a469bdf319bbbf3"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/svm/_liblinear.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1e29a7af0b519ec27da3692ebb2a6c7b46224fbe5076d0866cc8486da1c7a23f"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/svm/_libsvm.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "740ba5b934c89072e34e3b52ae4ecfdfc69657e9bb3a0f06f33a7a1364839ea7"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/svm/_libsvm_sparse.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "91a87e009f7d6fd96ed08d14c40e3f1cf839e8b7f6741154377298a9acc123b2"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/svm/_newrand.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58ffc936425e7b61a63993208b575e57c8c214048ef49b7d1efef99ab3da0132"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/tree/_criterion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "aabedb1b9680de409c104134059186355df196b5536bf67e121972c0b51749e8"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/tree/_splitter.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "ae0ca8b50aa884ed6b10591f0ea9c25c1742c7fa930c802ace52bf54073a4c96"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/tree/_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "54c12f6e7e4af686c9904155efae6e57c0c5a32f8305a930381027fb3f70efb9"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/tree/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0dcceafd1529a473fe5a203c358c65364f94a07b84ac1b2226499fbdad72f5f7"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_cython_blas.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c72ce3a4b24af31b197ee046268b379223ea2531b62bfd40172421223381537e"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_fast_dict.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d701fdb39ee98f0ff52128b8f7ac30664ede13e23d4a7aef35737de2adeccb6b"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_heap.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0d492cc4be04f68a3c7fbacdaf8e502d7497fcfcb66bb908f69d57c231e8666c"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_isfinite.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "afda65b8f9bb9bbd26c63e69298277163aad6a8cc36a56075076a18c3d8a121d"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_logistic_sigmoid.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "684947d447cbbc4e80569ebdc0c2b03cbf2f6e24d7180eaa9ef90b232daf531d"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_openmp_helpers.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "70ea58637b68694ec0f3c17525eed1251521fc03da0ed47ce0940c05b47774b4"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_random.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d63bbbf5802bc6f478c6772e711b9acf524faea86911d6b8e4e527649fc39332"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_readonly_array_wrapper.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "2277f11c1af265af977398d47f61dbd845f3f3afb225b8184f80703d8ad514f3"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_seq_dataset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c59afd3787c8b99d99ae18db5582929a88d438ecfe9ef04c87ba1b0fda5e59a3"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_sorting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c4c122282aaa1a3b0d7342c94d618785ff271adf47e527e011ee27fce934f313"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_typedefs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "9d20c9d4255475ec6dc9c66cdd2c0fd37f865debd6ea4e367cc8063774e648b9"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_vector_sentinel.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "78801c2f2e0d078dec670d8248ab904b3b093154f710672c5b043585c39127dd"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_weight_vector.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "7e6b702152b53aa677f4f6d0a9813112d2ea1cf8c0bb7dc89516d88416c717c7"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/arrayfuncs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "cf89d261046d28584cd39377a468cb6272122c70820126738190555243abb96c"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/murmurhash.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "bc5038e1cf9e018a1723885bc3108d20004d8e8b017cf85c240a02bfaaa17d4f"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/sparsefuncs_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "079718ae7b2cd36d969b2298ab76ecb18d32f938264a7b9055b0875fa521bff3"
+          },
+          {
+            "path": "sklearn/__check_build/_check_build.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "08564a5ad0e131b3ac284a0ba04147128f9f409bf40ce588b0c9729969d47e05"
+          },
+          {
+            "path": "sklearn/_isotonic.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "88e8cee3fe800145ddad4ee79e8308ce592618ffaa8c394deabc91b143304c92"
+          },
+          {
+            "path": "sklearn/_loss/_loss.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0e638d64c1d3c17c6189007eaab23793d1838635035d0d5591590d5c6e36f1a3"
+          },
+          {
+            "path": "sklearn/cluster/_dbscan_inner.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "be5430ab42f2c4099366b9737207d91826c8861116c1d26a2409e7e7e86c554a"
+          },
+          {
+            "path": "sklearn/cluster/_hierarchical_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "18c7d1e8e16bc70cf463e304a31380a53c7fac71265fbe43362fd64b9c5b3e0e"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_common.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a030da0dbfadb1470674542792f405284ac7b47bbb09d235cb278276732cf354"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_elkan.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1bb2d6a62e7c27c8228a8dc69e1424a2dd134ccc5c193f21c40fb9877b5884c2"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_lloyd.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "abeabbd55e4d49a3bb2711872809ffa562c6790e6471bb99b0e7425107ea6193"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_minibatch.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "6faef1e643cef9c2cdb9005eb8804e4e98323f8294f0e6aaa625d5ba4a0c02f7"
+          },
+          {
+            "path": "sklearn/datasets/_svmlight_format_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b1fc58704a18ddc1948250c5bddb1e1822dddd7f2852ca3bfa15a3de82a9e12b"
+          },
+          {
+            "path": "sklearn/decomposition/_cdnmf_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "18aff70425ebbadf7146eddd1b1a52309902b5c22b3b734fc910ed9a003eae6a"
+          },
+          {
+            "path": "sklearn/decomposition/_online_lda_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "168a2500e6cc69726555d5289120cedaf9c17b230b2a328a42440ed752075d07"
+          },
+          {
+            "path": "sklearn/ensemble/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5cccd590572c50b49f76bdeee43e4a5a080c13ff2c134ca4dc0e8f5e2be0e632"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_binning.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "e59107b905933ac72b61b70f1cc18a7325345ff05a58b0e67c66d8e8aee831b8"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_bitset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b8de3223ca596ceece2481a2682ca5440d89d5f43006883163f65e4518f20da0"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "510b2119ccf5c57971d898be25d676b7e3e8bf199dddbd705fbbfd64519fca28"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_predictor.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58fc55ddd1830523f5c57154ff275b4fbbcbaba2c653894ea5fb54a90f1651c1"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/common.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d32abf41d5ebe7269a7a4f04df6c76c5f73de41cc502f1eabb8098296d1cef5f"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/histogram.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "66df3f972b46040e5c4fc566b8b4718810aa9702a2c9fdb235b1c22958bc94bb"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/splitting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "4280306f686262417850e3644d1a02acfcd9335aebfce947687c5f0f7cdf5a3b"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "65b7eb323cedb6fe68d77ad4937bb18b0d991091d6fb30603927bcfffafc1c6a"
+          },
+          {
+            "path": "sklearn/feature_extraction/_hashing_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "44c4804d73b1f5e133db79ccb5222b634c112665238380b9d3d9a93fa2f7b666"
+          },
+          {
+            "path": "sklearn/linear_model/_cd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "751eb3cd952942f7704e04f5cb34d9760c606abbda110e79d6956e21cae7d062"
+          },
+          {
+            "path": "sklearn/linear_model/_sag_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "834abcd4a82e7aa3aaa77ae4ca4ee56d2df434202d056897fcaade6cc292865f"
+          },
+          {
+            "path": "sklearn/linear_model/_sgd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c102ba0df8dfd45c8e7cdbad1282e501f475c5517cdeada921e914faa136ec69"
+          },
+          {
+            "path": "sklearn/manifold/_barnes_hut_tsne.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "39ad71edce9787a1dae8ba9011f44470eab34e225f799f45724bdfa72d658fad"
+          },
+          {
+            "path": "sklearn/manifold/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0a9443ebab2b818e9c00ca58dd92b1fe2ceb0e81d49b00cb83486470a86599b8"
+          },
+          {
+            "path": "sklearn/metrics/_dist_metrics.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "ae0d8c1d1d6c7dda93fe93c0a5b788d7d43b6135c3f853c94087dec8dd6b9169"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_argkmin.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "90eb89a085ca71244387e553d3b73600b7847c6fdb35447e1190eca04a1d7596"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_base.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "37445ed08a5f5816dd3548b3b757b57adf144c6fb7cb4a4cfb51f9fb16c4f509"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "2239359f6db26fec37efe3bfd8e6a0124587d2c9bd0552a4a7e1cd9d559b7f3e"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "46a2ac62235c85ff05d2f41f06a71c554c9a9403afee03cf075b131fe4480c86"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f2fea095f63b584759136604e996437d8bb36884614611529692ca51e309090c"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "73dae2721f418c8a85350ec7fd000a6a787fb5ed6bb6e7679da85493d5386963"
+          },
+          {
+            "path": "sklearn/metrics/cluster/_expected_mutual_info_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1977851a56a02777087ca03b74e3efb88088e975aa4b34497018e065c614740d"
+          },
+          {
+            "path": "sklearn/neighbors/_ball_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "8f42cb0129b7335ed5aa22d8900549110b6b6f6c013f2152c630fa208819cff5"
+          },
+          {
+            "path": "sklearn/neighbors/_kd_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "55aad7b7f32ca66344f495ae4ae130fcaa10c04368ece54d111da85001fc256a"
+          },
+          {
+            "path": "sklearn/neighbors/_partition_nodes.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1ebfb7ad54de111d3124c1db2b8adae148ede48a1810a81cd79ce493ad3ab191"
+          },
+          {
+            "path": "sklearn/neighbors/_quad_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "fa2a1ce64a14b4098a90d6fbc1353c2f268a931e74af8ecae8239bf495198e90"
+          },
+          {
+            "path": "sklearn/preprocessing/_csr_polynomial_expansion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f482c3d5b5210f204093f88b7d1e26c56328a82c904cc8556a469bdf319bbbf3"
+          },
+          {
+            "path": "sklearn/svm/_liblinear.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1e29a7af0b519ec27da3692ebb2a6c7b46224fbe5076d0866cc8486da1c7a23f"
+          },
+          {
+            "path": "sklearn/svm/_libsvm.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "740ba5b934c89072e34e3b52ae4ecfdfc69657e9bb3a0f06f33a7a1364839ea7"
+          },
+          {
+            "path": "sklearn/svm/_libsvm_sparse.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "91a87e009f7d6fd96ed08d14c40e3f1cf839e8b7f6741154377298a9acc123b2"
+          },
+          {
+            "path": "sklearn/svm/_newrand.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58ffc936425e7b61a63993208b575e57c8c214048ef49b7d1efef99ab3da0132"
+          },
+          {
+            "path": "sklearn/tree/_criterion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "aabedb1b9680de409c104134059186355df196b5536bf67e121972c0b51749e8"
+          },
+          {
+            "path": "sklearn/tree/_splitter.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "ae0ca8b50aa884ed6b10591f0ea9c25c1742c7fa930c802ace52bf54073a4c96"
+          },
+          {
+            "path": "sklearn/tree/_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "54c12f6e7e4af686c9904155efae6e57c0c5a32f8305a930381027fb3f70efb9"
+          },
+          {
+            "path": "sklearn/tree/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0dcceafd1529a473fe5a203c358c65364f94a07b84ac1b2226499fbdad72f5f7"
+          },
+          {
+            "path": "sklearn/utils/_cython_blas.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c72ce3a4b24af31b197ee046268b379223ea2531b62bfd40172421223381537e"
+          },
+          {
+            "path": "sklearn/utils/_fast_dict.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d701fdb39ee98f0ff52128b8f7ac30664ede13e23d4a7aef35737de2adeccb6b"
+          },
+          {
+            "path": "sklearn/utils/_heap.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0d492cc4be04f68a3c7fbacdaf8e502d7497fcfcb66bb908f69d57c231e8666c"
+          },
+          {
+            "path": "sklearn/utils/_isfinite.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "afda65b8f9bb9bbd26c63e69298277163aad6a8cc36a56075076a18c3d8a121d"
+          },
+          {
+            "path": "sklearn/utils/_logistic_sigmoid.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "684947d447cbbc4e80569ebdc0c2b03cbf2f6e24d7180eaa9ef90b232daf531d"
+          },
+          {
+            "path": "sklearn/utils/_openmp_helpers.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "70ea58637b68694ec0f3c17525eed1251521fc03da0ed47ce0940c05b47774b4"
+          },
+          {
+            "path": "sklearn/utils/_random.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d63bbbf5802bc6f478c6772e711b9acf524faea86911d6b8e4e527649fc39332"
+          },
+          {
+            "path": "sklearn/utils/_readonly_array_wrapper.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "2277f11c1af265af977398d47f61dbd845f3f3afb225b8184f80703d8ad514f3"
+          },
+          {
+            "path": "sklearn/utils/_seq_dataset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c59afd3787c8b99d99ae18db5582929a88d438ecfe9ef04c87ba1b0fda5e59a3"
+          },
+          {
+            "path": "sklearn/utils/_sorting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "c4c122282aaa1a3b0d7342c94d618785ff271adf47e527e011ee27fce934f313"
+          },
+          {
+            "path": "sklearn/utils/_typedefs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "9d20c9d4255475ec6dc9c66cdd2c0fd37f865debd6ea4e367cc8063774e648b9"
+          },
+          {
+            "path": "sklearn/utils/_vector_sentinel.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "78801c2f2e0d078dec670d8248ab904b3b093154f710672c5b043585c39127dd"
+          },
+          {
+            "path": "sklearn/utils/_weight_vector.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "7e6b702152b53aa677f4f6d0a9813112d2ea1cf8c0bb7dc89516d88416c717c7"
+          },
+          {
+            "path": "sklearn/utils/arrayfuncs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "cf89d261046d28584cd39377a468cb6272122c70820126738190555243abb96c"
+          },
+          {
+            "path": "sklearn/utils/murmurhash.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "bc5038e1cf9e018a1723885bc3108d20004d8e8b017cf85c240a02bfaaa17d4f"
+          },
+          {
+            "path": "sklearn/utils/sparsefuncs_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "079718ae7b2cd36d969b2298ab76ecb18d32f938264a7b9055b0875fa521bff3"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "a93bd2180f1eb477f05f20a085d824dae342864efd31db562498fdb07f8a92ec",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/feature_selection/tests/test_base.py...\nChecking patch sklearn/feature_selection/tests/test_feature_select.py...\nApplied patch sklearn/feature_selection/tests/test_base.py cleanly.\nApplied patch sklearn/feature_selection/tests/test_feature_select.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/base.py": "1fdeef4a0af6afb68c4d5f76be180db68198e57223980dc610a243efcd8654fa",
+            "sklearn/feature_selection/_base.py": "6bb064008fb3ac5bb9d42d5386cf46ee02d818d1ad9546894c418b28bfe43eb0",
+            "sklearn/feature_selection/tests/test_base.py": "cac8e788504683ffa59cbf94901b461da8a7e37dab29fe3b6689d55ebee9677e",
+            "sklearn/feature_selection/tests/test_feature_select.py": "092050c12e9595b7ec1fa2979cdbcaed780d0862e8cb72b800f040e083b221a2",
+            "sklearn/utils/_set_output.py": "88a5e6f47c8dee8e072724e1ddd002a3a291279e77f901d8204eea07556fe515"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "29298a8b9d5718bb8e21d885e103d08823b591cff68a3dfd498e7385c6bc1f49",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/utils/_set_output.py...\nApplied patch sklearn/utils/_set_output.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "a93bd2180f1eb477f05f20a085d824dae342864efd31db562498fdb07f8a92ec",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/feature_selection/tests/test_base.py...\nChecking patch sklearn/feature_selection/tests/test_feature_select.py...\nApplied patch sklearn/feature_selection/tests/test_base.py cleanly.\nApplied patch sklearn/feature_selection/tests/test_feature_select.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/base.py": "1fdeef4a0af6afb68c4d5f76be180db68198e57223980dc610a243efcd8654fa",
+            "sklearn/feature_selection/_base.py": "6bb064008fb3ac5bb9d42d5386cf46ee02d818d1ad9546894c418b28bfe43eb0",
+            "sklearn/feature_selection/tests/test_base.py": "cac8e788504683ffa59cbf94901b461da8a7e37dab29fe3b6689d55ebee9677e",
+            "sklearn/feature_selection/tests/test_feature_select.py": "092050c12e9595b7ec1fa2979cdbcaed780d0862e8cb72b800f040e083b221a2",
+            "sklearn/utils/_set_output.py": "ccf0394c75b8d4514bd298d647e4695a100e2892ab494e7b2212a9d3b60df264"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "1112300429f02c451ee124abb1fc98d52605b0f839a41e77b3a08c2292640ab0",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/base.py...\nChecking patch sklearn/feature_selection/_base.py...\nApplied patch sklearn/base.py cleanly.\nApplied patch sklearn/feature_selection/_base.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "a93bd2180f1eb477f05f20a085d824dae342864efd31db562498fdb07f8a92ec",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/feature_selection/tests/test_base.py...\nChecking patch sklearn/feature_selection/tests/test_feature_select.py...\nApplied patch sklearn/feature_selection/tests/test_base.py cleanly.\nApplied patch sklearn/feature_selection/tests/test_feature_select.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/base.py": "1366a2d9fe0439b4b512ccee7522f5d2c6acc707d4eca167a258e21c1ff5a084",
+            "sklearn/feature_selection/_base.py": "722b148d1415015a3739e5c830a3bcdfbce3bbf69c7a8525f2be34bdf38791c7",
+            "sklearn/feature_selection/tests/test_base.py": "cac8e788504683ffa59cbf94901b461da8a7e37dab29fe3b6689d55ebee9677e",
+            "sklearn/feature_selection/tests/test_feature_select.py": "092050c12e9595b7ec1fa2979cdbcaed780d0862e8cb72b800f040e083b221a2",
+            "sklearn/utils/_set_output.py": "88a5e6f47c8dee8e072724e1ddd002a3a291279e77f901d8204eea07556fe515"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25973",
+      "repo": "scikit-learn/scikit-learn",
+      "base_commit": "10dbc142bd17ccf7bd38eec2ac04b52ce0d1009e",
+      "url": "https://codeload.github.com/scikit-learn/scikit-learn/tar.gz/10dbc142bd17ccf7bd38eec2ac04b52ce0d1009e",
+      "archive_sha256": "b6d925501b0dff4bd5ff25e475eab038346615c02dcd048518a9dca8fd78e2db",
+      "archive_bytes": 7499636,
+      "acquired_at_utc": "2026-11-05T10:19:16.336857+00:00",
+      "environment_key": "modern_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+      "native_build_required": true,
+      "native_build": {
+        "command": [
+          "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+          "setup.py",
+          "build_ext",
+          "--inplace",
+          "-j",
+          "2"
+        ],
+        "returncode": 0,
+        "started_at_utc": "2026-11-05T10:22:30.778583+00:00",
+        "finished_at_utc": "2026-11-05T10:23:50.774967+00:00",
+        "native_extension_files": [
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/__check_build/_check_build.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "08564a5ad0e131b3ac284a0ba04147128f9f409bf40ce588b0c9729969d47e05"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/_isotonic.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "88e8cee3fe800145ddad4ee79e8308ce592618ffaa8c394deabc91b143304c92"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/_loss/_loss.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0e509abed1f35afb59b6ef756eef400eac1cc64e832be0bb9f058360adf13e69"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_dbscan_inner.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "be5430ab42f2c4099366b9737207d91826c8861116c1d26a2409e7e7e86c554a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_hierarchical_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "e152c8231e894bbe638092fd3058f811aaa6052b7bfc03c8a36f355bba3a7ec8"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_k_means_common.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1ff862fdcbda7306f897e14a8ce4737bce8b84c0b4fb6e53d16e6c2a3f190a30"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_k_means_elkan.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5bb866f3bc976e02f0f9a3c87231aa9d34e57eee66d423f6f61a7d7f8dda8a08"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_k_means_lloyd.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f95f0c6c47efb853f307a3b8db01882ea3ef298d5e6ac6768d0bd8acd72963b7"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/cluster/_k_means_minibatch.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1aae62e754b5dee7924b612730bbcdf8ca9967e22c0a36f41edef8f94dceabc5"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/datasets/_svmlight_format_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b1fc58704a18ddc1948250c5bddb1e1822dddd7f2852ca3bfa15a3de82a9e12b"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/decomposition/_cdnmf_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "18aff70425ebbadf7146eddd1b1a52309902b5c22b3b734fc910ed9a003eae6a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/decomposition/_online_lda_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "168a2500e6cc69726555d5289120cedaf9c17b230b2a328a42440ed752075d07"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5cccd590572c50b49f76bdeee43e4a5a080c13ff2c134ca4dc0e8f5e2be0e632"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/_binning.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "e59107b905933ac72b61b70f1cc18a7325345ff05a58b0e67c66d8e8aee831b8"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/_bitset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b8de3223ca596ceece2481a2682ca5440d89d5f43006883163f65e4518f20da0"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "510b2119ccf5c57971d898be25d676b7e3e8bf199dddbd705fbbfd64519fca28"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/_predictor.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "930a3c0586ea8b801c4fa41b9d24ff9ab9e4e9a1924b0d1363b5736538e64b46"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/common.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d32abf41d5ebe7269a7a4f04df6c76c5f73de41cc502f1eabb8098296d1cef5f"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/histogram.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "66df3f972b46040e5c4fc566b8b4718810aa9702a2c9fdb235b1c22958bc94bb"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/splitting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "4280306f686262417850e3644d1a02acfcd9335aebfce947687c5f0f7cdf5a3b"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/ensemble/_hist_gradient_boosting/utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "65b7eb323cedb6fe68d77ad4937bb18b0d991091d6fb30603927bcfffafc1c6a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/feature_extraction/_hashing_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b4db41e40045d89594b138930423b10395ed9c04f2978c2d85342cf3e6810bd8"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/linear_model/_cd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1cb1cb495a2fce8df8a92638fc51d26679c30ab093b0485f968d13606a542485"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/linear_model/_sag_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "27534d2a50c133e4826fd27dc09a6dc2f450458540d027f99fee9f015e773106"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/linear_model/_sgd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "7254e9070cd74c04f4ed4d5ca572a9c30fd36037eff8140aa28bf22e8adb291c"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/manifold/_barnes_hut_tsne.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "39ad71edce9787a1dae8ba9011f44470eab34e225f799f45724bdfa72d658fad"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/manifold/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0a9443ebab2b818e9c00ca58dd92b1fe2ceb0e81d49b00cb83486470a86599b8"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_dist_metrics.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58887c1062236e68f53ac5e5084e452d76a25213746f1011ad7c3e144e85b787"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_argkmin.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "94507c4cbe008835bd15a710dd739abdf8c194822572e24ea0cd1935c570def0"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_argkmin_classmode.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0a70ca2f24fb90022e5a52f81ecbe2167bc0ebd0ade237ba9f7121fe7508d969"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_base.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f55fbf45f153f47850782eeaa961c51b56c29d10915efe7b3badbf1581bcf7a0"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a2829971e796771b0d3480d02968f4a9a3bb78eba716e098d312053494dc590a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b244058aef9170aeacd58cf16b7653ae3713523706d18e6017f81c9308d21d73"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "4a075161a2083c460b5927fe43b3a50dfeeec54abf5078d7c686b7b5db5d16d4"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/_pairwise_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "73dae2721f418c8a85350ec7fd000a6a787fb5ed6bb6e7679da85493d5386963"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/metrics/cluster/_expected_mutual_info_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "17404fcf31829f92d69c25a480b9d9decc93c20fd9c83a1917a2adf0318ea6e5"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/neighbors/_ball_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "69de4f8f08a7c82692835abb141cf9e2fd3118141f4ddcce1b18a7097ec70202"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/neighbors/_kd_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5d7936261d2c7afe82eabb406c1eb1c0fb8f8ccc9821281751ea0569be3a5de1"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/neighbors/_partition_nodes.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "94bdf5958f8c406428cea489113e02b2ad2c26062eb971b247edae515b537988"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/neighbors/_quad_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "fa2a1ce64a14b4098a90d6fbc1353c2f268a931e74af8ecae8239bf495198e90"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/preprocessing/_csr_polynomial_expansion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f482c3d5b5210f204093f88b7d1e26c56328a82c904cc8556a469bdf319bbbf3"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/preprocessing/_target_encoder_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "19cbba5c915a6e6f731d105ccbde0c02f774f313f5f47502244b9e87340db77c"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/svm/_liblinear.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a9c34e7c3f5ebfb27ce9afcf31214c48c2f3d3e80dff024864c8dc7244970cad"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/svm/_libsvm.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "08cb97a630f6e7abcafd173ef8da9c9e2abe1ed0050a692062589f6440a58c0f"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/svm/_libsvm_sparse.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b83faf5d89377bf3a4ca30bd88ee741a40641a50fa61027f569384a798bb4fd2"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/svm/_newrand.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58ffc936425e7b61a63993208b575e57c8c214048ef49b7d1efef99ab3da0132"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/tree/_criterion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "bf7f48cb759cb23fa8552cb97b7c7bb610d29c58eadf1958ea70a48b14eee240"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/tree/_splitter.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "97ee35407981d324f01b98fc4fc803b40a943db515c38ff4e3e993bb7c70c0d6"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/tree/_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "7c504740c6d60b51a12bb9de5da0dcf7cb07394f1a9b99f671b7069cf9597b24"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/tree/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0dcceafd1529a473fe5a203c358c65364f94a07b84ac1b2226499fbdad72f5f7"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_cython_blas.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "03bbbe2367eadba4f3dd0f9398f994fc784b7eb04684c8b534c71eda2b9f4a32"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_fast_dict.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58ea8e825a507e6831a8f751916a1a8e52cc7893da2c6f2562c6669f1d054308"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_heap.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b2b404a48cbeeed8b70bdc1e4d4ccfc511f41ed4dd094d37f4c1a1873407cf4a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_isfinite.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "afda65b8f9bb9bbd26c63e69298277163aad6a8cc36a56075076a18c3d8a121d"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_logistic_sigmoid.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "684947d447cbbc4e80569ebdc0c2b03cbf2f6e24d7180eaa9ef90b232daf531d"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_openmp_helpers.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "40c1b484ed03ba6d741cdeb21fbd03834c9e08b5788ca2bfaa364086abf152cc"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_random.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "32f5bb1981668fbba7bebdb4ff4f6bac3953c9198afe3e14a7e691e97d4ceb83"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_seq_dataset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "308a0481f87c1c4e9ba82700ef6d9f67e57ef06e190e26b8da09d12b240525ba"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_sorting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "12a77e0299bebc2ff51229a34cf02b46f52736018f97d3d0aa4823ebd4fdd4f9"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_typedefs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "2a8e16c664a5a94e5fcf35d2f55693a285c5f102725c2c79144cd9b7bd415cf4"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_vector_sentinel.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "3c74f58ced43a3edce32656a200e82c125599abaee1ebbe79a84e08d694dc796"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/_weight_vector.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d1d8ff26360869383bc05d90062874d21eb6a598f7874d660230813c0de2c23a"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/arrayfuncs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "cdedc0e6708c8dd280a37560557fbbd08fa7da4d81c1248c3536e7b322b80082"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/murmurhash.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "bc5038e1cf9e018a1723885bc3108d20004d8e8b017cf85c240a02bfaaa17d4f"
+          },
+          {
+            "path": "build/lib.linux-x86_64-3.9/sklearn/utils/sparsefuncs_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "9ac1ba2678c4d4364a857e106fabdeabecd6d4e187b95f463b75b25d7df3d6ad"
+          },
+          {
+            "path": "sklearn/__check_build/_check_build.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "08564a5ad0e131b3ac284a0ba04147128f9f409bf40ce588b0c9729969d47e05"
+          },
+          {
+            "path": "sklearn/_isotonic.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "88e8cee3fe800145ddad4ee79e8308ce592618ffaa8c394deabc91b143304c92"
+          },
+          {
+            "path": "sklearn/_loss/_loss.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0e509abed1f35afb59b6ef756eef400eac1cc64e832be0bb9f058360adf13e69"
+          },
+          {
+            "path": "sklearn/cluster/_dbscan_inner.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "be5430ab42f2c4099366b9737207d91826c8861116c1d26a2409e7e7e86c554a"
+          },
+          {
+            "path": "sklearn/cluster/_hierarchical_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "e152c8231e894bbe638092fd3058f811aaa6052b7bfc03c8a36f355bba3a7ec8"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_common.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1ff862fdcbda7306f897e14a8ce4737bce8b84c0b4fb6e53d16e6c2a3f190a30"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_elkan.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5bb866f3bc976e02f0f9a3c87231aa9d34e57eee66d423f6f61a7d7f8dda8a08"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_lloyd.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f95f0c6c47efb853f307a3b8db01882ea3ef298d5e6ac6768d0bd8acd72963b7"
+          },
+          {
+            "path": "sklearn/cluster/_k_means_minibatch.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1aae62e754b5dee7924b612730bbcdf8ca9967e22c0a36f41edef8f94dceabc5"
+          },
+          {
+            "path": "sklearn/datasets/_svmlight_format_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b1fc58704a18ddc1948250c5bddb1e1822dddd7f2852ca3bfa15a3de82a9e12b"
+          },
+          {
+            "path": "sklearn/decomposition/_cdnmf_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "18aff70425ebbadf7146eddd1b1a52309902b5c22b3b734fc910ed9a003eae6a"
+          },
+          {
+            "path": "sklearn/decomposition/_online_lda_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "168a2500e6cc69726555d5289120cedaf9c17b230b2a328a42440ed752075d07"
+          },
+          {
+            "path": "sklearn/ensemble/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5cccd590572c50b49f76bdeee43e4a5a080c13ff2c134ca4dc0e8f5e2be0e632"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_binning.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "e59107b905933ac72b61b70f1cc18a7325345ff05a58b0e67c66d8e8aee831b8"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_bitset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b8de3223ca596ceece2481a2682ca5440d89d5f43006883163f65e4518f20da0"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_gradient_boosting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "510b2119ccf5c57971d898be25d676b7e3e8bf199dddbd705fbbfd64519fca28"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/_predictor.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "930a3c0586ea8b801c4fa41b9d24ff9ab9e4e9a1924b0d1363b5736538e64b46"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/common.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d32abf41d5ebe7269a7a4f04df6c76c5f73de41cc502f1eabb8098296d1cef5f"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/histogram.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "66df3f972b46040e5c4fc566b8b4718810aa9702a2c9fdb235b1c22958bc94bb"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/splitting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "4280306f686262417850e3644d1a02acfcd9335aebfce947687c5f0f7cdf5a3b"
+          },
+          {
+            "path": "sklearn/ensemble/_hist_gradient_boosting/utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "65b7eb323cedb6fe68d77ad4937bb18b0d991091d6fb30603927bcfffafc1c6a"
+          },
+          {
+            "path": "sklearn/feature_extraction/_hashing_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b4db41e40045d89594b138930423b10395ed9c04f2978c2d85342cf3e6810bd8"
+          },
+          {
+            "path": "sklearn/linear_model/_cd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "1cb1cb495a2fce8df8a92638fc51d26679c30ab093b0485f968d13606a542485"
+          },
+          {
+            "path": "sklearn/linear_model/_sag_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "27534d2a50c133e4826fd27dc09a6dc2f450458540d027f99fee9f015e773106"
+          },
+          {
+            "path": "sklearn/linear_model/_sgd_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "7254e9070cd74c04f4ed4d5ca572a9c30fd36037eff8140aa28bf22e8adb291c"
+          },
+          {
+            "path": "sklearn/manifold/_barnes_hut_tsne.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "39ad71edce9787a1dae8ba9011f44470eab34e225f799f45724bdfa72d658fad"
+          },
+          {
+            "path": "sklearn/manifold/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0a9443ebab2b818e9c00ca58dd92b1fe2ceb0e81d49b00cb83486470a86599b8"
+          },
+          {
+            "path": "sklearn/metrics/_dist_metrics.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58887c1062236e68f53ac5e5084e452d76a25213746f1011ad7c3e144e85b787"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_argkmin.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "94507c4cbe008835bd15a710dd739abdf8c194822572e24ea0cd1935c570def0"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_argkmin_classmode.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0a70ca2f24fb90022e5a52f81ecbe2167bc0ebd0ade237ba9f7121fe7508d969"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_base.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f55fbf45f153f47850782eeaa961c51b56c29d10915efe7b3badbf1581bcf7a0"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a2829971e796771b0d3480d02968f4a9a3bb78eba716e098d312053494dc590a"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b244058aef9170aeacd58cf16b7653ae3713523706d18e6017f81c9308d21d73"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "4a075161a2083c460b5927fe43b3a50dfeeec54abf5078d7c686b7b5db5d16d4"
+          },
+          {
+            "path": "sklearn/metrics/_pairwise_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "73dae2721f418c8a85350ec7fd000a6a787fb5ed6bb6e7679da85493d5386963"
+          },
+          {
+            "path": "sklearn/metrics/cluster/_expected_mutual_info_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "17404fcf31829f92d69c25a480b9d9decc93c20fd9c83a1917a2adf0318ea6e5"
+          },
+          {
+            "path": "sklearn/neighbors/_ball_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "69de4f8f08a7c82692835abb141cf9e2fd3118141f4ddcce1b18a7097ec70202"
+          },
+          {
+            "path": "sklearn/neighbors/_kd_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "5d7936261d2c7afe82eabb406c1eb1c0fb8f8ccc9821281751ea0569be3a5de1"
+          },
+          {
+            "path": "sklearn/neighbors/_partition_nodes.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "94bdf5958f8c406428cea489113e02b2ad2c26062eb971b247edae515b537988"
+          },
+          {
+            "path": "sklearn/neighbors/_quad_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "fa2a1ce64a14b4098a90d6fbc1353c2f268a931e74af8ecae8239bf495198e90"
+          },
+          {
+            "path": "sklearn/preprocessing/_csr_polynomial_expansion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "f482c3d5b5210f204093f88b7d1e26c56328a82c904cc8556a469bdf319bbbf3"
+          },
+          {
+            "path": "sklearn/preprocessing/_target_encoder_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "19cbba5c915a6e6f731d105ccbde0c02f774f313f5f47502244b9e87340db77c"
+          },
+          {
+            "path": "sklearn/svm/_liblinear.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "a9c34e7c3f5ebfb27ce9afcf31214c48c2f3d3e80dff024864c8dc7244970cad"
+          },
+          {
+            "path": "sklearn/svm/_libsvm.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "08cb97a630f6e7abcafd173ef8da9c9e2abe1ed0050a692062589f6440a58c0f"
+          },
+          {
+            "path": "sklearn/svm/_libsvm_sparse.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b83faf5d89377bf3a4ca30bd88ee741a40641a50fa61027f569384a798bb4fd2"
+          },
+          {
+            "path": "sklearn/svm/_newrand.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58ffc936425e7b61a63993208b575e57c8c214048ef49b7d1efef99ab3da0132"
+          },
+          {
+            "path": "sklearn/tree/_criterion.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "bf7f48cb759cb23fa8552cb97b7c7bb610d29c58eadf1958ea70a48b14eee240"
+          },
+          {
+            "path": "sklearn/tree/_splitter.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "97ee35407981d324f01b98fc4fc803b40a943db515c38ff4e3e993bb7c70c0d6"
+          },
+          {
+            "path": "sklearn/tree/_tree.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "7c504740c6d60b51a12bb9de5da0dcf7cb07394f1a9b99f671b7069cf9597b24"
+          },
+          {
+            "path": "sklearn/tree/_utils.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "0dcceafd1529a473fe5a203c358c65364f94a07b84ac1b2226499fbdad72f5f7"
+          },
+          {
+            "path": "sklearn/utils/_cython_blas.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "03bbbe2367eadba4f3dd0f9398f994fc784b7eb04684c8b534c71eda2b9f4a32"
+          },
+          {
+            "path": "sklearn/utils/_fast_dict.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "58ea8e825a507e6831a8f751916a1a8e52cc7893da2c6f2562c6669f1d054308"
+          },
+          {
+            "path": "sklearn/utils/_heap.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "b2b404a48cbeeed8b70bdc1e4d4ccfc511f41ed4dd094d37f4c1a1873407cf4a"
+          },
+          {
+            "path": "sklearn/utils/_isfinite.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "afda65b8f9bb9bbd26c63e69298277163aad6a8cc36a56075076a18c3d8a121d"
+          },
+          {
+            "path": "sklearn/utils/_logistic_sigmoid.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "684947d447cbbc4e80569ebdc0c2b03cbf2f6e24d7180eaa9ef90b232daf531d"
+          },
+          {
+            "path": "sklearn/utils/_openmp_helpers.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "40c1b484ed03ba6d741cdeb21fbd03834c9e08b5788ca2bfaa364086abf152cc"
+          },
+          {
+            "path": "sklearn/utils/_random.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "32f5bb1981668fbba7bebdb4ff4f6bac3953c9198afe3e14a7e691e97d4ceb83"
+          },
+          {
+            "path": "sklearn/utils/_seq_dataset.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "308a0481f87c1c4e9ba82700ef6d9f67e57ef06e190e26b8da09d12b240525ba"
+          },
+          {
+            "path": "sklearn/utils/_sorting.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "12a77e0299bebc2ff51229a34cf02b46f52736018f97d3d0aa4823ebd4fdd4f9"
+          },
+          {
+            "path": "sklearn/utils/_typedefs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "2a8e16c664a5a94e5fcf35d2f55693a285c5f102725c2c79144cd9b7bd415cf4"
+          },
+          {
+            "path": "sklearn/utils/_vector_sentinel.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "3c74f58ced43a3edce32656a200e82c125599abaee1ebbe79a84e08d694dc796"
+          },
+          {
+            "path": "sklearn/utils/_weight_vector.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "d1d8ff26360869383bc05d90062874d21eb6a598f7874d660230813c0de2c23a"
+          },
+          {
+            "path": "sklearn/utils/arrayfuncs.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "cdedc0e6708c8dd280a37560557fbbd08fa7da4d81c1248c3536e7b322b80082"
+          },
+          {
+            "path": "sklearn/utils/murmurhash.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "bc5038e1cf9e018a1723885bc3108d20004d8e8b017cf85c240a02bfaaa17d4f"
+          },
+          {
+            "path": "sklearn/utils/sparsefuncs_fast.cpython-39-x86_64-linux-gnu.so",
+            "sha256": "9ac1ba2678c4d4364a857e106fabdeabecd6d4e187b95f463b75b25d7df3d6ad"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "77bc9e147113413d7ab6d36a03cdd5d58f006b4a8505a7e6d32a9815963c7547",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/feature_selection/tests/test_sequential.py...\nApplied patch sklearn/feature_selection/tests/test_sequential.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/feature_selection/_sequential.py": "e51d5c9dbf801ad7ba8a2e5ffa59738d01462c455dec9b15cba5684a6c15a418",
+            "sklearn/feature_selection/tests/test_sequential.py": "49e03f6cdf444bed9eac47a80a3fb137128ca99c8600a54c8582a12324835be1",
+            "sklearn/model_selection/_validation.py": "f3fbce9fb0d4b43f523c0af785dfb1689523a4fe31931d4e2936f89d4a553d9b"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "484ff3694e841a00dd37de332db859fcd2e2d09a22172437006442bf254db3a9",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/model_selection/_validation.py...\nApplied patch sklearn/model_selection/_validation.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "77bc9e147113413d7ab6d36a03cdd5d58f006b4a8505a7e6d32a9815963c7547",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/feature_selection/tests/test_sequential.py...\nApplied patch sklearn/feature_selection/tests/test_sequential.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/feature_selection/_sequential.py": "e51d5c9dbf801ad7ba8a2e5ffa59738d01462c455dec9b15cba5684a6c15a418",
+            "sklearn/feature_selection/tests/test_sequential.py": "49e03f6cdf444bed9eac47a80a3fb137128ca99c8600a54c8582a12324835be1",
+            "sklearn/model_selection/_validation.py": "c489d5ec0b69c4db6a7bd0a71d254096ecb3ac0610e85ac90b5bbbcc48598805"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "e949cc58c07c8dc5c4f0c2c2b8648ed2ea69a3f7de95a4b62df6761f50746dff",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/feature_selection/_sequential.py...\nApplied patch sklearn/feature_selection/_sequential.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "77bc9e147113413d7ab6d36a03cdd5d58f006b4a8505a7e6d32a9815963c7547",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sklearn/feature_selection/tests/test_sequential.py...\nApplied patch sklearn/feature_selection/tests/test_sequential.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sklearn/feature_selection/_sequential.py": "e8257324bc24b106d13f536b031bb3a2d03a3eaffa60c236d1f7803a2ed880cc",
+            "sklearn/feature_selection/tests/test_sequential.py": "49e03f6cdf444bed9eac47a80a3fb137128ca99c8600a54c8582a12324835be1",
+            "sklearn/model_selection/_validation.py": "f3fbce9fb0d4b43f523c0af785dfb1689523a4fe31931d4e2936f89d4a553d9b"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-11510",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "6cb783c0024a873722952a67ebb9f41771c8eb6d",
+      "url": "https://codeload.github.com/sphinx-doc/sphinx/tar.gz/6cb783c0024a873722952a67ebb9f41771c8eb6d",
+      "archive_sha256": "4b5f6eb4b6164ee08a3c395d80c68c839a9202e3fcc7e060992456b091163101",
+      "archive_bytes": 7035914,
+      "acquired_at_utc": "2026-11-05T10:19:20.832730+00:00",
+      "environment_key": "sphinx_7",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_7/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "0d9c5b5e39024ed66a1bb1d6edc192379c40d1100a762594823afd16e85b7edc",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/roots/test-directive-include/baz/baz.rst...\nChecking patch tests/roots/test-directive-include/conf.py...\nChecking patch tests/roots/test-directive-include/foo.rst...\nChecking patch tests/roots/test-directive-include/text.txt...\nChecking patch tests/test_directive_other.py...\nApplied patch tests/roots/test-directive-include/baz/baz.rst cleanly.\nApplied patch tests/roots/test-directive-include/conf.py cleanly.\nApplied patch tests/roots/test-directive-include/foo.rst cleanly.\nApplied patch tests/roots/test-directive-include/text.txt cleanly.\nApplied patch tests/test_directive_other.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/directives/other.py": "14ae883ff74d93574f23406b1963a73bcc1ad4d96b61cf5b7338cc5f28f257fb",
+            "sphinx/environment/__init__.py": "cd639cc0f357e07da4044ef4836ca2d63b352efeda01a8999f3c07331eb8d09f",
+            "tests/roots/test-directive-include/baz/baz.rst": "bf8fc6f405883a6303b85bcfec9f0723c9116c2b660b61eec8162af48c1d836b",
+            "tests/roots/test-directive-include/conf.py": "5c30ce77dcc6300564b0b7d2cadafccd028b53fe3bd8a0e6e4a752e54bcc1429",
+            "tests/roots/test-directive-include/foo.rst": "60180e015b278283893c6320f2ac35fe95779f3ddd5f9bc215a2cb551258f194",
+            "tests/roots/test-directive-include/text.txt": "7990670def67ca1fd3d53fd81ffe088b52a08cc63e799a96afdd813fa76a38cb",
+            "tests/test_directive_other.py": "957b78d6261e1820914f637e8f2ceea3ae273cbb4baf95bb6b574b9497340d8d"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "0266c7715cbf59e8ccd9dff064221d58cf186bee9ad4b734f172bb20badf01c8",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sphinx/environment/__init__.py...\nApplied patch sphinx/environment/__init__.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "0d9c5b5e39024ed66a1bb1d6edc192379c40d1100a762594823afd16e85b7edc",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/roots/test-directive-include/baz/baz.rst...\nChecking patch tests/roots/test-directive-include/conf.py...\nChecking patch tests/roots/test-directive-include/foo.rst...\nChecking patch tests/roots/test-directive-include/text.txt...\nChecking patch tests/test_directive_other.py...\nApplied patch tests/roots/test-directive-include/baz/baz.rst cleanly.\nApplied patch tests/roots/test-directive-include/conf.py cleanly.\nApplied patch tests/roots/test-directive-include/foo.rst cleanly.\nApplied patch tests/roots/test-directive-include/text.txt cleanly.\nApplied patch tests/test_directive_other.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/directives/other.py": "14ae883ff74d93574f23406b1963a73bcc1ad4d96b61cf5b7338cc5f28f257fb",
+            "sphinx/environment/__init__.py": "592ee53bcca34b3dada1deb8017f24d3887bbb48fa12139edc3dea0ef02e6971",
+            "tests/roots/test-directive-include/baz/baz.rst": "bf8fc6f405883a6303b85bcfec9f0723c9116c2b660b61eec8162af48c1d836b",
+            "tests/roots/test-directive-include/conf.py": "5c30ce77dcc6300564b0b7d2cadafccd028b53fe3bd8a0e6e4a752e54bcc1429",
+            "tests/roots/test-directive-include/foo.rst": "60180e015b278283893c6320f2ac35fe95779f3ddd5f9bc215a2cb551258f194",
+            "tests/roots/test-directive-include/text.txt": "7990670def67ca1fd3d53fd81ffe088b52a08cc63e799a96afdd813fa76a38cb",
+            "tests/test_directive_other.py": "957b78d6261e1820914f637e8f2ceea3ae273cbb4baf95bb6b574b9497340d8d"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "554906bfbf4a026448678d65fd8eba10ad1e4babbfd943a110238c306c5a4808",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sphinx/directives/other.py...\nApplied patch sphinx/directives/other.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "0d9c5b5e39024ed66a1bb1d6edc192379c40d1100a762594823afd16e85b7edc",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/roots/test-directive-include/baz/baz.rst...\nChecking patch tests/roots/test-directive-include/conf.py...\nChecking patch tests/roots/test-directive-include/foo.rst...\nChecking patch tests/roots/test-directive-include/text.txt...\nChecking patch tests/test_directive_other.py...\nApplied patch tests/roots/test-directive-include/baz/baz.rst cleanly.\nApplied patch tests/roots/test-directive-include/conf.py cleanly.\nApplied patch tests/roots/test-directive-include/foo.rst cleanly.\nApplied patch tests/roots/test-directive-include/text.txt cleanly.\nApplied patch tests/test_directive_other.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/directives/other.py": "3949102ba9a90a3193006815847185ff8f8804566c214e8f235bbc7236df8dd0",
+            "sphinx/environment/__init__.py": "cd639cc0f357e07da4044ef4836ca2d63b352efeda01a8999f3c07331eb8d09f",
+            "tests/roots/test-directive-include/baz/baz.rst": "bf8fc6f405883a6303b85bcfec9f0723c9116c2b660b61eec8162af48c1d836b",
+            "tests/roots/test-directive-include/conf.py": "5c30ce77dcc6300564b0b7d2cadafccd028b53fe3bd8a0e6e4a752e54bcc1429",
+            "tests/roots/test-directive-include/foo.rst": "60180e015b278283893c6320f2ac35fe95779f3ddd5f9bc215a2cb551258f194",
+            "tests/roots/test-directive-include/text.txt": "7990670def67ca1fd3d53fd81ffe088b52a08cc63e799a96afdd813fa76a38cb",
+            "tests/test_directive_other.py": "957b78d6261e1820914f637e8f2ceea3ae273cbb4baf95bb6b574b9497340d8d"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9461",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "939c7bb7ff7c53a4d27df067cea637540f0e1dad",
+      "url": "https://codeload.github.com/sphinx-doc/sphinx/tar.gz/939c7bb7ff7c53a4d27df067cea637540f0e1dad",
+      "archive_sha256": "14a3297d92305f59ceabb3478dd63b9b78bb8ebd2a002dc520db425291a653ac",
+      "archive_bytes": 6365526,
+      "acquired_at_utc": "2026-11-05T10:19:21.914903+00:00",
+      "environment_key": "sphinx_4",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "010d231b9ad23cca12d162a5ae8403414f4b7377c59bc22628f98aa7ad8eeb75",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/roots/test-ext-autodoc/target/properties.py...\nChecking patch tests/test_domain_py.py...\nChecking patch tests/test_ext_autodoc_autoclass.py...\nChecking patch tests/test_ext_autodoc_autoproperty.py...\nApplied patch tests/roots/test-ext-autodoc/target/properties.py cleanly.\nApplied patch tests/test_domain_py.py cleanly.\nApplied patch tests/test_ext_autodoc_autoclass.py cleanly.\nApplied patch tests/test_ext_autodoc_autoproperty.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/domains/python.py": "a35fd94bc68a918c989c669e529428364028efea10bd2eb760b5a9b73f06b710",
+            "sphinx/ext/autodoc/__init__.py": "2ef37a51af9a3c0e9fe62d1376d8b700c401d33baa4fdc8dac663d85e7ac6813",
+            "sphinx/util/inspect.py": "44a95bf128c83dfb9755a4239f499f2ae41d2c84ac9fdddf011e26b091ff6b7f",
+            "tests/roots/test-ext-autodoc/target/properties.py": "5aab91c497a0dc9f83823c751c69ded3c7ec1be20e8390f6baec980d82e208e3",
+            "tests/test_domain_py.py": "756b3be336b553bda8e65dfd8ea2be5f6196d2527c1747f71b9cd49a3c6815b6",
+            "tests/test_ext_autodoc_autoclass.py": "36e3e4a3b6561f5fe21123ed3aa2c194437112a847ac56b298d254013084291f",
+            "tests/test_ext_autodoc_autoproperty.py": "f68ce0efd35639ef5e5a77e32cc5caa2d2247e65a7b690e0d28584333b0d5c5b"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "f8bdb4cd658b5c42911e0322062b85475cd273c45af7a17493b6d7fc34f35240",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sphinx/ext/autodoc/__init__.py...\nApplied patch sphinx/ext/autodoc/__init__.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "010d231b9ad23cca12d162a5ae8403414f4b7377c59bc22628f98aa7ad8eeb75",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/roots/test-ext-autodoc/target/properties.py...\nChecking patch tests/test_domain_py.py...\nChecking patch tests/test_ext_autodoc_autoclass.py...\nChecking patch tests/test_ext_autodoc_autoproperty.py...\nApplied patch tests/roots/test-ext-autodoc/target/properties.py cleanly.\nApplied patch tests/test_domain_py.py cleanly.\nApplied patch tests/test_ext_autodoc_autoclass.py cleanly.\nApplied patch tests/test_ext_autodoc_autoproperty.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/domains/python.py": "a35fd94bc68a918c989c669e529428364028efea10bd2eb760b5a9b73f06b710",
+            "sphinx/ext/autodoc/__init__.py": "7f2ac8c959a0e379b31b90791ec029491a107e355fa2f0a65d79b4070c74042b",
+            "sphinx/util/inspect.py": "44a95bf128c83dfb9755a4239f499f2ae41d2c84ac9fdddf011e26b091ff6b7f",
+            "tests/roots/test-ext-autodoc/target/properties.py": "5aab91c497a0dc9f83823c751c69ded3c7ec1be20e8390f6baec980d82e208e3",
+            "tests/test_domain_py.py": "756b3be336b553bda8e65dfd8ea2be5f6196d2527c1747f71b9cd49a3c6815b6",
+            "tests/test_ext_autodoc_autoclass.py": "36e3e4a3b6561f5fe21123ed3aa2c194437112a847ac56b298d254013084291f",
+            "tests/test_ext_autodoc_autoproperty.py": "f68ce0efd35639ef5e5a77e32cc5caa2d2247e65a7b690e0d28584333b0d5c5b"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "7d1179fe5a6a26c54c163617df88820365178e66ae74d95505c93586deaf7b27",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sphinx/domains/python.py...\nChecking patch sphinx/ext/autodoc/__init__.py...\nChecking patch sphinx/util/inspect.py...\nApplied patch sphinx/domains/python.py cleanly.\nApplied patch sphinx/ext/autodoc/__init__.py cleanly.\nApplied patch sphinx/util/inspect.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "010d231b9ad23cca12d162a5ae8403414f4b7377c59bc22628f98aa7ad8eeb75",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/roots/test-ext-autodoc/target/properties.py...\nChecking patch tests/test_domain_py.py...\nChecking patch tests/test_ext_autodoc_autoclass.py...\nChecking patch tests/test_ext_autodoc_autoproperty.py...\nApplied patch tests/roots/test-ext-autodoc/target/properties.py cleanly.\nApplied patch tests/test_domain_py.py cleanly.\nApplied patch tests/test_ext_autodoc_autoclass.py cleanly.\nApplied patch tests/test_ext_autodoc_autoproperty.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/domains/python.py": "0993c303f07dcfec43397b2966d91630eb44f10bd6b91ac7ecf807bc73757e71",
+            "sphinx/ext/autodoc/__init__.py": "f071c87395f0ca8b69ee6b8cbb9eca15e9d99342c7f603a7880ec3af5b439fe5",
+            "sphinx/util/inspect.py": "a936f6c322fd9770004a0b86d888b23d43639ac18918847aa7c179b97aa31653",
+            "tests/roots/test-ext-autodoc/target/properties.py": "5aab91c497a0dc9f83823c751c69ded3c7ec1be20e8390f6baec980d82e208e3",
+            "tests/test_domain_py.py": "756b3be336b553bda8e65dfd8ea2be5f6196d2527c1747f71b9cd49a3c6815b6",
+            "tests/test_ext_autodoc_autoclass.py": "36e3e4a3b6561f5fe21123ed3aa2c194437112a847ac56b298d254013084291f",
+            "tests/test_ext_autodoc_autoproperty.py": "f68ce0efd35639ef5e5a77e32cc5caa2d2247e65a7b690e0d28584333b0d5c5b"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9673",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "5fb51fb1467dc5eea7505402c3c5d9b378d3b441",
+      "url": "https://codeload.github.com/sphinx-doc/sphinx/tar.gz/5fb51fb1467dc5eea7505402c3c5d9b378d3b441",
+      "archive_sha256": "d7d8095b22febf977317d275bab760d219d785e05f7451e8bd28428964d368b1",
+      "archive_bytes": 6495551,
+      "acquired_at_utc": "2026-11-05T10:19:25.843495+00:00",
+      "environment_key": "sphinx_4",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/sphinx_4/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "21b72d7331f5b6583f01b9e4515caade97a3e06b6d742b4a9aeb6c5c7e588ddb",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/test_ext_autodoc_configs.py...\nApplied patch tests/test_ext_autodoc_configs.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/ext/autodoc/typehints.py": "6aef06f1d2fa387120cd20ecc64cddcf68e0546ea3104d51b624bb24002c8db5",
+            "tests/test_ext_autodoc_configs.py": "964bd32dd0b3ce2828c4f728346cfddcc71db66759fc1829bcf201d10a6a8324"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "9da97344c5fae69caf93bc16b5cf902a048c8cf79a268540788ca1401a1e97e2",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sphinx/ext/autodoc/typehints.py...\nApplied patch sphinx/ext/autodoc/typehints.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "21b72d7331f5b6583f01b9e4515caade97a3e06b6d742b4a9aeb6c5c7e588ddb",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/test_ext_autodoc_configs.py...\nApplied patch tests/test_ext_autodoc_configs.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/ext/autodoc/typehints.py": "4d40e216f6b11ec58764d707fcc95e38a95f2010e0e2cfbde13cf6f84ae77327",
+            "tests/test_ext_autodoc_configs.py": "964bd32dd0b3ce2828c4f728346cfddcc71db66759fc1829bcf201d10a6a8324"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "991eff8c26f286c98ed4dfa1c7151513c6b9f0033447f97bcebb20e745196c72",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sphinx/ext/autodoc/typehints.py...\nApplied patch sphinx/ext/autodoc/typehints.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "21b72d7331f5b6583f01b9e4515caade97a3e06b6d742b4a9aeb6c5c7e588ddb",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch tests/test_ext_autodoc_configs.py...\nApplied patch tests/test_ext_autodoc_configs.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sphinx/ext/autodoc/typehints.py": "279b95a570593aa7b28c1054120e2bc9c1659320a99389a8c69d77ac0d1a6d09",
+            "tests/test_ext_autodoc_configs.py": "964bd32dd0b3ce2828c4f728346cfddcc71db66759fc1829bcf201d10a6a8324"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-13031",
+      "repo": "sympy/sympy",
+      "base_commit": "2dfa7457f20ee187fbb09b5b6a1631da4458388c",
+      "url": "https://codeload.github.com/sympy/sympy/tar.gz/2dfa7457f20ee187fbb09b5b6a1631da4458388c",
+      "archive_sha256": "0902e481b3ba8871f6e6ac69316f00e956298be4149ecb2d384b660c990fb7c9",
+      "archive_bytes": 4965047,
+      "acquired_at_utc": "2026-11-05T10:19:27.948460+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "faa01e288c166b11d427d443f8ab6853dae3e52fe43aa3f1ac8048e3addb598e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/tests/test_sparse.py...\nApplied patch sympy/matrices/tests/test_sparse.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/matrices/expressions/blockmatrix.py": "f1adaeefb0ef068c3461aa89d3782c0c9d4b48ebfc1544fe855f71d1323451eb",
+            "sympy/matrices/sparse.py": "19da4474b7728b60fa1fde74ba01355bd9dac2f0fa74d7e6e6a924965d6c0368",
+            "sympy/matrices/tests/test_sparse.py": "fa8edfe4f24054375feb24b4aa01d34c6713a729628893dc504f70d7eeb07601"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "a1e2f96aee9ac1bafe9fc3d50fbcba7f656b8db34043f93c3723fa95d3fd143b",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/expressions/blockmatrix.py...\nApplied patch sympy/matrices/expressions/blockmatrix.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "faa01e288c166b11d427d443f8ab6853dae3e52fe43aa3f1ac8048e3addb598e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/tests/test_sparse.py...\nApplied patch sympy/matrices/tests/test_sparse.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/matrices/expressions/blockmatrix.py": "32ea1736f949e37f1092ad950d2a190086af1f8e9a1946bc406e54a1ceef0151",
+            "sympy/matrices/sparse.py": "19da4474b7728b60fa1fde74ba01355bd9dac2f0fa74d7e6e6a924965d6c0368",
+            "sympy/matrices/tests/test_sparse.py": "fa8edfe4f24054375feb24b4aa01d34c6713a729628893dc504f70d7eeb07601"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "a3b080cca8903951b4fdaa9df27df3f50269b170f4f4b726733c6a3d782efc9d",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/sparse.py...\nApplied patch sympy/matrices/sparse.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "faa01e288c166b11d427d443f8ab6853dae3e52fe43aa3f1ac8048e3addb598e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/tests/test_sparse.py...\nApplied patch sympy/matrices/tests/test_sparse.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/matrices/expressions/blockmatrix.py": "f1adaeefb0ef068c3461aa89d3782c0c9d4b48ebfc1544fe855f71d1323451eb",
+            "sympy/matrices/sparse.py": "09de4c1efc240e811c868a150a53790bc07b29272cddcc6e42c41d700f90e043",
+            "sympy/matrices/tests/test_sparse.py": "fa8edfe4f24054375feb24b4aa01d34c6713a729628893dc504f70d7eeb07601"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-14248",
+      "repo": "sympy/sympy",
+      "base_commit": "9986b38181cdd556a3f3411e553864f11912244e",
+      "url": "https://codeload.github.com/sympy/sympy/tar.gz/9986b38181cdd556a3f3411e553864f11912244e",
+      "archive_sha256": "1c0aec35806a63c3198334090f2baad4480d77dce2f17d23e6a18d704237af7e",
+      "archive_bytes": 5737240,
+      "acquired_at_utc": "2026-11-05T10:19:26.036749+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "477f70dcbc971aac43652ad84f83d73289d84ac77973c95698033121d1eb0dff",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/pretty/tests/test_pretty.py...\nChecking patch sympy/printing/tests/test_ccode.py...\nChecking patch sympy/printing/tests/test_fcode.py...\nChecking patch sympy/printing/tests/test_jscode.py...\nChecking patch sympy/printing/tests/test_julia.py...\nChecking patch sympy/printing/tests/test_latex.py...\nChecking patch sympy/printing/tests/test_octave.py...\nChecking patch sympy/printing/tests/test_rcode.py...\nChecking patch sympy/printing/tests/test_str.py...\nApplied patch sympy/printing/pretty/tests/test_pretty.py cleanly.\nApplied patch sympy/printing/tests/test_ccode.py cleanly.\nApplied patch sympy/printing/tests/test_fcode.py cleanly.\nApplied patch sympy/printing/tests/test_jscode.py cleanly.\nApplied patch sympy/printing/tests/test_julia.py cleanly.\nApplied patch sympy/printing/tests/test_latex.py cleanly.\nApplied patch sympy/printing/tests/test_octave.py cleanly.\nApplied patch sympy/printing/tests/test_rcode.py cleanly.\nApplied patch sympy/printing/tests/test_str.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/printing/latex.py": "2712dd8beb8c19b2570a86f034a1c054d4bedb90941eb30492cd1096ba5b5dbc",
+            "sympy/printing/pretty/pretty.py": "12eadf6dee0d2ff419e137e277842e90eabdc1472373292ef92b734a7a027df4",
+            "sympy/printing/pretty/tests/test_pretty.py": "638e00a14327e4c6807827a0a623c7bb61d7d97f187119fbb9b47fa1e1b55fd1",
+            "sympy/printing/str.py": "c5a46b3e9f6b0faebbe0532f65fd0f6b0ad3ea034ad03d4bfe0f8522a9519e04",
+            "sympy/printing/tests/test_ccode.py": "6cd3c1a0c9bf0880358aa6feecbf9589fd51b949dccf86865d5f22cf01ae29a2",
+            "sympy/printing/tests/test_fcode.py": "f4dc3f1cfbccf8a9978f6e1bc6eeb9115c24a068006791e743c5cde91a1520e9",
+            "sympy/printing/tests/test_jscode.py": "92ca81df61f44791ebc00a0ff17b99afbef8c558f618d397f55c84b8fa1bec38",
+            "sympy/printing/tests/test_julia.py": "435cf88002c6d1e5bcfe6abb56b25dfbc7eb02769fd167615180ced9436c5b92",
+            "sympy/printing/tests/test_latex.py": "4d98251bbc5b42919a721f42318d5096d87feeec8706d5a975720d6f927101b7",
+            "sympy/printing/tests/test_octave.py": "81cc9ea952b95d790f3567c2d6488a558b2bc94b117ab0f10a7eba5630ab9baf",
+            "sympy/printing/tests/test_rcode.py": "88a1d68171cf1b2e6433f440d926f31c8ca28a911fa680b316e3c63b5bb504b3",
+            "sympy/printing/tests/test_str.py": "1a2799663a2ad8459295840257e9936069ae06c547ca77dfca7f162adb2a9a2f"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "5699cce974d2d44502a217bd2ddbca4b4394320a04d986341b537f0cadcecf13",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/str.py...\nApplied patch sympy/printing/str.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "477f70dcbc971aac43652ad84f83d73289d84ac77973c95698033121d1eb0dff",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/pretty/tests/test_pretty.py...\nChecking patch sympy/printing/tests/test_ccode.py...\nChecking patch sympy/printing/tests/test_fcode.py...\nChecking patch sympy/printing/tests/test_jscode.py...\nChecking patch sympy/printing/tests/test_julia.py...\nChecking patch sympy/printing/tests/test_latex.py...\nChecking patch sympy/printing/tests/test_octave.py...\nChecking patch sympy/printing/tests/test_rcode.py...\nChecking patch sympy/printing/tests/test_str.py...\nApplied patch sympy/printing/pretty/tests/test_pretty.py cleanly.\nApplied patch sympy/printing/tests/test_ccode.py cleanly.\nApplied patch sympy/printing/tests/test_fcode.py cleanly.\nApplied patch sympy/printing/tests/test_jscode.py cleanly.\nApplied patch sympy/printing/tests/test_julia.py cleanly.\nApplied patch sympy/printing/tests/test_latex.py cleanly.\nApplied patch sympy/printing/tests/test_octave.py cleanly.\nApplied patch sympy/printing/tests/test_rcode.py cleanly.\nApplied patch sympy/printing/tests/test_str.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/printing/latex.py": "2712dd8beb8c19b2570a86f034a1c054d4bedb90941eb30492cd1096ba5b5dbc",
+            "sympy/printing/pretty/pretty.py": "12eadf6dee0d2ff419e137e277842e90eabdc1472373292ef92b734a7a027df4",
+            "sympy/printing/pretty/tests/test_pretty.py": "638e00a14327e4c6807827a0a623c7bb61d7d97f187119fbb9b47fa1e1b55fd1",
+            "sympy/printing/str.py": "e8f91d20fa61749f16c45b0211c8c7e8b3b1286971f7f9c4e138a280c8c744c6",
+            "sympy/printing/tests/test_ccode.py": "6cd3c1a0c9bf0880358aa6feecbf9589fd51b949dccf86865d5f22cf01ae29a2",
+            "sympy/printing/tests/test_fcode.py": "f4dc3f1cfbccf8a9978f6e1bc6eeb9115c24a068006791e743c5cde91a1520e9",
+            "sympy/printing/tests/test_jscode.py": "92ca81df61f44791ebc00a0ff17b99afbef8c558f618d397f55c84b8fa1bec38",
+            "sympy/printing/tests/test_julia.py": "435cf88002c6d1e5bcfe6abb56b25dfbc7eb02769fd167615180ced9436c5b92",
+            "sympy/printing/tests/test_latex.py": "4d98251bbc5b42919a721f42318d5096d87feeec8706d5a975720d6f927101b7",
+            "sympy/printing/tests/test_octave.py": "81cc9ea952b95d790f3567c2d6488a558b2bc94b117ab0f10a7eba5630ab9baf",
+            "sympy/printing/tests/test_rcode.py": "88a1d68171cf1b2e6433f440d926f31c8ca28a911fa680b316e3c63b5bb504b3",
+            "sympy/printing/tests/test_str.py": "1a2799663a2ad8459295840257e9936069ae06c547ca77dfca7f162adb2a9a2f"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "361928d537fb11a0cbf89d481fa7f8132d1580a18e5301b9c2be8678ddf15522",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/latex.py...\nChecking patch sympy/printing/pretty/pretty.py...\nChecking patch sympy/printing/str.py...\nApplied patch sympy/printing/latex.py cleanly.\nApplied patch sympy/printing/pretty/pretty.py cleanly.\nApplied patch sympy/printing/str.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "477f70dcbc971aac43652ad84f83d73289d84ac77973c95698033121d1eb0dff",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/pretty/tests/test_pretty.py...\nChecking patch sympy/printing/tests/test_ccode.py...\nChecking patch sympy/printing/tests/test_fcode.py...\nChecking patch sympy/printing/tests/test_jscode.py...\nChecking patch sympy/printing/tests/test_julia.py...\nChecking patch sympy/printing/tests/test_latex.py...\nChecking patch sympy/printing/tests/test_octave.py...\nChecking patch sympy/printing/tests/test_rcode.py...\nChecking patch sympy/printing/tests/test_str.py...\nApplied patch sympy/printing/pretty/tests/test_pretty.py cleanly.\nApplied patch sympy/printing/tests/test_ccode.py cleanly.\nApplied patch sympy/printing/tests/test_fcode.py cleanly.\nApplied patch sympy/printing/tests/test_jscode.py cleanly.\nApplied patch sympy/printing/tests/test_julia.py cleanly.\nApplied patch sympy/printing/tests/test_latex.py cleanly.\nApplied patch sympy/printing/tests/test_octave.py cleanly.\nApplied patch sympy/printing/tests/test_rcode.py cleanly.\nApplied patch sympy/printing/tests/test_str.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/printing/latex.py": "0f44bd6d785bce9f78497c4eed786a72e44e6ddd19a64f87640bf8326bfdfa3b",
+            "sympy/printing/pretty/pretty.py": "1d9a7a84a010f8f5a8caeb330ca5ef97502786142268253648a58c29f091a631",
+            "sympy/printing/pretty/tests/test_pretty.py": "638e00a14327e4c6807827a0a623c7bb61d7d97f187119fbb9b47fa1e1b55fd1",
+            "sympy/printing/str.py": "67a22b2fc36911b5c4c25310d780e2de34d5237eba212857e4c222b98833ddeb",
+            "sympy/printing/tests/test_ccode.py": "6cd3c1a0c9bf0880358aa6feecbf9589fd51b949dccf86865d5f22cf01ae29a2",
+            "sympy/printing/tests/test_fcode.py": "f4dc3f1cfbccf8a9978f6e1bc6eeb9115c24a068006791e743c5cde91a1520e9",
+            "sympy/printing/tests/test_jscode.py": "92ca81df61f44791ebc00a0ff17b99afbef8c558f618d397f55c84b8fa1bec38",
+            "sympy/printing/tests/test_julia.py": "435cf88002c6d1e5bcfe6abb56b25dfbc7eb02769fd167615180ced9436c5b92",
+            "sympy/printing/tests/test_latex.py": "4d98251bbc5b42919a721f42318d5096d87feeec8706d5a975720d6f927101b7",
+            "sympy/printing/tests/test_octave.py": "81cc9ea952b95d790f3567c2d6488a558b2bc94b117ab0f10a7eba5630ab9baf",
+            "sympy/printing/tests/test_rcode.py": "88a1d68171cf1b2e6433f440d926f31c8ca28a911fa680b316e3c63b5bb504b3",
+            "sympy/printing/tests/test_str.py": "1a2799663a2ad8459295840257e9936069ae06c547ca77dfca7f162adb2a9a2f"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-16597",
+      "repo": "sympy/sympy",
+      "base_commit": "6fd65310fa3167b9626c38a5487e171ca407d988",
+      "url": "https://codeload.github.com/sympy/sympy/tar.gz/6fd65310fa3167b9626c38a5487e171ca407d988",
+      "archive_sha256": "f456b3e24117a512a154f1c13f69c21532fb32d02ebe118e8ec0e2bcb42cac6d",
+      "archive_bytes": 6553527,
+      "acquired_at_utc": "2026-11-05T10:19:35.096728+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "aa1263270ae0b8e7befe02678ac8ace76ea44779054690595982de41a56956e9",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/core/tests/test_assumptions.py...\nChecking patch sympy/functions/elementary/tests/test_miscellaneous.py...\nApplied patch sympy/core/tests/test_assumptions.py cleanly.\nApplied patch sympy/functions/elementary/tests/test_miscellaneous.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/assumptions/ask.py": "d83f930bf7dbf35db9059091511ae2fd56e648f85e500db0730de1856667a4ad",
+            "sympy/assumptions/ask_generated.py": "d63d925413ce5f1e46091616e4bd1fb768923b92ab31d64e9e0844bcd4abbee6",
+            "sympy/core/assumptions.py": "a3197fc31fa2be05994b7a6dec9d561566b67654ca986482baff6014817899a7",
+            "sympy/core/power.py": "a9a8986f22dc86f71c48cbed71c3bceb47a11c9bdb4e5bbd8f8daaea4c6a9063",
+            "sympy/core/tests/test_assumptions.py": "ce3d0211e911d9be2cc4f67bf6b9205aab53111976b340ae3d52529189926679",
+            "sympy/functions/elementary/tests/test_miscellaneous.py": "b71efa4d81948a7e1a186be0703fe6278d06fb5878b9ddd96b3938ebe6b915b6",
+            "sympy/printing/tree.py": "1ad13acb27ae10cbec056cb1caecd536fa246e058c82eb36e55bcab73ec97bba",
+            "sympy/tensor/indexed.py": "4c85a4a751a41241d57c8a4b6be296236d1f82927011f3b019ad4ffa0c71fd0a"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "c7308a77c6e12d3cb341419e4c62479681305d5f2ed92c3a7d7b95eb5dd26073",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/core/assumptions.py...\nApplied patch sympy/core/assumptions.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "aa1263270ae0b8e7befe02678ac8ace76ea44779054690595982de41a56956e9",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/core/tests/test_assumptions.py...\nChecking patch sympy/functions/elementary/tests/test_miscellaneous.py...\nApplied patch sympy/core/tests/test_assumptions.py cleanly.\nApplied patch sympy/functions/elementary/tests/test_miscellaneous.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/assumptions/ask.py": "d83f930bf7dbf35db9059091511ae2fd56e648f85e500db0730de1856667a4ad",
+            "sympy/assumptions/ask_generated.py": "d63d925413ce5f1e46091616e4bd1fb768923b92ab31d64e9e0844bcd4abbee6",
+            "sympy/core/assumptions.py": "1ade590d9d734f6a7b448177506abe5dd67003260fde2104712eb0aec9b538bd",
+            "sympy/core/power.py": "a9a8986f22dc86f71c48cbed71c3bceb47a11c9bdb4e5bbd8f8daaea4c6a9063",
+            "sympy/core/tests/test_assumptions.py": "ce3d0211e911d9be2cc4f67bf6b9205aab53111976b340ae3d52529189926679",
+            "sympy/functions/elementary/tests/test_miscellaneous.py": "b71efa4d81948a7e1a186be0703fe6278d06fb5878b9ddd96b3938ebe6b915b6",
+            "sympy/printing/tree.py": "1ad13acb27ae10cbec056cb1caecd536fa246e058c82eb36e55bcab73ec97bba",
+            "sympy/tensor/indexed.py": "4c85a4a751a41241d57c8a4b6be296236d1f82927011f3b019ad4ffa0c71fd0a"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "413a90c09ecfd8f552a5db49bb59f74eac1ae550dca0d19aaa1eb11575bea1ac",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/assumptions/ask.py...\nChecking patch sympy/assumptions/ask_generated.py...\nChecking patch sympy/core/assumptions.py...\nChecking patch sympy/core/power.py...\nChecking patch sympy/printing/tree.py...\nChecking patch sympy/tensor/indexed.py...\nApplied patch sympy/assumptions/ask.py cleanly.\nApplied patch sympy/assumptions/ask_generated.py cleanly.\nApplied patch sympy/core/assumptions.py cleanly.\nApplied patch sympy/core/power.py cleanly.\nApplied patch sympy/printing/tree.py cleanly.\nApplied patch sympy/tensor/indexed.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "aa1263270ae0b8e7befe02678ac8ace76ea44779054690595982de41a56956e9",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/core/tests/test_assumptions.py...\nChecking patch sympy/functions/elementary/tests/test_miscellaneous.py...\nApplied patch sympy/core/tests/test_assumptions.py cleanly.\nApplied patch sympy/functions/elementary/tests/test_miscellaneous.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/assumptions/ask.py": "95bdf8a63ba0db1226ee70918028f8fe97f2b36d6b877869502d8e40589b8871",
+            "sympy/assumptions/ask_generated.py": "f808ffabaf0ce83aabb250aa387d571885f62a26e56d19dcbabbd4918cad71f0",
+            "sympy/core/assumptions.py": "df74e3e37a6fea98f49f101786266b9980d1abfb581361eb5ed3ba451dbbfe29",
+            "sympy/core/power.py": "5b80b2c6e01f5d665c9428266977c1c18bc7d2dfe6eb220b4ba50bfebab68d14",
+            "sympy/core/tests/test_assumptions.py": "ce3d0211e911d9be2cc4f67bf6b9205aab53111976b340ae3d52529189926679",
+            "sympy/functions/elementary/tests/test_miscellaneous.py": "b71efa4d81948a7e1a186be0703fe6278d06fb5878b9ddd96b3938ebe6b915b6",
+            "sympy/printing/tree.py": "e2bb497d83ce2485be0d9a2b068d6cf93e02bc99d758bb6ab5abee7025e96d69",
+            "sympy/tensor/indexed.py": "f774726144584e5c84d33d2262d34fe1d3924b84b7c906edc31bca6ac6a62107"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-19346",
+      "repo": "sympy/sympy",
+      "base_commit": "94fb720696f5f5d12bad8bc813699fd696afd2fb",
+      "url": "https://codeload.github.com/sympy/sympy/tar.gz/94fb720696f5f5d12bad8bc813699fd696afd2fb",
+      "archive_sha256": "a98da529c5c1ffd3ab5d10c8fa66336abef42a1a3cf0b7286273026c18c0d1be",
+      "archive_bytes": 6822223,
+      "acquired_at_utc": "2026-11-05T10:19:35.153657+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "793eca615bc60287ca9d13ac542d8ea53aa37f484bde2335d99821a892fc0d76",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/tests/test_repr.py...\nApplied patch sympy/printing/tests/test_repr.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/printing/repr.py": "4d1585bbe69ff76e7f52f6ce488ed18ae95d9dad13488cbc031db0db9b777e36",
+            "sympy/printing/tests/test_repr.py": "ad9475108bbc9200da252978ce39ee877a1bc18dc34d4973e1d99661cac05143"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "7472aaf60a37eb81e0f3d4f54c6868d9204eb80ea82fd9854152a403c6d36eaf",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/repr.py...\nApplied patch sympy/printing/repr.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "793eca615bc60287ca9d13ac542d8ea53aa37f484bde2335d99821a892fc0d76",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/tests/test_repr.py...\nApplied patch sympy/printing/tests/test_repr.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/printing/repr.py": "eaf2ff63fe07a11dfc9d5421b44bd346d5c04844aa07756d158a1b0962f7066a",
+            "sympy/printing/tests/test_repr.py": "ad9475108bbc9200da252978ce39ee877a1bc18dc34d4973e1d99661cac05143"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "65aa70d5de9f1f4f99c3037b267b22928b24a03f3ba42af988bd679c8b1a0a4f",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/repr.py...\nApplied patch sympy/printing/repr.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "793eca615bc60287ca9d13ac542d8ea53aa37f484bde2335d99821a892fc0d76",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/printing/tests/test_repr.py...\nApplied patch sympy/printing/tests/test_repr.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/printing/repr.py": "368a4c2a316e9ebac875acfd57aa1f95c7a2fcca6125f1e639c4ae6da40a01c6",
+            "sympy/printing/tests/test_repr.py": "ad9475108bbc9200da252978ce39ee877a1bc18dc34d4973e1d99661cac05143"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-19954",
+      "repo": "sympy/sympy",
+      "base_commit": "6f54459aa0248bf1467ad12ee6333d8bc924a642",
+      "url": "https://codeload.github.com/sympy/sympy/tar.gz/6f54459aa0248bf1467ad12ee6333d8bc924a642",
+      "archive_sha256": "07eb70f316682561f00de86e7be01ed2b7b491669888f890e56d2ed49c79b28e",
+      "archive_bytes": 6934347,
+      "acquired_at_utc": "2026-11-05T10:19:35.368806+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "18db66be6441019a7c47773ab520097fd97dbc0663b4af38e5e5277545fb9de1",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/combinatorics/tests/test_perm_groups.py...\nApplied patch sympy/combinatorics/tests/test_perm_groups.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/combinatorics/perm_groups.py": "81c582d56a6bd77ee9da7685f0e410e5c1850ba3cd6b27969a20e0ab7914f431",
+            "sympy/combinatorics/tests/test_perm_groups.py": "b98d93a7f3e9bd72b1996489dbaade653a0ca01522860b6776d6e19d6cfc2c6d"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "6591e755aa79f9441cae62c421763fda4dfb9bf097b6f2de1449b41a16a11990",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/combinatorics/perm_groups.py...\nApplied patch sympy/combinatorics/perm_groups.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "18db66be6441019a7c47773ab520097fd97dbc0663b4af38e5e5277545fb9de1",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/combinatorics/tests/test_perm_groups.py...\nApplied patch sympy/combinatorics/tests/test_perm_groups.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/combinatorics/perm_groups.py": "ccb790db220aa5a8ee5428f5bfe0c35c99ced98195d435188a1caba866ceb8bc",
+            "sympy/combinatorics/tests/test_perm_groups.py": "b98d93a7f3e9bd72b1996489dbaade653a0ca01522860b6776d6e19d6cfc2c6d"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "8ffdfd4fbadef599342d225dc72cf7f6ebb19a48ce375b848eb4cee779012992",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/combinatorics/perm_groups.py...\nApplied patch sympy/combinatorics/perm_groups.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "18db66be6441019a7c47773ab520097fd97dbc0663b4af38e5e5277545fb9de1",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/combinatorics/tests/test_perm_groups.py...\nApplied patch sympy/combinatorics/tests/test_perm_groups.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/combinatorics/perm_groups.py": "6268bc9910b926782f79bf7d09981d74331d7cb96596bba6033750a4d467ec6a",
+            "sympy/combinatorics/tests/test_perm_groups.py": "b98d93a7f3e9bd72b1996489dbaade653a0ca01522860b6776d6e19d6cfc2c6d"
+          }
+        }
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-23413",
+      "repo": "sympy/sympy",
+      "base_commit": "10de1a18a0efac0b19b611e40c928250dda688bf",
+      "url": "https://codeload.github.com/sympy/sympy/tar.gz/10de1a18a0efac0b19b611e40c928250dda688bf",
+      "archive_sha256": "817bcc9d7511b6b54efc35146d62b0c5b084b1821d2750ec62279034a7b3d67d",
+      "archive_bytes": 7767471,
+      "acquired_at_utc": "2026-11-05T10:19:36.105666+00:00",
+      "environment_key": "legacy_science",
+      "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/legacy_science/bin/python",
+      "native_build_required": false,
+      "native_build": null,
+      "variants": [
+        {
+          "name": "base",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "official_tests",
+              "sha256": "b9d06681718200bac5fca23916e07681baaf16addd2394dd8f44599b41df6a84",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/tests/test_normalforms.py...\nChecking patch sympy/polys/matrices/tests/test_normalforms.py...\nApplied patch sympy/matrices/tests/test_normalforms.py cleanly.\nApplied patch sympy/polys/matrices/tests/test_normalforms.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/matrices/normalforms.py": "5b51ea2bff32f9a096220c31d886e8cc8eb511fb021db609fd1715ec6a9b5893",
+            "sympy/matrices/tests/test_normalforms.py": "250bc57e9e77316f1c261c4493236fb0c9a1843ec5567700923b86317bb91689",
+            "sympy/polys/matrices/normalforms.py": "3407fa997f63577d0dd2a41bd70292c105a1ba777528fae9da9f5acc7593d560",
+            "sympy/polys/matrices/tests/test_normalforms.py": "ff80a6dc42711e1dd3130176efcb81ed6419c1e15616cc778f4cdcd806458032"
+          }
+        },
+        {
+          "name": "candidate",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "candidate",
+              "sha256": "42f62272151715eed80004d38633d3b486588d0906a75fc2fd4ffcfb24a83af0",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/normalforms.py...\nApplied patch sympy/matrices/normalforms.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "b9d06681718200bac5fca23916e07681baaf16addd2394dd8f44599b41df6a84",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/tests/test_normalforms.py...\nChecking patch sympy/polys/matrices/tests/test_normalforms.py...\nApplied patch sympy/matrices/tests/test_normalforms.py cleanly.\nApplied patch sympy/polys/matrices/tests/test_normalforms.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/matrices/normalforms.py": "ebb2c42ef81e9e22913cfb78dadd6fd2e86deb97d0f1ed58d72842f75da24ce6",
+            "sympy/matrices/tests/test_normalforms.py": "250bc57e9e77316f1c261c4493236fb0c9a1843ec5567700923b86317bb91689",
+            "sympy/polys/matrices/normalforms.py": "3407fa997f63577d0dd2a41bd70292c105a1ba777528fae9da9f5acc7593d560",
+            "sympy/polys/matrices/tests/test_normalforms.py": "ff80a6dc42711e1dd3130176efcb81ed6419c1e15616cc778f4cdcd806458032"
+          }
+        },
+        {
+          "name": "developer",
+          "patches_applied": true,
+          "applications": [
+            {
+              "patch": "developer",
+              "sha256": "fb2076f93a6f3c846ad01c5ed6016131b16d192d3d03b4e4e03b3183e15eeb0e",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/polys/matrices/normalforms.py...\nApplied patch sympy/polys/matrices/normalforms.py cleanly.\n"
+            },
+            {
+              "patch": "official_tests",
+              "sha256": "b9d06681718200bac5fca23916e07681baaf16addd2394dd8f44599b41df6a84",
+              "returncode": 0,
+              "stdout": "",
+              "stderr": "Checking patch sympy/matrices/tests/test_normalforms.py...\nChecking patch sympy/polys/matrices/tests/test_normalforms.py...\nApplied patch sympy/matrices/tests/test_normalforms.py cleanly.\nApplied patch sympy/polys/matrices/tests/test_normalforms.py cleanly.\n"
+            }
+          ],
+          "file_hashes": {
+            "sympy/matrices/normalforms.py": "5b51ea2bff32f9a096220c31d886e8cc8eb511fb021db609fd1715ec6a9b5893",
+            "sympy/matrices/tests/test_normalforms.py": "250bc57e9e77316f1c261c4493236fb0c9a1843ec5567700923b86317bb91689",
+            "sympy/polys/matrices/normalforms.py": "6005024471be6e5935aca9b7027ae48227a53c08a10a21a3b5d6573f23a9e1a2",
+            "sympy/polys/matrices/tests/test_normalforms.py": "ff80a6dc42711e1dd3130176efcb81ed6419c1e15616cc778f4cdcd806458032"
+          }
+        }
+      ]
+    }
+  ]
+}

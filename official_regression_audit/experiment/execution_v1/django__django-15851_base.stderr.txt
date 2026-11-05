@@ -1,0 +1,21 @@
+test_parameters (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase.test_parameters) ... FAIL
+
+======================================================================
+FAIL: test_parameters (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase.test_parameters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15851/base/tests/dbshell/test_postgresql.py", line 155, in test_parameters
+    self.assertEqual(
+AssertionError: Tuples differ: (['psql', 'dbname', '--help'], None) != (['psql', '--help', 'dbname'], None)
+
+First differing element 0:
+['psql', 'dbname', '--help']
+['psql', '--help', 'dbname']
+
+- (['psql', 'dbname', '--help'], None)
++ (['psql', '--help', 'dbname'], None)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

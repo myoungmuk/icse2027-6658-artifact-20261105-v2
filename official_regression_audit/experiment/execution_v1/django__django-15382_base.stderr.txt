@@ -1,0 +1,23 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+test_negated_empty_exists (expressions.tests.ExistsTests.test_negated_empty_exists) ... FAIL
+
+======================================================================
+FAIL: test_negated_empty_exists (expressions.tests.ExistsTests.test_negated_empty_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15382/base/tests/expressions/tests.py", line 1913, in test_negated_empty_exists
+    self.assertSequenceEqual(qs, [manager])
+AssertionError: Sequences differ: <QuerySet []> != [<Manager: Manager object (1)>]
+
+Second sequence contains 1 additional elements.
+First extra element 0:
+<Manager: Manager object (1)>
+
+- <QuerySet []>
++ [<Manager: Manager object (1)>]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...

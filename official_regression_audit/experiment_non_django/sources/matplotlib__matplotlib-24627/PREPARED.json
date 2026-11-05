@@ -1,0 +1,93 @@
+{
+  "instance_id": "matplotlib__matplotlib-24627",
+  "repo": "matplotlib/matplotlib",
+  "base_commit": "9d22ab09d52d279b125d8770967569de070913b2",
+  "url": "https://codeload.github.com/matplotlib/matplotlib/tar.gz/9d22ab09d52d279b125d8770967569de070913b2",
+  "archive_sha256": "3446bdf675888db1718db385aec2af45b977e95882f8273d189a317eae3031b1",
+  "archive_bytes": 35915398,
+  "acquired_at_utc": "2026-11-05T10:19:25.805755+00:00",
+  "environment_key": "modern_science",
+  "python": "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+  "native_build_required": true,
+  "native_build": {
+    "command": [
+      "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+      "setup.py",
+      "build_ext",
+      "--inplace",
+      "-j",
+      "2"
+    ],
+    "returncode": 1,
+    "started_at_utc": "2026-11-05T10:22:25.440673+00:00",
+    "finished_at_utc": "2026-11-05T10:22:26.130190+00:00",
+    "native_extension_files": []
+  },
+  "variants": [
+    {
+      "name": "base",
+      "patches_applied": true,
+      "applications": [
+        {
+          "patch": "official_tests",
+          "sha256": "df8a423b6b2a7977f5b951cfc7e8bfe74afd2c749a09b2e5c288b388264bb23b",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Checking patch lib/matplotlib/tests/test_axes.py...\nHunk #1 succeeded at 8370 (offset 11 lines).\nApplied patch lib/matplotlib/tests/test_axes.py cleanly.\n"
+        }
+      ],
+      "file_hashes": {
+        "lib/matplotlib/axes/_base.py": "a7acf760c98260ba524de07524ff4c263dc2ca91c59fef2acadcc4e4538ebc8d",
+        "lib/matplotlib/tests/test_axes.py": "cb4744993b59ab479f7f6e4f726ba2eb7aa501cde0a4f9e0bf06f1cf7715763d"
+      }
+    },
+    {
+      "name": "candidate",
+      "patches_applied": true,
+      "applications": [
+        {
+          "patch": "candidate",
+          "sha256": "88e5a7b6b59542185abf96b948eaf50cc181e0e7b6bd53df8a5bb7ce57dcb89b",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Checking patch lib/matplotlib/axes/_base.py...\nApplied patch lib/matplotlib/axes/_base.py cleanly.\n"
+        },
+        {
+          "patch": "official_tests",
+          "sha256": "df8a423b6b2a7977f5b951cfc7e8bfe74afd2c749a09b2e5c288b388264bb23b",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Checking patch lib/matplotlib/tests/test_axes.py...\nHunk #1 succeeded at 8370 (offset 11 lines).\nApplied patch lib/matplotlib/tests/test_axes.py cleanly.\n"
+        }
+      ],
+      "file_hashes": {
+        "lib/matplotlib/axes/_base.py": "183e22b6dc687a338b42d3a838b0ac45abe3bf06431fb69a1bd15fc06bffb95c",
+        "lib/matplotlib/tests/test_axes.py": "cb4744993b59ab479f7f6e4f726ba2eb7aa501cde0a4f9e0bf06f1cf7715763d"
+      }
+    },
+    {
+      "name": "developer",
+      "patches_applied": true,
+      "applications": [
+        {
+          "patch": "developer",
+          "sha256": "9f92573bf95ae9b6aa1d4cefca099e425a1fb846c6258293f32a5f38cae5c4f0",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Checking patch lib/matplotlib/axes/_base.py...\nHunk #1 succeeded at 1308 (offset -7 lines).\nApplied patch lib/matplotlib/axes/_base.py cleanly.\n"
+        },
+        {
+          "patch": "official_tests",
+          "sha256": "df8a423b6b2a7977f5b951cfc7e8bfe74afd2c749a09b2e5c288b388264bb23b",
+          "returncode": 0,
+          "stdout": "",
+          "stderr": "Checking patch lib/matplotlib/tests/test_axes.py...\nHunk #1 succeeded at 8370 (offset 11 lines).\nApplied patch lib/matplotlib/tests/test_axes.py cleanly.\n"
+        }
+      ],
+      "file_hashes": {
+        "lib/matplotlib/axes/_base.py": "e4b6277b94fc331d834341ee6b5e2b936492f24a781f00f84043a6042b70c77e",
+        "lib/matplotlib/tests/test_axes.py": "cb4744993b59ab479f7f6e4f726ba2eb7aa501cde0a4f9e0bf06f1cf7715763d"
+      }
+    }
+  ]
+}

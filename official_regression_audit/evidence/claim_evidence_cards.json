@@ -1,0 +1,1248 @@
+{
+  "scope": "Evidence-linked author technical notes, not independent human ratings or complete claim adjudication. No rationale-accuracy percentage computed.",
+  "cases": [
+    {
+      "instance_id": "django__django-13028",
+      "archived_summary": "The patch is logically a no-op: `hasattr(expression, 'filterable') and not expression.filterable` is semantically identical to the original `not getattr(expression, 'filterable', True)` for the reported case (a model instance whose `filterable` field is False), so it still raises NotSupportedError and does not fix the bug. The correct fix must restrict the check to actual expressions (e.g. gate on `hasattr(expression, 'resolve_expression')`), not on the presence of a `filterable` attribute.",
+      "evidence_note_ko": "filterable 필드 관련 NotSupportedError가 실제 QuerySet에서 재현되어 핵심 기능상 우려를 지지한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "queries.tests.Queries1Tests.test_field_with_filterable",
+          "outcome": "error",
+          "exception_type": "NotSupportedError"
+        },
+        {
+          "test_id": "queries.tests.Queries1Tests.test_ticket8439",
+          "outcome": "error",
+          "exception_type": "NotSupportedError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-13028_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-13028_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-13028_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-13344",
+      "archived_summary": "The patch adds a defensive `iscoroutine` check in `get_response_async`, but this runs AFTER the outermost (first) middleware has already executed its `process_response`, so it does not stop that middleware from receiving a coroutine — the actual reported symptom. It fixes the wrong layer (boundary return value) instead of the root cause in `MiddlewareMixin`, which must await its async inner `get_response` before invoking `process_response`.",
+      "evidence_note_ko": "coroutine middleware 인식 실패가 재현된다. 별도로 주장한 await 순서 전체의 정확성까지 분리 검증한 것은 아니다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "cache.tests.CacheMiddlewareTest.test_constructor",
+          "outcome": "success"
+        },
+        {
+          "test_id": "cache.tests.CacheMiddlewareTest.test_fetch_cache_middleware_constructor",
+          "outcome": "success"
+        },
+        {
+          "test_id": "cache.tests.CacheMiddlewareTest.test_update_cache_middleware_constructor",
+          "outcome": "success"
+        },
+        {
+          "test_id": "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine",
+          "subtest_id": "test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='CacheMiddleware')",
+          "outcome": "subtest_failure",
+          "exception_type": "AssertionError"
+        },
+        {
+          "test_id": "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine",
+          "subtest_id": "test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='FetchFromCacheMiddleware')",
+          "outcome": "subtest_failure",
+          "exception_type": "AssertionError"
+        },
+        {
+          "test_id": "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine",
+          "subtest_id": "test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='SecurityMiddleware')",
+          "outcome": "subtest_failure",
+          "exception_type": "AssertionError"
+        },
+        {
+          "test_id": "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine",
+          "subtest_id": "test_coroutine (deprecation.test_middleware_mixin.MiddlewareMixinTests.test_coroutine) (middleware='UpdateCacheMiddleware')",
+          "outcome": "subtest_failure",
+          "exception_type": "AssertionError"
+        },
+        {
+          "test_id": "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_deprecation",
+          "outcome": "success"
+        },
+        {
+          "test_id": "deprecation.test_middleware_mixin.MiddlewareMixinTests.test_passing_explicit_none",
+          "outcome": "success"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-13344_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-13344_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-13344_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-13512",
+      "archived_summary": "Patch adds ensure_ascii=False to json.dumps(not self.is_required) in AutocompleteMixin, but that argument is a boolean whose serialization never contains non-ASCII characters, so the change has zero effect on the reported JSONField unicode display bug. Wrong location entirely — real fix belongs in JSONField.prepare_value (django/forms/fields.py), not the admin autocomplete widget.",
+      "evidence_note_ko": "JSON Unicode 인코딩 기대값과 불일치한다. 잘못된 수정 위치 때문에 원 문제가 남는다는 설명과 부합한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "admin_utils.tests.UtilsTests.test_json_display_for_field",
+          "subtest_id": "test_json_display_for_field (admin_utils.tests.UtilsTests.test_json_display_for_field) (value={'a': '你好 世界'})",
+          "outcome": "subtest_failure",
+          "exception_type": "AssertionError"
+        },
+        {
+          "test_id": "admin_utils.tests.UtilsTests.test_label_for_field",
+          "outcome": "success"
+        },
+        {
+          "test_id": "forms_tests.field_tests.test_jsonfield.JSONFieldTest.test_prepare_value",
+          "outcome": "failure",
+          "exception_type": "AssertionError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-13512_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-13512_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-13512_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-13568",
+      "archived_summary": "Fix correctly skips auth.E003/W004 when USERNAME_FIELD has a UniqueConstraint, but the constraint check is too permissive: it accepts partial (conditional) and multi-field constraints that do not actually guarantee single-column uniqueness, allowing the error to be wrongly suppressed.",
+      "evidence_note_ko": "두 테스트 모두 models 미정의 NameError로 중단한다. 저장 설명의 조건부 minor import 경고와 일치한다. 복합·조건부 uniqueness에 관한 더 큰 주장은 이 실행에서 도달하지 않아 동적 검증으로 세지 않는다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique",
+          "outcome": "error",
+          "exception_type": "NameError"
+        },
+        {
+          "test_id": "auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint",
+          "outcome": "error",
+          "exception_type": "NameError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-13568_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-13568_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-13568_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-13807",
+      "archived_summary": "The patch fixes the crash by quoting table names, correctly resolving the reserved-word failure, but it hardcodes MySQL-style backticks instead of using Django's standard SQLite identifier quoting (quote_name / double quotes). It works functionally since SQLite accepts backticks, but is inconsistent with repo convention.",
+      "evidence_note_ko": "예약어 select 부근 SQL syntax error가 난다. minor issue의 unquoted column 지적은 지지된다. 요약의 기능적으로 작동한다는 단정은 이 공식 회귀와 맞지 않는다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "backends.tests.FkConstraintsTests.test_check_constraints_sql_keywords",
+          "outcome": "error",
+          "exception_type": "OperationalError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-13807_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-13807_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-13807_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-14351",
+      "archived_summary": "Patch special-cases `lookups[0] == 'in'` to collapse a MultiColSource into a single column, which resolves the reported subquery-column-count error but breaks legitimate multi-column relations. For composite/ForeignObject `__in` lookups that genuinely need all target columns, selecting only `targets[0]` yields incorrect filtering.",
+      "evidence_note_ko": "sub-select returns 3 columns – expected 1이 남는다. 원 오류를 해결했다는 요약과 맞지 않는다. composite-relation 부작용 전체를 따로 실행하지 않았다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "aggregation_regress.tests.AggregationTests.test_having_subquery_select",
+          "outcome": "error",
+          "exception_type": "OperationalError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-14351_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-14351_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-14351_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-14631",
+      "archived_summary": "The BoundField-based refactor of value access via `bf.value()` is correct, but collapsing the FileField isinstance branch into a single `bf.field.clean(value, bf.initial)` call passes a second positional arg to every field's clean(), which base `Field.clean(self, value)` does not accept (only FileField.clean takes initial). This raises TypeError for all non-FileField fields during validation.",
+      "evidence_note_ko": "Field.clean 호출 인자 수 TypeError가 재현되어 해당 핵심 이유를 지지한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field",
+          "outcome": "error",
+          "exception_type": "TypeError"
+        },
+        {
+          "test_id": "forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds",
+          "outcome": "error",
+          "exception_type": "TypeError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-14631_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-14631_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-14631_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-15127",
+      "archived_summary": "Fix correctly resolves the stale-LEVEL_TAGS bug by resolving tags lazily per access instead of at import time, so @override_settings is honored. Main concern is removal of the module-level LEVEL_TAGS symbol (backward-compat) plus a stray blank line.",
+      "evidence_note_ko": "base.LEVEL_TAGS 부재 AttributeError가 재현되어 호환성 지적을 지지한다. lazy getter의 모든 경로는 검증하지 않았다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "messages_tests.tests.TestLevelTags.test_override_settings_level_tags",
+          "outcome": "error",
+          "exception_type": "AttributeError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-15127_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-15127_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-15127_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-15382",
+      "archived_summary": "Patch inverts the result for the negated case: it sets sql='1=1' on EmptyResultSet but then falls through to the `if self.negated: sql='NOT {}'` wrapper, yielding 'NOT 1=1' (always FALSE) for `~Exists(none())` — the exact reported case, which should evaluate TRUE. This is a correctness bug that leaves the issue effectively unfixed (query still returns empty instead of the name='test' rows).",
+      "evidence_note_ko": "negated empty Exists에서 기대 행 대신 빈 결과가 나와 기능상 지적을 지지한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "expressions.tests.ExistsTests.test_negated_empty_exists",
+          "outcome": "failure",
+          "exception_type": "AssertionError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-15382_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-15382_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-15382_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-15695",
+      "archived_summary": "Patch tries to make backward rename restore the old auto-generated name, but for an unnamed (old_fields) index self.old_name is None and the auto-generated name is never stored in state, so `get_index_by_name(self.old_name)` cannot recover it. Django's actual fix kept backward as a no-op for old_fields and instead made forward re-detect the current index by column via `_constraint_names`, making re-apply idempotent-safe; this approach is the wrong abstraction.",
+      "evidence_note_ko": "No index named None on model Pony가 재현되어 backward index 이름 조회 오류와 부합한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "migrations.test_operations.OperationTests.test_rename_index_unnamed_index",
+          "outcome": "error",
+          "exception_type": "ValueError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-15695_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-15695_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-15695_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-15851",
+      "archived_summary": "The diff swaps `nargs=\"*\"` for `nargs=argparse.REMAINDER` in dbshell.py, but the reported bug (extra parameters placed AFTER the dbname in the psql command) is caused by argument ordering in the PostgreSQL backend client (settings_to_cmd_args_env), not by how dbshell collects parameters. This change does not move parameters before the database name and therefore does not resolve the issue.",
+      "evidence_note_ko": "psql dbname --help 순서가 기대 --help dbname과 달라 정확한 인자 순서 지적을 지지한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase.test_parameters",
+          "outcome": "failure",
+          "exception_type": "AssertionError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-15851_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-15851_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-15851_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-16032",
+      "archived_summary": "Patch resolves the reported `__in` + alias/annotate case by clearing the select clause, but it does so unconditionally for every query compiled through `Query.as_sql` (i.e. all subqueries), not just the `__in` RHS. Clearing column selection this broadly—and as a mutating side effect inside `as_sql`—is an unsafe generalization that a Django maintainer would want scoped to the lookup path.",
+      "evidence_note_ko": "FROM 부근 SQL syntax error가 남아 원 문제 해결이라는 요약과 맞지 않는다. 광범위한 source mutation 위험은 모두 실행하지 않았다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_in_subquery",
+          "outcome": "error",
+          "exception_type": "OperationalError"
+        },
+        {
+          "test_id": "annotations.tests.NonAggregateAnnotationTestCase.test_annotation_and_alias_filter_related_in_subquery",
+          "outcome": "error",
+          "exception_type": "OperationalError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-16032_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-16032_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-16032_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-16493",
+      "archived_summary": "The patch does not fix the reported bug and is logically inverted: it adds a condition to OMIT storage when the callable returns default_storage, whereas the issue requires the callable reference to always be INCLUDED. It also re-invokes the callable during deconstruct, introducing non-determinism and side effects.",
+      "evidence_note_ko": "deconstruction에서 storage KeyError가 재현되어 누락 지적을 지지한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "file_storage.tests.FieldCallableFileStorageTests.test_deconstruction_storage_callable_default",
+          "outcome": "error",
+          "exception_type": "KeyError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-16493_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-16493_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-16493_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-16560",
+      "archived_summary": "Adds violation_error_code plumbing to BaseConstraint and forwards it to the ValidationError raise sites, which resolves the core request. But it omits updating deconstruct() and __eq__, so the new attribute is lost in migration serialization and two constraints differing only by code compare equal.",
+      "evidence_note_ko": "BaseConstraint deconstruction에서 error code 누락이 재현된다. subclass는 violation_error_code 인자를 거부하는 TypeError로 먼저 중단하므로 equality 의미까지 실행 검증했다고 쓰지 않는다. 각 variant의 4개 skip은 통과가 아니다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_eq",
+          "outcome": "error",
+          "exception_type": "TypeError"
+        },
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+          "outcome": "error",
+          "exception_type": "TypeError"
+        },
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+          "outcome": "error",
+          "exception_type": "TypeError"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_eq",
+          "outcome": "error",
+          "exception_type": "TypeError"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+          "outcome": "error",
+          "exception_type": "TypeError"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_validate",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error",
+          "outcome": "success"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+          "outcome": "skip",
+          "reason": "PostgreSQL specific tests"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+          "outcome": "skip",
+          "reason": "PostgreSQL specific tests"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+          "outcome": "skip",
+          "reason": "PostgreSQL specific tests"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition",
+          "outcome": "skip",
+          "reason": "PostgreSQL specific tests"
+        },
+        {
+          "test_id": "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.BaseConstraintTests.test_deconstruction",
+          "outcome": "failure",
+          "exception_type": "AssertionError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-16560_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-16560_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-16560_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-16661",
+      "archived_summary": "The patch changes lookup_allowed()'s final relational check to match ANY prefix of relation_parts instead of the full relation path, which both fails to address the root cause (relation_parts still drops the 'place' hop for FK-as-PK during list-building) and dangerously loosens the DisallowedModelAdminLookup security guard. It edits the wrong location and introduces a permissive regression.",
+      "evidence_note_ko": "lookup_allowed의 기대 True가 False여서 root path 오류를 지지한다. 다른 security prefix 조합 전체는 미실행이다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary",
+          "outcome": "failure",
+          "exception_type": "AssertionError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-16661_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-16661_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-16661_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "django__django-16950",
+      "archived_summary": "Patch sets formfield.initial for UUIDField in formfield_for_dbfield, but this does not address the reported bug (the to_field target `id` is editable=False, so it never gets a formfield in the inline/admin form) and introduces a regression by assigning the NOT_PROVIDED sentinel as initial when a UUIDField has no default. Wrong layer and incorrect approach.",
+      "evidence_note_ko": "inline UUID가 계속 None이어서 핵심 미수정/잘못된 수정 계층 설명을 지지한다. 추가 NOT_PROVIDED 가설은 따로 실행하지 않았다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_ignores_default_pks_on_submit",
+          "outcome": "success"
+        },
+        {
+          "test_id": "model_formsets.test_uuid.InlineFormsetTests.test_inlineformset_factory_nulls_default_pks_alternate_key_relation_data",
+          "outcome": "failure",
+          "exception_type": "AssertionError"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment/execution_v1/django__django-16950_base_tests.json",
+        "candidate": "experiment/execution_v1/django__django-16950_candidate_tests.json",
+        "developer": "experiment/execution_v1/django__django-16950_developer_tests.json"
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "archived_summary": "The warning text says structured arrays will become Columns 'in future versions,' but the code already changes the behavior to Column(data) immediately — a self-contradicting, premature breaking change that ignores the issue's explicit two-stage plan (warn now, change in 5.2).",
+      "evidence_note_ko": "최종 공식 테스트는 FutureWarning을 오류로 취급해 실패한다. 따라서 이 실행 자체가 타입 변경 assertion까지 도달한 증거는 아니다. diff에는 즉시 Column 변환과 미래 시제 경고가 함께 있지만, 경고 없이 실행한 타입·직렬화 별도 실험까지 완료했다고 세지 않는다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "astropy.table.tests.test_mixin::test_ndarray_mixin[True]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "astropy.table.tests.test_mixin::test_ndarray_mixin[False]",
+          "outcome": "failure",
+          "message": "FutureWarning: In future versions, structured ndarray will be added as a Column. Please wrap your data in a Column object to avoid this warning."
+        },
+        {
+          "test_id": "astropy.table.tests.test_table::test_structured_masked_column",
+          "outcome": "failure",
+          "message": "FutureWarning: In future versions, structured ndarray will be added as a Column. Please wrap your data in a Column object to avoid this warning."
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v6/astropy__astropy-13236_base.xml",
+        "candidate": "experiment_non_django/execution_v6/astropy__astropy-13236_candidate.xml",
+        "developer": "experiment_non_django/execution_v6/astropy__astropy-13236_developer.xml"
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24627",
+      "archived_summary": "Patch fixes the reported symptom by nulling `.axes` on children during cla(), but the linked issue explicitly asks to unset BOTH `.axes` and `.figure`, and only `.axes` is handled. Core reported behavior is resolved; the `.figure` half of the request is left incomplete.",
+      "evidence_note_ko": "공식 clear 테스트에서 artist.axes가 여전히 Axes이므로 원 증상을 해결했다는 요약과 맞지 않는다. figure 누락이라는 설명의 모든 문장을 이 단일 실패로 검증하지 않는다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "lib.matplotlib.tests.test_axes::test_cla_clears_children_axes_and_fig",
+          "outcome": "failure",
+          "message": "assert <Axes: > is None\n +  where <Axes: > = <matplotlib.lines.Line2D object at 0x7c0644575e20>.axes"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v4/matplotlib__matplotlib-24627_base.xml",
+        "candidate": "experiment_non_django/execution_v4/matplotlib__matplotlib-24627_candidate.xml",
+        "developer": "experiment_non_django/execution_v4/matplotlib__matplotlib-24627_developer.xml"
+      }
+    },
+    {
+      "instance_id": "psf__requests-6028",
+      "archived_summary": "Patch adds a hardcoded non-standard `Proxy-Connection: keep-alive` header inside `HTTPProxyAuth.__call__`, but the reported bug uses `proxies=` dict where proxy auth flows through `rebuild_proxies`/`proxy_headers`, not `HTTPProxyAuth`, so this code path is not even exercised by the repro. Wrong location, non-standard header, and unconditional injection make it a fragile, likely non-fixing change.",
+      "evidence_note_ko": "공식 URL 테스트에서 사용자 정보가 사라진다. 후보는 HTTPProxyAuth만 변경하므로 원 문제 미수정은 뒷받침된다. 비표준 Proxy-Connection 헤더의 실제 네트워크 영향을 실행한 것은 아니다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "tests.test_utils::test_prepend_scheme_if_needed[example.com/path-http://example.com/path]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "tests.test_utils::test_prepend_scheme_if_needed[//example.com/path-http://example.com/path]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "tests.test_utils::test_prepend_scheme_if_needed[example.com:80-http://example.com:80]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "tests.test_utils::test_prepend_scheme_if_needed[http://user:pass@example.com/path?query-http://user:pass@example.com/path?query]",
+          "outcome": "failure",
+          "message": "AssertionError: assert 'http://examp...om/path?query' == 'http://user:...om/path?query'\n  - http://user:pass@example.com/path?query\n  ?        ----------\n  + http://example.com/path?query"
+        },
+        {
+          "test_id": "tests.test_utils::test_prepend_scheme_if_needed[http://user@example.com/path?query-http://user@example.com/path?query]",
+          "outcome": "failure",
+          "message": "AssertionError: assert 'http://examp...om/path?query' == 'http://user@...om/path?query'\n  - http://user@example.com/path?query\n  ?        -----\n  + http://example.com/path?query"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/psf__requests-6028_base.xml",
+        "candidate": "experiment_non_django/execution_v1/psf__requests-6028_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/psf__requests-6028_developer.xml"
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-3095",
+      "archived_summary": "Patch special-cases IndexVariables in Dataset.copy to skip the copy that casts '<U*' to object, but it only touches dataset.py while the issue also reports DataArray.copy (ds.z.copy) casting unicode indices — that path lives in dataarray.py and copies coords via v.copy(deep=deep) directly, so it remains broken. Sharing the original IndexVariable object also skips genuine copying (attrs/encoding aliasing) rather than fixing the root cause in IndexVariable.copy.",
+      "evidence_note_ko": "IndexVariable copy의 Unicode/object dtype 불일치가 재현된다. attrs/encoding aliasing의 모든 후속 영향은 별도 검증하지 않았다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "xarray.tests.test_variable.TestIndexVariable::test_copy[float-True]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_variable.TestIndexVariable::test_copy[float-False]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_variable.TestIndexVariable::test_copy[int-True]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_variable.TestIndexVariable::test_copy[int-False]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_variable.TestIndexVariable::test_copy[str-True]",
+          "outcome": "failure",
+          "message": "AssertionError: assert dtype('<U32') == dtype('O')  +  where dtype('<U32') = <xarray.IndexVariable 'x' (x: 10)>\\narray(['0.0', '0.5', '1.0', '1.5', '2.0', '2.5', '3.0', '3.5', '4.0', '4.5'],\\n      dtype='<U32')\\nAttributes:\\n    foo:      bar.dtype  +  and   dtype('O') = <xarray.IndexVariable 'x' (x: 10)>\\narray(['0.0', '0.5', '1.0', '1.5', '2.0', '2.5', '3.0', '3.5', '4.0', '4.5'],\\n      dtype=object)\\nAttributes:\\n    foo:      bar.dtype"
+        },
+        {
+          "test_id": "xarray.tests.test_variable.TestIndexVariable::test_copy[str-False]",
+          "outcome": "success"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/pydata__xarray-3095_base.xml",
+        "candidate": "experiment_non_django/execution_v1/pydata__xarray-3095_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/pydata__xarray-3095_developer.xml"
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-3305",
+      "archived_summary": "The quantile fix itself is correct and resolves the issue, but the diff also silently modifies sortby, which has no `keep_attrs` parameter in its signature — referencing `keep_attrs` there raises NameError on every sortby call. That is an unrelated, broken change that would break existing behavior.",
+      "evidence_note_ko": "quantile 테스트는 통과하지만 추가한 공식 sortby PASS_TO_PASS는 keep_attrs 미정의 NameError로 실패한다. 이 핵심 collateral regression은 정확히 재현됐다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "xarray.tests.test_dataarray.TestDataArray::test_quantile",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_dataarray.TestDataArray::test_sortby",
+          "outcome": "failure",
+          "message": "NameError: name 'keep_attrs' is not defined"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/pydata__xarray-3305_base.xml",
+        "candidate": "experiment_non_django/execution_v1/pydata__xarray-3305_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/pydata__xarray-3305_developer.xml"
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-6744",
+      "archived_summary": "The center-handling logic is incorrect and fragile: because `starts[:window]=0` is applied before subtracting `offset`, the first windows get negative start indices that rely on Python's negative-index slice emptiness, and the label-reassignment produces duplicated left labels while silently dropping the right-edge windows, so manual iteration still does not reproduce `rolling(center=True).mean()`.",
+      "evidence_note_ko": "centered rolling label assertion이 여섯 parameter에서 실패한다. 설명의 label 오정렬을 지지한다. dask 16개 skip은 실행 통과가 아니다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-1-True-1]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-1-True-2]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-1-False-1]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-1-False-2]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-2-True-1]",
+          "outcome": "failure",
+          "message": "AssertionError: assert <xarray.DataArray 'time' ()>\\narray('2000-01-01T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-01 == <xarray.DataArray 'time' ()>\\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-02\n +  where <xarray.DataArray 'time' ()>\\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-02 = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21>(time=1)\n +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21> = <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-02T00:00:00.000000000',\\n       '...0000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21.isel"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-2-True-2]",
+          "outcome": "failure",
+          "message": "AssertionError: assert <xarray.DataArray 'time' ()>\\narray(0) == <xarray.DataArray 'time' ()>\\narray(1)\n +  where <xarray.DataArray 'time' ()>\\narray(1) = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time>(time=1)\n +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time> = <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time.isel"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-2-False-1]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-2-False-2]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-3-True-1]",
+          "outcome": "failure",
+          "message": "AssertionError: assert <xarray.DataArray 'time' ()>\\narray('2000-01-01T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-01 == <xarray.DataArray 'time' ()>\\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-02\n +  where <xarray.DataArray 'time' ()>\\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-02 = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21>(time=1)\n +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21> = <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-02T00:00:00.000000000',\\n       '...0000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21.isel"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-3-True-2]",
+          "outcome": "failure",
+          "message": "AssertionError: assert <xarray.DataArray 'time' ()>\\narray(0) == <xarray.DataArray 'time' ()>\\narray(1)\n +  where <xarray.DataArray 'time' ()>\\narray(1) = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time>(time=1)\n +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time> = <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time.isel"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-3-False-1]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-3-False-2]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-7-True-1]",
+          "outcome": "failure",
+          "message": "AssertionError: assert <xarray.DataArray 'time' ()>\\narray('2000-01-01T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-01 == <xarray.DataArray 'time' ()>\\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-02\n +  where <xarray.DataArray 'time' ()>\\narray('2000-01-02T00:00:00.000000000', dtype='datetime64[ns]')\\nCoordinates:\\n    time     datetime64[ns] 2000-01-02 = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21>(time=1)\n +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-...000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21> = <xarray.DataArray 'time' (time: 21)>\\narray(['2000-01-01T00:00:00.000000000', '2000-01-02T00:00:00.000000000',\\n       '...0000000'], dtype='datetime64[ns]')\\nCoordinates:\\n  * time     (time) datetime64[ns] 2000-01-01 2000-01-02 ... 2000-01-21.isel"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-7-True-2]",
+          "outcome": "failure",
+          "message": "AssertionError: assert <xarray.DataArray 'time' ()>\\narray(0) == <xarray.DataArray 'time' ()>\\narray(1)\n +  where <xarray.DataArray 'time' ()>\\narray(1) = <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time>(time=1)\n +    where <bound method DataArray.isel of <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time> = <xarray.DataArray 'time' (time: 11)>\\narray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10])\\nDimensions without coordinates: time.isel"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-7-False-1]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[numpy-7-False-2]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-1-True-1]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-1-True-2]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-1-False-1]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-1-False-2]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-2-True-1]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-2-True-2]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-2-False-1]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-2-False-2]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-3-True-1]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-3-True-2]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-3-False-1]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-3-False-2]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-7-True-1]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-7-True-2]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-7-False-1]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        },
+        {
+          "test_id": "xarray.tests.test_rolling.TestDataArrayRolling::test_rolling_iter[dask-7-False-2]",
+          "outcome": "skipped",
+          "message": "requires dask"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/pydata__xarray-6744_base.xml",
+        "candidate": "experiment_non_django/execution_v1/pydata__xarray-6744_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/pydata__xarray-6744_developer.xml"
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-7393",
+      "archived_summary": "The patch replaces factorize's unique levels with `lev.astype(var.dtype)` (the full, non-deduplicated level index) rather than casting the factorized uniques. This works for the reported unique-coordinate case but silently corrupts values or raises for non-unique level coordinates, since `split_labels` (codes) index into deduplicated uniques while `levels` is now the full array.",
+      "evidence_note_ko": "공식 dtype 복구 테스트가 int32→int64, float32→float64로 실패한다. 원 unique-coordinate 사례는 작동한다는 요약은 이 회귀와 맞지 않는다. non-unique 모든 조합을 새로 검증하지 않았다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "xarray.tests.test_indexes::test_restore_dtype_on_multiindexes[int32]",
+          "outcome": "failure",
+          "message": "AssertionError: assert 'int64' == 'int32'\n  - int32\n  + int64"
+        },
+        {
+          "test_id": "xarray.tests.test_indexes::test_restore_dtype_on_multiindexes[float32]",
+          "outcome": "failure",
+          "message": "AssertionError: assert 'float64' == 'float32'\n  - float32\n  + float64"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/pydata__xarray-7393_base.xml",
+        "candidate": "experiment_non_django/execution_v1/pydata__xarray-7393_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/pydata__xarray-7393_developer.xml"
+      }
+    },
+    {
+      "instance_id": "pylint-dev__pylint-8898",
+      "archived_summary": "Fix makes comma-splitting bracket-aware so regexes with commas inside `(){}[]` (e.g. `(foo{1,3})`) survive parsing, resolving the reported crash. But it hand-rolls a fragile bracket counter and drops the whitespace-stripping that `_csv_transformer` previously applied, changing behavior for existing `a, b` style configs.",
+      "evidence_note_ko": "CSV regex 오류 테스트에서 기대 SystemExit가 발생하지 않는다. 핵심 오류가 해결됐다는 요약을 전면 수용할 수 없다. whitespace 회귀의 별도 동적 검증은 아니다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "tests.config.test_config::test_csv_regex_error",
+          "outcome": "failure",
+          "message": "Failed: DID NOT RAISE <class 'SystemExit'>"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/pylint-dev__pylint-8898_base.xml",
+        "candidate": "experiment_non_django/execution_v1/pylint-dev__pylint-8898_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/pylint-dev__pylint-8898_developer.xml"
+      }
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7324",
+      "archived_summary": "The patch modifies `post_mortem` in debugging.py to use `sys.exit` instead of `outcomes.exit`, which is entirely unrelated to the linked issue (interpreter crash on debug builds from `Expression.compile(\"False\")` in the mark expression evaluator). It fixes nothing in the reported bug and replaces pytest's controlled exit mechanism with a raw SystemExit.",
+      "evidence_note_ko": "True/False/None expression에서 ValueError가 남는다. 수정 위치가 무관하여 원 문제를 못 고친다는 설명을 지지한다. debug CPython interpreter crash 자체를 재현한 것은 아니다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[.]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[...]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[:::]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[a:::c]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[a+-b]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[\\u05d0\\u05d1\\u05d2\\u05d3]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[aa\\u05d0\\u05d1\\u05d2\\u05d3cc]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[a[bcd]]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[1234]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[1234abcd]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[1234and]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[notandor]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[not_and_or]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[not[and]or]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[1234+5678]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[123.232]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[True]",
+          "outcome": "failure",
+          "message": "ValueError: Name node can't be used with 'True' constant"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[False]",
+          "outcome": "failure",
+          "message": "ValueError: Name node can't be used with 'False' constant"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[None]",
+          "outcome": "failure",
+          "message": "ValueError: Name node can't be used with 'None' constant"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[if]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[else]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_mark_expression::test_valid_idents[while]",
+          "outcome": "success"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v2/pytest-dev__pytest-7324_base.xml",
+        "candidate": "experiment_non_django/execution_v2/pytest-dev__pytest-7324_candidate.xml",
+        "developer": "experiment_non_django/execution_v2/pytest-dev__pytest-7324_developer.xml"
+      }
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7521",
+      "archived_summary": "The patch tries to undo newline translation after the fact via blind string replacement instead of preventing the translation at the source (open the capture buffer with newline=\"\"). This unconditionally rewrites every '\\n' to '\\r\\n', corrupting genuine newlines in all captured output — a broad regression and a fragile, incorrect approach.",
+      "evidence_note_ko": "단독 carriage return이 CRLF로 바뀌어 assertion이 실패한다. 무조건 newline replacement가 출력을 손상한다는 설명과 부합한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "testing.test_capture.TestCaptureFixture::test_cafd_preserves_newlines[\\n]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_capture.TestCaptureFixture::test_cafd_preserves_newlines[\\r\\n]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "testing.test_capture.TestCaptureFixture::test_cafd_preserves_newlines[\\r]",
+          "outcome": "failure",
+          "message": "AssertionError: assert False  +  where False = <built-in method endswith of str object at 0x74131b4d9370>('\\r')  +    where <built-in method endswith of str object at 0x74131b4d9370> = 'test\\r\\n'.endswith"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v2/pytest-dev__pytest-7521_base.xml",
+        "candidate": "experiment_non_django/execution_v2/pytest-dev__pytest-7521_candidate.xml",
+        "developer": "experiment_non_django/execution_v2/pytest-dev__pytest-7521_developer.xml"
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14629",
+      "archived_summary": "Fix resolves the MultiOutputClassifier AttributeError, but discriminates meta-estimators via hasattr(estimator, 'estimators_'), which is too broad and mis-handles ensembles whose estimators_ are not per-label.",
+      "evidence_note_ko": "MultiOutputClassifier.classes_ AttributeError가 그대로 남는다. 원 오류 해결이라는 요약과 맞지 않는다. 다른 ensemble 전부를 별도 평가하지 않았다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sklearn.tests.test_multioutput::test_multi_output_classes_[estimator0]",
+          "outcome": "success"
+        },
+        {
+          "test_id": "sklearn.tests.test_multioutput::test_multi_output_classes_[estimator1]",
+          "outcome": "failure",
+          "message": "AttributeError: 'MultiOutputClassifier' object has no attribute 'classes_'"
+        },
+        {
+          "test_id": "sklearn.tests.test_multioutput::test_multi_output_classes_[estimator2]",
+          "outcome": "success"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-14629_base.xml",
+        "candidate": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-14629_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-14629_developer.xml"
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25102",
+      "archived_summary": "Change tries to preserve input dtypes on pandas output but is fundamentally broken: it references an undefined `dtypes` variable in the default branch (NameError) and unconditionally forces output back to input dtypes, corrupting transformers that modify values. Not mergeable.",
+      "evidence_note_ko": "공식 테스트에서는 dtype 불일치와 컬럼명 dtype mapping KeyError가 난다. default branch의 dtypes NameError는 이 선택된 두 경로의 직접 관찰 결과가 아니다. source상의 미정의 참조와 실행된 실패를 구분한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sklearn.feature_selection.tests.test_base::test_output_dataframe",
+          "outcome": "failure",
+          "message": "AssertionError: assert dtype('O') == dtype('float32')"
+        },
+        {
+          "test_id": "sklearn.feature_selection.tests.test_feature_select::test_dataframe_output_dtypes",
+          "outcome": "failure",
+          "message": "KeyError: \"Only a column name can be used for the key in a dtype mappings argument. 'sepal length (cm)' not found in columns.\""
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-25102_base.xml",
+        "candidate": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-25102_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-25102_developer.xml"
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25973",
+      "archived_summary": "The patch only guards `_aggregate_score_dicts` against an empty score list, masking the IndexError symptom rather than fixing the root cause: the generator passed as `cv` is exhausted after the first `cross_val_score` call inside SequentialFeatureSelector's candidate loop. It prevents the crash but leaves SFS scoring most feature candidates against an empty CV, silently producing nan/arbitrary selections.",
+      "evidence_note_ko": "빈 score list의 IndexError 대신 fit_time KeyError로 여전히 실패한다. crash를 막고 조용히 nan 결과만 낸다는 요약은 실행 결과보다 강하다. root fix가 아니라는 핵심 지적과는 부합한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sklearn.feature_selection.tests.test_sequential::test_cv_generator_support",
+          "outcome": "failure",
+          "message": "KeyError: 'fit_time'"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-25973_base.xml",
+        "candidate": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-25973_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/scikit-learn__scikit-learn-25973_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-11510",
+      "archived_summary": "The patch emits `source-read` during `resolve_references` (post-parse/write phase) with `doctree.astext()` and discards the return value, so it does not modify any source or feed anything back into the doctree — the include'd content is never actually replaced. It also violates the event contract (handlers expect a mutable list `[text]`, not a bare string), which would crash real `source-read` handlers like the one in the bug report.",
+      "evidence_note_ko": "include event 처리와 nested include 기대 문자열이 실패한다. source event 계층이 틀려 결과가 반영되지 않는다는 기능상 우려를 지지하되 모든 event handler crash를 주장하지 않는다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "tests.test_directive_other::test_include_source_read_event",
+          "outcome": "failure",
+          "message": "AssertionError: assert 'baz/baz' in {'index': '.. include:: baz/baz.rst\\n   :start-line: 4\\n\\n.. include:: text.txt\\n   :literal:    \\n'}"
+        },
+        {
+          "test_id": "tests.test_directive_other::test_include_source_read_event_nested_includes",
+          "outcome": "failure",
+          "message": "AssertionError: assert 'The #magical foo.' == 'The amazing foo.'\n  - The amazing foo.\n  + The #magical foo."
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/sphinx-doc__sphinx-11510_base.xml",
+        "candidate": "experiment_non_django/execution_v1/sphinx-doc__sphinx-11510_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/sphinx-doc__sphinx-11510_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9461",
+      "archived_summary": "Small patch adds classmethod-property handling in MethodDocumenter and PropertyDocumenter, and tests pass. However the PropertyDocumenter.can_document_member addition is logically redundant (its second disjunct is a subset of the existing inspect.isproperty check), signaling a confused/incomplete fix mechanism, plus formatting nits.",
+      "evidence_note_ko": "classmethod property의 세 테스트가 모두 실패한다. tests pass라는 저장 요약은 공식 회귀 결과와 맞지 않는다. 표현식의 논리적 redundancy와 기능 실패의 원인 분리는 별도다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "tests.test_domain_py::test_pyproperty",
+          "outcome": "failure",
+          "message": "AssertionError: The node[1][1] has 3 child nodes, not 4"
+        },
+        {
+          "test_id": "tests.test_ext_autodoc_autoclass::test_properties",
+          "outcome": "failure",
+          "message": "AssertionError: assert ['', '.. py:c...ing', '', ...] == ['', '.. py:c...ing', '', ...]\n  Right contains 8 more items, first extra item: ''\n  Use -v to get more diff"
+        },
+        {
+          "test_id": "tests.test_ext_autodoc_autoproperty::test_class_properties",
+          "outcome": "failure",
+          "message": "AssertionError: assert ['', '.. py:p...operties', ''] == ['', '.. py:p...int', '', ...]\n  At index 3 diff: '' != '   :classmethod:'\n  Right contains 4 more items, first extra item: '   :type: int'\n  Use -v to get more diff"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v2/sphinx-doc__sphinx-9461_base.xml",
+        "candidate": "experiment_non_django/execution_v2/sphinx-doc__sphinx-9461_candidate.xml",
+        "developer": "experiment_non_django/execution_v2/sphinx-doc__sphinx-9461_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9673",
+      "archived_summary": "The one-liner makes 'documented' call modify_field_list, which fixes the visible missing-return-type symptom but also makes 'documented' add :type:/:param: entries for UNDOCUMENTED parameters — collapsing the semantic distinction between 'documented' and 'all'. A maintainer aware of the config semantics would not merge as-is.",
+      "evidence_note_ko": "documented 설정에서도 undocumented parameter/type 항목이 추가되어 기대 문자열과 다르다. 해당 configuration semantics 지적을 지지한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "tests.test_ext_autodoc_configs::test_autodoc_typehints_description_no_undoc",
+          "outcome": "failure",
+          "message": "AssertionError: assert 'target.typehints.incr(a, b=1)\\n\\ntarget.typehints.decr(a, b=1)\\n\\n   Returns:\\n      decremented number\\n\\n   Return ...*Union**[**int**, **str**]**]*) -- arg\\n\\n   Returns:\\n      another tuple\\n\\n   Return type:\\n      Tuple[int, int]\\n' in 'target.typehints.incr(a, b=1)\\n\\n   Parameters:\\n      * **a** (*int*) --\\n\\n      * **b** (*int*) --\\n\\n   Return ty...*Union**[**int**, **str**]**]*) -- arg\\n\\n   Returns:\\n      another tuple\\n\\n   Return type:\\n      Tuple[int, int]\\n'"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v2/sphinx-doc__sphinx-9673_base.xml",
+        "candidate": "experiment_non_django/execution_v2/sphinx-doc__sphinx-9673_candidate.xml",
+        "developer": "experiment_non_django/execution_v2/sphinx-doc__sphinx-9673_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-13031",
+      "archived_summary": "The added `if M.shape[i] > 0:` guards are functionally a no-op: `for i in range(0)` already iterates zero times, so wrapping the loops changes nothing and does not alter the computed shape. The change neither fixes the reported dense Matrix.hstack/vstack shape bug (which lives in the matrix join code, not BlockMatrix.shape) nor prevents any IndexError, since the guards sit on the wrong dimension relative to the indexing `M[i,0]`/`M[0,i]`.",
+      "evidence_note_ko": "0행 sparse matrix의 열 수가 6 대신 3으로 남는다. 후보가 잘못된 위치를 고쳤고 원 문제가 남는다는 설명을 지지한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sympy.matrices.tests.test_sparse::test_sparse_matrix",
+          "outcome": "failure",
+          "message": "assert Matrix(0, 3, []) == Matrix(0, 6, [])   Full diff:   - Matrix(0, 6, [])   ?           ^   + Matrix(0, 3, [])   ?           ^"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/sympy__sympy-13031_base.xml",
+        "candidate": "experiment_non_django/execution_v1/sympy__sympy-13031_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/sympy__sympy-13031_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-14248",
+      "archived_summary": "The patch adds a MatrixSymbol-only special case to _print_Add, but a bare MatrixSymbol always has coefficient +1, so the new branch never emits a '-' and produces identical output to the old code; the actual negative terms in the issue (`-A*B`, `-B`) are MatMul objects, not MatrixSymbol, so they are not handled at all. The approach cannot resolve the reported bug and is likely non-functional (also risks a NameError if MatrixSymbol is not imported in str.py).",
+      "evidence_note_ko": "12개 printing 테스트 중 11개가 실패한다. 음수 행렬 표현을 해결하지 못한다는 핵심 지적을 지지한다. 가설적인 NameError까지 실제 발생했다고 쓰지 않는다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sympy.printing.pretty.tests.test_pretty::test_MatrixElement_printing",
+          "outcome": "success"
+        },
+        {
+          "test_id": "sympy.printing.pretty.tests.test_pretty::test_MatrixSymbol_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '-A*B + -B*C + A*B*C' == '-A*B -B*C + A*B*C'   - -A*B -B*C + A*B*C   + -A*B + -B*C + A*B*C   ?      ++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_ccode::test_MatrixElement_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'   - (-B + A)[0]   + ((-1)*B + A)[0]   ? +  +++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_fcode::test_MatrixElement_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '      ((-1)*B + A)(1, 1)' == '      (-B + A)(1, 1)'   -       (-B + A)(1, 1)   +       ((-1)*B + A)(1, 1)   ?       +  +++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_jscode::test_MatrixElement_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'   - (-B + A)[0]   + ((-1)*B + A)[0]   ? +  +++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_julia::test_MatrixElement_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '((-1)*B + A)[1,1]' == '(-B + A)[1,1]'   - (-B + A)[1,1]   + ((-1)*B + A)[1,1]   ? +  +++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_latex::test_MatrixElement_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '\\\\left(-1 B ...right)_{0, 0}' == '\\\\left(-B + A\\\\right)_{0, 0}'   - \\left(-B + A\\right)_{0, 0}   + \\left(-1 B + A\\right)_{0, 0}   ?        ++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_latex::test_MatrixSymbol_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '-1 A' == '-A'   - -A   + -1 A"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_octave::test_MatrixElement_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '((-1)*B + A)(1, 1)' == '(-B + A)(1, 1)'   - (-B + A)(1, 1)   + ((-1)*B + A)(1, 1)   ? +  +++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_rcode::test_MatrixElement_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '((-1)*B + A)[0]' == '(-B + A)[0]'   - (-B + A)[0]   + ((-1)*B + A)[0]   ? +  +++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_str::test_MatrixElement_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '((-1)*B + A)[0, 0]' == '(-B + A)[0, 0]'   - (-B + A)[0, 0]   + ((-1)*B + A)[0, 0]   ? +  +++"
+        },
+        {
+          "test_id": "sympy.printing.tests.test_str::test_MatrixSymbol_printing",
+          "outcome": "failure",
+          "message": "AssertionError: assert '(-1)*B + (-1)*A*B + A' == '-B - A*B + A'   - -B - A*B + A   + (-1)*B + (-1)*A*B + A"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/sympy__sympy-14248_base.xml",
+        "candidate": "experiment_non_django/execution_v1/sympy__sympy-14248_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/sympy__sympy-14248_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-16597",
+      "archived_summary": "The one-liner adds `& finite` to the `even` rule so `even -> finite` now holds, fixing the reported case. But it only patches `even`; `odd` (defined symmetrically as `integer & !even`) is left unchanged, so `Symbol(odd=True).is_finite` is still None and the asymmetry lets an infinite integer be wrongly inferred as odd.",
+      "evidence_note_ko": "infinity integer/odd finite 추론 assertion 세 개가 실패한다. even 수정만으로 전체 성질을 해결하지 못한다. 원 reported case를 해결한다는 설명의 범위는 이 세 assertion만으로 확정하지 않는다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sympy.core.tests.test_assumptions::test_infinity",
+          "outcome": "failure",
+          "message": "assert None is False  +  where None = oo.is_integer"
+        },
+        {
+          "test_id": "sympy.core.tests.test_assumptions::test_neg_infinity",
+          "outcome": "failure",
+          "message": "assert None is False  +  where None = -oo.is_integer"
+        },
+        {
+          "test_id": "sympy.core.tests.test_assumptions::test_other_symbol",
+          "outcome": "failure",
+          "message": "assert None is True  +  where None = x.is_finite"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/sympy__sympy-16597_base.xml",
+        "candidate": "experiment_non_django/execution_v1/sympy__sympy-16597_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/sympy__sympy-16597_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-19346",
+      "archived_summary": "The set printer is fine, but `_print_dict` sorts `expr.items()` directly, which compares SymPy objects and raises TypeError (`cannot determine truth value of Relational`) for any dict with 2+ symbolic keys — a crash and regression versus the previous no-crash behavior. The fix only works for single-key dicts (as in the repro), so it is incomplete and fragile.",
+      "evidence_note_ko": "symbolic dictionary key 비교에서 cannot determine truth value of Relational TypeError가 재현되어 해당 핵심 이유를 지지한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sympy.printing.tests.test_repr::test_dict",
+          "outcome": "failure",
+          "message": "TypeError: cannot determine truth value of Relational"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/sympy__sympy-19346_base.xml",
+        "candidate": "experiment_non_django/execution_v1/sympy__sympy-19346_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/sympy__sympy-19346_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-19954",
+      "archived_summary": "Patch stops the IndexError but only by bounds-guarding the `del`, which masks the real defect: `blocks`/`num_blocks` shrink during iteration while `rep_blocks` does not, so index `i` desyncs across the three parallel lists. When the guard skips a delete, the non-minimal block system stays in `blocks`, so `minimal_blocks()` can silently return a non-minimal result instead of crashing.",
+      "evidence_note_ko": "Sylow subgroup order가 기대 4 대신 12이다. IndexError 대신 잘못된 결과가 남는다는 우려와 부합한다. 모든 minimal block 결과를 exhaustive 검증하지 않았다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sympy.combinatorics.tests.test_perm_groups::test_sylow_subgroup",
+          "outcome": "failure",
+          "message": "assert 12 == 4  +  where 12 = <bound method PermutationGroup.order of PermutationGroup([\\n    (0 1)(2 17)(3 16)(4 15)(5 14)(6 13)(7 12)(8 11)(9 10),\\n    (0 7)(1 6)(2 5)(3 4)(8 17)(9 16)(10 15)(11 14)(12 13),\\n    (0 4)(1 3)(5 17)(6 16)(7 15)(8 14)(9 13)(10 12)])>()  +    where <bound method PermutationGroup.order of PermutationGroup([\\n    (0 1)(2 17)(3 16)(4 15)(5 14)(6 13)(7 12)(8 11)(9 10),\\n    (0 7)(1 6)(2 5)(3 4)(8 17)(9 16)(10 15)(11 14)(12 13),\\n    (0 4)(1 3)(5 17)(6 16)(7 15)(8 14)(9 13)(10 12)])> = PermutationGroup([\\n    (0 1)(2 17)(3 16)(4 15)(5 14)(6 13)(7 12)(8 11)(9 10),\\n    (0 7)(1 6)(2 5)(3 4)(8 17)(9 16)(10 15)(11 14)(12 13),\\n    (0 4)(1 3)(5 17)(6 16)(7 15)(8 14)(9 13)(10 12)]).order"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/sympy__sympy-19954_base.xml",
+        "candidate": "experiment_non_django/execution_v1/sympy__sympy-19954_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/sympy__sympy-19954_developer.xml"
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-23413",
+      "archived_summary": "Fix flips the public default `check_rank=False` → `True` so `hermite_normal_form` no longer silently drops rows on rank-deficient input; a defensible correctness-over-speed default change, but the docstring still documents the old default and the change was not otherwise noted. Second diff hunk is a whitespace-only no-op.",
+      "evidence_note_ko": "두 hermite normal form 경로에서 기대 3×1 대신 3×0 결과가 난다. default 변경이 rank-deficient correctness를 해결한다는 요약을 전면 수용할 수 없다. 문서 default 불일치와 실행 실패를 구분한다.",
+      "independently_human_adjudicated": false,
+      "functional_rejection_supported": true,
+      "candidate_outcomes": [
+        {
+          "test_id": "sympy.matrices.tests.test_normalforms::test_hermite_normal",
+          "outcome": "failure",
+          "message": "assert Matrix(3, 0, []) == Matrix([\\n[1],\\n[0],\\n[0]])   Full diff:   + Matrix(3, 0, [],   - Matrix([   - [1],   - [0],   - [0]],     )"
+        },
+        {
+          "test_id": "sympy.polys.matrices.tests.test_normalforms::test_hermite_normal",
+          "outcome": "failure",
+          "message": "assert DomainMatrix(...], (3, 0), ZZ) == DomainMatrix(...], (3, 1), ZZ)   Full diff:   - DomainMatrix([[1], [0], [0]], (3, 1), ZZ)   ?                -    -    -        ^   + DomainMatrix([[], [], []], (3, 0), ZZ)   ?                                ^"
+        }
+      ],
+      "raw_results": {
+        "base": "experiment_non_django/execution_v1/sympy__sympy-23413_base.xml",
+        "candidate": "experiment_non_django/execution_v1/sympy__sympy-23413_candidate.xml",
+        "developer": "experiment_non_django/execution_v1/sympy__sympy-23413_developer.xml"
+      }
+    }
+  ]
+}

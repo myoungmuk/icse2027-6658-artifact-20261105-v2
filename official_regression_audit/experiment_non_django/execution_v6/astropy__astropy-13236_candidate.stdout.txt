@@ -1,0 +1,28 @@
+Internet access disabled
+.FF                                                                                                                                    [100%]
+================================================================== FAILURES ==================================================================
+_________________________________________________________ test_ndarray_mixin[False] __________________________________________________________
+astropy/table/tests/test_mixin.py:726: in test_ndarray_mixin
+    t = Table([a], names=['a'])
+astropy/table/table.py:835: in __init__
+    init_func(data, names, dtype, n_cols, copy)
+astropy/table/table.py:1173: in _init_from_list
+    col = self._convert_data_to_col(col, copy, default_name, dtype, name)
+astropy/table/table.py:1246: in _convert_data_to_col
+    warnings.warn(
+E   FutureWarning: In future versions, structured ndarray will be added as a Column. Please wrap your data in a Column object to avoid this warning.
+_______________________________________________________ test_structured_masked_column ________________________________________________________
+astropy/table/tests/test_table.py:2923: in test_structured_masked_column
+    t['a'] = np.ma.array([(1, 2, 3),
+astropy/table/table.py:1916: in __setitem__
+    self.add_column(value, name=item, copy=True)
+astropy/table/table.py:2179: in add_column
+    col = self._convert_data_to_col(col, name=name, copy=copy,
+astropy/table/table.py:1246: in _convert_data_to_col
+    warnings.warn(
+E   FutureWarning: In future versions, structured ndarray will be added as a Column. Please wrap your data in a Column object to avoid this warning.
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v6/astropy__astropy-13236_candidate.xml -
+========================================================== short test summary info ===========================================================
+FAILED astropy/table/tests/test_mixin.py::test_ndarray_mixin[False] - FutureWarning: In future versions, structured ndarray will be added a...
+FAILED astropy/table/tests/test_table.py::test_structured_masked_column - FutureWarning: In future versions, structured ndarray will be add...
+2 failed, 1 passed in 0.86s

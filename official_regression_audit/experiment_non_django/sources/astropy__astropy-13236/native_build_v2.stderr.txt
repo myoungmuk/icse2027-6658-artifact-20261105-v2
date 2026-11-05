@@ -1,0 +1,26 @@
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools/config/setupcfg.py:508: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/base/setup.py", line 68, in <module>
+    setup(ext_modules=get_extensions())
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools/__init__.py", line 87, in setup
+    return distutils.core.setup(**attrs)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/python_runtimes/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/distutils/core.py", line 108, in setup
+    _setup_distribution = dist = klass(attrs)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools/dist.py", line 476, in __init__
+    _Distribution.__init__(
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/python_runtimes/cpython-3.9.24-linux-x86_64-gnu/lib/python3.9/distutils/dist.py", line 292, in __init__
+    self.finalize_options()
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools/dist.py", line 900, in finalize_options
+    ep(self)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools_scm/integration.py", line 104, in infer_version
+    _assign_version(dist, config)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools_scm/integration.py", line 51, in _assign_version
+    _version_missing(config)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools_scm/__init__.py", line 106, in _version_missing
+    raise LookupError(
+LookupError: setuptools-scm was unable to detect version for /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/astropy__astropy-13236/base.
+
+Make sure you're either building from a fully intact git repository or PyPI tarballs. Most other sources (such as GitHub's tarballs, a git checkout without the .git folder) don't contain the necessary metadata and will not work.
+
+For example, if you're using pip, instead of https://github.com/user/proj/archive/master.zip use git+https://github.com/user/proj.git#egg=proj

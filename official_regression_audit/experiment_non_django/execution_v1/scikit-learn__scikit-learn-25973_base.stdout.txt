@@ -1,0 +1,20 @@
+F                                                                                                                                      [100%]
+================================================================== FAILURES ==================================================================
+_________________________________________________________ test_cv_generator_support __________________________________________________________
+sklearn/feature_selection/tests/test_sequential.py:336: in test_cv_generator_support
+    sfs.fit(X, y)
+sklearn/feature_selection/_sequential.py:277: in fit
+    new_feature_idx, new_score = self._get_best_new_feature_score(
+sklearn/feature_selection/_sequential.py:308: in _get_best_new_feature_score
+    scores[feature_idx] = cross_val_score(
+sklearn/model_selection/_validation.py:535: in cross_val_score
+    cv_results = cross_validate(
+sklearn/model_selection/_validation.py:309: in cross_validate
+    results = _aggregate_score_dicts(results)
+sklearn/model_selection/_validation.py:1950: in _aggregate_score_dicts
+    for key in scores[0]
+E   IndexError: list index out of range
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v1/scikit-learn__scikit-learn-25973_base.xml -
+========================================================== short test summary info ===========================================================
+FAILED sklearn/feature_selection/tests/test_sequential.py::test_cv_generator_support - IndexError: list index out of range
+1 failed in 0.64s

@@ -1,0 +1,23 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Creating test database for alias 'other' ('file:memorydb_other?mode=memory&cache=shared')...
+test_rename_index_unnamed_index (migrations.test_operations.OperationTests.test_rename_index_unnamed_index) ... ERROR
+
+======================================================================
+ERROR: test_rename_index_unnamed_index (migrations.test_operations.OperationTests.test_rename_index_unnamed_index)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/base/tests/migrations/test_operations.py", line 2994, in test_rename_index_unnamed_index
+    operation.database_forwards(app_label, editor, new_state, project_state)
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/base/django/db/migrations/operations/models.py", line 965, in database_forwards
+    new_index = to_model_state.get_index_by_name(self.new_name)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-15695/base/django/db/migrations/state.py", line 959, in get_index_by_name
+    raise ValueError("No index named %s on model %s" % (name, self.name))
+ValueError: No index named new_pony_test_idx on model Pony
+
+----------------------------------------------------------------------
+Ran 1 test in 0.013s
+
+FAILED (errors=1)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Destroying test database for alias 'other' ('file:memorydb_other?mode=memory&cache=shared')...

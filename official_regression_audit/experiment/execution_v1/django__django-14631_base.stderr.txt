@@ -1,0 +1,31 @@
+test_datetime_clean_disabled_callable_initial_bound_field (forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field)
+The cleaned value for a form with a disabled DateTimeField and callable ... FAIL
+test_datetime_clean_disabled_callable_initial_microseconds (forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds)
+Cleaning a form with a disabled DateTimeField and callable initial ... FAIL
+
+======================================================================
+FAIL: test_datetime_clean_disabled_callable_initial_bound_field (forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_bound_field)
+The cleaned value for a form with a disabled DateTimeField and callable
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/base/tests/forms_tests/tests/test_forms.py", line 2155, in test_datetime_clean_disabled_callable_initial_bound_field
+    self.assertEqual(cleaned, bf.initial)
+AssertionError: datetime.datetime(2006, 10, 25, 14, 30, 46) != datetime.datetime(2006, 10, 25, 14, 30, 47)
+
+======================================================================
+FAIL: test_datetime_clean_disabled_callable_initial_microseconds (forms_tests.tests.test_forms.FormsTestCase.test_datetime_clean_disabled_callable_initial_microseconds)
+Cleaning a form with a disabled DateTimeField and callable initial
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment/sources/django__django-14631/base/tests/forms_tests/tests/test_forms.py", line 2141, in test_datetime_clean_disabled_callable_initial_microseconds
+    self.assertEqual(form.cleaned_data, {
+AssertionError: {'dt': datetime.datetime(2006, 10, 25, 14, 30, 46, 123456)} != {'dt': datetime.datetime(2006, 10, 25, 14, 30, 46)}
+- {'dt': datetime.datetime(2006, 10, 25, 14, 30, 46, 123456)}
+?                                                 --------
+
++ {'dt': datetime.datetime(2006, 10, 25, 14, 30, 46)}
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=2)

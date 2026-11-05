@@ -1,0 +1,40 @@
+................FFF...                                                                                                                 [100%]
+================================================================== FAILURES ==================================================================
+__________________________________________________________ test_valid_idents[True] ___________________________________________________________
+testing/test_mark_expression.py:140: in test_valid_idents
+    assert evaluate(ident, {ident: True}.__getitem__)
+testing/test_mark_expression.py:9: in evaluate
+    return Expression.compile(input).evaluate(matcher)
+src/_pytest/mark/expression.py:202: in compile
+    code = compile(
+E   ValueError: Name node can't be used with 'True' constant
+__________________________________________________________ test_valid_idents[False] __________________________________________________________
+testing/test_mark_expression.py:140: in test_valid_idents
+    assert evaluate(ident, {ident: True}.__getitem__)
+testing/test_mark_expression.py:9: in evaluate
+    return Expression.compile(input).evaluate(matcher)
+src/_pytest/mark/expression.py:202: in compile
+    code = compile(
+E   ValueError: Name node can't be used with 'False' constant
+__________________________________________________________ test_valid_idents[None] ___________________________________________________________
+testing/test_mark_expression.py:140: in test_valid_idents
+    assert evaluate(ident, {ident: True}.__getitem__)
+testing/test_mark_expression.py:9: in evaluate
+    return Expression.compile(input).evaluate(matcher)
+src/_pytest/mark/expression.py:202: in compile
+    code = compile(
+E   ValueError: Name node can't be used with 'None' constant
+============================================================== warnings summary ==============================================================
+src/_pytest/junitxml.py:434
+  /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/sources/pytest-dev__pytest-7324/base/src/_pytest/junitxml.py:434: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0. See:
+    https://docs.pytest.org/en/latest/deprecations.html#junit-family-default-value-change-to-xunit2
+  for more information.
+    _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+- generated xml file: /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/experiment_non_django/execution_v2/pytest-dev__pytest-7324_base.xml -
+========================================================== short test summary info ===========================================================
+FAILED testing/test_mark_expression.py::test_valid_idents[True] - ValueError: Name node can't be used with 'True' constant
+FAILED testing/test_mark_expression.py::test_valid_idents[False] - ValueError: Name node can't be used with 'False' constant
+FAILED testing/test_mark_expression.py::test_valid_idents[None] - ValueError: Name node can't be used with 'None' constant
+3 failed, 19 passed, 1 warning in 0.03s

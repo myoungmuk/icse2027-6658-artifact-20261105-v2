@@ -1,0 +1,897 @@
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/setuptools/config/setupcfg.py:508: SetuptoolsDeprecationWarning: The license_file parameter is deprecated, use license_files instead.
+  warnings.warn(msg, warning_class)
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1948,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from astropy/table/_np_utils.c:752:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1948,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from astropy/table/_column_mixins.c:750:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:21:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/__multiarray_api.h:1477:1: warning: ‘_import_array’ defined but not used [-Wunused-function]
+ 1477 | _import_array(void)
+      | ^~~~~~~~~~~~~
+astropy/stats/src/compute_bounds.c: In function ‘compute_sigma_clipped_bounds’:
+astropy/stats/src/compute_bounds.c:53:24: warning: ‘cen’ may be used uninitialized [-Wmaybe-uninitialized]
+   53 |     *upper_bound = cen + sigma_upper * std;
+      |                    ~~~~^~~~~~~~~~~~~~~~~~~
+astropy/stats/src/compute_bounds.c:10:29: note: ‘cen’ was declared here
+   10 |   double mean, std, median, cen;
+      |                             ^~~
+astropy/stats/src/compute_bounds.c:38:45: warning: ‘median’ may be used uninitialized [-Wmaybe-uninitialized]
+   38 |         mad_buffer[i] = fabs(data_buffer[i] - median);
+      |                              ~~~~~~~~~~~~~~~^~~~~~~~
+astropy/stats/src/compute_bounds.c:10:21: note: ‘median’ was declared here
+   10 |   double mean, std, median, cen;
+      |                     ^~~~~~
+astropy/stats/src/fast_sigma_clip.c: In function ‘PyInit__fast_sigma_clip’:
+astropy/stats/src/fast_sigma_clip.c:44:48: warning: initialization of ‘void (*)(char **, const npy_intp *, const npy_intp *, void *)’ {aka ‘void (*)(char **, const long int *, const long int *, void *)’} from incompatible pointer type ‘void (*)(char **, npy_intp *, npy_intp *, void *)’ {aka ‘void (*)(char **, long int *, long int *, void *)’} [-Wincompatible-pointer-types]
+   44 |     static PyUFuncGenericFunction funcs[1] = { &_sigma_clip_fast };
+      |                                                ^
+astropy/stats/src/fast_sigma_clip.c:44:48: note: (near initialization for ‘funcs[0]’)
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/python_runtimes/cpython-3.9.24-linux-x86_64-gnu/include/python3.9/pytime.h:6,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/python_runtimes/cpython-3.9.24-linux-x86_64-gnu/include/python3.9/Python.h:81,
+                 from astropy/stats/src/fast_sigma_clip.c:3:
+In function ‘_Py_XDECREF’,
+    inlined from ‘PyInit__fast_sigma_clip’ at astropy/stats/src/fast_sigma_clip.c:69:5:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/python_runtimes/cpython-3.9.24-linux-x86_64-gnu/include/python3.9/object.h:496:8: warning: ‘d’ may be used uninitialized [-Wmaybe-uninitialized]
+  496 |     if (op != NULL) {
+      |        ^
+astropy/stats/src/fast_sigma_clip.c: In function ‘PyInit__fast_sigma_clip’:
+astropy/stats/src/fast_sigma_clip.c:30:19: note: ‘d’ was declared here
+   30 |     PyObject *m, *d;
+      |                   ^
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1948,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from astropy/timeseries/periodograms/bls/_impl.c:752:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+astropy/wcs/src/pyutil.c: In function ‘set_pscards’:
+astropy/wcs/src/pyutil.c:807:5: warning: ‘strncpy’ specified bound 72 equals destination size [-Wstringop-truncation]
+  807 |     strncpy((*ps)[i].value, strvalue, 72);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+astropy/timeseries/periodograms/bls/bls.c: In function ‘run_bls’:
+astropy/timeseries/periodograms/bls/bls.c:92: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+   92 | #pragma omp parallel
+      | 
+astropy/timeseries/periodograms/bls/bls.c:116: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  116 |     #pragma omp parallel for reduction(+:sum_y), reduction(+:sum_ivar)
+      | 
+astropy/timeseries/periodograms/bls/bls.c:125: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  125 |     #pragma omp parallel for
+      | 
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1948,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from astropy/io/ascii/cparser.c:752:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+astropy/wcs/src/wcslib_celprm_wrap.c: In function ‘PyCelprm_deepcopy’:
+astropy/wcs/src/wcslib_celprm_wrap.c:167:22: warning: initialization of ‘PyCelprm *’ from incompatible pointer type ‘PyObject *’ {aka ‘struct _object *’} [-Wincompatible-pointer-types]
+  167 |     PyCelprm* copy = PyCelprm_new(&PyCelprmType, NULL, NULL);
+      |                      ^~~~~~~~~~~~
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from astropy/wcs/include/astropy_wcs/pyutil.h:16,
+                 from astropy/wcs/include/astropy_wcs/wcslib_celprm_wrap.h:4,
+                 from astropy/wcs/src/wcslib_celprm_wrap.c:3:
+astropy/wcs/src/wcslib_celprm_wrap.c: In function ‘PyCelprm_set_ref’:
+astropy/wcs/src/wcslib_celprm_wrap.c:327:25: warning: passing argument 1 of ‘PyArray_DIMS’ from incompatible pointer type [-Wincompatible-pointer-types]
+  327 |     size = PyArray_SIZE(value_array);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:73:59: note: in definition of macro ‘PyArray_SIZE’
+   73 | #define PyArray_SIZE(m) PyArray_MultiplyList(PyArray_DIMS(m), PyArray_NDIM(m))
+      |                                                           ^
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1544:29: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1544 | PyArray_DIMS(PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_celprm_wrap.c:327:25: warning: passing argument 1 of ‘PyArray_NDIM’ from incompatible pointer type [-Wincompatible-pointer-types]
+  327 |     size = PyArray_SIZE(value_array);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:73:76: note: in definition of macro ‘PyArray_SIZE’
+   73 | #define PyArray_SIZE(m) PyArray_MultiplyList(PyArray_DIMS(m), PyArray_NDIM(m))
+      |                                                                            ^
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1526:35: note: expected ‘const PyArrayObject *’ {aka ‘const struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1526 | PyArray_NDIM(const PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_celprm_wrap.c:348:35: warning: passing argument 1 of ‘PyArray_DATA’ from incompatible pointer type [-Wincompatible-pointer-types]
+  348 |     data = (double*) PyArray_DATA(value_array);
+      |                                   ^~~~~~~~~~~
+      |                                   |
+      |                                   PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1532:29: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1532 | PyArray_DATA(PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c: In function ‘PyPrjprm_deepcopy’:
+astropy/wcs/src/wcslib_prjprm_wrap.c:149:22: warning: initialization of ‘PyPrjprm *’ from incompatible pointer type ‘PyObject *’ {aka ‘struct _object *’} [-Wincompatible-pointer-types]
+  149 |     PyPrjprm* copy = PyPrjprm_new(&PyPrjprmType, NULL, NULL);
+      |                      ^~~~~~~~~~~~
+astropy/wcs/src/wcslib_prjprm_wrap.c: In function ‘PyPrjprm_get_pv’:
+astropy/wcs/src/wcslib_prjprm_wrap.c:517:14: warning: assignment to ‘PyObject *’ {aka ‘struct _object *’} from incompatible pointer type ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} [-Wincompatible-pointer-types]
+  517 |     pv_array = (PyArrayObject*) PyArray_SimpleNew(1, &size, NPY_DOUBLE);
+      |              ^
+astropy/wcs/src/wcslib_prjprm_wrap.c:519:33: warning: passing argument 1 of ‘PyArray_DATA’ from incompatible pointer type [-Wincompatible-pointer-types]
+  519 |     pv = (double*) PyArray_DATA(pv_array);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 PyObject * {aka struct _object *}
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from astropy/wcs/include/astropy_wcs/pyutil.h:16,
+                 from astropy/wcs/include/astropy_wcs/wcslib_celprm_wrap.h:4,
+                 from astropy/wcs/src/wcslib_prjprm_wrap.c:5:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1532:29: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1532 | PyArray_DATA(PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c: In function ‘PyPrjprm_set_pv’:
+astropy/wcs/src/wcslib_prjprm_wrap.c:556:25: warning: passing argument 1 of ‘PyArray_DIMS’ from incompatible pointer type [-Wincompatible-pointer-types]
+  556 |     size = PyArray_SIZE(value_array);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:73:59: note: in definition of macro ‘PyArray_SIZE’
+   73 | #define PyArray_SIZE(m) PyArray_MultiplyList(PyArray_DIMS(m), PyArray_NDIM(m))
+      |                                                           ^
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1544:29: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1544 | PyArray_DIMS(PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c:556:25: warning: passing argument 1 of ‘PyArray_NDIM’ from incompatible pointer type [-Wincompatible-pointer-types]
+  556 |     size = PyArray_SIZE(value_array);
+      |                         ^~~~~~~~~~~
+      |                         |
+      |                         PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:73:76: note: in definition of macro ‘PyArray_SIZE’
+   73 | #define PyArray_SIZE(m) PyArray_MultiplyList(PyArray_DIMS(m), PyArray_NDIM(m))
+      |                                                                            ^
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1526:35: note: expected ‘const PyArrayObject *’ {aka ‘const struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1526 | PyArray_NDIM(const PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c:583:35: warning: passing argument 1 of ‘PyArray_DATA’ from incompatible pointer type [-Wincompatible-pointer-types]
+  583 |     data = (double*) PyArray_DATA(value_array);
+      |                                   ^~~~~~~~~~~
+      |                                   |
+      |                                   PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1532:29: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1532 | PyArray_DATA(PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c: In function ‘PyPrjprm_get_pvi’:
+astropy/wcs/src/wcslib_prjprm_wrap.c:615:15: warning: unused variable ‘value’ [-Wunused-variable]
+  615 |     PyObject* value = NULL;
+      |               ^~~~~
+astropy/wcs/src/wcslib_prjprm_wrap.c: In function ‘PyPrjprm_set_pvi’:
+astropy/wcs/src/wcslib_prjprm_wrap.c:712:29: warning: passing argument 1 of ‘PyArray_DIMS’ from incompatible pointer type [-Wincompatible-pointer-types]
+  712 |         size = PyArray_SIZE(value_array);
+      |                             ^~~~~~~~~~~
+      |                             |
+      |                             PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:73:59: note: in definition of macro ‘PyArray_SIZE’
+   73 | #define PyArray_SIZE(m) PyArray_MultiplyList(PyArray_DIMS(m), PyArray_NDIM(m))
+      |                                                           ^
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1544:29: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1544 | PyArray_DIMS(PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c:712:29: warning: passing argument 1 of ‘PyArray_NDIM’ from incompatible pointer type [-Wincompatible-pointer-types]
+  712 |         size = PyArray_SIZE(value_array);
+      |                             ^~~~~~~~~~~
+      |                             |
+      |                             PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:73:76: note: in definition of macro ‘PyArray_SIZE’
+   73 | #define PyArray_SIZE(m) PyArray_MultiplyList(PyArray_DIMS(m), PyArray_NDIM(m))
+      |                                                                            ^
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1526:35: note: expected ‘const PyArrayObject *’ {aka ‘const struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1526 | PyArray_NDIM(const PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c:720:48: warning: passing argument 1 of ‘PyArray_DATA’ from incompatible pointer type [-Wincompatible-pointer-types]
+  720 |         scalar = PyArray_ToScalar(PyArray_DATA(value_array), value_array);
+      |                                                ^~~~~~~~~~~
+      |                                                |
+      |                                                PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:129:24: note: in definition of macro ‘PyArray_ToScalar’
+  129 |         PyArray_Scalar(data, PyArray_DESCR(arr), (PyObject *)arr)
+      |                        ^~~~
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1532:29: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1532 | PyArray_DATA(PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c:720:62: warning: passing argument 1 of ‘PyArray_DESCR’ from incompatible pointer type [-Wincompatible-pointer-types]
+  720 |         scalar = PyArray_ToScalar(PyArray_DATA(value_array), value_array);
+      |                                                              ^~~~~~~~~~~
+      |                                                              |
+      |                                                              PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:129:44: note: in definition of macro ‘PyArray_ToScalar’
+  129 |         PyArray_Scalar(data, PyArray_DESCR(arr), (PyObject *)arr)
+      |                                            ^~~
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1574:30: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1574 | PyArray_DESCR(PyArrayObject *arr)
+      |               ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_prjprm_wrap.c: In function ‘PyPrjprm_get_w’:
+astropy/wcs/src/wcslib_prjprm_wrap.c:780:32: warning: passing argument 1 of ‘PyArray_DATA’ from incompatible pointer type [-Wincompatible-pointer-types]
+  780 |     w = (double*) PyArray_DATA(w_array);
+      |                                ^~~~~~~
+      |                                |
+      |                                PyObject * {aka struct _object *}
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1532:29: note: expected ‘PyArrayObject *’ {aka ‘struct tagPyArrayObject *’} but argument is of type ‘PyObject *’ {aka ‘struct _object *’}
+ 1532 | PyArray_DATA(PyArrayObject *arr)
+      |              ~~~~~~~~~~~~~~~^~~
+astropy/wcs/src/wcslib_wrap.c: In function ‘PyWcsprm_copy’:
+astropy/wcs/src/wcslib_wrap.c:634:24: warning: unused variable ‘wtb0’ [-Wunused-variable]
+  634 |   struct wtbarr *wtb, *wtb0;
+      |                        ^~~~
+astropy/wcs/src/wcslib_wrap.c:634:18: warning: unused variable ‘wtb’ [-Wunused-variable]
+  634 |   struct wtbarr *wtb, *wtb0;
+      |                  ^~~
+astropy/wcs/src/wcslib_wrap.c:633:38: warning: unused variable ‘ndim’ [-Wunused-variable]
+  633 |   int           status, nelem, i, j, ndim;
+      |                                      ^~~~
+astropy/wcs/src/wcslib_wrap.c:633:35: warning: unused variable ‘j’ [-Wunused-variable]
+  633 |   int           status, nelem, i, j, ndim;
+      |                                   ^
+astropy/wcs/src/wcslib_wrap.c:633:32: warning: unused variable ‘i’ [-Wunused-variable]
+  633 |   int           status, nelem, i, j, ndim;
+      |                                ^
+astropy/wcs/src/wcslib_wrap.c:633:25: warning: unused variable ‘nelem’ [-Wunused-variable]
+  633 |   int           status, nelem, i, j, ndim;
+      |                         ^~~~~
+astropy/wcs/src/wcslib_wrap.c: In function ‘PyWcsprm_sptr’:
+astropy/wcs/src/wcslib_wrap.c:1757:3: warning: ‘strncpy’ specified bound 9 equals destination size [-Wstringop-truncation]
+ 1757 |   strncpy(ctype, py_ctype, 9);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+astropy/wcs/src/wcslib_wtbarr_wrap.c:208:3: warning: initialization of ‘int (*)(PyObject *, int (*)(PyObject *, void *), void *)’ {aka ‘int (*)(struct _object *, int (*)(struct _object *, void *), void *)’} from incompatible pointer type ‘int (*)(PyWtbarr *, int (*)(PyObject *, void *), void *)’ {aka ‘int (*)(PyWtbarr *, int (*)(struct _object *, void *), void *)’} [-Wincompatible-pointer-types]
+  208 |   PyWtbarr_traverse,            /* tp_traverse */
+      |   ^~~~~~~~~~~~~~~~~
+astropy/wcs/src/wcslib_wtbarr_wrap.c:208:3: note: (near initialization for ‘PyWtbarrType.tp_traverse’)
+astropy/wcs/src/wcslib_wtbarr_wrap.c:209:3: warning: initialization of ‘int (*)(PyObject *)’ {aka ‘int (*)(struct _object *)’} from incompatible pointer type ‘int (*)(PyWtbarr *)’ [-Wincompatible-pointer-types]
+  209 |   PyWtbarr_clear,               /* tp_clear */
+      |   ^~~~~~~~~~~~~~
+astropy/wcs/src/wcslib_wtbarr_wrap.c:209:3: note: (near initialization for ‘PyWtbarrType.tp_clear’)
+astropy/io/ascii/src/tokenizer.c: In function ‘push’:
+astropy/io/ascii/src/tokenizer.c:124:54: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  124 |     if (self->col_ptrs[col] - self->output_cols[col] >=
+      |                                                      ^~
+astropy/io/ascii/src/tokenizer.c: In function ‘tokenize’:
+astropy/io/ascii/src/tokenizer.c:424:42: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+  424 |                     if (self->source_pos == -1
+      |                                          ^~
+astropy/io/ascii/src/tokenizer.c:360:9: warning: enumeration value ‘QUOTED_FIELD_NEWLINE’ not handled in switch [-Wswitch]
+  360 |         switch (self->state)
+      |         ^~~~~~
+astropy/io/votable/src/tablewriter.c: In function ‘write_tabledata’:
+astropy/io/votable/src/tablewriter.c:270:30: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  270 |                 if ((str_tmp = PyUnicode_AsUTF8AndSize(str_val, &str_len)) == NULL) {
+      |                              ^
+./astropy/io/fits/src/compressionmodule.c: In function ‘compression_compress_hdu’:
+./astropy/io/fits/src/compressionmodule.c:1042:16: warning: comparison of integer expressions of different signedness: ‘npy_intp’ {aka ‘long int’} and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1042 |     if (znaxis < outbufsize) {
+      |                ^
+./astropy/io/fits/src/compressionmodule.c: In function ‘tcolumns_from_header’:
+./astropy/io/fits/src/compressionmodule.c:450:9: warning: ‘strncpy’ output may be truncated copying 69 bytes from a string of length 71 [-Wstringop-truncation]
+  450 |         strncpy(column->ttype, ttype, 69);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./astropy/io/fits/src/compressionmodule.c:457:9: warning: ‘strncpy’ output may be truncated copying 9 bytes from a string of length 71 [-Wstringop-truncation]
+  457 |         strncpy(column->tform, tform, 9);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./astropy/io/fits/src/compressionmodule.c: In function ‘configure_compression’:
+./astropy/io/fits/src/compressionmodule.c:600:5: warning: ‘strncpy’ output may be truncated copying 11 bytes from a string of length 71 [-Wstringop-truncation]
+  600 |     strncpy(Fptr->zcmptype, tmp, 11);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/cfileio.c: In function ‘fits_is_this_a_copy’:
+cextern/cfitsio/lib/cfileio.c:1711:13: warning: ‘strncpy’ output truncated before terminating nul copying 5 bytes from a string of the same length [-Wstringop-truncation]
+ 1711 |   else if (!strncpy(urltype, "stdin", 5) )
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/cfileio.c: In function ‘ffoptplt’:
+cextern/cfitsio/lib/cfileio.c:7788:21: warning: ‘strncpy’ output truncated before terminating nul copying 30 bytes from a string of the same length [-Wstringop-truncation]
+ 7788 |                     strncpy(card, "PCOUNT  =                    0", 30);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/cfileio.c: In function ‘ffomem’:
+cextern/cfitsio/lib/cfileio.c:339:38: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 55 [-Wformat-truncation=]
+  339 |           " extension with EXTNAME = %s,", extname);
+      |                                      ^~    ~~~~~~~
+cextern/cfitsio/lib/cfileio.c:338:11: note: ‘snprintf’ output between 28 and 98 bytes into a destination of size 81
+  338 |           snprintf(errmsg, FLEN_ERRMSG,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  339 |           " extension with EXTNAME = %s,", extname);
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/cfileio.c: In function ‘ffopen’:
+cextern/cfitsio/lib/cfileio.c:971:38: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 55 [-Wformat-truncation=]
+  971 |           " extension with EXTNAME = %s,", extname);
+      |                                      ^~    ~~~~~~~
+cextern/cfitsio/lib/cfileio.c:970:11: note: ‘snprintf’ output between 28 and 98 bytes into a destination of size 81
+  970 |           snprintf(errmsg, FLEN_ERRMSG,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  971 |           " extension with EXTNAME = %s,", extname);
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/drvrmem.c: In function ‘mem_truncate’:
+cextern/cfitsio/lib/drvrmem.c:273:23: warning: comparison of integer expressions of different signedness: ‘LONGLONG’ {aka ‘long long int’} and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  273 |         if ( filesize > *(memTable[handle].memsizeptr) )
+      |                       ^
+cextern/cfitsio/lib/editcol.c: In function ‘ffkshf’:
+cextern/cfitsio/lib/editcol.c:2849:19: warning: ‘strncpy’ output truncated before terminating nul copying 8 bytes from a string of the same length [-Wstringop-truncation]
+ 2849 |                   strncpy(rec, "        ", 8);    /* erase old keyword name */
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/editcol.c:2809:13: warning: ‘strncpy’ output may be truncated copying 4 bytes from a string of length 80 [-Wstringop-truncation]
+ 2809 |             strncpy(q, &rec[1], 4);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/editcol.c:2844:19: warning: ‘strncat’ output may be truncated copying between 4 and 5 bytes from a string of length 80 [-Wstringop-truncation]
+ 2844 |                   strncat(q, rec, i1);
+      |                   ^~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/editcol.c:2851:19: warning: ‘strncpy’ output truncated before terminating nul copying as many bytes from a string as its length [-Wstringop-truncation]
+ 2851 |                   strncpy(rec, newkey, i1);   /* overwrite new keyword name */
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/editcol.c:2850:24: note: length computed here
+ 2850 |                   i1 = strlen(newkey);
+      |                        ^~~~~~~~~~~~~~
+In file included from cextern/expat/lib/xmltok.c:55:
+cextern/expat/lib/xmltok.h: In function ‘findEncoding’:
+cextern/expat/lib/xmltok.h:272:10: warning: ‘buf’ may be used uninitialized [-Wmaybe-uninitialized]
+  272 |   (((enc)->utf8Convert)(enc, fromP, fromLim, toP, toLim))
+      |          ^~
+cextern/expat/lib/xmltok.h:272:10: note: by argument 5 of type ‘const char *’ to ‘enum XML_Convert_Result(const ENCODING *, const char **, const char *, char **, const char *)’ {aka ‘enum XML_Convert_Result(const struct encoding *, const char **, const char *, char **, const char *)’}
+  272 |   (((enc)->utf8Convert)(enc, fromP, fromLim, toP, toLim))
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/expat/lib/xmltok_ns.c:95:3: note: in expansion of macro ‘XmlUtf8Convert’
+   95 |   XmlUtf8Convert(enc, &ptr, end, &p, p + ENCODING_MAX - 1);
+      |   ^~~~~~~~~~~~~~
+In file included from cextern/expat/lib/xmltok.c:1646:
+cextern/expat/lib/xmltok_ns.c:92:8: note: ‘buf’ declared here
+   92 |   char buf[ENCODING_MAX];
+      |        ^~~
+cextern/cfitsio/lib/fitscore.c: In function ‘ffmkky’:
+cextern/cfitsio/lib/fitscore.c:1118:30: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 1118 |             if (strlen(cptr) > maxlen) maxlen = strlen(cptr); /* find longest token */
+      |                              ^
+cextern/cfitsio/lib/fitscore.c: In function ‘ffmkey’:
+cextern/cfitsio/lib/fitscore.c:1295:19: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 1295 |     for (ii=0; ii < keylength; ii++)       /* make sure keyword name is uppercase */
+      |                   ^
+cextern/expat/lib/xmltok.h: In function ‘findEncodingNS’:
+cextern/expat/lib/xmltok.h:272:10: warning: ‘buf’ may be used uninitialized [-Wmaybe-uninitialized]
+  272 |   (((enc)->utf8Convert)(enc, fromP, fromLim, toP, toLim))
+      |          ^~
+cextern/expat/lib/xmltok.h:272:10: note: by argument 5 of type ‘const char *’ to ‘enum XML_Convert_Result(const ENCODING *, const char **, const char *, char **, const char *)’ {aka ‘enum XML_Convert_Result(const struct encoding *, const char **, const char *, char **, const char *)’}
+  272 |   (((enc)->utf8Convert)(enc, fromP, fromLim, toP, toLim))
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/expat/lib/xmltok_ns.c:95:3: note: in expansion of macro ‘XmlUtf8Convert’
+   95 |   XmlUtf8Convert(enc, &ptr, end, &p, p + ENCODING_MAX - 1);
+      |   ^~~~~~~~~~~~~~
+In file included from cextern/expat/lib/xmltok.c:1657:
+cextern/expat/lib/xmltok_ns.c:92:8: note: ‘buf’ declared here
+   92 |   char buf[ENCODING_MAX];
+      |        ^~~
+cextern/cfitsio/lib/fitscore.c: In function ‘ffmkky’:
+cextern/cfitsio/lib/fitscore.c:1115:9: warning: ‘strncat’ output may be truncated copying 74 bytes from a string of length 74 [-Wstringop-truncation]
+ 1115 |         strncat(tmpname2, tmpname, FLEN_KEYWORD - 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/fitscore.c:1159:13: warning: ‘strncat’ output may be truncated copying 74 bytes from a string of length 74 [-Wstringop-truncation]
+ 1159 |             strncat(card, tmpname, FLEN_KEYWORD - 1);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1948,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from ./astropy/stats/_stats.c:753:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+cextern/cfitsio/lib/fitscore.c: In function ‘ffbinit.part.0’:
+cextern/cfitsio/lib/fitscore.c:5098:52: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 72 [-Wformat-truncation=]
+ 5098 |             snprintf(message,FLEN_ERRMSG,"Required %s keyword not found (ffbinit).", name);
+      |                                                    ^~                                ~~~~
+cextern/cfitsio/lib/fitscore.c:5098:13: note: ‘snprintf’ output between 39 and 113 bytes into a destination of size 81
+ 5098 |             snprintf(message,FLEN_ERRMSG,"Required %s keyword not found (ffbinit).", name);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/fitscore.c: In function ‘ffainit.part.0’:
+cextern/cfitsio/lib/fitscore.c:4901:52: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 72 [-Wformat-truncation=]
+ 4901 |             snprintf(message,FLEN_ERRMSG,"Value of %s keyword out of range: %ld (ffainit).",
+      |                                                    ^~
+ 4902 |             name, (long) tbcoln);
+      |             ~~~~                                    
+cextern/cfitsio/lib/fitscore.c:4901:42: note: using the range [-9223372036854775808, 9223372036854775807] for directive argument
+ 4901 |             snprintf(message,FLEN_ERRMSG,"Value of %s keyword out of range: %ld (ffainit).",
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/fitscore.c:4901:13: note: ‘snprintf’ output between 45 and 138 bytes into a destination of size 81
+ 4901 |             snprintf(message,FLEN_ERRMSG,"Value of %s keyword out of range: %ld (ffainit).",
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 4902 |             name, (long) tbcoln);
+      |             ~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/fitscore.c:4892:52: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 72 [-Wformat-truncation=]
+ 4892 |             snprintf(message,FLEN_ERRMSG,"Required %s keyword not found (ffainit).", name);
+      |                                                    ^~                                ~~~~
+cextern/cfitsio/lib/fitscore.c:4892:13: note: ‘snprintf’ output between 39 and 113 bytes into a destination of size 81
+ 4892 |             snprintf(message,FLEN_ERRMSG,"Required %s keyword not found (ffainit).", name);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/fitscore.c:4884:52: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 72 [-Wformat-truncation=]
+ 4884 |             snprintf(message,FLEN_ERRMSG,"Required %s keyword not found (ffainit).", name);
+      |                                                    ^~                                ~~~~
+cextern/cfitsio/lib/fitscore.c:4884:13: note: ‘snprintf’ output between 39 and 113 bytes into a destination of size 81
+ 4884 |             snprintf(message,FLEN_ERRMSG,"Required %s keyword not found (ffainit).", name);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/fitscore.c: In function ‘ffcmph’:
+cextern/cfitsio/lib/fitscore.c:6221:69: warning: ‘ blocks.’ directive output may be truncated writing 8 bytes into a region of size between 7 and 23 [-Wformat-truncation=]
+ 6221 |        "Failed to extend the size of the variable length heap by %ld blocks.",
+      |                                                                     ^~~~~~~~
+cextern/cfitsio/lib/fitscore.c:6220:19: note: ‘snprintf’ output between 67 and 83 bytes into a destination of size 81
+ 6220 |                   snprintf(message,FLEN_ERRMSG,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 6221 |        "Failed to extend the size of the variable length heap by %ld blocks.",
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 6222 |                    nblock);
+      |                    ~~~~~~~
+cextern/cfitsio/lib/fitscore.c: In function ‘ffgcprll’:
+cextern/cfitsio/lib/fitscore.c:5959:69: warning: ‘ blocks.’ directive output may be truncated writing 8 bytes into a region of size between 7 and 23 [-Wformat-truncation=]
+ 5959 |        "Failed to extend the size of the variable length heap by %ld blocks.",
+      |                                                                     ^~~~~~~~
+cextern/cfitsio/lib/fitscore.c:5958:19: note: ‘snprintf’ output between 67 and 83 bytes into a destination of size 81
+ 5958 |                   snprintf(message,FLEN_ERRMSG,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5959 |        "Failed to extend the size of the variable length heap by %ld blocks.",
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5960 |                    nblock);
+      |                    ~~~~~~~
+In file included from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1948,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from ./astropy/timeseries/periodograms/lombscargle/implementations/cython_impl.c:752:
+/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+cextern/cfitsio/lib/getcols.c: In function ‘ffgcls’:
+cextern/cfitsio/lib/getcols.c:442:15: warning: ‘strncat’ output may be truncated copying 20 bytes from a string of length 399 [-Wstringop-truncation]
+  442 |               strncat(array[ii], tmpstr, 20);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcols.c:423:19: warning: ‘strncat’ output may be truncated copying between 0 and 78 bytes from a string of length 79 [-Wstringop-truncation]
+  423 |                   strncat(array[ii], tmpnull, dwidth);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcols.c:442:15: warning: ‘strncat’ output may be truncated copying 20 bytes from a string of length 399 [-Wstringop-truncation]
+  442 |               strncat(array[ii], tmpstr, 20);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcols.c:423:19: warning: ‘strncat’ output may be truncated copying between 0 and 78 bytes from a string of length 79 [-Wstringop-truncation]
+  423 |                   strncat(array[ii], tmpnull, dwidth);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcols.c:384:15: warning: ‘strncat’ output may be truncated copying 20 bytes from a string of length 399 [-Wstringop-truncation]
+  384 |               strncat(array[ii], tmpstr, 20);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcols.c:365:19: warning: ‘strncat’ output may be truncated copying between 0 and 78 bytes from a string of length 79 [-Wstringop-truncation]
+  365 |                   strncat(array[ii], tmpnull, dwidth);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcols.c:384:15: warning: ‘strncat’ output may be truncated copying 20 bytes from a string of length 399 [-Wstringop-truncation]
+  384 |               strncat(array[ii], tmpstr, 20);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcols.c:365:19: warning: ‘strncat’ output may be truncated copying between 0 and 78 bytes from a string of length 79 [-Wstringop-truncation]
+  365 |                   strncat(array[ii], tmpnull, dwidth);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcols.c:587:19: warning: ‘strncat’ output may be truncated copying between 0 and 78 bytes from a string of length 79 [-Wstringop-truncation]
+  587 |                   strncat(array[ii], tmpnull, dwidth);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getcoluj.c: In function ‘fffi8u4’:
+cextern/cfitsio/lib/getcoluj.c:1331:36: warning: comparison of integer expressions of different signedness: ‘LONGLONG’ {aka ‘long long int’} and ‘long unsigned int’ [-Wsign-compare]
+ 1331 |                 else if (input[ii] > ULONG_MAX)
+      |                                    ^
+cextern/cfitsio/lib/getcoluj.c:1414:40: warning: comparison of integer expressions of different signedness: ‘LONGLONG’ {aka ‘long long int’} and ‘long unsigned int’ [-Wsign-compare]
+ 1414 |                     else if (input[ii] > ULONG_MAX)
+      |                                        ^
+cextern/cfitsio/lib/getkey.c: In function ‘ffgsky’:
+cextern/cfitsio/lib/getkey.c:1080:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1080 |         if (firstchar <= len)
+      |                       ^~
+cextern/cfitsio/lib/getkey.c: In function ‘ffgcnt’:
+cextern/cfitsio/lib/getkey.c:1134:9: warning: ‘strncpy’ output truncated copying 10 bytes from a string of length 11 [-Wstringop-truncation]
+ 1134 |         strncpy(card, "D2345678=  ", 10); /* overwrite a dummy keyword name */
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c: In function ‘ffgphd.part.0’:
+cextern/cfitsio/lib/getkey.c:2855:62: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 33 [-Wformat-truncation=]
+ 2855 |             "First keyword of the extension is not XTENSION: %s", name);
+      |                                                              ^~   ~~~~
+cextern/cfitsio/lib/getkey.c:2854:13: note: ‘snprintf’ output between 49 and 123 bytes into a destination of size 81
+ 2854 |             snprintf(message, FLEN_ERRMSG,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2855 |             "First keyword of the extension is not XTENSION: %s", name);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2847:53: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 49 [-Wformat-truncation=]
+ 2847 |                    "This is not an IMAGE extension: %s", value);
+      |                                                     ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:2846:17: note: ‘snprintf’ output between 33 and 103 bytes into a destination of size 81
+ 2846 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2847 |                    "This is not an IMAGE extension: %s", value);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2821:62: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 40 [-Wformat-truncation=]
+ 2821 |                    "First keyword of the file is not SIMPLE: %s", name);
+      |                                                              ^~   ~~~~
+cextern/cfitsio/lib/getkey.c:2820:13: note: ‘snprintf’ output between 42 and 116 bytes into a destination of size 81
+ 2820 |             snprintf(message, FLEN_ERRMSG,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2821 |                    "First keyword of the file is not SIMPLE: %s", name);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2930:48: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 47 [-Wformat-truncation=]
+ 2930 |             "Illegal value for BITPIX keyword: %s", value);
+      |                                                ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:2929:13: note: ‘snprintf’ output between 35 and 105 bytes into a destination of size 81
+ 2929 |             snprintf(message, FLEN_ERRMSG,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2930 |             "Illegal value for BITPIX keyword: %s", value);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2921:57: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 38 [-Wformat-truncation=]
+ 2921 |             "Value of BITPIX keyword is not an integer: %s", value);
+      |                                                         ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:2920:13: note: ‘snprintf’ output between 44 and 114 bytes into a destination of size 81
+ 2920 |             snprintf(message, FLEN_ERRMSG,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2921 |             "Value of BITPIX keyword is not an integer: %s", value);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2913:61: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 34 [-Wformat-truncation=]
+ 2913 |             "Second keyword of the extension is not BITPIX: %s", name);
+      |                                                             ^~   ~~~~
+cextern/cfitsio/lib/getkey.c:2912:13: note: ‘snprintf’ output between 48 and 122 bytes into a destination of size 81
+ 2912 |             snprintf(message, FLEN_ERRMSG,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2913 |             "Second keyword of the extension is not BITPIX: %s", name);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:3021:70: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size between 18 and 28 [-Wformat-truncation=]
+ 3021 |               "Name of keyword no. %d contains illegal character(s): %s",
+      |                                                                      ^~
+ 3022 |               nextkey, name);
+      |                        ~~~~                                           
+cextern/cfitsio/lib/getkey.c:3020:11: note: ‘snprintf’ output between 54 and 138 bytes into a destination of size 81
+ 3020 |           snprintf(message, FLEN_ERRMSG,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3021 |               "Name of keyword no. %d contains illegal character(s): %s",
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3022 |               nextkey, name);
+      |               ~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:3118:67: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 32 [-Wformat-truncation=]
+ 3118 |                 "Error reading EXTEND keyword value as a logical: %s", value);
+      |                                                                   ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:3117:17: note: ‘snprintf’ output between 50 and 120 bytes into a destination of size 81
+ 3117 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3118 |                 "Error reading EXTEND keyword value as a logical: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:3101:68: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 31 [-Wformat-truncation=]
+ 3101 |                 "Error reading GCOUNT keyword value as an integer: %s", value);
+      |                                                                    ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:3100:17: note: ‘snprintf’ output between 51 and 121 bytes into a destination of size 81
+ 3100 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3101 |                 "Error reading GCOUNT keyword value as an integer: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:3088:68: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 31 [-Wformat-truncation=]
+ 3088 |                 "Error reading PCOUNT keyword value as an integer: %s", value);
+      |                                                                    ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:3087:17: note: ‘snprintf’ output between 51 and 121 bytes into a destination of size 81
+ 3087 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3088 |                 "Error reading PCOUNT keyword value as an integer: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:3075:67: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 32 [-Wformat-truncation=]
+ 3075 |                 "Error reading BLANK keyword value as an integer: %s", value);
+      |                                                                   ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:3074:17: note: ‘snprintf’ output between 50 and 120 bytes into a destination of size 81
+ 3074 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3075 |                 "Error reading BLANK keyword value as an integer: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:3058:65: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 34 [-Wformat-truncation=]
+ 3058 |                 "Error reading BZERO keyword value as a double: %s", value);
+      |                                                                 ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:3057:17: note: ‘snprintf’ output between 48 and 118 bytes into a destination of size 81
+ 3057 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3058 |                 "Error reading BZERO keyword value as a double: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:3041:66: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 33 [-Wformat-truncation=]
+ 3041 |                 "Error reading BSCALE keyword value as a double: %s", value);
+      |                                                                  ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:3040:17: note: ‘snprintf’ output between 49 and 119 bytes into a destination of size 81
+ 3040 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3041 |                 "Error reading BSCALE keyword value as a double: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c: In function ‘ffghtb’:
+cextern/cfitsio/lib/getkey.c:2282:58: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 33 [-Wformat-truncation=]
+ 2282 |         "First keyword of the extension is not XTENSION: %s", name);
+      |                                                          ^~   ~~~~
+cextern/cfitsio/lib/getkey.c:2281:9: note: ‘snprintf’ output between 49 and 123 bytes into a destination of size 81
+ 2281 |         snprintf(message, FLEN_ERRMSG,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2282 |         "First keyword of the extension is not XTENSION: %s", name);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2273:49: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 50 [-Wformat-truncation=]
+ 2273 |                 "This is not a TABLE extension: %s", value);
+      |                                                 ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:2272:17: note: ‘snprintf’ output between 32 and 102 bytes into a destination of size 81
+ 2272 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2273 |                 "This is not a TABLE extension: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c: In function ‘ffghtbll’:
+cextern/cfitsio/lib/getkey.c:2425:58: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 33 [-Wformat-truncation=]
+ 2425 |         "First keyword of the extension is not XTENSION: %s", name);
+      |                                                          ^~   ~~~~
+cextern/cfitsio/lib/getkey.c:2424:9: note: ‘snprintf’ output between 49 and 123 bytes into a destination of size 81
+ 2424 |         snprintf(message, FLEN_ERRMSG,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2425 |         "First keyword of the extension is not XTENSION: %s", name);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2416:49: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 50 [-Wformat-truncation=]
+ 2416 |                 "This is not a TABLE extension: %s", value);
+      |                                                 ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:2415:17: note: ‘snprintf’ output between 32 and 102 bytes into a destination of size 81
+ 2415 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2416 |                 "This is not a TABLE extension: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c: In function ‘ffghbn’:
+cextern/cfitsio/lib/getkey.c:2570:58: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 33 [-Wformat-truncation=]
+ 2570 |         "First keyword of the extension is not XTENSION: %s", name);
+      |                                                          ^~   ~~~~
+cextern/cfitsio/lib/getkey.c:2569:9: note: ‘snprintf’ output between 49 and 123 bytes into a destination of size 81
+ 2569 |         snprintf(message, FLEN_ERRMSG,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2570 |         "First keyword of the extension is not XTENSION: %s", name);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2561:52: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 47 [-Wformat-truncation=]
+ 2561 |                 "This is not a BINTABLE extension: %s", value);
+      |                                                    ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:2560:17: note: ‘snprintf’ output between 35 and 105 bytes into a destination of size 81
+ 2560 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2561 |                 "This is not a BINTABLE extension: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c: In function ‘ffghbnll’:
+cextern/cfitsio/lib/getkey.c:2693:58: warning: ‘%s’ directive output may be truncated writing up to 74 bytes into a region of size 33 [-Wformat-truncation=]
+ 2693 |         "First keyword of the extension is not XTENSION: %s", name);
+      |                                                          ^~   ~~~~
+cextern/cfitsio/lib/getkey.c:2692:9: note: ‘snprintf’ output between 49 and 123 bytes into a destination of size 81
+ 2692 |         snprintf(message, FLEN_ERRMSG,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2693 |         "First keyword of the extension is not XTENSION: %s", name);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/getkey.c:2684:52: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 47 [-Wformat-truncation=]
+ 2684 |                 "This is not a BINTABLE extension: %s", value);
+      |                                                    ^~   ~~~~~
+cextern/cfitsio/lib/getkey.c:2683:17: note: ‘snprintf’ output between 35 and 105 bytes into a destination of size 81
+ 2683 |                 snprintf(message, FLEN_ERRMSG,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2684 |                 "This is not a BINTABLE extension: %s", value);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/group.c: In function ‘ffgmop’:
+cextern/cfitsio/lib/group.c:2290:62: warning: ‘%s’ directive output may be truncated writing up to 70 bytes into a region of size 39 [-Wformat-truncation=]
+ 2290 |                   "Cannot open member HDU file with URI type %s (ffgmop)",
+      |                                                              ^~
+ 2291 |                           uri);
+      |                           ~~~                                 
+cextern/cfitsio/lib/group.c:2289:19: note: ‘snprintf’ output between 52 and 122 bytes into a destination of size 81
+ 2289 |                   snprintf(card,FLEN_CARD,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
+ 2290 |                   "Cannot open member HDU file with URI type %s (ffgmop)",
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2291 |                           uri);
+      |                           ~~~~
+./astropy/cosmology/flrw/scalar_inv_efuncs.c: In function ‘__pyx_f_7astropy_9cosmology_4flrw_17scalar_inv_efuncs_nufunc’:
+./astropy/cosmology/flrw/scalar_inv_efuncs.c:6424:33: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+ 6424 |   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
+      |                                 ^
+cextern/cfitsio/lib/grparser.c: In function ‘ngp_keyword_all_write’:
+cextern/cfitsio/lib/grparser.c:825:15: warning: the comparison will always evaluate as ‘true’ for the address of ‘comment’ will never be NULL [-Waddress]
+  825 |           if (ngph->tok[i].comment && *ngph->tok[i].comment)    /* do not update with a blank comment */
+      |               ^~~~
+In file included from cextern/cfitsio/lib/grparser.c:80:
+cextern/cfitsio/lib/grparser.h:124:25: note: ‘comment’ declared here
+  124 |         char            comment[NGP_MAX_COMMENT];
+      |                         ^~~~~~~
+cextern/cfitsio/lib/imcompress.c: In function ‘imcomp_decompress_tile’:
+cextern/cfitsio/lib/imcompress.c:6072:30: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 6072 |             if (tilebytesize == 4 * tilelen) {  /* float pixels */
+      |                              ^~
+cextern/cfitsio/lib/imcompress.c:6103:37: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 6103 |             } else if (tilebytesize == 8 * tilelen) { /* double pixels */
+      |                                     ^~
+cextern/cfitsio/lib/imcompress.c: In function ‘fits_compress_table’:
+cextern/cfitsio/lib/imcompress.c:8517:30: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘LONGLONG’ {aka ‘long long int’} [-Wsign-compare]
+ 8517 |                     if (dlen < vlamemlen) {
+      |                              ^
+cextern/cfitsio/lib/imcompress.c: In function ‘fits_uncompress_table’:
+cextern/cfitsio/lib/imcompress.c:9258:39: warning: comparison of integer expressions of different signedness: ‘LONGLONG’ {aka ‘long long int’} and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 9258 |                         if (cvlalen   == vlamemlen ) {
+      |                                       ^~
+cextern/cfitsio/lib/imcompress.c: In function ‘fits_compress_table’:
+cextern/cfitsio/lib/imcompress.c:8170:5: warning: ‘strncpy’ output truncated before terminating nul copying 7 bytes from a string of the same length [-Wstringop-truncation]
+ 8170 |     strncpy(card, "ZNAXIS1", 7);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/imcompress.c:8174:5: warning: ‘strncpy’ output truncated before terminating nul copying 7 bytes from a string of the same length [-Wstringop-truncation]
+ 8174 |     strncpy(card, "ZNAXIS2", 7);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/imcompress.c:8178:5: warning: ‘strncpy’ output truncated before terminating nul copying 7 bytes from a string of the same length [-Wstringop-truncation]
+ 8178 |     strncpy(card, "ZPCOUNT", 7);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/imcompress.c: In function ‘fits_uncompress_table’:
+cextern/cfitsio/lib/imcompress.c:8803:5: warning: ‘strncpy’ output truncated before terminating nul copying 7 bytes from a string of the same length [-Wstringop-truncation]
+ 8803 |     strncpy(card, "NAXIS1 ", 7);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/imcompress.c:8807:5: warning: ‘strncpy’ output truncated before terminating nul copying 7 bytes from a string of the same length [-Wstringop-truncation]
+ 8807 |     strncpy(card, "NAXIS2 ", 7);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/imcompress.c:8811:5: warning: ‘strncpy’ output truncated before terminating nul copying 7 bytes from a string of the same length [-Wstringop-truncation]
+ 8811 |     strncpy(card, "PCOUNT ", 7);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/imcompress.c: In function ‘imcomp_get_compressed_image_par’:
+cextern/cfitsio/lib/imcompress.c:5271:5: warning: ‘strncat’ output may be truncated copying 11 bytes from a string of length 70 [-Wstringop-truncation]
+ 5271 |     strncat((infptr->Fptr)->zcmptype, value, 11);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/imcompress.c: In function ‘fits_compress_table’:
+cextern/cfitsio/lib/imcompress.c:8671:13: warning: ‘strncat’ output may be truncated copying between 0 and 29 bytes from a string of length 70 [-Wstringop-truncation]
+ 8671 |             strncat(results[ii],tempstring,29-strlen(results[ii]));
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/imcompress.c:8544:17: warning: ‘strncat’ output may be truncated copying between 0 and 29 bytes from a string of length 70 [-Wstringop-truncation]
+ 8544 |                 strncat(results[ii],tempstring, 29-strlen(results[ii]));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c: In function ‘iraftofits’:
+cextern/cfitsio/lib/iraffits.c:576:11: warning: ‘strncpy’ output truncated before terminating nul copying 3 bytes from a string of the same length [-Wstringop-truncation]
+  576 |     (void)strncpy (endline,"END", 3);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:889:5: warning: ‘strncpy’ output truncated before terminating nul copying 3 bytes from a string of the same length [-Wstringop-truncation]
+  889 |     strncpy (endline,"   ",3);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c: In function ‘hputcom’:
+cextern/cfitsio/lib/iraffits.c:2088:13: warning: ‘strncpy’ output truncated before terminating nul copying 2 bytes from a string of the same length [-Wstringop-truncation]
+ 2088 |             strncpy (c0, "/ ",2);
+      |             ^~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c: In function ‘hputc’:
+cextern/cfitsio/lib/iraffits.c:1930:9: warning: ‘strncpy’ output truncated before terminating nul copying as many bytes from a string as its length [-Wstringop-truncation]
+ 1930 |         strncpy (v1+9,value,lval);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:1909:12: note: length computed here
+ 1909 |     lval = strlen (value);
+      |            ^~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:1992:5: warning: ‘strncpy’ output truncated before terminating nul copying as many bytes from a string as its length [-Wstringop-truncation]
+ 1992 |     strncpy (v1, keyword, lkeyword);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:1908:16: note: length computed here
+ 1908 |     lkeyword = strlen (keyword);
+      |                ^~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:2009:9: warning: ‘strncpy’ output truncated before terminating nul copying as many bytes from a string as its length [-Wstringop-truncation]
+ 2009 |         strncpy (vp, value, lval);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:1909:12: note: length computed here
+ 1909 |     lval = strlen (value);
+      |            ^~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:2001:9: warning: ‘strncpy’ output truncated before terminating nul copying as many bytes from a string as its length [-Wstringop-truncation]
+ 2001 |         strncpy (vp, value, lval);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:1909:12: note: length computed here
+ 1909 |     lval = strlen (value);
+      |            ^~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:2020:13: warning: ‘strncpy’ output may be truncated copying between 0 and 49 bytes from a string of length 49 [-Wstringop-truncation]
+ 2020 |             strncpy (vp, newcom, lcom);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c: In function ‘iraftofits.isra’:
+cextern/cfitsio/lib/iraffits.c:624:11: warning: ‘strncpy’ output may be truncated copying 80 bytes from a string of length 80 [-Wstringop-truncation]
+  624 |     (void)strncpy (fitsheader, endline, 80);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘hputs’,
+    inlined from ‘iraftofits.isra’ at cextern/cfitsio/lib/iraffits.c:746:5:
+cextern/cfitsio/lib/iraffits.c:1875:5: warning: ‘strncpy’ specified bound depends on the length of the source argument [-Wstringop-truncation]
+ 1875 |     strncpy (&value[1],cval,lcval);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:1869:13: note: length computed here
+ 1869 |     lcval = strlen (cval);
+      |             ^~~~~~~~~~~~~
+In function ‘hputs’,
+    inlined from ‘iraftofits.isra’ at cextern/cfitsio/lib/iraffits.c:771:2:
+cextern/cfitsio/lib/iraffits.c:1875:5: warning: ‘strncpy’ specified bound depends on the length of the source argument [-Wstringop-truncation]
+ 1875 |     strncpy (&value[1],cval,lcval);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:1869:13: note: length computed here
+ 1869 |     lcval = strlen (cval);
+      |             ^~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c: In function ‘iraftofits.isra’:
+cextern/cfitsio/lib/iraffits.c:864:31: warning: ‘strncpy’ output may be truncated copying 80 bytes from a string of length 80 [-Wstringop-truncation]
+  864 |                         (void)strncpy (fhead, fitsline, 80);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:853:27: warning: ‘strncpy’ output may be truncated copying 80 bytes from a string of length 80 [-Wstringop-truncation]
+  853 |                     (void)strncpy (fhead, fitsline, 80);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:823:31: warning: ‘strncpy’ output may be truncated copying 80 bytes from a string of length 80 [-Wstringop-truncation]
+  823 |                         (void)strncpy (fhead, fitsline, 80);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:811:23: warning: ‘strncpy’ output may be truncated copying 80 bytes from a string of length 80 [-Wstringop-truncation]
+  811 |                 (void)strncpy (fhead, fitsline, 80);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/iraffits.c:880:11: warning: ‘strncpy’ output may be truncated copying 80 bytes from a string of length 80 [-Wstringop-truncation]
+  880 |     (void)strncpy (fhead, endline, 80);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/modkey.c: In function ‘ffmkls’:
+cextern/cfitsio/lib/modkey.c:783:12: warning: ‘strncpy’ output truncated copying 2 bytes from a string of length 3 [-Wstringop-truncation]
+  783 |            strncpy(&card[8], "   ",  2);  /* overwrite the '=' */
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/modkey.c: In function ‘ffikls’:
+cextern/cfitsio/lib/modkey.c:1282:12: warning: ‘strncpy’ output truncated copying 2 bytes from a string of length 3 [-Wstringop-truncation]
+ 1282 |            strncpy(&card[8], "   ",  2);  /* overwrite the '=' */
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/modkey.c: In function ‘ffpunt’:
+cextern/cfitsio/lib/modkey.c:567:9: warning: ‘strncat’ output may be truncated copying between 0 and 72 bytes from a string of length 72 [-Wstringop-truncation]
+  567 |         strncat(newcomm, oldcomm, len);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/modkey.c:562:13: warning: ‘strncat’ output may be truncated copying between 0 and 72 bytes from a string of length 72 [-Wstringop-truncation]
+  562 |             strncat(newcomm, oldcomm, len);  /* append old comment onto new */
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/putkey.c: In function ‘ffprec’:
+cextern/cfitsio/lib/putkey.c:326:19: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+  326 |     for (ii=0; ii < keylength; ii++)       /* make sure keyword name is uppercase */
+      |                   ^
+cextern/cfitsio/lib/putkey.c: In function ‘ffpkls’:
+cextern/cfitsio/lib/putkey.c:483:12: warning: ‘strncpy’ output truncated copying 2 bytes from a string of length 3 [-Wstringop-truncation]
+  483 |            strncpy(&card[8], "   ",  2);  /* overwrite the '=' */
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/region.c:988:1: warning: "/*" within comment [-Wcomment]
+  988 | /*---------------------------------------------------------------------------*/
+      |  
+cextern/cfitsio/lib/region.c: In function ‘fits_free_region’:
+cextern/cfitsio/lib/region.c:1025:42: warning: pointer used after ‘free’ [-Wuse-after-free]
+ 1025 |                freedPolyPtrs[nFreedPoly] = ptsToFree;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+cextern/cfitsio/lib/region.c:1017:16: note: call to ‘free’ here
+ 1017 |                free(ptsToFree);
+      |                ^~~~~~~~~~~~~~~
+cextern/cfitsio/lib/swapproc.c: In function ‘ffswap2’:
+cextern/cfitsio/lib/swapproc.c:87:24: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘long unsigned int’ [-Wsign-compare]
+   87 |     for (ii = peel; ii < (nvals - peel - (nvals - peel) % 8); ii+=8) {
+      |                        ^
+cextern/cfitsio/lib/wcssub.c: In function ‘ffgtwcs’:
+cextern/cfitsio/lib/wcssub.c:847:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  847 |     strncat(cptr, blanks, 50);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:852:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  852 |     strncat(cptr, blanks, 50);  /* pad with blanks */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:858:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  858 |     strncat(cptr, blanks, 50);  /* pad with blanks */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:889:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  889 |     strncat(cptr, blanks, 50);  /* pad with blanks */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:898:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  898 |     strncat(cptr, blanks, 50);  /* pad with blanks */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:907:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  907 |     strncat(cptr, blanks, 50);  /* pad with blanks */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:916:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  916 |     strncat(cptr, blanks, 50);  /* pad with blanks */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:925:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  925 |     strncat(cptr, blanks, 50);  /* pad with blanks */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:934:5: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  934 |     strncat(cptr, blanks, 50);  /* pad with blanks */
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:945:9: warning: ‘strncat’ output truncated copying 50 bytes from a string of length 80 [-Wstringop-truncation]
+  945 |         strncat(cptr, blanks, 50);  /* pad with blanks */
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/wcssub.c:1040:5: warning: ‘strncat’ output truncated copying 77 bytes from a string of length 80 [-Wstringop-truncation]
+ 1040 |     strncat(cptr, blanks, 77);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+cextern/cfitsio/lib/zcompress.c: In function ‘uncompress2file’:
+cextern/cfitsio/lib/zcompress.c:347:13: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+  347 |             != (d_stream.total_out - bytes_out)) {
+      |             ^~
+cextern/cfitsio/lib/zcompress.c: In function ‘compress2file_from_mem’:
+cextern/cfitsio/lib/zcompress.c:515:13: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+  515 |             != (c_stream.total_out - bytes_out)) {
+      |             ^~
+cextern/cfitsio/lib/zuncompress.c: In function ‘write_buf’:
+cextern/cfitsio/lib/zuncompress.c:581:27: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  581 |       if (bytes_out + cnt > *memsize)
+      |                           ^
