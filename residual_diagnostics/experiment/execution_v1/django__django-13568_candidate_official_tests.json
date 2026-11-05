@@ -1,0 +1,51 @@
+{
+  "started_at_utc": "2026-11-05T15:19:20.674194+00:00",
+  "finished_at_utc": "2026-11-05T15:19:21.248874+00:00",
+  "python": "3.12.13",
+  "source": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate",
+  "targets": [
+    "auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique",
+    "auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint"
+  ],
+  "events": [
+    {
+      "test_id": "auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique",
+      "outcome": "error",
+      "exception_type": "NameError",
+      "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/test/utils.py\", line 382, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/tests/auth_tests/test_checks.py\", line 104, in test_username_partially_unique\n    errors = checks.run_checks(app_configs=self.apps.get_app_configs())\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/core/checks/registry.py\", line 71, in run_checks\n    new_errors = check(app_configs=app_configs, databases=databases)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n"
+    },
+    {
+      "test_id": "auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint",
+      "outcome": "error",
+      "exception_type": "NameError",
+      "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/test/utils.py\", line 382, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/tests/auth_tests/test_checks.py\", line 139, in test_username_unique_with_model_constraint\n    self.assertEqual(checks.run_checks(app_configs=self.apps.get_app_configs()), [])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/core/checks/registry.py\", line 71, in run_checks\n    new_errors = check(app_configs=app_configs, databases=databases)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n"
+    }
+  ],
+  "runner_summaries": [
+    {
+      "tests_run": 2,
+      "failures": 0,
+      "errors": 2,
+      "skipped": 0,
+      "successful": false
+    }
+  ],
+  "top_exception": null,
+  "dependencies": {
+    "PyYAML": "6.0.2",
+    "Jinja2": "3.1.6",
+    "argon2-cffi": "23.1.0",
+    "docutils": "0.20.1",
+    "argon2-cffi-bindings": "26.1.0",
+    "asgiref": "3.7.2",
+    "cffi": "2.1.1",
+    "pycparser": "3.12",
+    "pillow": "10.4.0",
+    "MarkupSafe": "3.0.4",
+    "setuptools": "80.9.0",
+    "pytz": "2023.3",
+    "sqlparse": "0.4.4",
+    "bcrypt": "4.1.1",
+    "psycopg2-binary": "2.9.9"
+  }
+}

@@ -1,0 +1,25 @@
+test_username_partially_unique (auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique) ... FAIL
+test_username_unique_with_model_constraint (auth_tests.test_checks.UserModelChecksTests.test_username_unique_with_model_constraint) ... ok
+
+======================================================================
+FAIL: test_username_partially_unique (auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate_import_only/django/test/utils.py", line 382, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate_import_only/tests/auth_tests/test_checks.py", line 105, in test_username_partially_unique
+    self.assertEqual(errors, [
+AssertionError: Lists differ: [] != [<Error: level=40, msg="'CustomUserPartial[228 chars]03'>]
+
+Second list contains 1 additional elements.
+First extra element 0:
+<Error: level=40, msg="'CustomUserPartiallyUnique.username' must be unique because it is named as the 'USERNAME_FIELD'.", hint=None, obj=<class 'auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique.<locals>.CustomUserPartiallyUnique'>, id='auth.E003'>
+
+- []
++ [<Error: level=40, msg="'CustomUserPartiallyUnique.username' must be unique because it is named as the 'USERNAME_FIELD'.", hint=None, obj=<class 'auth_tests.test_checks.UserModelChecksTests.test_username_partially_unique.<locals>.CustomUserPartiallyUnique'>, id='auth.E003'>]
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.014s
+
+FAILED (failures=1)

@@ -8,11 +8,11 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v12`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v12).
+Version: [`2026.11.06-v13`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.06-v13).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
-This release preserves the historical analysis and separately versions two new,
-controlled adaptations of related work. The camera-ready candidate remains **10
+This release adds residual CPU diagnostics for four archived failing candidates,
+while preserving historical analysis, earlier adaptations and native saved-output replays. The camera-ready candidate remains **10
 pages: 9 body + 1 references**. Publisher rights metadata and final submission
 are separate from releasing this research artifact.
 
@@ -202,3 +202,12 @@ saved outputs, separate invalid-response accounting and offline scripts are
 included. These are targeted technical findings, not independent human labels,
 fresh native-model inference or all-system same-task comparisons. Checklist
 coverage remains49/58(84.48%). The manuscript stays9+1 pages; prior releases remain.
+
+
+## v13 residual CPU diagnostics
+
+See [residual_diagnostics](residual_diagnostics/README.md) for4 post-hoc cases,
+26 final processes,122 executed test slots and51 witness scenarios. Separate
+warning-policy and import-only interventions expose deeper functional effects;
+PCA provides a normal-path qualification. No new human ratings or model inference.
+Checklist coverage remains49/58(84.48%); the paper remains9+1 pages.

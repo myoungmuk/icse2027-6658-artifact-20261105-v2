@@ -1,0 +1,2430 @@
+{
+  "scope": "Four post-hoc cases with previously untested deeper assertions. Author technical diagnostics, not independent rationale labels or a population error rate.",
+  "case_count": 4,
+  "source_trees": 13,
+  "final_processes": 26,
+  "all_attempt_processes": 36,
+  "retained_replaced_attempts": {
+    "Django_witness_app_registry_failures": 4,
+    "Astropy_pytest_plugin_collection_failures": 6
+  },
+  "final_official_or_amended_processes": 13,
+  "final_test_slots": 122,
+  "final_skips": 0,
+  "newly_enabled_Dask_slots": 48,
+  "final_witness_processes": 13,
+  "witness_scenarios": 51,
+  "tests": [
+    {
+      "instance_id": "django__django-13568",
+      "variant": "base",
+      "policy": "official",
+      "source": "experiment/execution_v1/django__django-13568_base_official_tests.json",
+      "returncode": 1,
+      "tests": 2,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "django__django-13568",
+      "variant": "candidate",
+      "policy": "official",
+      "source": "experiment/execution_v1/django__django-13568_candidate_official_tests.json",
+      "returncode": 1,
+      "tests": 2,
+      "failures": 0,
+      "errors": 2,
+      "skipped": 0
+    },
+    {
+      "instance_id": "django__django-13568",
+      "variant": "developer",
+      "policy": "official",
+      "source": "experiment/execution_v1/django__django-13568_developer_official_tests.json",
+      "returncode": 0,
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "django__django-13568",
+      "variant": "candidate_import_only",
+      "policy": "official",
+      "source": "experiment/execution_v1/django__django-13568_candidate_import_only_official_tests.json",
+      "returncode": 1,
+      "tests": 2,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "variant": "base",
+      "policy": "official",
+      "source": "experiment/execution_v2/astropy__astropy-13236_base_official.xml",
+      "returncode": 1,
+      "tests": 3,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "variant": "base",
+      "policy": "official_futurewarning_ignored",
+      "source": "experiment/execution_v2/astropy__astropy-13236_base_official_futurewarning_ignored.xml",
+      "returncode": 1,
+      "tests": 3,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "variant": "candidate",
+      "policy": "official",
+      "source": "experiment/execution_v2/astropy__astropy-13236_candidate_official.xml",
+      "returncode": 1,
+      "tests": 3,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "variant": "candidate",
+      "policy": "official_futurewarning_ignored",
+      "source": "experiment/execution_v2/astropy__astropy-13236_candidate_official_futurewarning_ignored.xml",
+      "returncode": 1,
+      "tests": 3,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "variant": "developer",
+      "policy": "official",
+      "source": "experiment/execution_v2/astropy__astropy-13236_developer_official.xml",
+      "returncode": 0,
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "variant": "developer",
+      "policy": "official_futurewarning_ignored",
+      "source": "experiment/execution_v2/astropy__astropy-13236_developer_official_futurewarning_ignored.xml",
+      "returncode": 0,
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "pydata__xarray-6744",
+      "variant": "base",
+      "policy": "official",
+      "source": "experiment/execution_v1/pydata__xarray-6744_base_official.xml",
+      "returncode": 1,
+      "tests": 32,
+      "failures": 6,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "pydata__xarray-6744",
+      "variant": "candidate",
+      "policy": "official",
+      "source": "experiment/execution_v1/pydata__xarray-6744_candidate_official.xml",
+      "returncode": 1,
+      "tests": 32,
+      "failures": 12,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "pydata__xarray-6744",
+      "variant": "developer",
+      "policy": "official",
+      "source": "experiment/execution_v1/pydata__xarray-6744_developer_official.xml",
+      "returncode": 0,
+      "tests": 32,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "witnesses": {
+    "django__django-13568": {
+      "base": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/base/django/__init__.py",
+          "version": "3.2"
+        },
+        "scenarios": [
+          {
+            "name": "single_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.E003"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' must be unique because it is named as the 'USERNAME_FIELD'."
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "single_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.W004"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' is named as the 'USERNAME_FIELD', but it is not unique."
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "multi_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.E003"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' must be unique because it is named as the 'USERNAME_FIELD'."
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "multi_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.W004"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' is named as the 'USERNAME_FIELD', but it is not unique."
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "conditional_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.E003"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' must be unique because it is named as the 'USERNAME_FIELD'."
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "conditional_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.W004"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' is named as the 'USERNAME_FIELD', but it is not unique."
+              ]
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "candidate": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/__init__.py",
+          "version": "3.2"
+        },
+        "scenarios": [
+          {
+            "name": "single_default",
+            "status": "exception",
+            "exception_type": "NameError",
+            "message": "name 'models' is not defined",
+            "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+            "warnings": []
+          },
+          {
+            "name": "single_custom",
+            "status": "exception",
+            "exception_type": "NameError",
+            "message": "name 'models' is not defined",
+            "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+            "warnings": []
+          },
+          {
+            "name": "multi_default",
+            "status": "exception",
+            "exception_type": "NameError",
+            "message": "name 'models' is not defined",
+            "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+            "warnings": []
+          },
+          {
+            "name": "multi_custom",
+            "status": "exception",
+            "exception_type": "NameError",
+            "message": "name 'models' is not defined",
+            "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+            "warnings": []
+          },
+          {
+            "name": "conditional_default",
+            "status": "exception",
+            "exception_type": "NameError",
+            "message": "name 'models' is not defined",
+            "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+            "warnings": []
+          },
+          {
+            "name": "conditional_custom",
+            "status": "exception",
+            "exception_type": "NameError",
+            "message": "name 'models' is not defined",
+            "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "developer": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/developer/django/__init__.py",
+          "version": "3.2"
+        },
+        "scenarios": [
+          {
+            "name": "single_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [],
+              "messages": []
+            },
+            "warnings": []
+          },
+          {
+            "name": "single_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [],
+              "messages": []
+            },
+            "warnings": []
+          },
+          {
+            "name": "multi_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.E003"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' must be unique because it is named as the 'USERNAME_FIELD'."
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "multi_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.W004"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' is named as the 'USERNAME_FIELD', but it is not unique."
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "conditional_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.E003"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' must be unique because it is named as the 'USERNAME_FIELD'."
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "conditional_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [
+                "auth.W004"
+              ],
+              "messages": [
+                "'DiagnosticUser.username' is named as the 'USERNAME_FIELD', but it is not unique."
+              ]
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "candidate_import_only": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate_import_only/django/__init__.py",
+          "version": "3.2"
+        },
+        "scenarios": [
+          {
+            "name": "single_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [],
+              "messages": []
+            },
+            "warnings": []
+          },
+          {
+            "name": "single_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [],
+              "messages": []
+            },
+            "warnings": []
+          },
+          {
+            "name": "multi_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [],
+              "messages": []
+            },
+            "warnings": []
+          },
+          {
+            "name": "multi_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [],
+              "messages": []
+            },
+            "warnings": []
+          },
+          {
+            "name": "conditional_default",
+            "status": "returned",
+            "result": {
+              "check_ids": [],
+              "messages": []
+            },
+            "warnings": []
+          },
+          {
+            "name": "conditional_custom",
+            "status": "returned",
+            "result": {
+              "check_ids": [],
+              "messages": []
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      }
+    },
+    "astropy__astropy-13236": {
+      "base": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/astropy__astropy-13236/base/astropy/__init__.py",
+          "version": "5.0.0",
+          "numpy": "1.23.5"
+        },
+        "scenarios": [
+          {
+            "name": "structured_unmasked",
+            "status": "returned",
+            "result": {
+              "column_type": "NdarrayMixin",
+              "column_module": "astropy.table.ndarray_mixin",
+              "dtype": "[('x', '<i4'), ('y', '<f8')]",
+              "values": [
+                [
+                  1,
+                  2.5
+                ],
+                [
+                  3,
+                  4.5
+                ]
+              ],
+              "has_mask": false,
+              "ecsv_write_status": "returned",
+              "ecsv_roundtrip_column_type": "NdarrayMixin",
+              "ecsv_text": "# %ECSV 1.0\n# ---\n# datatype:\n# - {name: value.x, datatype: int32}\n# - {name: value.y, datatype: float64}\n# meta: !!omap\n# - __serialized_columns__:\n#     value:\n#       __class__: astropy.table.ndarray_mixin.NdarrayMixin\n#       data: !astropy.table.SerializedColumn\n#         __class__: astropy.table.column.Column\n#         data: !astropy.table.SerializedColumn\n#           x: !astropy.table.SerializedColumn {name: value.x}\n#           y: !astropy.table.SerializedColumn {name: value.y}\n# schema: astropy-2.0\nvalue.x value.y\n1 2.5\n3 4.5\n"
+            },
+            "warnings": []
+          },
+          {
+            "name": "structured_masked",
+            "status": "returned",
+            "result": {
+              "column_type": "NdarrayMixin",
+              "column_module": "astropy.table.ndarray_mixin",
+              "dtype": "[('x', '<i4'), ('y', '<f8')]",
+              "values": [
+                [
+                  1,
+                  2.5
+                ],
+                [
+                  3,
+                  4.5
+                ]
+              ],
+              "has_mask": false,
+              "ecsv_write_status": "returned",
+              "ecsv_roundtrip_column_type": "NdarrayMixin",
+              "ecsv_text": "# %ECSV 1.0\n# ---\n# datatype:\n# - {name: value.x, datatype: int32}\n# - {name: value.y, datatype: float64}\n# meta: !!omap\n# - __serialized_columns__:\n#     value:\n#       __class__: astropy.table.ndarray_mixin.NdarrayMixin\n#       data: !astropy.table.SerializedColumn\n#         __class__: astropy.table.column.Column\n#         data: !astropy.table.SerializedColumn\n#           x: !astropy.table.SerializedColumn {name: value.x}\n#           y: !astropy.table.SerializedColumn {name: value.y}\n# schema: astropy-2.0\nvalue.x value.y\n1 2.5\n3 4.5\n"
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "candidate": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/astropy__astropy-13236/candidate/astropy/__init__.py",
+          "version": "5.0.0",
+          "numpy": "1.23.5"
+        },
+        "scenarios": [
+          {
+            "name": "structured_unmasked",
+            "status": "returned",
+            "result": {
+              "column_type": "Column",
+              "column_module": "astropy.table.column",
+              "dtype": "[('x', '<i4'), ('y', '<f8')]",
+              "values": [
+                [
+                  1,
+                  2.5
+                ],
+                [
+                  3,
+                  4.5
+                ]
+              ],
+              "has_mask": false,
+              "ecsv_write_status": "returned",
+              "ecsv_roundtrip_column_type": "Column",
+              "ecsv_text": "# %ECSV 1.0\n# ---\n# datatype:\n# - {name: value.x, datatype: int32}\n# - {name: value.y, datatype: float64}\n# meta: !!omap\n# - __serialized_columns__:\n#     value:\n#       __class__: astropy.table.column.Column\n#       data: !astropy.table.SerializedColumn\n#         x: !astropy.table.SerializedColumn {name: value.x}\n#         y: !astropy.table.SerializedColumn {name: value.y}\n# schema: astropy-2.0\nvalue.x value.y\n1 2.5\n3 4.5\n"
+            },
+            "warnings": [
+              {
+                "type": "FutureWarning",
+                "message": "In future versions, structured ndarray will be added as a Column. Please wrap your data in a Column object to avoid this warning."
+              }
+            ]
+          },
+          {
+            "name": "structured_masked",
+            "status": "returned",
+            "result": {
+              "column_type": "Column",
+              "column_module": "astropy.table.column",
+              "dtype": "[('x', '<i4'), ('y', '<f8')]",
+              "values": [
+                [
+                  1,
+                  2.5
+                ],
+                [
+                  3,
+                  4.5
+                ]
+              ],
+              "has_mask": false,
+              "ecsv_write_status": "returned",
+              "ecsv_roundtrip_column_type": "Column",
+              "ecsv_text": "# %ECSV 1.0\n# ---\n# datatype:\n# - {name: value.x, datatype: int32}\n# - {name: value.y, datatype: float64}\n# meta: !!omap\n# - __serialized_columns__:\n#     value:\n#       __class__: astropy.table.column.Column\n#       data: !astropy.table.SerializedColumn\n#         x: !astropy.table.SerializedColumn {name: value.x}\n#         y: !astropy.table.SerializedColumn {name: value.y}\n# schema: astropy-2.0\nvalue.x value.y\n1 2.5\n3 4.5\n"
+            },
+            "warnings": [
+              {
+                "type": "FutureWarning",
+                "message": "In future versions, structured ndarray will be added as a Column. Please wrap your data in a Column object to avoid this warning."
+              }
+            ]
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "developer": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/astropy__astropy-13236/developer/astropy/__init__.py",
+          "version": "5.0.0",
+          "numpy": "1.23.5"
+        },
+        "scenarios": [
+          {
+            "name": "structured_unmasked",
+            "status": "returned",
+            "result": {
+              "column_type": "Column",
+              "column_module": "astropy.table.column",
+              "dtype": "[('x', '<i4'), ('y', '<f8')]",
+              "values": [
+                [
+                  1,
+                  2.5
+                ],
+                [
+                  3,
+                  4.5
+                ]
+              ],
+              "has_mask": false,
+              "ecsv_write_status": "returned",
+              "ecsv_roundtrip_column_type": "Column",
+              "ecsv_text": "# %ECSV 1.0\n# ---\n# datatype:\n# - {name: value.x, datatype: int32}\n# - {name: value.y, datatype: float64}\n# meta: !!omap\n# - __serialized_columns__:\n#     value:\n#       __class__: astropy.table.column.Column\n#       data: !astropy.table.SerializedColumn\n#         x: !astropy.table.SerializedColumn {name: value.x}\n#         y: !astropy.table.SerializedColumn {name: value.y}\n# schema: astropy-2.0\nvalue.x value.y\n1 2.5\n3 4.5\n"
+            },
+            "warnings": []
+          },
+          {
+            "name": "structured_masked",
+            "status": "returned",
+            "result": {
+              "column_type": "MaskedColumn",
+              "column_module": "astropy.table.column",
+              "dtype": "[('x', '<i4'), ('y', '<f8')]",
+              "values": [
+                [
+                  1,
+                  null
+                ],
+                [
+                  null,
+                  4.5
+                ]
+              ],
+              "has_mask": true,
+              "ecsv_write_status": "returned",
+              "ecsv_roundtrip_column_type": "MaskedColumn",
+              "ecsv_text": "# %ECSV 1.0\n# ---\n# datatype:\n# - {name: value.x, datatype: int32}\n# - {name: value.y, datatype: float64}\n# meta: !!omap\n# - __serialized_columns__:\n#     value:\n#       __class__: astropy.table.column.MaskedColumn\n#       data: !astropy.table.SerializedColumn\n#         x: !astropy.table.SerializedColumn {name: value.x}\n#         y: !astropy.table.SerializedColumn {name: value.y}\n# schema: astropy-2.0\nvalue.x value.y\n1 \"\"\n\"\" 4.5\n"
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      }
+    },
+    "pydata__xarray-6744": {
+      "base": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/pydata__xarray-6744/base/xarray/__init__.py",
+          "version": "999",
+          "dask": "2022.9.2",
+          "dask_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/dependencies/dask/__init__.py"
+        },
+        "scenarios": [
+          {
+            "name": "numpy_minp_None",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "manual_means": [
+                null,
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [
+                    null
+                  ],
+                  "mean": null
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    null,
+                    null
+                  ],
+                  "mean": null
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 7,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                },
+                {
+                  "label": 8,
+                  "values": [
+                    7.0,
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.0
+                }
+              ],
+              "vectorized_means": [
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                null
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "numpy_minp_1",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "manual_means": [
+                1.0,
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [
+                    1.0
+                  ],
+                  "mean": 1.0
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0
+                  ],
+                  "mean": 1.5
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 7,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                },
+                {
+                  "label": 8,
+                  "values": [
+                    7.0,
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.0
+                }
+              ],
+              "vectorized_means": [
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                8.5
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "dask_minp_None",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "manual_means": [
+                null,
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [
+                    null
+                  ],
+                  "mean": null
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    null,
+                    null
+                  ],
+                  "mean": null
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 7,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                },
+                {
+                  "label": 8,
+                  "values": [
+                    7.0,
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.0
+                }
+              ],
+              "vectorized_means": [
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                null
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "dask_minp_1",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "manual_means": [
+                1.0,
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [
+                    1.0
+                  ],
+                  "mean": 1.0
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0
+                  ],
+                  "mean": 1.5
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 7,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                },
+                {
+                  "label": 8,
+                  "values": [
+                    7.0,
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.0
+                }
+              ],
+              "vectorized_means": [
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                8.5
+              ]
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "candidate": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/pydata__xarray-6744/candidate/xarray/__init__.py",
+          "version": "999",
+          "dask": "2022.9.2",
+          "dask_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/dependencies/dask/__init__.py"
+        },
+        "scenarios": [
+          {
+            "name": "numpy_minp_None",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                0,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "manual_means": [
+                null,
+                null,
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                }
+              ],
+              "vectorized_means": [
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                null
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "numpy_minp_1",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                0,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "manual_means": [
+                null,
+                null,
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                }
+              ],
+              "vectorized_means": [
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                8.5
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "dask_minp_None",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                0,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "manual_means": [
+                null,
+                null,
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                }
+              ],
+              "vectorized_means": [
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                null
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "dask_minp_1",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                0,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "manual_means": [
+                null,
+                null,
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 0,
+                  "values": [],
+                  "mean": null
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                }
+              ],
+              "vectorized_means": [
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                8.5
+              ]
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "developer": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/pydata__xarray-6744/developer/xarray/__init__.py",
+          "version": "999",
+          "dask": "2022.9.2",
+          "dask_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/dependencies/dask/__init__.py"
+        },
+        "scenarios": [
+          {
+            "name": "numpy_minp_None",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "manual_means": [
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                null
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [
+                    null,
+                    null
+                  ],
+                  "mean": null
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                },
+                {
+                  "label": 7,
+                  "values": [
+                    7.0,
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.0
+                },
+                {
+                  "label": 8,
+                  "values": [
+                    null,
+                    null
+                  ],
+                  "mean": null
+                }
+              ],
+              "vectorized_means": [
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                null
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "numpy_minp_1",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "manual_means": [
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                8.5
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [
+                    1.0,
+                    2.0
+                  ],
+                  "mean": 1.5
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                },
+                {
+                  "label": 7,
+                  "values": [
+                    7.0,
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.0
+                },
+                {
+                  "label": 8,
+                  "values": [
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.5
+                }
+              ],
+              "vectorized_means": [
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                8.5
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "dask_minp_None",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "manual_means": [
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                null
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [
+                    null,
+                    null
+                  ],
+                  "mean": null
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                },
+                {
+                  "label": 7,
+                  "values": [
+                    7.0,
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.0
+                },
+                {
+                  "label": 8,
+                  "values": [
+                    null,
+                    null
+                  ],
+                  "mean": null
+                }
+              ],
+              "vectorized_means": [
+                null,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                null
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "dask_minp_1",
+            "status": "returned",
+            "result": {
+              "labels": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "manual_means": [
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                8.5
+              ],
+              "windows": [
+                {
+                  "label": 0,
+                  "values": [
+                    1.0,
+                    2.0
+                  ],
+                  "mean": 1.5
+                },
+                {
+                  "label": 1,
+                  "values": [
+                    1.0,
+                    2.0,
+                    3.0
+                  ],
+                  "mean": 2.0
+                },
+                {
+                  "label": 2,
+                  "values": [
+                    2.0,
+                    3.0,
+                    4.0
+                  ],
+                  "mean": 3.0
+                },
+                {
+                  "label": 3,
+                  "values": [
+                    3.0,
+                    4.0,
+                    5.0
+                  ],
+                  "mean": 4.0
+                },
+                {
+                  "label": 4,
+                  "values": [
+                    4.0,
+                    5.0,
+                    6.0
+                  ],
+                  "mean": 5.0
+                },
+                {
+                  "label": 5,
+                  "values": [
+                    5.0,
+                    6.0,
+                    7.0
+                  ],
+                  "mean": 6.0
+                },
+                {
+                  "label": 6,
+                  "values": [
+                    6.0,
+                    7.0,
+                    8.0
+                  ],
+                  "mean": 7.0
+                },
+                {
+                  "label": 7,
+                  "values": [
+                    7.0,
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.0
+                },
+                {
+                  "label": 8,
+                  "values": [
+                    8.0,
+                    9.0
+                  ],
+                  "mean": 8.5
+                }
+              ],
+              "vectorized_means": [
+                1.5,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                8.5
+              ]
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      }
+    },
+    "scikit-learn__scikit-learn-25102": {
+      "base": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/base/sklearn/__init__.py",
+          "version": "1.3.dev0",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3"
+        },
+        "scenarios": [
+          {
+            "name": "standard_scaler_default",
+            "status": "returned",
+            "result": {
+              "values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ],
+              "dtype": "float64",
+              "input_values": [
+                [
+                  0
+                ],
+                [
+                  1
+                ],
+                [
+                  2
+                ]
+              ],
+              "expected_analytic_values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "standard_scaler_pandas_integer",
+            "status": "returned",
+            "result": {
+              "values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ],
+              "dtype": "float64",
+              "input_values": [
+                [
+                  0
+                ],
+                [
+                  1
+                ],
+                [
+                  2
+                ]
+              ],
+              "expected_analytic_values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "pca_pandas_renamed_columns",
+            "status": "returned",
+            "result": {
+              "values": [
+                [
+                  -1.3116297952693103
+                ],
+                [
+                  -0.7485971630332036
+                ],
+                [
+                  0.4372099317564368
+                ],
+                [
+                  1.6230170265460773
+                ]
+              ],
+              "columns": [
+                "pca0"
+              ],
+              "dtypes": [
+                "float64"
+              ]
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "candidate": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/__init__.py",
+          "version": "1.3.dev0",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3"
+        },
+        "scenarios": [
+          {
+            "name": "standard_scaler_default",
+            "status": "exception",
+            "exception_type": "NameError",
+            "message": "name 'dtypes' is not defined",
+            "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13.py\", line 61, in <lambda>\n    observe('standard_scaler_default',lambda:scale(False));observe('standard_scaler_pandas_integer',lambda:scale(True));observe('pca_pandas_renamed_columns',pca)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13.py\", line 54, in scale\n    m=StandardScaler().set_output(transform='pandas' if pandas_output else 'default');out=m.fit_transform(frame)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/utils/_set_output.py\", line 149, in wrapped\n    data_to_wrap = f(self, X, *args, **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/base.py\", line 890, in fit_transform\n    return self.fit(X, **fit_params).transform(X)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/utils/_set_output.py\", line 157, in wrapped\n    return _wrap_data_with_container(method, data_to_wrap, X, self)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/utils/_set_output.py\", line 131, in _wrap_data_with_container\n    if dtypes is not None:\nNameError: name 'dtypes' is not defined\n",
+            "warnings": []
+          },
+          {
+            "name": "standard_scaler_pandas_integer",
+            "status": "returned",
+            "result": {
+              "values": [
+                [
+                  -1
+                ],
+                [
+                  0
+                ],
+                [
+                  1
+                ]
+              ],
+              "dtype": "int64",
+              "input_values": [
+                [
+                  0
+                ],
+                [
+                  1
+                ],
+                [
+                  2
+                ]
+              ],
+              "expected_analytic_values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "pca_pandas_renamed_columns",
+            "status": "returned",
+            "result": {
+              "values": [
+                [
+                  -1.3116297952693103
+                ],
+                [
+                  -0.7485971630332036
+                ],
+                [
+                  0.4372099317564368
+                ],
+                [
+                  1.6230170265460773
+                ]
+              ],
+              "columns": [
+                "pca0"
+              ],
+              "dtypes": [
+                "float64"
+              ]
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      },
+      "developer": {
+        "metadata": {
+          "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/developer/sklearn/__init__.py",
+          "version": "1.3.dev0",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3"
+        },
+        "scenarios": [
+          {
+            "name": "standard_scaler_default",
+            "status": "returned",
+            "result": {
+              "values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ],
+              "dtype": "float64",
+              "input_values": [
+                [
+                  0
+                ],
+                [
+                  1
+                ],
+                [
+                  2
+                ]
+              ],
+              "expected_analytic_values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "standard_scaler_pandas_integer",
+            "status": "returned",
+            "result": {
+              "values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ],
+              "dtype": "float64",
+              "input_values": [
+                [
+                  0
+                ],
+                [
+                  1
+                ],
+                [
+                  2
+                ]
+              ],
+              "expected_analytic_values": [
+                [
+                  -1.224744871391589
+                ],
+                [
+                  0.0
+                ],
+                [
+                  1.224744871391589
+                ]
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "name": "pca_pandas_renamed_columns",
+            "status": "returned",
+            "result": {
+              "values": [
+                [
+                  -1.3116297952693103
+                ],
+                [
+                  -0.7485971630332036
+                ],
+                [
+                  0.4372099317564368
+                ],
+                [
+                  1.6230170265460773
+                ]
+              ],
+              "columns": [
+                "pca0"
+              ],
+              "dtypes": [
+                "float64"
+              ]
+            },
+            "warnings": []
+          }
+        ],
+        "independent_human_adjudication": false
+      }
+    }
+  },
+  "checks": {
+    "frozen_inputs_and_amendment_unchanged": true,
+    "all_final_processes_completed": true,
+    "all_developer_controls_pass": true,
+    "dask32slots_per_variant_no_skips": true,
+    "all_actual_test_slots122_no_skips": true,
+    "witness51scenarios_in13processes": true
+  },
+  "findings": [
+    "Django missing import triggers NameError. Adding only that import reveals suppression of E003/W004 for multi-field and conditional constraints; developer preserves checks. The diagnostic is not the archived candidate.",
+    "sklearn default StandardScaler raises NameError; pandas integer StandardScaler truncates to -1,0,1 instead of +-1.224744871391589. PCA renamed-column output succeeds in all three variants: broad claims about every renamed-column path are unsupported.",
+    "Astropy candidate and developer both use Column for ordinary structured data; type conversion alone cannot establish premature incompatibility. Candidate emits a misleading future warning and loses structured masks. Ignoring that warning separately still leaves the masked-column official test failing; developer passes.",
+    "xarray with Dask executes all32 official slots per variant, previously16 were skipped. Base6 and candidate12 failures, developer0. Candidate repeats labels0 three times and omits7/8, with empty initial windows; developer iteration matches vectorized means in NumPy/Dask under default and min_periods1."
+  ],
+  "limits": [
+    "Selection is post-hoc; no error-rate estimate or independent human adjudication.",
+    "Astropy amended warning-policy tests remain separate from original-policy tests.",
+    "Django import-only intervention is a diagnostic, not a new original patch.",
+    "No full container harness, model inference, GPU job or new human rating."
+  ]
+}

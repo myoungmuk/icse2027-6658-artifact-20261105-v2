@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/__init__.py",
+    "version": "1.3.dev0",
+    "numpy": "1.23.5",
+    "pandas": "1.5.3"
+  },
+  "scenarios": [
+    {
+      "name": "standard_scaler_default",
+      "status": "exception",
+      "exception_type": "NameError",
+      "message": "name 'dtypes' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13.py\", line 61, in <lambda>\n    observe('standard_scaler_default',lambda:scale(False));observe('standard_scaler_pandas_integer',lambda:scale(True));observe('pca_pandas_renamed_columns',pca)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13.py\", line 54, in scale\n    m=StandardScaler().set_output(transform='pandas' if pandas_output else 'default');out=m.fit_transform(frame)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/utils/_set_output.py\", line 149, in wrapped\n    data_to_wrap = f(self, X, *args, **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/base.py\", line 890, in fit_transform\n    return self.fit(X, **fit_params).transform(X)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/utils/_set_output.py\", line 157, in wrapped\n    return _wrap_data_with_container(method, data_to_wrap, X, self)\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/scikit-learn__scikit-learn-25102/candidate/sklearn/utils/_set_output.py\", line 131, in _wrap_data_with_container\n    if dtypes is not None:\nNameError: name 'dtypes' is not defined\n",
+      "warnings": []
+    },
+    {
+      "name": "standard_scaler_pandas_integer",
+      "status": "returned",
+      "result": {
+        "values": [
+          [
+            -1
+          ],
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        "dtype": "int64",
+        "input_values": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "expected_analytic_values": [
+          [
+            -1.224744871391589
+          ],
+          [
+            0.0
+          ],
+          [
+            1.224744871391589
+          ]
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "name": "pca_pandas_renamed_columns",
+      "status": "returned",
+      "result": {
+        "values": [
+          [
+            -1.3116297952693103
+          ],
+          [
+            -0.7485971630332036
+          ],
+          [
+            0.4372099317564368
+          ],
+          [
+            1.6230170265460773
+          ]
+        ],
+        "columns": [
+          "pca0"
+        ],
+        "dtypes": [
+          "float64"
+        ]
+      },
+      "warnings": []
+    }
+  ],
+  "independent_human_adjudication": false
+}

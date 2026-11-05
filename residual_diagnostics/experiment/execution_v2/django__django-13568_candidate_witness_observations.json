@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/__init__.py",
+    "version": "3.2"
+  },
+  "scenarios": [
+    {
+      "name": "single_default",
+      "status": "exception",
+      "exception_type": "NameError",
+      "message": "name 'models' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+      "warnings": []
+    },
+    {
+      "name": "single_custom",
+      "status": "exception",
+      "exception_type": "NameError",
+      "message": "name 'models' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+      "warnings": []
+    },
+    {
+      "name": "multi_default",
+      "status": "exception",
+      "exception_type": "NameError",
+      "message": "name 'models' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+      "warnings": []
+    },
+    {
+      "name": "multi_custom",
+      "status": "exception",
+      "exception_type": "NameError",
+      "message": "name 'models' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+      "warnings": []
+    },
+    {
+      "name": "conditional_default",
+      "status": "exception",
+      "exception_type": "NameError",
+      "message": "name 'models' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+      "warnings": []
+    },
+    {
+      "name": "conditional_custom",
+      "status": "exception",
+      "exception_type": "NameError",
+      "message": "name 'models' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 15, in observe\n    try:r={'name':name,'status':'returned','result':clean(fn())}\n                                                          ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 46, in <lambda>\n    observe(kind+'_'+('default' if backend.startswith('django') else 'custom'),lambda k=kind,b=backend:constraint_case(k,b))\n                                                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/tools/probe_v13_retry_v2.py\", line 42, in constraint_case\n    errors=check_user_model(app_configs=apps.get_app_configs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 57, in check_user_model\n    has_unique_constraint = any(\n                            ^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/django__django-13568/candidate/django/contrib/auth/checks.py\", line 58, in <genexpr>\n    isinstance(constraint, models.UniqueConstraint) and\n                           ^^^^^^\nNameError: name 'models' is not defined\n",
+      "warnings": []
+    }
+  ],
+  "independent_human_adjudication": false
+}

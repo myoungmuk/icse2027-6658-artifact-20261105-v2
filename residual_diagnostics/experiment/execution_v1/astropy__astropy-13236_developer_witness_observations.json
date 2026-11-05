@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "module_path": "/workspace/users/2022810001/ICSE2027_6658_ResidualChecks_20261106_v13/experiment/sources/astropy__astropy-13236/developer/astropy/__init__.py",
+    "version": "5.0.0",
+    "numpy": "1.23.5"
+  },
+  "scenarios": [
+    {
+      "name": "structured_unmasked",
+      "status": "returned",
+      "result": {
+        "column_type": "Column",
+        "column_module": "astropy.table.column",
+        "dtype": "[('x', '<i4'), ('y', '<f8')]",
+        "values": [
+          [
+            1,
+            2.5
+          ],
+          [
+            3,
+            4.5
+          ]
+        ],
+        "has_mask": false,
+        "ecsv_write_status": "returned",
+        "ecsv_roundtrip_column_type": "Column",
+        "ecsv_text": "# %ECSV 1.0\n# ---\n# datatype:\n# - {name: value.x, datatype: int32}\n# - {name: value.y, datatype: float64}\n# meta: !!omap\n# - __serialized_columns__:\n#     value:\n#       __class__: astropy.table.column.Column\n#       data: !astropy.table.SerializedColumn\n#         x: !astropy.table.SerializedColumn {name: value.x}\n#         y: !astropy.table.SerializedColumn {name: value.y}\n# schema: astropy-2.0\nvalue.x value.y\n1 2.5\n3 4.5\n"
+      },
+      "warnings": []
+    },
+    {
+      "name": "structured_masked",
+      "status": "returned",
+      "result": {
+        "column_type": "MaskedColumn",
+        "column_module": "astropy.table.column",
+        "dtype": "[('x', '<i4'), ('y', '<f8')]",
+        "values": [
+          [
+            1,
+            null
+          ],
+          [
+            null,
+            4.5
+          ]
+        ],
+        "has_mask": true,
+        "ecsv_write_status": "returned",
+        "ecsv_roundtrip_column_type": "MaskedColumn",
+        "ecsv_text": "# %ECSV 1.0\n# ---\n# datatype:\n# - {name: value.x, datatype: int32}\n# - {name: value.y, datatype: float64}\n# meta: !!omap\n# - __serialized_columns__:\n#     value:\n#       __class__: astropy.table.column.MaskedColumn\n#       data: !astropy.table.SerializedColumn\n#         x: !astropy.table.SerializedColumn {name: value.x}\n#         y: !astropy.table.SerializedColumn {name: value.y}\n# schema: astropy-2.0\nvalue.x value.y\n1 \"\"\n\"\" 4.5\n"
+      },
+      "warnings": []
+    }
+  ],
+  "independent_human_adjudication": false
+}

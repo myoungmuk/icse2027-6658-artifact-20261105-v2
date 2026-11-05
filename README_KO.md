@@ -1,10 +1,9 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-05 v12
+# ICSE 2027 #6658 공개 자료 — 2026-11-06 v13
 
-v10은 기존 707개와 겹치지 않는 개발 40개·검증 100개 과제의 새 실험을 추가한다.
-예정 560개 입력 중 실제 생성 558개가 모두 유효하고 길이 초과 2개는 제외 기록을 남겼다.
-개발 결과로 설정을 선택·저장한 뒤 검증용 추론을 실행했다. 과거 calibration 복구나
-인간 유지보수자 검증은 아니다. 상세 자료는 `task_disjoint_calibration/`에 있으며
-아래 이전 실험과 모든 이전 배포본은 보존한다.
+v13은 이전에 미검증이던4사례의 원인 분리 실험을 추가했다. 최종26프로세스·
+테스트122슬롯·관찰51시나리오이며, 이전 Dask skip48슬롯도 실제 실행했다.
+전체 대응49/58(84.48%), 독립 인간 응답0이며 논문9+1쪽을 유지한다.
+세부 근거는 `residual_diagnostics/`에 있고 아래 이전 실험과 배포본은 보존한다.
 
 논문: **Beyond %Resolved:Reassessing SWE-bench Through Human and LLM Code Review**
 
@@ -154,3 +153,12 @@ saved outputs, separate invalid-response accounting and offline scripts are
 included. These are targeted technical findings, not independent human labels,
 fresh native-model inference or all-system same-task comparisons. Checklist
 coverage remains49/58(84.48%). The manuscript stays9+1 pages; prior releases remain.
+
+
+## v13 residual CPU diagnostics
+
+See [residual_diagnostics](residual_diagnostics/README.md) for4 post-hoc cases,
+26 final processes,122 executed test slots and51 witness scenarios. Separate
+warning-policy and import-only interventions expose deeper functional effects;
+PCA provides a normal-path qualification. No new human ratings or model inference.
+Checklist coverage remains49/58(84.48%); the paper remains9+1 pages.
