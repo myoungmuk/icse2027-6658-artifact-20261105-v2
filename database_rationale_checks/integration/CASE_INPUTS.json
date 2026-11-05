@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "instance_id": "django__django-11179",
+      "base_commit": "19fc6376ce67d01ca37a91ef2f55ef769f50513a",
+      "changed_file": "django/db/models/deletion.py",
+      "base_source_sha256": "a09990d086e41b6a59f9bf7e704ced12d91e4725ddc994a128fecb638e7ea18a",
+      "candidate_patched_sha256": "a2d2b7f0aa1e0a69b54a0bb7e801e15476dd6444b54b700890d713cc6be5c3c0",
+      "candidate_diff": "diff --git a/django/db/models/deletion.py b/django/db/models/deletion.py\n--- a/django/db/models/deletion.py\n+++ b/django/db/models/deletion.py\n@@ -277,6 +277,7 @@ def delete(self):\n             if self.can_fast_delete(instance):\n                 with transaction.mark_for_rollback_on_error():\n                     count = sql.DeleteQuery(model).delete_batch([instance.pk], self.using)\n+                setattr(instance, model._meta.pk.attname, None)\n                 return count, {model._meta.label: count}\n \n         with transaction.atomic(using=self.using, savepoint=False):\n",
+      "candidate_group": "gold",
+      "archived_verdict": {
+        "summary": "Patch correctly clears the PK for the single-instance fast-delete early-return path, matching Django's intended fix for the reported no-dependency case. However it is incomplete: the regular (non-fast) deletion path still leaves stale PKs, so the general principle 'PK should be None after .delete()' is only half-applied, creating inconsistent behavior between fast and regular deletes.",
+        "issues": [
+          {
+            "failure_mode": "F1",
+            "severity": "major",
+            "description": "Fix only covers the single-instance fast-delete early return (line 280). Instances deleted via the regular path (`for model, instances in self.data.items()` loop) — i.e. models WITH dependencies — still retain their stale PK after delete(). The issue states 'It should be set to None after .delete() call' generally; Django's actual fix added a second hunk clearing PKs in the final instances loop. Without it, fast-delete clears PK but regular delete does not, an inconsistency."
+          },
+          {
+            "failure_mode": "F8",
+            "severity": "minor",
+            "description": "setattr is placed after the `with transaction.mark_for_rollback_on_error()` block but before `return`; correct, but worth confirming the PK is only nulled on successful delete (it is, since a rollback raises). Minor placement note, not a defect."
+          }
+        ],
+        "merge_decision": "request_changes",
+        "mergeable": false,
+        "confidence": 0.68,
+        "packet_id": "pk_2f6179af8238"
+      },
+      "archived_verdict_sha256": "bb8553fd41aed582e9eaa7632ca4925977e67d1b52c1c6449df5e1b9058d1764",
+      "developer_diff": "diff --git a/django/db/models/deletion.py b/django/db/models/deletion.py\n--- a/django/db/models/deletion.py\n+++ b/django/db/models/deletion.py\n@@ -277,6 +277,7 @@ def delete(self):\n             if self.can_fast_delete(instance):\n                 with transaction.mark_for_rollback_on_error():\n                     count = sql.DeleteQuery(model).delete_batch([instance.pk], self.using)\n+                setattr(instance, model._meta.pk.attname, None)\n                 return count, {model._meta.label: count}\n \n         with transaction.atomic(using=self.using, savepoint=False):\n"
+    },
+    {
+      "instance_id": "django__django-13028",
+      "base_commit": "78ad4b4b0201003792bfdbf1a7781cbc9ee03539",
+      "changed_file": "django/db/models/sql/query.py",
+      "base_source_sha256": "d5827e0de182b692778e44aa89b6d2e56f2ed2d59b90ff2982bd4a3b46168edd",
+      "candidate_patched_sha256": "c79d52e260137f7adb98df09b5ab3092fb1c8ad23e8aeb3e1801d1133bd6a908",
+      "candidate_diff": "diff --git a/django/db/models/sql/query.py b/django/db/models/sql/query.py\nindex a6a3e97..202dafd 100644\n--- a/django/db/models/sql/query.py\n+++ b/django/db/models/sql/query.py\n@@ -1124,7 +1124,7 @@ class Query(BaseExpression):\n \n     def check_filterable(self, expression):\n         \"\"\"Raise an error if expression cannot be used in a WHERE clause.\"\"\"\n-        if not getattr(expression, 'filterable', True):\n+        if hasattr(expression, 'filterable') and not expression.filterable:\n             raise NotSupportedError(\n                 expression.__class__.__name__ + ' is disallowed in the filter '\n                 'clause.'\n",
+      "candidate_group": "failing_agent",
+      "archived_verdict": {
+        "summary": "The patch is logically a no-op: `hasattr(expression, 'filterable') and not expression.filterable` is semantically identical to the original `not getattr(expression, 'filterable', True)` for the reported case (a model instance whose `filterable` field is False), so it still raises NotSupportedError and does not fix the bug. The correct fix must restrict the check to actual expressions (e.g. gate on `hasattr(expression, 'resolve_expression')`), not on the presence of a `filterable` attribute.",
+        "issues": [
+          {
+            "failure_mode": "F8",
+            "severity": "blocking",
+            "description": "Wrong approach. For a model instance with field filterable=False, hasattr(expression,'filterable') is True and not expression.filterable is True -> still raises. This is equivalent to the original getattr(...,True) branch, so it fails to distinguish a real expression from a model instance that merely happens to have a 'filterable' attribute. The root cause (check_filterable applied to non-expression values) is untouched."
+          },
+          {
+            "failure_mode": "F1",
+            "severity": "blocking",
+            "description": "Issue not resolved. The reported filter ProductMetaData.objects.filter(metadata_type=<instance with filterable=False>) still hits the raise branch, so NotSupportedError is not prevented. Proper fix gates on an expression marker like resolve_expression."
+          }
+        ],
+        "merge_decision": "request_changes",
+        "mergeable": false,
+        "confidence": 0.8,
+        "packet_id": "pk_d2cabcc85df3"
+      },
+      "archived_verdict_sha256": "b21a624a91e77f2dcebae725d7f93be3a0c742f4b7fc4c607b692799078cc994",
+      "developer_diff": "diff --git a/django/db/models/sql/query.py b/django/db/models/sql/query.py\n--- a/django/db/models/sql/query.py\n+++ b/django/db/models/sql/query.py\n@@ -1124,7 +1124,10 @@ def check_related_objects(self, field, value, opts):\n \n     def check_filterable(self, expression):\n         \"\"\"Raise an error if expression cannot be used in a WHERE clause.\"\"\"\n-        if not getattr(expression, 'filterable', True):\n+        if (\n+            hasattr(expression, 'resolve_expression') and\n+            not getattr(expression, 'filterable', True)\n+        ):\n             raise NotSupportedError(\n                 expression.__class__.__name__ + ' is disallowed in the filter '\n                 'clause.'\n"
+    }
+  ],
+  "scope": "Two post-hoc targeted checks. Saved verdicts are unmodified."
+}

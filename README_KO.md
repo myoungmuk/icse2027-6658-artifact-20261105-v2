@@ -1,4 +1,4 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-05 v7
+# ICSE 2027 #6658 공개 자료 — 2026-11-05 v9
 
 논문: **Beyond %Resolved:Reassessing SWE-bench Through Human and LLM Code Review**
 
@@ -93,3 +93,20 @@ bug와 후속 fix/test/release note가 있다. 파일 churn은 버그 수가 아
 
 독립 인간 2인은 추후 확보 예정이며 실제 신규 인간 평가는 0건이다.
 논문은 본문 9쪽+참고문헌 1쪽을 유지한다.
+
+
+## v9 targeted database checks and primary-source clarification
+
+The [two-case SQLite follow-up](database_rationale_checks/README.md) uses complete
+pinned Django packages, five variant processes and 15 targeted scenarios. It
+contradicts the focal gold stale-PK objection and supports the focal failing
+candidate filter objection. It is not a full test suite, independent adjudication
+or a reviewer accuracy estimate. Startup failures and runtime compatibility are
+retained explicitly. A three-cohort saved-output census indexes 7,011 records and
+prepares 3,262 nonaccepted outputs for later review; it does not adjudicate them.
+
+The paper explicitly distinguishes LLaMA-Reviewer's binary review-necessity task
+and RovoDev's binary comment selection from patch acceptance. Paper-linked
+replication materials for the IST work and LLaMA-Reviewer were located and their
+availability checked; no original-system inference is claimed. The paper remains
+nine body pages plus one reference page. All older inputs/releases are preserved.

@@ -1,0 +1,32 @@
+{
+  "case": "django__django-13028",
+  "django": "3.2",
+  "results": {
+    "filterable_false": {
+      "expected_matching_pk": 1,
+      "call": {
+        "outcome": "raised",
+        "exception": "NotSupportedError",
+        "message": "MetadataType is disallowed in the filter clause."
+      }
+    },
+    "filterable_true": {
+      "expected_matching_pk": 2,
+      "call": {
+        "outcome": "returned",
+        "value": [
+          2
+        ]
+      }
+    },
+    "no_filterable_field": {
+      "expected_matching_pk": 1,
+      "call": {
+        "outcome": "returned",
+        "value": [
+          1
+        ]
+      }
+    }
+  }
+}

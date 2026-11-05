@@ -1,0 +1,341 @@
+{
+  "distinct_tasks": 2,
+  "separate_variant_processes": 5,
+  "scenario_checks": 15,
+  "all15_expected_scenarios_match": true,
+  "checks": [
+    {
+      "instance_id": "django__django-11179",
+      "variant": "base",
+      "scenario": "fast_single",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-11179",
+      "variant": "base",
+      "scenario": "regular_cascade",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-11179",
+      "variant": "base",
+      "scenario": "regular_two",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-11179",
+      "variant": "candidate",
+      "scenario": "fast_single",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-11179",
+      "variant": "candidate",
+      "scenario": "regular_cascade",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-11179",
+      "variant": "candidate",
+      "scenario": "regular_two",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "base",
+      "scenario": "filterable_false",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "base",
+      "scenario": "filterable_true",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "base",
+      "scenario": "no_filterable_field",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "candidate",
+      "scenario": "filterable_false",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "candidate",
+      "scenario": "filterable_true",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "candidate",
+      "scenario": "no_filterable_field",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "developer",
+      "scenario": "filterable_false",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "developer",
+      "scenario": "filterable_true",
+      "pass": true
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "developer",
+      "scenario": "no_filterable_field",
+      "pass": true
+    }
+  ],
+  "source_checks": [
+    {
+      "instance_id": "django__django-11179",
+      "variant": "base",
+      "full_source_present": true,
+      "archive_present": true,
+      "recorded_source_sha256": "a09990d086e41b6a59f9bf7e704ced12d91e4725ddc994a128fecb638e7ea18a"
+    },
+    {
+      "instance_id": "django__django-11179",
+      "variant": "candidate",
+      "full_source_present": true,
+      "archive_present": true,
+      "recorded_source_sha256": "a2d2b7f0aa1e0a69b54a0bb7e801e15476dd6444b54b700890d713cc6be5c3c0"
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "base",
+      "full_source_present": true,
+      "archive_present": true,
+      "recorded_source_sha256": "d5827e0de182b692778e44aa89b6d2e56f2ed2d59b90ff2982bd4a3b46168edd"
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "candidate",
+      "full_source_present": true,
+      "archive_present": true,
+      "recorded_source_sha256": "c79d52e260137f7adb98df09b5ab3092fb1c8ad23e8aeb3e1801d1133bd6a908"
+    },
+    {
+      "instance_id": "django__django-13028",
+      "variant": "developer",
+      "full_source_present": true,
+      "archive_present": true,
+      "recorded_source_sha256": "18c69a77911885539dc802c32872202919b6f9882e285e64f80e6e78c9a032f4"
+    }
+  ],
+  "observations": {
+    "django__django-11179_base": {
+      "fast_single": {
+        "can_fast_delete": true,
+        "pk_before": 1,
+        "pk_after": 1,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            1,
+            {
+              "probeapp.FastItem": 1
+            }
+          ]
+        },
+        "rows_remaining": 0
+      },
+      "regular_cascade": {
+        "can_fast_delete": false,
+        "pk_before": 1,
+        "pk_after": null,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            2,
+            {
+              "probeapp.Child": 1,
+              "probeapp.Parent": 1
+            }
+          ]
+        },
+        "parent_rows_remaining": 0,
+        "child_rows_remaining": 0
+      },
+      "regular_two": {
+        "collected_instances": 2,
+        "pks_before": [
+          2,
+          3
+        ],
+        "pks_after": [
+          null,
+          null
+        ],
+        "call": {
+          "outcome": "returned",
+          "value": [
+            2,
+            {
+              "probeapp.FastItem": 2
+            }
+          ]
+        },
+        "rows_remaining": 0
+      }
+    },
+    "django__django-11179_candidate": {
+      "fast_single": {
+        "can_fast_delete": true,
+        "pk_before": 1,
+        "pk_after": null,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            1,
+            {
+              "probeapp.FastItem": 1
+            }
+          ]
+        },
+        "rows_remaining": 0
+      },
+      "regular_cascade": {
+        "can_fast_delete": false,
+        "pk_before": 1,
+        "pk_after": null,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            2,
+            {
+              "probeapp.Child": 1,
+              "probeapp.Parent": 1
+            }
+          ]
+        },
+        "parent_rows_remaining": 0,
+        "child_rows_remaining": 0
+      },
+      "regular_two": {
+        "collected_instances": 2,
+        "pks_before": [
+          2,
+          3
+        ],
+        "pks_after": [
+          null,
+          null
+        ],
+        "call": {
+          "outcome": "returned",
+          "value": [
+            2,
+            {
+              "probeapp.FastItem": 2
+            }
+          ]
+        },
+        "rows_remaining": 0
+      }
+    },
+    "django__django-13028_base": {
+      "filterable_false": {
+        "expected_matching_pk": 1,
+        "call": {
+          "outcome": "raised",
+          "exception": "NotSupportedError",
+          "message": "MetadataType is disallowed in the filter clause."
+        }
+      },
+      "filterable_true": {
+        "expected_matching_pk": 2,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            2
+          ]
+        }
+      },
+      "no_filterable_field": {
+        "expected_matching_pk": 1,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            1
+          ]
+        }
+      }
+    },
+    "django__django-13028_candidate": {
+      "filterable_false": {
+        "expected_matching_pk": 1,
+        "call": {
+          "outcome": "raised",
+          "exception": "NotSupportedError",
+          "message": "MetadataType is disallowed in the filter clause."
+        }
+      },
+      "filterable_true": {
+        "expected_matching_pk": 2,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            2
+          ]
+        }
+      },
+      "no_filterable_field": {
+        "expected_matching_pk": 1,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            1
+          ]
+        }
+      }
+    },
+    "django__django-13028_developer": {
+      "filterable_false": {
+        "expected_matching_pk": 1,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            1
+          ]
+        }
+      },
+      "filterable_true": {
+        "expected_matching_pk": 2,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            2
+          ]
+        }
+      },
+      "no_filterable_field": {
+        "expected_matching_pk": 1,
+        "call": {
+          "outcome": "returned",
+          "value": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "gold_focused_claim": "Regular-path stale-PK objection contradicted by real SQLite cascade and two-instance deletion; the archived one-line developer patch fixes fast-single PK cleanup.",
+  "failing_focused_claim": "Unchanged reported NotSupportedError reproduced through the real ORM for the failing candidate; the separate developer patch succeeds.",
+  "historical_runtime_reproduced": false,
+  "independent_human_adjudication": false,
+  "full_Django_test_suite": false,
+  "new_SWE_bench_harness_runs": 0,
+  "new_model_calls": 0,
+  "new_human_ratings": 0,
+  "selection": "Post-hoc purposeful follow-up of two cases from the previously frozen six-case audit; no prevalence or global reviewer accuracy estimate."
+}

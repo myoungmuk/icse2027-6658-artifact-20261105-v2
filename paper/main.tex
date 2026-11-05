@@ -638,14 +638,17 @@ pairs, acceptance is $135/300$ versus $149/300$; discordant counts are $(47,61)$
 explicitly. This is not equivalence, new harness execution, or independent calibration.
 
 \subsection{Qualitative inspection of cited concerns}
-A post-hoc technical audit selects the first two nonaccepted hosted-reviewer cases in
-lexical order within each of three strata: resolved agent ($30$ available), gold ($3$),
-and failing agent ($38$). Archived diffs are applied to pinned upstream files; extracted
-functions/branches run with synthetic inputs and backend stand-ins. Five focused claims
-have local support; the gold \texttt{django-11179} regular-path stale-PK objection is
-contradicted by existing cleanup. These checks are not independent adjudication or an
-error-rate estimate. The \texttt{django-11555} phrase ``the one Django merged'' is a
-recognition cue, not proof of training exposure.
+A post-hoc technical audit selects the first two nonaccepted hosted cases lexically
+within resolved-agent ($30$), gold ($3$), and failing-agent ($38$) strata. Six pinned-source
+function/branch probes use synthetic inputs. Five focused claims have local support;
+the gold \texttt{django-11179} regular-path stale-PK objection is contradicted.
+A follow-up runs two cases using complete pinned Django packages and real SQLite:
+regular deletion clears PKs before and after that patch; the \texttt{django-13028}
+failing candidate still raises \texttt{NotSupportedError}, whereas its developer patch
+succeeds. Five variant processes check $15$ scenarios with disclosed runtime compatibility.
+These purposeful checks are neither full harness execution nor independent adjudication
+or an error-rate estimate. The ``Django merged'' wording remains a recognition cue,
+not proof of training exposure.
 
 For all three hosted nonaccepted gold cases, a separate $365$-day default-branch audit
 finds $12$, $93$, and $35$ source-file commits (Django, Matplotlib, scikit-learn).
@@ -770,11 +773,12 @@ adaptations in \S\ref{sec:adapted} likewise omit Shi's human-refinement stage.
 
 \textbf{Review automation.} Industrial review includes design, conventions, and knowledge
 transfer~\cite{modernreview,bacchelli2013review,rigby2013convergent}.
-Tufano et al.~\cite{tufanoreview}, prompting/fine-tuning comparisons~\cite{promptreview},
-LLaMA-Reviewer~\cite{llamareviewer}, and Atlassian's context-aware
-RovoDev~\cite{rovodev} study review activities, comments, or revisions.
-These objectives differ from our binary historical-acceptance comparison; we do not
-reproduce all these systems or claim their deployment outcomes.
+Tufano et al.~\cite{tufanoreview} and prompting/fine-tuning
+comparisons~\cite{promptreview} study comments and revisions. LLaMA-Reviewer~\cite{llamareviewer}
+also predicts review necessity; RovoDev~\cite{rovodev} generates comments and filters
+candidates using binary judgments. Review necessity and comment validity differ from
+binary historical patch acceptance. We do not reproduce all these systems or claim
+their deployment outcomes.
 
 \textbf{Judge reliability.} LLM judges~\cite{llmjudge} exhibit comparison and self-preference
 biases~\cite{wang2024fair,panickssery2024selfpref}. Our contribution is a SWE-bench-specific

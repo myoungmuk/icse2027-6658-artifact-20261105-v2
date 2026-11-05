@@ -1,0 +1,121 @@
+{
+  "case": "django__django-13028",
+  "python": "3.12.13 (main, Aug  5 2026, 01:11:46) [GCC 12.2.0]",
+  "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.36",
+  "sqlite_runtime": "3.40.1",
+  "django_version": "3.2",
+  "django_import_path": "/workspace/users/2022810001/ICSE2027_6658_FactCheck_20261105_v9/integration/django__django-13028/candidate/django/__init__.py",
+  "runtime_compatibility_shims": [
+    "Import setuptools 80.9.0 to provide distutils removed from Python 3.12; no Django source edits."
+  ],
+  "database": "real SQLite :memory: through the pinned full Django ORM package",
+  "results": {
+    "filterable_false": {
+      "expected_matching_pk": 1,
+      "call": {
+        "outcome": "raised",
+        "exception": "NotSupportedError",
+        "message": "MetadataType is disallowed in the filter clause."
+      }
+    },
+    "filterable_true": {
+      "expected_matching_pk": 2,
+      "call": {
+        "outcome": "returned",
+        "value": [
+          2
+        ]
+      }
+    },
+    "no_filterable_field": {
+      "expected_matching_pk": 1,
+      "call": {
+        "outcome": "returned",
+        "value": [
+          1
+        ]
+      }
+    }
+  },
+  "sql_statements": [
+    {
+      "sql": "PRAGMA foreign_keys = OFF",
+      "time": "0.000"
+    },
+    {
+      "sql": "PRAGMA foreign_keys",
+      "time": "0.000"
+    },
+    {
+      "sql": "BEGIN",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE TABLE \"probeapp_metadatatype\" (\"id\" integer NOT NULL PRIMARY KEY AUTOINCREMENT, \"label\" varchar(30) NOT NULL, \"filterable\" bool NOT NULL)",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE TABLE \"probeapp_metadata\" (\"id\" integer NOT NULL PRIMARY KEY AUTOINCREMENT, \"metadata_type_id\" integer NOT NULL REFERENCES \"probeapp_metadatatype\" (\"id\") DEFERRABLE INITIALLY DEFERRED)",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE TABLE \"probeapp_ordinarytype\" (\"id\" integer NOT NULL PRIMARY KEY AUTOINCREMENT, \"label\" varchar(30) NOT NULL)",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE TABLE \"probeapp_ordinarymetadata\" (\"id\" integer NOT NULL PRIMARY KEY AUTOINCREMENT, \"metadata_type_id\" integer NOT NULL REFERENCES \"probeapp_ordinarytype\" (\"id\") DEFERRABLE INITIALLY DEFERRED)",
+      "time": "0.000"
+    },
+    {
+      "sql": "PRAGMA foreign_key_check",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE INDEX \"probeapp_metadata_metadata_type_id_0ab8e099\" ON \"probeapp_metadata\" (\"metadata_type_id\")",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE INDEX \"probeapp_ordinarymetadata_metadata_type_id_42ae4d9f\" ON \"probeapp_ordinarymetadata\" (\"metadata_type_id\")",
+      "time": "0.000"
+    },
+    {
+      "sql": "PRAGMA foreign_keys = ON",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_metadatatype\" (\"label\", \"filterable\") VALUES ('False', 0)",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_metadata\" (\"metadata_type_id\") VALUES (1)",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_metadatatype\" (\"label\", \"filterable\") VALUES ('True', 1)",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_metadata\" (\"metadata_type_id\") VALUES (2)",
+      "time": "0.000"
+    },
+    {
+      "sql": "SELECT \"probeapp_metadata\".\"id\" FROM \"probeapp_metadata\" WHERE \"probeapp_metadata\".\"metadata_type_id\" = 2",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_ordinarytype\" (\"label\") VALUES ('no filterable field')",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_ordinarymetadata\" (\"metadata_type_id\") VALUES (1)",
+      "time": "0.000"
+    },
+    {
+      "sql": "SELECT \"probeapp_ordinarymetadata\".\"id\" FROM \"probeapp_ordinarymetadata\" WHERE \"probeapp_ordinarymetadata\".\"metadata_type_id\" = 1",
+      "time": "0.000"
+    }
+  ],
+  "new_harness_runs": 0,
+  "new_human_ratings": 0,
+  "new_model_calls": 0
+}

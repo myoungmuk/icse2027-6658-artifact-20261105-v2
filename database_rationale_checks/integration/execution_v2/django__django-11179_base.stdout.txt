@@ -1,0 +1,59 @@
+{
+  "case": "django__django-11179",
+  "django": "3.0",
+  "results": {
+    "fast_single": {
+      "can_fast_delete": true,
+      "pk_before": 1,
+      "pk_after": 1,
+      "call": {
+        "outcome": "returned",
+        "value": [
+          1,
+          {
+            "probeapp.FastItem": 1
+          }
+        ]
+      },
+      "rows_remaining": 0
+    },
+    "regular_cascade": {
+      "can_fast_delete": false,
+      "pk_before": 1,
+      "pk_after": null,
+      "call": {
+        "outcome": "returned",
+        "value": [
+          2,
+          {
+            "probeapp.Child": 1,
+            "probeapp.Parent": 1
+          }
+        ]
+      },
+      "parent_rows_remaining": 0,
+      "child_rows_remaining": 0
+    },
+    "regular_two": {
+      "collected_instances": 2,
+      "pks_before": [
+        2,
+        3
+      ],
+      "pks_after": [
+        null,
+        null
+      ],
+      "call": {
+        "outcome": "returned",
+        "value": [
+          2,
+          {
+            "probeapp.FastItem": 2
+          }
+        ]
+      },
+      "rows_remaining": 0
+    }
+  }
+}

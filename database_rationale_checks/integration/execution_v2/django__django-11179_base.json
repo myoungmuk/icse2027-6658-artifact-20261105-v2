@@ -1,0 +1,168 @@
+{
+  "case": "django__django-11179",
+  "python": "3.12.13 (main, Aug  5 2026, 01:11:46) [GCC 12.2.0]",
+  "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.36",
+  "sqlite_runtime": "3.40.1",
+  "django_version": "3.0",
+  "django_import_path": "/workspace/users/2022810001/ICSE2027_6658_FactCheck_20261105_v9/integration/django__django-11179/base/django/__init__.py",
+  "runtime_compatibility_shims": [
+    "Import setuptools 80.9.0 to provide distutils removed from Python 3.12; no Django source edits."
+  ],
+  "database": "real SQLite :memory: through the pinned full Django ORM package",
+  "results": {
+    "fast_single": {
+      "can_fast_delete": true,
+      "pk_before": 1,
+      "pk_after": 1,
+      "call": {
+        "outcome": "returned",
+        "value": [
+          1,
+          {
+            "probeapp.FastItem": 1
+          }
+        ]
+      },
+      "rows_remaining": 0
+    },
+    "regular_cascade": {
+      "can_fast_delete": false,
+      "pk_before": 1,
+      "pk_after": null,
+      "call": {
+        "outcome": "returned",
+        "value": [
+          2,
+          {
+            "probeapp.Child": 1,
+            "probeapp.Parent": 1
+          }
+        ]
+      },
+      "parent_rows_remaining": 0,
+      "child_rows_remaining": 0
+    },
+    "regular_two": {
+      "collected_instances": 2,
+      "pks_before": [
+        2,
+        3
+      ],
+      "pks_after": [
+        null,
+        null
+      ],
+      "call": {
+        "outcome": "returned",
+        "value": [
+          2,
+          {
+            "probeapp.FastItem": 2
+          }
+        ]
+      },
+      "rows_remaining": 0
+    }
+  },
+  "sql_statements": [
+    {
+      "sql": "PRAGMA foreign_keys = OFF",
+      "time": "0.000"
+    },
+    {
+      "sql": "PRAGMA foreign_keys",
+      "time": "0.000"
+    },
+    {
+      "sql": "BEGIN",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE TABLE \"probeapp_fastitem\" (\"id\" integer NOT NULL PRIMARY KEY AUTOINCREMENT, \"name\" varchar(20) NOT NULL)",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE TABLE \"probeapp_parent\" (\"id\" integer NOT NULL PRIMARY KEY AUTOINCREMENT, \"name\" varchar(20) NOT NULL)",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE TABLE \"probeapp_child\" (\"id\" integer NOT NULL PRIMARY KEY AUTOINCREMENT, \"parent_id\" integer NOT NULL REFERENCES \"probeapp_parent\" (\"id\") DEFERRABLE INITIALLY DEFERRED)",
+      "time": "0.000"
+    },
+    {
+      "sql": "PRAGMA foreign_key_check",
+      "time": "0.000"
+    },
+    {
+      "sql": "CREATE INDEX \"probeapp_child_parent_id_39e7b449\" ON \"probeapp_child\" (\"parent_id\")",
+      "time": "0.000"
+    },
+    {
+      "sql": "PRAGMA foreign_keys = ON",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_fastitem\" (\"name\") VALUES ('fast')",
+      "time": "0.000"
+    },
+    {
+      "sql": "DELETE FROM \"probeapp_fastitem\" WHERE \"probeapp_fastitem\".\"id\" IN (1)",
+      "time": "0.000"
+    },
+    {
+      "sql": "SELECT COUNT(*) AS \"__count\" FROM \"probeapp_fastitem\"",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_parent\" (\"name\") VALUES ('parent')",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_child\" (\"parent_id\") VALUES (1)",
+      "time": "0.000"
+    },
+    {
+      "sql": "BEGIN",
+      "time": "0.000"
+    },
+    {
+      "sql": "DELETE FROM \"probeapp_child\" WHERE \"probeapp_child\".\"parent_id\" IN (1)",
+      "time": "0.000"
+    },
+    {
+      "sql": "DELETE FROM \"probeapp_parent\" WHERE \"probeapp_parent\".\"id\" IN (1)",
+      "time": "0.000"
+    },
+    {
+      "sql": "SELECT COUNT(*) AS \"__count\" FROM \"probeapp_parent\"",
+      "time": "0.000"
+    },
+    {
+      "sql": "SELECT COUNT(*) AS \"__count\" FROM \"probeapp_child\"",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_fastitem\" (\"name\") VALUES ('a')",
+      "time": "0.000"
+    },
+    {
+      "sql": "INSERT INTO \"probeapp_fastitem\" (\"name\") VALUES ('b')",
+      "time": "0.000"
+    },
+    {
+      "sql": "BEGIN",
+      "time": "0.000"
+    },
+    {
+      "sql": "DELETE FROM \"probeapp_fastitem\" WHERE \"probeapp_fastitem\".\"id\" IN (3, 2)",
+      "time": "0.000"
+    },
+    {
+      "sql": "SELECT COUNT(*) AS \"__count\" FROM \"probeapp_fastitem\"",
+      "time": "0.000"
+    }
+  ],
+  "new_harness_runs": 0,
+  "new_human_ratings": 0,
+  "new_model_calls": 0
+}

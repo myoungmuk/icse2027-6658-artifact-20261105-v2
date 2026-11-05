@@ -8,7 +8,7 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v8`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v8).
+Version: [`2026.11.05-v9`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v9).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
@@ -147,3 +147,20 @@ This command uses saved outputs, not new inference. Archived freeze manifests re
 machine paths; new inference elsewhere requires a new explicit setup. No new human
 ratings or harness runs are included. The paper stays at 9 body + 1 reference pages,
 with unchanged class, font size, margins and historical numerical inputs.
+
+
+## v9 targeted database checks and primary-source clarification
+
+The [two-case SQLite follow-up](database_rationale_checks/README.md) uses complete
+pinned Django packages, five variant processes and 15 targeted scenarios. It
+contradicts the focal gold stale-PK objection and supports the focal failing
+candidate filter objection. It is not a full test suite, independent adjudication
+or a reviewer accuracy estimate. Startup failures and runtime compatibility are
+retained explicitly. A three-cohort saved-output census indexes 7,011 records and
+prepares 3,262 nonaccepted outputs for later review; it does not adjudicate them.
+
+The paper explicitly distinguishes LLaMA-Reviewer's binary review-necessity task
+and RovoDev's binary comment selection from patch acceptance. Paper-linked
+replication materials for the IST work and LLaMA-Reviewer were located and their
+availability checked; no original-system inference is claimed. The paper remains
+nine body pages plus one reference page. All older inputs/releases are preserved.
