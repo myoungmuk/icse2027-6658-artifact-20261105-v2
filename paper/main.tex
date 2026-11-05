@@ -635,12 +635,12 @@ patterns across Lite/Verified do not remove same-cohort development bias; the sp
 not independent calibration-validation sets.
 
 \subsection{A human-review pilot}
-One non-independent, source-blinded rater reviewed $40$ packets from $20$ Agentless Verified
-paired tasks. The sampling script sorts task IDs, shuffles with \texttt{Random(7)}, selects
+Author Myeongmuk Kang, a non-independent, source-blinded rater, reviewed $40$ packets from
+$20$ Agentless Verified paired tasks. The sampling script sorts task IDs, shuffles with \texttt{Random(7)}, selects
 $20$, and then shuffles the $40$ agent/gold packets. The form uses the adjusted rubric,
 but limits issues to $1{,}800$ characters and diffs to $9{,}000$, versus $6{,}000$ and
 $24{,}000$ in the LLM path. Thus shared rubric does not mean identical input context.
-The record does not document the rater's review experience or exact relationship to rubric
+The archive does not document Kang's prior code-review experience or precise role in rubric
 development; these remain limitations rather than inferred credentials.
 
 This rater accepts $15/20$ agent and $13/20$ gold packets ($75\%$ and $65\%$), with
@@ -776,7 +776,7 @@ calibration tasks, truthful and appropriately selected negative controls, and in
 human validation remain necessary before using such scores for merge decisions.
 
 \section*{Data and Artifact Availability}
-The versioned artifact (\texttt{2026.11.05-v3}) is available at
+The versioned artifact (\texttt{2026.11.05-v4}) is available at
 \url{https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2}.
 It preserves historical prompts, source keys, packets, verdicts, human-pilot records,
 and analysis scripts. Its historical \texttt{REPRODUCE.md} documents table and figure
