@@ -1,0 +1,32 @@
+# SWE-bench Verified dataset config
+name: swebench_verified
+split_label: verified
+hf_dataset: princeton-nlp/SWE-bench_Verified
+hf_split: test
+# SWE-bench Verified = 500 human-validated instances (OpenAI), Python-only.
+expected_num_instances: 500
+language: python
+
+keep_fields:
+  - instance_id
+  - repo
+  - base_commit
+  - problem_statement
+  - hints_text
+  - created_at
+  - version
+  - patch              # GOLD patch — kept ONLY for harness sanity + eval; NEVER shown to reviewers
+  - test_patch
+  - FAIL_TO_PASS
+  - PASS_TO_PASS
+  - environment_setup_commit
+
+leakage_sensitive_fields:
+  - patch
+  - test_patch
+  - hints_text
+
+sample:
+  n: 5
+  seed: 42
+  strategy: deterministic_sorted

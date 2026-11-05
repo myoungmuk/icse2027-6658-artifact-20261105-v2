@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "review-swe"
+version = "0.1.0"
+description = "From Resolved to Mergeable: Reassessing SWE-bench Through Human and LLM Code Review"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+dependencies = [
+    "datasets>=2.19,<6",
+    "pyyaml>=6.0",
+    "swebench>=2.1.0,<5",
+]
+
+[project.optional-dependencies]
+analysis = ["numpy", "pandas", "scipy", "statsmodels", "matplotlib", "krippendorff"]
+harness = ["docker"]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

@@ -1,0 +1,34 @@
+# SWE-bench Lite dataset config
+name: swebench_lite
+split_label: lite
+hf_dataset: princeton-nlp/SWE-bench_Lite
+hf_split: test
+# SWE-bench Lite = 300 curated instances, Python-only, lighter eval footprint.
+expected_num_instances: 300
+language: python
+
+# Fields kept when normalizing to data/swebench_instances/lite.jsonl
+keep_fields:
+  - instance_id
+  - repo
+  - base_commit
+  - problem_statement
+  - hints_text
+  - created_at
+  - version
+  - patch              # GOLD patch — kept ONLY for harness sanity + eval; NEVER shown to reviewers
+  - test_patch         # test changes that define FAIL_TO_PASS / PASS_TO_PASS
+  - FAIL_TO_PASS
+  - PASS_TO_PASS
+  - environment_setup_commit
+
+# Leakage guard: these fields must be stripped before any review packet is built.
+leakage_sensitive_fields:
+  - patch
+  - test_patch
+  - hints_text
+
+sample:
+  n: 5
+  seed: 42
+  strategy: deterministic_sorted   # sort by instance_id, take first n (reproducible)

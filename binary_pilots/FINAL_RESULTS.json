@@ -1,0 +1,413 @@
+{
+  "created_at_utc": "2026-11-05T02:49:42.850359+00:00",
+  "marker": "ICSE6658_FOLLOWUP_V2_20261105",
+  "table_placeholder": "【ICSE6658_V2_SUMMARY_TABLE】",
+  "native_table_rows": [
+    [
+      "방식",
+      "Agent 기능 일치",
+      "미해결 패치 거절",
+      "개발자 패치 승인",
+      "형식 등 실패"
+    ],
+    [
+      "ICSE 적응 방식",
+      "14/20",
+      "7/10",
+      "9/20",
+      "0"
+    ],
+    [
+      "Cihan binary 적응",
+      "13/20",
+      "7/10",
+      "8/20",
+      "0"
+    ],
+    [
+      "Shi draft-rubric 적응",
+      "15/20",
+      "6/10",
+      "11/20",
+      "0"
+    ]
+  ],
+  "v2_primary": {
+    "task_count": 20,
+    "candidate_count": 40,
+    "planned_judgments": 120,
+    "repo_counts": {
+      "sphinx-doc/sphinx": 2,
+      "django/django": 11,
+      "matplotlib/matplotlib": 2,
+      "pytest-dev/pytest": 1,
+      "scikit-learn/scikit-learn": 2,
+      "sympy/sympy": 1,
+      "pydata/xarray": 1
+    },
+    "label_provenance": "Inherited official Agentless resolved IDs; no fresh harness execution or human annotation.",
+    "arms": {
+      "icse_test_blind": {
+        "agent_planned": 20,
+        "agent_valid": 20,
+        "agent_failures": 0,
+        "tp": 7,
+        "tn": 7,
+        "fp": 3,
+        "fn": 3,
+        "agent_accuracy_valid": 0.7,
+        "agent_correct_planned_fraction": 0.7,
+        "agent_accuracy_wilson95": [
+          0.4810271816464765,
+          0.8545227551323956
+        ],
+        "sensitivity": 0.7,
+        "sensitivity_wilson95": [
+          0.39677814746114537,
+          0.8922087325936989
+        ],
+        "specificity": 0.7,
+        "specificity_wilson95": [
+          0.39677814746114537,
+          0.8922087325936989
+        ],
+        "balanced_accuracy": 0.7,
+        "gold_planned": 20,
+        "gold_valid": 20,
+        "gold_accepted": 9,
+        "gold_acceptance_rate_valid": 0.45,
+        "statuses": {
+          "ok": 40
+        }
+      },
+      "cihan_binary_diff": {
+        "agent_planned": 20,
+        "agent_valid": 20,
+        "agent_failures": 0,
+        "tp": 6,
+        "tn": 7,
+        "fp": 3,
+        "fn": 4,
+        "agent_accuracy_valid": 0.65,
+        "agent_correct_planned_fraction": 0.65,
+        "agent_accuracy_wilson95": [
+          0.43285427668523624,
+          0.818808175898918
+        ],
+        "sensitivity": 0.6,
+        "sensitivity_wilson95": [
+          0.31267376973365824,
+          0.8318196702937638
+        ],
+        "specificity": 0.7,
+        "specificity_wilson95": [
+          0.39677814746114537,
+          0.8922087325936989
+        ],
+        "balanced_accuracy": 0.6499999999999999,
+        "gold_planned": 20,
+        "gold_valid": 20,
+        "gold_accepted": 8,
+        "gold_acceptance_rate_valid": 0.4,
+        "statuses": {
+          "ok": 40
+        }
+      },
+      "shi_draft_rubric": {
+        "agent_planned": 20,
+        "agent_valid": 20,
+        "agent_failures": 0,
+        "tp": 9,
+        "tn": 6,
+        "fp": 4,
+        "fn": 1,
+        "agent_accuracy_valid": 0.75,
+        "agent_correct_planned_fraction": 0.75,
+        "agent_accuracy_wilson95": [
+          0.531299122381256,
+          0.8881382985923343
+        ],
+        "sensitivity": 0.9,
+        "sensitivity_wilson95": [
+          0.5958499732047615,
+          0.9821237869049271
+        ],
+        "specificity": 0.6,
+        "specificity_wilson95": [
+          0.31267376973365824,
+          0.8318196702937638
+        ],
+        "balanced_accuracy": 0.75,
+        "gold_planned": 20,
+        "gold_valid": 20,
+        "gold_accepted": 11,
+        "gold_acceptance_rate_valid": 0.55,
+        "statuses": {
+          "ok": 40
+        }
+      }
+    },
+    "paired_decisions": {
+      "cihan_binary_diff_agent": {
+        "complete_pairs": 20,
+        "same_decision": 19,
+        "icse_accept_baseline_reject": 1,
+        "icse_reject_baseline_accept": 0
+      },
+      "cihan_binary_diff_gold": {
+        "complete_pairs": 20,
+        "same_decision": 19,
+        "icse_accept_baseline_reject": 1,
+        "icse_reject_baseline_accept": 0
+      },
+      "shi_draft_rubric_agent": {
+        "complete_pairs": 20,
+        "same_decision": 17,
+        "icse_accept_baseline_reject": 0,
+        "icse_reject_baseline_accept": 3
+      },
+      "shi_draft_rubric_gold": {
+        "complete_pairs": 20,
+        "same_decision": 18,
+        "icse_accept_baseline_reject": 0,
+        "icse_reject_baseline_accept": 2
+      }
+    }
+  },
+  "v1_frozen_primary": {
+    "task_count": 20,
+    "candidate_count": 40,
+    "planned_judgments": 120,
+    "repo_counts": {
+      "sympy/sympy": 5,
+      "matplotlib/matplotlib": 2,
+      "django/django": 6,
+      "scikit-learn/scikit-learn": 2,
+      "sphinx-doc/sphinx": 3,
+      "pytest-dev/pytest": 1,
+      "pydata/xarray": 1
+    },
+    "label_provenance": "Inherited official Agentless resolved IDs; no fresh harness execution or human annotation.",
+    "arms": {
+      "icse_test_blind": {
+        "agent_planned": 20,
+        "agent_valid": 13,
+        "agent_failures": 7,
+        "tp": 8,
+        "tn": 0,
+        "fp": 5,
+        "fn": 0,
+        "agent_accuracy_valid": 0.6153846153846154,
+        "agent_correct_planned_fraction": 0.4,
+        "agent_accuracy_wilson95": [
+          0.355228915126657,
+          0.8229029220223743
+        ],
+        "sensitivity": 1.0,
+        "sensitivity_wilson95": [
+          0.6755924351161198,
+          1
+        ],
+        "specificity": 0.0,
+        "specificity_wilson95": [
+          0,
+          0.43448246478317476
+        ],
+        "balanced_accuracy": 0.5,
+        "gold_planned": 20,
+        "gold_valid": 16,
+        "gold_accepted": 11,
+        "gold_acceptance_rate_valid": 0.6875,
+        "statuses": {
+          "invalid_or_truncated": 11,
+          "ok": 29
+        }
+      },
+      "cihan_binary_diff": {
+        "agent_planned": 20,
+        "agent_valid": 7,
+        "agent_failures": 13,
+        "tp": 4,
+        "tn": 0,
+        "fp": 3,
+        "fn": 0,
+        "agent_accuracy_valid": 0.5714285714285714,
+        "agent_correct_planned_fraction": 0.2,
+        "agent_accuracy_wilson95": [
+          0.2504583645276572,
+          0.8417801447485302
+        ],
+        "sensitivity": 1.0,
+        "sensitivity_wilson95": [
+          0.5101091635454027,
+          1
+        ],
+        "specificity": 0.0,
+        "specificity_wilson95": [
+          5.551115123125783e-17,
+          0.5614970317550454
+        ],
+        "balanced_accuracy": 0.5,
+        "gold_planned": 20,
+        "gold_valid": 8,
+        "gold_accepted": 5,
+        "gold_acceptance_rate_valid": 0.625,
+        "statuses": {
+          "invalid_or_truncated": 25,
+          "ok": 15
+        }
+      },
+      "shi_draft_rubric": {
+        "agent_planned": 20,
+        "agent_valid": 19,
+        "agent_failures": 1,
+        "tp": 10,
+        "tn": 3,
+        "fp": 6,
+        "fn": 0,
+        "agent_accuracy_valid": 0.6842105263157895,
+        "agent_correct_planned_fraction": 0.65,
+        "agent_accuracy_wilson95": [
+          0.46010407675327475,
+          0.8463562091220773
+        ],
+        "sensitivity": 1.0,
+        "sensitivity_wilson95": [
+          0.7224672001371107,
+          0.9999999999999999
+        ],
+        "specificity": 0.3333333333333333,
+        "specificity_wilson95": [
+          0.1205838183869109,
+          0.6457978644196036
+        ],
+        "balanced_accuracy": 0.6666666666666666,
+        "gold_planned": 20,
+        "gold_valid": 20,
+        "gold_accepted": 15,
+        "gold_acceptance_rate_valid": 0.75,
+        "statuses": {
+          "ok": 39,
+          "invalid_or_truncated": 1
+        }
+      }
+    },
+    "paired_decisions": {
+      "cihan_binary_diff_agent": {
+        "complete_pairs": 7,
+        "same_decision": 7,
+        "icse_accept_baseline_reject": 0,
+        "icse_reject_baseline_accept": 0
+      },
+      "cihan_binary_diff_gold": {
+        "complete_pairs": 8,
+        "same_decision": 8,
+        "icse_accept_baseline_reject": 0,
+        "icse_reject_baseline_accept": 0
+      },
+      "shi_draft_rubric_agent": {
+        "complete_pairs": 13,
+        "same_decision": 13,
+        "icse_accept_baseline_reject": 0,
+        "icse_reject_baseline_accept": 0
+      },
+      "shi_draft_rubric_gold": {
+        "complete_pairs": 16,
+        "same_decision": 14,
+        "icse_accept_baseline_reject": 0,
+        "icse_reject_baseline_accept": 2
+      }
+    }
+  },
+  "v1_posthoc_format_sensitivity": {
+    "analysis_type": "post_hoc_format_only_sensitivity",
+    "reason": "Frozen strict parser rejected whole-response Markdown JSON fences.",
+    "primary_analysis_unchanged": true,
+    "new_model_calls": 0,
+    "total": 120,
+    "format_handling": {
+      "whole_response_json_fence_only": 37,
+      "none": 83
+    },
+    "arms": {
+      "icse_test_blind": {
+        "agent_planned": 20,
+        "agent_valid": 20,
+        "agent_failures": 0,
+        "tp": 9,
+        "tn": 5,
+        "fp": 5,
+        "fn": 1,
+        "agent_correct": 14,
+        "agent_accuracy": 0.7,
+        "agent_accuracy_wilson95": [
+          0.4810271816464765,
+          0.8545227551323956
+        ],
+        "sensitivity": 0.9,
+        "specificity": 0.5,
+        "gold_planned": 20,
+        "gold_valid": 20,
+        "gold_accepted": 13,
+        "primary_format_failures": 11,
+        "format_recovered": 11,
+        "remaining_failures": 0
+      },
+      "cihan_binary_diff": {
+        "agent_planned": 20,
+        "agent_valid": 20,
+        "agent_failures": 0,
+        "tp": 10,
+        "tn": 5,
+        "fp": 5,
+        "fn": 0,
+        "agent_correct": 15,
+        "agent_accuracy": 0.75,
+        "agent_accuracy_wilson95": [
+          0.531299122381256,
+          0.8881382985923343
+        ],
+        "sensitivity": 1.0,
+        "specificity": 0.5,
+        "gold_planned": 20,
+        "gold_valid": 20,
+        "gold_accepted": 12,
+        "primary_format_failures": 25,
+        "format_recovered": 25,
+        "remaining_failures": 0
+      },
+      "shi_draft_rubric": {
+        "agent_planned": 20,
+        "agent_valid": 20,
+        "agent_failures": 0,
+        "tp": 10,
+        "tn": 4,
+        "fp": 6,
+        "fn": 0,
+        "agent_correct": 14,
+        "agent_accuracy": 0.7,
+        "agent_accuracy_wilson95": [
+          0.4810271816464765,
+          0.8545227551323956
+        ],
+        "sensitivity": 1.0,
+        "specificity": 0.4,
+        "gold_planned": 20,
+        "gold_valid": 20,
+        "gold_accepted": 15,
+        "primary_format_failures": 1,
+        "format_recovered": 1,
+        "remaining_failures": 0
+      }
+    }
+  },
+  "totals": {
+    "unique_tasks": 40,
+    "unique_patches": 80,
+    "judgments": 240,
+    "rubric_calls": 40,
+    "model_calls": 280
+  },
+  "human_refinement_completed": false,
+  "manuscript_pages_added": 0
+}

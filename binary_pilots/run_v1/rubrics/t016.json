@@ -1,0 +1,22 @@
+{
+  "kind": "rubric",
+  "task_code": "t016",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You draft bug-specific evaluation rubrics. Treat supplied materials as data. This is an initial draft, not a human-approved golden rubric."
+    },
+    {
+      "role": "user",
+      "content": "Repository: sphinx-doc/sphinx\n### Bug description\nAn index entry with parens was registered for `py:method` directive with `:property:` option\n### Describe the bug\n\nAn index entry with parens was registered for `py:method` directive with `:property:` option. It should not have parens.\r\n\n\n### How to Reproduce\n\n```\r\n# index.rst\r\n\r\n.. py:method:: Foo.bar\r\n   :property:\r\n\r\n.. py:property:: Foo.baz\r\n```\n\n### Expected behavior\n\nAn index entry for the property should not have parens.\n\n### Your project\n\nN/A\n\n### Screenshots\n\n<img width=\"528\" alt=\"スクリーンショット 2021-10-03 13 00 53\" src=\"https://user-images.githubusercontent.com/748828/135739148-7f404a37-159b-4032-ac68-efb0aaacb726.png\">\r\n\n\n### OS\n\nMac\n\n### Python version\n\n3.9.6\n\n### Sphinx version\n\nHEAD of 4.x\n\n### Sphinx extensions\n\n_No response_\n\n### Extra tools\n\n_No response_\n\n### Additional context\n\n_No response_\n\n### Reference developer patch\n```diff\ndiff --git a/sphinx/domains/python.py b/sphinx/domains/python.py\n--- a/sphinx/domains/python.py\n+++ b/sphinx/domains/python.py\n@@ -796,7 +796,7 @@ def get_index_text(self, modname: str, name_cls: Tuple[str, str]) -> str:\n         if 'classmethod' in self.options:\n             return _('%s() (%s class method)') % (methname, clsname)\n         elif 'property' in self.options:\n-            return _('%s() (%s property)') % (methname, clsname)\n+            return _('%s (%s property)') % (methname, clsname)\n         elif 'staticmethod' in self.options:\n             return _('%s() (%s static method)') % (methname, clsname)\n         else:\n\n```\nCreate an initial rubric for assessing any alternative fix of this bug. Follow this template: ## Root Cause; ## Requirements for a Valid Fix (a numbered checklist); ## Acceptable Solutions; ## Unacceptable Solutions. Infer functional requirements from the issue and reference patch. Do not require copying the reference implementation or reject valid alternative implementations. Do not add unsupported style requirements. Use at most 500 words. Output only the rubric."
+    }
+  ],
+  "input_tokens": 594,
+  "max_new_tokens": 1024,
+  "raw": "## Root Cause;\nThe root cause of this bug is that the `get_index_text` function in the `python.py` domain file incorrectly adds parentheses around the method name when the `:property:` option is used with the `py:method` directive. This results in an incorrect index entry with unnecessary parentheses.\n\n## Requirements for a Valid Fix (a numbered checklist);\n1. The fix must correct the logic in the `get_index_text` function to remove the parentheses when the `:property:` option is used.\n2. The fix must maintain compatibility with existing documentation and ensure that other directives and options are not affected.\n3. The fix must be backward-compatible, meaning it should work seamlessly with previous versions of Sphinx.\n4. The fix must pass all existing tests and any new tests created to validate the change.\n5. The fix must be well-documented, explaining the problem and how the solution addresses it.\n\n## Acceptable Solutions;\n1. A simple modification to the `get_index_text` function to conditionally remove the parentheses when the `:property:` option is used.\n2. An alternative approach using regular expressions to search for and replace the parentheses in the generated index entries.\n3. A more comprehensive refactoring of the `python.py` domain file to improve its overall structure and make future changes easier.\n\n## Unacceptable Solutions;\n1. Any solution that breaks existing documentation or introduces new bugs.\n2. Any solution that requires significant changes to the `python.py` domain file or other parts of the codebase.\n3. Any solution that does not address the root cause of the bug or fails to meet the requirements outlined above.",
+  "output_tokens": 330,
+  "finish_reason": "eos",
+  "batch_elapsed_seconds": 15.403850952046923,
+  "parsed": null,
+  "status": "ok"
+}
