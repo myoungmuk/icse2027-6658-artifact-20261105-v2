@@ -1,4 +1,4 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-05 v4
+# ICSE 2027 #6658 공개 자료 — 2026-11-05 v6
 
 논문: **Beyond %Resolved:Reassessing SWE-bench Through Human and LLM Code Review**
 
@@ -51,7 +51,7 @@ python tools/reproduce_pilots.py --output ../icse6658-reanalysis
 제3자 자료의 권리는 원래 고지에 따른다. 혼합된 전체 자료에 새 blanket license를
 부여하지 않았다. `historical_analysis/THIRD_PARTY_NOTICES.md`를 참고한다.
 
-## 현재 사실·서지 확인 (v5)
+## v5에서 확인한 사실·서지 (보존 기록)
 
 기존 인간 파일럿의 평가자는 강명묵이며 연구에 참여했다는 사용자 확인을 유지한다.
 리뷰 경력·루브릭 개발의 정확한 역할은 미기록이다. 새 인간 검토·추론·실험 수치는 추가하지 않았다.
