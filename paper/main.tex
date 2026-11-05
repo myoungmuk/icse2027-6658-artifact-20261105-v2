@@ -62,24 +62,13 @@ declares a task \emph{resolved} when the generated patch makes a held-out
 \texttt{FAIL\_TO\_PASS} test pass while preserving \texttt{PASS\_TO\_PASS} tests. The
 leaderboard metric \%Resolved has become the field's primary yardstick.
 
-As execution scores rise, review-based criteria increasingly inform comparisons of coding
-agents. LLMs make such assessments scalable, but interpreting a review score requires
-checking the reviewer as well as the candidate.
-
-Yet in real software development, passing tests is necessary but not sufficient for a change
-to be accepted: a pull request must also survive \emph{code review}, where maintainers weigh
-functional completeness, regression risk, minimality, maintainability, project conventions,
-and test adequacy before merging~\cite{modernreview,tufanoreview}. That test-passing patches
-can still be wrong is a long-standing observation in automated program repair, where
-``plausible but incorrect'' patches and test overfitting have been studied for a
-decade~\cite{overfitting,qirandom,patchcorrectness,patchsim}. For agentic software
-engineering the concern is broader: the question is not only whether a multi-file,
-agent-generated patch is \emph{correct} but whether it is \emph{mergeable}.
-
-A natural research program follows: complement \%Resolved with a review-based criterion and
-quantify the gap between them. Because human review at benchmark scale is expensive, the
-obvious instrument is an LLM reviewer, mirroring the now-common LLM-as-judge
-paradigm~\cite{llmjudge}. This paper asks whether that instrument actually works.
+Real pull requests also undergo code review, where maintainers assess functional
+completeness, regression risk, scope, maintainability, conventions and tests~\cite{modernreview,tufanoreview}.
+Test-passing but incorrect patches and test overfitting are longstanding APR
+concerns~\cite{overfitting,qirandom,patchcorrectness,patchsim}. For multi-file agent
+patches, mergeability additionally involves review criteria beyond correctness.
+We ask whether LLM reviewers can supply a validated review-based complement to
+\%Resolved~\cite{llmjudge}.
 
 
 We operationalize review-based evaluation on test-passing Agentless~\cite{agentless}
@@ -637,6 +626,20 @@ pairs, acceptance is $135/300$ versus $149/300$; discordant counts are $(47,61)$
 (exact McNemar $p=.211$). Four empty candidates and two incomplete pairs are excluded
 explicitly. This is not equivalence, new harness execution, or independent calibration.
 
+
+A prospectively frozen follow-up excludes all $707$ prior tasks, selecting between
+two test-blind configurations on $40$ development tasks before reviewing $100$
+disjoint held-out tasks, each with developer/unresolved SWE-agent patches.
+Development proxy agreement selects adjusted ($43/80$ versus strict $38/80$);
+selection/output hashes are sealed before held-out inference. Of $560$ planned
+inputs, $558$ generate valid outputs; two overlength developer inputs are skipped,
+without truncation or replacement. Adjusted accepts $57/99$ developer and $49/100$
+unresolved patches. On $99$ complete pairs, functional-proxy agreement is $54.04\%$
+(task-bootstrap $95\%$ CI $47.47$--$60.61\%$); its difference from strict is $2.53$
+percentage points (CI $-3.03$--$8.59$). This finite two-configuration study shows no
+clear proxy improvement and does not validate historical calibration, maintainer
+truth, or repository/pretraining independence; no new harness runs occur.
+
 \subsection{Qualitative inspection of cited concerns}
 A post-hoc technical audit selects the first two nonaccepted hosted cases lexically
 within resolved-agent ($30$), gold ($3$), and failing-agent ($38$) strata. Six pinned-source
@@ -708,18 +711,15 @@ recommendations. This is benchmark-design guidance, not a validated decision aid
 universal numeric pass/fail rule. Our study demonstrates the need for these distinctions;
 it does not claim to have completed every step.
 
-\textbf{Scope of the observed tension.} The correlation across open configurations and
-low agreement show dependence on judge choice in this sample. They do not identify a
-single leniency mechanism or prove all open models incapable of discrimination.
-Qwen-32B's cross-scaffold differences and the hosted operating point make a blanket
-agent--gold null inaccurate. Model scale alone also does not explain the Qwen observations;
-different checkpoints may have different training and alignment histories.
+\textbf{Scope of the observed tension.} Aggregate correlation and low agreement
+show reviewer dependence, not a single leniency mechanism. Qwen-32B's
+cross-scaffold differences and the hosted result rule out a blanket agent--gold
+null. Scale alone does not explain Qwen results; training/alignment histories differ.
 
-\textbf{Analysis reproduction versus fresh inference.} Stored labels and verdicts regenerate
-tables and figures without model calls. New reviews require a serving environment; exact
-hosted reproduction remains unresolved because its snapshot is unrecorded. Templates,
-keys, verdicts, and regeneration code support computational checking, not adjudication or
-recovery of missing identity.
+\textbf{Analysis reproduction versus fresh inference.} Stored verdicts regenerate
+tables/figures without model calls. Fresh inference requires weights and serving
+software; the missing hosted snapshot prevents exact replay. Computational
+checking supplies neither adjudication nor missing identity.
 
 \subsection{Threats to validity}
 \textbf{Construct.} Historical merge outcomes can tolerate imperfections and depend on PR
@@ -791,14 +791,15 @@ adjustment changes agent and gold acceptance; reviewer/scaffold differences and 
 results do not establish equivalence or maintainer validity. The hosted identity is
 missing and archived negative inputs are flawed. New full-split and matched controls
 remain limited to a test-blind 7B adapter; targeted code/history checks establish no
-population objection-error rate. Independent calibration and human validation remain
-necessary before operational merge decisions.
+population objection-error rate. The task-disjoint study tests only two new 7B
+configurations. Broader calibration and human validation remain necessary before
+operational merge decisions.
 
 \section*{Data and Artifact Availability}
-Version \texttt{2026.11.05-v8} at
+Version \texttt{2026.11.05-v10} at
 \url{https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2}
 contains preserved inputs/outputs and regeneration instructions for historical analyses,
-adapted pilots, full-split controls and technical/history checks. Analysis reproduction
+adapted pilots, full-split/disjoint controls and technical/history checks. Analysis reproduction
 does not recover the missing hosted identity or rubric history, or rerun inference.
 
 \section*{Acknowledgments}

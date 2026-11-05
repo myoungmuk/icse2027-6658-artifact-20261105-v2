@@ -1,4 +1,10 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-05 v9
+# ICSE 2027 #6658 공개 자료 — 2026-11-05 v10
+
+v10은 기존 707개와 겹치지 않는 개발 40개·검증 100개 과제의 새 실험을 추가한다.
+예정 560개 입력 중 실제 생성 558개가 모두 유효하고 길이 초과 2개는 제외 기록을 남겼다.
+개발 결과로 설정을 선택·저장한 뒤 검증용 추론을 실행했다. 과거 calibration 복구나
+인간 유지보수자 검증은 아니다. 상세 자료는 `task_disjoint_calibration/`에 있으며
+아래 이전 실험과 모든 이전 배포본은 보존한다.
 
 논문: **Beyond %Resolved:Reassessing SWE-bench Through Human and LLM Code Review**
 
@@ -110,3 +116,16 @@ and RovoDev's binary comment selection from patch acceptance. Paper-linked
 replication materials for the IST work and LLaMA-Reviewer were located and their
 availability checked; no original-system inference is claimed. The paper remains
 nine body pages plus one reference page. All older inputs/releases are preserved.
+
+
+## v10 prospective task-disjoint configuration selection
+
+The [new study](task_disjoint_calibration/README.md) excludes all 707 prior tasks,
+uses 40 development and 100 heldout tasks, and seals a development-only selection
+before heldout inference. Two frozen test-blind 7B configurations see the same
+issue/diff inputs. Of 560 planned inputs, 558 generations run and two overlength
+inputs are explicitly skipped. Full outputs, source receipts, frozen code and
+portable offline analysis are included. This is a new finite configuration study,
+not historical calibration recovery or independent maintainer validation. No
+human ratings or new harness runs are added. The paper remains 9+1 pages; earlier
+release assets and historical inputs are preserved.

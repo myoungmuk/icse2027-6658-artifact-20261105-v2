@@ -8,7 +8,7 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v9`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v9).
+Version: [`2026.11.05-v10`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v10).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
@@ -164,3 +164,16 @@ and RovoDev's binary comment selection from patch acceptance. Paper-linked
 replication materials for the IST work and LLaMA-Reviewer were located and their
 availability checked; no original-system inference is claimed. The paper remains
 nine body pages plus one reference page. All older inputs/releases are preserved.
+
+
+## v10 prospective task-disjoint configuration selection
+
+The [new study](task_disjoint_calibration/README.md) excludes all 707 prior tasks,
+uses 40 development and 100 heldout tasks, and seals a development-only selection
+before heldout inference. Two frozen test-blind 7B configurations see the same
+issue/diff inputs. Of 560 planned inputs, 558 generations run and two overlength
+inputs are explicitly skipped. Full outputs, source receipts, frozen code and
+portable offline analysis are included. This is a new finite configuration study,
+not historical calibration recovery or independent maintainer validation. No
+human ratings or new harness runs are added. The paper remains 9+1 pages; earlier
+release assets and historical inputs are preserved.
