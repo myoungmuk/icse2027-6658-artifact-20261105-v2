@@ -8,7 +8,7 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v11`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v11).
+Version: [`2026.11.05-v12`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v12).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
@@ -189,3 +189,16 @@ inputs, source receipts, evidence cards and offline recomputation are included.
 This supports functional rejection within one hosted-reviewer stratum; it is not
 independent adjudication of every rationale. No new inference or human ratings.
 The paper remains 9+1 pages. Prior release assets and historical results remain.
+
+
+## v12 gold and original saved-output evidence
+
+The [new follow-up](nonhuman_followup/README.md) runs full packages for all three
+hosted nonaccepted gold patches and replays original saved outputs from three
+prior works. Matplotlib's default empty-bin regression is reproduced despite an
+official test pass; sklearn's omitted argument has no output effect in four
+tested configurations. Raw controls, diagnostic variants, source hashes, native
+saved outputs, separate invalid-response accounting and offline scripts are
+included. These are targeted technical findings, not independent human labels,
+fresh native-model inference or all-system same-task comparisons. Checklist
+coverage remains49/58(84.48%). The manuscript stays9+1 pages; prior releases remain.

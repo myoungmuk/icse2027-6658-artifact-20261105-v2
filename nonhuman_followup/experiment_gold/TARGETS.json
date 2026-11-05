@@ -1,0 +1,52 @@
+{
+  "cases": [
+    {
+      "instance_id": "django__django-11179",
+      "repo": "django/django",
+      "targets": [
+        "delete.tests.FastDeleteTests"
+      ],
+      "official_labels": [
+        "test_fast_delete_instance_set_pk_none (delete.tests.FastDeleteTests)"
+      ],
+      "variants": [
+        "base",
+        "gold"
+      ],
+      "environment_key": null
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11578",
+      "repo": "scikit-learn/scikit-learn",
+      "targets": [
+        "sklearn/linear_model/tests/test_logistic.py::test_logistic_cv_multinomial_score[neg_log_loss-multiclass_agg_list3]"
+      ],
+      "official_labels": [
+        "sklearn/linear_model/tests/test_logistic.py::test_logistic_cv_multinomial_score[neg_log_loss-multiclass_agg_list3]"
+      ],
+      "variants": [
+        "base",
+        "gold",
+        "gold_restore_intercept"
+      ],
+      "environment_key": "legacy_science"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26113",
+      "repo": "matplotlib/matplotlib",
+      "targets": [
+        "lib/matplotlib/tests/test_axes.py::test_hexbin_mincnt_behavior_upon_C_parameter[png]"
+      ],
+      "official_labels": [
+        "lib/matplotlib/tests/test_axes.py::test_hexbin_mincnt_behavior_upon_C_parameter[png]"
+      ],
+      "variants": [
+        "base",
+        "gold",
+        "gold_default_one"
+      ],
+      "environment_key": "modern_science"
+    }
+  ],
+  "selection": "All three hosted nonaccepted gold tasks. Exact official parameter labels for pytest; full official Django FastDeleteTests class. Diagnostic probes fixed separately; not a population error estimate."
+}

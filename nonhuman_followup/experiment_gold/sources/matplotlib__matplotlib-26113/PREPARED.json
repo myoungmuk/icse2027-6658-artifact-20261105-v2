@@ -1,0 +1,72 @@
+{
+  "instance_id": "matplotlib__matplotlib-26113",
+  "repo": "matplotlib/matplotlib",
+  "base_commit": "5ca694b38d861c0e24cd8743753427dda839b90b",
+  "url": "https://codeload.github.com/matplotlib/matplotlib/tar.gz/5ca694b38d861c0e24cd8743753427dda839b90b",
+  "archive_sha256": "fdc2bb6a3ef93bc819b4b88bbdee4dfb6088f9e2a5cc537af42b6d4f166aefa1",
+  "archive_bytes": 37852401,
+  "reused_source_archive": null,
+  "environment_key": "modern_science",
+  "native_build": {
+    "command": [
+      "/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/bin/python",
+      "setup.py",
+      "build_ext",
+      "--inplace",
+      "-j",
+      "2"
+    ],
+    "started_at_utc": "2026-11-05T11:17:51.738986+00:00",
+    "returncode": 1,
+    "finished_at_utc": "2026-11-05T11:17:52.253546+00:00",
+    "extensions": []
+  },
+  "patch_applications": {
+    "base": [
+      {
+        "patch": "official_tests",
+        "sha256": "363cbd07c00c2f1f09f87d64b28be9fc443331ad0a7c45f158746f68418d8a54",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Checking patch lib/matplotlib/tests/test_axes.py...\nApplied patch lib/matplotlib/tests/test_axes.py cleanly.\n"
+      }
+    ],
+    "gold": [
+      {
+        "patch": "gold",
+        "sha256": "19289b1c984a6a351dd0f0f737ec91cf37ff8dde6251f67950b00bc21cf068ba",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Checking patch lib/matplotlib/axes/_axes.py...\nApplied patch lib/matplotlib/axes/_axes.py cleanly.\n"
+      },
+      {
+        "patch": "official_tests",
+        "sha256": "363cbd07c00c2f1f09f87d64b28be9fc443331ad0a7c45f158746f68418d8a54",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Checking patch lib/matplotlib/tests/test_axes.py...\nApplied patch lib/matplotlib/tests/test_axes.py cleanly.\n"
+      }
+    ]
+  },
+  "diagnostic_intervention": {
+    "variant": "gold_default_one",
+    "file": "lib/matplotlib/axes/_axes.py",
+    "before": "if mincnt is None:\n                mincnt = 0",
+    "after": "if mincnt is None:\n                mincnt = 1",
+    "purpose": "Minimal diagnostic intervention, not a newly evaluated upstream patch or independent label."
+  },
+  "variants": {
+    "base": {
+      "lib/matplotlib/axes/_axes.py": "92511816c99289026ab52f7d55ec8ede43b3cd9088632d2efac00cccda9fc942",
+      "lib/matplotlib/tests/test_axes.py": "e845a902cbfe9bc1e096323f901df505e9b4c33be0d3e727a586f9fd22244307"
+    },
+    "gold": {
+      "lib/matplotlib/axes/_axes.py": "b5ae669219060f320dd28f71e5758acd5244f9834f77eed3ece445ba62bebed2",
+      "lib/matplotlib/tests/test_axes.py": "e845a902cbfe9bc1e096323f901df505e9b4c33be0d3e727a586f9fd22244307"
+    },
+    "gold_default_one": {
+      "lib/matplotlib/axes/_axes.py": "224606f3a121697f9fdeaee13f75b00cb39242b3465f3965f9fbd19ed15d47cd",
+      "lib/matplotlib/tests/test_axes.py": "e845a902cbfe9bc1e096323f901df505e9b4c33be0d3e727a586f9fd22244307"
+    }
+  }
+}

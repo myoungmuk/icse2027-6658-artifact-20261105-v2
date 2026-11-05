@@ -1,0 +1,205 @@
+{
+  "native_saved_outputs_only": true,
+  "new_model_calls": 0,
+  "new_human_labels": 0,
+  "source_commit": "fe3711b91c079175dc2332090fcbb17eec98458d",
+  "source_url": "https://github.com/anonyauthors/code_review",
+  "task": "Generate a revised Java method, optionally conditioned on reviewer comment; not binary patch acceptance.",
+  "metric": "Exact string equality after stripping field boundary whitespace. Any of k predictions equals ORACLE. No compilation or functional correctness claimed.",
+  "unique_test_entities_as_documented": 1719,
+  "condition_files": 16,
+  "sources": [
+    {
+      "path": "1-encoder-predictions.zip",
+      "sha256": "694d63d3d992800e64e42bc9e4bf34ca1b580a64bb7a9710d317e269ff5d7a53"
+    },
+    {
+      "path": "2-encoder-predictions.zip",
+      "sha256": "4682b2ae3513be372f0f7bcb9015f33597eec10cd3dfa7473e9657325f7c7fee"
+    }
+  ],
+  "conditions": [
+    {
+      "file": "1-encoder-predictions/predictions_k10_abstracted.txt",
+      "sha256": "3ddc8ae8c687f0bd32bbaef6ad2f577058bb36f32ddf72dccf72abd98b6783f0",
+      "beam_size": 10,
+      "representation": "abstracted",
+      "model": "1-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 271,
+      "exact_match_rate": 0.15764979639325188,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "1-encoder-predictions/predictions_k10_raw.txt",
+      "sha256": "8ffeb54361ea8e8b119e5077af4741477e050f5e4c796489d796ff30e5b58f61",
+      "beam_size": 10,
+      "representation": "raw",
+      "model": "1-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 271,
+      "exact_match_rate": 0.15764979639325188,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "1-encoder-predictions/predictions_k1_abstracted.txt",
+      "sha256": "f9755ff36604369015d57498c28ea88ceb3350c3345a6456a31cef1cdf91686c",
+      "beam_size": 1,
+      "representation": "abstracted",
+      "model": "1-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 50,
+      "exact_match_rate": 0.029086678301337987,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "1-encoder-predictions/predictions_k1_raw.txt",
+      "sha256": "d32e3e67271c418a1270576d2157ff6adec10252a7984bd2221453000010f19f",
+      "beam_size": 1,
+      "representation": "raw",
+      "model": "1-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 50,
+      "exact_match_rate": 0.029086678301337987,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "1-encoder-predictions/predictions_k3_abstracted.txt",
+      "sha256": "1e5ec609c010f428ea65e7ba170327a9deb075cee40cd6b7e66ffd71e2a75939",
+      "beam_size": 3,
+      "representation": "abstracted",
+      "model": "1-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 156,
+      "exact_match_rate": 0.09075043630017451,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "1-encoder-predictions/predictions_k3_raw.txt",
+      "sha256": "07788523dfa363981d868939ec0cfa51db7e949091844930d04e8222808b9fe5",
+      "beam_size": 3,
+      "representation": "raw",
+      "model": "1-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 156,
+      "exact_match_rate": 0.09075043630017451,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "1-encoder-predictions/predictions_k5_abstracted.txt",
+      "sha256": "15bf2ea72529e5d73701f015ea008c0fa5504c785304309bed7b2eb34d65fa4c",
+      "beam_size": 5,
+      "representation": "abstracted",
+      "model": "1-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 200,
+      "exact_match_rate": 0.11634671320535195,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "1-encoder-predictions/predictions_k5_raw.txt",
+      "sha256": "5879df0a584b08e4f0c2162cb2471cf64d1e6211a8104abdca79f73ded379f3a",
+      "beam_size": 5,
+      "representation": "raw",
+      "model": "1-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 200,
+      "exact_match_rate": 0.11634671320535195,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "2-encoder-predictions/predictions_k10_abstracted.txt",
+      "sha256": "45227495e224917c4cdf8a534945c31e1e8740d8dfdadc49807ebd04d5020341",
+      "beam_size": 10,
+      "representation": "abstracted",
+      "model": "2-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 528,
+      "exact_match_rate": 0.30715532286212915,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "2-encoder-predictions/predictions_k10_raw.txt",
+      "sha256": "25948115d3243a7a2e5c16fc166184609982d4196964255174e0a2a55c1279c2",
+      "beam_size": 10,
+      "representation": "raw",
+      "model": "2-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 528,
+      "exact_match_rate": 0.30715532286212915,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "2-encoder-predictions/predictions_k1_abstracted.txt",
+      "sha256": "51090db50c107d5f04e27f2e67809907415a795fa180465a0a318ed04e5636c1",
+      "beam_size": 1,
+      "representation": "abstracted",
+      "model": "2-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 209,
+      "exact_match_rate": 0.12158231529959279,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "2-encoder-predictions/predictions_k1_raw.txt",
+      "sha256": "117d3de9fa42bbd5f8a365f5726df264cf5b8b9508130e7383bed46efbb3a4fe",
+      "beam_size": 1,
+      "representation": "raw",
+      "model": "2-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 209,
+      "exact_match_rate": 0.12158231529959279,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "2-encoder-predictions/predictions_k3_abstracted.txt",
+      "sha256": "be6f801193e29fc64c7c8e954eed21e1b3a7d869bfaa395a21a12225df3eceb8",
+      "beam_size": 3,
+      "representation": "abstracted",
+      "model": "2-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 357,
+      "exact_match_rate": 0.20767888307155322,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "2-encoder-predictions/predictions_k3_raw.txt",
+      "sha256": "2d9fe7a49811e2ad1ba19810b3feaf2208dcad4606a65495e2ec84f533cd88b8",
+      "beam_size": 3,
+      "representation": "raw",
+      "model": "2-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 357,
+      "exact_match_rate": 0.20767888307155322,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "2-encoder-predictions/predictions_k5_abstracted.txt",
+      "sha256": "54af6a5810fdf82489bc4621bc1aa905dc92ec7942f47b011526de28ec181829",
+      "beam_size": 5,
+      "representation": "abstracted",
+      "model": "2-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 422,
+      "exact_match_rate": 0.2454915648632926,
+      "duplicate_input_oracle_pairs": 0
+    },
+    {
+      "file": "2-encoder-predictions/predictions_k5_raw.txt",
+      "sha256": "72fd94c307f2b79e783dd1c333807f27943dd9525d7cc8e4c370075ccb392dbd",
+      "beam_size": 5,
+      "representation": "raw",
+      "model": "2-encoder-predictions",
+      "rows": 1719,
+      "exact_match_any_beam": 422,
+      "exact_match_rate": 0.2454915648632926,
+      "duplicate_input_oracle_pairs": 0
+    }
+  ],
+  "limits": [
+    "Files are sorted to put perfect predictions first; file row position is not a cross-model pairing key.",
+    "Raw and abstracted representations and beams repeat test entities; no pooled independent-task estimate.",
+    "Exact-match revision output is not a positive-control binary-judge experiment.",
+    "No original model weights or new inference; this replays saved author outputs."
+  ]
+}

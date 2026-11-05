@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "module_path": "/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold_default_one/lib/matplotlib/__init__.py",
+    "version": "3.7.0",
+    "numpy": "1.23.5"
+  },
+  "scenarios": [
+    {
+      "name": "empty_max_default",
+      "reducer": "amax",
+      "kwargs": {},
+      "status": "returned",
+      "bins": 0,
+      "values": [],
+      "offsets": [],
+      "warnings": []
+    },
+    {
+      "name": "singleton_max_default",
+      "reducer": "amax",
+      "kwargs": {},
+      "status": "returned",
+      "bins": 1,
+      "values": [
+        1.0
+      ],
+      "offsets": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "name": "singleton_min_default",
+      "reducer": "amin",
+      "kwargs": {},
+      "status": "returned",
+      "bins": 1,
+      "values": [
+        1.0
+      ],
+      "offsets": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "name": "singleton_mean_default",
+      "reducer": "mean",
+      "kwargs": {},
+      "status": "returned",
+      "bins": 1,
+      "values": [
+        1.0
+      ],
+      "offsets": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "name": "singleton_max_explicit_mincnt1",
+      "reducer": "amax",
+      "kwargs": {
+        "mincnt": 1
+      },
+      "status": "returned",
+      "bins": 1,
+      "values": [
+        1.0
+      ],
+      "offsets": [
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "name": "singleton_max_explicit_mincnt0",
+      "reducer": "amax",
+      "kwargs": {
+        "mincnt": 0
+      },
+      "status": "exception",
+      "exception_type": "ValueError",
+      "message": "zero-size array to reduction operation maximum which has no identity",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/probe_full_package.py\", line 23, in <module>\n    result=ax.hexbin(x,y,C=c,gridsize=3,reduce_C_function=reduce,**kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold_default_one/lib/matplotlib/__init__.py\", line 1458, in inner\n    return func(ax, *map(sanitize_sequence, args), **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold_default_one/lib/matplotlib/axes/_axes.py\", line 5017, in hexbin\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold_default_one/lib/matplotlib/axes/_axes.py\", line 5017, in <listcomp>\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"<__array_function__ internals>\", line 180, in amax\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 2793, in amax\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 86, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\nValueError: zero-size array to reduction operation maximum which has no identity\n",
+      "warnings": []
+    }
+  ],
+  "independent_human_adjudication": false
+}

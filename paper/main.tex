@@ -657,14 +657,16 @@ These checks support functional rejection, not every rationale sentence, indepen
 adjudication, or a population error rate. Full container harnesses are not run.
 The ``Django merged'' wording remains a recognition cue, not proof of training exposure.
 
-For all three hosted nonaccepted gold cases, a separate $365$-day default-branch audit
-finds $12$, $93$, and $35$ source-file commits (Django, Matplotlib, scikit-learn).
-File churn is not defect count. Matplotlib issue \#27103 explicitly links the original
-PR commit; fix \#27179 restores the default minimum to one and adds an empty-maximum
-regression test, supporting the empty-bin concern. No matching regression was identified
-for the other two concerns in this scoped inspection. This is not absence of defects;
-other branches, renames and indirect effects are unmeasured. The public follow-up
-predates the 2026 judging and may itself have been recognized.
+For all three hosted nonaccepted gold cases, full pinned packages reproduce the
+focal official failures on base and passes on gold ($8$ processes, $24$ test slots,
+including diagnostic variants). Six additional witness processes record $33$ scenarios.
+Matplotlib gold raises empty-bin maximum/minimum errors despite passing its official
+target; restoring default \texttt{mincnt=1} removes these default-path errors, consistent
+with upstream fix \#27179. Explicit zero still permits empty reductions. In scikit-learn,
+restoring omitted \texttt{fit\_intercept} leaves scores, selected C, coefficients,
+intercepts and probabilities exactly equal in four Iris configurations. These diagnostic
+interventions do not validate every rationale or exclude other defects. The preserved
+$365$-day file-history audit measures churn, not defect counts or absence of defects.
 
 \subsection{A human-review pilot}
 Author Myeongmuk Kang, a non-independent, source-blinded rater, reviewed $40$ packets from
@@ -782,7 +784,9 @@ comparisons~\cite{promptreview} study comments and revisions. LLaMA-Reviewer~\ci
 also predicts review necessity; RovoDev~\cite{rovodev} generates comments and filters
 candidates using binary judgments. Review necessity and comment validity differ from
 binary historical patch acceptance. We do not reproduce all these systems or claim
-their deployment outcomes.
+their deployment outcomes. The artifact replays original saved outputs for Cihan,
+LLaMA-Reviewer and Tufano: function correctness, review necessity and revision exact
+match, respectively, rather than same-task mergeability comparisons.
 
 \textbf{Judge reliability.} LLM judges~\cite{llmjudge} exhibit comparison and self-preference
 biases~\cite{wang2024fair,panickssery2024selfpref}. Our contribution is a SWE-bench-specific
@@ -800,7 +804,7 @@ configurations. Broader calibration and human validation remain necessary before
 operational merge decisions.
 
 \section*{Data and Artifact Availability}
-Version \texttt{2026.11.05-v11} at
+Version \texttt{2026.11.05-v12} at
 \url{https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2}
 contains preserved inputs/outputs and regeneration instructions for historical analyses,
 adapted pilots, full-split/disjoint controls and technical/history checks. Analysis reproduction

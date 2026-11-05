@@ -1,0 +1,62 @@
+{
+  "scope": "Native task and readiness audit. Saved-output replays are distinct from fresh original inference and adapted binary pilots.",
+  "new_original_model_inference_calls": 0,
+  "new_human_ratings": 0,
+  "all_prior_systems_same_binary_condition_completed": false,
+  "systems": [
+    {
+      "system": "Cihan et al.",
+      "paper": "arXiv:2505.20206",
+      "native_task": "HumanEval function correctness and corrected code generation",
+      "primary_artifact": "https://doi.org/10.5281/zenodo.14962566",
+      "status": "Native saved-result positive-control replay completed; 7872 rows, including 1968 canonical rows.",
+      "same_binary_limit": "No fresh original API inference; diff-only earlier adaptation omits corrected code generation.",
+      "evidence": "evidence/cihan_native_replay.json"
+    },
+    {
+      "system": "Shi et al.",
+      "paper": "arXiv:2511.10865v1; DOI 10.1145/3786175.3788348",
+      "native_task": "Human-refined per-bug rubric and patch validity",
+      "status": "Correct paper inspected; no native code URL identified in scoped paper audit.",
+      "same_binary_limit": "Full pipeline requires human rubric refinement, excluded by user. Prior unrefined draft adapter remains explicitly partial.",
+      "evidence": "prior_systems/shi_verified_RECEIPT.json"
+    },
+    {
+      "system": "Tufano et al.",
+      "paper": "arXiv:2101.02518; ICSE 2021",
+      "native_task": "Abstracted Java method revision, optionally with reviewer comment",
+      "primary_artifact": "https://github.com/anonyauthors/code_review/tree/fe3711b91c079175dc2332090fcbb17eec98458d",
+      "status": "Pinned original inference/config sources and saved predictions acquired; 16 exact-match summaries replayed.",
+      "same_binary_limit": "No checkpoint identified in pinned tree; native output is rewritten code, not acceptance.",
+      "evidence": "evidence/tufano_native_replay.json"
+    },
+    {
+      "system": "Pornprasit and Tantithamthavorn",
+      "paper": "DOI 10.1016/j.infsof.2024.107523",
+      "native_task": "Generate improved code, prompting/fine-tuning comparison",
+      "primary_artifact": "https://github.com/awsm-research/LLM-for-code-review-automatiton/tree/5f8fcc9f9cbc08f3731e80c4e8da74a4ebb8c4ce",
+      "status": "Original generation and exact-match evaluation scripts pinned; Zenodo11546859 adapter existence verified.",
+      "same_binary_limit": "Native Magicoder base absent from model catalog; different shared DeepSeek model is not substituted. Code generation requires a separately defined acceptance conversion.",
+      "evidence": "prior_systems/promptreview/ACQUISITION.json"
+    },
+    {
+      "system": "LLaMA-Reviewer",
+      "paper": "DOI 10.1109/ISSRE59848.2023.00026",
+      "native_task": "Review necessity, comment generation and refinement",
+      "primary_artifact": "https://doi.org/10.5281/zenodo.7991113",
+      "status": "Native prefix bundle checksum verified in shared canonical model storage; saved necessity test outputs replayed, four conditions on31252 rows.",
+      "same_binary_limit": "No base LLaMA weights downloaded or fresh original inference. Necessity is not mergeability; training diagnostic excluded.",
+      "evidence": "evidence/llama_native_replay.json"
+    },
+    {
+      "system": "RovoDev",
+      "paper": "DOI 10.1145/3786583.3786851",
+      "native_task": "Comment generation with binary candidate-comment filtering",
+      "status": "Paper task and filter scope verified; native code/checkpoint URL not identified in scoped audit.",
+      "same_binary_limit": "Candidate comment validity is not whole-patch acceptance. No proprietary deployment/API experiment claimed.",
+      "evidence": "../ICSE2027_6658_FactCheck_20261105_v9/evidence/prior_system_primary_sources_v9/rovo_pdf.txt"
+    }
+  ],
+  "excluded_failed_acquisition": "prior_systems/shi.pdf is unrelated arXiv2511.08651; retained as failure, excluded. Correct source is shi_verified.pdf.",
+  "publication_note": "Only appropriate saved result subsets and receipts are redistributed, with source/license attribution. No model weights, API client credentials or private original review record."
+}

@@ -1,4 +1,4 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-05 v11
+# ICSE 2027 #6658 공개 자료 — 2026-11-05 v12
 
 v10은 기존 707개와 겹치지 않는 개발 40개·검증 100개 과제의 새 실험을 추가한다.
 예정 560개 입력 중 실제 생성 558개가 모두 유효하고 길이 초과 2개는 제외 기록을 남겼다.
@@ -141,3 +141,16 @@ inputs, source receipts, evidence cards and offline recomputation are included.
 This supports functional rejection within one hosted-reviewer stratum; it is not
 independent adjudication of every rationale. No new inference or human ratings.
 The paper remains 9+1 pages. Prior release assets and historical results remain.
+
+
+## v12 gold and original saved-output evidence
+
+The [new follow-up](nonhuman_followup/README.md) runs full packages for all three
+hosted nonaccepted gold patches and replays original saved outputs from three
+prior works. Matplotlib's default empty-bin regression is reproduced despite an
+official test pass; sklearn's omitted argument has no output effect in four
+tested configurations. Raw controls, diagnostic variants, source hashes, native
+saved outputs, separate invalid-response accounting and offline scripts are
+included. These are targeted technical findings, not independent human labels,
+fresh native-model inference or all-system same-task comparisons. Checklist
+coverage remains49/58(84.48%). The manuscript stays9+1 pages; prior releases remain.

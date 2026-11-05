@@ -1,0 +1,650 @@
+{
+  "scope": "All three hosted nonaccepted gold cases; full pinned packages, official tests and post-hoc diagnostic witnesses. No independent human adjudication.",
+  "cases": 3,
+  "variant_trees": 8,
+  "processes": 14,
+  "official_processes": 8,
+  "official_test_slots": 24,
+  "official_results": [
+    {
+      "instance_id": "django__django-11179",
+      "variant": "base",
+      "returncode": 1,
+      "tests": 9,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "django__django-11179",
+      "variant": "gold",
+      "returncode": 0,
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11578",
+      "variant": "base",
+      "returncode": 1,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11578",
+      "variant": "gold",
+      "returncode": 0,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11578",
+      "variant": "gold_restore_intercept",
+      "returncode": 0,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26113",
+      "variant": "base",
+      "returncode": 1,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26113",
+      "variant": "gold",
+      "returncode": 0,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26113",
+      "variant": "gold_default_one",
+      "returncode": 0,
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "witness_processes": 6,
+  "witness_scenarios": 33,
+  "matplotlib": {
+    "base": {
+      "metadata": {
+        "module_path": "/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/base/lib/matplotlib/__init__.py",
+        "version": "3.7.0",
+        "numpy": "1.23.5"
+      },
+      "scenarios": [
+        {
+          "name": "empty_max_default",
+          "reducer": "amax",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 0,
+          "values": [],
+          "offsets": [],
+          "warnings": []
+        },
+        {
+          "name": "singleton_max_default",
+          "reducer": "amax",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        },
+        {
+          "name": "singleton_min_default",
+          "reducer": "amin",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        },
+        {
+          "name": "singleton_mean_default",
+          "reducer": "mean",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        },
+        {
+          "name": "singleton_max_explicit_mincnt1",
+          "reducer": "amax",
+          "kwargs": {
+            "mincnt": 1
+          },
+          "status": "returned",
+          "bins": 0,
+          "values": [],
+          "offsets": [],
+          "warnings": []
+        },
+        {
+          "name": "singleton_max_explicit_mincnt0",
+          "reducer": "amax",
+          "kwargs": {
+            "mincnt": 0
+          },
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        }
+      ],
+      "independent_human_adjudication": false
+    },
+    "gold": {
+      "metadata": {
+        "module_path": "/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/__init__.py",
+        "version": "3.7.0",
+        "numpy": "1.23.5"
+      },
+      "scenarios": [
+        {
+          "name": "empty_max_default",
+          "reducer": "amax",
+          "kwargs": {},
+          "status": "exception",
+          "exception_type": "ValueError",
+          "message": "zero-size array to reduction operation maximum which has no identity",
+          "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/probe_full_package.py\", line 23, in <module>\n    result=ax.hexbin(x,y,C=c,gridsize=3,reduce_C_function=reduce,**kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/__init__.py\", line 1458, in inner\n    return func(ax, *map(sanitize_sequence, args), **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/axes/_axes.py\", line 5017, in hexbin\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/axes/_axes.py\", line 5017, in <listcomp>\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"<__array_function__ internals>\", line 180, in amax\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 2793, in amax\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 86, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\nValueError: zero-size array to reduction operation maximum which has no identity\n",
+          "warnings": []
+        },
+        {
+          "name": "singleton_max_default",
+          "reducer": "amax",
+          "kwargs": {},
+          "status": "exception",
+          "exception_type": "ValueError",
+          "message": "zero-size array to reduction operation maximum which has no identity",
+          "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/probe_full_package.py\", line 23, in <module>\n    result=ax.hexbin(x,y,C=c,gridsize=3,reduce_C_function=reduce,**kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/__init__.py\", line 1458, in inner\n    return func(ax, *map(sanitize_sequence, args), **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/axes/_axes.py\", line 5017, in hexbin\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/axes/_axes.py\", line 5017, in <listcomp>\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"<__array_function__ internals>\", line 180, in amax\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 2793, in amax\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 86, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\nValueError: zero-size array to reduction operation maximum which has no identity\n",
+          "warnings": []
+        },
+        {
+          "name": "singleton_min_default",
+          "reducer": "amin",
+          "kwargs": {},
+          "status": "exception",
+          "exception_type": "ValueError",
+          "message": "zero-size array to reduction operation minimum which has no identity",
+          "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/probe_full_package.py\", line 23, in <module>\n    result=ax.hexbin(x,y,C=c,gridsize=3,reduce_C_function=reduce,**kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/__init__.py\", line 1458, in inner\n    return func(ax, *map(sanitize_sequence, args), **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/axes/_axes.py\", line 5017, in hexbin\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/axes/_axes.py\", line 5017, in <listcomp>\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"<__array_function__ internals>\", line 180, in amin\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 2918, in amin\n    return _wrapreduction(a, np.minimum, 'min', axis, None, out,\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 86, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\nValueError: zero-size array to reduction operation minimum which has no identity\n",
+          "warnings": []
+        },
+        {
+          "name": "singleton_mean_default",
+          "reducer": "mean",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": [
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "Mean of empty slice."
+            },
+            {
+              "type": "RuntimeWarning",
+              "message": "invalid value encountered in double_scalars"
+            }
+          ]
+        },
+        {
+          "name": "singleton_max_explicit_mincnt1",
+          "reducer": "amax",
+          "kwargs": {
+            "mincnt": 1
+          },
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        },
+        {
+          "name": "singleton_max_explicit_mincnt0",
+          "reducer": "amax",
+          "kwargs": {
+            "mincnt": 0
+          },
+          "status": "exception",
+          "exception_type": "ValueError",
+          "message": "zero-size array to reduction operation maximum which has no identity",
+          "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/probe_full_package.py\", line 23, in <module>\n    result=ax.hexbin(x,y,C=c,gridsize=3,reduce_C_function=reduce,**kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/__init__.py\", line 1458, in inner\n    return func(ax, *map(sanitize_sequence, args), **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/axes/_axes.py\", line 5017, in hexbin\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold/lib/matplotlib/axes/_axes.py\", line 5017, in <listcomp>\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"<__array_function__ internals>\", line 180, in amax\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 2793, in amax\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 86, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\nValueError: zero-size array to reduction operation maximum which has no identity\n",
+          "warnings": []
+        }
+      ],
+      "independent_human_adjudication": false
+    },
+    "gold_default_one": {
+      "metadata": {
+        "module_path": "/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold_default_one/lib/matplotlib/__init__.py",
+        "version": "3.7.0",
+        "numpy": "1.23.5"
+      },
+      "scenarios": [
+        {
+          "name": "empty_max_default",
+          "reducer": "amax",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 0,
+          "values": [],
+          "offsets": [],
+          "warnings": []
+        },
+        {
+          "name": "singleton_max_default",
+          "reducer": "amax",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        },
+        {
+          "name": "singleton_min_default",
+          "reducer": "amin",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        },
+        {
+          "name": "singleton_mean_default",
+          "reducer": "mean",
+          "kwargs": {},
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        },
+        {
+          "name": "singleton_max_explicit_mincnt1",
+          "reducer": "amax",
+          "kwargs": {
+            "mincnt": 1
+          },
+          "status": "returned",
+          "bins": 1,
+          "values": [
+            1.0
+          ],
+          "offsets": [
+            [
+              0.5,
+              0.5
+            ]
+          ],
+          "warnings": []
+        },
+        {
+          "name": "singleton_max_explicit_mincnt0",
+          "reducer": "amax",
+          "kwargs": {
+            "mincnt": 0
+          },
+          "status": "exception",
+          "exception_type": "ValueError",
+          "message": "zero-size array to reduction operation maximum which has no identity",
+          "traceback": "Traceback (most recent call last):\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/probe_full_package.py\", line 23, in <module>\n    result=ax.hexbin(x,y,C=c,gridsize=3,reduce_C_function=reduce,**kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold_default_one/lib/matplotlib/__init__.py\", line 1458, in inner\n    return func(ax, *map(sanitize_sequence, args), **kwargs)\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold_default_one/lib/matplotlib/axes/_axes.py\", line 5017, in hexbin\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/matplotlib__matplotlib-26113/gold_default_one/lib/matplotlib/axes/_axes.py\", line 5017, in <listcomp>\n    [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n  File \"<__array_function__ internals>\", line 180, in amax\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 2793, in amax\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n  File \"/workspace/users/2022810001/ICSE2027_6658_RegressionAudit_20261105_v11/runtimes/modern_science/lib/python3.9/site-packages/numpy/core/fromnumeric.py\", line 86, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\nValueError: zero-size array to reduction operation maximum which has no identity\n",
+          "warnings": []
+        }
+      ],
+      "independent_human_adjudication": false
+    }
+  },
+  "sklearn_constructor_traces": {
+    "base": {
+      "name": "constructor_trace_separate_run",
+      "status": "exception",
+      "exception_type": "TypeError",
+      "message": "super() argument 1 must be type, not function",
+      "calls": [
+        {
+          "fit_intercept_passed": false,
+          "multi_class_passed": "OMITTED"
+        }
+      ]
+    },
+    "gold": {
+      "name": "constructor_trace_separate_run",
+      "status": "returned",
+      "calls": [
+        {
+          "fit_intercept_passed": "OMITTED",
+          "multi_class_passed": "multinomial"
+        },
+        {
+          "fit_intercept_passed": "OMITTED",
+          "multi_class_passed": "multinomial"
+        },
+        {
+          "fit_intercept_passed": "OMITTED",
+          "multi_class_passed": "multinomial"
+        }
+      ]
+    },
+    "gold_restore_intercept": {
+      "name": "constructor_trace_separate_run",
+      "status": "returned",
+      "calls": [
+        {
+          "fit_intercept_passed": false,
+          "multi_class_passed": "multinomial"
+        },
+        {
+          "fit_intercept_passed": false,
+          "multi_class_passed": "multinomial"
+        },
+        {
+          "fit_intercept_passed": false,
+          "multi_class_passed": "multinomial"
+        }
+      ]
+    }
+  },
+  "sklearn_gold_vs_restore_comparisons": [
+    {
+      "scenario": "fit_intercept_False_ovr",
+      "differences": {
+        "probabilities": {
+          "elements": 450,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "coefficients": {
+          "elements": 12,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "intercepts": {
+          "elements": 3,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "selected_C": {
+          "elements": 3,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "scores": {
+          "elements": 18,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        }
+      }
+    },
+    {
+      "scenario": "fit_intercept_False_multinomial",
+      "differences": {
+        "probabilities": {
+          "elements": 450,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "coefficients": {
+          "elements": 12,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "intercepts": {
+          "elements": 3,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "selected_C": {
+          "elements": 3,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "scores": {
+          "elements": 18,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        }
+      }
+    },
+    {
+      "scenario": "fit_intercept_True_ovr",
+      "differences": {
+        "probabilities": {
+          "elements": 450,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "coefficients": {
+          "elements": 12,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "intercepts": {
+          "elements": 3,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "selected_C": {
+          "elements": 3,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "scores": {
+          "elements": 18,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        }
+      }
+    },
+    {
+      "scenario": "fit_intercept_True_multinomial",
+      "differences": {
+        "probabilities": {
+          "elements": 450,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "coefficients": {
+          "elements": 12,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "intercepts": {
+          "elements": 3,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "selected_C": {
+          "elements": 3,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        },
+        "scores": {
+          "elements": 18,
+          "max_absolute_difference": 0.0,
+          "exactly_equal": true
+        }
+      }
+    }
+  ],
+  "findings": [
+    "All three official gold patches pass their official targets; each base fails the focal regression.",
+    "Matplotlib gold triggers ValueError on empty/singleton max/min with omitted mincnt, although its official regression passes. Gold default-one diagnostic restores these scenarios; explicitly requested mincnt0 remains an error, as expected.",
+    "sklearn omission of fit_intercept is real. Restoring it produces exactly equal scores, chosen C, coefficients, intercepts and predicted probabilities in four Iris CV configurations. This does not prove absence of all defects or dismiss maintainability concerns.",
+    "Django official FastDeleteTests runs nine methods; base fails the new PK clearing target and gold passes all nine. Prior full-SQLite ordinary-path contradiction evidence remains separately preserved."
+  ],
+  "validation": {
+    "frozen_inputs_unchanged": true,
+    "all3gold_controls_pass": true,
+    "all3bases_fail": true,
+    "sklearn4configurations_exactly_equal": true,
+    "matplotlib_full_package_regression_reproduced": true,
+    "no_human_labels_or_model_calls": true
+  },
+  "limits": [
+    "Targets are purposeful post-hoc witnesses; no population-wide rationale error estimate.",
+    "Diagnostic interventions are not separate original developer patches.",
+    "Functional agreement cannot decide every maintainability or reviewer-value judgment."
+  ]
+}

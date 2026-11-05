@@ -1,0 +1,266 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.7991113",
+  "saved_results_only": true,
+  "new_model_calls": 0,
+  "new_training": 0,
+  "new_human_labels": 0,
+  "native_task": "review necessity: whether a diff hunk requires code review, not mergeability",
+  "native_parser_rule": "lowercase; substring yes/true first => 1; no/false => 0; otherwise => 0",
+  "strict_parser_rule": "entire stripped lowercased saved string must be yes or no; invalid excluded only in separate strict summary",
+  "test_rows_per_condition": 31252,
+  "test_conditions": 4,
+  "test_prediction_rows": 125008,
+  "training_diagnostic_rows": 10000,
+  "files": [
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_alpaca/best_bleu/predictions.txt",
+      "sha256": "1d8b63adef4a81eacfce8690378341eb5bc249778ae7af7d2a8f6913345300fe",
+      "bytes": 101555
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_alpaca/best_bleu/golds.txt",
+      "sha256": "69a2744ac719a6201fea096547dbd47c7056dfedc81d512e516b1cdcbf214bfd",
+      "bytes": 109382
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_alpaca/last/predictions.txt",
+      "sha256": "e3aa7a564e3be3dfb3a721c4d8353ff298256a77575c22b0c81b60e79ba2aee2",
+      "bytes": 94745
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_alpaca/last/golds.txt",
+      "sha256": "69a2744ac719a6201fea096547dbd47c7056dfedc81d512e516b1cdcbf214bfd",
+      "bytes": 109382
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_llama_7B/best_precision/predictions.txt",
+      "sha256": "ff775d07500bb08cde52419c58e73c4bc8d09f5f28b30a353807c624ffc97799",
+      "bytes": 94820
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_llama_7B/best_precision/golds.txt",
+      "sha256": "69a2744ac719a6201fea096547dbd47c7056dfedc81d512e516b1cdcbf214bfd",
+      "bytes": 109382
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_llama_7B/last/predictions.txt",
+      "sha256": "2c9e412a6b234c3bfd9c96c02c570da874f769c1e70b385edb1976a650689474",
+      "bytes": 94469
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_llama_7B/last/golds.txt",
+      "sha256": "69a2744ac719a6201fea096547dbd47c7056dfedc81d512e516b1cdcbf214bfd",
+      "bytes": 109382
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_llama_7B/test_train/predictions.txt",
+      "sha256": "bc91a0f3c850edc0fd7d74f3aec163b3465c914640dd2731c1950af93f22df67",
+      "bytes": 35059
+    },
+    {
+      "path": "output/adapter/crer_data/quality_estimation/on_llama_7B/test_train/golds.txt",
+      "sha256": "c664a428b3c31a6a9152160537e51b6a25d9636ef2d07b48332936e66b0097fa",
+      "bytes": 34981
+    }
+  ],
+  "dataset_alignment": {
+    "test_dataset_sha256": "99f4a9317eb428e55aa52035aa094da322bd44a1a0a48fc9b6866e92402c4f93",
+    "test_rows": 31252,
+    "instruction": "Determine whether the provided diff hunk requires a code review. Respond with either 'yes' or 'no'.",
+    "all_four_test_gold_files_match_dataset_order": true
+  },
+  "conditions": [
+    {
+      "condition": "on_alpaca/best_bleu",
+      "training_diagnostic_excluded_from_test": false,
+      "native_parser": {
+        "rows": 31252,
+        "tn": 12710,
+        "fp": 2916,
+        "fn": 10848,
+        "tp": 4778,
+        "accuracy": 0.5595801868680405,
+        "precision_yes": 0.6210033792565636,
+        "recall_yes": 0.30577243056444386,
+        "f1_yes": 0.4097770154373928
+      },
+      "strict_valid_rows": 31244,
+      "strict_invalid_rows": 8,
+      "strict_valid_only": {
+        "rows": 31244,
+        "tn": 12709,
+        "fp": 2914,
+        "fn": 10843,
+        "tp": 4778,
+        "accuracy": 0.559691460760466,
+        "precision_yes": 0.6211648465938637,
+        "recall_yes": 0.30587030279751615,
+        "f1_yes": 0.4099000557628791
+      },
+      "noncanonical_outputs": {
+        "No, the provided": 4,
+        "Yes, the provided": 1,
+        "yes, the provided": 1,
+        "class Solution:": 1,
+        "oldRepoOpt": 1
+      },
+      "native_invalid_to_zero": 2
+    },
+    {
+      "condition": "on_alpaca/last",
+      "training_diagnostic_excluded_from_test": false,
+      "native_parser": {
+        "rows": 31252,
+        "tn": 15451,
+        "fp": 175,
+        "fn": 14812,
+        "tp": 814,
+        "accuracy": 0.5204466914117496,
+        "precision_yes": 0.8230535894843276,
+        "recall_yes": 0.05209266606937156,
+        "f1_yes": 0.09798374962383388
+      },
+      "strict_valid_rows": 31252,
+      "strict_invalid_rows": 0,
+      "strict_valid_only": {
+        "rows": 31252,
+        "tn": 15451,
+        "fp": 175,
+        "fn": 14812,
+        "tp": 814,
+        "accuracy": 0.5204466914117496,
+        "precision_yes": 0.8230535894843276,
+        "recall_yes": 0.05209266606937156,
+        "f1_yes": 0.09798374962383388
+      },
+      "noncanonical_outputs": {},
+      "native_invalid_to_zero": 0
+    },
+    {
+      "condition": "on_llama_7B/best_precision",
+      "training_diagnostic_excluded_from_test": false,
+      "native_parser": {
+        "rows": 31252,
+        "tn": 15491,
+        "fp": 135,
+        "fn": 14714,
+        "tp": 912,
+        "accuracy": 0.5248624088058365,
+        "precision_yes": 0.8710601719197708,
+        "recall_yes": 0.058364264687060026,
+        "f1_yes": 0.10939842859713308
+      },
+      "strict_valid_rows": 31245,
+      "strict_invalid_rows": 7,
+      "strict_valid_only": {
+        "rows": 31245,
+        "tn": 15488,
+        "fp": 135,
+        "fn": 14711,
+        "tp": 911,
+        "accuracy": 0.5248519763162106,
+        "precision_yes": 0.8709369024856597,
+        "recall_yes": 0.058315196517731406,
+        "f1_yes": 0.10931125509959204
+      },
+      "noncanonical_outputs": {
+        "no.": 1,
+        "": 2,
+        "yes\\n}": 1,
+        "no\\n\\n origin": 1,
+        "default": 1,
+        "-no": 1
+      },
+      "native_invalid_to_zero": 3
+    },
+    {
+      "condition": "on_llama_7B/last",
+      "training_diagnostic_excluded_from_test": false,
+      "native_parser": {
+        "rows": 31252,
+        "tn": 15551,
+        "fp": 75,
+        "fn": 14999,
+        "tp": 627,
+        "accuracy": 0.5176628695763471,
+        "precision_yes": 0.8931623931623932,
+        "recall_yes": 0.04012543197235377,
+        "f1_yes": 0.07680058794708476
+      },
+      "strict_valid_rows": 31248,
+      "strict_invalid_rows": 4,
+      "strict_valid_only": {
+        "rows": 31248,
+        "tn": 15548,
+        "fp": 75,
+        "fn": 14998,
+        "tp": 627,
+        "accuracy": 0.5176331285202252,
+        "precision_yes": 0.8931623931623932,
+        "recall_yes": 0.040128,
+        "f1_yes": 0.07680529184785938
+      },
+      "noncanonical_outputs": {
+        "no.": 2,
+        "": 1,
+        "no\\n\\n origin": 1
+      },
+      "native_invalid_to_zero": 1
+    },
+    {
+      "condition": "on_llama_7B/test_train",
+      "training_diagnostic_excluded_from_test": true,
+      "native_parser": {
+        "rows": 10000,
+        "tn": 4980,
+        "fp": 39,
+        "fn": 70,
+        "tp": 4911,
+        "accuracy": 0.9891,
+        "precision_yes": 0.9921212121212121,
+        "recall_yes": 0.9859465970688617,
+        "f1_yes": 0.9890242674453731
+      },
+      "strict_valid_rows": 9976,
+      "strict_invalid_rows": 24,
+      "strict_valid_only": {
+        "rows": 9976,
+        "tn": 4980,
+        "fp": 39,
+        "fn": 56,
+        "tp": 4901,
+        "accuracy": 0.990477145148356,
+        "precision_yes": 0.9921052631578947,
+        "recall_yes": 0.9887028444623764,
+        "f1_yes": 0.9904011316560574
+      },
+      "noncanonical_outputs": {
+        "### yes": 6,
+        "+  public final": 1,
+        "yes\\n\\n##": 1,
+        "### {": 2,
+        "1": 1,
+        "+    response =": 1,
+        "### Response": 1,
+        "yes\\n###": 1,
+        "Yes\\n###": 1,
+        "### Output": 1,
+        "+\\n+": 1,
+        "-\\n-": 1,
+        "yes\\n#]": 1,
+        "### [ \"": 1,
+        "plus 1": 1,
+        "###": 1,
+        "sane 2": 1,
+        "": 1
+      },
+      "native_invalid_to_zero": 14
+    }
+  ],
+  "limits": [
+    "Four conditions use the same test rows; not 125008 independent tasks.",
+    "Checkpoints include last and named best; these are not new training or independent replications.",
+    "Training diagnostic test_train is excluded from test claims.",
+    "No same-task SWEbench binary judge inference, base checkpoint download or GPU job."
+  ]
+}
