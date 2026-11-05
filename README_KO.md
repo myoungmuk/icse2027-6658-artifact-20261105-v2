@@ -51,6 +51,14 @@ python tools/reproduce_pilots.py --output ../icse6658-reanalysis
 제3자 자료의 권리는 원래 고지에 따른다. 혼합된 전체 자료에 새 blanket license를
 부여하지 않았다. `historical_analysis/THIRD_PARTY_NOTICES.md`를 참고한다.
 
-## v4에서 추가 확인한 사실
+## 현재 사실·서지 확인 (v5)
 
-기존 20개 이슈·40개 패킷의 평가자는 강명묵이며 연구에 참여했다는 사용자 확인을 원고에 반영했다. 코드리뷰 경력과 rubric 개발의 정확한 역할은 여전히 미기록이다. 새로운 사람 검토 결과를 만들지 않았다. DOI 18건의 제목·저자 순서·출판 정보를 대조해 16개 누락 쪽수를 보강했고, RovoDev를 ICSE-SEIP 2026, pp. 34–45로 인용했다. `bibliography/VERIFICATION.json`에 근거를 제공한다. Crossref 429가 발생한 2건은 보존된 성공 응답을 재사용했으며 새 열람 성공으로 표시하지 않았다. 모든 비DOI preprint의 정식 proceedings 정보를 완전히 검증했다는 뜻은 아니다.
+기존 인간 파일럿의 평가자는 강명묵이며 연구에 참여했다는 사용자 확인을 유지한다.
+리뷰 경력·루브릭 개발의 정확한 역할은 미기록이다. 새 인간 검토·추론·실험 수치는 추가하지 않았다.
+
+인용된 정식 출판 논문 26편의 쪽수를 확인했다. 정확한 DOI 23건과 공식 ICLR proceedings 3건을 근거로 한다.
+v5에서 추가 8편을 보강했다. Agentless는 제목이 변경된 2025 정식 출판본으로,
+OpenHands·SWE-bench Multimodal은 ICLR 2025, LLaMA-Reviewer는 ISSRE 2023으로 인용했다.
+Cihan과 Qwen technical report 2편은 preprint로 유지하고 웹 자료 2건과 구분한다.
+기존 HTTP 429 두 건의 보존 응답 재사용 사실도 유지한다. 세부 출처는 `bibliography/`에 있다.
+논문은 본문 9쪽＋참고문헌 1쪽, 총 10쪽이다. 실제 학회 업로드 완료를 뜻하지 않는다.

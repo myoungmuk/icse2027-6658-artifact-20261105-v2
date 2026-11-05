@@ -8,7 +8,7 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v4`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v4).
+Version: [`2026.11.05-v5`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v5).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
@@ -72,6 +72,19 @@ See `historical_analysis/THIRD_PARTY_NOTICES.md` and the upstream license snapsh
 for third-party materials. This artifact does not relicense upstream code or data;
 no blanket license is assigned across the mixed-source historical collection.
 
-## v4 factual and reference updates
+## Current factual and publication checks (v5)
 
-The archived human-pilot rater is author-confirmed as Myeongmuk Kang, a study participant. Review experience and the precise rubric-development role remain undocumented. No new human reviews were created. All historical and pilot data are unchanged. `bibliography/VERIFICATION.json` documents exact DOI/title/author checks for 18 cited records, missing page fields in 16 references, and RovoDev’s formal ICSE-SEIP 2026 publication. Two HTTP 429 responses were handled by reusing preserved successful registry records; no fresh access is claimed for those two. Non-DOI preprints are not represented as having complete formal-publication metadata.
+The existing human-pilot rater is author-confirmed as Myeongmuk Kang. Prior review
+experience and his precise rubric-development role remain undocumented. No new
+human reviews, inference or numerical results were added.
+
+The bibliography now has verified page ranges for all 26 cited formal papers:
+23 exact DOI records and three official ICLR proceedings records. Eight additional
+entries were completed in v5. Agentless is cited under its formal 2025 title,
+Demystifying LLM-Based Software Engineering Agents; OpenHands and SWE-bench
+Multimodal are cited as ICLR 2025 papers. LLaMA-Reviewer is cited as ISSRE 2023.
+Cihan and the Qwen technical report remain identified preprints; the remaining two
+citations are the SWE-bench Verified announcement and the Codex software website.
+See `bibliography/VERIFICATION.json` and `bibliography/ADDITIONAL_VERIFICATION_V5.json`.
+The earlier two HTTP 429 fallbacks remain disclosed; these are not new successful
+requests. The manuscript remains nine body pages plus one reference page.

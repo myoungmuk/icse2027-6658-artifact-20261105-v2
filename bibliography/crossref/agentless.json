@@ -1,0 +1,811 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          5
+        ]
+      ],
+      "date-time": "2026-11-05T02:02:40Z",
+      "timestamp": 1793844160925,
+      "version": "4.6.1"
+    },
+    "reference-count": 110,
+    "publisher": "Association for Computing Machinery (ACM)",
+    "issue": "FSE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              19
+            ]
+          ],
+          "date-time": "2025-06-19T00:00:00Z",
+          "timestamp": 1750291200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "funder": [
+      {
+        "name": "NSF",
+        "award": [
+          "CCF-2131943"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "CCF-2131943"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Proc. ACM Softw. Eng."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          19
+        ]
+      ]
+    },
+    "abstract": "<jats:p>\n                    Recent advancements in large language models (LLMs) have significantly advanced the automation of software development tasks, including code synthesis, program repair, and test generation. More recently, researchers and industry practitioners have developed various autonomous\n                    <jats:italic toggle=\"yes\">LLM agents</jats:italic>\n                    to perform end-to-end software development tasks. These agents are equipped with the ability to use tools, run commands, observe feedback from the environment, and plan for future actions. However, the complexity of these agent-based approaches, together with the limited abilities of current LLMs, raises the following question:\n                    <jats:italic toggle=\"yes\">Do we really have to employ complex autonomous software agents?</jats:italic>\n                    To attempt to answer this question, we build\n                    <jats:sc>Agentless</jats:sc>\n                    – an\n                    <jats:italic toggle=\"yes\">agentless</jats:italic>\n                    approach to automatically resolve software development issues. Compared to the verbose and complex setup of agent-based approaches,\n                    <jats:sc>Agentless</jats:sc>\n                    employs a simplistic three-phase process of localization, repair, and patch validation, without letting the LLM decide future actions or operate with complex tools. Our results on the popular SWE-bench Lite benchmark show that surprisingly the simplistic\n                    <jats:sc>Agentless</jats:sc>\n                    is able to achieve both the highest performance (32.00%, 96 correct fixes) and low cost ($0.70) compared with all existing open-source software agents at the time of paper submission!\n                    <jats:sc>Agentless</jats:sc>\n                    also achieves more than 50% solve rate when using Claude 3.5 Sonnet on the new SWE-bench Verified benchmark. In fact,\n                    <jats:italic toggle=\"yes\">\n                      <jats:sc>Agentless</jats:sc>\n                      has already been adopted by OpenAI as the go-to approach to showcase the real-world coding performance of both GPT-4o and the new o1 models; more recently,\n                      <jats:sc>Agentless</jats:sc>\n                      has also been used by DeepSeek to evaluate their newest DeepSeek V3 and R1 models\n                    </jats:italic>\n                    . Furthermore, we manually classified the problems in SWE-bench Lite and found problems with exact ground truth patches or insufficient/misleading issue descriptions. As such, we construct SWE-bench Lite-\n                    <jats:italic toggle=\"yes\">S</jats:italic>\n                    by excluding such problematic issues to perform more rigorous evaluation and comparison. Our work highlights the currently overlooked potential of a simplistic, cost-effective technique in autonomous software development. We hope\n                    <jats:sc>Agentless</jats:sc>\n                    will help reset the baseline, starting point, and horizon for autonomous software agents, and inspire future work along this crucial direction. We have open-sourced\n                    <jats:sc>Agentless</jats:sc>\n                    at:\n                    <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"uri\" xlink:href=\"https://github.com/OpenAutoCoder/Agentless\">https://github.com/OpenAutoCoder/Agentless</jats:ext-link>\n                  </jats:p>",
+    "DOI": "10.1145/3715754",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          19
+        ]
+      ],
+      "date-time": "2025-06-19T11:15:34Z",
+      "timestamp": 1750331734000
+    },
+    "page": "801-824",
+    "source": "Crossref",
+    "is-referenced-by-count": 173,
+    "title": [
+      "Demystifying LLM-Based Software Engineering Agents"
+    ],
+    "prefix": "10.1145",
+    "volume": "2",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-8660-9324",
+        "authenticated-orcid": false,
+        "given": "Chunqiu Steven",
+        "family": "Xia",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Illinois at Urbana-Champaign, Champaign, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4628-4219",
+        "authenticated-orcid": false,
+        "given": "Yinlin",
+        "family": "Deng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Illinois at Urbana-Champaign, Champaign, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0006-1533-9631",
+        "authenticated-orcid": false,
+        "given": "Soren",
+        "family": "Dunn",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Illinois at Urbana-Champaign, Champaign, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5175-2702",
+        "authenticated-orcid": false,
+        "given": "Lingming",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Illinois at Urbana-Champaign, Champaign, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          19
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2009.06.035"
+      },
+      {
+        "key": "e_1_3_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/1308173.1308264"
+      },
+      {
+        "key": "e_1_3_1_4_1",
+        "unstructured": "Amazon. 2024. Amazon Q Developer The most capable generative AI–powered assistant for software development. https://aws.amazon.com/q/developer//."
+      },
+      {
+        "key": "e_1_3_1_5_1",
+        "unstructured": "Anthropic. 2024. Introducing Claude 3.5 Sonnet. https://www.anthropic.com/news/claude-3-5-sonnet/."
+      },
+      {
+        "key": "e_1_3_1_6_1",
+        "unstructured": "Anthropic. 2024. Introducing computer use a new Claude 3.5 Sonnet and Claude 3.5 Haiku. https://www.anthropic.com/news/3-5-models-and-computer-use."
+      },
+      {
+        "key": "e_1_3_1_7_1",
+        "unstructured": "AppMap. 2024. AppMap speedruns to the top of the SWE Bench Leaderboard. https://appmap.io/blog/2024/06/20/appmapnavie-swe-bench-leader/."
+      },
+      {
+        "key": "e_1_3_1_8_1",
+        "unstructured": "Daman Arora Atharv Sonwane Nalin Wadhwa Abhav Mehrotra Saiteja Utpala Ramakrishna Bairi Aditya Kanade and Nagarajan Natarajan. 2024. MASAI: Modular Architecture for Software-engineering AI Agents. arXiv preprint arXiv:2406.11638 (2024)."
+      },
+      {
+        "key": "e_1_3_1_9_1",
+        "unstructured": "Jacob Austin Augustus Odena Maxwell Nye Maarten Bosma Henryk Michalewski David Dohan Ellen Jiang Carrie Cai Michael Terry Quoc Le and Charles Sutton. 2021. Program Synthesis with Large Language Models. arXiv:2108.07732 [cs.PL]"
+      },
+      {
+        "key": "e_1_3_1_10_1",
+        "unstructured": "AutoCodeRover. 2024. AutoCodeRover Autonomous Software Engineering. https://autocoderover.dev/."
+      },
+      {
+        "key": "e_1_3_1_11_1",
+        "unstructured": "Islem Bouzenia Premkumar Devanbu and Michael Pradel. 2024. Repairagent: An autonomous llm-based agent for program repair. arXiv preprint arXiv:2403.17134 (2024)."
+      },
+      {
+        "key": "e_1_3_1_12_1",
+        "unstructured": "Dong Chen Shaoxin Lin Muhan Zeng Daoguang Zan Jian-Gang Wang Anton Cheshkov Jun Sun Hao Yu Guoliang Dong Artem Aliev et al. 2024. CodeR: Issue Resolving with Multi-Agent and Task Graphs. arXiv preprint arXiv:2406.01304 (2024)."
+      },
+      {
+        "key": "e_1_3_1_13_1",
+        "unstructured": "Mark Chen Jerry Tworek Heewoo Jun Qiming Yuan Henrique Ponde de Oliveira Pinto Jared Kaplan Harri Edwards Yuri Burda Nicholas Joseph Greg Brockman et al. 2021. Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374 (2021)."
+      },
+      {
+        "key": "e_1_3_1_14_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yang Chen. 2024. Flakiness Repair in the Era of Large Language Models. In Proceedings of the 2024 IEEE/ACM 46th International Conference on Software Engineering: Companion Proceedings. 441–443.",
+        "DOI": "10.1145/3639478.3641227"
+      },
+      {
+        "key": "e_1_3_1_15_1",
+        "unstructured": "Zimin Chen Steve Kommrusch Michele Tufano Louis-Noël Pouchet Denys Poshyvanyk and Martin Monperrus. 2019. SequenceR: Sequence-to-Sequence Learning for End-to-End Program Repair. IEEE Transaction on Software Engineering (2019)."
+      },
+      {
+        "key": "e_1_3_1_16_1",
+        "unstructured": "Neil Chowdhury James Aung Chan Jun Shern Oliver Jaffe Dane Sherburn Giulio Starace Evan Mays Rachel Dias Marwan Aljubeh Mia Glaese Carlos E. Jimenez John Yang Kevin Liu and Aleksander Madry. 2024. Introducing SWE-bench Verified. OpenAI Blog (2024). https://openai.com/index/introducing-swe-bench-verified/."
+      },
+      {
+        "key": "e_1_3_1_17_1",
+        "unstructured": "Codestory. 2024. Aide by Codestory. https://github.com/swe-bench/experiments/tree/main/evaluation/lite/20240702_codestory_aide_mixed."
+      },
+      {
+        "key": "e_1_3_1_18_1",
+        "unstructured": "Composio. 2024. Empower your AI agents with Composio - a platform for managing and integrating tools with LLMs and AI agents using Function Calling. https://docs.composio.dev/introduction/intro/overview."
+      },
+      {
+        "key": "e_1_3_1_19_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yinlin Deng Chunqiu Steven Xia Haoran Peng Chenyuan Yang and Lingming Zhang. 2023. Large Language Models are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models. In 32nd International Symposium on Software Testing and Analysis (ISSTA).",
+        "DOI": "10.1145/3597926.3598067"
+      },
+      {
+        "key": "e_1_3_1_20_1",
+        "unstructured": "Yinlin Deng Chunqiu Steven Xia Chenyuan Yang Shizhuo Dylan Zhang Shujing Yang and Lingming Zhang. 2024. Large Language Models are Edge-Case Fuzzers: Testing Deep Learning Libraries via FuzzGPT. In 46th International Conference on Software Engineering (ICSE)."
+      },
+      {
+        "key": "e_1_3_1_21_1",
+        "unstructured": "Devin. 2024. Devin AI software engineer. https://www.cognition.ai/introducing-devin."
+      },
+      {
+        "key": "e_1_3_1_22_1",
+        "unstructured": "Factory. 2024. Factory Bringing Autonomy to Software Engineering. https://www.factory.ai/."
+      },
+      {
+        "key": "e_1_3_1_23_1",
+        "unstructured": "Paul Gauthier. 2024. Aider is AI pair programming in your terminal. https://aider.chat/."
+      },
+      {
+        "key": "e_1_3_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2017.2755013"
+      },
+      {
+        "key": "e_1_3_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3293882.3330559"
+      },
+      {
+        "key": "e_1_3_1_26_1",
+        "unstructured": "Gru. 2024. The Road to Ultimate Pull Request Machine. https://gru.ai/blog/road-to-ultimate-pull-request-machine/."
+      },
+      {
+        "key": "e_1_3_1_27_1",
+        "unstructured": "Daya Guo Dejian Yang Haowei Zhang Junxiao Song Ruoyu Zhang Runxin Xu Qihao Zhu Shirong Ma Peiyi Wang Xiao Bi et al. 2025. Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning. arXiv preprint arXiv:2501.12948 (2025)."
+      },
+      {
+        "key": "e_1_3_1_28_1",
+        "unstructured": "Dávid Hidvégi Khashayar Etemadi Sofia Bobadilla and Martin Monperrus. 2024. Cigar: Cost-efficient program repair with llms. arXiv preprint arXiv:2402.06598 (2024)."
+      },
+      {
+        "key": "e_1_3_1_29_1",
+        "unstructured": "Honeycomb. 2024. Honeycomb. https://honeycomb.sh."
+      },
+      {
+        "key": "e_1_3_1_30_1",
+        "unstructured": "Jie Huang Xinyun Chen Swaroop Mishra Huaixiu Steven Zheng Adams Wei Yu Xinying Song and Denny Zhou. 2024. Large Language Models Cannot Self-Correct ReasoningYet. In The Twelfth International Conference on Learning Representations. https://openreview.net/forum?id=IkmD3fKBPQ"
+      },
+      {
+        "key": "e_1_3_1_31_1",
+        "unstructured": "IBM. 2024. Agent-101: A Software Engineering Agent for Code Assistance developed by IBM Research. https://github.com/swe-bench/experiments/blob/main/evaluation/lite/20240612_IBM_Research_Agent101/README.md/."
+      },
+      {
+        "key": "e_1_3_1_32_1",
+        "unstructured": "Isoform. 2024. Isoform. https://github.com/swe-bench/experiments/tree/main/evaluation/lite/20240829_Isoform."
+      },
+      {
+        "key": "e_1_3_1_33_1",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Nan Jiang Kevin Liu Thibaud Lutellier and Lin Tan. 2023. Impact of Code Language Models on Automated Program Repair. In 2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE). 1430–1442. https://doi.org/10.1109/ICSE48619.2023.00125 10.1109/ICSE48619.2023.00125",
+        "DOI": "10.1109/ICSE48619.2023.00125"
+      },
+      {
+        "key": "e_1_3_1_34_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nan Jiang Thibaud Lutellier and Lin Tan. 2021. CURE: Code-Aware Neural Machine Translation for Automatic Program Repair. 2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE) (May 2021).",
+        "DOI": "10.1109/ICSE43902.2021.00107"
+      },
+      {
+        "key": "e_1_3_1_35_1",
+        "unstructured": "Carlos E Jimenez John Yang Alexander Wettig Shunyu Yao Kexin Pei Ofir Press and Karthik R Narasimhan. 2024a. SWE-bench: Can Language Models Resolve Real-world Github Issues?. In The Twelfth International Conference on Learning Representations. https://openreview.net/forum?id=VTF8yNQM66"
+      },
+      {
+        "key": "e_1_3_1_36_1",
+        "unstructured": "Carlos E Jimenez John Yang Alexander Wettig Shunyu Yao Kexin Pei Ofir Press and Karthik R Narasimhan. 2024b. SWE-bench Leaderboard. https://www.swebench.com/."
+      },
+      {
+        "key": "e_1_3_1_37_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "474",
+        "DOI": "10.1109/ICSE.2012.6227168",
+        "volume-title": "2012 34th international conference on software engineering (ICSE)",
+        "author": "Jin Wei",
+        "year": "2012",
+        "unstructured": "Wei Jin and Alessandro Orso. 2012. Bugredux: Reproducing field failures for in-house debugging. In 2012 34th international conference on software engineering (ICSE). IEEE, 474–484."
+      },
+      {
+        "key": "e_1_3_1_38_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "James A Jones and Mary Jean Harrold. 2005. Empirical evaluation of the tarantula automatic fault-localization technique. In Proceedings of the 20th IEEE/ACM international Conference on Automated software engineering. 273–282.",
+        "DOI": "10.1145/1101908.1101949"
+      },
+      {
+        "key": "e_1_3_1_39_1",
+        "first-page": "1424",
+        "volume-title": "Proceedings of the ACM on Software Engineering",
+        "author": "Kang Sungmin",
+        "year": "2024",
+        "unstructured": "Sungmin Kang, Gabin An, and Shin Yoo. 2024. A quantitative and qualitative evaluation of LLM-based explainable fault localization. Proceedings of the ACM on Software Engineering 1, FSE (2024), 1424–1446."
+      },
+      {
+        "key": "e_1_3_1_40_1",
+        "unstructured": "Sophia D Kolak Ruben Martins Claire Le Goues and Vincent Josua Hellendoorn. 2022. Patch Generation with Language Models: Feasibility and Scaling Behavior. In Deep Learning for Code Workshop."
+      },
+      {
+        "key": "e_1_3_1_41_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xuan Bach D. Le David Lo and Claire Le Goues. 2016. History Driven Program Repair. In 2016 IEEE 23rd International Conference on Software Analysis Evolution and Reengineering (SANER) Vol. 1. 213–224.",
+        "DOI": "10.1109/SANER.2016.76"
+      },
+      {
+        "key": "e_1_3_1_42_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "54",
+        "DOI": "10.1109/TSE.2011.104",
+        "article-title": "GenProg: A Generic Method for Automatic Software Repair",
+        "author": "Le Goues Claire",
+        "year": "2012",
+        "unstructured": "Claire Le Goues, Thanh Vu Nguyen, Stephanie Forrest, and Westley Weimer. 2012. GenProg: A Generic Method for Automatic Software Repair. IEEE Transactions on Software Engineering38,1 (2012), 54–72.",
+        "journal-title": "IEEE Transactions on Software Engineering"
+      },
+      {
+        "key": "e_1_3_1_43_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Caroline Lemieux Jeevana Priya Inala Shuvendu K Lahiri and Siddhartha Sen. 2023. CODAMOSA: Escaping Coverage Plateaus in Test Generation with Pre-trained Large Language Models. In 45th International Conference on Software Engineering (ICSE).",
+        "DOI": "10.1109/ICSE48619.2023.00085"
+      },
+      {
+        "key": "e_1_3_1_44_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xia Li Wei Li Yuqun Zhang and Lingming Zhang. 2019. Deepfl: Integrating multiple fault diagnosis dimensions for deep fault localization. In Proceedings of the 28th ACM SIGSOFT international symposium on software testing and analysis. 169–180.",
+        "DOI": "10.1145/3293882.3330574"
+      },
+      {
+        "key": "e_1_3_1_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3377811.3380345"
+      },
+      {
+        "key": "e_1_3_1_46_1",
+        "unstructured": "Lingma. 2024. Lingma Agent. https://github.com/swe-bench/experiments/tree/main/evaluation/lite/20240622_Lingma_Agent."
+      },
+      {
+        "key": "e_1_3_1_47_1",
+        "unstructured": "SWE-bench Lite. 2024. SWE-bench Lite. https://www.swebench.com/lite.html."
+      },
+      {
+        "key": "e_1_3_1_48_1",
+        "unstructured": "Aixin Liu Bei Feng Bing Xue Bingxuan Wang Bochao Wu Chengda Lu Chenggang Zhao Chengqi Deng Chenyu Zhang Chong Ruan et al. 2024b. Deepseek-v3 technical report. arXiv preprint arXiv:2412.19437 (2024)."
+      },
+      {
+        "key": "e_1_3_1_49_1",
+        "unstructured": "Junwei Liu Kaixin Wang Yixuan Chen Xin Peng Zhenpeng Chen Lingming Zhang and Yiling Lou. 2024d. Large Language Model-Based Agents for Software Engineering: A Survey. arXiv preprint arXiv:2409.02977 (2024)."
+      },
+      {
+        "key": "e_1_3_1_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3293882.3330577"
+      },
+      {
+        "key": "e_1_3_1_51_1",
+        "unstructured": "Yizhou Liu Pengfei Gao Xinchen Wang Chao Peng and Zhao Zhang. 2024c. MarsCode Agent: AI-native Automated Bug Fixing. arXiv preprint arXiv:2409.00899 (2024)."
+      },
+      {
+        "key": "e_1_3_1_52_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhe Liu Chunyang Chen Junjie Wang Mengzhuo Chen Boyu Wu Xing Che Dandan Wang and Qing Wang. 2024a. Make llm a testing expert: Bringing human-like interaction to mobile gui testing via functionality-aware decisions. In Proceedings of the IEEE/ACM 46th International Conference on Software Engineering. 1–13.",
+        "DOI": "10.1145/3597503.3639180"
+      },
+      {
+        "key": "e_1_3_1_53_1",
+        "unstructured": "LlamaIndex. 2024. LlamaIndex Data Framework for LLM Applications. https://www.llamaindex.ai/."
+      },
+      {
+        "key": "e_1_3_1_54_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "166",
+        "DOI": "10.1145/2786805.2786811",
+        "volume-title": "Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering (Bergamo, Italy) (ESEC/FSE 2015)",
+        "author": "Long Fan",
+        "year": "2015",
+        "unstructured": "Fan Long and Martin Rinard. 2015. Staged Program Repair with Condition Synthesis. In Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering (Bergamo, Italy) (ESEC/FSE 2015). New York, NY, USA, 166–178."
+      },
+      {
+        "key": "e_1_3_1_55_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fan Long and Martin Rinard. 2016. An analysis of the search spaces for generate and validate patch generation systems. In Proceedings of the 38th International Conference on Software Engineering. 702–713.",
+        "DOI": "10.1145/2884781.2884872"
+      },
+      {
+        "key": "e_1_3_1_56_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yiling Lou Ali Ghanbari Xia Li Lingming Zhang Haotian Zhang Dan Hao and Lu Zhang. 2020. Can automated program repair refine fault localization? a unified debugging approach. In Proceedings of the 29th ACM SIGSOFT International Symposium on Software Testing and Analysis. 75–87.",
+        "DOI": "10.1145/3395363.3397351"
+      },
+      {
+        "key": "e_1_3_1_57_1",
+        "unstructured": "Yingwei Ma Qingping Yang Rongyu Cao Binhua Li Fei Huang and Yongbin Li. 2024. How to Understand Whole Software Repository? arXiv preprint arXiv:2406.01422 (2024)."
+      },
+      {
+        "key": "e_1_3_1_58_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sergey Mechtaev Jooyong Yi and Abhik Roychoudhury. 2016. Angelix: Scalable Multiline Program Patch Synthesis via Symbolic Analysis. In Proceedings of the 38th International Conference on Software Engineering (Austin Texas) (ICSE ’16). 691–701.",
+        "DOI": "10.1145/2884781.2884807"
+      },
+      {
+        "key": "e_1_3_1_59_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ruijie Meng Martin Mirchev Marcel Böhme and Abhik Roychoudhury. 2024. Large language model guided protocol fuzzing. In Proceedings of the 31st Annual Network and Distributed System Security Symposium (NDSS).",
+        "DOI": "10.14722/ndss.2024.24556"
+      },
+      {
+        "key": "e_1_3_1_60_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xiangxin Meng Xu Wang Hongyu Zhang Hailong Sun and Xudong Liu. 2022. Improving fault localization and program repair with deep semantic features and transferred knowledge. In Proceedings of the 44th International Conference on Software Engineering. 1169–1180.",
+        "DOI": "10.1145/3510003.3510147"
+      },
+      {
+        "key": "e_1_3_1_61_1",
+        "unstructured": "MentatBot. 2024. MentatBot:New SOTA Coding Agent Available Now. https://mentat.ai/blog/mentatbot-sota-coding-agent."
+      },
+      {
+        "key": "e_1_3_1_62_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICST.2014.28"
+      },
+      {
+        "key": "e_1_3_1_63_1",
+        "unstructured": "Theo X Olausson Jeevana Priya Inala Chenglong Wang Jianfeng Gao and Armando Solar-Lezama. 2023. Is Self-Repair a Silver Bullet for Code Generation?. In The Twelfth International Conference on Learning Representations."
+      },
+      {
+        "key": "e_1_3_1_64_1",
+        "unstructured": "Yaroslav Oliinyk Michael Scott Ryan Tsang Chongzhou Fang Houman Homayoun et al. 2024. Fuzzing BusyBox: Leveraging LLM and Crash Reuse for Embedded Bug Unearthing. arXiv preprint arXiv:2403.03897 (2024)."
+      },
+      {
+        "key": "e_1_3_1_65_1",
+        "unstructured": "OpenAI. 2023. GPT-4 Technical Report. ArXiv abs/2303.08774 (2023)."
+      },
+      {
+        "key": "e_1_3_1_66_1",
+        "unstructured": "OpenAI. 2024a. Hello GPT-4o. https://openai.com/index/hello-gpt-4o/."
+      },
+      {
+        "key": "e_1_3_1_67_1",
+        "unstructured": "OpenAI. 2024b. New embedding models and API updates. https://openai.com/index/new-embedding-models-and-api-updates/."
+      },
+      {
+        "key": "e_1_3_1_68_1",
+        "unstructured": "OpenAI. 2024c. OpenAI o1 System Card. https://openai.com/index/openai-o1-system-card/."
+      },
+      {
+        "key": "e_1_3_1_69_1",
+        "unstructured": "OpenCSG. 2024. OpenCSGStarShip. https://opencsg.com/product?class=StarShip/."
+      },
+      {
+        "key": "e_1_3_1_70_1",
+        "unstructured": "OpenDevin. 2024. OpenDevin: Code Less Make More. https://github.com/OpenDevin/OpenDevin/."
+      },
+      {
+        "key": "e_1_3_1_71_1",
+        "unstructured": "Xianfei Ou Cong Li Yanyan Jiang and Chang Xu. 2024. The Mutators Reloaded: Fuzzing Compilers with Large Language Model Generated Mutation Operators. In ASPLOS."
+      },
+      {
+        "key": "e_1_3_1_72_1",
+        "first-page": "275",
+        "volume-title": "Advances in computers",
+        "author": "Papadakis Mike",
+        "year": "2019",
+        "unstructured": "Mike Papadakis, Marinos Kintis, Jie Zhang, Yue Jia, Yves Le Traon, and Mark Harman. 2019. Mutation testing advances: an analysis and survey. In Advances in computers. Vol. 112. Elsevier, 275–378."
+      },
+      {
+        "key": "e_1_3_1_73_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/stvr.1509"
+      },
+      {
+        "key": "e_1_3_1_74_1",
+        "unstructured": "Juan Altmayer Pizzorno and Emery D Berger. 2024. CoverUp: Coverage-Guided LLM-Based Test Generation. arXiv preprint arXiv:2403.16218 (2024)."
+      },
+      {
+        "key": "e_1_3_1_75_1",
+        "unstructured": "Python. 2024. Python ast — Abstract Syntax Trees. https://docs.python.org/3/library/ast.html/."
+      },
+      {
+        "key": "e_1_3_1_76_1",
+        "unstructured": "Yihao Qin Shangwen Wang Yiling Lou Jinhao Dong Kaixin Wang Xiaoling Li and Xiaoguang Mao. 2024. AgentFL: Scaling LLM-based Fault Localization to Project-Level Context. arXiv preprint arXiv:2403.16362 (2024)."
+      },
+      {
+        "key": "e_1_3_1_77_1",
+        "unstructured": "RepoGraph. 2024. RepoGraph: Enhancing AI Software Engineering with Repository-level Code Graph. https://github.com/ozyyshr/RepoGraph."
+      },
+      {
+        "key": "e_1_3_1_78_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1561/1500000019"
+      },
+      {
+        "key": "e_1_3_1_79_1",
+        "article-title": "SpecRover: Code Intent Extraction via LLMs",
+        "author": "Ruan Haifeng",
+        "year": "2024",
+        "unstructured": "Haifeng Ruan, Yuntong Zhang, and Abhik Roychoudhury. 2024. SpecRover: Code Intent Extraction via LLMs. arXiv preprint arXiv:2408.02232 (2024).",
+        "journal-title": "arXiv preprint arXiv:2408.02232"
+      },
+      {
+        "key": "e_1_3_1_80_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2013.6693093"
+      },
+      {
+        "key": "e_1_3_1_81_1",
+        "unstructured": "Max Schäfer Sarah Nadi Aryaz Eghbali and Frank Tip. 2023. Adaptive Test Generation Using a Large Language Model. arXiv:2302.06527 [cs.SE]"
+      },
+      {
+        "key": "e_1_3_1_82_1",
+        "first-page": "31210",
+        "volume-title": "International Conference on Machine Learning",
+        "author": "Shi Freda",
+        "year": "2023",
+        "unstructured": "Freda Shi, Xinyun Chen, Kanishka Misra, Nathan Scales, David Dohan, Ed H Chi, Nathanael Schärli, and Denny Zhou. 2023. Large language models can be easily distracted by irrelevant context. In International Conference on Machine Learning. PMLR, 31210–31227."
+      },
+      {
+        "key": "e_1_3_1_83_1",
+        "unstructured": "SIMA. 2024. Alex SIMA. https://github.com/swe-bench/experiments/tree/main/evaluation/lite/20240706_sima_gpt4o."
+      },
+      {
+        "issue": "4",
+        "key": "e_1_3_1_84_1",
+        "first-page": "35",
+        "article-title": "Modern information retrieval: A brief overview",
+        "volume": "24",
+        "author": "Singhal Amit",
+        "year": "2001",
+        "unstructured": "Amit Singhalet al. 2001. Modern information retrieval: A brief overview. IEEE Data Eng. Bull. 24, 4 (2001), 35–43.",
+        "journal-title": "IEEE Data Eng. Bull"
+      },
+      {
+        "key": "e_1_3_1_85_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jeongju Sohn and Shin Yoo. 2017. Fluccs: Using code and change metrics to improve fault localization. In Proceedings of the 26th ACM SIGSOFT International Symposium on Software Testing and Analysis. 273–283.",
+        "DOI": "10.1145/3092703.3092717"
+      },
+      {
+        "key": "e_1_3_1_86_1",
+        "unstructured": "Solver. 2024. Solver. https://solverai.com."
+      },
+      {
+        "key": "e_1_3_1_87_1",
+        "unstructured": "SuperCoder. 2024. SuperCoder. https://superagi.com/supercoder/."
+      },
+      {
+        "key": "e_1_3_1_88_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Qianqian Wang Chris Parnin and Alessandro Orso. 2015. Evaluating the usefulness of ir-based fault localization techniques. In Proceedings of the 2015 international symposium on software testing and analysis. 1–11.",
+        "DOI": "10.1145/2771783.2771797"
+      },
+      {
+        "key": "e_1_3_1_89_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Shaowei Wang and David Lo. 2014. Version history similar report and structure: Putting them together for improved bug localization. In Proceedings of the 22nd international conference on program comprehension. 53–63.",
+        "DOI": "10.1145/2597008.2597148"
+      },
+      {
+        "issue": "8",
+        "key": "e_1_3_1_90_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "707",
+        "DOI": "10.1109/TSE.2016.2521368",
+        "article-title": "A survey on software fault localization",
+        "volume": "42",
+        "author": "Eric Wong W",
+        "year": "2016",
+        "unstructured": "W Eric Wong, Ruizhi Gao, Yihao Li, Rui Abreu, and Franz Wotawa. 2016. A survey on software fault localization. IEEE Transactions on Software Engineering 42, 8 (2016), 707–740.",
+        "journal-title": "IEEE Transactions on Software Engineering"
+      },
+      {
+        "key": "e_1_3_1_91_1",
+        "unstructured": "Yonghao Wu Zheng Li Jie M Zhang Mike Papadakis Mark Harman and Yong Liu. 2023. Large language models in fault localisation. arXiv preprintarXiv:2308.15276 (2023)."
+      },
+      {
+        "key": "e_1_3_1_92_1",
+        "unstructured": "Zhiheng Xi Wenxiang Chen Xin Guo Wei He Yiwen Ding Boyang Hong Ming Zhang Junzhe Wang Senjie Jin Enyu Zhou et al. 2023. The rise and potential of large language model based agents: A survey. arXiv preprint arXiv:2309.07864 (2023)."
+      },
+      {
+        "key": "e_1_3_1_93_1",
+        "unstructured": "Chunqiu Steven Xia Matteo Paltenghi Jia Le Tian Michael Pradel and Lingming Zhang. 2024. Universal Fuzzing via Large Language Models. In 46th International Conference on Software Engineering (ICSE)."
+      },
+      {
+        "key": "e_1_3_1_94_1",
+        "unstructured": "Chunqiu Steven Xia Yuxiang Wei and Lingming Zhang. 2023a. Automated Program Repair in the Era of Large Pre-trained Language Models. In Proceedings of the ACM/IEEE 45th International Conference on Software Engineering (ICSE ’23)."
+      },
+      {
+        "key": "e_1_3_1_95_1",
+        "unstructured": "Chunqiu Steven Xia Yuxiang Wei and Lingming Zhang. 2023b. Automated program repair in the era of large pre-trained language models. In Proceedings of the 45th International Conference on Software Engineering (ICSE 2023). Association for Computing Machinery."
+      },
+      {
+        "key": "e_1_3_1_96_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chunqiu Steven Xia and Lingming Zhang. 2022. Less training more repairing please: revisiting automated program repair via zero-shot learning. In Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering. 959–971.",
+        "DOI": "10.1145/3540250.3549101"
+      },
+      {
+        "key": "e_1_3_1_97_1",
+        "unstructured": "Chunqiu Steven Xia and Lingming Zhang. 2023. Keep the Conversation Going: Fixing 162 out of 337 bugs for $0.42 each using ChatGPT. arXiv preprint arXiv:2304.00385 (2023)."
+      },
+      {
+        "key": "e_1_3_1_98_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Aidan ZH Yang Claire Le Goues Ruben Martins and Vincent Hellendoorn. 2024b. Large language models for test-free fault localization. In Proceedings of the 46th IEEE/ACM International Conference on Software Engineering. 1–12.",
+        "DOI": "10.1145/3597503.3623342"
+      },
+      {
+        "key": "e_1_3_1_99_1",
+        "unstructured": "Chenyuan Yang Yinlin Deng Runyu Lu Jiayi Yao Jiawei Liu Reyhaneh Jabbarvand and Lingming Zhang. 2023a. White-box Compiler Fuzzing Empowered by Large Language Models. arXiv:2310.15991 [cs.SE]"
+      },
+      {
+        "key": "e_1_3_1_100_1",
+        "unstructured": "Chenyuan Yang Zijie Zhao and Lingming Zhang. 2023b. Kernelgpt: Enhanced kernel fuzzing via large language models. arXiv preprint arXiv:2401.00563 (2023)."
+      },
+      {
+        "key": "e_1_3_1_101_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "John Yang Carlos E Jimenez Alexander Wettig Kilian Lieret Shunyu Yao Karthik Narasimhan and Ofir Press. 2024a. Swe-agent: Agent-computer interfaces enable automated software engineering. arXiv preprint arXiv:2405.15793 (2024).",
+        "DOI": "10.52202/079017-1601"
+      },
+      {
+        "key": "e_1_3_1_102_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3660783"
+      },
+      {
+        "key": "e_1_3_1_103_1",
+        "unstructured": "Andreas Zeller Rahul Gopinath Marcel Böhme Gordon Fraser and Christian Holler. 2019. The fuzzing book."
+      },
+      {
+        "key": "e_1_3_1_104_1",
+        "unstructured": "Kexun Zhang Weiran Yao Zuxin Liu Yihao Feng Zhiwei Liu Rithesh Murthy Tian Lan Lei Li Renze Lou Jiacheng Xu et al. 2024d. Diversity Empowers Intelligence: Integrating Expertise of Software Engineering Agents. arXiv preprint arXiv:2408.07060 (2024)."
+      },
+      {
+        "key": "e_1_3_1_105_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lyuye Zhang Kaixuan Li Kairan Sun Daoyuan Wu Ye Liu Haoye Tian and Yang Liu. 2024b. Acfix: Guiding llms with mined common rbac practices for context-aware repair of access control vulnerabilities in smart contracts. arXiv preprint arXiv:2403.06838 (2024).",
+        "DOI": "10.1109/TSE.2025.3590108"
+      },
+      {
+        "key": "e_1_3_1_106_1",
+        "unstructured": "Quanjun Zhang Chunrong Fang Yang Xie YuXiang Ma Weisong Sun and Yun Yang Zhenyu Chen. 2024a. A Systematic Literature Review on Large Language Models for Automated Program Repair. arXiv preprint arXiv:2405.01466 (2024)."
+      },
+      {
+        "key": "e_1_3_1_107_1",
+        "unstructured": "Yue Zhang Yafu Li Leyang Cui Deng Cai Lemao Liu Tingchen Fu Xinting Huang Enbo Zhao Yu Zhang Yulong Chen et al. 2023. Siren’s song in the AI ocean: a survey on hallucination in large language models. arXiv preprint arXiv:2309.01219 (2023)."
+      },
+      {
+        "key": "e_1_3_1_108_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yuntong Zhang Haifeng Ruan Zhiyu Fan and Abhik Roychoudhury. 2024c. AutoCodeRover: Autonomous Program Improvement. arXiv:2404.05427 [cs.SE]",
+        "DOI": "10.1145/3650212.3680384"
+      },
+      {
+        "key": "e_1_3_1_109_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227210"
+      },
+      {
+        "key": "e_1_3_1_110_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3468264.3468544"
+      },
+      {
+        "key": "e_1_3_1_111_1",
+        "unstructured": "Albert Örwall. 2024. Moatless Tools. https://github.com/aorwall/moatless-tools."
+      }
+    ],
+    "container-title": [
+      "Proceedings of the ACM on Software Engineering"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3715754",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3715754",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          23
+        ]
+      ],
+      "date-time": "2026-08-23T11:01:29Z",
+      "timestamp": 1787482889000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3715754"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          19
+        ]
+      ]
+    },
+    "references-count": 110,
+    "journal-issue": {
+      "issue": "FSE",
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            19
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1145/3715754"
+    ],
+    "URL": "https://doi.org/10.1145/3715754",
+    "relation": {},
+    "ISSN": [
+      "2994-970X"
+    ],
+    "issn-type": [
+      {
+        "value": "2994-970X",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          19
+        ]
+      ]
+    }
+  }
+}

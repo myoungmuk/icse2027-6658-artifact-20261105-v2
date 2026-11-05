@@ -1,7 +1,7 @@
 {
   "algorithm": "SHA-256",
-  "version": "2026.11.05-v4",
-  "scope": "Every release file except this inventory itself; .git and bytecode caches excluded.",
+  "version": "2026.11.05-v5",
+  "scope": "Every release file except this root inventory itself; nested historical inventories included.",
   "files": [
     {
       "path": ".gitattributes",
@@ -16,22 +16,32 @@
     {
       "path": "CITATION.cff",
       "size": 649,
-      "sha256": "c1469f01ab79de9f89b71f2fac62bf0d4fa1422ac0b84cfd8e62a742c17a9439"
+      "sha256": "062de46d54185e9c00fe981e4b1f8009521a737b6a82373d1e46766b327af36e"
     },
     {
       "path": "README.md",
-      "size": 4793,
-      "sha256": "099a7c0a573b492bb03bc24adeb522e459b727978ac9b5b943a4ceb9aeeaf152"
+      "size": 5183,
+      "sha256": "4d3bd53a08eeca9e8d72909191fb7a9df4b7d86a964cec28b3dcf83c7ccc90cb"
     },
     {
       "path": "README_KO.md",
-      "size": 3862,
-      "sha256": "d5494f232f0b37c7bfeb3b1e0ed708ce3fc6818f5db1fa9ed98716fdbed766f3"
+      "size": 4062,
+      "sha256": "c94fc50e631c5f5e664587a0941eba107244808182140945f2b64b14ccae9f9a"
+    },
+    {
+      "path": "bibliography/ADDITIONAL_VERIFICATION_V5.json",
+      "size": 5334,
+      "sha256": "fc439817df2e43d8e93eed733e60fd273f1c51d56370e2bb8833288b5ac4dc97"
     },
     {
       "path": "bibliography/VERIFICATION.json",
-      "size": 10733,
-      "sha256": "0500aff54349ea0675d35a5b1eaf1ffa0064f9af4e9f62de6020890def61e5c1"
+      "size": 15681,
+      "sha256": "9bbf3e3077ed2cdcbeaf975ea0c1853a12c3909b42a60e81a9facd963ead1ba4"
+    },
+    {
+      "path": "bibliography/crossref/agentless.json",
+      "size": 39343,
+      "sha256": "090843860e81ba95f7050f50aa96cfcaa5257c78145d4102166a54f95afc6309"
     },
     {
       "path": "bibliography/crossref/bacchelli2013review.json",
@@ -59,6 +69,16 @@
       "sha256": "63af0953e1be3413f3f64dcee4019c90e41a3825b4274848b450e08034d1149e"
     },
     {
+      "path": "bibliography/crossref/llamareviewer.json",
+      "size": 16746,
+      "sha256": "b9b26f50299b5c217148ad3b31baf67dcc80c8d3824df3efff82e5c11bc7350d"
+    },
+    {
+      "path": "bibliography/crossref/llmjudge.json",
+      "size": 5783,
+      "sha256": "ff89861957cc6cf716301d0cc75e0c15f6025b760bb6bf06256b286c185c8472"
+    },
+    {
       "path": "bibliography/crossref/modernreview.json",
       "size": 15412,
       "sha256": "5383947b04e653b9467ededf9b93d4049dd1c0496b852c3834e05233d0cf4f17"
@@ -67,6 +87,11 @@
       "path": "bibliography/crossref/overfitting.json",
       "size": 12347,
       "sha256": "aab5ddd545c4049d07f157788b408ee2bfcc66912467451a6c9c4386bcc6553c"
+    },
+    {
+      "path": "bibliography/crossref/panickssery2024selfpref.json",
+      "size": 3283,
+      "sha256": "9c7d98bb5d8abde922180e6b92180d34f9236012a1c6ef17fc6d9a7cc224b0f6"
     },
     {
       "path": "bibliography/crossref/patchcorrectness.json",
@@ -109,6 +134,11 @@
       "sha256": "c1f0037186fe421e22831c5d9bdb3c1cc5e64ff477e80cfd290a23661001fcb9"
     },
     {
+      "path": "bibliography/crossref/tufanoreview.json",
+      "size": 14796,
+      "sha256": "2faeb791fcde090ec51264182c7e364a0fc13b00ff4dc1deba3f014ec25bfc09"
+    },
+    {
       "path": "bibliography/crossref/wang2024fair.json",
       "size": 2942,
       "sha256": "ac470c5f576232ed71aa0b92774b0e8937c911457ebf18c38d7dafd607e6ffd8"
@@ -122,6 +152,21 @@
       "path": "bibliography/crossref/zhang2024autocoderover.json",
       "size": 13275,
       "sha256": "f563b49249b26299f3b52aa30067acb4488a79609cf5a3c2da44cafaa0974f33"
+    },
+    {
+      "path": "bibliography/official_iclr/swebench.html",
+      "size": 9820,
+      "sha256": "43dd58a8f7c5a086ba43b6131aea03c54af2877579f863b396d9d5e7d4159f12"
+    },
+    {
+      "path": "bibliography/official_iclr/wang2024openhands.html",
+      "size": 10960,
+      "sha256": "3114f23286d9cd3187cb38ea7cc7de92972fd2bfa873e0db49e2c4f593fc134c"
+    },
+    {
+      "path": "bibliography/official_iclr/yang2024swebenchmm.html",
+      "size": 10295,
+      "sha256": "e493819ece95b2b7bbd60a7ce60c94b1ced8454ff014565edc1e0e9ddc54ba92"
     },
     {
       "path": "binary_pilots/FINAL_RESULTS.json",
@@ -48790,8 +48835,8 @@
     },
     {
       "path": "paper/README.md",
-      "size": 2729,
-      "sha256": "cc9843a750afb6ec71ce2e705ae4419cd83616b1b1ec81bd66a6e80e9abcfbad"
+      "size": 2763,
+      "sha256": "97a0b6e9fe2729dabd503a0b334c812fb072e5b091845c8054c03bad501efb3e"
     },
     {
       "path": "paper/generated/figures/agent_vs_gold.pdf",
@@ -48850,18 +48895,18 @@
     },
     {
       "path": "paper/main.bbl",
-      "size": 11397,
-      "sha256": "78b715b711cc7ed4f79e42b345db62d2dd5705f97a377f71d491dec0bab4d5da"
+      "size": 12102,
+      "sha256": "f684a8a413bcfcd50dfdef029e197b215b5441f6ed46a12f93c04c241a260048"
     },
     {
       "path": "paper/main.pdf",
-      "size": 153248,
-      "sha256": "a6c9a6dd37a0a933ebb4afe9628c523814d761e67d0ae7ea45484efb3554125f"
+      "size": 153854,
+      "sha256": "2c7436b26f5d134bb1d231582b1e23c50a6bd195ca45d749df1cb505e71f4a19"
     },
     {
       "path": "paper/main.tex",
       "size": 50799,
-      "sha256": "19c599e66febcd98545018466ae74eb596caf7f260aefff0b18e8c4464c5100c"
+      "sha256": "59d52f72e020c7da7aee46f8b24085fa5cb97fa60b5d94b6eb373c5c14c923ff"
     },
     {
       "path": "paper/numbers.tex",
@@ -48870,13 +48915,13 @@
     },
     {
       "path": "paper/references.bib",
-      "size": 13678,
-      "sha256": "c4beb4712f2a21096c276978972e9b53a401095cbce155da5d220beab5942f21"
+      "size": 14518,
+      "sha256": "3afd66a896d668104e1bee9108ad309723e1f6fe18db5e0d7bac796e5246d108"
     },
     {
       "path": "submission_metadata.json",
-      "size": 2224,
-      "sha256": "44372e01d45564694a6bd8639f704c81375d6e2dc1d241297da802ed7b8191ec"
+      "size": 2328,
+      "sha256": "466b79fa58b7cf3500abd613e0b6e6ae037723ee2e05db0385fbb8b18e60547d"
     },
     {
       "path": "tools/reproduce_pilots.py",
