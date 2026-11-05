@@ -1,0 +1,101 @@
+{
+  "sha": "26c4be2ebe918601c0a13d4abb3f3cab49107c73",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4MjoyNmM0YmUyZWJlOTE4NjAxYzBhMTNkNGFiYjNmM2NhYjQ5MTA3Yzcz",
+  "commit": {
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com",
+      "date": "2019-03-16T23:30:29Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2019-04-17T11:24:31Z"
+    },
+    "message": "Refs #18676 -- Enabled fast-delete for m2m_changed senders.\n\nThere's no reason to disable fast-delete when an intermediary\nmany-to-many model has connected m2m_changed receivers because the\nsignal is only sent when related manager's clear() and remove() methods\nare directly called.\n\nThis must have been overlooked in 1cd6e04cd4f768bcd4385b75de433d497d938f82\ngiven no regression tests fail when m2m_changed is not taken into\nconsideration to determine if fast-delete can be enabled.",
+    "tree": {
+      "sha": "a7a41f6f612ffdaaefb05d7f71448d78e7ca96d4",
+      "url": "https://api.github.com/repos/django/django/git/trees/a7a41f6f612ffdaaefb05d7f71448d78e7ca96d4"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/26c4be2ebe918601c0a13d4abb3f3cab49107c73",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/26c4be2ebe918601c0a13d4abb3f3cab49107c73",
+  "html_url": "https://github.com/django/django/commit/26c4be2ebe918601c0a13d4abb3f3cab49107c73",
+  "comments_url": "https://api.github.com/repos/django/django/commits/26c4be2ebe918601c0a13d4abb3f3cab49107c73/comments",
+  "author": {
+    "login": "charettes",
+    "id": 9293,
+    "node_id": "MDQ6VXNlcjkyOTM=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9293?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/charettes",
+    "html_url": "https://github.com/charettes",
+    "followers_url": "https://api.github.com/users/charettes/followers",
+    "following_url": "https://api.github.com/users/charettes/following{/other_user}",
+    "gists_url": "https://api.github.com/users/charettes/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/charettes/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/charettes/subscriptions",
+    "organizations_url": "https://api.github.com/users/charettes/orgs",
+    "repos_url": "https://api.github.com/users/charettes/repos",
+    "events_url": "https://api.github.com/users/charettes/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/charettes/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "8180ffba21bf10f4be905cb0d4890dc2bcff2788",
+      "url": "https://api.github.com/repos/django/django/commits/8180ffba21bf10f4be905cb0d4890dc2bcff2788",
+      "html_url": "https://github.com/django/django/commit/8180ffba21bf10f4be905cb0d4890dc2bcff2788"
+    }
+  ],
+  "stats": {
+    "total": 3,
+    "additions": 1,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "d886331fcf0bfee9aad6bc97a050f30ab2fa3b3f",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 2,
+      "changes": 3,
+      "blob_url": "https://github.com/django/django/blob/26c4be2ebe918601c0a13d4abb3f3cab49107c73/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/26c4be2ebe918601c0a13d4abb3f3cab49107c73/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=26c4be2ebe918601c0a13d4abb3f3cab49107c73",
+      "patch": "@@ -136,8 +136,7 @@ def can_fast_delete(self, objs, from_field=None):\n         else:\n             return False\n         if (signals.pre_delete.has_listeners(model) or\n-                signals.post_delete.has_listeners(model) or\n-                signals.m2m_changed.has_listeners(model)):\n+                signals.post_delete.has_listeners(model)):\n             return False\n         # The use of from_field comes from the need to avoid cascade back to\n         # parent when parent delete is cascading to child."
+    }
+  ]
+}

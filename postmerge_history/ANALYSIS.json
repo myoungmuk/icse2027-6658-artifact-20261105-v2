@@ -1,0 +1,118 @@
+{
+  "analysis_type": "post_hoc365day_scoped_default_branch_file_history",
+  "case_selection": "All3nonaccepted hosted gold cases, exhaustive within that subgroup only.",
+  "cases": [
+    {
+      "instance_id": "django__django-11179",
+      "original_pr_url": "https://github.com/django/django/pull/11179",
+      "merge_sha": "afc708cf6d047b35db57bd7c55baeffef459d279",
+      "merged_at": "2019-04-08T19:43:57Z",
+      "window_end": "2020-04-07T19:43:57+00:00",
+      "window_days": 365,
+      "end_commit_sha": "2e67e80fbe0accd5f256415ac28af8bd82eeaced",
+      "source_paths": [
+        "django/db/models/deletion.py"
+      ],
+      "distinct_path_commits": 12,
+      "files_additions": 231,
+      "files_deletions": 114,
+      "path_history_coverage": {
+        "django/db/models/deletion.py": {
+          "commits": 12,
+          "pages": 1
+        }
+      },
+      "all_commit_file_responses_below300": true,
+      "all_relevant_patches_present": true,
+      "default_branch_file_churn_includes_merge_commits": true,
+      "rename_following": false,
+      "targeted_observation": "File changes include cascade-deletion fixes/features, but inspected commit messages/diffs do not document the claimed regular-path PK-cleanup omission. Pinned-source probe already contradicts that claim. Absence in this scoped history is not absence of bugs.",
+      "evidence_class": "NO_MATCHING_PK_REGRESSION_IDENTIFIED_IN_SCOPED_REVIEW"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26113",
+      "original_pr_url": "https://github.com/matplotlib/matplotlib/pull/26113",
+      "merge_sha": "584cda0e09fb220bb44f7dc6a3ae53b39c91bb05",
+      "merged_at": "2023-06-13T22:16:57Z",
+      "window_end": "2024-06-12T22:16:57+00:00",
+      "window_days": 365,
+      "end_commit_sha": "caf5111a9b78f6cecd6fecefd2fba2ca1b66a7cb",
+      "source_paths": [
+        "lib/matplotlib/axes/_axes.py"
+      ],
+      "distinct_path_commits": 93,
+      "files_additions": 1234,
+      "files_deletions": 727,
+      "path_history_coverage": {
+        "lib/matplotlib/axes/_axes.py": {
+          "commits": 93,
+          "pages": 1
+        }
+      },
+      "all_commit_file_responses_below300": true,
+      "all_relevant_patches_present": true,
+      "default_branch_file_churn_includes_merge_commits": true,
+      "rename_following": false,
+      "targeted_observation": "Direct subsequent upstream regression evidence aligns with the empty-reduction concern: fix1344a901 changes default mincnt0 to1, adds np.max(empty) regression test linked to issue27103, and release note explicitly reports errors/warnings after3.8.0 inclusivity change.",
+      "targeted_fix_url": "https://github.com/matplotlib/matplotlib/commit/1344a9018f243281d09c29fdb788c9a966dc4714",
+      "targeted_fix_sha": "1344a9018f243281d09c29fdb788c9a966dc4714",
+      "evidence_class": "UPSTREAM_DOCUMENTED_MATCHING_REGRESSION",
+      "linked_records": [
+        {
+          "url": "https://github.com/matplotlib/matplotlib/issues/27103",
+          "title": "[Bug]: hexbin cannot always accept np.max like functions as reduce_C_function",
+          "body": "### Bug summary\r\n\r\nThe default reduce_C_function (np.mean) returns np.nan for size 0 sequence and hexbin does not cause Error. However, the default mincnt (=0) and reduce_C_function=np.max can cause Error for some gridsize & extent settings due to zero-sized sequence. \r\n\r\n### Code for reproduction\r\n\r\n```python\r\nimport numpy as np\r\nimport matplotlib.pyplot as plt\r\nx=np.array([0. , 1. , 2. , 0.5, 1.5, 2.5, 0. , 1. , 2. ])\r\ny=np.array([0.        , 0.        , 0.        , 0.8660254 , 0.8660254 ,\r\n       0.8660254 , 1.73205081, 1.73205081, 1.73205081])\r\nextent=(0,2.5,0,np.sqrt(3))\r\nC=np.arange(x.size)\r\ngridsize=(3,1)\r\nplt.hexbin(x,y,C, extent=extent, reduce_C_function=np.max, gridsize=gridsize)\r\n# ValueError: zero-size array to reduction operation maximum which has no identity\r\n```\r\n\r\n\r\n### Actual outcome\r\n\r\nValueError will be raised by numpy max(), which cannot accept zero sized sequence.\r\n\r\n### Expected outcome\r\n\r\nNo error is raised. \r\n\r\n### Additional information\r\n\r\nThis bug/new specification has been introduced by \r\n\r\nhttps://github.com/matplotlib/matplotlib/commit/fcda8c8121ba9007cc57a24fa4ff7bc5a17b6a1c\r\n\r\nApparently, the matplotlib versions>=3.8.0 would have the behavior but versions<3.8.0 do not.\r\n\r\nThe default reduce_C_function (np.mean) returns np.nan for size 0 sequence and it does not cause Error. However, the default mincnt (None and mincnt=0 is assigned for None) and reduce_C_function=np.max can cause Error due to zero-sized sequence. The old versions use 'len(acc) > mincnt' comparison and it kicks size 0 sequence by default. However, the new version uses 'len(acc) >= mincnt' comparison but the default mincnt is still 0. Hence, 0 sized input is not kicked and numpy max() like functions raise Error. It can be fixed by mincnt=0.5 (1 is not compatible with the old matplotlib versions).\r\n\r\nplt.hexbin(x,y,C, extent=extent, reduce_C_function=np.max, gridsize=gridsize, mincnt=0.5)\r\n\r\nIf this is a desired (planed) behavior, it would be nice if the documents (release notes) describe the behavior explicitly. At least my program won't work before fixing the problem, and I have to read the codes and their commit history to find the root cause. \r\n\r\nBest regards\r\n\r\n### Operating system\r\n\r\nWindows and Ubuntu\r\n\r\n### Matplotlib Version\r\n\r\n3.8.0\r\n\r\n### Matplotlib Backend\r\n\r\nQt5Agg or Agg\r\n\r\n### Python version\r\n\r\n3.11.4\r\n\r\n### Jupyter version\r\n\r\nNA\r\n\r\n### Installation\r\n\r\npip",
+          "created_at": "2023-10-16T10:42:19Z",
+          "closed_at": "2023-10-25T21:59:52Z",
+          "merged_at": null
+        },
+        {
+          "url": "https://github.com/matplotlib/matplotlib/pull/27179",
+          "title": "Restore default behavior of hexbin mincnt with C provided",
+          "body": "<!--\nThank you so much for your PR!  To help us review your contribution, please check\nout the development guide https://matplotlib.org/devdocs/devel/index.html\n-->\n\n## PR summary\n\nCloses #27103\nCloses #16865\n\nThis changes the default behavior to avoid errors/warnings on empty bins (restoring behavior when mincnt is not specified to that of before v3.8.0).\n\nAdditionally corrects the docstring and updates the release notes (retroactively).\n\nA test case has been added to the tests of empty input with `np.max`, a function that errors on empty input.\n\n<!-- Please provide at least 1-2 sentences describing the pull request in detail\n(Why is this change required?  What problem does it solve?) and link to relevant\nissues and PRs.\nAlso please summarize the changes in the title, for example \"Raise ValueError on\nnon-numeric input to set_xlim\" and avoid non-descriptive titles such as \"Addresses\nissue #8576\".\n-->\n## PR checklist\n<!-- Please mark any checkboxes that do not apply to this PR as [N/A].-->\n\n- [x] \"closes #0000\" is in the body of the PR description to [link the related issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)\n- [x] new and changed code is [tested](https://matplotlib.org/devdocs/devel/testing.html)\n- [x] *Plotting related* features are demonstrated in an [example](https://matplotlib.org/devdocs/devel/document.html#write-examples-and-tutorials)\n- [x] *New Features* and *API Changes* are noted with a [directive and release note](https://matplotlib.org/devdocs/devel/coding_guide.html#new-features-and-api-changes)\n- [x] Documentation complies with [general](https://matplotlib.org/devdocs/devel/document.html#write-rest-pages) and [docstring](https://matplotlib.org/devdocs/devel/document.html#write-docstrings) guidelines\n\n<!--We understand that PRs can sometimes be overwhelming, especially as the\nreviews start coming in.  Please let us know if the reviews are unclear or\nthe recommended next step seems overly demanding, if you would like help in\naddressing a reviewer's comments, or if you have been waiting too long to hear\nback on your PR.-->\n",
+          "created_at": "2023-10-23T22:56:56Z",
+          "closed_at": "2023-10-25T21:59:51Z",
+          "merged_at": "2023-10-25T21:59:51Z"
+        }
+      ],
+      "causal_caution": "Matched code/test/release-note evidence; no independent defect attribution study. This public2023 fix predates the2026 judging and may have been recognizable."
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11578",
+      "original_pr_url": "https://github.com/scikit-learn/scikit-learn/pull/11578",
+      "merge_sha": "6c4b87868470c933eaf28d2dc2f3e59ec5e78724",
+      "merged_at": "2018-07-18T20:08:30Z",
+      "window_end": "2019-07-18T20:08:30+00:00",
+      "window_days": 365,
+      "end_commit_sha": "7b346e784b1391815bd17f64fd239d3fbd78dd5a",
+      "source_paths": [
+        "sklearn/linear_model/logistic.py"
+      ],
+      "distinct_path_commits": 35,
+      "files_additions": 772,
+      "files_deletions": 356,
+      "path_history_coverage": {
+        "sklearn/linear_model/logistic.py": {
+          "commits": 35,
+          "pages": 1
+        }
+      },
+      "all_commit_file_responses_below300": true,
+      "all_relevant_patches_present": true,
+      "default_branch_file_churn_includes_merge_commits": true,
+      "rename_following": false,
+      "targeted_observation": "File changes include multi_class API/default updates and other fixes. The saved rationale itself calls dropping fit_intercept functionally harmless in the then-current scoring path; no inspected history explicitly documents a regression caused by that omission.",
+      "evidence_class": "NO_MATCHING_OMISSION_REGRESSION_IDENTIFIED_IN_SCOPED_REVIEW"
+    }
+  ],
+  "limits": [
+    "File additions/deletions count merge-diff churn and may double-count changes across merge commits.",
+    "File-level churn is not defect count or causal attribution.",
+    "No rename-following; other branches, indirect effects and unreported bugs can be missed.",
+    "No population error-rate or future-outcome prediction claim.",
+    "Subsequent history was publicly available before the archived2026model judgments."
+  ],
+  "new_model_calls": 0,
+  "new_harness_runs": 0,
+  "new_human_ratings": 0
+}

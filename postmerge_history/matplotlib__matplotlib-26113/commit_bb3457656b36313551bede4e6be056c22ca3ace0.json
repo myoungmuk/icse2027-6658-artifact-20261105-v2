@@ -1,0 +1,113 @@
+{
+  "sha": "bb3457656b36313551bede4e6be056c22ca3ace0",
+  "node_id": "C_kwDOABUiotoAKGJiMzQ1NzY1NmIzNjMxMzU1MWJlZGU0ZTZiZTA1NmMyMmNhM2FjZTA",
+  "commit": {
+    "author": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-04-20T09:54:15Z"
+    },
+    "committer": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-05-14T10:15:11Z"
+    },
+    "message": "make violin's orientation default to vertical",
+    "tree": {
+      "sha": "4ddf632e832693d539a9745025a7596bb2d2334a",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/4ddf632e832693d539a9745025a7596bb2d2334a"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/bb3457656b36313551bede4e6be056c22ca3ace0",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/bb3457656b36313551bede4e6be056c22ca3ace0",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/bb3457656b36313551bede4e6be056c22ca3ace0",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/bb3457656b36313551bede4e6be056c22ca3ace0/comments",
+  "author": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d"
+    }
+  ],
+  "stats": {
+    "total": 8,
+    "additions": 4,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "a6e6bc9780b7279d748e2be6000b3550ea19a111",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/bb3457656b36313551bede4e6be056c22ca3ace0/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/bb3457656b36313551bede4e6be056c22ca3ace0/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=bb3457656b36313551bede4e6be056c22ca3ace0",
+      "patch": "@@ -8371,7 +8371,7 @@ def violinplot(self, dataset, positions=None, vert=None,\n             The positions of the violins; i.e. coordinates on the x-axis for\n             vertical violins (or y-axis for horizontal violins).\n \n-        vert : bool, default: True.\n+        vert : bool, optional\n             .. deprecated:: 3.10\n                 Use *orientation* instead.\n \n@@ -8476,7 +8476,7 @@ def _kde_method(X, coords):\n \n     @_api.make_keyword_only(\"3.9\", \"vert\")\n     def violin(self, vpstats, positions=None, vert=None,\n-               orientation=None, widths=0.5, showmeans=False,\n+               orientation='vertical', widths=0.5, showmeans=False,\n                showextrema=True, showmedians=False, side='both'):\n         \"\"\"\n         Draw a violin plot from pre-computed statistics.\n@@ -8515,7 +8515,7 @@ def violin(self, vpstats, positions=None, vert=None,\n             The positions of the violins; i.e. coordinates on the x-axis for\n             vertical violins (or y-axis for horizontal violins).\n \n-        vert : bool, default: True.\n+        vert : bool, optional\n             .. deprecated:: 3.10\n                 Use *orientation* instead.\n "
+    },
+    {
+      "sha": "ac407270bff332c10bdc80974a02d50492efcdf8",
+      "filename": "lib/matplotlib/axes/_axes.pyi",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/bb3457656b36313551bede4e6be056c22ca3ace0/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/bb3457656b36313551bede4e6be056c22ca3ace0/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.pyi?ref=bb3457656b36313551bede4e6be056c22ca3ace0",
+      "patch": "@@ -760,7 +760,7 @@ class Axes(_AxesBase):\n         positions: ArrayLike | None = ...,\n         *,\n         vert: bool | None = ...,\n-        orientation: Literal[\"vertical\", \"horizontal\"] | None = ...,\n+        orientation: Literal[\"vertical\", \"horizontal\"] = ...,\n         widths: float | ArrayLike = ...,\n         showmeans: bool = ...,\n         showextrema: bool = ...,"
+    }
+  ]
+}

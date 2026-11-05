@@ -1,0 +1,19 @@
+{
+  "summary": "Patch correctly clears the PK for the single-instance fast-delete early-return path, matching Django's intended fix for the reported no-dependency case. However it is incomplete: the regular (non-fast) deletion path still leaves stale PKs, so the general principle 'PK should be None after .delete()' is only half-applied, creating inconsistent behavior between fast and regular deletes.",
+  "issues": [
+    {
+      "failure_mode": "F1",
+      "severity": "major",
+      "description": "Fix only covers the single-instance fast-delete early return (line 280). Instances deleted via the regular path (`for model, instances in self.data.items()` loop) — i.e. models WITH dependencies — still retain their stale PK after delete(). The issue states 'It should be set to None after .delete() call' generally; Django's actual fix added a second hunk clearing PKs in the final instances loop. Without it, fast-delete clears PK but regular delete does not, an inconsistency."
+    },
+    {
+      "failure_mode": "F8",
+      "severity": "minor",
+      "description": "setattr is placed after the `with transaction.mark_for_rollback_on_error()` block but before `return`; correct, but worth confirming the PK is only nulled on successful delete (it is, since a rollback raises). Minor placement note, not a defect."
+    }
+  ],
+  "merge_decision": "request_changes",
+  "mergeable": false,
+  "confidence": 0.68,
+  "packet_id": "pk_2f6179af8238"
+}

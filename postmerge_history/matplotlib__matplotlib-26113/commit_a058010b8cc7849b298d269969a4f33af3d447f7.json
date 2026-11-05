@@ -1,0 +1,113 @@
+{
+  "sha": "a058010b8cc7849b298d269969a4f33af3d447f7",
+  "node_id": "C_kwDOABUiotoAKGEwNTgwMTBiOGNjNzg0OWIyOThkMjY5OTY5YTRmMzNhZjNkNDQ3Zjc",
+  "commit": {
+    "author": {
+      "name": "Ruth Comer",
+      "email": "10599679+rcomer@users.noreply.github.com",
+      "date": "2023-12-17T18:56:09Z"
+    },
+    "committer": {
+      "name": "Ruth Comer",
+      "email": "10599679+rcomer@users.noreply.github.com",
+      "date": "2023-12-17T18:56:09Z"
+    },
+    "message": "Update legend input types [ci doc]",
+    "tree": {
+      "sha": "94e1c6a28ef280c7ede07f2c0f049475a576be04",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/94e1c6a28ef280c7ede07f2c0f049475a576be04"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/a058010b8cc7849b298d269969a4f33af3d447f7",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/a058010b8cc7849b298d269969a4f33af3d447f7",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/a058010b8cc7849b298d269969a4f33af3d447f7",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/a058010b8cc7849b298d269969a4f33af3d447f7/comments",
+  "author": {
+    "login": "rcomer",
+    "id": 10599679,
+    "node_id": "MDQ6VXNlcjEwNTk5Njc5",
+    "avatar_url": "https://avatars.githubusercontent.com/u/10599679?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rcomer",
+    "html_url": "https://github.com/rcomer",
+    "followers_url": "https://api.github.com/users/rcomer/followers",
+    "following_url": "https://api.github.com/users/rcomer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rcomer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rcomer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rcomer/subscriptions",
+    "organizations_url": "https://api.github.com/users/rcomer/orgs",
+    "repos_url": "https://api.github.com/users/rcomer/repos",
+    "events_url": "https://api.github.com/users/rcomer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rcomer/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "rcomer",
+    "id": 10599679,
+    "node_id": "MDQ6VXNlcjEwNTk5Njc5",
+    "avatar_url": "https://avatars.githubusercontent.com/u/10599679?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rcomer",
+    "html_url": "https://github.com/rcomer",
+    "followers_url": "https://api.github.com/users/rcomer/followers",
+    "following_url": "https://api.github.com/users/rcomer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rcomer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rcomer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rcomer/subscriptions",
+    "organizations_url": "https://api.github.com/users/rcomer/orgs",
+    "repos_url": "https://api.github.com/users/rcomer/repos",
+    "events_url": "https://api.github.com/users/rcomer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rcomer/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "cf6083525b5b8fcfdc3361c2aaa93afcc4a114da",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/cf6083525b5b8fcfdc3361c2aaa93afcc4a114da",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/cf6083525b5b8fcfdc3361c2aaa93afcc4a114da"
+    }
+  ],
+  "stats": {
+    "total": 10,
+    "additions": 5,
+    "deletions": 5
+  },
+  "files": [
+    {
+      "sha": "89081df90d9a4c3c06bf6fcbbbbbd492c1018fd2",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/a058010b8cc7849b298d269969a4f33af3d447f7/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/a058010b8cc7849b298d269969a4f33af3d447f7/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=a058010b8cc7849b298d269969a4f33af3d447f7",
+      "patch": "@@ -280,7 +280,7 @@ def legend(self, *args, **kwargs):\n \n         Parameters\n         ----------\n-        handles : sequence of (`.Artist` or tuple of `.Artist`), optional\n+        handles : list of (`.Artist` or tuple of `.Artist`), optional\n             A list of Artists (lines, patches) to be added to the legend.\n             Use this together with *labels*, if you need full control on what\n             is shown in the legend and the automatic mechanism described above"
+    },
+    {
+      "sha": "501cb933037a07ae01788c9b111df44acfe1bd4a",
+      "filename": "lib/matplotlib/axes/_axes.pyi",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "changes": 8,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/a058010b8cc7849b298d269969a4f33af3d447f7/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/a058010b8cc7849b298d269969a4f33af3d447f7/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.pyi?ref=a058010b8cc7849b298d269969a4f33af3d447f7",
+      "patch": "@@ -30,7 +30,7 @@ import matplotlib.streamplot as mstream\n \n import datetime\n import PIL.Image\n-from collections.abc import Callable, Sequence\n+from collections.abc import Callable, Iterable, Sequence\n from typing import Any, Literal, overload\n import numpy as np\n from numpy.typing import ArrayLike\n@@ -56,11 +56,11 @@ class Axes(_AxesBase):\n     @overload\n     def legend(self) -> Legend: ...\n     @overload\n-    def legend(self, handles: Sequence[Artist | tuple[Artist, ...]], labels: Sequence[str], **kwargs) -> Legend: ...\n+    def legend(self, handles: Iterable[Artist | tuple[Artist, ...]], labels: Iterable[str], **kwargs) -> Legend: ...\n     @overload\n-    def legend(self, *, handles: Sequence[Artist | tuple[Artist, ...]], **kwargs) -> Legend: ...\n+    def legend(self, *, handles: Iterable[Artist | tuple[Artist, ...]], **kwargs) -> Legend: ...\n     @overload\n-    def legend(self, labels: Sequence[str], **kwargs) -> Legend: ...\n+    def legend(self, labels: Iterable[str], **kwargs) -> Legend: ...\n     @overload\n     def legend(self, **kwargs) -> Legend: ...\n "
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "analysis": "prospective full-split gold and matched unresolved controls; test-blind7B adapter",
+  "split_gold": {
+    "lite": {
+      "planned": 300,
+      "valid": 299,
+      "failures": 1,
+      "accepted": 143,
+      "acceptance_valid": 0.4782608695652174,
+      "wilson95_valid": [
+        0.42227597081584667,
+        0.5347972778383376
+      ],
+      "planned_denominator_accept_lower": 0.4766666666666667,
+      "planned_denominator_accept_upper": 0.48
+    },
+    "verified": {
+      "planned": 500,
+      "valid": 499,
+      "failures": 1,
+      "accepted": 284,
+      "acceptance_valid": 0.5691382765531062,
+      "wilson95_valid": [
+        0.5253245643136351,
+        0.6118956246537277
+      ],
+      "planned_denominator_accept_lower": 0.568,
+      "planned_denominator_accept_upper": 0.57
+    }
+  },
+  "unique_gold": {
+    "planned": 707,
+    "valid": 705,
+    "failures": 2,
+    "accepted": 383,
+    "acceptance_valid": 0.5432624113475177,
+    "wilson95_valid": [
+      0.5063571375592506,
+      0.579698776976965
+    ],
+    "planned_denominator_accept_lower": 0.5417256011315418,
+    "planned_denominator_accept_upper": 0.5445544554455446
+  },
+  "shared_lite_verified_tasks": 93,
+  "same_task_controls": {
+    "available": 302,
+    "underlying_unresolved_tasks": 306,
+    "empty_or_absent_candidate_packets": 4,
+    "complete": 300,
+    "missing": [
+      "django__django-16938",
+      "sympy__sympy-18199"
+    ],
+    "both_accept": 88,
+    "agent_only": 47,
+    "gold_only": 61,
+    "both_reject": 104,
+    "exact_mcnemar_p": 0.21076579397878198,
+    "agent": {
+      "planned": 302,
+      "valid": 301,
+      "failures": 1,
+      "accepted": 135,
+      "acceptance_valid": 0.4485049833887043,
+      "wilson95_valid": [
+        0.39332039913821865,
+        0.5049873962649191
+      ],
+      "planned_denominator_accept_lower": 0.4470198675496689,
+      "planned_denominator_accept_upper": 0.4503311258278146
+    },
+    "developer_same_tasks": {
+      "planned": 302,
+      "valid": 301,
+      "failures": 1,
+      "accepted": 150,
+      "acceptance_valid": 0.4983388704318937,
+      "wilson95_valid": [
+        0.4422319135460721,
+        0.5544876927572551
+      ],
+      "planned_denominator_accept_lower": 0.4966887417218543,
+      "planned_denominator_accept_upper": 0.5
+    }
+  },
+  "status_counts": {
+    "ok": 1006,
+    "invalid_or_truncated": 3
+  },
+  "token_cost": {
+    "input_tokens": 1139542,
+    "output_tokens": 51057,
+    "calls_with_generated_output": 1009
+  },
+  "new_human_ratings": 0,
+  "new_harness_runs": 0,
+  "no_historical_reviewer_revalidation_claim": true,
+  "no_independent_calibration_generalization_claim": true
+}

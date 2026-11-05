@@ -1,0 +1,137 @@
+{
+  "sha": "1344a9018f243281d09c29fdb788c9a966dc4714",
+  "node_id": "C_kwDOABUiotoAKDEzNDRhOTAxOGYyNDMyODFkMDljMjlmZGI3ODhjOWE5NjZkYzQ3MTQ",
+  "commit": {
+    "author": {
+      "name": "Kyle Sunden",
+      "email": "git@ksunden.space",
+      "date": "2023-10-23T22:49:16Z"
+    },
+    "committer": {
+      "name": "Kyle Sunden",
+      "email": "git@ksunden.space",
+      "date": "2023-10-23T22:57:47Z"
+    },
+    "message": "Restore default behavior of hexbin mincnt with C provided",
+    "tree": {
+      "sha": "0247aa0d4992417b8a67bfa1796a1eb4be062752",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/0247aa0d4992417b8a67bfa1796a1eb4be062752"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/1344a9018f243281d09c29fdb788c9a966dc4714",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/1344a9018f243281d09c29fdb788c9a966dc4714",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/1344a9018f243281d09c29fdb788c9a966dc4714",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/1344a9018f243281d09c29fdb788c9a966dc4714/comments",
+  "author": {
+    "login": "ksunden",
+    "id": 2501846,
+    "node_id": "MDQ6VXNlcjI1MDE4NDY=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2501846?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ksunden",
+    "html_url": "https://github.com/ksunden",
+    "followers_url": "https://api.github.com/users/ksunden/followers",
+    "following_url": "https://api.github.com/users/ksunden/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ksunden/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ksunden/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ksunden/subscriptions",
+    "organizations_url": "https://api.github.com/users/ksunden/orgs",
+    "repos_url": "https://api.github.com/users/ksunden/repos",
+    "events_url": "https://api.github.com/users/ksunden/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ksunden/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ksunden",
+    "id": 2501846,
+    "node_id": "MDQ6VXNlcjI1MDE4NDY=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2501846?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ksunden",
+    "html_url": "https://github.com/ksunden",
+    "followers_url": "https://api.github.com/users/ksunden/followers",
+    "following_url": "https://api.github.com/users/ksunden/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ksunden/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ksunden/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ksunden/subscriptions",
+    "organizations_url": "https://api.github.com/users/ksunden/orgs",
+    "repos_url": "https://api.github.com/users/ksunden/repos",
+    "events_url": "https://api.github.com/users/ksunden/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ksunden/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "e50154367059dd321f5a4aa33e08009351aaff91",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/e50154367059dd321f5a4aa33e08009351aaff91",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/e50154367059dd321f5a4aa33e08009351aaff91"
+    }
+  ],
+  "stats": {
+    "total": 26,
+    "additions": 23,
+    "deletions": 3
+  },
+  "files": [
+    {
+      "sha": "fed4675a5f38faee192f93c96d15a1790fe1d735",
+      "filename": "doc/api/next_api_changes/behavior/27179-KS.rst",
+      "status": "added",
+      "additions": 7,
+      "deletions": 0,
+      "changes": 7,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/1344a9018f243281d09c29fdb788c9a966dc4714/doc%2Fapi%2Fnext_api_changes%2Fbehavior%2F27179-KS.rst",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/1344a9018f243281d09c29fdb788c9a966dc4714/doc%2Fapi%2Fnext_api_changes%2Fbehavior%2F27179-KS.rst",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/doc%2Fapi%2Fnext_api_changes%2Fbehavior%2F27179-KS.rst?ref=1344a9018f243281d09c29fdb788c9a966dc4714",
+      "patch": "@@ -0,0 +1,7 @@\n+Default behavior of ``hexbin`` with *C* provided requires at least 1 point\n+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n+\n+The behavior changed in 3.8.0 to be inclusive of *mincnt*, however that resulted in\n+errors or warnings with some reduction functions, so now the default is to require at\n+least 1 point to call the reduction function. This effectively restores the default\n+behavior to match that of Matplotlib 3.7 and before."
+    },
+    {
+      "sha": "3476a05394df2303faa2d9bf1f13123802af5191",
+      "filename": "doc/api/prev_api_changes/api_changes_3.8.0/behaviour.rst",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 0,
+      "changes": 6,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/1344a9018f243281d09c29fdb788c9a966dc4714/doc%2Fapi%2Fprev_api_changes%2Fapi_changes_3.8.0%2Fbehaviour.rst",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/1344a9018f243281d09c29fdb788c9a966dc4714/doc%2Fapi%2Fprev_api_changes%2Fapi_changes_3.8.0%2Fbehaviour.rst",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/doc%2Fapi%2Fprev_api_changes%2Fapi_changes_3.8.0%2Fbehaviour.rst?ref=1344a9018f243281d09c29fdb788c9a966dc4714",
+      "patch": "@@ -165,3 +165,9 @@ PostScript paper type adds option to use figure size\n The :rc:`ps.papertype` rcParam can now be set to ``'figure'``, which will use\n a paper size that corresponds exactly with the size of the figure that is being\n saved.\n+\n+``hexbin`` *mincnt* parameter made consistently inclusive\n+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n+\n+Previously, *mincnt* was inclusive with no *C* provided but exclusive when *C* is provided.\n+It is now inclusive of *mincnt* in both cases."
+    },
+    {
+      "sha": "9199f1cafae32af897d35ec0e7653ac004e9373a",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 3,
+      "changes": 11,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/1344a9018f243281d09c29fdb788c9a966dc4714/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/1344a9018f243281d09c29fdb788c9a966dc4714/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=1344a9018f243281d09c29fdb788c9a966dc4714",
+      "patch": "@@ -4873,8 +4873,8 @@ def hexbin(self, x, y, C=None, gridsize=100, bins=None,\n         yscale : {'linear', 'log'}, default: 'linear'\n             Use a linear or log10 scale on the vertical axis.\n \n-        mincnt : int > 0, default: *None*\n-            If not *None*, only display cells with more than *mincnt*\n+        mincnt : int >= 0, default: *None*\n+            If not *None*, only display cells with at least *mincnt*\n             number of points in the cell.\n \n         marginals : bool, default: *False*\n@@ -4941,6 +4941,11 @@ def reduce_C_function(C: array) -> float\n             - `numpy.sum`: integral of the point values\n             - `numpy.amax`: value taken from the largest point\n \n+            By default will only reduce cells with at least 1 point because some\n+            reduction functions (such as `numpy.amax`) will error/warn with empty\n+            input. Changing *mincnt* will adjust the cutoff, and if set to 0 will\n+            pass empty input to the reduction function.\n+\n         data : indexable object, optional\n             DATA_PARAMETER_PLACEHOLDER\n \n@@ -5038,7 +5043,7 @@ def reduce_C_function(C: array) -> float\n                 else:\n                     Cs_at_i2[i2[i]].append(C[i])\n             if mincnt is None:\n-                mincnt = 0\n+                mincnt = 1\n             accum = np.array(\n                 [reduce_C_function(acc) if len(acc) >= mincnt else np.nan\n                  for Cs_at_i in [Cs_at_i1, Cs_at_i2]"
+    },
+    {
+      "sha": "c82c79272d877378e5b98845023c752fe3dca53e",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/1344a9018f243281d09c29fdb788c9a966dc4714/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/1344a9018f243281d09c29fdb788c9a966dc4714/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=1344a9018f243281d09c29fdb788c9a966dc4714",
+      "patch": "@@ -971,6 +971,8 @@ def test_hexbin_empty():\n     # From #23922: creating hexbin with log scaling from empty\n     # dataset raises ValueError\n     ax.hexbin([], [], bins='log')\n+    # From #27103: np.max errors when handed empty data\n+    ax.hexbin([], [], C=[], reduce_C_function=np.max)\n \n \n def test_hexbin_pickable():"
+    }
+  ]
+}

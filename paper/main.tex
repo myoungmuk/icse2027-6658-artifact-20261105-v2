@@ -341,8 +341,9 @@ failures can change both the evaluated population and the shared paired subset.
 
 \subsubsection{Controls}
 
-The gold reference comprises developer-merged patches for agent-resolved tasks, not all
-gold patches in the benchmark; an all-gold evaluation was not run. The archived
+Historical gold references comprise agent-resolved paired subsets. A separate
+full-split test-blind 7B control is reported in Section~\ref{sec:adapted}; it does not
+revalidate the historical instruments. The archived
 \emph{negative-control} pool contains \negN{} non-empty Agentless patches from $306$
 unresolved Verified instances (four patches were empty). Harness non-resolution can reflect
 failure to satisfy FAIL\_TO\_PASS, regression on PASS\_TO\_PASS, or other recorded harness
@@ -624,29 +625,36 @@ Inherited execution labels are not new test runs or mergeability truth. Cihan's 
 task is adapted to diffs without correction generation; Shi's two-human refinement and
 human-consensus labels remain absent. Additional reference information also biases its
 developer-patch acceptance. These pilots do not repair the archived negative inputs or
-validate the historical reviewers. In a post-hoc same-task comparison on the ten
-unresolved follow-up instances, candidate/developer acceptance is $3/10$ vs.\ $3/10$
-for both the maintainer and Cihan adapters, and $4/10$ vs.\ $3/10$ for Shi draft.
-These small paired samples provide no evidence of control separation.
+validate the historical reviewers.
+
+A separately frozen extension evaluates all Lite ($300$) and Verified ($500$) gold
+patches using the same test-blind maintainer adapter, without agent-based selection
+or truncation. The $93$ shared tasks are evaluated once ($707$ unique gold), alongside
+all $302$ available unresolved candidates; all $1,009$ calls complete, with three
+malformed-JSON responses. Gold acceptance is $143/299$ valid on Lite and $284/499$
+on Verified (one failure per split). Among $300$ valid same-task failing/developer
+pairs, acceptance is $135/300$ versus $149/300$; discordant counts are $(47,61)$
+(exact McNemar $p=.211$). Four empty candidates and two incomplete pairs are excluded
+explicitly. This is not equivalence, new harness execution, or independent calibration.
 
 \subsection{Qualitative inspection of cited concerns}
-Naive Qwen-32B cites omitted tests on gold \texttt{django-10914} and possible
-\texttt{field.empty\_values} behavior on gold \texttt{django-13964}; these concerns were not
-independently adjudicated. For the hosted reviewer, a post-hoc technical audit selects the
-first two non-accepted instances in lexical order within each of three strata: resolved
-agent ($30$ available), gold ($3$), and failing agent ($38$). We apply archived diffs to
-pinned upstream base files and execute extracted functions or branches with synthetic
-inputs and explicit backend stand-ins, not full project harnesses.
+A post-hoc technical audit selects the first two nonaccepted hosted-reviewer cases in
+lexical order within each of three strata: resolved agent ($30$ available), gold ($3$),
+and failing agent ($38$). Archived diffs are applied to pinned upstream files; extracted
+functions/branches run with synthetic inputs and backend stand-ins. Five focused claims
+have local support; the gold \texttt{django-11179} regular-path stale-PK objection is
+contradicted by existing cleanup. These checks are not independent adjudication or an
+error-rate estimate. The \texttt{django-11555} phrase ``the one Django merged'' is a
+recognition cue, not proof of training exposure.
 
-The focused claims are locally supported in five cases. However, the gold
-\texttt{django-11179} objection that regular deletion leaves stale primary keys is
-contradicted by cleanup already present in the pinned code. Conversely, the gold
-\texttt{matplotlib-26113} empty-bin reduction concern is reproduced at branch level.
-These six checks do not estimate a hallucination rate, establish maintainer judgments,
-or adjudicate every objection. Exact snippets, inputs, bindings, outputs, hashes, and
-upstream licenses are supplied in the artifact. The \texttt{django-11555} rationale also
-names ``the one Django merged'' despite source blinding: a possible recognition cue,
-not proof of training contamination.
+For all three hosted nonaccepted gold cases, a separate $365$-day default-branch audit
+finds $12$, $93$, and $35$ source-file commits (Django, Matplotlib, scikit-learn).
+File churn is not defect count. Matplotlib issue \#27103 explicitly links the original
+PR commit; fix \#27179 restores the default minimum to one and adds an empty-maximum
+regression test, supporting the empty-bin concern. No matching regression was identified
+for the other two concerns in this scoped inspection. This is not absence of defects;
+other branches, renames and indirect effects are unmeasured. The public follow-up
+predates the 2026 judging and may itself have been recognized.
 
 \subsection{A human-review pilot}
 Author Myeongmuk Kang, a non-independent, source-blinded rater, reviewed $40$ packets from
@@ -714,9 +722,9 @@ recovery of missing identity.
 \textbf{Construct.} Historical merge outcomes can tolerate imperfections and depend on PR
 discussion, CI, project plans, and social context absent from packets. Our binary labels
 operationalize a reviewer decision, not a verified maintainer decision or an objection's
-truth. The six technical probes provide no independent rationale adjudication or
-post-merge bugs/churn measurement; historical merges can contain defects. A single non-independent rater cannot supply that
-validation. Its shorter input limits further complicate human--LLM comparisons.
+truth. The technical probes and three-case history audit provide no independent
+rationale adjudication or population defect incidence. Historical merges can contain
+defects. A single non-independent rater cannot supply that validation. Its shorter input limits further complicate human--LLM comparisons.
 
 \textbf{Internal.} Rubric development reused the evaluation gold cohort, and intermediate
 versions, inspected IDs, and iteration count were not preserved. Five subsets of fixed
@@ -725,31 +733,24 @@ Negative-control inputs incorrectly asserted a pass and used disjoint task popul
 therefore their apparent separation cannot validate discrimination in the intended
 condition. The hosted $81$-packet execution sample also has an unexplained missing position.
 
-\textbf{Contamination and blinding.} Coding agents may have encountered public issues,
-repository states, or gold fixes during training or other exposure, affecting their
-execution scores. Reviewers may likewise recognize issues or diffs and use memorized
-solutions or source cues. Source blinding hides explicit labels at inference time but
-cannot remove pretraining exposure. Either gold or agent acceptance could be affected; we
-measured neither the direction nor magnitude. Equal aggregate rates do not rule out such
-recognition. This potential contamination is distinct from the documented reuse of gold
-tasks during rubric adjustment.
+\textbf{Contamination and blinding.} Agents and reviewers may recognize public issues,
+repository states or fixes. Explicit source masking cannot remove pretraining exposure;
+either gold or agent acceptance could be affected, with unmeasured direction/magnitude.
+Equal aggregate rates do not rule out recognition. This differs from documented gold-task
+reuse in rubric development; public post-merge histories also predate the judging.
 
-\textbf{External.} We examine selected Python SWE-bench tasks, four public coding-agent
-prediction sets, five open-weight reviewers, and one unrecorded hosted snapshot. Results
-do not cover all available review methods, languages, or model versions. The positive
-reference is restricted to resolved task subsets. RAG's $14$ tasks cannot support a broad
-claim about weak agents. Reviewer/scaffold comparisons do not measure industrial review
-effort or deployment effects.
+\textbf{External.} Selected Python tasks, four coding-agent prediction sets, five
+open-weight reviewers and one unrecorded hosted snapshot do not cover all methods,
+languages or model versions. Historical positive controls use resolved subsets;
+the full-split extension covers only the test-blind 7B adapter. RAG's $14$ tasks support
+no broad weak-agent claim. Industrial effort and deployment effects are unmeasured.
 
-\textbf{Statistical and computational.} The tests are exploratory, have unequal power,
-and use complete valid pairs. Parse failures, output normalization, and retries at a higher
-temperature can affect the evaluated population; their effect was not isolated. Wilson
-intervals describe binomial rates under their assumptions, while aggregate correlations
-across selected configurations are descriptive. Non-significance is not equivalence and
-low chance-corrected agreement does not identify the correct rater. Exact inference
-reproduction also depends on serving software and numerical execution; the hosted model
-identity gap remains unresolved.
-
+\textbf{Statistical and computational.} Tests are exploratory and use valid complete
+pairs. Historical parsing, normalization and higher-temperature retries can affect the
+population; their effects were not isolated. Wilson intervals rely on binomial assumptions;
+aggregate correlations are descriptive. Non-significance is not equivalence, and low
+agreement identifies no correct rater. Serving/numerical dependencies and the hosted
+identity gap limit exact inference reproduction.
 
 \section{Related Work}
 \textbf{Execution and patch correctness.} Plausible but incorrect repairs are a longstanding
@@ -781,32 +782,24 @@ diagnosis using historical gold, cross-agent paired decisions, and reviewer agre
 with calibration reuse and flawed archived negative inputs explicitly limiting the claims.
 
 \section{Conclusion}
-Review-based acceptance can supplement execution-based evaluation only when the judge's
-behavior is also examined. On the archived SWE-bench packets, prompt adjustment changes
-agent and historical-gold acceptance substantially, and decisions vary across reviewers.
-Non-significant open-reviewer comparisons on Agentless do not establish equivalence and do
-not hold uniformly across scaffolds and reviewers. The hosted reviewer's paired difference
-is measurable, but its snapshot is unidentified and maintainer validity is unestablished.
-The archived failing-patch comparison contains incorrect pass information and cannot confirm clean
-functional discrimination. We contribute reproducible analysis of these reviewer-specific
-observations and a diagnostic account of the controls needed for stronger claims. Independent
-calibration tasks, truthful and appropriately selected negative controls, and independent
-human validation remain necessary before using such scores for merge decisions.
+Review-based scores require examining the judge as well as the patch. Historical prompt
+adjustment changes agent and gold acceptance; reviewer/scaffold differences and paired
+results do not establish equivalence or maintainer validity. The hosted identity is
+missing and archived negative inputs are flawed. New full-split and matched controls
+remain limited to a test-blind 7B adapter; targeted code/history checks establish no
+population objection-error rate. Independent calibration and human validation remain
+necessary before operational merge decisions.
 
 \section*{Data and Artifact Availability}
-The versioned artifact (\texttt{2026.11.05-v7}) is available at
-\url{https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2}.
-It contains archived prompts, keys, packets, verdicts, human-pilot records, adapted-pilot
-data, and licensed technical-check sources. See \texttt{historical\_analysis/REPRODUCE.md}
-and \texttt{tools/reproduce\_pilots.py} for saved-response analysis;
-\texttt{tools/probe\_rationale\_cases.py} regenerates the focused checks.
-The exact hosted snapshot and intermediate rubric history remain unavailable.
-Fresh inference is distinct from analysis reproduction.
+Version \texttt{2026.11.05-v8} at
+\url{https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2}
+contains preserved inputs/outputs and regeneration instructions for historical analyses,
+adapted pilots, full-split controls and technical/history checks. Analysis reproduction
+does not recover the missing hosted identity or rubric history, or rerun inference.
 
 \section*{Acknowledgments}
-OpenAI Codex~\cite{openaicodex} assisted manuscript revision, analysis, figures, reference
-checks, and implementation of adapted pilots and technical probes. The authors are
-responsible for all scientific claims, calculations, references, and the final manuscript.
+OpenAI Codex~\cite{openaicodex} assisted revision, analysis, figures, reference checks and
+implementation. The authors are responsible for all claims and the final manuscript.
 
 \clearpage
 \bibliographystyle{IEEEtran}

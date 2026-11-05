@@ -1,0 +1,173 @@
+{
+  "sha": "146deee4734cdcd33dfc9e932f9b232c9a588109",
+  "node_id": "C_kwDOABUiotoAKDE0NmRlZWU0NzM0Y2RjZDMzZGZjOWU5MzJmOWIyMzJjOWE1ODgxMDk",
+  "commit": {
+    "author": {
+      "name": "Tim Hoffmann",
+      "email": "2836374+timhoffm@users.noreply.github.com",
+      "date": "2024-02-13T12:28:13Z"
+    },
+    "committer": {
+      "name": "Tim Hoffmann",
+      "email": "2836374+timhoffm@users.noreply.github.com",
+      "date": "2024-04-07T21:27:29Z"
+    },
+    "message": "Deprecate positional use of most arguments of plotting functions\n\nThis increases maintainability for developers and disallows\nbad practice of passing lots of positional arguments for users.\nIf in doubt, I've erred on the side of allowing as much positional\narguments\nas possible as long as the intent of a call is still readable.\n\nNote: This was originally motivated by bxp() and boxplot() having many\noverlapping parameters but differently ordered.\nWhile at it, I think it's better to rollout the change to\nall plotting functions and communicate that in one go\nrather than having lots of individual change notices over\ntime. Also, the freedom to reorder parameters only sets\nin after the deprecation. So let's start this now.",
+    "tree": {
+      "sha": "07a2e1c13154e3e32bd5dce561bf96d7755b5a60",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/07a2e1c13154e3e32bd5dce561bf96d7755b5a60"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/146deee4734cdcd33dfc9e932f9b232c9a588109",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/146deee4734cdcd33dfc9e932f9b232c9a588109",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/146deee4734cdcd33dfc9e932f9b232c9a588109",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/146deee4734cdcd33dfc9e932f9b232c9a588109/comments",
+  "author": {
+    "login": "timhoffm",
+    "id": 2836374,
+    "node_id": "MDQ6VXNlcjI4MzYzNzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2836374?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/timhoffm",
+    "html_url": "https://github.com/timhoffm",
+    "followers_url": "https://api.github.com/users/timhoffm/followers",
+    "following_url": "https://api.github.com/users/timhoffm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/timhoffm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/timhoffm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/timhoffm/subscriptions",
+    "organizations_url": "https://api.github.com/users/timhoffm/orgs",
+    "repos_url": "https://api.github.com/users/timhoffm/repos",
+    "events_url": "https://api.github.com/users/timhoffm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/timhoffm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "timhoffm",
+    "id": 2836374,
+    "node_id": "MDQ6VXNlcjI4MzYzNzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2836374?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/timhoffm",
+    "html_url": "https://github.com/timhoffm",
+    "followers_url": "https://api.github.com/users/timhoffm/followers",
+    "following_url": "https://api.github.com/users/timhoffm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/timhoffm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/timhoffm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/timhoffm/subscriptions",
+    "organizations_url": "https://api.github.com/users/timhoffm/orgs",
+    "repos_url": "https://api.github.com/users/timhoffm/repos",
+    "events_url": "https://api.github.com/users/timhoffm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/timhoffm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "2bdba84085199c1316ec338bedf5b29c17b997f3",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/2bdba84085199c1316ec338bedf5b29c17b997f3",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/2bdba84085199c1316ec338bedf5b29c17b997f3"
+    }
+  ],
+  "stats": {
+    "total": 86,
+    "additions": 59,
+    "deletions": 27
+  },
+  "files": [
+    {
+      "sha": "6b66e0dba9632865fca6b8a302a9eab1b2c15c27",
+      "filename": "doc/api/next_api_changes/deprecations/27786-TH.rst",
+      "status": "added",
+      "additions": 7,
+      "deletions": 0,
+      "changes": 7,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/146deee4734cdcd33dfc9e932f9b232c9a588109/doc%2Fapi%2Fnext_api_changes%2Fdeprecations%2F27786-TH.rst",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/146deee4734cdcd33dfc9e932f9b232c9a588109/doc%2Fapi%2Fnext_api_changes%2Fdeprecations%2F27786-TH.rst",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/doc%2Fapi%2Fnext_api_changes%2Fdeprecations%2F27786-TH.rst?ref=146deee4734cdcd33dfc9e932f9b232c9a588109",
+      "patch": "@@ -0,0 +1,7 @@\n+Positional parameters in plotting functions\n+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n+\n+Many plotting functions will restrict positional arguments to the first few parameters\n+in the future. All further configuration parameters will have to be passed as keyword\n+arguments. This is to enforce better code and and allow for future changes with reduced\n+risk of breaking existing code."
+    },
+    {
+      "sha": "9171882923111ee71ff85b0bf7c2d8a3f30590d5",
+      "filename": "galleries/examples/lines_bars_and_markers/cohere.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/146deee4734cdcd33dfc9e932f9b232c9a588109/galleries%2Fexamples%2Flines_bars_and_markers%2Fcohere.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/146deee4734cdcd33dfc9e932f9b232c9a588109/galleries%2Fexamples%2Flines_bars_and_markers%2Fcohere.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/galleries%2Fexamples%2Flines_bars_and_markers%2Fcohere.py?ref=146deee4734cdcd33dfc9e932f9b232c9a588109",
+      "patch": "@@ -27,7 +27,7 @@\n axs[0].set_ylabel('s1 and s2')\n axs[0].grid(True)\n \n-cxy, f = axs[1].cohere(s1, s2, 256, 1. / dt)\n+cxy, f = axs[1].cohere(s1, s2, NFFT=256, Fs=1. / dt)\n axs[1].set_ylabel('Coherence')\n \n plt.show()"
+    },
+    {
+      "sha": "6d7a9746e88eb9238666d26991267c07d34c04f2",
+      "filename": "galleries/examples/lines_bars_and_markers/csd_demo.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/146deee4734cdcd33dfc9e932f9b232c9a588109/galleries%2Fexamples%2Flines_bars_and_markers%2Fcsd_demo.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/146deee4734cdcd33dfc9e932f9b232c9a588109/galleries%2Fexamples%2Flines_bars_and_markers%2Fcsd_demo.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/galleries%2Fexamples%2Flines_bars_and_markers%2Fcsd_demo.py?ref=146deee4734cdcd33dfc9e932f9b232c9a588109",
+      "patch": "@@ -34,7 +34,7 @@\n ax1.set_ylabel('s1 and s2')\n ax1.grid(True)\n \n-cxy, f = ax2.csd(s1, s2, 256, 1. / dt)\n+cxy, f = ax2.csd(s1, s2, NFFT=256, Fs=1. / dt)\n ax2.set_ylabel('CSD (dB)')\n \n plt.show()"
+    },
+    {
+      "sha": "fa0a8565b6ff45f59b29757cac359bcdb478df9a",
+      "filename": "galleries/examples/lines_bars_and_markers/psd_demo.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/146deee4734cdcd33dfc9e932f9b232c9a588109/galleries%2Fexamples%2Flines_bars_and_markers%2Fpsd_demo.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/146deee4734cdcd33dfc9e932f9b232c9a588109/galleries%2Fexamples%2Flines_bars_and_markers%2Fpsd_demo.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/galleries%2Fexamples%2Flines_bars_and_markers%2Fpsd_demo.py?ref=146deee4734cdcd33dfc9e932f9b232c9a588109",
+      "patch": "@@ -30,7 +30,7 @@\n ax0.plot(t, s)\n ax0.set_xlabel('Time (s)')\n ax0.set_ylabel('Signal')\n-ax1.psd(s, 512, 1 / dt)\n+ax1.psd(s, NFFT=512, Fs=1 / dt)\n \n plt.show()\n "
+    },
+    {
+      "sha": "f7f1078b2d27558ee606934b2679c4a449895f14",
+      "filename": "galleries/examples/statistics/boxplot_demo.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "changes": 10,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/146deee4734cdcd33dfc9e932f9b232c9a588109/galleries%2Fexamples%2Fstatistics%2Fboxplot_demo.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/146deee4734cdcd33dfc9e932f9b232c9a588109/galleries%2Fexamples%2Fstatistics%2Fboxplot_demo.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/galleries%2Fexamples%2Fstatistics%2Fboxplot_demo.py?ref=146deee4734cdcd33dfc9e932f9b232c9a588109",
+      "patch": "@@ -34,23 +34,23 @@\n axs[0, 0].set_title('basic plot')\n \n # notched plot\n-axs[0, 1].boxplot(data, 1)\n+axs[0, 1].boxplot(data, notch=True)\n axs[0, 1].set_title('notched plot')\n \n # change outlier point symbols\n-axs[0, 2].boxplot(data, 0, 'gD')\n+axs[0, 2].boxplot(data, sym='gD')\n axs[0, 2].set_title('change outlier\\npoint symbols')\n \n # don't show outlier points\n-axs[1, 0].boxplot(data, 0, '')\n+axs[1, 0].boxplot(data, sym='')\n axs[1, 0].set_title(\"don't show\\noutlier points\")\n \n # horizontal boxes\n-axs[1, 1].boxplot(data, 0, 'rs', 0)\n+axs[1, 1].boxplot(data, sym='rs', vert=False)\n axs[1, 1].set_title('horizontal boxes')\n \n # change whisker length\n-axs[1, 2].boxplot(data, 0, 'rs', 0, 0.75)\n+axs[1, 2].boxplot(data, sym='rs', vert=False, whis=0.75)\n axs[1, 2].set_title('change whisker length')\n \n fig.subplots_adjust(left=0.08, right=0.98, bottom=0.05, top=0.9,"
+    },
+    {
+      "sha": "7a022104cfa1fb291f57b3400de3cf793e1f41bb",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 22,
+      "deletions": 0,
+      "changes": 22,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/146deee4734cdcd33dfc9e932f9b232c9a588109/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/146deee4734cdcd33dfc9e932f9b232c9a588109/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=146deee4734cdcd33dfc9e932f9b232c9a588109",
+      "patch": "@@ -1100,6 +1100,7 @@ def axvspan(self, xmin, xmax, ymin=0, ymax=1, **kwargs):\n         self._request_autoscale_view(\"x\")\n         return p\n \n+    @_api.make_keyword_only(\"3.9\", \"label\")\n     @_preprocess_data(replace_names=[\"y\", \"xmin\", \"xmax\", \"colors\"],\n                       label_namer=\"y\")\n     def hlines(self, y, xmin, xmax, colors=None, linestyles='solid',\n@@ -1191,6 +1192,7 @@ def hlines(self, y, xmin, xmax, colors=None, linestyles='solid',\n             self._request_autoscale_view()\n         return lines\n \n+    @_api.make_keyword_only(\"3.9\", \"label\")\n     @_preprocess_data(replace_names=[\"x\", \"ymin\", \"ymax\", \"colors\"],\n                       label_namer=\"x\")\n     def vlines(self, x, ymin, ymax, colors=None, linestyles='solid',\n@@ -1282,6 +1284,7 @@ def vlines(self, x, ymin, ymax, colors=None, linestyles='solid',\n             self._request_autoscale_view()\n         return lines\n \n+    @_api.make_keyword_only(\"3.9\", \"orientation\")\n     @_preprocess_data(replace_names=[\"positions\", \"lineoffsets\",\n                                      \"linelengths\", \"linewidths\",\n                                      \"colors\", \"linestyles\"])\n@@ -2088,6 +2091,7 @@ def acorr(self, x, **kwargs):\n         \"\"\"\n         return self.xcorr(x, x, **kwargs)\n \n+    @_api.make_keyword_only(\"3.9\", \"normed\")\n     @_preprocess_data(replace_names=[\"x\", \"y\"], label_namer=\"y\")\n     def xcorr(self, x, y, normed=True, detrend=mlab.detrend_none,\n               usevlines=True, maxlags=10, **kwargs):\n@@ -3155,6 +3159,7 @@ def stem(self, *args, linefmt=None, markerfmt=None, basefmt=None, bottom=0,\n         self.add_container(stem_container)\n         return stem_container\n \n+    @_api.make_keyword_only(\"3.9\", \"explode\")\n     @_preprocess_data(replace_names=[\"x\", \"explode\", \"labels\", \"colors\"])\n     def pie(self, x, explode=None, labels=None, colors=None,\n             autopct=None, pctdistance=0.6, shadow=False, labeldistance=1.1,\n@@ -3434,6 +3439,7 @@ def _errorevery_to_mask(x, errorevery):\n         everymask[errorevery] = True\n         return everymask\n \n+    @_api.make_keyword_only(\"3.9\", \"ecolor\")\n     @_preprocess_data(replace_names=[\"x\", \"y\", \"xerr\", \"yerr\"],\n                       label_namer=\"y\")\n     @_docstring.dedent_interpd\n@@ -3810,6 +3816,7 @@ def apply_mask(arrays, mask):\n \n         return errorbar_container  # (l0, caplines, barcols)\n \n+    @_api.make_keyword_only(\"3.9\", \"notch\")\n     @_preprocess_data()\n     @_api.rename_parameter(\"3.9\", \"labels\", \"tick_labels\")\n     def boxplot(self, x, notch=None, sym=None, vert=None, whis=None,\n@@ -4144,6 +4151,7 @@ def boxplot(self, x, notch=None, sym=None, vert=None, whis=None,\n                            capwidths=capwidths, label=label)\n         return artists\n \n+    @_api.make_keyword_only(\"3.9\", \"widths\")\n     def bxp(self, bxpstats, positions=None, widths=None, vert=True,\n             patch_artist=False, shownotches=False, showmeans=False,\n             showcaps=True, showbox=True, showfliers=True,\n@@ -4636,6 +4644,7 @@ def invalid_shape_exception(csize, xsize):\n             colors = None  # use cmap, norm after collection is created\n         return c, colors, edgecolors\n \n+    @_api.make_keyword_only(\"3.9\", \"marker\")\n     @_preprocess_data(replace_names=[\"x\", \"y\", \"s\", \"linewidths\",\n                                      \"edgecolors\", \"c\", \"facecolor\",\n                                      \"facecolors\", \"color\"],\n@@ -4916,6 +4925,7 @@ def scatter(self, x, y, s=None, c=None, marker=None, cmap=None, norm=None,\n \n         return collection\n \n+    @_api.make_keyword_only(\"3.9\", \"gridsize\")\n     @_preprocess_data(replace_names=[\"x\", \"y\", \"C\"], label_namer=\"y\")\n     @_docstring.dedent_interpd\n     def hexbin(self, x, y, C=None, gridsize=100, bins=None,\n@@ -6698,6 +6708,7 @@ def clabel(self, CS, levels=None, **kwargs):\n \n     #### Data analysis\n \n+    @_api.make_keyword_only(\"3.9\", \"range\")\n     @_preprocess_data(replace_names=[\"x\", 'weights'], label_namer=\"x\")\n     def hist(self, x, bins=None, range=None, density=False, weights=None,\n              cumulative=False, bottom=None, histtype='bar', align='mid',\n@@ -7245,6 +7256,7 @@ def stairs(self, values, edges=None, *,\n         self._request_autoscale_view()\n         return patch\n \n+    @_api.make_keyword_only(\"3.9\", \"range\")\n     @_preprocess_data(replace_names=[\"x\", \"y\", \"weights\"])\n     @_docstring.dedent_interpd\n     def hist2d(self, x, y, bins=10, range=None, density=False, weights=None,\n@@ -7454,6 +7466,7 @@ def ecdf(self, x, weights=None, *, complementary=False,\n             line.sticky_edges.x[:] = [0, 1]\n         return line\n \n+    @_api.make_keyword_only(\"3.9\", \"NFFT\")\n     @_preprocess_data(replace_names=[\"x\"])\n     @_docstring.dedent_interpd\n     def psd(self, x, NFFT=None, Fs=None, Fc=None, detrend=None,\n@@ -7565,6 +7578,7 @@ def psd(self, x, NFFT=None, Fs=None, Fc=None, detrend=None,\n         else:\n             return pxx, freqs, line\n \n+    @_api.make_keyword_only(\"3.9\", \"NFFT\")\n     @_preprocess_data(replace_names=[\"x\", \"y\"], label_namer=\"y\")\n     @_docstring.dedent_interpd\n     def csd(self, x, y, NFFT=None, Fs=None, Fc=None, detrend=None,\n@@ -7667,6 +7681,7 @@ def csd(self, x, y, NFFT=None, Fs=None, Fc=None, detrend=None,\n         else:\n             return pxy, freqs, line\n \n+    @_api.make_keyword_only(\"3.9\", \"Fs\")\n     @_preprocess_data(replace_names=[\"x\"])\n     @_docstring.dedent_interpd\n     def magnitude_spectrum(self, x, Fs=None, Fc=None, window=None,\n@@ -7753,6 +7768,7 @@ def magnitude_spectrum(self, x, Fs=None, Fc=None, window=None,\n \n         return spec, freqs, line\n \n+    @_api.make_keyword_only(\"3.9\", \"Fs\")\n     @_preprocess_data(replace_names=[\"x\"])\n     @_docstring.dedent_interpd\n     def angle_spectrum(self, x, Fs=None, Fc=None, window=None,\n@@ -7822,6 +7838,7 @@ def angle_spectrum(self, x, Fs=None, Fc=None, window=None,\n \n         return spec, freqs, lines[0]\n \n+    @_api.make_keyword_only(\"3.9\", \"Fs\")\n     @_preprocess_data(replace_names=[\"x\"])\n     @_docstring.dedent_interpd\n     def phase_spectrum(self, x, Fs=None, Fc=None, window=None,\n@@ -7891,6 +7908,7 @@ def phase_spectrum(self, x, Fs=None, Fc=None, window=None,\n \n         return spec, freqs, lines[0]\n \n+    @_api.make_keyword_only(\"3.9\", \"NFFT\")\n     @_preprocess_data(replace_names=[\"x\", \"y\"])\n     @_docstring.dedent_interpd\n     def cohere(self, x, y, NFFT=256, Fs=2, Fc=0, detrend=mlab.detrend_none,\n@@ -7955,6 +7973,7 @@ def cohere(self, x, y, NFFT=256, Fs=2, Fc=0, detrend=mlab.detrend_none,\n \n         return cxy, freqs\n \n+    @_api.make_keyword_only(\"3.9\", \"NFFT\")\n     @_preprocess_data(replace_names=[\"x\"])\n     @_docstring.dedent_interpd\n     def specgram(self, x, NFFT=None, Fs=None, Fc=None, detrend=None,\n@@ -8111,6 +8130,7 @@ def specgram(self, x, NFFT=None, Fs=None, Fc=None, detrend=None,\n \n         return spec, freqs, t, im\n \n+    @_api.make_keyword_only(\"3.9\", \"precision\")\n     @_docstring.dedent_interpd\n     def spy(self, Z, precision=0, marker=None, markersize=None,\n             aspect='equal', origin=\"upper\", **kwargs):\n@@ -8301,6 +8321,7 @@ def matshow(self, Z, **kwargs):\n             mticker.MaxNLocator(nbins=9, steps=[1, 2, 5, 10], integer=True))\n         return im\n \n+    @_api.make_keyword_only(\"3.9\", \"vert\")\n     @_preprocess_data(replace_names=[\"dataset\"])\n     def violinplot(self, dataset, positions=None, vert=True, widths=0.5,\n                    showmeans=False, showextrema=True, showmedians=False,\n@@ -8412,6 +8433,7 @@ def _kde_method(X, coords):\n                            widths=widths, showmeans=showmeans,\n                            showextrema=showextrema, showmedians=showmedians, side=side)\n \n+    @_api.make_keyword_only(\"3.9\", \"vert\")\n     def violin(self, vpstats, positions=None, vert=True, widths=0.5,\n                showmeans=False, showextrema=True, showmedians=False, side='both'):\n         \"\"\""
+    },
+    {
+      "sha": "be0a0e48d6625b3e3b7319dfbbbeef65b7279356",
+      "filename": "lib/matplotlib/axes/_axes.pyi",
+      "status": "modified",
+      "additions": 22,
+      "deletions": 19,
+      "changes": 41,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/146deee4734cdcd33dfc9e932f9b232c9a588109/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/146deee4734cdcd33dfc9e932f9b232c9a588109/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.pyi?ref=146deee4734cdcd33dfc9e932f9b232c9a588109",
+      "patch": "@@ -166,8 +166,8 @@ class Axes(_AxesBase):\n         xmax: float | ArrayLike,\n         colors: ColorType | Sequence[ColorType] | None = ...,\n         linestyles: LineStyleType = ...,\n-        label: str = ...,\n         *,\n+        label: str = ...,\n         data=...,\n         **kwargs\n     ) -> LineCollection: ...\n@@ -178,22 +178,22 @@ class Axes(_AxesBase):\n         ymax: float | ArrayLike,\n         colors: ColorType | Sequence[ColorType] | None = ...,\n         linestyles: LineStyleType = ...,\n-        label: str = ...,\n         *,\n+        label: str = ...,\n         data=...,\n         **kwargs\n     ) -> LineCollection: ...\n     def eventplot(\n         self,\n         positions: ArrayLike | Sequence[ArrayLike],\n+        *,\n         orientation: Literal[\"horizontal\", \"vertical\"] = ...,\n         lineoffsets: float | Sequence[float] = ...,\n         linelengths: float | Sequence[float] = ...,\n         linewidths: float | Sequence[float] | None = ...,\n         colors: ColorType | Sequence[ColorType] | None = ...,\n         alpha: float | Sequence[float] | None = ...,\n         linestyles: LineStyleType | Sequence[LineStyleType] = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> EventCollection: ...\n@@ -227,11 +227,11 @@ class Axes(_AxesBase):\n         self,\n         x: ArrayLike,\n         y: ArrayLike,\n+        *,\n         normed: bool = ...,\n         detrend: Callable[[ArrayLike], ArrayLike] = ...,\n         usevlines: bool = ...,\n         maxlags: int = ...,\n-        *,\n         data = ...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray, LineCollection | Line2D, Line2D | None]: ...\n@@ -300,6 +300,7 @@ class Axes(_AxesBase):\n     def pie(\n         self,\n         x: ArrayLike,\n+        *,\n         explode: ArrayLike | None = ...,\n         labels: Sequence[str] | None = ...,\n         colors: ColorType | Sequence[ColorType] | None = ...,\n@@ -315,7 +316,6 @@ class Axes(_AxesBase):\n         center: tuple[float, float] = ...,\n         frame: bool = ...,\n         rotatelabels: bool = ...,\n-        *,\n         normalize: bool = ...,\n         hatch: str | Sequence[str] | None = ...,\n         data=...,\n@@ -329,6 +329,7 @@ class Axes(_AxesBase):\n         yerr: float | ArrayLike | None = ...,\n         xerr: float | ArrayLike | None = ...,\n         fmt: str = ...,\n+        *,\n         ecolor: ColorType | None = ...,\n         elinewidth: float | None = ...,\n         capsize: float | None = ...,\n@@ -339,13 +340,13 @@ class Axes(_AxesBase):\n         xuplims: bool | ArrayLike = ...,\n         errorevery: int | tuple[int, int] = ...,\n         capthick: float | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> ErrorbarContainer: ...\n     def boxplot(\n         self,\n         x: ArrayLike | Sequence[ArrayLike],\n+        *,\n         notch: bool | None = ...,\n         sym: str | None = ...,\n         vert: bool | None = ...,\n@@ -373,13 +374,13 @@ class Axes(_AxesBase):\n         zorder: float | None = ...,\n         capwidths: float | ArrayLike | None = ...,\n         label: Sequence[str] | None = ...,\n-        *,\n         data=...,\n     ) -> dict[str, Any]: ...\n     def bxp(\n         self,\n         bxpstats: Sequence[dict[str, Any]],\n         positions: ArrayLike | None = ...,\n+        *,\n         widths: float | ArrayLike | None = ...,\n         vert: bool = ...,\n         patch_artist: bool = ...,\n@@ -406,14 +407,14 @@ class Axes(_AxesBase):\n         y: float | ArrayLike,\n         s: float | ArrayLike | None = ...,\n         c: ArrayLike | Sequence[ColorType] | ColorType | None = ...,\n+        *,\n         marker: MarkerType | None = ...,\n         cmap: str | Colormap | None = ...,\n         norm: str | Normalize | None = ...,\n         vmin: float | None = ...,\n         vmax: float | None = ...,\n         alpha: float | None = ...,\n         linewidths: float | Sequence[float] | None = ...,\n-        *,\n         edgecolors: Literal[\"face\", \"none\"] | ColorType | Sequence[ColorType] | None = ...,\n         plotnonfinite: bool = ...,\n         data=...,\n@@ -424,6 +425,7 @@ class Axes(_AxesBase):\n         x: ArrayLike,\n         y: ArrayLike,\n         C: ArrayLike | None = ...,\n+        *,\n         gridsize: int | tuple[int, int] = ...,\n         bins: Literal[\"log\"] | int | Sequence[float] | None = ...,\n         xscale: Literal[\"linear\", \"log\"] = ...,\n@@ -439,7 +441,6 @@ class Axes(_AxesBase):\n         reduce_C_function: Callable[[np.ndarray | list[float]], float] = ...,\n         mincnt: int | None = ...,\n         marginals: bool = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> PolyCollection: ...\n@@ -542,6 +543,7 @@ class Axes(_AxesBase):\n         self,\n         x: ArrayLike | Sequence[ArrayLike],\n         bins: int | Sequence[float] | str | None = ...,\n+        *,\n         range: tuple[float, float] | None = ...,\n         density: bool = ...,\n         weights: ArrayLike | None = ...,\n@@ -555,7 +557,6 @@ class Axes(_AxesBase):\n         color: ColorType | Sequence[ColorType] | None = ...,\n         label: str | Sequence[str] | None = ...,\n         stacked: bool = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[\n@@ -583,12 +584,12 @@ class Axes(_AxesBase):\n         | tuple[int, int]\n         | ArrayLike\n         | tuple[ArrayLike, ArrayLike] = ...,\n+        *,\n         range: ArrayLike | None = ...,\n         density: bool = ...,\n         weights: ArrayLike | None = ...,\n         cmin: float | None = ...,\n         cmax: float | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray, np.ndarray, QuadMesh]: ...\n@@ -606,6 +607,7 @@ class Axes(_AxesBase):\n     def psd(\n         self,\n         x: ArrayLike,\n+        *,\n         NFFT: int | None = ...,\n         Fs: float | None = ...,\n         Fc: int | None = ...,\n@@ -618,14 +620,14 @@ class Axes(_AxesBase):\n         sides: Literal[\"default\", \"onesided\", \"twosided\"] | None = ...,\n         scale_by_freq: bool | None = ...,\n         return_line: bool | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray] | tuple[np.ndarray, np.ndarray, Line2D]: ...\n     def csd(\n         self,\n         x: ArrayLike,\n         y: ArrayLike,\n+        *,\n         NFFT: int | None = ...,\n         Fs: float | None = ...,\n         Fc: int | None = ...,\n@@ -638,51 +640,51 @@ class Axes(_AxesBase):\n         sides: Literal[\"default\", \"onesided\", \"twosided\"] | None = ...,\n         scale_by_freq: bool | None = ...,\n         return_line: bool | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray] | tuple[np.ndarray, np.ndarray, Line2D]: ...\n     def magnitude_spectrum(\n         self,\n         x: ArrayLike,\n+        *,\n         Fs: float | None = ...,\n         Fc: int | None = ...,\n         window: Callable[[ArrayLike], ArrayLike] | ArrayLike | None = ...,\n         pad_to: int | None = ...,\n         sides: Literal[\"default\", \"onesided\", \"twosided\"] | None = ...,\n         scale: Literal[\"default\", \"linear\", \"dB\"] | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray, Line2D]: ...\n     def angle_spectrum(\n         self,\n         x: ArrayLike,\n+        *,\n         Fs: float | None = ...,\n         Fc: int | None = ...,\n         window: Callable[[ArrayLike], ArrayLike] | ArrayLike | None = ...,\n         pad_to: int | None = ...,\n         sides: Literal[\"default\", \"onesided\", \"twosided\"] | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray, Line2D]: ...\n     def phase_spectrum(\n         self,\n         x: ArrayLike,\n+        *,\n         Fs: float | None = ...,\n         Fc: int | None = ...,\n         window: Callable[[ArrayLike], ArrayLike] | ArrayLike | None = ...,\n         pad_to: int | None = ...,\n         sides: Literal[\"default\", \"onesided\", \"twosided\"] | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray, Line2D]: ...\n     def cohere(\n         self,\n         x: ArrayLike,\n         y: ArrayLike,\n+        *,\n         NFFT: int = ...,\n         Fs: float = ...,\n         Fc: int = ...,\n@@ -693,13 +695,13 @@ class Axes(_AxesBase):\n         pad_to: int | None = ...,\n         sides: Literal[\"default\", \"onesided\", \"twosided\"] = ...,\n         scale_by_freq: bool | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray]: ...\n     def specgram(\n         self,\n         x: ArrayLike,\n+        *,\n         NFFT: int | None = ...,\n         Fs: float | None = ...,\n         Fc: int | None = ...,\n@@ -717,13 +719,13 @@ class Axes(_AxesBase):\n         scale: Literal[\"default\", \"linear\", \"dB\"] | None = ...,\n         vmin: float | None = ...,\n         vmax: float | None = ...,\n-        *,\n         data=...,\n         **kwargs\n     ) -> tuple[np.ndarray, np.ndarray, np.ndarray, AxesImage]: ...\n     def spy(\n         self,\n         Z: ArrayLike,\n+        *,\n         precision: float | Literal[\"present\"] = ...,\n         marker: str | None = ...,\n         markersize: float | None = ...,\n@@ -736,6 +738,7 @@ class Axes(_AxesBase):\n         self,\n         dataset: ArrayLike | Sequence[ArrayLike],\n         positions: ArrayLike | None = ...,\n+        *,\n         vert: bool = ...,\n         widths: float | ArrayLike = ...,\n         showmeans: bool = ...,\n@@ -748,13 +751,13 @@ class Axes(_AxesBase):\n         | Callable[[GaussianKDE], float]\n         | None = ...,\n         side: Literal[\"both\", \"low\", \"high\"] = ...,\n-        *,\n         data=...,\n     ) -> dict[str, Collection]: ...\n     def violin(\n         self,\n         vpstats: Sequence[dict[str, Any]],\n         positions: ArrayLike | None = ...,\n+        *,\n         vert: bool = ...,\n         widths: float | ArrayLike = ...,\n         showmeans: bool = ...,"
+    }
+  ]
+}

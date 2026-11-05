@@ -1,0 +1,113 @@
+{
+  "sha": "4e8d89020cca87fcf484eb6b6b514b4c9bfa592f",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4Mjo0ZThkODkwMjBjY2E4N2ZjZjQ4NGViNmI2YjUxNGI0YzliZmE1OTJm",
+  "commit": {
+    "author": {
+      "name": "Matthias Kestenholz",
+      "email": "mk@feinheit.ch",
+      "date": "2020-01-30T17:08:56Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2020-01-31T08:07:58Z"
+    },
+    "message": "Fixed #31219 -- Fixed object deletion crash for nested protected related objects.",
+    "tree": {
+      "sha": "754224a36ca246ab1b3288bb3be0bd97cd41f5d8",
+      "url": "https://api.github.com/repos/django/django/git/trees/754224a36ca246ab1b3288bb3be0bd97cd41f5d8"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f",
+  "html_url": "https://github.com/django/django/commit/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f",
+  "comments_url": "https://api.github.com/repos/django/django/commits/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f/comments",
+  "author": {
+    "login": "matthiask",
+    "id": 2627,
+    "node_id": "MDQ6VXNlcjI2Mjc=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2627?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/matthiask",
+    "html_url": "https://github.com/matthiask",
+    "followers_url": "https://api.github.com/users/matthiask/followers",
+    "following_url": "https://api.github.com/users/matthiask/following{/other_user}",
+    "gists_url": "https://api.github.com/users/matthiask/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/matthiask/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/matthiask/subscriptions",
+    "organizations_url": "https://api.github.com/users/matthiask/orgs",
+    "repos_url": "https://api.github.com/users/matthiask/repos",
+    "events_url": "https://api.github.com/users/matthiask/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/matthiask/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "8c0c0235b6a23a0d69cd77286d0212de90d4af44",
+      "url": "https://api.github.com/repos/django/django/commits/8c0c0235b6a23a0d69cd77286d0212de90d4af44",
+      "html_url": "https://github.com/django/django/commit/8c0c0235b6a23a0d69cd77286d0212de90d4af44"
+    }
+  ],
+  "stats": {
+    "total": 16,
+    "additions": 12,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "16dff6a1cdb25ff83dd6e7fde6053ea4ac1d8a5a",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 4,
+      "changes": 5,
+      "blob_url": "https://github.com/django/django/blob/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=4e8d89020cca87fcf484eb6b6b514b4c9bfa592f",
+      "patch": "@@ -296,10 +296,7 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                     try:\n                         field.remote_field.on_delete(self, field, sub_objs, self.using)\n                     except ProtectedError as error:\n-                        key = \"'%s.%s'\" % (\n-                            error.protected_objects[0].__class__.__name__,\n-                            field.name,\n-                        )\n+                        key = \"'%s.%s'\" % (field.model.__name__, field.name)\n                         protected_objects[key] += error.protected_objects\n         if protected_objects:\n             raise ProtectedError("
+    },
+    {
+      "sha": "1731342bc1a9a13df561bfefdb368b0c06b8dbf2",
+      "filename": "tests/delete/tests.py",
+      "status": "modified",
+      "additions": 11,
+      "deletions": 0,
+      "changes": 11,
+      "blob_url": "https://github.com/django/django/blob/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f/tests%2Fdelete%2Ftests.py",
+      "raw_url": "https://github.com/django/django/raw/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f/tests%2Fdelete%2Ftests.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Ftests.py?ref=4e8d89020cca87fcf484eb6b6b514b4c9bfa592f",
+      "patch": "@@ -90,6 +90,17 @@ def test_protect_multiple(self):\n         with self.assertRaisesMessage(ProtectedError, msg):\n             a.protect.delete()\n \n+    def test_protect_path(self):\n+        a = create_a('protect')\n+        a.protect.p = P.objects.create()\n+        a.protect.save()\n+        msg = (\n+            \"Cannot delete some instances of model 'P' because they are \"\n+            \"referenced through protected foreign keys: 'R.p'.\"\n+        )\n+        with self.assertRaisesMessage(ProtectedError, msg):\n+            a.protect.p.delete()\n+\n     def test_do_nothing(self):\n         # Testing DO_NOTHING is a bit harder: It would raise IntegrityError for a normal model,\n         # so we connect to pre_delete and set the fk to a known value."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "sha": "86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4Mjo4NmEzYWQzNTFlYzE4ZDlkY2Q1MGNhYzFmYzhhZGE2ZjkwNDY3NWRi",
+  "commit": {
+    "author": {
+      "name": "Stephen Brown",
+      "email": "december1981@gmail.com",
+      "date": "2019-04-06T20:23:52Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2019-05-06T11:04:31Z"
+    },
+    "message": "Fixed #30339 -- Made Model.delete(keep_parents=True) preserves nested parent reverse relationships.\n\nThanks Simon Charette for the review.",
+    "tree": {
+      "sha": "f4e303eb5b6fbdd4cea95974d8a5c58061090fac",
+      "url": "https://api.github.com/repos/django/django/git/trees/f4e303eb5b6fbdd4cea95974d8a5c58061090fac"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+  "html_url": "https://github.com/django/django/commit/86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+  "comments_url": "https://api.github.com/repos/django/django/commits/86a3ad351ec18d9dcd50cac1fc8ada6f904675db/comments",
+  "author": {
+    "login": "december1981",
+    "id": 1431660,
+    "node_id": "MDQ6VXNlcjE0MzE2NjA=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1431660?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/december1981",
+    "html_url": "https://github.com/december1981",
+    "followers_url": "https://api.github.com/users/december1981/followers",
+    "following_url": "https://api.github.com/users/december1981/following{/other_user}",
+    "gists_url": "https://api.github.com/users/december1981/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/december1981/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/december1981/subscriptions",
+    "organizations_url": "https://api.github.com/users/december1981/orgs",
+    "repos_url": "https://api.github.com/users/december1981/repos",
+    "events_url": "https://api.github.com/users/december1981/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/december1981/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "29601bca9b584b254ded0a8f59cf776194f1bd28",
+      "url": "https://api.github.com/repos/django/django/commits/29601bca9b584b254ded0a8f59cf776194f1bd28",
+      "html_url": "https://github.com/django/django/commit/29601bca9b584b254ded0a8f59cf776194f1bd28"
+    }
+  ],
+  "stats": {
+    "total": 21,
+    "additions": 18,
+    "deletions": 3
+  },
+  "files": [
+    {
+      "sha": "ae82d263401d6e75869ddb930058cfaccd2e901a",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "blob_url": "https://github.com/django/django/blob/86a3ad351ec18d9dcd50cac1fc8ada6f904675db/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/86a3ad351ec18d9dcd50cac1fc8ada6f904675db/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+      "patch": "@@ -212,7 +212,8 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                                  collect_related=False,\n                                  reverse_dependency=True)\n         if collect_related:\n-            parents = model._meta.parents\n+            if keep_parents:\n+                parents = set(model._meta.get_parent_list())\n             for related in get_candidate_relations_to_delete(model._meta):\n                 # Preserve parent reverse relationships if keep_parents=True.\n                 if keep_parents and related.model in parents:"
+    },
+    {
+      "sha": "e2ddce058813361d503fabf5dd656292f9fa21c4",
+      "filename": "tests/delete/models.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/django/django/blob/86a3ad351ec18d9dcd50cac1fc8ada6f904675db/tests%2Fdelete%2Fmodels.py",
+      "raw_url": "https://github.com/django/django/raw/86a3ad351ec18d9dcd50cac1fc8ada6f904675db/tests%2Fdelete%2Fmodels.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Fmodels.py?ref=86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+      "patch": "@@ -28,6 +28,10 @@ class RChild(R):\n     pass\n \n \n+class RChildChild(RChild):\n+    pass\n+\n+\n class A(models.Model):\n     name = models.CharField(max_length=30)\n "
+    },
+    {
+      "sha": "6b1cd3675b3ecff806fded3c9937254c855055e7",
+      "filename": "tests/delete/tests.py",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 2,
+      "changes": 14,
+      "blob_url": "https://github.com/django/django/blob/86a3ad351ec18d9dcd50cac1fc8ada6f904675db/tests%2Fdelete%2Ftests.py",
+      "raw_url": "https://github.com/django/django/raw/86a3ad351ec18d9dcd50cac1fc8ada6f904675db/tests%2Fdelete%2Ftests.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Ftests.py?ref=86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+      "patch": "@@ -7,8 +7,8 @@\n \n from .models import (\n     MR, A, Avatar, Base, Child, HiddenUser, HiddenUserProfile, M, M2MFrom,\n-    M2MTo, MRNull, Origin, Parent, R, RChild, Referrer, S, T, User, create_a,\n-    get_default_r,\n+    M2MTo, MRNull, Origin, Parent, R, RChild, RChildChild, Referrer, S, T,\n+    User, create_a, get_default_r,\n )\n \n \n@@ -371,6 +371,16 @@ def test_delete_with_keeping_parents_relationships(self):\n         self.assertTrue(R.objects.filter(id=parent_id).exists())\n         self.assertTrue(S.objects.filter(pk=parent_referent_id).exists())\n \n+        childchild = RChildChild.objects.create()\n+        parent_id = childchild.rchild_ptr.r_ptr_id\n+        child_id = childchild.rchild_ptr_id\n+        parent_referent_id = S.objects.create(r=childchild.rchild_ptr.r_ptr).pk\n+        childchild.delete(keep_parents=True)\n+        self.assertFalse(RChildChild.objects.filter(id=childchild.id).exists())\n+        self.assertTrue(RChild.objects.filter(id=child_id).exists())\n+        self.assertTrue(R.objects.filter(id=parent_id).exists())\n+        self.assertTrue(S.objects.filter(pk=parent_referent_id).exists())\n+\n     def test_queryset_delete_returns_num_rows(self):\n         \"\"\"\n         QuerySet.delete() should return the number of deleted rows and a"
+    }
+  ]
+}

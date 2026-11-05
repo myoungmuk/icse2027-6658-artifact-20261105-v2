@@ -1,0 +1,113 @@
+{
+  "sha": "a62c25f630af24e3226c3457c4ecb8bee4d0f69f",
+  "node_id": "C_kwDOABUiotoAKGE2MmMyNWY2MzBhZjI0ZTMyMjZjMzQ1N2M0ZWNiOGJlZTRkMGY2OWY",
+  "commit": {
+    "author": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2023-12-26T06:11:19Z"
+    },
+    "committer": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-01-28T06:48:10Z"
+    },
+    "message": "fix boxplot legend entries",
+    "tree": {
+      "sha": "fa4af03c40822482e8855eceaa3c765a4eea98fe",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/fa4af03c40822482e8855eceaa3c765a4eea98fe"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/a62c25f630af24e3226c3457c4ecb8bee4d0f69f",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/a62c25f630af24e3226c3457c4ecb8bee4d0f69f",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/a62c25f630af24e3226c3457c4ecb8bee4d0f69f",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/a62c25f630af24e3226c3457c4ecb8bee4d0f69f/comments",
+  "author": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "ff0497cc042332313afd3d2e9ba8f949c3857896",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ff0497cc042332313afd3d2e9ba8f949c3857896",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/ff0497cc042332313afd3d2e9ba8f949c3857896"
+    }
+  ],
+  "stats": {
+    "total": 39,
+    "additions": 39,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "b1aeb87e6b45bb2162a435e522a1be07edcc3b75",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 0,
+      "changes": 7,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/a62c25f630af24e3226c3457c4ecb8bee4d0f69f/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/a62c25f630af24e3226c3457c4ecb8bee4d0f69f/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=a62c25f630af24e3226c3457c4ecb8bee4d0f69f",
+      "patch": "@@ -4004,6 +4004,9 @@ def boxplot(self, x, notch=None, sym=None, vert=None, whis=None,\n             if 'color' in boxprops:\n                 boxprops['edgecolor'] = boxprops.pop('color')\n \n+        if labels:\n+            boxprops['label'] = labels\n+\n         # if non-default sym value, put it into the flier dictionary\n         # the logic for providing the default symbol ('b+') now lives\n         # in bxp in the initial value of flierkw\n@@ -4316,13 +4319,16 @@ def do_patch(xs, ys, **kwargs):\n                 do_box = do_patch if patch_artist else do_plot\n                 boxes.append(do_box(box_x, box_y, **box_kw))\n             # draw the whiskers\n+            whisker_kw.setdefault('label', '_nolegend_')\n             whiskers.append(do_plot(whis_x, whislo_y, **whisker_kw))\n             whiskers.append(do_plot(whis_x, whishi_y, **whisker_kw))\n             # maybe draw the caps\n             if showcaps:\n+                cap_kw.setdefault('label', '_nolegend_')\n                 caps.append(do_plot(cap_x, cap_lo, **cap_kw))\n                 caps.append(do_plot(cap_x, cap_hi, **cap_kw))\n             # draw the medians\n+            median_kw.setdefault('label', '_nolegend_')\n             medians.append(do_plot(med_x, med_y, **median_kw))\n             # maybe draw the means\n             if showmeans:\n@@ -4335,6 +4341,7 @@ def do_patch(xs, ys, **kwargs):\n                     means.append(do_plot([pos], [stats['mean']], **mean_kw))\n             # maybe draw the fliers\n             if showfliers:\n+                flier_kw.setdefault('label', '_nolegend_')\n                 flier_x = np.full(len(stats['fliers']), pos, dtype=np.float64)\n                 flier_y = stats['fliers']\n                 fliers.append(do_plot(flier_x, flier_y, **flier_kw))"
+    },
+    {
+      "sha": "6357b4ce62a00e7fad5c23181e59e29cb825ce63",
+      "filename": "lib/matplotlib/tests/test_legend.py",
+      "status": "modified",
+      "additions": 32,
+      "deletions": 0,
+      "changes": 32,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/a62c25f630af24e3226c3457c4ecb8bee4d0f69f/lib%2Fmatplotlib%2Ftests%2Ftest_legend.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/a62c25f630af24e3226c3457c4ecb8bee4d0f69f/lib%2Fmatplotlib%2Ftests%2Ftest_legend.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_legend.py?ref=a62c25f630af24e3226c3457c4ecb8bee4d0f69f",
+      "patch": "@@ -1427,3 +1427,35 @@ def test_legend_text():\n         leg_bboxes.append(\n             leg.get_window_extent().transformed(ax.transAxes.inverted()))\n     assert_allclose(leg_bboxes[1].bounds, leg_bboxes[0].bounds)\n+\n+\n+def test_boxplot_legend():\n+    # Test that boxplot legends handles are patches\n+    # and labels are generated from boxplot's labels parameter.\n+    fig, axs = plt.subplots()\n+    A = 5*np.random.rand(100, 1)\n+    B = 10*np.random.rand(100, 1) - 5\n+    C = 7*np.random.rand(100, 1) - 5\n+    labels = ['a', 'b', 'c']\n+\n+    bp0 = axs.boxplot(A, positions=[0], patch_artist=True, labels=labels[0])\n+    bp1 = axs.boxplot(B, positions=[1], patch_artist=True, labels=labels[1])\n+    bp2 = axs.boxplot(C, positions=[2], patch_artist=True, labels=labels[2])\n+    # red, blue, green\n+    colors = [(1.0, 0.0, 0.0, 1), (0.0, 0.0, 1.0, 1), (0.0, 0.5, 0.0, 1)]\n+    box_list = [bp0, bp1, bp2]\n+    # Set colors to the boxes\n+    lbl_index = 0\n+    for b_plot, color in zip(box_list, colors):\n+        for patch in b_plot['boxes']:\n+            patch.set_color(color)\n+            lbl_index += 1\n+\n+    legend = axs.legend()\n+    index = 0\n+    for i in legend.legend_handles:\n+        assert isinstance(i, mpl.patches.Rectangle)\n+        assert i.get_facecolor() == colors[index]\n+        assert i.get_edgecolor() == colors[index]\n+        assert i.get_label() == labels[index]\n+        index += 1"
+    }
+  ]
+}

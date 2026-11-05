@@ -1,0 +1,184 @@
+{
+  "sha": "b6694f43e5be64b923a4ecb1eb060856af861bf4",
+  "node_id": "C_kwDOABUiotoAKGI2Njk0ZjQzZTViZTY0YjkyM2E0ZWNiMWViMDYwODU2YWY4NjFiZjQ",
+  "commit": {
+    "author": {
+      "name": "Antony Lee",
+      "email": "anntzer.lee@gmail.com",
+      "date": "2023-09-15T17:09:23Z"
+    },
+    "committer": {
+      "name": "Antony Lee",
+      "email": "anntzer.lee@gmail.com",
+      "date": "2023-09-19T21:42:05Z"
+    },
+    "message": "Fix axh{line,span} on polar axes.\n\nFor axhline, set the underlying path's _interpolation_steps to\nGRIDLINE_INTERPOLATION_STEPS (180), which amounts to using the same\nlogic to draw it as for drawing gridlines.  This ensures that a polar\naxhline goes (due to interpolation) around the whole circle, rather than\nbeing a trivial line connecting a point to itself.  Also update axvline\nfor consistency.  (Note that _interpolation_steps has is ignored for\nrectilinear transforms and thus the change doesn't slow down the common,\nrectilinear case.)\n\nIncrease the number of interpolation steps of ax{v,h}span likewise to\nGRIDLINE_INTERPOLATION_STEPS (again for consistency), and more\nimportantly switch them to using Rectangle rather than Polygon, so that\na polar axhspan is drawn as an annulus.  This is necessary due to a\nseparate \"bug\", whereby the CLOSEPOLY step on a Polygon would generate\n(effectively) a segment that's unfortunately ignored by\n_interpolation_steps (as it doesn't appear explicitly), whereas\nRectangle explicitly includes the closing (4th) segment before emitting\na CLOSEPOLY.",
+    "tree": {
+      "sha": "665161bca1c7b0ecbace132c58b04d390d57c616",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/665161bca1c7b0ecbace132c58b04d390d57c616"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/b6694f43e5be64b923a4ecb1eb060856af861bf4",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/b6694f43e5be64b923a4ecb1eb060856af861bf4",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/b6694f43e5be64b923a4ecb1eb060856af861bf4",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/b6694f43e5be64b923a4ecb1eb060856af861bf4/comments",
+  "author": {
+    "login": "anntzer",
+    "id": 1322974,
+    "node_id": "MDQ6VXNlcjEzMjI5NzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1322974?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/anntzer",
+    "html_url": "https://github.com/anntzer",
+    "followers_url": "https://api.github.com/users/anntzer/followers",
+    "following_url": "https://api.github.com/users/anntzer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/anntzer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/anntzer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/anntzer/subscriptions",
+    "organizations_url": "https://api.github.com/users/anntzer/orgs",
+    "repos_url": "https://api.github.com/users/anntzer/repos",
+    "events_url": "https://api.github.com/users/anntzer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/anntzer/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "anntzer",
+    "id": 1322974,
+    "node_id": "MDQ6VXNlcjEzMjI5NzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1322974?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/anntzer",
+    "html_url": "https://github.com/anntzer",
+    "followers_url": "https://api.github.com/users/anntzer/followers",
+    "following_url": "https://api.github.com/users/anntzer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/anntzer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/anntzer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/anntzer/subscriptions",
+    "organizations_url": "https://api.github.com/users/anntzer/orgs",
+    "repos_url": "https://api.github.com/users/anntzer/repos",
+    "events_url": "https://api.github.com/users/anntzer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/anntzer/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "538bd83bf5c5a298d99c13639b7fa87ecd7fd83c",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/538bd83bf5c5a298d99c13639b7fa87ecd7fd83c",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/538bd83bf5c5a298d99c13639b7fa87ecd7fd83c"
+    }
+  ],
+  "stats": {
+    "total": 79,
+    "additions": 63,
+    "deletions": 16
+  },
+  "files": [
+    {
+      "sha": "14573e8708431d160a8619b1f9368c4a9704b05e",
+      "filename": "doc/api/next_api_changes/behavior/26788-AL.rst",
+      "status": "added",
+      "additions": 6,
+      "deletions": 0,
+      "changes": 6,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/b6694f43e5be64b923a4ecb1eb060856af861bf4/doc%2Fapi%2Fnext_api_changes%2Fbehavior%2F26788-AL.rst",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/b6694f43e5be64b923a4ecb1eb060856af861bf4/doc%2Fapi%2Fnext_api_changes%2Fbehavior%2F26788-AL.rst",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/doc%2Fapi%2Fnext_api_changes%2Fbehavior%2F26788-AL.rst?ref=b6694f43e5be64b923a4ecb1eb060856af861bf4",
+      "patch": "@@ -0,0 +1,6 @@\n+``axvspan`` and ``axhspan`` now return ``Rectangle``\\s, not ``Polygons``\n+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n+This change allows using `~.Axes.axhspan` to draw an annulus on polar axes.\n+\n+This change also affects other elements built via `~.Axes.axvspan` and\n+`~.Axes.axhspan`, such as ``Slider.poly``."
+    },
+    {
+      "sha": "47bb382dbdbfdaf5e2a4ba5d73f22415e7dc46ba",
+      "filename": "doc/users/next_whats_new/polar-line-spans.rst",
+      "status": "added",
+      "additions": 5,
+      "deletions": 0,
+      "changes": 5,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/b6694f43e5be64b923a4ecb1eb060856af861bf4/doc%2Fusers%2Fnext_whats_new%2Fpolar-line-spans.rst",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/b6694f43e5be64b923a4ecb1eb060856af861bf4/doc%2Fusers%2Fnext_whats_new%2Fpolar-line-spans.rst",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/doc%2Fusers%2Fnext_whats_new%2Fpolar-line-spans.rst?ref=b6694f43e5be64b923a4ecb1eb060856af861bf4",
+      "patch": "@@ -0,0 +1,5 @@\n+``axhline`` and ``axhspan`` on polar axes\n+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n+\n+... now draw circles and circular arcs (`~.Axes.axhline`) or annuli and wedges\n+(`~.Axes.axhspan`)."
+    },
+    {
+      "sha": "0fcabac8c7c0b8d9bb6759400f7be2ce899bba64",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 20,
+      "deletions": 5,
+      "changes": 25,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=b6694f43e5be64b923a4ecb1eb060856af861bf4",
+      "patch": "@@ -783,6 +783,7 @@ def axhline(self, y=0, xmin=0, xmax=1, **kwargs):\n         trans = self.get_yaxis_transform(which='grid')\n         l = mlines.Line2D([xmin, xmax], [y, y], transform=trans, **kwargs)\n         self.add_line(l)\n+        l.get_path()._interpolation_steps = mpl.axis.GRIDLINE_INTERPOLATION_STEPS\n         if scaley:\n             self._request_autoscale_view(\"y\")\n         return l\n@@ -851,6 +852,7 @@ def axvline(self, x=0, ymin=0, ymax=1, **kwargs):\n         trans = self.get_xaxis_transform(which='grid')\n         l = mlines.Line2D([x, x], [ymin, ymax], transform=trans, **kwargs)\n         self.add_line(l)\n+        l.get_path()._interpolation_steps = mpl.axis.GRIDLINE_INTERPOLATION_STEPS\n         if scalex:\n             self._request_autoscale_view(\"x\")\n         return l\n@@ -978,10 +980,17 @@ def axhspan(self, ymin, ymax, xmin=0, xmax=1, **kwargs):\n         self._check_no_units([xmin, xmax], ['xmin', 'xmax'])\n         (ymin, ymax), = self._process_unit_info([(\"y\", [ymin, ymax])], kwargs)\n \n-        verts = (xmin, ymin), (xmin, ymax), (xmax, ymax), (xmax, ymin)\n-        p = mpatches.Polygon(verts, **kwargs)\n+        p = mpatches.Rectangle((xmin, ymin), xmax - xmin, ymax - ymin, **kwargs)\n         p.set_transform(self.get_yaxis_transform(which=\"grid\"))\n+        # For Rectangles and non-separable transforms, add_patch can be buggy\n+        # and update the x limits even though it shouldn't do so for an\n+        # yaxis_transformed patch, so undo that update.\n+        ix = self.dataLim.intervalx\n+        mx = self.dataLim.minposx\n         self.add_patch(p)\n+        self.dataLim.intervalx = ix\n+        self.dataLim.minposx = mx\n+        p.get_path()._interpolation_steps = mpl.axis.GRIDLINE_INTERPOLATION_STEPS\n         self._request_autoscale_view(\"y\")\n         return p\n \n@@ -1034,11 +1043,17 @@ def axvspan(self, xmin, xmax, ymin=0, ymax=1, **kwargs):\n         self._check_no_units([ymin, ymax], ['ymin', 'ymax'])\n         (xmin, xmax), = self._process_unit_info([(\"x\", [xmin, xmax])], kwargs)\n \n-        verts = [(xmin, ymin), (xmin, ymax), (xmax, ymax), (xmax, ymin)]\n-        p = mpatches.Polygon(verts, **kwargs)\n+        p = mpatches.Rectangle((xmin, ymin), xmax - xmin, ymax - ymin, **kwargs)\n         p.set_transform(self.get_xaxis_transform(which=\"grid\"))\n-        p.get_path()._interpolation_steps = 100\n+        # For Rectangles and non-separable transforms, add_patch can be buggy\n+        # and update the y limits even though it shouldn't do so for an\n+        # xaxis_transformed patch, so undo that update.\n+        iy = self.dataLim.intervaly.copy()\n+        my = self.dataLim.minposy\n         self.add_patch(p)\n+        self.dataLim.intervaly = iy\n+        self.dataLim.minposy = my\n+        p.get_path()._interpolation_steps = mpl.axis.GRIDLINE_INTERPOLATION_STEPS\n         self._request_autoscale_view(\"x\")\n         return p\n "
+    },
+    {
+      "sha": "3937cdf5b34c9a77d8003dd04967ee70ef4ab130",
+      "filename": "lib/matplotlib/tests/baseline_images/test_axes/axhvlinespan_interpolation.png",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0,
+      "changes": 0,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Ftests%2Fbaseline_images%2Ftest_axes%2Faxhvlinespan_interpolation.png",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Ftests%2Fbaseline_images%2Ftest_axes%2Faxhvlinespan_interpolation.png",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Fbaseline_images%2Ftest_axes%2Faxhvlinespan_interpolation.png?ref=b6694f43e5be64b923a4ecb1eb060856af861bf4"
+    },
+    {
+      "sha": "564bf6a86b5229cda3577279d87df70dfccde76b",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 0,
+      "changes": 12,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=b6694f43e5be64b923a4ecb1eb060856af861bf4",
+      "patch": "@@ -8849,3 +8849,15 @@ def test_xylim_changed_shared():\n     axs[1].callbacks.connect(\"ylim_changed\", events.append)\n     axs[0].set(xlim=[1, 3], ylim=[2, 4])\n     assert events == [axs[1], axs[1]]\n+\n+\n+@image_comparison([\"axhvlinespan_interpolation.png\"], style=\"default\")\n+def test_axhvlinespan_interpolation():\n+    ax = plt.figure().add_subplot(projection=\"polar\")\n+    ax.set_axis_off()\n+    ax.axvline(.1, c=\"C0\")\n+    ax.axvspan(.2, .3, fc=\"C1\")\n+    ax.axvspan(.4, .5, .1, .2, fc=\"C2\")\n+    ax.axhline(1, c=\"C0\", alpha=.5)\n+    ax.axhspan(.8, .9, fc=\"C1\", alpha=.5)\n+    ax.axhspan(.6, .7, .8, .9, fc=\"C2\", alpha=.5)"
+    },
+    {
+      "sha": "8c0c32dc133b63deecb828c025ce57d4629fc359",
+      "filename": "lib/matplotlib/tests/test_path.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Ftests%2Ftest_path.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Ftests%2Ftest_path.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_path.py?ref=b6694f43e5be64b923a4ecb1eb060856af861bf4",
+      "patch": "@@ -142,11 +142,11 @@ def test_nonlinear_containment():\n     ax.set(xscale=\"log\", ylim=(0, 1))\n     polygon = ax.axvspan(1, 10)\n     assert polygon.get_path().contains_point(\n-        ax.transData.transform((5, .5)), ax.transData)\n+        ax.transData.transform((5, .5)), polygon.get_transform())\n     assert not polygon.get_path().contains_point(\n-        ax.transData.transform((.5, .5)), ax.transData)\n+        ax.transData.transform((.5, .5)), polygon.get_transform())\n     assert not polygon.get_path().contains_point(\n-        ax.transData.transform((50, .5)), ax.transData)\n+        ax.transData.transform((50, .5)), polygon.get_transform())\n \n \n @image_comparison(['arrow_contains_point.png'],"
+    },
+    {
+      "sha": "5a7fd125a29b0416a7ba9ef64669430d87a8c51f",
+      "filename": "lib/matplotlib/transforms.py",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 0,
+      "changes": 13,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Ftransforms.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Ftransforms.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftransforms.py?ref=b6694f43e5be64b923a4ecb1eb060856af861bf4",
+      "patch": "@@ -671,6 +671,7 @@ def intersection(bbox1, bbox2):\n         y1 = np.minimum(bbox1.ymax, bbox2.ymax)\n         return Bbox([[x0, y0], [x1, y1]]) if x0 <= x1 and y0 <= y1 else None\n \n+\n _default_minpos = np.array([np.inf, np.inf])\n \n \n@@ -1011,6 +1012,10 @@ def minpos(self):\n         \"\"\"\n         return self._minpos\n \n+    @minpos.setter\n+    def minpos(self, val):\n+        self._minpos[:] = val\n+\n     @property\n     def minposx(self):\n         \"\"\"\n@@ -1022,6 +1027,10 @@ def minposx(self):\n         \"\"\"\n         return self._minpos[0]\n \n+    @minposx.setter\n+    def minposx(self, val):\n+        self._minpos[0] = val\n+\n     @property\n     def minposy(self):\n         \"\"\"\n@@ -1033,6 +1042,10 @@ def minposy(self):\n         \"\"\"\n         return self._minpos[1]\n \n+    @minposy.setter\n+    def minposy(self, val):\n+        self._minpos[1] = val\n+\n     def get_points(self):\n         \"\"\"\n         Get the points of the bounding box as an array of the form"
+    },
+    {
+      "sha": "771cfd714b91f744f183214366958daddb9dee6d",
+      "filename": "lib/matplotlib/widgets.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 8,
+      "changes": 12,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Fwidgets.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/b6694f43e5be64b923a4ecb1eb060856af861bf4/lib%2Fmatplotlib%2Fwidgets.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fwidgets.py?ref=b6694f43e5be64b923a4ecb1eb060856af861bf4",
+      "patch": "@@ -433,8 +433,8 @@ def __init__(self, ax, label, valmin, valmax, valinit=0.5, valfmt=None,\n         Notes\n         -----\n         Additional kwargs are passed on to ``self.poly`` which is the\n-        `~matplotlib.patches.Polygon` that draws the slider knob.  See the\n-        `.Polygon` documentation for valid property names (``facecolor``,\n+        `~matplotlib.patches.Rectangle` that draws the slider knob.  See the\n+        `.Rectangle` documentation for valid property names (``facecolor``,\n         ``edgecolor``, ``alpha``, etc.).\n         \"\"\"\n         super().__init__(ax, orientation, closedmin, closedmax,\n@@ -577,16 +577,12 @@ def set_val(self, val):\n         ----------\n         val : float\n         \"\"\"\n-        xy = self.poly.xy\n         if self.orientation == 'vertical':\n-            xy[1] = .25, val\n-            xy[2] = .75, val\n+            self.poly.set_height(val - self.poly.get_y())\n             self._handle.set_ydata([val])\n         else:\n-            xy[2] = val, .75\n-            xy[3] = val, .25\n+            self.poly.set_width(val - self.poly.get_x())\n             self._handle.set_xdata([val])\n-        self.poly.xy = xy\n         self.valtext.set_text(self._format(val))\n         if self.drawon:\n             self.ax.figure.canvas.draw_idle()"
+    }
+  ]
+}

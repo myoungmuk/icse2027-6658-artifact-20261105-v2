@@ -1,0 +1,101 @@
+{
+  "sha": "2a6fc89018881c07e38f81989ff0c012e7539390",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4MjoyYTZmYzg5MDE4ODgxYzA3ZTM4ZjgxOTg5ZmYwYzAxMmU3NTM5Mzkw",
+  "commit": {
+    "author": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2020-01-28T19:26:00Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2020-01-29T08:02:23Z"
+    },
+    "message": "Refs #27852 -- Renamed a loop variable in Collector.collect() to avoid redefinition.",
+    "tree": {
+      "sha": "6dcb2d3fe31a2cf0a78dbc412d260b0bf2625f04",
+      "url": "https://api.github.com/repos/django/django/git/trees/6dcb2d3fe31a2cf0a78dbc412d260b0bf2625f04"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/2a6fc89018881c07e38f81989ff0c012e7539390",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/2a6fc89018881c07e38f81989ff0c012e7539390",
+  "html_url": "https://github.com/django/django/commit/2a6fc89018881c07e38f81989ff0c012e7539390",
+  "comments_url": "https://api.github.com/repos/django/django/commits/2a6fc89018881c07e38f81989ff0c012e7539390/comments",
+  "author": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "f791673537014c00b4b74d6449063e2a66986c1f",
+      "url": "https://api.github.com/repos/django/django/commits/f791673537014c00b4b74d6449063e2a66986c1f",
+      "html_url": "https://github.com/django/django/commit/f791673537014c00b4b74d6449063e2a66986c1f"
+    }
+  ],
+  "stats": {
+    "total": 4,
+    "additions": 2,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "e7d245936c547c62a0d7ae4c6407e710b4d8cb30",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/django/django/blob/2a6fc89018881c07e38f81989ff0c012e7539390/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/2a6fc89018881c07e38f81989ff0c012e7539390/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=2a6fc89018881c07e38f81989ff0c012e7539390",
+      "patch": "@@ -324,8 +324,8 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n         if fail_on_restricted:\n             # Raise an error if collected restricted objects (RESTRICT) aren't\n             # candidates for deletion also collected via CASCADE.\n-            for model, instances in self.data.items():\n-                self.clear_restricted_objects_from_set(model, instances)\n+            for related_model, instances in self.data.items():\n+                self.clear_restricted_objects_from_set(related_model, instances)\n             for qs in self.fast_deletes:\n                 self.clear_restricted_objects_from_queryset(qs.model, qs)\n             for model, fields in self.restricted_objects.items():"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "sha": "ab67ee18426aaa48a189e32ff08ae539ca472a9e",
+  "node_id": "C_kwDOABUiotoAKGFiNjdlZTE4NDI2YWFhNDhhMTg5ZTMyZmYwOGFlNTM5Y2E0NzJhOWU",
+  "commit": {
+    "author": {
+      "name": "Oscar Gustafsson",
+      "email": "oscar.gustafsson@gmail.com",
+      "date": "2023-11-30T11:27:48Z"
+    },
+    "committer": {
+      "name": "Oscar Gustafsson",
+      "email": "oscar.gustafsson@gmail.com",
+      "date": "2023-12-01T09:20:54Z"
+    },
+    "message": "Check that xerr/yerr values are not None in errorbar",
+    "tree": {
+      "sha": "a88758910a604834dcf98b90620bd9d0495c3f22",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/a88758910a604834dcf98b90620bd9d0495c3f22"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/ab67ee18426aaa48a189e32ff08ae539ca472a9e",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ab67ee18426aaa48a189e32ff08ae539ca472a9e",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/ab67ee18426aaa48a189e32ff08ae539ca472a9e",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ab67ee18426aaa48a189e32ff08ae539ca472a9e/comments",
+  "author": {
+    "login": "oscargus",
+    "id": 8114497,
+    "node_id": "MDQ6VXNlcjgxMTQ0OTc=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8114497?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/oscargus",
+    "html_url": "https://github.com/oscargus",
+    "followers_url": "https://api.github.com/users/oscargus/followers",
+    "following_url": "https://api.github.com/users/oscargus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/oscargus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/oscargus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/oscargus/subscriptions",
+    "organizations_url": "https://api.github.com/users/oscargus/orgs",
+    "repos_url": "https://api.github.com/users/oscargus/repos",
+    "events_url": "https://api.github.com/users/oscargus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/oscargus/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "oscargus",
+    "id": 8114497,
+    "node_id": "MDQ6VXNlcjgxMTQ0OTc=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8114497?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/oscargus",
+    "html_url": "https://github.com/oscargus",
+    "followers_url": "https://api.github.com/users/oscargus/followers",
+    "following_url": "https://api.github.com/users/oscargus/following{/other_user}",
+    "gists_url": "https://api.github.com/users/oscargus/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/oscargus/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/oscargus/subscriptions",
+    "organizations_url": "https://api.github.com/users/oscargus/orgs",
+    "repos_url": "https://api.github.com/users/oscargus/repos",
+    "events_url": "https://api.github.com/users/oscargus/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/oscargus/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "88e4a4333fd36063dc04935891e228d65f5bb5cb",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/88e4a4333fd36063dc04935891e228d65f5bb5cb",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/88e4a4333fd36063dc04935891e228d65f5bb5cb"
+    }
+  ],
+  "stats": {
+    "total": 19,
+    "additions": 19,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "90faa2ffab1892a27294dae86a62b4420da5b87b",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 0,
+      "changes": 5,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ab67ee18426aaa48a189e32ff08ae539ca472a9e/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ab67ee18426aaa48a189e32ff08ae539ca472a9e/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=ab67ee18426aaa48a189e32ff08ae539ca472a9e",
+      "patch": "@@ -3682,6 +3682,11 @@ def apply_mask(arrays, mask):\n                     f\"'{dep_axis}err' (shape: {np.shape(err)}) must be a \"\n                     f\"scalar or a 1D or (2, n) array-like whose shape matches \"\n                     f\"'{dep_axis}' (shape: {np.shape(dep)})\") from None\n+            if err.dtype is np.dtype(object) and np.any(err == None):  # noqa: E711\n+                raise ValueError(\n+                    f\"'{dep_axis}err' must not contain None. \"\n+                    \"Use NaN if you want to skip a value.\")\n+\n             res = np.zeros(err.shape, dtype=bool)  # Default in case of nan\n             if np.any(np.less(err, -err, out=res, where=(err == err))):\n                 # like err<0, but also works for timedelta and nan."
+    },
+    {
+      "sha": "d5424f80c9e90a0692d766b47d35b0a40e812534",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 0,
+      "changes": 14,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ab67ee18426aaa48a189e32ff08ae539ca472a9e/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ab67ee18426aaa48a189e32ff08ae539ca472a9e/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=ab67ee18426aaa48a189e32ff08ae539ca472a9e",
+      "patch": "@@ -4127,6 +4127,20 @@ def test_xerr_yerr_not_negative():\n                     yerr=datetime.timedelta(days=-10))\n \n \n+def test_xerr_yerr_not_none():\n+    ax = plt.figure().subplots()\n+\n+    with pytest.raises(ValueError,\n+                       match=\"'xerr' must not contain None\"):\n+        ax.errorbar(x=[0], y=[0], xerr=[[None], [1]], yerr=[[None], [1]])\n+    with pytest.raises(ValueError,\n+                       match=\"'xerr' must not contain None\"):\n+        ax.errorbar(x=[0], y=[0], xerr=[[None], [1]])\n+    with pytest.raises(ValueError,\n+                       match=\"'yerr' must not contain None\"):\n+        ax.errorbar(x=[0], y=[0], yerr=[[None], [1]])\n+\n+\n @check_figures_equal()\n def test_errorbar_every(fig_test, fig_ref):\n     x = np.linspace(0, 1, 15)"
+    }
+  ]
+}

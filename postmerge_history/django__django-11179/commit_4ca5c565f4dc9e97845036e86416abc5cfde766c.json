@@ -1,0 +1,125 @@
+{
+  "sha": "4ca5c565f4dc9e97845036e86416abc5cfde766c",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4Mjo0Y2E1YzU2NWY0ZGM5ZTk3ODQ1MDM2ZTg2NDE2YWJjNWNmZGU3NjZj",
+  "commit": {
+    "author": {
+      "name": "Hasan Ramezani",
+      "email": "hasan.r67@gmail.com",
+      "date": "2020-01-28T09:51:36Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2020-01-29T08:02:23Z"
+    },
+    "message": "Refs #27852 -- Fixed object deletion to show all restricted related objects rather than just the first one.",
+    "tree": {
+      "sha": "9a0767a28f2e6312022f2bbcde856a466c0bb88c",
+      "url": "https://api.github.com/repos/django/django/git/trees/9a0767a28f2e6312022f2bbcde856a466c0bb88c"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/4ca5c565f4dc9e97845036e86416abc5cfde766c",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/4ca5c565f4dc9e97845036e86416abc5cfde766c",
+  "html_url": "https://github.com/django/django/commit/4ca5c565f4dc9e97845036e86416abc5cfde766c",
+  "comments_url": "https://api.github.com/repos/django/django/commits/4ca5c565f4dc9e97845036e86416abc5cfde766c/comments",
+  "author": {
+    "login": "hramezani",
+    "id": 3122442,
+    "node_id": "MDQ6VXNlcjMxMjI0NDI=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/3122442?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hramezani",
+    "html_url": "https://github.com/hramezani",
+    "followers_url": "https://api.github.com/users/hramezani/followers",
+    "following_url": "https://api.github.com/users/hramezani/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hramezani/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hramezani/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hramezani/subscriptions",
+    "organizations_url": "https://api.github.com/users/hramezani/orgs",
+    "repos_url": "https://api.github.com/users/hramezani/repos",
+    "events_url": "https://api.github.com/users/hramezani/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hramezani/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "2a6fc89018881c07e38f81989ff0c012e7539390",
+      "url": "https://api.github.com/repos/django/django/commits/2a6fc89018881c07e38f81989ff0c012e7539390",
+      "html_url": "https://github.com/django/django/commit/2a6fc89018881c07e38f81989ff0c012e7539390"
+    }
+  ],
+  "stats": {
+    "total": 63,
+    "additions": 41,
+    "deletions": 22
+  },
+  "files": [
+    {
+      "sha": "3385ed85c74a6d2dd460557a2e6a190de39ffabd",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 17,
+      "deletions": 13,
+      "changes": 30,
+      "blob_url": "https://github.com/django/django/blob/4ca5c565f4dc9e97845036e86416abc5cfde766c/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/4ca5c565f4dc9e97845036e86416abc5cfde766c/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=4ca5c565f4dc9e97845036e86416abc5cfde766c",
+      "patch": "@@ -328,19 +328,23 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                 self.clear_restricted_objects_from_set(related_model, instances)\n             for qs in self.fast_deletes:\n                 self.clear_restricted_objects_from_queryset(qs.model, qs)\n-            for model, fields in self.restricted_objects.items():\n-                for field, objs in fields.items():\n-                    for obj in objs:\n-                        raise RestrictedError(\n-                            \"Cannot delete some instances of model '%s' \"\n-                            \"because they are referenced through a restricted \"\n-                            \"foreign key: '%s.%s'.\" % (\n-                                field.remote_field.model.__name__,\n-                                obj.__class__.__name__,\n-                                field.name,\n-                            ),\n-                            objs,\n-                        )\n+            if self.restricted_objects.values():\n+                restricted_objects = defaultdict(list)\n+                for related_model, fields in self.restricted_objects.items():\n+                    for field, objs in fields.items():\n+                        if objs:\n+                            key = \"'%s.%s'\" % (related_model.__name__, field.name)\n+                            restricted_objects[key] += objs\n+                if restricted_objects:\n+                    raise RestrictedError(\n+                        'Cannot delete some instances of model %r because '\n+                        'they are referenced through restricted foreign keys: '\n+                        '%s.' % (\n+                            model.__name__,\n+                            ', '.join(restricted_objects),\n+                        ),\n+                        chain.from_iterable(restricted_objects.values()),\n+                    )\n \n     def related_objects(self, related_model, related_fields, objs):\n         \"\"\""
+    },
+    {
+      "sha": "440581dc5410ad8118644d0d205cd718baf1820d",
+      "filename": "tests/delete/models.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/django/django/blob/4ca5c565f4dc9e97845036e86416abc5cfde766c/tests%2Fdelete%2Fmodels.py",
+      "raw_url": "https://github.com/django/django/raw/4ca5c565f4dc9e97845036e86416abc5cfde766c/tests%2Fdelete%2Fmodels.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Fmodels.py?ref=4ca5c565f4dc9e97845036e86416abc5cfde766c",
+      "patch": "@@ -177,6 +177,10 @@ class B2(models.Model):\n     delete_top = models.ForeignKey(DeleteTop, models.CASCADE)\n \n \n+class B3(models.Model):\n+    restrict = models.ForeignKey(R, models.RESTRICT)\n+\n+\n class DeleteBottom(models.Model):\n     b1 = models.ForeignKey(B1, models.RESTRICT)\n     b2 = models.ForeignKey(B2, models.CASCADE)"
+    },
+    {
+      "sha": "279788d2d34360493e1818f7d1ac24a3865f2d3f",
+      "filename": "tests/delete/tests.py",
+      "status": "modified",
+      "additions": 20,
+      "deletions": 9,
+      "changes": 29,
+      "blob_url": "https://github.com/django/django/blob/4ca5c565f4dc9e97845036e86416abc5cfde766c/tests%2Fdelete%2Ftests.py",
+      "raw_url": "https://github.com/django/django/raw/4ca5c565f4dc9e97845036e86416abc5cfde766c/tests%2Fdelete%2Ftests.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Ftests.py?ref=4ca5c565f4dc9e97845036e86416abc5cfde766c",
+      "patch": "@@ -8,10 +8,10 @@\n from django.test import TestCase, skipIfDBFeature, skipUnlessDBFeature\n \n from .models import (\n-    B1, B2, MR, A, Avatar, B, Base, Child, DeleteBottom, DeleteTop, GenericB1,\n-    GenericB2, GenericDeleteBottom, HiddenUser, HiddenUserProfile, M, M2MFrom,\n-    M2MTo, MRNull, Origin, P, Parent, R, RChild, RChildChild, Referrer, S, T,\n-    User, create_a, get_default_r,\n+    B1, B2, B3, MR, A, Avatar, B, Base, Child, DeleteBottom, DeleteTop,\n+    GenericB1, GenericB2, GenericDeleteBottom, HiddenUser, HiddenUserProfile,\n+    M, M2MFrom, M2MTo, MRNull, Origin, P, Parent, R, RChild, RChildChild,\n+    Referrer, S, T, User, create_a, get_default_r,\n )\n \n \n@@ -164,7 +164,18 @@ def test_restrict(self):\n         a = create_a('restrict')\n         msg = (\n             \"Cannot delete some instances of model 'R' because they are \"\n-            \"referenced through a restricted foreign key: 'A.restrict'.\"\n+            \"referenced through restricted foreign keys: 'A.restrict'.\"\n+        )\n+        with self.assertRaisesMessage(RestrictedError, msg):\n+            a.restrict.delete()\n+\n+    def test_restrict_multiple(self):\n+        a = create_a('restrict')\n+        B3.objects.create(restrict=a.restrict)\n+        msg = (\n+            \"Cannot delete some instances of model 'R' because they are \"\n+            \"referenced through restricted foreign keys: 'A.restrict', \"\n+            \"'B3.restrict'.\"\n         )\n         with self.assertRaisesMessage(RestrictedError, msg):\n             a.restrict.delete()\n@@ -174,8 +185,8 @@ def test_restrict_path_cascade_indirect(self):\n         a.restrict.p = P.objects.create()\n         a.restrict.save()\n         msg = (\n-            \"Cannot delete some instances of model 'R' because they are \"\n-            \"referenced through a restricted foreign key: 'A.restrict'.\"\n+            \"Cannot delete some instances of model 'P' because they are \"\n+            \"referenced through restricted foreign keys: 'A.restrict'.\"\n         )\n         with self.assertRaisesMessage(RestrictedError, msg):\n             a.restrict.p.delete()\n@@ -203,7 +214,7 @@ def test_restrict_path_cascade_indirect_diamond(self):\n         DeleteBottom.objects.create(b1=b1, b2=b2)\n         msg = (\n             \"Cannot delete some instances of model 'B1' because they are \"\n-            \"referenced through a restricted foreign key: 'DeleteBottom.b1'.\"\n+            \"referenced through restricted foreign keys: 'DeleteBottom.b1'.\"\n         )\n         with self.assertRaisesMessage(RestrictedError, msg):\n             b1.delete()\n@@ -225,7 +236,7 @@ def test_restrict_gfk_no_fast_delete(self):\n         GenericDeleteBottom.objects.create(generic_b1=generic_b1, generic_b2=generic_b2)\n         msg = (\n             \"Cannot delete some instances of model 'GenericB1' because they \"\n-            \"are referenced through a restricted foreign key: \"\n+            \"are referenced through restricted foreign keys: \"\n             \"'GenericDeleteBottom.generic_b1'.\"\n         )\n         with self.assertRaisesMessage(RestrictedError, msg):"
+    }
+  ]
+}

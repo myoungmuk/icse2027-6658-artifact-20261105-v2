@@ -1,0 +1,101 @@
+{
+  "sha": "403873f6665dea73251c15198fb1df8e28ca8aad",
+  "node_id": "C_kwDOABUiotoAKDQwMzg3M2Y2NjY1ZGVhNzMyNTFjMTUxOThmYjFkZjhlMjhjYThhYWQ",
+  "commit": {
+    "author": {
+      "name": "Jody Klymak",
+      "email": "jklymak@gmail.com",
+      "date": "2023-12-06T00:53:04Z"
+    },
+    "committer": {
+      "name": "Jody Klymak",
+      "email": "jklymak@gmail.com",
+      "date": "2023-12-06T01:44:01Z"
+    },
+    "message": "DOC: note lack of unit handling in docstring [ci doc]",
+    "tree": {
+      "sha": "40e16a21d86f8ffd5552afa82df9d5175a36c764",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/40e16a21d86f8ffd5552afa82df9d5175a36c764"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/403873f6665dea73251c15198fb1df8e28ca8aad",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/403873f6665dea73251c15198fb1df8e28ca8aad",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/403873f6665dea73251c15198fb1df8e28ca8aad",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/403873f6665dea73251c15198fb1df8e28ca8aad/comments",
+  "author": {
+    "login": "jklymak",
+    "id": 1562854,
+    "node_id": "MDQ6VXNlcjE1NjI4NTQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1562854?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jklymak",
+    "html_url": "https://github.com/jklymak",
+    "followers_url": "https://api.github.com/users/jklymak/followers",
+    "following_url": "https://api.github.com/users/jklymak/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jklymak/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jklymak/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jklymak/subscriptions",
+    "organizations_url": "https://api.github.com/users/jklymak/orgs",
+    "repos_url": "https://api.github.com/users/jklymak/repos",
+    "events_url": "https://api.github.com/users/jklymak/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jklymak/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "jklymak",
+    "id": 1562854,
+    "node_id": "MDQ6VXNlcjE1NjI4NTQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1562854?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jklymak",
+    "html_url": "https://github.com/jklymak",
+    "followers_url": "https://api.github.com/users/jklymak/followers",
+    "following_url": "https://api.github.com/users/jklymak/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jklymak/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jklymak/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jklymak/subscriptions",
+    "organizations_url": "https://api.github.com/users/jklymak/orgs",
+    "repos_url": "https://api.github.com/users/jklymak/repos",
+    "events_url": "https://api.github.com/users/jklymak/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jklymak/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "f579544cf50fa130ce3c480e0e9818873fd02ff7",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/f579544cf50fa130ce3c480e0e9818873fd02ff7",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/f579544cf50fa130ce3c480e0e9818873fd02ff7"
+    }
+  ],
+  "stats": {
+    "total": 4,
+    "additions": 4,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "358b12ca563d0f4fb9f09bf0e1656e7d71580dd9",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/403873f6665dea73251c15198fb1df8e28ca8aad/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/403873f6665dea73251c15198fb1df8e28ca8aad/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=403873f6665dea73251c15198fb1df8e28ca8aad",
+      "patch": "@@ -1979,6 +1979,8 @@ def acorr(self, x, **kwargs):\n         Parameters\n         ----------\n         x : array-like\n+            Not run through Matplotlib's unit conversion, so this should\n+            be a unit-less array.\n \n         detrend : callable, default: `.mlab.detrend_none` (no detrending)\n             A detrending function applied to *x*.  It must have the\n@@ -2056,6 +2058,8 @@ def xcorr(self, x, y, normed=True, detrend=mlab.detrend_none,\n         Parameters\n         ----------\n         x, y : array-like of length n\n+            Neither *x* nor *y* are run through Matplotlib's unit conversion, so\n+            these should be unit-less arrays.\n \n         detrend : callable, default: `.mlab.detrend_none` (no detrending)\n             A detrending function applied to *x* and *y*.  It must have the"
+    }
+  ]
+}

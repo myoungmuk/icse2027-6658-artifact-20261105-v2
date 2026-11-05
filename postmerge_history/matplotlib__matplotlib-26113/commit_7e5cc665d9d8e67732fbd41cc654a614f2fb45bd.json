@@ -1,0 +1,125 @@
+{
+  "sha": "7e5cc665d9d8e67732fbd41cc654a614f2fb45bd",
+  "node_id": "C_kwDOABUiotoAKDdlNWNjNjY1ZDlkOGU2NzczMmZiZDQxY2M2NTRhNjE0ZjJmYjQ1YmQ",
+  "commit": {
+    "author": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2023-08-30T20:51:01Z"
+    },
+    "committer": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2023-08-31T02:18:33Z"
+    },
+    "message": "TYP: Fix types of errorbar *lims arguments",
+    "tree": {
+      "sha": "743650cfac98ca9a4c3523b7daae821b80952e4d",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/743650cfac98ca9a4c3523b7daae821b80952e4d"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd/comments",
+  "author": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "e292197b34faae2b44240b48859380e115c7b518",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/e292197b34faae2b44240b48859380e115c7b518",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/e292197b34faae2b44240b48859380e115c7b518"
+    }
+  ],
+  "stats": {
+    "total": 18,
+    "additions": 9,
+    "deletions": 9
+  },
+  "files": [
+    {
+      "sha": "db0ffe0aaabd6047f216130c450f39121fb323cb",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=7e5cc665d9d8e67732fbd41cc654a614f2fb45bd",
+      "patch": "@@ -3436,7 +3436,7 @@ def errorbar(self, x, y, yerr=None, xerr=None,\n             If True, will plot the errorbars above the plot\n             symbols. Default is below.\n \n-        lolims, uplims, xlolims, xuplims : bool, default: False\n+        lolims, uplims, xlolims, xuplims : bool or array-like, default: False\n             These arguments can be used to indicate that a value gives only\n             upper/lower limits.  In that case a caret symbol is used to\n             indicate this. *lims*-arguments may be scalars, or array-likes of"
+    },
+    {
+      "sha": "6eeec5cae7fc974f81ca5d9380c95252b999878e",
+      "filename": "lib/matplotlib/axes/_axes.pyi",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "changes": 8,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.pyi?ref=7e5cc665d9d8e67732fbd41cc654a614f2fb45bd",
+      "patch": "@@ -332,10 +332,10 @@ class Axes(_AxesBase):\n         elinewidth: float | None = ...,\n         capsize: float | None = ...,\n         barsabove: bool = ...,\n-        lolims: bool = ...,\n-        uplims: bool = ...,\n-        xlolims: bool = ...,\n-        xuplims: bool = ...,\n+        lolims: bool | ArrayLike = ...,\n+        uplims: bool | ArrayLike = ...,\n+        xlolims: bool | ArrayLike = ...,\n+        xuplims: bool | ArrayLike = ...,\n         errorevery: int | tuple[int, int] = ...,\n         capthick: float | None = ...,\n         *,"
+    },
+    {
+      "sha": "95ddd9bd704511bce42cb494fe1212f26c3163f7",
+      "filename": "lib/matplotlib/pyplot.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "changes": 8,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd/lib%2Fmatplotlib%2Fpyplot.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/7e5cc665d9d8e67732fbd41cc654a614f2fb45bd/lib%2Fmatplotlib%2Fpyplot.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fpyplot.py?ref=7e5cc665d9d8e67732fbd41cc654a614f2fb45bd",
+      "patch": "@@ -2961,10 +2961,10 @@ def errorbar(\n     elinewidth: float | None = None,\n     capsize: float | None = None,\n     barsabove: bool = False,\n-    lolims: bool = False,\n-    uplims: bool = False,\n-    xlolims: bool = False,\n-    xuplims: bool = False,\n+    lolims: bool | ArrayLike = False,\n+    uplims: bool | ArrayLike = False,\n+    xlolims: bool | ArrayLike = False,\n+    xuplims: bool | ArrayLike = False,\n     errorevery: int | tuple[int, int] = 1,\n     capthick: float | None = None,\n     *,"
+    }
+  ]
+}

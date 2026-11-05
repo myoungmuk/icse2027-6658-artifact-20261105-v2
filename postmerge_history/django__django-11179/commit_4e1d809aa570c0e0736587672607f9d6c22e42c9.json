@@ -1,0 +1,101 @@
+{
+  "sha": "4e1d809aa570c0e0736587672607f9d6c22e42c9",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4Mjo0ZTFkODA5YWE1NzBjMGUwNzM2NTg3NjcyNjA3ZjlkNmMyMmU0MmM5",
+  "commit": {
+    "author": {
+      "name": "Daniel Izquierdo",
+      "email": "daniel@makeleaps.com",
+      "date": "2019-10-22T07:47:18Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2019-11-19T09:49:47Z"
+    },
+    "message": "Refs #27272 -- Added Collector.add_dependency().",
+    "tree": {
+      "sha": "c87e8b6c7cc2c7800069d5485b081b2c600bd3b7",
+      "url": "https://api.github.com/repos/django/django/git/trees/c87e8b6c7cc2c7800069d5485b081b2c600bd3b7"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/4e1d809aa570c0e0736587672607f9d6c22e42c9",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/4e1d809aa570c0e0736587672607f9d6c22e42c9",
+  "html_url": "https://github.com/django/django/commit/4e1d809aa570c0e0736587672607f9d6c22e42c9",
+  "comments_url": "https://api.github.com/repos/django/django/commits/4e1d809aa570c0e0736587672607f9d6c22e42c9/comments",
+  "author": {
+    "login": "izquierdo",
+    "id": 32795,
+    "node_id": "MDQ6VXNlcjMyNzk1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/32795?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/izquierdo",
+    "html_url": "https://github.com/izquierdo",
+    "followers_url": "https://api.github.com/users/izquierdo/followers",
+    "following_url": "https://api.github.com/users/izquierdo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/izquierdo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/izquierdo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/izquierdo/subscriptions",
+    "organizations_url": "https://api.github.com/users/izquierdo/orgs",
+    "repos_url": "https://api.github.com/users/izquierdo/repos",
+    "events_url": "https://api.github.com/users/izquierdo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/izquierdo/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "33eecfa7405ea997669f8edb61c596c3f295c793",
+      "url": "https://api.github.com/repos/django/django/commits/33eecfa7405ea997669f8edb61c596c3f295c793",
+      "html_url": "https://github.com/django/django/commit/33eecfa7405ea997669f8edb61c596c3f295c793"
+    }
+  ],
+  "stats": {
+    "total": 10,
+    "additions": 7,
+    "deletions": 3
+  },
+  "files": [
+    {
+      "sha": "3ad9ca0b358fd27cbba1286d8fa56947c588a760",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 3,
+      "changes": 10,
+      "blob_url": "https://github.com/django/django/blob/4e1d809aa570c0e0736587672607f9d6c22e42c9/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/4e1d809aa570c0e0736587672607f9d6c22e42c9/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=4e1d809aa570c0e0736587672607f9d6c22e42c9",
+      "patch": "@@ -102,11 +102,15 @@ def add(self, objs, source=None, nullable=False, reverse_dependency=False):\n         # deleting, and therefore do not affect the order in which objects have\n         # to be deleted.\n         if source is not None and not nullable:\n-            if reverse_dependency:\n-                source, model = model, source\n-            self.dependencies[source._meta.concrete_model].add(model._meta.concrete_model)\n+            self.add_dependency(source, model, reverse_dependency=reverse_dependency)\n         return new_objs\n \n+    def add_dependency(self, model, dependency, reverse_dependency=False):\n+        if reverse_dependency:\n+            model, dependency = dependency, model\n+        self.dependencies[model._meta.concrete_model].add(dependency._meta.concrete_model)\n+        self.data.setdefault(dependency, self.data.default_factory())\n+\n     def add_field_update(self, field, value, objs):\n         \"\"\"\n         Schedule a field update. 'objs' must be a homogeneous iterable"
+    }
+  ]
+}

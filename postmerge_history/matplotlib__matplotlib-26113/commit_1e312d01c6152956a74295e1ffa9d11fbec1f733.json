@@ -1,0 +1,113 @@
+{
+  "sha": "1e312d01c6152956a74295e1ffa9d11fbec1f733",
+  "node_id": "C_kwDOABUiotoAKDFlMzEyZDAxYzYxNTI5NTZhNzQyOTVlMWZmYTlkMTFmYmVjMWY3MzM",
+  "commit": {
+    "author": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-05-14T09:43:55Z"
+    },
+    "committer": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-05-15T04:10:02Z"
+    },
+    "message": "move rcparam setting to bxp & fix test",
+    "tree": {
+      "sha": "7b2b9ad0c6b516ab489e45adbf614e7efaec8fc3",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/7b2b9ad0c6b516ab489e45adbf614e7efaec8fc3"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/1e312d01c6152956a74295e1ffa9d11fbec1f733",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/1e312d01c6152956a74295e1ffa9d11fbec1f733",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/1e312d01c6152956a74295e1ffa9d11fbec1f733",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/1e312d01c6152956a74295e1ffa9d11fbec1f733/comments",
+  "author": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "10b7d657871a5670b0dea648027d12212cbb137c",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/10b7d657871a5670b0dea648027d12212cbb137c",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/10b7d657871a5670b0dea648027d12212cbb137c"
+    }
+  ],
+  "stats": {
+    "total": 19,
+    "additions": 10,
+    "deletions": 9
+  },
+  "files": [
+    {
+      "sha": "e7b484bc99a92197cf07feac1f697d7c4fd7af99",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 8,
+      "changes": 17,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/1e312d01c6152956a74295e1ffa9d11fbec1f733/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/1e312d01c6152956a74295e1ffa9d11fbec1f733/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=1e312d01c6152956a74295e1ffa9d11fbec1f733",
+      "patch": "@@ -3878,7 +3878,7 @@ def boxplot(self, x, notch=None, sym=None, vert=None,\n             the fliers.  If `None`, then the fliers default to 'b+'.  More\n             control is provided by the *flierprops* parameter.\n \n-        vert : bool, default: :rc:`boxplot.vertical`\n+        vert : bool, optional\n             .. deprecated:: 3.10\n                 Use *orientation* instead.\n \n@@ -4060,8 +4060,6 @@ def boxplot(self, x, notch=None, sym=None, vert=None,\n                                        labels=tick_labels, autorange=autorange)\n         if notch is None:\n             notch = mpl.rcParams['boxplot.notch']\n-        if vert is None:\n-            vert = mpl.rcParams['boxplot.vertical']\n         if patch_artist is None:\n             patch_artist = mpl.rcParams['boxplot.patchartist']\n         if meanline is None:\n@@ -4227,7 +4225,7 @@ def bxp(self, bxpstats, positions=None, widths=None, vert=None,\n             Either a scalar or a vector and sets the width of each cap.\n             The default is ``0.5*(width of the box)``, see *widths*.\n \n-        vert : bool, default: True\n+        vert : bool, optional\n             .. deprecated:: 3.10\n                 Use *orientation* instead.\n \n@@ -4361,14 +4359,17 @@ def merge_kw_rc(subkey, explicit, zdelta=0, usemarker=True):\n             mean_kw[removed_prop] = ''\n \n         # vert and orientation parameters are linked until vert's\n-        # deprecation period expires. vert only takes precedence and\n-        # raises a deprecation warning if set to False.\n-        if vert is False:\n+        # deprecation period expires. vert only takes precedence\n+        # if set to False.\n+        if vert is None:\n+            vert = mpl.rcParams['boxplot.vertical']\n+        else:\n             _api.warn_deprecated(\n                 \"3.10\",\n                 name=\"vert: bool\",\n                 alternative=\"orientation: {'vertical', 'horizontal'}\"\n-                )\n+            )\n+        if vert is False:\n             orientation = 'horizontal'\n         _api.check_in_list(['horizontal', 'vertical'], orientation=orientation)\n "
+    },
+    {
+      "sha": "ef0b7c7db29ece18e6394e6b8735727e0f34a482",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/1e312d01c6152956a74295e1ffa9d11fbec1f733/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/1e312d01c6152956a74295e1ffa9d11fbec1f733/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=1e312d01c6152956a74295e1ffa9d11fbec1f733",
+      "patch": "@@ -3186,7 +3186,7 @@ def _bxp_test_helper(\n     logstats = mpl.cbook.boxplot_stats(\n         np.random.lognormal(mean=1.25, sigma=1., size=(37, 4)), **stats_kwargs)\n     fig, ax = plt.subplots()\n-    if not bxp_kwargs.get('orientation') or bxp_kwargs.get('orientation') == 'vertical':\n+    if bxp_kwargs.get('orientation', 'vertical') == 'vertical':\n         ax.set_yscale('log')\n     else:\n         ax.set_xscale('log')"
+    }
+  ]
+}

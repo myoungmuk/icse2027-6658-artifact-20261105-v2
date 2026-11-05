@@ -1,0 +1,101 @@
+{
+  "sha": "39ef674508db5cae679be3a567a38e298054e445",
+  "node_id": "MDY6Q29tbWl0ODQzMjIyOjM5ZWY2NzQ1MDhkYjVjYWU2NzliZTNhNTY3YTM4ZTI5ODA1NGU0NDU=",
+  "commit": {
+    "author": {
+      "name": "Alexandre Gramfort",
+      "email": "alexandre.gramfort@m4x.org",
+      "date": "2019-02-26T17:12:04Z"
+    },
+    "committer": {
+      "name": "Guillaume Lemaitre",
+      "email": "g.lemaitre58@gmail.com",
+      "date": "2019-02-26T17:12:04Z"
+    },
+    "message": "DOC: specify that sample_weight is optional in in _multinomial_loss_* (#13281)",
+    "tree": {
+      "sha": "cd11424aefce94c95450e26b8139d2e07a0c4fa9",
+      "url": "https://api.github.com/repos/scikit-learn/scikit-learn/git/trees/cd11424aefce94c95450e26b8139d2e07a0c4fa9"
+    },
+    "url": "https://api.github.com/repos/scikit-learn/scikit-learn/git/commits/39ef674508db5cae679be3a567a38e298054e445",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/scikit-learn/scikit-learn/commits/39ef674508db5cae679be3a567a38e298054e445",
+  "html_url": "https://github.com/scikit-learn/scikit-learn/commit/39ef674508db5cae679be3a567a38e298054e445",
+  "comments_url": "https://api.github.com/repos/scikit-learn/scikit-learn/commits/39ef674508db5cae679be3a567a38e298054e445/comments",
+  "author": {
+    "login": "agramfort",
+    "id": 161052,
+    "node_id": "MDQ6VXNlcjE2MTA1Mg==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/161052?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/agramfort",
+    "html_url": "https://github.com/agramfort",
+    "followers_url": "https://api.github.com/users/agramfort/followers",
+    "following_url": "https://api.github.com/users/agramfort/following{/other_user}",
+    "gists_url": "https://api.github.com/users/agramfort/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/agramfort/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/agramfort/subscriptions",
+    "organizations_url": "https://api.github.com/users/agramfort/orgs",
+    "repos_url": "https://api.github.com/users/agramfort/repos",
+    "events_url": "https://api.github.com/users/agramfort/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/agramfort/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "glemaitre",
+    "id": 7454015,
+    "node_id": "MDQ6VXNlcjc0NTQwMTU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/7454015?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/glemaitre",
+    "html_url": "https://github.com/glemaitre",
+    "followers_url": "https://api.github.com/users/glemaitre/followers",
+    "following_url": "https://api.github.com/users/glemaitre/following{/other_user}",
+    "gists_url": "https://api.github.com/users/glemaitre/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/glemaitre/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/glemaitre/subscriptions",
+    "organizations_url": "https://api.github.com/users/glemaitre/orgs",
+    "repos_url": "https://api.github.com/users/glemaitre/repos",
+    "events_url": "https://api.github.com/users/glemaitre/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/glemaitre/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "0f09297cdecad703d8cae6c4fd20252fbaf74a24",
+      "url": "https://api.github.com/repos/scikit-learn/scikit-learn/commits/0f09297cdecad703d8cae6c4fd20252fbaf74a24",
+      "html_url": "https://github.com/scikit-learn/scikit-learn/commit/0f09297cdecad703d8cae6c4fd20252fbaf74a24"
+    }
+  ],
+  "stats": {
+    "total": 7,
+    "additions": 3,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "ad75556b032999f0dbcfb58963771667a251ee08",
+      "filename": "sklearn/linear_model/logistic.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 4,
+      "changes": 7,
+      "blob_url": "https://github.com/scikit-learn/scikit-learn/blob/39ef674508db5cae679be3a567a38e298054e445/sklearn%2Flinear_model%2Flogistic.py",
+      "raw_url": "https://github.com/scikit-learn/scikit-learn/raw/39ef674508db5cae679be3a567a38e298054e445/sklearn%2Flinear_model%2Flogistic.py",
+      "contents_url": "https://api.github.com/repos/scikit-learn/scikit-learn/contents/sklearn%2Flinear_model%2Flogistic.py?ref=39ef674508db5cae679be3a567a38e298054e445",
+      "patch": "@@ -260,9 +260,8 @@ def _multinomial_loss(w, X, Y, alpha, sample_weight):\n     alpha : float\n         Regularization parameter. alpha is equal to 1 / C.\n \n-    sample_weight : array-like, shape (n_samples,) optional\n+    sample_weight : array-like, shape (n_samples,)\n         Array of weights that are assigned to individual samples.\n-        If not provided, then each sample is given unit weight.\n \n     Returns\n     -------\n@@ -317,7 +316,7 @@ def _multinomial_loss_grad(w, X, Y, alpha, sample_weight):\n     alpha : float\n         Regularization parameter. alpha is equal to 1 / C.\n \n-    sample_weight : array-like, shape (n_samples,) optional\n+    sample_weight : array-like, shape (n_samples,)\n         Array of weights that are assigned to individual samples.\n \n     Returns\n@@ -371,7 +370,7 @@ def _multinomial_grad_hess(w, X, Y, alpha, sample_weight):\n     alpha : float\n         Regularization parameter. alpha is equal to 1 / C.\n \n-    sample_weight : array-like, shape (n_samples,) optional\n+    sample_weight : array-like, shape (n_samples,)\n         Array of weights that are assigned to individual samples.\n \n     Returns"
+    }
+  ]
+}

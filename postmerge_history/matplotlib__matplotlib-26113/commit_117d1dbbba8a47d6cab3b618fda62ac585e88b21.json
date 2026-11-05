@@ -1,0 +1,149 @@
+{
+  "sha": "117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+  "node_id": "C_kwDOABUiotoAKDExN2QxZGJiYmE4YTQ3ZDZjYWIzYjYxOGZkYTYyYWM1ODVlODhiMjE",
+  "commit": {
+    "author": {
+      "name": "Tim Hoffmann",
+      "email": "2836374+timhoffm@users.noreply.github.com",
+      "date": "2024-03-13T21:36:00Z"
+    },
+    "committer": {
+      "name": "Tim Hoffmann",
+      "email": "2836374+timhoffm@users.noreply.github.com",
+      "date": "2024-03-15T08:37:04Z"
+    },
+    "message": "Revert renaming labels to tick_labels in boxplot_stats()\n\nThis is up for debate: I'm only +0.2 here.\n\nThe renaming was done in #27901, which renamed the parameter `labels`\nto `tick_labels` for `boxplot()` and `bxp()`.\n\nOne can take two views here:\n\n- If `boxplot_stats()` is specifically for the input of `bxp()`, one\n  can justify the renaming as being consistent with the `bxp()`\n  signature. Note however, that the returned dict still\n  contains the key \"label\" for back-compatibility. So that brings us\n  an inconsistency between the parameter name and the returned dict key.\n\n- One can alternatively view `boxplot_stats()` as a generic function to\n  define box parameters. Here, we'd only have a general `label` for\n  the boy and no information that this should be used as tick\n  label.\n\nIf we could make a clean transition and also rename the dict key, I\nwould tend to go with the first view. But the inevitable inconsistency\nof the fist view let's me sway towards the second view, so that with\nthe revert, we've effectively not touched `boxplot_stats()`.",
+    "tree": {
+      "sha": "ce0bbba5ca4c11029d8f2a6f39fa6f4a70895c60",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/ce0bbba5ca4c11029d8f2a6f39fa6f4a70895c60"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/117d1dbbba8a47d6cab3b618fda62ac585e88b21/comments",
+  "author": {
+    "login": "timhoffm",
+    "id": 2836374,
+    "node_id": "MDQ6VXNlcjI4MzYzNzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2836374?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/timhoffm",
+    "html_url": "https://github.com/timhoffm",
+    "followers_url": "https://api.github.com/users/timhoffm/followers",
+    "following_url": "https://api.github.com/users/timhoffm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/timhoffm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/timhoffm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/timhoffm/subscriptions",
+    "organizations_url": "https://api.github.com/users/timhoffm/orgs",
+    "repos_url": "https://api.github.com/users/timhoffm/repos",
+    "events_url": "https://api.github.com/users/timhoffm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/timhoffm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "timhoffm",
+    "id": 2836374,
+    "node_id": "MDQ6VXNlcjI4MzYzNzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2836374?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/timhoffm",
+    "html_url": "https://github.com/timhoffm",
+    "followers_url": "https://api.github.com/users/timhoffm/followers",
+    "following_url": "https://api.github.com/users/timhoffm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/timhoffm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/timhoffm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/timhoffm/subscriptions",
+    "organizations_url": "https://api.github.com/users/timhoffm/orgs",
+    "repos_url": "https://api.github.com/users/timhoffm/repos",
+    "events_url": "https://api.github.com/users/timhoffm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/timhoffm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "1c4c9af3ab6e4fa9cb5843b39a13b9e2131f9901",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/1c4c9af3ab6e4fa9cb5843b39a13b9e2131f9901",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/1c4c9af3ab6e4fa9cb5843b39a13b9e2131f9901"
+    }
+  ],
+  "stats": {
+    "total": 30,
+    "additions": 12,
+    "deletions": 18
+  },
+  "files": [
+    {
+      "sha": "d78747523325e07fe806b540fc74e688a135d590",
+      "filename": "galleries/examples/statistics/bxp.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/117d1dbbba8a47d6cab3b618fda62ac585e88b21/galleries%2Fexamples%2Fstatistics%2Fbxp.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/117d1dbbba8a47d6cab3b618fda62ac585e88b21/galleries%2Fexamples%2Fstatistics%2Fbxp.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/galleries%2Fexamples%2Fstatistics%2Fbxp.py?ref=117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+      "patch": "@@ -25,7 +25,7 @@\n labels = list('ABCD')\n \n # compute the boxplot stats\n-stats = cbook.boxplot_stats(data, tick_labels=labels, bootstrap=10000)\n+stats = cbook.boxplot_stats(data, labels=labels, bootstrap=10000)\n \n # %%\n # After we've computed the stats, we can go through and change anything."
+    },
+    {
+      "sha": "469facce310186e2cf78570a2bd8cf9b4a9f19fc",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/117d1dbbba8a47d6cab3b618fda62ac585e88b21/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/117d1dbbba8a47d6cab3b618fda62ac585e88b21/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+      "patch": "@@ -4001,7 +4001,7 @@ def boxplot(self, x, notch=None, sym=None, vert=None, whis=None,\n             bootstrap = mpl.rcParams['boxplot.bootstrap']\n \n         bxpstats = cbook.boxplot_stats(x, whis=whis, bootstrap=bootstrap,\n-                                       tick_labels=tick_labels, autorange=autorange)\n+                                       labels=tick_labels, autorange=autorange)\n         if notch is None:\n             notch = mpl.rcParams['boxplot.notch']\n         if vert is None:"
+    },
+    {
+      "sha": "ee043f351dbb5ba415df2ba3e480ff44f67452c1",
+      "filename": "lib/matplotlib/cbook.py",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 13,
+      "changes": 20,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/117d1dbbba8a47d6cab3b618fda62ac585e88b21/lib%2Fmatplotlib%2Fcbook.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/117d1dbbba8a47d6cab3b618fda62ac585e88b21/lib%2Fmatplotlib%2Fcbook.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fcbook.py?ref=117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+      "patch": "@@ -1126,9 +1126,7 @@ def _broadcast_with_masks(*args, compress=False):\n     return inputs\n \n \n-@_api.rename_parameter(\"3.9\", \"labels\", \"tick_labels\")\n-def boxplot_stats(X, whis=1.5, bootstrap=None, tick_labels=None,\n-                  autorange=False):\n+def boxplot_stats(X, whis=1.5, bootstrap=None, labels=None, autorange=False):\n     r\"\"\"\n     Return a list of dictionaries of statistics used to draw a series of box\n     and whisker plots using `~.Axes.bxp`.\n@@ -1162,14 +1160,10 @@ def boxplot_stats(X, whis=1.5, bootstrap=None, tick_labels=None,\n         Number of times the confidence intervals around the median\n         should be bootstrapped (percentile method).\n \n-    tick_labels : array-like, optional\n+    labels : list of str, optional\n         Labels for each dataset. Length must be compatible with\n         dimensions of *X*.\n \n-        .. versionchanged:: 3.9\n-            Renamed from *labels*, which is deprecated since 3.9\n-            and will be removed in 3.11.\n-\n     autorange : bool, optional (False)\n         When `True` and the data are distributed such that the 25th and 75th\n         percentiles are equal, ``whis`` is set to (0, 100) such that the\n@@ -1245,13 +1239,13 @@ def _compute_conf_interval(data, med, iqr, bootstrap):\n     X = _reshape_2D(X, \"X\")\n \n     ncols = len(X)\n-    if tick_labels is None:\n-        tick_labels = itertools.repeat(None)\n-    elif len(tick_labels) != ncols:\n-        raise ValueError(\"Dimensions of tick_labels and X must be compatible\")\n+    if labels is None:\n+        labels = itertools.repeat(None)\n+    elif len(labels) != ncols:\n+        raise ValueError(\"Dimensions of labels and X must be compatible\")\n \n     input_whis = whis\n-    for ii, (x, label) in enumerate(zip(X, tick_labels)):\n+    for ii, (x, label) in enumerate(zip(X, labels)):\n \n         # empty dict\n         stats = {}"
+    },
+    {
+      "sha": "c60ae0781af174eabfb3cbc21ef45945a79ecb5f",
+      "filename": "lib/matplotlib/cbook.pyi",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/117d1dbbba8a47d6cab3b618fda62ac585e88b21/lib%2Fmatplotlib%2Fcbook.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/117d1dbbba8a47d6cab3b618fda62ac585e88b21/lib%2Fmatplotlib%2Fcbook.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fcbook.pyi?ref=117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+      "patch": "@@ -135,7 +135,7 @@ def boxplot_stats(\n     X: ArrayLike,\n     whis: float | tuple[float, float] = ...,\n     bootstrap: int | None = ...,\n-    tick_labels: ArrayLike | None = ...,\n+    labels: ArrayLike | None = ...,\n     autorange: bool = ...,\n ) -> list[dict[str, Any]]: ...\n "
+    },
+    {
+      "sha": "fbd9746a0e217b4dc2325714e1fb82720b4460a4",
+      "filename": "lib/matplotlib/tests/test_cbook.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/117d1dbbba8a47d6cab3b618fda62ac585e88b21/lib%2Fmatplotlib%2Ftests%2Ftest_cbook.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/117d1dbbba8a47d6cab3b618fda62ac585e88b21/lib%2Fmatplotlib%2Ftests%2Ftest_cbook.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_cbook.py?ref=117d1dbbba8a47d6cab3b618fda62ac585e88b21",
+      "patch": "@@ -147,7 +147,7 @@ def test_results_whiskers_percentiles(self):\n \n     def test_results_withlabels(self):\n         labels = ['Test1', 2, 'Aardvark', 4]\n-        results = cbook.boxplot_stats(self.data, tick_labels=labels)\n+        results = cbook.boxplot_stats(self.data, labels=labels)\n         for lab, res in zip(labels, results):\n             assert res['label'] == lab\n \n@@ -158,7 +158,7 @@ def test_results_withlabels(self):\n     def test_label_error(self):\n         labels = [1, 2]\n         with pytest.raises(ValueError):\n-            cbook.boxplot_stats(self.data, tick_labels=labels)\n+            cbook.boxplot_stats(self.data, labels=labels)\n \n     def test_bad_dims(self):\n         data = np.random.normal(size=(34, 34, 34))"
+    }
+  ]
+}

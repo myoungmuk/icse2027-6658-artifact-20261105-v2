@@ -1,0 +1,61 @@
+{
+  "sha": "68dad00be28d8c6a036f03cb4c35bc386c1e214d",
+  "node_id": "C_kwDOABUiotoAKDY4ZGFkMDBiZTI4ZDhjNmEwMzZmMDNjYjRjMzViYzM4NmMxZTIxNGQ",
+  "commit": {
+    "author": {
+      "name": "Yi Wei",
+      "email": "rylie.wei@tum.de",
+      "date": "2023-06-30T16:39:08Z"
+    },
+    "committer": {
+      "name": "Yi Wei",
+      "email": "rylie.wei@tum.de",
+      "date": "2023-06-30T16:39:08Z"
+    },
+    "message": "check if the mask is unwritable",
+    "tree": {
+      "sha": "1aa5715898974292060652abe3684a0136e3fc78",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/1aa5715898974292060652abe3684a0136e3fc78"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/68dad00be28d8c6a036f03cb4c35bc386c1e214d",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/68dad00be28d8c6a036f03cb4c35bc386c1e214d",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/68dad00be28d8c6a036f03cb4c35bc386c1e214d",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/68dad00be28d8c6a036f03cb4c35bc386c1e214d/comments",
+  "author": null,
+  "committer": null,
+  "parents": [
+    {
+      "sha": "a9d9eaf1853349dd6acb7131eebfd53f681249d0",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/a9d9eaf1853349dd6acb7131eebfd53f681249d0",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/a9d9eaf1853349dd6acb7131eebfd53f681249d0"
+    }
+  ],
+  "stats": {
+    "total": 9,
+    "additions": 7,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "821d7d5e25bc2a9d682d6670b36dbfac48acdaf6",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 2,
+      "changes": 9,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/68dad00be28d8c6a036f03cb4c35bc386c1e214d/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/68dad00be28d8c6a036f03cb4c35bc386c1e214d/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=68dad00be28d8c6a036f03cb4c35bc386c1e214d",
+      "patch": "@@ -5740,6 +5740,9 @@ def imshow(self, X, cmap=None, norm=None, *, aspect=None,\n         self.add_image(im)\n         return im\n \n+    def _is_unwritable(self, c):\n+        return np.ma.is_masked(c) and not c.mask.flags.writeable\n+\n     def _pcolorargs(self, funcname, *args, shading='auto', **kwargs):\n         # - create X and Y if not present;\n         # - reshape X and Y as needed if they are 1-D;\n@@ -5764,7 +5767,8 @@ def _pcolorargs(self, funcname, *args, shading='auto', **kwargs):\n             else:\n                 X, Y = np.meshgrid(np.arange(ncols + 1), np.arange(nrows + 1))\n                 shading = 'flat'\n-            C = cbook.safe_masked_invalid(C, copy=True)\n+            copy = self._is_unwritable(C)\n+            C = cbook.safe_masked_invalid(C, copy=copy)\n             return X, Y, C, shading\n \n         if len(args) == 3:\n@@ -5853,7 +5857,8 @@ def _interp_grid(X):\n                     Y = _interp_grid(Y.T).T\n                 shading = 'flat'\n \n-        C = cbook.safe_masked_invalid(C, copy=True)\n+        copy = self._is_unwritable(C)\n+        C = cbook.safe_masked_invalid(C, copy=copy)\n         return X, Y, C, shading\n \n     @_preprocess_data()"
+    }
+  ]
+}

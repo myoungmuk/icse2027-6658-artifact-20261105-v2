@@ -1,0 +1,73 @@
+{
+  "sha": "616be00d7fc2caf0ae47ba344e109dbc36c2e9c0",
+  "node_id": "C_kwDOABUiotoAKDYxNmJlMDBkN2ZjMmNhZjBhZTQ3YmEzNDRlMTA5ZGJjMzZjMmU5YzA",
+  "commit": {
+    "author": {
+      "name": "Yi Wei",
+      "email": "rylie.wei@tum.de",
+      "date": "2023-06-30T13:39:46Z"
+    },
+    "committer": {
+      "name": "Yi Wei",
+      "email": "rylie.wei@tum.de",
+      "date": "2023-06-30T13:39:46Z"
+    },
+    "message": "FIX: pcolormesh writing to read-only input mask",
+    "tree": {
+      "sha": "1cc3ef6db6ed64c42bde1ca807911a88fb09dff6",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/1cc3ef6db6ed64c42bde1ca807911a88fb09dff6"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/616be00d7fc2caf0ae47ba344e109dbc36c2e9c0",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/616be00d7fc2caf0ae47ba344e109dbc36c2e9c0",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/616be00d7fc2caf0ae47ba344e109dbc36c2e9c0",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/616be00d7fc2caf0ae47ba344e109dbc36c2e9c0/comments",
+  "author": null,
+  "committer": null,
+  "parents": [
+    {
+      "sha": "3405fa7885f138753a1a6b344ade7f2aecc1033b",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/3405fa7885f138753a1a6b344ade7f2aecc1033b",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/3405fa7885f138753a1a6b344ade7f2aecc1033b"
+    }
+  ],
+  "stats": {
+    "total": 6,
+    "additions": 3,
+    "deletions": 3
+  },
+  "files": [
+    {
+      "sha": "cbfa5d644e2a40c5a39ede38514f912432612002",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/616be00d7fc2caf0ae47ba344e109dbc36c2e9c0/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/616be00d7fc2caf0ae47ba344e109dbc36c2e9c0/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=616be00d7fc2caf0ae47ba344e109dbc36c2e9c0",
+      "patch": "@@ -5764,7 +5764,7 @@ def _pcolorargs(self, funcname, *args, shading='auto', **kwargs):\n             else:\n                 X, Y = np.meshgrid(np.arange(ncols + 1), np.arange(nrows + 1))\n                 shading = 'flat'\n-            C = cbook.safe_masked_invalid(C)\n+            C = cbook.safe_masked_invalid(C, copy=True)\n             return X, Y, C, shading\n \n         if len(args) == 3:\n@@ -5853,7 +5853,7 @@ def _interp_grid(X):\n                     Y = _interp_grid(Y.T).T\n                 shading = 'flat'\n \n-        C = cbook.safe_masked_invalid(C)\n+        C = cbook.safe_masked_invalid(C, copy=True)\n         return X, Y, C, shading\n \n     @_preprocess_data()"
+    },
+    {
+      "sha": "87656b5c3c0093d4f92c188ac636c6f8c74d0cdb",
+      "filename": "lib/matplotlib/cbook.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/616be00d7fc2caf0ae47ba344e109dbc36c2e9c0/lib%2Fmatplotlib%2Fcbook.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/616be00d7fc2caf0ae47ba344e109dbc36c2e9c0/lib%2Fmatplotlib%2Fcbook.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fcbook.py?ref=616be00d7fc2caf0ae47ba344e109dbc36c2e9c0",
+      "patch": "@@ -668,7 +668,7 @@ def remove(self, o):\n                 self.push(elem)\n \n \n-def safe_masked_invalid(x, copy=True):\n+def safe_masked_invalid(x, copy=False):\n     x = np.array(x, subok=True, copy=copy)\n     if not x.dtype.isnative:\n         # If we have already made a copy, do the byteswap in place, else make a"
+    }
+  ]
+}

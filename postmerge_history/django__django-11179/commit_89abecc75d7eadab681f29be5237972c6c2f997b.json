@@ -1,0 +1,221 @@
+{
+  "sha": "89abecc75d7eadab681f29be5237972c6c2f997b",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4Mjo4OWFiZWNjNzVkN2VhZGFiNjgxZjI5YmU1MjM3OTcyYzZjMmY5OTdi",
+  "commit": {
+    "author": {
+      "name": "Daniel Izquierdo",
+      "email": "daniel@makeleaps.com",
+      "date": "2016-10-10T07:23:35Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2019-11-19T09:55:05Z"
+    },
+    "message": "Fixed #27272 -- Added an on_delete RESTRICT handler to allow cascading deletions while protecting direct ones.",
+    "tree": {
+      "sha": "0f0f5bcf8480308dec2899536ae9ce11b3bb555a",
+      "url": "https://api.github.com/repos/django/django/git/trees/0f0f5bcf8480308dec2899536ae9ce11b3bb555a"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/89abecc75d7eadab681f29be5237972c6c2f997b",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/89abecc75d7eadab681f29be5237972c6c2f997b",
+  "html_url": "https://github.com/django/django/commit/89abecc75d7eadab681f29be5237972c6c2f997b",
+  "comments_url": "https://api.github.com/repos/django/django/commits/89abecc75d7eadab681f29be5237972c6c2f997b/comments",
+  "author": {
+    "login": "izquierdo",
+    "id": 32795,
+    "node_id": "MDQ6VXNlcjMyNzk1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/32795?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/izquierdo",
+    "html_url": "https://github.com/izquierdo",
+    "followers_url": "https://api.github.com/users/izquierdo/followers",
+    "following_url": "https://api.github.com/users/izquierdo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/izquierdo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/izquierdo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/izquierdo/subscriptions",
+    "organizations_url": "https://api.github.com/users/izquierdo/orgs",
+    "repos_url": "https://api.github.com/users/izquierdo/repos",
+    "events_url": "https://api.github.com/users/izquierdo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/izquierdo/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "4e1d809aa570c0e0736587672607f9d6c22e42c9",
+      "url": "https://api.github.com/repos/django/django/commits/4e1d809aa570c0e0736587672607f9d6c22e42c9",
+      "html_url": "https://github.com/django/django/commit/4e1d809aa570c0e0736587672607f9d6c22e42c9"
+    }
+  ],
+  "stats": {
+    "total": 323,
+    "additions": 306,
+    "deletions": 17
+  },
+  "files": [
+    {
+      "sha": "06f85d41f9aa590765c7677fa96be815e3910f4d",
+      "filename": "django/contrib/admin/utils.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/django%2Fcontrib%2Fadmin%2Futils.py",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/django%2Fcontrib%2Fadmin%2Futils.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fcontrib%2Fadmin%2Futils.py?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -181,6 +181,8 @@ def collect(self, objs, source=None, source_attr=None, **kwargs):\n             return super().collect(objs, source_attr=source_attr, **kwargs)\n         except models.ProtectedError as e:\n             self.protected.update(e.protected_objects)\n+        except models.RestrictedError as e:\n+            self.protected.update(e.restricted_objects)\n \n     def related_objects(self, related_model, related_fields, objs):\n         qs = super().related_objects(related_model, related_fields, objs)"
+    },
+    {
+      "sha": "06bd72f8b98efc0d5065dd5831e14070c784fead",
+      "filename": "django/db/models/__init__.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 3,
+      "changes": 7,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/django%2Fdb%2Fmodels%2F__init__.py",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/django%2Fdb%2Fmodels%2F__init__.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2F__init__.py?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -5,7 +5,8 @@\n from django.db.models.constraints import *  # NOQA\n from django.db.models.constraints import __all__ as constraints_all\n from django.db.models.deletion import (\n-    CASCADE, DO_NOTHING, PROTECT, SET, SET_DEFAULT, SET_NULL, ProtectedError,\n+    CASCADE, DO_NOTHING, PROTECT, RESTRICT, SET, SET_DEFAULT, SET_NULL,\n+    ProtectedError, RestrictedError,\n )\n from django.db.models.enums import *  # NOQA\n from django.db.models.enums import __all__ as enums_all\n@@ -37,8 +38,8 @@\n __all__ = aggregates_all + constraints_all + enums_all + fields_all + indexes_all\n __all__ += [\n     'ObjectDoesNotExist', 'signals',\n-    'CASCADE', 'DO_NOTHING', 'PROTECT', 'SET', 'SET_DEFAULT', 'SET_NULL',\n-    'ProtectedError',\n+    'CASCADE', 'DO_NOTHING', 'PROTECT', 'RESTRICT', 'SET', 'SET_DEFAULT',\n+    'SET_NULL', 'ProtectedError', 'RestrictedError',\n     'Case', 'Exists', 'Expression', 'ExpressionList', 'ExpressionWrapper', 'F',\n     'Func', 'OuterRef', 'RowRange', 'Subquery', 'Value', 'ValueRange', 'When',\n     'Window', 'WindowFrame',"
+    },
+    {
+      "sha": "603411cfc8395f468d62052aa33bd22dcbf5f8bd",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 69,
+      "deletions": 5,
+      "changes": 74,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -14,9 +14,17 @@ def __init__(self, msg, protected_objects):\n         super().__init__(msg, protected_objects)\n \n \n+class RestrictedError(IntegrityError):\n+    def __init__(self, msg, restricted_objects):\n+        self.restricted_objects = restricted_objects\n+        super().__init__(msg, restricted_objects)\n+\n+\n def CASCADE(collector, field, sub_objs, using):\n-    collector.collect(sub_objs, source=field.remote_field.model,\n-                      source_attr=field.name, nullable=field.null)\n+    collector.collect(\n+        sub_objs, source=field.remote_field.model, source_attr=field.name,\n+        nullable=field.null, fail_on_restricted=False,\n+    )\n     if field.null and not connections[using].features.can_defer_constraint_checks:\n         collector.add_field_update(field, None, sub_objs)\n \n@@ -31,6 +39,11 @@ def PROTECT(collector, field, sub_objs, using):\n     )\n \n \n+def RESTRICT(collector, field, sub_objs, using):\n+    collector.add_restricted_objects(field, sub_objs)\n+    collector.add_dependency(field.remote_field.model, field.model)\n+\n+\n def SET(value):\n     if callable(value):\n         def set_on_delete(collector, field, sub_objs, using):\n@@ -70,6 +83,8 @@ def __init__(self, using):\n         self.data = defaultdict(set)\n         # {model: {(field, value): {instances}}}\n         self.field_updates = defaultdict(partial(defaultdict, set))\n+        # {model: {field: {instances}}}\n+        self.restricted_objects = defaultdict(partial(defaultdict, set))\n         # fast_deletes is a list of queryset-likes that can be deleted without\n         # fetching the objects into memory.\n         self.fast_deletes = []\n@@ -121,6 +136,26 @@ def add_field_update(self, field, value, objs):\n         model = objs[0].__class__\n         self.field_updates[model][field, value].update(objs)\n \n+    def add_restricted_objects(self, field, objs):\n+        if objs:\n+            model = objs[0].__class__\n+            self.restricted_objects[model][field].update(objs)\n+\n+    def clear_restricted_objects_from_set(self, model, objs):\n+        if model in self.restricted_objects:\n+            self.restricted_objects[model] = {\n+                field: items - objs\n+                for field, items in self.restricted_objects[model].items()\n+            }\n+\n+    def clear_restricted_objects_from_queryset(self, model, qs):\n+        if model in self.restricted_objects:\n+            objs = set(qs.filter(pk__in=[\n+                obj.pk\n+                for objs in self.restricted_objects[model].values() for obj in objs\n+            ]))\n+            self.clear_restricted_objects_from_set(model, objs)\n+\n     def _has_signal_listeners(self, model):\n         return (\n             signals.pre_delete.has_listeners(model) or\n@@ -177,7 +212,8 @@ def get_del_batches(self, objs, fields):\n             return [objs]\n \n     def collect(self, objs, source=None, nullable=False, collect_related=True,\n-                source_attr=None, reverse_dependency=False, keep_parents=False):\n+                source_attr=None, reverse_dependency=False, keep_parents=False,\n+                fail_on_restricted=True):\n         \"\"\"\n         Add 'objs' to the collection of objects to be deleted as well as all\n         parent instances.  'objs' must be a homogeneous iterable collection of\n@@ -194,6 +230,12 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n         direction of an FK rather than the reverse direction.)\n \n         If 'keep_parents' is True, data of parent model's will be not deleted.\n+\n+        If 'fail_on_restricted' is False, error won't be raised even if it's\n+        prohibited to delete such objects due to RESTRICT, that defers\n+        restricted object checking in recursive calls where the top-level call\n+        may need to collect more objects to determine whether restricted ones\n+        can be deleted.\n         \"\"\"\n         if self.can_fast_delete(objs):\n             self.fast_deletes.append(objs)\n@@ -215,7 +257,8 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                     self.collect(parent_objs, source=model,\n                                  source_attr=ptr.remote_field.related_name,\n                                  collect_related=False,\n-                                 reverse_dependency=True)\n+                                 reverse_dependency=True,\n+                                 fail_on_restricted=False)\n         if not collect_related:\n             return\n \n@@ -259,7 +302,28 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n             if hasattr(field, 'bulk_related_objects'):\n                 # It's something like generic foreign key.\n                 sub_objs = field.bulk_related_objects(new_objs, self.using)\n-                self.collect(sub_objs, source=model, nullable=True)\n+                self.collect(sub_objs, source=model, nullable=True, fail_on_restricted=False)\n+\n+        if fail_on_restricted:\n+            # Raise an error if collected restricted objects (RESTRICT) aren't\n+            # candidates for deletion also collected via CASCADE.\n+            for model, instances in self.data.items():\n+                self.clear_restricted_objects_from_set(model, instances)\n+            for qs in self.fast_deletes:\n+                self.clear_restricted_objects_from_queryset(qs.model, qs)\n+            for model, fields in self.restricted_objects.items():\n+                for field, objs in fields.items():\n+                    for obj in objs:\n+                        raise RestrictedError(\n+                            \"Cannot delete some instances of model '%s' \"\n+                            \"because they are referenced through a restricted \"\n+                            \"foreign key: '%s.%s'.\" % (\n+                                field.remote_field.model.__name__,\n+                                obj.__class__.__name__,\n+                                field.name,\n+                            ),\n+                            objs,\n+                        )\n \n     def related_objects(self, related_model, related_fields, objs):\n         \"\"\""
+    },
+    {
+      "sha": "34fec861e1641ddc55603fa5cde9d1db55102407",
+      "filename": "docs/ref/exceptions.txt",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 0,
+      "changes": 6,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/docs%2Fref%2Fexceptions.txt",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/docs%2Fref%2Fexceptions.txt",
+      "contents_url": "https://api.github.com/repos/django/django/contents/docs%2Fref%2Fexceptions.txt?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -255,6 +255,12 @@ Raised to prevent deletion of referenced objects when using\n :attr:`django.db.models.PROTECT`. :exc:`models.ProtectedError` is a subclass\n of :exc:`IntegrityError`.\n \n+.. exception:: models.RestrictedError\n+\n+Raised to prevent deletion of referenced objects when using\n+:attr:`django.db.models.RESTRICT`. :exc:`models.RestrictedError` is a subclass\n+of :exc:`IntegrityError`.\n+\n .. currentmodule:: django.http\n \n Http Exceptions"
+    },
+    {
+      "sha": "d321506d996a9f05188821c17f9b6f2aadbf5234",
+      "filename": "docs/ref/models/fields.txt",
+      "status": "modified",
+      "additions": 40,
+      "deletions": 0,
+      "changes": 40,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/docs%2Fref%2Fmodels%2Ffields.txt",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/docs%2Fref%2Fmodels%2Ffields.txt",
+      "contents_url": "https://api.github.com/repos/django/django/contents/docs%2Fref%2Fmodels%2Ffields.txt?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -1470,6 +1470,46 @@ The possible values for :attr:`~ForeignKey.on_delete` are found in\n     :exc:`~django.db.models.ProtectedError`, a subclass of\n     :exc:`django.db.IntegrityError`.\n \n+* .. attribute:: RESTRICT\n+\n+    .. versionadded:: 3.1\n+\n+    Prevent deletion of the referenced object by raising\n+    :exc:`~django.db.models.RestrictedError` (a subclass of\n+    :exc:`django.db.IntegrityError`). Unlike :attr:`PROTECT`, deletion of the\n+    referenced object is allowed if it also references a different object\n+    that is being deleted in the same operation, but via a :attr:`CASCADE`\n+    relationship.\n+\n+    Consider this set of models::\n+\n+        class Artist(models.Model):\n+            name = models.CharField(max_length=10)\n+\n+        class Album(models.Model):\n+            artist = models.ForeignKey(Artist, on_delete=models.CASCADE)\n+\n+        class Song(models.Model):\n+            artist = models.ForeignKey(Artist, on_delete=models.CASCADE)\n+            album = models.ForeignKey(Album, on_delete=models.RESTRICT)\n+\n+    ``Artist`` can be deleted even if that implies deleting an ``Album``\n+    which is referenced by a ``Song``, because ``Song`` also references\n+    ``Artist`` itself through a cascading relationship. For example::\n+\n+        >>> artist_one = Artist.objects.create(name='artist one')\n+        >>> artist_two = Artist.objects.create(name='artist two')\n+        >>> album_one = Album.objects.create(artist=artist_one)\n+        >>> album_two = Album.objects.create(artist=artist_two)\n+        >>> song_one = Song.objects.create(artist=artist_one, album=album_one)\n+        >>> song_two = Song.objects.create(artist=artist_one, album=album_two)\n+        >>> album_one.delete()\n+        # Raises RestrictedError.\n+        >>> artist_two.delete()\n+        # Raises RestrictedError.\n+        >>> artist_one.delete()\n+        (4, {'Song': 2, 'Album': 1, 'Artist': 1})\n+\n * .. attribute:: SET_NULL\n \n     Set the :class:`ForeignKey` null; this is only possible if"
+    },
+    {
+      "sha": "14e00bdf560d442cc20e443804af8f5ef75025c7",
+      "filename": "docs/releases/3.1.txt",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 0,
+      "changes": 5,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/docs%2Freleases%2F3.1.txt",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/docs%2Freleases%2F3.1.txt",
+      "contents_url": "https://api.github.com/repos/django/django/contents/docs%2Freleases%2F3.1.txt?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -199,6 +199,11 @@ Models\n   values under a certain (database-dependent) limit. Values from ``0`` to\n   ``9223372036854775807`` are safe in all databases supported by Django.\n \n+* The new :class:`~django.db.models.RESTRICT` option for\n+  :attr:`~django.db.models.ForeignKey.on_delete` argument of ``ForeignKey`` and\n+  ``OneToOneField`` emulates the behavior of the SQL constraint ``ON DELETE\n+  RESTRICT``.\n+\n Pagination\n ~~~~~~~~~~\n "
+    },
+    {
+      "sha": "6a11d5b9bb0602d2b333d25dfb8573578965efea",
+      "filename": "tests/admin_views/admin.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 2,
+      "changes": 5,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fadmin_views%2Fadmin.py",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fadmin_views%2Fadmin.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fadmin_views%2Fadmin.py?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -41,8 +41,8 @@\n     ReferencedByGenRel, ReferencedByInline, ReferencedByParent,\n     RelatedPrepopulated, RelatedWithUUIDPKModel, Report, Reservation,\n     Restaurant, RowLevelChangePermissionModel, Section, ShortMessage, Simple,\n-    Sketch, State, Story, StumpJoke, Subscriber, SuperVillain, Telegram, Thing,\n-    Topping, UnchangeableObject, UndeletableObject, UnorderedObject,\n+    Sketch, Song, State, Story, StumpJoke, Subscriber, SuperVillain, Telegram,\n+    Thing, Topping, UnchangeableObject, UndeletableObject, UnorderedObject,\n     UserMessenger, UserProxy, Villain, Vodcast, Whatsit, Widget, Worker,\n     WorkHour,\n )\n@@ -1069,6 +1069,7 @@ def get_formsets_with_inlines(self, request, obj=None):\n site.register(ReadablePizza)\n site.register(Topping, ToppingAdmin)\n site.register(Album, AlbumAdmin)\n+site.register(Song)\n site.register(Question, QuestionAdmin)\n site.register(Answer, AnswerAdmin, date_hierarchy='question__posted')\n site.register(Answer2, date_hierarchy='question__expires')"
+    },
+    {
+      "sha": "16dd58bcd3927a57ada2ef17f9057d5133cb3b37",
+      "filename": "tests/admin_views/models.py",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 0,
+      "changes": 8,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fadmin_views%2Fmodels.py",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fadmin_views%2Fmodels.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fadmin_views%2Fmodels.py?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -604,6 +604,14 @@ class Album(models.Model):\n     title = models.CharField(max_length=30)\n \n \n+class Song(models.Model):\n+    name = models.CharField(max_length=20)\n+    album = models.ForeignKey(Album, on_delete=models.RESTRICT)\n+\n+    def __str__(self):\n+        return self.name\n+\n+\n class Employee(Person):\n     code = models.CharField(max_length=20)\n "
+    },
+    {
+      "sha": "e833c44f95b94c3c420dbfabcc748ac278696ff4",
+      "filename": "tests/admin_views/tests.py",
+      "status": "modified",
+      "additions": 29,
+      "deletions": 2,
+      "changes": 31,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fadmin_views%2Ftests.py",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fadmin_views%2Ftests.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fadmin_views%2Ftests.py?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -38,7 +38,7 @@\n from .admin import CityAdmin, site, site2\n from .models import (\n     Actor, AdminOrderedAdminMethod, AdminOrderedCallable, AdminOrderedField,\n-    AdminOrderedModelMethod, Answer, Answer2, Article, BarAccount, Book,\n+    AdminOrderedModelMethod, Album, Answer, Answer2, Article, BarAccount, Book,\n     Bookmark, Category, Chapter, ChapterXtra1, ChapterXtra2, Character, Child,\n     Choice, City, Collector, Color, ComplexSortedPerson, CoverLetter,\n     CustomArticle, CyclicOne, CyclicTwo, DooHickey, Employee, EmptyModel,\n@@ -50,7 +50,7 @@\n     PrePopulatedPost, Promo, Question, ReadablePizza, ReadOnlyPizza,\n     Recommendation, Recommender, RelatedPrepopulated, RelatedWithUUIDPKModel,\n     Report, Restaurant, RowLevelChangePermissionModel, SecretHideout, Section,\n-    ShortMessage, Simple, State, Story, SuperSecretHideout, SuperVillain,\n+    ShortMessage, Simple, Song, State, Story, SuperSecretHideout, SuperVillain,\n     Telegram, TitleTranslation, Topping, UnchangeableObject, UndeletableObject,\n     UnorderedObject, UserProxy, Villain, Vodcast, Whatsit, Widget, Worker,\n     WorkHour,\n@@ -2603,6 +2603,33 @@ def test_post_delete_protected(self):\n         self.assertEqual(Question.objects.count(), 1)\n         self.assertContains(response, \"would require deleting the following protected related objects\")\n \n+    def test_restricted(self):\n+        album = Album.objects.create(title='Amaryllis')\n+        song = Song.objects.create(album=album, name='Unity')\n+        response = self.client.get(reverse('admin:admin_views_album_delete', args=(album.pk,)))\n+        self.assertContains(\n+            response,\n+            'would require deleting the following protected related objects',\n+        )\n+        self.assertContains(\n+            response,\n+            '<li>Song: <a href=\"%s\">Unity</a></li>'\n+            % reverse('admin:admin_views_song_change', args=(song.pk,))\n+        )\n+\n+    def test_post_delete_restricted(self):\n+        album = Album.objects.create(title='Amaryllis')\n+        Song.objects.create(album=album, name='Unity')\n+        response = self.client.post(\n+            reverse('admin:admin_views_album_delete', args=(album.pk,)),\n+            {'post': 'yes'},\n+        )\n+        self.assertEqual(Album.objects.count(), 1)\n+        self.assertContains(\n+            response,\n+            'would require deleting the following protected related objects',\n+        )\n+\n     def test_not_registered(self):\n         should_contain = \"\"\"<li>Secret hideout: underground bunker\"\"\"\n         response = self.client.get(reverse('admin:admin_views_villain_delete', args=(self.v1.pk,)))"
+    },
+    {
+      "sha": "7a38ecc777053df979be9977e236279fa02ef596",
+      "filename": "tests/delete/models.py",
+      "status": "modified",
+      "additions": 55,
+      "deletions": 2,
+      "changes": 57,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fdelete%2Fmodels.py",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fdelete%2Fmodels.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Fmodels.py?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -1,8 +1,17 @@\n+from django.contrib.contenttypes.fields import (\n+    GenericForeignKey, GenericRelation,\n+)\n+from django.contrib.contenttypes.models import ContentType\n from django.db import models\n \n \n+class P(models.Model):\n+    pass\n+\n+\n class R(models.Model):\n     is_default = models.BooleanField(default=False)\n+    p = models.ForeignKey(P, models.CASCADE, null=True)\n \n     def __str__(self):\n         return \"%s\" % self.pk\n@@ -46,10 +55,12 @@ class A(models.Model):\n     )\n     cascade = models.ForeignKey(R, models.CASCADE, related_name='cascade_set')\n     cascade_nullable = models.ForeignKey(R, models.CASCADE, null=True, related_name='cascade_nullable_set')\n-    protect = models.ForeignKey(R, models.PROTECT, null=True)\n+    protect = models.ForeignKey(R, models.PROTECT, null=True, related_name='protect_set')\n+    restrict = models.ForeignKey(R, models.RESTRICT, null=True, related_name='restrict_set')\n     donothing = models.ForeignKey(R, models.DO_NOTHING, null=True, related_name='donothing_set')\n     child = models.ForeignKey(RChild, models.CASCADE, related_name=\"child\")\n     child_setnull = models.ForeignKey(RChild, models.SET_NULL, null=True, related_name=\"child_setnull\")\n+    cascade_p = models.ForeignKey(P, models.CASCADE, related_name='cascade_p_set', null=True)\n \n     # A OneToOneField is just a ForeignKey unique=True, so we don't duplicate\n     # all the tests; just one smoke test to ensure on_delete works for it as\n@@ -61,7 +72,7 @@ def create_a(name):\n     a = A(name=name)\n     for name in ('auto', 'auto_nullable', 'setvalue', 'setnull', 'setdefault',\n                  'setdefault_none', 'cascade', 'cascade_nullable', 'protect',\n-                 'donothing', 'o2o_setnull'):\n+                 'restrict', 'donothing', 'o2o_setnull'):\n         r = R.objects.create()\n         setattr(a, name, r)\n     a.child = RChild.objects.create()\n@@ -147,3 +158,45 @@ class SecondReferrer(models.Model):\n     other_referrer = models.ForeignKey(\n         Referrer, models.CASCADE, to_field='unique_field', related_name='+'\n     )\n+\n+\n+class DeleteTop(models.Model):\n+    b1 = GenericRelation('GenericB1')\n+    b2 = GenericRelation('GenericB2')\n+\n+\n+class B1(models.Model):\n+    delete_top = models.ForeignKey(DeleteTop, models.CASCADE)\n+\n+\n+class B2(models.Model):\n+    delete_top = models.ForeignKey(DeleteTop, models.CASCADE)\n+\n+\n+class DeleteBottom(models.Model):\n+    b1 = models.ForeignKey(B1, models.RESTRICT)\n+    b2 = models.ForeignKey(B2, models.CASCADE)\n+\n+\n+class GenericB1(models.Model):\n+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)\n+    object_id = models.PositiveIntegerField()\n+    generic_delete_top = GenericForeignKey('content_type', 'object_id')\n+\n+\n+class GenericB2(models.Model):\n+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)\n+    object_id = models.PositiveIntegerField()\n+    generic_delete_top = GenericForeignKey('content_type', 'object_id')\n+    generic_delete_bottom = GenericRelation('GenericDeleteBottom')\n+\n+\n+class GenericDeleteBottom(models.Model):\n+    generic_b1 = models.ForeignKey(GenericB1, models.RESTRICT)\n+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)\n+    object_id = models.PositiveIntegerField()\n+    generic_b2 = GenericForeignKey()\n+\n+\n+class GenericDeleteBottomParent(models.Model):\n+    generic_delete_bottom = models.ForeignKey(GenericDeleteBottom, on_delete=models.CASCADE)"
+    },
+    {
+      "sha": "b93bdd52653fcfdb24aed3b59eee15eda994f0c3",
+      "filename": "tests/delete/tests.py",
+      "status": "modified",
+      "additions": 85,
+      "deletions": 3,
+      "changes": 88,
+      "blob_url": "https://github.com/django/django/blob/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fdelete%2Ftests.py",
+      "raw_url": "https://github.com/django/django/raw/89abecc75d7eadab681f29be5237972c6c2f997b/tests%2Fdelete%2Ftests.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Ftests.py?ref=89abecc75d7eadab681f29be5237972c6c2f997b",
+      "patch": "@@ -1,13 +1,14 @@\n from math import ceil\n \n from django.db import IntegrityError, connection, models\n-from django.db.models.deletion import Collector\n+from django.db.models.deletion import Collector, RestrictedError\n from django.db.models.sql.constants import GET_ITERATOR_CHUNK_SIZE\n from django.test import TestCase, skipIfDBFeature, skipUnlessDBFeature\n \n from .models import (\n-    MR, A, Avatar, Base, Child, HiddenUser, HiddenUserProfile, M, M2MFrom,\n-    M2MTo, MRNull, Origin, Parent, R, RChild, RChildChild, Referrer, S, T,\n+    B1, B2, MR, A, Avatar, Base, Child, DeleteBottom, DeleteTop, GenericB1,\n+    GenericB2, GenericDeleteBottom, HiddenUser, HiddenUserProfile, M, M2MFrom,\n+    M2MTo, MRNull, Origin, P, Parent, R, RChild, RChildChild, Referrer, S, T,\n     User, create_a, get_default_r,\n )\n \n@@ -146,6 +147,87 @@ def test_o2o_setnull(self):\n         a = A.objects.get(pk=a.pk)\n         self.assertIsNone(a.o2o_setnull)\n \n+    def test_restrict(self):\n+        a = create_a('restrict')\n+        msg = (\n+            \"Cannot delete some instances of model 'R' because they are \"\n+            \"referenced through a restricted foreign key: 'A.restrict'.\"\n+        )\n+        with self.assertRaisesMessage(RestrictedError, msg):\n+            a.restrict.delete()\n+\n+    def test_restrict_path_cascade_indirect(self):\n+        a = create_a('restrict')\n+        a.restrict.p = P.objects.create()\n+        a.restrict.save()\n+        msg = (\n+            \"Cannot delete some instances of model 'R' because they are \"\n+            \"referenced through a restricted foreign key: 'A.restrict'.\"\n+        )\n+        with self.assertRaisesMessage(RestrictedError, msg):\n+            a.restrict.p.delete()\n+        # Object referenced also with CASCADE relationship can be deleted.\n+        a.cascade.p = a.restrict.p\n+        a.cascade.save()\n+        a.restrict.p.delete()\n+        self.assertFalse(A.objects.filter(name='restrict').exists())\n+        self.assertFalse(R.objects.filter(pk=a.restrict_id).exists())\n+\n+    def test_restrict_path_cascade_direct(self):\n+        a = create_a('restrict')\n+        a.restrict.p = P.objects.create()\n+        a.restrict.save()\n+        a.cascade_p = a.restrict.p\n+        a.save()\n+        a.restrict.p.delete()\n+        self.assertFalse(A.objects.filter(name='restrict').exists())\n+        self.assertFalse(R.objects.filter(pk=a.restrict_id).exists())\n+\n+    def test_restrict_path_cascade_indirect_diamond(self):\n+        delete_top = DeleteTop.objects.create()\n+        b1 = B1.objects.create(delete_top=delete_top)\n+        b2 = B2.objects.create(delete_top=delete_top)\n+        DeleteBottom.objects.create(b1=b1, b2=b2)\n+        msg = (\n+            \"Cannot delete some instances of model 'B1' because they are \"\n+            \"referenced through a restricted foreign key: 'DeleteBottom.b1'.\"\n+        )\n+        with self.assertRaisesMessage(RestrictedError, msg):\n+            b1.delete()\n+        self.assertTrue(DeleteTop.objects.exists())\n+        self.assertTrue(B1.objects.exists())\n+        self.assertTrue(B2.objects.exists())\n+        self.assertTrue(DeleteBottom.objects.exists())\n+        # Object referenced also with CASCADE relationship can be deleted.\n+        delete_top.delete()\n+        self.assertFalse(DeleteTop.objects.exists())\n+        self.assertFalse(B1.objects.exists())\n+        self.assertFalse(B2.objects.exists())\n+        self.assertFalse(DeleteBottom.objects.exists())\n+\n+    def test_restrict_gfk_no_fast_delete(self):\n+        delete_top = DeleteTop.objects.create()\n+        generic_b1 = GenericB1.objects.create(generic_delete_top=delete_top)\n+        generic_b2 = GenericB2.objects.create(generic_delete_top=delete_top)\n+        GenericDeleteBottom.objects.create(generic_b1=generic_b1, generic_b2=generic_b2)\n+        msg = (\n+            \"Cannot delete some instances of model 'GenericB1' because they \"\n+            \"are referenced through a restricted foreign key: \"\n+            \"'GenericDeleteBottom.generic_b1'.\"\n+        )\n+        with self.assertRaisesMessage(RestrictedError, msg):\n+            generic_b1.delete()\n+        self.assertTrue(DeleteTop.objects.exists())\n+        self.assertTrue(GenericB1.objects.exists())\n+        self.assertTrue(GenericB2.objects.exists())\n+        self.assertTrue(GenericDeleteBottom.objects.exists())\n+        # Object referenced also with CASCADE relationship can be deleted.\n+        delete_top.delete()\n+        self.assertFalse(DeleteTop.objects.exists())\n+        self.assertFalse(GenericB1.objects.exists())\n+        self.assertFalse(GenericB2.objects.exists())\n+        self.assertFalse(GenericDeleteBottom.objects.exists())\n+\n \n class DeletionTests(TestCase):\n "
+    }
+  ]
+}

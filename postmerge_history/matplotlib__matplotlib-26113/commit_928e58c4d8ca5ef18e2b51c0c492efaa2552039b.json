@@ -1,0 +1,113 @@
+{
+  "sha": "928e58c4d8ca5ef18e2b51c0c492efaa2552039b",
+  "node_id": "C_kwDOABUiotoAKDkyOGU1OGM0ZDhjYTVlZjE4ZTJiNTFjMGM0OTJlZmFhMjU1MjAzOWI",
+  "commit": {
+    "author": {
+      "name": "David Stansby",
+      "email": "dstansby@gmail.com",
+      "date": "2024-01-09T13:19:22Z"
+    },
+    "committer": {
+      "name": "David Stansby",
+      "email": "dstansby@gmail.com",
+      "date": "2024-01-09T13:19:22Z"
+    },
+    "message": "Error on bad input to hexbin extents",
+    "tree": {
+      "sha": "257c5fbc5ea9ef6a2122fb984e4af06b17d6109c",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/257c5fbc5ea9ef6a2122fb984e4af06b17d6109c"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/928e58c4d8ca5ef18e2b51c0c492efaa2552039b",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/928e58c4d8ca5ef18e2b51c0c492efaa2552039b",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/928e58c4d8ca5ef18e2b51c0c492efaa2552039b",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/928e58c4d8ca5ef18e2b51c0c492efaa2552039b/comments",
+  "author": {
+    "login": "dstansby",
+    "id": 6197628,
+    "node_id": "MDQ6VXNlcjYxOTc2Mjg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/6197628?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dstansby",
+    "html_url": "https://github.com/dstansby",
+    "followers_url": "https://api.github.com/users/dstansby/followers",
+    "following_url": "https://api.github.com/users/dstansby/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dstansby/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dstansby/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dstansby/subscriptions",
+    "organizations_url": "https://api.github.com/users/dstansby/orgs",
+    "repos_url": "https://api.github.com/users/dstansby/repos",
+    "events_url": "https://api.github.com/users/dstansby/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dstansby/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "dstansby",
+    "id": 6197628,
+    "node_id": "MDQ6VXNlcjYxOTc2Mjg=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/6197628?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dstansby",
+    "html_url": "https://github.com/dstansby",
+    "followers_url": "https://api.github.com/users/dstansby/followers",
+    "following_url": "https://api.github.com/users/dstansby/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dstansby/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dstansby/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dstansby/subscriptions",
+    "organizations_url": "https://api.github.com/users/dstansby/orgs",
+    "repos_url": "https://api.github.com/users/dstansby/repos",
+    "events_url": "https://api.github.com/users/dstansby/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dstansby/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "d3892d52902fc49103a8ee44c16f60b495a6b636",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/d3892d52902fc49103a8ee44c16f60b495a6b636",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/d3892d52902fc49103a8ee44c16f60b495a6b636"
+    }
+  ],
+  "stats": {
+    "total": 16,
+    "additions": 16,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "ecb0e611af89ac123df2ddde29d9aab46369f3a4",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/928e58c4d8ca5ef18e2b51c0c492efaa2552039b/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/928e58c4d8ca5ef18e2b51c0c492efaa2552039b/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=928e58c4d8ca5ef18e2b51c0c492efaa2552039b",
+      "patch": "@@ -4999,6 +4999,10 @@ def reduce_C_function(C: array) -> float\n             ty = np.log10(ty)\n         if extent is not None:\n             xmin, xmax, ymin, ymax = extent\n+            if xmin > xmax:\n+                raise ValueError(\"In extent, xmax must be greater than xmin\")\n+            if ymin > ymax:\n+                raise ValueError(\"In extent, ymax must be greater than ymin\")\n         else:\n             xmin, xmax = (tx.min(), tx.max()) if len(x) else (0, 1)\n             ymin, ymax = (ty.min(), ty.max()) if len(y) else (0, 1)"
+    },
+    {
+      "sha": "d77b1662cf634439ad5fd2b027e1a3d3f9f4909c",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 0,
+      "changes": 12,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/928e58c4d8ca5ef18e2b51c0c492efaa2552039b/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/928e58c4d8ca5ef18e2b51c0c492efaa2552039b/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=928e58c4d8ca5ef18e2b51c0c492efaa2552039b",
+      "patch": "@@ -962,6 +962,18 @@ def test_hexbin_extent():\n     ax.hexbin(\"x\", \"y\", extent=[.1, .3, .6, .7], data=data)\n \n \n+def test_hexbin_bad_extents():\n+    fig, ax = plt.subplots()\n+    data = (np.arange(2000) / 2000).reshape((2, 1000))\n+    x, y = data\n+\n+    with pytest.raises(ValueError, match=\"In extent, xmax must be greater than xmin\"):\n+        ax.hexbin(x, y, extent=(1, 0, 0, 1))\n+\n+    with pytest.raises(ValueError, match=\"In extent, ymax must be greater than ymin\"):\n+        ax.hexbin(x, y, extent=(0, 1, 1, 0))\n+\n+\n @image_comparison(['hexbin_empty.png'], remove_text=True)\n def test_hexbin_empty():\n     # From #3886: creating hexbin from empty dataset raises ValueError"
+    }
+  ]
+}

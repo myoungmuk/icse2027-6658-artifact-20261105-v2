@@ -1,0 +1,101 @@
+{
+  "sha": "832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4Mjo4MzJhYTA4YWZlY2VlNGY1OWNiNDgwYzRlNGE2YjI5YmNiYjIyYjk0",
+  "commit": {
+    "author": {
+      "name": "Simon Charette",
+      "email": "simon.charette@zapier.com",
+      "date": "2019-10-06T11:56:15Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2019-10-09T07:49:27Z"
+    },
+    "message": "Used defaultdict in deletion.Collector.",
+    "tree": {
+      "sha": "0cb8d0ee8dde91f3c805cdaf7fbbd2710b480c51",
+      "url": "https://api.github.com/repos/django/django/git/trees/0cb8d0ee8dde91f3c805cdaf7fbbd2710b480c51"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+  "html_url": "https://github.com/django/django/commit/832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+  "comments_url": "https://api.github.com/repos/django/django/commits/832aa08afecee4f59cb480c4e4a6b29bcbb22b94/comments",
+  "author": {
+    "login": "charettes",
+    "id": 9293,
+    "node_id": "MDQ6VXNlcjkyOTM=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9293?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/charettes",
+    "html_url": "https://github.com/charettes",
+    "followers_url": "https://api.github.com/users/charettes/followers",
+    "following_url": "https://api.github.com/users/charettes/following{/other_user}",
+    "gists_url": "https://api.github.com/users/charettes/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/charettes/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/charettes/subscriptions",
+    "organizations_url": "https://api.github.com/users/charettes/orgs",
+    "repos_url": "https://api.github.com/users/charettes/repos",
+    "events_url": "https://api.github.com/users/charettes/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/charettes/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "04ac9b45a34440fa447feb6ae934687aacbfc5f4",
+      "url": "https://api.github.com/repos/django/django/commits/04ac9b45a34440fa447feb6ae934687aacbfc5f4",
+      "html_url": "https://github.com/django/django/commit/04ac9b45a34440fa447feb6ae934687aacbfc5f4"
+    }
+  ],
+  "stats": {
+    "total": 19,
+    "additions": 9,
+    "deletions": 10
+  },
+  "files": [
+    {
+      "sha": "02dfc43e406b3cb26f8b06520c8c9ba496bade2c",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 10,
+      "changes": 19,
+      "blob_url": "https://github.com/django/django/blob/832aa08afecee4f59cb480c4e4a6b29bcbb22b94/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/832aa08afecee4f59cb480c4e4a6b29bcbb22b94/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+      "patch": "@@ -1,4 +1,5 @@\n-from collections import Counter\n+from collections import Counter, defaultdict\n+from functools import partial\n from itertools import chain\n from operator import attrgetter\n \n@@ -65,8 +66,9 @@ class Collector:\n     def __init__(self, using):\n         self.using = using\n         # Initially, {model: {instances}}, later values become lists.\n-        self.data = {}\n-        self.field_updates = {}  # {model: {(field, value): {instances}}}\n+        self.data = defaultdict(set)\n+        # {model: {(field, value): {instances}}}\n+        self.field_updates = defaultdict(partial(defaultdict, set))\n         # fast_deletes is a list of queryset-likes that can be deleted without\n         # fetching the objects into memory.\n         self.fast_deletes = []\n@@ -76,7 +78,7 @@ def __init__(self, using):\n         # should be included, as the dependencies exist only between actual\n         # database tables; proxy models are represented here by their concrete\n         # parent.\n-        self.dependencies = {}  # {model: {models}}\n+        self.dependencies = defaultdict(set)  # {model: {models}}\n \n     def add(self, objs, source=None, nullable=False, reverse_dependency=False):\n         \"\"\"\n@@ -90,7 +92,7 @@ def add(self, objs, source=None, nullable=False, reverse_dependency=False):\n             return []\n         new_objs = []\n         model = objs[0].__class__\n-        instances = self.data.setdefault(model, set())\n+        instances = self.data[model]\n         for obj in objs:\n             if obj not in instances:\n                 new_objs.append(obj)\n@@ -101,8 +103,7 @@ def add(self, objs, source=None, nullable=False, reverse_dependency=False):\n         if source is not None and not nullable:\n             if reverse_dependency:\n                 source, model = model, source\n-            self.dependencies.setdefault(\n-                source._meta.concrete_model, set()).add(model._meta.concrete_model)\n+            self.dependencies[source._meta.concrete_model].add(model._meta.concrete_model)\n         return new_objs\n \n     def add_field_update(self, field, value, objs):\n@@ -113,9 +114,7 @@ def add_field_update(self, field, value, objs):\n         if not objs:\n             return\n         model = objs[0].__class__\n-        self.field_updates.setdefault(\n-            model, {}).setdefault(\n-            (field, value), set()).update(objs)\n+        self.field_updates[model][field, value].update(objs)\n \n     def _has_signal_listeners(self, model):\n         return ("
+    }
+  ]
+}

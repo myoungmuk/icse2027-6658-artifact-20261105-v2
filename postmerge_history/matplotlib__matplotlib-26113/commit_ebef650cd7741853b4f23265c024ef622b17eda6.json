@@ -1,0 +1,101 @@
+{
+  "sha": "ebef650cd7741853b4f23265c024ef622b17eda6",
+  "node_id": "C_kwDOABUiotoAKGViZWY2NTBjZDc3NDE4NTNiNGYyMzI2NWMwMjRlZjYyMmIxN2VkYTY",
+  "commit": {
+    "author": {
+      "name": "Kyle Sunden",
+      "email": "git@ksunden.space",
+      "date": "2023-08-23T21:01:00Z"
+    },
+    "committer": {
+      "name": "Kyle Sunden",
+      "email": "git@ksunden.space",
+      "date": "2023-08-23T21:01:00Z"
+    },
+    "message": "Switch to hstack for consistency",
+    "tree": {
+      "sha": "2b7f2e9f13abc4a3b867170595bea6f066d6fbf8",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/2b7f2e9f13abc4a3b867170595bea6f066d6fbf8"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/ebef650cd7741853b4f23265c024ef622b17eda6",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ebef650cd7741853b4f23265c024ef622b17eda6",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/ebef650cd7741853b4f23265c024ef622b17eda6",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ebef650cd7741853b4f23265c024ef622b17eda6/comments",
+  "author": {
+    "login": "ksunden",
+    "id": 2501846,
+    "node_id": "MDQ6VXNlcjI1MDE4NDY=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2501846?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ksunden",
+    "html_url": "https://github.com/ksunden",
+    "followers_url": "https://api.github.com/users/ksunden/followers",
+    "following_url": "https://api.github.com/users/ksunden/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ksunden/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ksunden/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ksunden/subscriptions",
+    "organizations_url": "https://api.github.com/users/ksunden/orgs",
+    "repos_url": "https://api.github.com/users/ksunden/repos",
+    "events_url": "https://api.github.com/users/ksunden/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ksunden/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ksunden",
+    "id": 2501846,
+    "node_id": "MDQ6VXNlcjI1MDE4NDY=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2501846?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ksunden",
+    "html_url": "https://github.com/ksunden",
+    "followers_url": "https://api.github.com/users/ksunden/followers",
+    "following_url": "https://api.github.com/users/ksunden/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ksunden/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ksunden/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ksunden/subscriptions",
+    "organizations_url": "https://api.github.com/users/ksunden/orgs",
+    "repos_url": "https://api.github.com/users/ksunden/repos",
+    "events_url": "https://api.github.com/users/ksunden/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ksunden/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/ef5689faafabf5aba9ea71010a0ac1f79e6ae326"
+    }
+  ],
+  "stats": {
+    "total": 4,
+    "additions": 2,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "93a60c332cf41a3fe233688a51fd00527fcbc179",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ebef650cd7741853b4f23265c024ef622b17eda6/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ebef650cd7741853b4f23265c024ef622b17eda6/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=ebef650cd7741853b4f23265c024ef622b17eda6",
+      "patch": "@@ -5471,8 +5471,8 @@ def get_interp_point(idx):\n         collection = mcoll.PolyCollection(polys, **kwargs)\n \n         # now update the datalim and autoscale\n-        pts = np.vstack([np.column_stack([ind[where], dep1[where]]),\n-                         np.column_stack([ind[where], dep2[where]])])\n+        pts = np.vstack([np.hstack([ind[where, None], dep1[where, None]]),\n+                         np.hstack([ind[where, None], dep2[where, None]])])\n         if ind_dir == \"y\":\n             pts = pts[:, ::-1]\n "
+    }
+  ]
+}

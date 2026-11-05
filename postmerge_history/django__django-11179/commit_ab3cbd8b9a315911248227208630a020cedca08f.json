@@ -1,0 +1,125 @@
+{
+  "sha": "ab3cbd8b9a315911248227208630a020cedca08f",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4MjphYjNjYmQ4YjlhMzE1OTExMjQ4MjI3MjA4NjMwYTAyMGNlZGNhMDhm",
+  "commit": {
+    "author": {
+      "name": "Hasan Ramezani",
+      "email": "hasan.r67@gmail.com",
+      "date": "2020-01-25T14:56:30Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2020-01-27T11:21:02Z"
+    },
+    "message": "Refs #27852 -- Fixed object deletion to show all protected related objects rather than just the first one.\n\nThanks Anton Samarchyan for the initial patch.",
+    "tree": {
+      "sha": "94eb7a61d406074fa7696a8c89e78cb4ba9e8195",
+      "url": "https://api.github.com/repos/django/django/git/trees/94eb7a61d406074fa7696a8c89e78cb4ba9e8195"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/ab3cbd8b9a315911248227208630a020cedca08f",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/ab3cbd8b9a315911248227208630a020cedca08f",
+  "html_url": "https://github.com/django/django/commit/ab3cbd8b9a315911248227208630a020cedca08f",
+  "comments_url": "https://api.github.com/repos/django/django/commits/ab3cbd8b9a315911248227208630a020cedca08f/comments",
+  "author": {
+    "login": "hramezani",
+    "id": 3122442,
+    "node_id": "MDQ6VXNlcjMxMjI0NDI=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/3122442?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/hramezani",
+    "html_url": "https://github.com/hramezani",
+    "followers_url": "https://api.github.com/users/hramezani/followers",
+    "following_url": "https://api.github.com/users/hramezani/following{/other_user}",
+    "gists_url": "https://api.github.com/users/hramezani/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/hramezani/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/hramezani/subscriptions",
+    "organizations_url": "https://api.github.com/users/hramezani/orgs",
+    "repos_url": "https://api.github.com/users/hramezani/repos",
+    "events_url": "https://api.github.com/users/hramezani/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/hramezani/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "e348ab0d4382b0d7cb0cab9d1261c916c3d0ce6c",
+      "url": "https://api.github.com/repos/django/django/commits/e348ab0d4382b0d7cb0cab9d1261c916c3d0ce6c",
+      "html_url": "https://github.com/django/django/commit/e348ab0d4382b0d7cb0cab9d1261c916c3d0ce6c"
+    }
+  ],
+  "stats": {
+    "total": 42,
+    "additions": 38,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "6ed12ec09226ec3c7882981a4b41240c180c597d",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 18,
+      "deletions": 1,
+      "changes": 19,
+      "blob_url": "https://github.com/django/django/blob/ab3cbd8b9a315911248227208630a020cedca08f/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/ab3cbd8b9a315911248227208630a020cedca08f/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=ab3cbd8b9a315911248227208630a020cedca08f",
+      "patch": "@@ -265,6 +265,7 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n         if keep_parents:\n             parents = set(model._meta.get_parent_list())\n         model_fast_deletes = defaultdict(list)\n+        protected_objects = defaultdict(list)\n         for related in get_candidate_relations_to_delete(model._meta):\n             # Preserve parent reverse relationships if keep_parents=True.\n             if keep_parents and related.model in parents:\n@@ -292,7 +293,23 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                     ))\n                     sub_objs = sub_objs.only(*tuple(referenced_fields))\n                 if sub_objs:\n-                    field.remote_field.on_delete(self, field, sub_objs, self.using)\n+                    try:\n+                        field.remote_field.on_delete(self, field, sub_objs, self.using)\n+                    except ProtectedError as error:\n+                        key = \"'%s.%s'\" % (\n+                            error.protected_objects[0].__class__.__name__,\n+                            field.name,\n+                        )\n+                        protected_objects[key] += error.protected_objects\n+        if protected_objects:\n+            raise ProtectedError(\n+                'Cannot delete some instances of model %r because they are '\n+                'referenced through protected foreign keys: %s.' % (\n+                    model.__name__,\n+                    ', '.join(protected_objects),\n+                ),\n+                chain.from_iterable(protected_objects.values()),\n+            )\n         for related_model, related_fields in model_fast_deletes.items():\n             batches = self.get_del_batches(new_objs, related_fields)\n             for batch in batches:"
+    },
+    {
+      "sha": "618b36bda90ac5c9965adf313f2b509fbf5b1fec",
+      "filename": "tests/delete/models.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/django/django/blob/ab3cbd8b9a315911248227208630a020cedca08f/tests%2Fdelete%2Fmodels.py",
+      "raw_url": "https://github.com/django/django/raw/ab3cbd8b9a315911248227208630a020cedca08f/tests%2Fdelete%2Fmodels.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Fmodels.py?ref=ab3cbd8b9a315911248227208630a020cedca08f",
+      "patch": "@@ -68,6 +68,10 @@ class A(models.Model):\n     o2o_setnull = models.ForeignKey(R, models.SET_NULL, null=True, related_name=\"o2o_nullable_set\")\n \n \n+class B(models.Model):\n+    protect = models.ForeignKey(R, models.PROTECT)\n+\n+\n def create_a(name):\n     a = A(name=name)\n     for name in ('auto', 'auto_nullable', 'setvalue', 'setnull', 'setdefault',"
+    },
+    {
+      "sha": "5046afba17910afc7fd20e8e8bd150b27ceae636",
+      "filename": "tests/delete/tests.py",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 3,
+      "changes": 19,
+      "blob_url": "https://github.com/django/django/blob/ab3cbd8b9a315911248227208630a020cedca08f/tests%2Fdelete%2Ftests.py",
+      "raw_url": "https://github.com/django/django/raw/ab3cbd8b9a315911248227208630a020cedca08f/tests%2Fdelete%2Ftests.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/tests%2Fdelete%2Ftests.py?ref=ab3cbd8b9a315911248227208630a020cedca08f",
+      "patch": "@@ -1,12 +1,14 @@\n from math import ceil\n \n from django.db import IntegrityError, connection, models\n-from django.db.models.deletion import Collector, RestrictedError\n+from django.db.models.deletion import (\n+    Collector, ProtectedError, RestrictedError,\n+)\n from django.db.models.sql.constants import GET_ITERATOR_CHUNK_SIZE\n from django.test import TestCase, skipIfDBFeature, skipUnlessDBFeature\n \n from .models import (\n-    B1, B2, MR, A, Avatar, Base, Child, DeleteBottom, DeleteTop, GenericB1,\n+    B1, B2, MR, A, Avatar, B, Base, Child, DeleteBottom, DeleteTop, GenericB1,\n     GenericB2, GenericDeleteBottom, HiddenUser, HiddenUserProfile, M, M2MFrom,\n     M2MTo, MRNull, Origin, P, Parent, R, RChild, RChildChild, Referrer, S, T,\n     User, create_a, get_default_r,\n@@ -72,11 +74,22 @@ def test_protect(self):\n         a = create_a('protect')\n         msg = (\n             \"Cannot delete some instances of model 'R' because they are \"\n-            \"referenced through a protected foreign key: 'A.protect'\"\n+            \"referenced through protected foreign keys: 'A.protect'.\"\n         )\n         with self.assertRaisesMessage(IntegrityError, msg):\n             a.protect.delete()\n \n+    def test_protect_multiple(self):\n+        a = create_a('protect')\n+        B.objects.create(protect=a.protect)\n+        msg = (\n+            \"Cannot delete some instances of model 'R' because they are \"\n+            \"referenced through protected foreign keys: 'A.protect', \"\n+            \"'B.protect'.\"\n+        )\n+        with self.assertRaisesMessage(ProtectedError, msg):\n+            a.protect.delete()\n+\n     def test_do_nothing(self):\n         # Testing DO_NOTHING is a bit harder: It would raise IntegrityError for a normal model,\n         # so we connect to pre_delete and set the fk to a known value."
+    }
+  ]
+}

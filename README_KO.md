@@ -77,3 +77,19 @@ agent·gold·실패 패치에서 각2건을 사전순으로 골라 당시 base c
 새 제출 대조 도구 tools/verify_submission.py는 이 체크아웃의 최신 metadata/PDF를
 기본으로 사용한다. PDF metadata 제목과 실제 첫 페이지 제목을 별도로 확인한다.
 기존 v5 고정 경로를 쓰는 과거 도구 대신 새 도구를 사용한다. 실제 포털 접속·업로드는 하지 않는다.
+
+## v8 전체 gold·동일 과제 비교와 병합 후 조사
+
+새 test-blind 7B로 전체 Lite 300·Verified 500(중복 제거 707 gold)와 실패 후보
+302개를 평가했다. 1,009회 중 1,006응답 유효, malformed JSON 3개는 거절로
+대체하지 않았다. Gold 수락은 143/299·284/499, 동일 300쌍은 candidate 135/300 대
+developer 149/300, p=.211이다. 과거 14B/hosted 재검증은 아니다.
+
+Hosted가 거절한 gold 3건의 365일 이력 중 Matplotlib은 원 PR commit을 지목한
+bug와 후속 fix/test/release note가 있다. 파일 churn은 버그 수가 아니며 다른 사례의
+일치 bug 미발견은 무결함 증명이 아니다. 재현 명령은 다음과 같다.
+
+    python tools/reproduce_full_split.py --output /path/to/new-analysis-directory
+
+독립 인간 2인은 추후 확보 예정이며 실제 신규 인간 평가는 0건이다.
+논문은 본문 9쪽+참고문헌 1쪽을 유지한다.

@@ -8,7 +8,7 @@ Hankyong National University.
 
 Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
 
-Version: [`2026.11.05-v7`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v7).
+Version: [`2026.11.05-v8`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v8).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
@@ -121,3 +121,29 @@ no network access or upload and does not authenticate the supplied files' origin
 The six-case probe uses Python standard library; the PDF checker requires PyMuPDF.
 The historical v6 supplement remains preserved; v7 adds technical evidence for
 its two resolved-agent examples and four further cases.
+
+## v8 full-split controls and scoped post-merge histories
+
+The separately frozen test-blind 7B extension evaluates all 300 Lite and 500 Verified
+gold memberships (707 unique tasks; 93 shared), plus 302 unresolved candidates.
+All 1,009 calls complete: 1,006 outputs are valid and three malformed JSON responses
+remain failures. Gold acceptance is 143/299 valid on Lite and 284/499 on Verified.
+Among 300 complete same-task failing/developer pairs, acceptance is 135/300 versus
+149/300, with discordant counts 47/61 and exploratory exact McNemar p=.211.
+Four empty candidates and two incomplete pairs are explicit. See `full_split_control/`.
+This does not revalidate historical 14B/hosted instruments or independently develop
+calibration.
+
+`postmerge_history/` follows 365 days after all three hosted nonaccepted gold PRs.
+File commits of 12/93/35 are churn, not defect counts. Matplotlib issue 27103 explicitly
+identifies the original PR source commit; fix 27179 and its regression test and release
+note align with the empty-bin concern. No matching regression was found for the other
+two specific concerns in this scoped inspection. Other branches, renames and indirect
+effects remain outside scope. Public follow-up predates the 2026 judging.
+
+    python tools/reproduce_full_split.py --output /path/to/new-analysis-directory
+
+This command uses saved outputs, not new inference. Archived freeze manifests retain
+machine paths; new inference elsewhere requires a new explicit setup. No new human
+ratings or harness runs are included. The paper stays at 9 body + 1 reference pages,
+with unchanged class, font size, margins and historical numerical inputs.

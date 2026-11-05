@@ -1,0 +1,113 @@
+{
+  "sha": "7b8814be56db6793b213ab9a90a21856ed761060",
+  "node_id": "C_kwDOABUiotoAKDdiODgxNGJlNTZkYjY3OTNiMjEzYWI5YTkwYTIxODU2ZWQ3NjEwNjA",
+  "commit": {
+    "author": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2023-12-05T05:18:05Z"
+    },
+    "committer": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2023-12-05T05:18:05Z"
+    },
+    "message": "Fix warning passing NumPy array to hexbin(bins=...)",
+    "tree": {
+      "sha": "b3e5e17cd184b3aabc15afb2631d49ce62d78278",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/b3e5e17cd184b3aabc15afb2631d49ce62d78278"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/7b8814be56db6793b213ab9a90a21856ed761060",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/7b8814be56db6793b213ab9a90a21856ed761060",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/7b8814be56db6793b213ab9a90a21856ed761060",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/7b8814be56db6793b213ab9a90a21856ed761060/comments",
+  "author": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "bc1c5cc3be6972a3ca2485b6cb6db049e130a469",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/bc1c5cc3be6972a3ca2485b6cb6db049e130a469",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/bc1c5cc3be6972a3ca2485b6cb6db049e130a469"
+    }
+  ],
+  "stats": {
+    "total": 9,
+    "additions": 5,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "6a9353f4514667109b11ca6dd2ad93e2d5b31742",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/7b8814be56db6793b213ab9a90a21856ed761060/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/7b8814be56db6793b213ab9a90a21856ed761060/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=7b8814be56db6793b213ab9a90a21856ed761060",
+      "patch": "@@ -5103,10 +5103,10 @@ def reduce_C_function(C: array) -> float\n             )\n \n         # Set normalizer if bins is 'log'\n-        if bins == 'log':\n+        if cbook._str_equal(bins, 'log'):\n             if norm is not None:\n                 _api.warn_external(\"Only one of 'bins' and 'norm' arguments \"\n-                                   f\"can be supplied, ignoring bins={bins}\")\n+                                   f\"can be supplied, ignoring {bins=}\")\n             else:\n                 norm = mcolors.LogNorm(vmin=vmin, vmax=vmax)\n                 vmin = vmax = None"
+    },
+    {
+      "sha": "836485b434e560f4b004a7296be9a32bccf5ffce",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 2,
+      "changes": 5,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/7b8814be56db6793b213ab9a90a21856ed761060/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/7b8814be56db6793b213ab9a90a21856ed761060/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=7b8814be56db6793b213ab9a90a21856ed761060",
+      "patch": "@@ -962,17 +962,18 @@ def test_hexbin_extent():\n     ax.hexbin(\"x\", \"y\", extent=[.1, .3, .6, .7], data=data)\n \n \n-@image_comparison(['hexbin_empty.png', 'hexbin_empty.png'], remove_text=True)\n+@image_comparison(['hexbin_empty.png'], remove_text=True)\n def test_hexbin_empty():\n     # From #3886: creating hexbin from empty dataset raises ValueError\n     fig, ax = plt.subplots()\n     ax.hexbin([], [])\n-    fig, ax = plt.subplots()\n     # From #23922: creating hexbin with log scaling from empty\n     # dataset raises ValueError\n     ax.hexbin([], [], bins='log')\n     # From #27103: np.max errors when handed empty data\n     ax.hexbin([], [], C=[], reduce_C_function=np.max)\n+    # No string-comparison warning from NumPy.\n+    ax.hexbin([], [], bins=np.arange(10))\n \n \n def test_hexbin_pickable():"
+    }
+  ]
+}

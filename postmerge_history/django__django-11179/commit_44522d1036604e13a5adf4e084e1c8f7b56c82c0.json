@@ -1,0 +1,101 @@
+{
+  "sha": "44522d1036604e13a5adf4e084e1c8f7b56c82c0",
+  "node_id": "MDY6Q29tbWl0NDE2NDQ4Mjo0NDUyMmQxMDM2NjA0ZTEzYTVhZGY0ZTA4NGUxYzhmN2I1NmM4MmMw",
+  "commit": {
+    "author": {
+      "name": "Simon Charette",
+      "email": "simon.charette@zapier.com",
+      "date": "2019-10-06T19:48:14Z"
+    },
+    "committer": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com",
+      "date": "2019-10-09T07:49:53Z"
+    },
+    "message": "Made Collector.collect() return immediately for disabled related collection.",
+    "tree": {
+      "sha": "520d7c5ac5dc983da86afaf98f75cd28b4a0b4a3",
+      "url": "https://api.github.com/repos/django/django/git/trees/520d7c5ac5dc983da86afaf98f75cd28b4a0b4a3"
+    },
+    "url": "https://api.github.com/repos/django/django/git/commits/44522d1036604e13a5adf4e084e1c8f7b56c82c0",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/django/django/commits/44522d1036604e13a5adf4e084e1c8f7b56c82c0",
+  "html_url": "https://github.com/django/django/commit/44522d1036604e13a5adf4e084e1c8f7b56c82c0",
+  "comments_url": "https://api.github.com/repos/django/django/commits/44522d1036604e13a5adf4e084e1c8f7b56c82c0/comments",
+  "author": {
+    "login": "charettes",
+    "id": 9293,
+    "node_id": "MDQ6VXNlcjkyOTM=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9293?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/charettes",
+    "html_url": "https://github.com/charettes",
+    "followers_url": "https://api.github.com/users/charettes/followers",
+    "following_url": "https://api.github.com/users/charettes/following{/other_user}",
+    "gists_url": "https://api.github.com/users/charettes/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/charettes/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/charettes/subscriptions",
+    "organizations_url": "https://api.github.com/users/charettes/orgs",
+    "repos_url": "https://api.github.com/users/charettes/repos",
+    "events_url": "https://api.github.com/users/charettes/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/charettes/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "felixxm",
+    "id": 2865885,
+    "node_id": "MDQ6VXNlcjI4NjU4ODU=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2865885?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/felixxm",
+    "html_url": "https://github.com/felixxm",
+    "followers_url": "https://api.github.com/users/felixxm/followers",
+    "following_url": "https://api.github.com/users/felixxm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/felixxm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/felixxm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/felixxm/subscriptions",
+    "organizations_url": "https://api.github.com/users/felixxm/orgs",
+    "repos_url": "https://api.github.com/users/felixxm/repos",
+    "events_url": "https://api.github.com/users/felixxm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/felixxm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+      "url": "https://api.github.com/repos/django/django/commits/832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+      "html_url": "https://github.com/django/django/commit/832aa08afecee4f59cb480c4e4a6b29bcbb22b94"
+    }
+  ],
+  "stats": {
+    "total": 77,
+    "additions": 40,
+    "deletions": 37
+  },
+  "files": [
+    {
+      "sha": "398da5cbb6b5924b53008ab1349159e5b6702a73",
+      "filename": "django/db/models/deletion.py",
+      "status": "modified",
+      "additions": 40,
+      "deletions": 37,
+      "changes": 77,
+      "blob_url": "https://github.com/django/django/blob/44522d1036604e13a5adf4e084e1c8f7b56c82c0/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "raw_url": "https://github.com/django/django/raw/44522d1036604e13a5adf4e084e1c8f7b56c82c0/django%2Fdb%2Fmodels%2Fdeletion.py",
+      "contents_url": "https://api.github.com/repos/django/django/contents/django%2Fdb%2Fmodels%2Fdeletion.py?ref=44522d1036604e13a5adf4e084e1c8f7b56c82c0",
+      "patch": "@@ -210,43 +210,46 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                                  source_attr=ptr.remote_field.related_name,\n                                  collect_related=False,\n                                  reverse_dependency=True)\n-        if collect_related:\n-            if keep_parents:\n-                parents = set(model._meta.get_parent_list())\n-            for related in get_candidate_relations_to_delete(model._meta):\n-                # Preserve parent reverse relationships if keep_parents=True.\n-                if keep_parents and related.model in parents:\n-                    continue\n-                field = related.field\n-                if field.remote_field.on_delete == DO_NOTHING:\n-                    continue\n-                batches = self.get_del_batches(new_objs, field)\n-                for batch in batches:\n-                    sub_objs = self.related_objects(related, batch)\n-                    if self.can_fast_delete(sub_objs, from_field=field):\n-                        self.fast_deletes.append(sub_objs)\n-                    else:\n-                        related_model = related.related_model\n-                        # Non-referenced fields can be deferred if no signal\n-                        # receivers are connected for the related model as\n-                        # they'll never be exposed to the user. Skip field\n-                        # deferring when some relationships are select_related\n-                        # as interactions between both features are hard to\n-                        # get right. This should only happen in the rare\n-                        # cases where .related_objects is overridden anyway.\n-                        if not (sub_objs.query.select_related or self._has_signal_listeners(related_model)):\n-                            referenced_fields = set(chain.from_iterable(\n-                                (rf.attname for rf in rel.field.foreign_related_fields)\n-                                for rel in get_candidate_relations_to_delete(related_model._meta)\n-                            ))\n-                            sub_objs = sub_objs.only(*tuple(referenced_fields))\n-                        if sub_objs:\n-                            field.remote_field.on_delete(self, field, sub_objs, self.using)\n-            for field in model._meta.private_fields:\n-                if hasattr(field, 'bulk_related_objects'):\n-                    # It's something like generic foreign key.\n-                    sub_objs = field.bulk_related_objects(new_objs, self.using)\n-                    self.collect(sub_objs, source=model, nullable=True)\n+        if not collect_related:\n+            return\n+\n+        if keep_parents:\n+            parents = set(model._meta.get_parent_list())\n+        for related in get_candidate_relations_to_delete(model._meta):\n+            # Preserve parent reverse relationships if keep_parents=True.\n+            if keep_parents and related.model in parents:\n+                continue\n+            field = related.field\n+            if field.remote_field.on_delete == DO_NOTHING:\n+                continue\n+            batches = self.get_del_batches(new_objs, field)\n+            for batch in batches:\n+                sub_objs = self.related_objects(related, batch)\n+                if self.can_fast_delete(sub_objs, from_field=field):\n+                    self.fast_deletes.append(sub_objs)\n+                else:\n+                    related_model = related.related_model\n+                    # Non-referenced fields can be deferred if no signal\n+                    # receivers are connected for the related model as\n+                    # they'll never be exposed to the user. Skip field\n+                    # deferring when some relationships are select_related\n+                    # as interactions between both features are hard to\n+                    # get right. This should only happen in the rare\n+                    # cases where .related_objects is overridden anyway.\n+                    if not (sub_objs.query.select_related or self._has_signal_listeners(related_model)):\n+                        referenced_fields = set(chain.from_iterable(\n+                            (rf.attname for rf in rel.field.foreign_related_fields)\n+                            for rel in get_candidate_relations_to_delete(related_model._meta)\n+                        ))\n+                        sub_objs = sub_objs.only(*tuple(referenced_fields))\n+                    if sub_objs:\n+                        field.remote_field.on_delete(self, field, sub_objs, self.using)\n+\n+        for field in model._meta.private_fields:\n+            if hasattr(field, 'bulk_related_objects'):\n+                # It's something like generic foreign key.\n+                sub_objs = field.bulk_related_objects(new_objs, self.using)\n+                self.collect(sub_objs, source=model, nullable=True)\n \n     def related_objects(self, related, objs):\n         \"\"\""
+    }
+  ]
+}

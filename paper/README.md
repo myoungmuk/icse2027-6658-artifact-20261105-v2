@@ -27,7 +27,7 @@ with a new directory outside this repository. This does not perform new inferenc
 This manuscript uses IEEE `10pt,conference` with the standard margins and body font size.
 The user's binding limit is **9 body pages + 1 reference page, 10 pages total**.
 Both user-supplied ORCIDs are included. Geunseok Yang is the user-confirmed corresponding author. The public artifact is versioned at
-https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v7 .
+https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v8 .
 The new Table IX reports the prospective disjoint pilot, separately from historical data.
 Shi's formal AI-SQE 2026 citation is verified through Crossref; the experimental
 method remains pinned to arXiv:2511.10865v1.
@@ -51,3 +51,9 @@ is contradicted by existing cleanup. Explicit synthetic inputs and backend stand
 limit these checks; no new inference, full harness runs or human ratings are added.
 Use `python ../tools/probe_rationale_cases.py --output <new-directory>` from paper/
 to reproduce the checks. The historical v6 supplement remains available.
+
+
+v8 adds the separately frozen test-blind 7B full-split control (707 unique gold
+and 302 unresolved candidates) and a scoped 365-day follow-up of all three hosted
+nonaccepted gold PRs. Three malformed outputs remain failures; new human ratings
+and full harness runs remain absent. See ../full_split_control/ and ../postmerge_history/.

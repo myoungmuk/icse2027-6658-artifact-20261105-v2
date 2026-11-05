@@ -1,0 +1,73 @@
+{
+  "sha": "98f30b85b1ac8801dd69a641df7fa37fc9ab09b3",
+  "node_id": "C_kwDOABUiotoAKDk4ZjMwYjg1YjFhYzg4MDFkZDY5YTY0MWRmN2ZhMzdmYzlhYjA5YjM",
+  "commit": {
+    "author": {
+      "name": "Clement Gilli",
+      "email": "gilli-23@lame20.enst.fr",
+      "date": "2024-04-19T15:20:11Z"
+    },
+    "committer": {
+      "name": "Clement Gilli",
+      "email": "gilli-23@lame20.enst.fr",
+      "date": "2024-04-19T20:45:20Z"
+    },
+    "message": "solve issue #28105",
+    "tree": {
+      "sha": "7e218b09106b8a2b8722a6b7b037db2376a6a28b",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/7e218b09106b8a2b8722a6b7b037db2376a6a28b"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/98f30b85b1ac8801dd69a641df7fa37fc9ab09b3",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/98f30b85b1ac8801dd69a641df7fa37fc9ab09b3",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/98f30b85b1ac8801dd69a641df7fa37fc9ab09b3",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/98f30b85b1ac8801dd69a641df7fa37fc9ab09b3/comments",
+  "author": null,
+  "committer": null,
+  "parents": [
+    {
+      "sha": "acfef85aad4bfb20e1de529839395fc84a86b860",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/acfef85aad4bfb20e1de529839395fc84a86b860",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/acfef85aad4bfb20e1de529839395fc84a86b860"
+    }
+  ],
+  "stats": {
+    "total": 17,
+    "additions": 12,
+    "deletions": 5
+  },
+  "files": [
+    {
+      "sha": "5b8c1303344afd252e5a26d412b446130317e23f",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "changes": 10,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/98f30b85b1ac8801dd69a641df7fa37fc9ab09b3/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/98f30b85b1ac8801dd69a641df7fa37fc9ab09b3/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=98f30b85b1ac8801dd69a641df7fa37fc9ab09b3",
+      "patch": "@@ -5228,11 +5228,6 @@ def reduce_C_function(C: array) -> float\n                 vmin = vmax = None\n             bins = None\n \n-        # autoscale the norm with current accum values if it hasn't been set\n-        if norm is not None:\n-            if norm.vmin is None and norm.vmax is None:\n-                norm.autoscale(accum)\n-\n         if bins is not None:\n             if not np.iterable(bins):\n                 minimum, maximum = min(accum), max(accum)\n@@ -5248,6 +5243,11 @@ def reduce_C_function(C: array) -> float\n         collection._internal_update(kwargs)\n         collection._scale_norm(norm, vmin, vmax)\n \n+        # autoscale the norm with current accum values if it hasn't been set\n+        if norm is not None:\n+            if collection.norm.vmin is None and collection.norm.vmax is None:\n+                collection.norm.autoscale()\n+\n         corners = ((xmin, ymin), (xmax, ymax))\n         self.update_datalim(corners)\n         self._request_autoscale_view(tight=True)"
+    },
+    {
+      "sha": "c482bdc391e85a59777e82a44a7f8acb84ca4050",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 0,
+      "changes": 7,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/98f30b85b1ac8801dd69a641df7fa37fc9ab09b3/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/98f30b85b1ac8801dd69a641df7fa37fc9ab09b3/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=98f30b85b1ac8801dd69a641df7fa37fc9ab09b3",
+      "patch": "@@ -976,6 +976,13 @@ def test_hexbin_bad_extents():\n     with pytest.raises(ValueError, match=\"In extent, ymax must be greater than ymin\"):\n         ax.hexbin(x, y, extent=(0, 1, 1, 0))\n \n+def test_hexbin_string_norm():\n+    fig, ax = plt.subplots()\n+    hex = ax.hexbin(np.random.rand(10), np.random.rand(10), norm=\"log\",vmin=2,vmax=5)\n+    assert isinstance(hex,matplotlib.collections.PolyCollection)\n+    assert isinstance(hex.norm,matplotlib.colors.LogNorm)\n+    assert hex.norm.vmin == 2\n+    assert hex.norm.vmax == 5\n \n @image_comparison(['hexbin_empty.png'], remove_text=True)\n def test_hexbin_empty():"
+    }
+  ]
+}

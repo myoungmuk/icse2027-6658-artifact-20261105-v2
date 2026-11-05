@@ -1,0 +1,101 @@
+{
+  "sha": "ad8140bafe046fb48552c32146f22d2d8318d53e",
+  "node_id": "C_kwDOABUiotoAKGFkODE0MGJhZmUwNDZmYjQ4NTUyYzMyMTQ2ZjIyZDJkODMxOGQ1M2U",
+  "commit": {
+    "author": {
+      "name": "Tim Hoffmann",
+      "email": "2836374+timhoffm@users.noreply.github.com",
+      "date": "2024-03-11T21:43:22Z"
+    },
+    "committer": {
+      "name": "Tim Hoffmann",
+      "email": "2836374+timhoffm@users.noreply.github.com",
+      "date": "2024-03-15T08:35:38Z"
+    },
+    "message": "Fix __qualname__ for Axes methods that are defined elsewhere",
+    "tree": {
+      "sha": "b29006debdfdcc8289a5eb61258210b2282c9ffa",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/b29006debdfdcc8289a5eb61258210b2282c9ffa"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/ad8140bafe046fb48552c32146f22d2d8318d53e",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ad8140bafe046fb48552c32146f22d2d8318d53e",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/ad8140bafe046fb48552c32146f22d2d8318d53e",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ad8140bafe046fb48552c32146f22d2d8318d53e/comments",
+  "author": {
+    "login": "timhoffm",
+    "id": 2836374,
+    "node_id": "MDQ6VXNlcjI4MzYzNzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2836374?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/timhoffm",
+    "html_url": "https://github.com/timhoffm",
+    "followers_url": "https://api.github.com/users/timhoffm/followers",
+    "following_url": "https://api.github.com/users/timhoffm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/timhoffm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/timhoffm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/timhoffm/subscriptions",
+    "organizations_url": "https://api.github.com/users/timhoffm/orgs",
+    "repos_url": "https://api.github.com/users/timhoffm/repos",
+    "events_url": "https://api.github.com/users/timhoffm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/timhoffm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "timhoffm",
+    "id": 2836374,
+    "node_id": "MDQ6VXNlcjI4MzYzNzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2836374?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/timhoffm",
+    "html_url": "https://github.com/timhoffm",
+    "followers_url": "https://api.github.com/users/timhoffm/followers",
+    "following_url": "https://api.github.com/users/timhoffm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/timhoffm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/timhoffm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/timhoffm/subscriptions",
+    "organizations_url": "https://api.github.com/users/timhoffm/orgs",
+    "repos_url": "https://api.github.com/users/timhoffm/repos",
+    "events_url": "https://api.github.com/users/timhoffm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/timhoffm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "1c4c9af3ab6e4fa9cb5843b39a13b9e2131f9901",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/1c4c9af3ab6e4fa9cb5843b39a13b9e2131f9901",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/1c4c9af3ab6e4fa9cb5843b39a13b9e2131f9901"
+    }
+  ],
+  "stats": {
+    "total": 33,
+    "additions": 26,
+    "deletions": 7
+  },
+  "files": [
+    {
+      "sha": "ae0947024b8fe8d7516d2400cef96b48951aa29b",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 26,
+      "deletions": 7,
+      "changes": 33,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ad8140bafe046fb48552c32146f22d2d8318d53e/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ad8140bafe046fb48552c32146f22d2d8318d53e/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=ad8140bafe046fb48552c32146f22d2d8318d53e",
+      "patch": "@@ -43,6 +43,24 @@\n # All the other methods should go in the _AxesBase class.\n \n \n+def _make_axes_method(func):\n+    \"\"\"\n+    Patch the qualname for functions that are directly added to Axes.\n+\n+    Some Axes functionality is defined in functions in other submodules.\n+    These are simply added as attributes to Axes. As a result, their\n+    ``__qualname__`` is e.g. only \"table\" and not \"Axes.table\". This\n+    function fixes that.\n+\n+    Note that the function itself is patched, so that\n+    ``matplotlib.table.table.__qualname__` will also show \"Axes.table\".\n+    However, since these functions are not intended to be standalone,\n+    this is bearable.\n+    \"\"\"\n+    func.__qualname__ = f\"Axes.{func.__name__}\"\n+    return func\n+\n+\n @_docstring.interpd\n class Axes(_AxesBase):\n     \"\"\"\n@@ -8541,18 +8559,19 @@ def violin(self, vpstats, positions=None, vert=True, widths=0.5,\n \n     # Methods that are entirely implemented in other modules.\n \n-    table = mtable.table\n+    table = _make_axes_method(mtable.table)\n \n     # args can be either Y or y1, y2, ... and all should be replaced\n-    stackplot = _preprocess_data()(mstack.stackplot)\n+    stackplot = _preprocess_data()(_make_axes_method(mstack.stackplot))\n \n     streamplot = _preprocess_data(\n-        replace_names=[\"x\", \"y\", \"u\", \"v\", \"start_points\"])(mstream.streamplot)\n+            replace_names=[\"x\", \"y\", \"u\", \"v\", \"start_points\"])(\n+        _make_axes_method(mstream.streamplot))\n \n-    tricontour = mtri.tricontour\n-    tricontourf = mtri.tricontourf\n-    tripcolor = mtri.tripcolor\n-    triplot = mtri.triplot\n+    tricontour = _make_axes_method(mtri.tricontour)\n+    tricontourf = _make_axes_method(mtri.tricontourf)\n+    tripcolor = _make_axes_method(mtri.tripcolor)\n+    triplot = _make_axes_method(mtri.triplot)\n \n     def _get_aspect_ratio(self):\n         \"\"\""
+    }
+  ]
+}

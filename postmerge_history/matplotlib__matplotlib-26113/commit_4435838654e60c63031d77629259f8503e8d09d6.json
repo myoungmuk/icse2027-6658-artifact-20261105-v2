@@ -1,0 +1,73 @@
+{
+  "sha": "4435838654e60c63031d77629259f8503e8d09d6",
+  "node_id": "C_kwDOABUiotoAKDQ0MzU4Mzg2NTRlNjBjNjMwMzFkNzc2MjkyNTlmODUwM2U4ZDA5ZDY",
+  "commit": {
+    "author": {
+      "name": "Yi Wei",
+      "email": "rylie.wei@tum.de",
+      "date": "2023-07-01T12:44:39Z"
+    },
+    "committer": {
+      "name": "Yi Wei",
+      "email": "rylie.wei@tum.de",
+      "date": "2023-07-01T12:44:39Z"
+    },
+    "message": "FIX: pcolor writing to read-only input mask",
+    "tree": {
+      "sha": "c1251cb24744f2d842f77ed245eecab8845a8095",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/c1251cb24744f2d842f77ed245eecab8845a8095"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/4435838654e60c63031d77629259f8503e8d09d6",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/4435838654e60c63031d77629259f8503e8d09d6",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/4435838654e60c63031d77629259f8503e8d09d6",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/4435838654e60c63031d77629259f8503e8d09d6/comments",
+  "author": null,
+  "committer": null,
+  "parents": [
+    {
+      "sha": "ae723ba892b83b0c099efad6d1fdda4c77d41415",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ae723ba892b83b0c099efad6d1fdda4c77d41415",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/ae723ba892b83b0c099efad6d1fdda4c77d41415"
+    }
+  ],
+  "stats": {
+    "total": 14,
+    "additions": 10,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "4eff4ec1b5d2e3857ad5ed8d396791db10eafeff",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/4435838654e60c63031d77629259f8503e8d09d6/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/4435838654e60c63031d77629259f8503e8d09d6/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=4435838654e60c63031d77629259f8503e8d09d6",
+      "patch": "@@ -5773,7 +5773,7 @@ def _pcolorargs(self, funcname, *args, shading='auto', **kwargs):\n             # unit conversion allows e.g. datetime objects as axis values\n             X, Y = args[:2]\n             X, Y = self._process_unit_info([(\"x\", X), (\"y\", Y)], kwargs)\n-            X, Y = [cbook.safe_masked_invalid(a) for a in [X, Y]]\n+            X, Y = [cbook.safe_masked_invalid(a, copy=True) for a in [X, Y]]\n \n             if funcname == 'pcolormesh':\n                 if np.ma.is_masked(X) or np.ma.is_masked(Y):"
+    },
+    {
+      "sha": "30c7e34c937b3a8c1d6cc82937fd99350430254f",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 3,
+      "changes": 12,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/4435838654e60c63031d77629259f8503e8d09d6/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/4435838654e60c63031d77629259f8503e8d09d6/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=4435838654e60c63031d77629259f8503e8d09d6",
+      "patch": "@@ -1507,11 +1507,17 @@ def test_pcolorargs_with_read_only():\n     y = np.linspace(0, 1, 10)\n     X, Y = np.meshgrid(x, y)\n     Z = np.sin(2 * np.pi * X) * np.cos(2 * np.pi * Y)\n-    Zmask = np.broadcast_to([True, False] * 5, Z.shape)\n-    assert Zmask.flags.writeable is False\n-    masked_Z = np.ma.array(Z, mask=Zmask)\n+    mask = np.broadcast_to([True, False] * 5, Z.shape)\n+    assert mask.flags.writeable is False\n+    masked_Z = np.ma.array(Z, mask=mask)\n     plt.pcolormesh(X, Y, masked_Z)\n \n+    masked_X = np.ma.array(X, mask=mask)\n+    masked_Y = np.ma.array(Y, mask=mask)\n+    with pytest.warns(UserWarning,\n+                      match='are not monotonically increasing or decreasing'):\n+        plt.pcolor(masked_X, masked_Y, masked_Z)\n+\n \n @check_figures_equal(extensions=[\"png\"])\n def test_pcolornearest(fig_test, fig_ref):"
+    }
+  ]
+}

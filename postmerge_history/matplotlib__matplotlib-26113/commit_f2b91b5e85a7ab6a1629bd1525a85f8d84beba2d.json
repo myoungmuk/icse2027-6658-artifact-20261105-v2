@@ -1,0 +1,125 @@
+{
+  "sha": "f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+  "node_id": "C_kwDOABUiotoAKGYyYjkxYjVlODVhN2FiNmExNjI5YmQxNTI1YTg1ZjhkODRiZWJhMmQ",
+  "commit": {
+    "author": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-04-20T07:06:04Z"
+    },
+    "committer": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-04-20T07:46:52Z"
+    },
+    "message": "add tim's suggestion and fix docs",
+    "tree": {
+      "sha": "04d00a74949f8fbefe55f3edab813ce6910801b8",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/04d00a74949f8fbefe55f3edab813ce6910801b8"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d/comments",
+  "author": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "d99c8e0f529918be0be670d6ffd44d06da905e00",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/d99c8e0f529918be0be670d6ffd44d06da905e00",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/d99c8e0f529918be0be670d6ffd44d06da905e00"
+    }
+  ],
+  "stats": {
+    "total": 64,
+    "additions": 29,
+    "deletions": 35
+  },
+  "files": [
+    {
+      "sha": "a9b9f1716f2db1b90b074c16b6e3e62005c1043d",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 25,
+      "deletions": 31,
+      "changes": 56,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+      "patch": "@@ -8350,10 +8350,10 @@ def matshow(self, Z, **kwargs):\n \n     @_api.make_keyword_only(\"3.9\", \"vert\")\n     @_preprocess_data(replace_names=[\"dataset\"])\n-    def violinplot(self, dataset, positions=None, vert=None, widths=0.5,\n-                   showmeans=False, showextrema=True, showmedians=False,\n-                   quantiles=None, points=100, bw_method=None, side='both',\n-                   orientation=None):\n+    def violinplot(self, dataset, positions=None, vert=None,\n+                   orientation='vertical', widths=0.5, showmeans=False,\n+                   showextrema=True, showmedians=False, quantiles=None,\n+                   points=100, bw_method=None, side='both',):\n         \"\"\"\n         Make a violin plot.\n \n@@ -8381,6 +8381,12 @@ def violinplot(self, dataset, positions=None, vert=None, widths=0.5,\n             If True, plots the violins vertically.\n             If False, plots the violins horizontally.\n \n+        orientation : {'vertical', 'horizontal'}, default: 'vertical'\n+            If 'horizontal', plots the violins horizontally.\n+            Otherwise, plots the violins vertically.\n+\n+            .. versionadded:: 3.10\n+\n         widths : float or array-like, default: 0.5\n             The maximum width of each violin in units of the *positions* axis.\n             The default is 0.5, which is half the available space when using default\n@@ -8414,12 +8420,6 @@ def violinplot(self, dataset, positions=None, vert=None, widths=0.5,\n             'both' plots standard violins. 'low'/'high' only\n             plots the side below/above the positions value.\n \n-        orientation : {'vertical', 'horizontal'}, default: 'vertical'\n-            If 'horizontal', plots the violins horizontally.\n-            Otherwise, plots the violins vertically.\n-\n-            .. versionadded:: 3.10\n-\n         data : indexable object, optional\n             DATA_PARAMETER_PLACEHOLDER\n \n@@ -8475,9 +8475,9 @@ def _kde_method(X, coords):\n                            showmedians=showmedians, side=side)\n \n     @_api.make_keyword_only(\"3.9\", \"vert\")\n-    def violin(self, vpstats, positions=None, vert=None, widths=0.5,\n-               showmeans=False, showextrema=True, showmedians=False, side='both',\n-               orientation=None):\n+    def violin(self, vpstats, positions=None, vert=None,\n+               orientation=None, widths=0.5, showmeans=False,\n+               showextrema=True, showmedians=False, side='both'):\n         \"\"\"\n         Draw a violin plot from pre-computed statistics.\n \n@@ -8525,6 +8525,12 @@ def violin(self, vpstats, positions=None, vert=None, widths=0.5,\n             If True, plots the violins vertically.\n             If False, plots the violins horizontally.\n \n+        orientation : {'vertical', 'horizontal'}, default: 'vertical'\n+            If 'horizontal', plots the violins horizontally.\n+            Otherwise, plots the violins vertically.\n+\n+            .. versionadded:: 3.10\n+\n         widths : float or array-like, default: 0.5\n             The maximum width of each violin in units of the *positions* axis.\n             The default is 0.5, which is half available space when using default\n@@ -8543,12 +8549,6 @@ def violin(self, vpstats, positions=None, vert=None, widths=0.5,\n             'both' plots standard violins. 'low'/'high' only\n             plots the side below/above the positions value.\n \n-        orientation : {'vertical', 'horizontal'}, default: 'vertical'\n-            If 'horizontal', plots the violins horizontally.\n-            Otherwise, plots the violins vertically.\n-\n-            .. versionadded:: 3.10\n-\n         Returns\n         -------\n         dict\n@@ -8599,23 +8599,17 @@ def violin(self, vpstats, positions=None, vert=None, widths=0.5,\n         datashape_message = (\"List of violinplot statistics and `{0}` \"\n                              \"values must have the same length\")\n \n+        # vert and orientation parameters are linked until vert's\n+        # deprecation period expires. If both are selected,\n+        # vert takes precedence.\n         if vert is not None:\n             _api.warn_deprecated(\n                 \"3.10\",\n                 name=\"vert: bool\",\n                 alternative=\"orientation: {'vertical', 'horizontal'}\"\n-            )\n-\n-        # vert and orientation parameters are linked until vert's\n-        # deprecation period expires. If both are selected,\n-        # vert takes precedence.\n-        if vert or vert is None and orientation is None:\n-            orientation = 'vertical'\n-        elif vert is False:\n-            orientation = 'horizontal'\n-\n-        if orientation is not None:\n-            _api.check_in_list(['horizontal', 'vertical'], orientation=orientation)\n+                )\n+            orientation = 'vertical' if vert else 'horizontal'\n+        _api.check_in_list(['horizontal', 'vertical'], orientation=orientation)\n \n         # Validate positions\n         if positions is None:"
+    },
+    {
+      "sha": "e47a062592ff3fac27bbfae5551bb372b9dc986e",
+      "filename": "lib/matplotlib/axes/_axes.pyi",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.pyi?ref=f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+      "patch": "@@ -740,6 +740,7 @@ class Axes(_AxesBase):\n         positions: ArrayLike | None = ...,\n         *,\n         vert: bool | None = ...,\n+        orientation: Literal[\"vertical\", \"horizontal\"] = ...,\n         widths: float | ArrayLike = ...,\n         showmeans: bool = ...,\n         showextrema: bool = ...,\n@@ -751,7 +752,6 @@ class Axes(_AxesBase):\n         | Callable[[GaussianKDE], float]\n         | None = ...,\n         side: Literal[\"both\", \"low\", \"high\"] = ...,\n-        orientation: Literal[\"vertical\", \"horizontal\"] | None = ...,\n         data=...,\n     ) -> dict[str, Collection]: ...\n     def violin(\n@@ -760,12 +760,12 @@ class Axes(_AxesBase):\n         positions: ArrayLike | None = ...,\n         *,\n         vert: bool | None = ...,\n+        orientation: Literal[\"vertical\", \"horizontal\"] | None = ...,\n         widths: float | ArrayLike = ...,\n         showmeans: bool = ...,\n         showextrema: bool = ...,\n         showmedians: bool = ...,\n         side: Literal[\"both\", \"low\", \"high\"] = ...,\n-        orientation: Literal[\"vertical\", \"horizontal\"] | None = ...,\n     ) -> dict[str, Collection]: ...\n \n     table = mtable.table"
+    },
+    {
+      "sha": "f10273495b517ffcdad55059a5ba10a09d8ce14b",
+      "filename": "lib/matplotlib/pyplot.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d/lib%2Fmatplotlib%2Fpyplot.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d/lib%2Fmatplotlib%2Fpyplot.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fpyplot.py?ref=f2b91b5e85a7ab6a1629bd1525a85f8d84beba2d",
+      "patch": "@@ -4143,6 +4143,7 @@ def violinplot(\n     dataset: ArrayLike | Sequence[ArrayLike],\n     positions: ArrayLike | None = None,\n     vert: bool | None = None,\n+    orientation: Literal[\"vertical\", \"horizontal\"] = \"vertical\",\n     widths: float | ArrayLike = 0.5,\n     showmeans: bool = False,\n     showextrema: bool = True,\n@@ -4154,14 +4155,14 @@ def violinplot(\n     | Callable[[GaussianKDE], float]\n     | None = None,\n     side: Literal[\"both\", \"low\", \"high\"] = \"both\",\n-    orientation: Literal[\"vertical\", \"horizontal\"] | None = None,\n     *,\n     data=None,\n ) -> dict[str, Collection]:\n     return gca().violinplot(\n         dataset,\n         positions=positions,\n         vert=vert,\n+        orientation=orientation,\n         widths=widths,\n         showmeans=showmeans,\n         showextrema=showextrema,\n@@ -4170,7 +4171,6 @@ def violinplot(\n         points=points,\n         bw_method=bw_method,\n         side=side,\n-        orientation=orientation,\n         **({\"data\": data} if data is not None else {}),\n     )\n "
+    }
+  ]
+}

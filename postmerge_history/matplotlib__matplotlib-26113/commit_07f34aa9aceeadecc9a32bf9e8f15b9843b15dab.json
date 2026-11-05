@@ -1,0 +1,101 @@
+{
+  "sha": "07f34aa9aceeadecc9a32bf9e8f15b9843b15dab",
+  "node_id": "C_kwDOABUiotoAKDA3ZjM0YWE5YWNlZWFkZWNjOWEzMmJmOWU4ZjE1Yjk4NDNiMTVkYWI",
+  "commit": {
+    "author": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2024-03-14T00:20:07Z"
+    },
+    "committer": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2024-03-14T08:48:08Z"
+    },
+    "message": "Avoid modifying user input to Axes.bar\n\nThe `error_kw` parameter is a dictionary, on which `setdefault` and\n`pop` are called, which would modify user input.",
+    "tree": {
+      "sha": "61236d733acd5949d9d13375631abb8741423527",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/61236d733acd5949d9d13375631abb8741423527"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/07f34aa9aceeadecc9a32bf9e8f15b9843b15dab",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/07f34aa9aceeadecc9a32bf9e8f15b9843b15dab",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/07f34aa9aceeadecc9a32bf9e8f15b9843b15dab",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/07f34aa9aceeadecc9a32bf9e8f15b9843b15dab/comments",
+  "author": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "787f30836b6acb68083149a515159e956d8e4804",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/787f30836b6acb68083149a515159e956d8e4804",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/787f30836b6acb68083149a515159e956d8e4804"
+    }
+  ],
+  "stats": {
+    "total": 8,
+    "additions": 4,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "627dd2c36d40d4f4e8eed9ce351cea0834c65bd2",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "changes": 8,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/07f34aa9aceeadecc9a32bf9e8f15b9843b15dab/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/07f34aa9aceeadecc9a32bf9e8f15b9843b15dab/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=07f34aa9aceeadecc9a32bf9e8f15b9843b15dab",
+      "patch": "@@ -2434,7 +2434,8 @@ def bar(self, x, height, width=0.8, bottom=None, *, align=\"center\",\n         # checking and processing will be left to the errorbar method.\n         xerr = kwargs.pop('xerr', None)\n         yerr = kwargs.pop('yerr', None)\n-        error_kw = kwargs.pop('error_kw', {})\n+        error_kw = kwargs.pop('error_kw', None)\n+        error_kw = {} if error_kw is None else error_kw.copy()\n         ezorder = error_kw.pop('zorder', None)\n         if ezorder is None:\n             ezorder = kwargs.get('zorder', None)\n@@ -2590,9 +2591,8 @@ def bar(self, x, height, width=0.8, bottom=None, *, align=\"center\",\n \n             error_kw.setdefault(\"label\", '_nolegend_')\n \n-            errorbar = self.errorbar(ex, ey,\n-                                     yerr=yerr, xerr=xerr,\n-                                     fmt='none', **error_kw)\n+            errorbar = self.errorbar(ex, ey, yerr=yerr, xerr=xerr, fmt='none',\n+                                     **error_kw)\n         else:\n             errorbar = None\n "
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "instance_id": "django__django-11179",
+  "repo": "django/django",
+  "original_pr_url": "https://github.com/django/django/pull/11179",
+  "merge_sha": "afc708cf6d047b35db57bd7c55baeffef459d279",
+  "merged_at": "2019-04-08T19:43:57Z",
+  "window_end": "2020-04-07T19:43:57+00:00",
+  "window_days": 365,
+  "end_commit_sha": "2e67e80fbe0accd5f256415ac28af8bd82eeaced",
+  "default_branch_queried": "main",
+  "source_paths": [
+    "django/db/models/deletion.py"
+  ],
+  "path_history_coverage": {
+    "django/db/models/deletion.py": {
+      "commits": 12,
+      "pages": 1
+    }
+  },
+  "distinct_path_commits": 12,
+  "files_additions": 231,
+  "files_deletions": 114,
+  "commits": [
+    {
+      "sha": "26c4be2ebe918601c0a13d4abb3f3cab49107c73",
+      "date": "2019-04-17T11:24:31Z",
+      "message": "Refs #18676 -- Enabled fast-delete for m2m_changed senders.\n\nThere's no reason to disable fast-delete when an intermediary\nmany-to-many model has connected m2m_changed receivers because the\nsignal is only sent when related manager's clear() and remove() methods\nare directly called.\n\nThis must have been overlooked in 1cd6e04cd4f768bcd4385b75de433d497d938f82\ngiven no regression tests fail when m2m_changed is not taken into\nconsideration to determine if fast-delete can be enabled.",
+      "html_url": "https://github.com/django/django/commit/26c4be2ebe918601c0a13d4abb3f3cab49107c73",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 1,
+          "deletions": 2,
+          "changes": 3,
+          "patch_present": true,
+          "patch": "@@ -136,8 +136,7 @@ def can_fast_delete(self, objs, from_field=None):\n         else:\n             return False\n         if (signals.pre_delete.has_listeners(model) or\n-                signals.post_delete.has_listeners(model) or\n-                signals.m2m_changed.has_listeners(model)):\n+                signals.post_delete.has_listeners(model)):\n             return False\n         # The use of from_field comes from the need to avoid cascade back to\n         # parent when parent delete is cascading to child."
+        }
+      ]
+    },
+    {
+      "sha": "f110de5c04818b8f915dcf65da37a50c1424c6e6",
+      "date": "2019-04-17T11:41:23Z",
+      "message": "Fixed #30191 -- Selected only referenced fields during cascade deletion.\n\nThe non-referenced fields can only be deferred if no deletion signals\nreceivers are connected for their respective model as connected as these\nreceivers might expect all fields of the deleted model to be present.\n\nThanks Ed Morley for the report.",
+      "html_url": "https://github.com/django/django/commit/f110de5c04818b8f915dcf65da37a50c1424c6e6",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 25,
+          "deletions": 4,
+          "changes": 29,
+          "patch_present": true,
+          "patch": "@@ -1,4 +1,5 @@\n from collections import Counter\n+from itertools import chain\n from operator import attrgetter\n \n from django.db import IntegrityError, connections, transaction\n@@ -116,6 +117,12 @@ def add_field_update(self, field, value, objs):\n             model, {}).setdefault(\n             (field, value), set()).update(objs)\n \n+    def _has_signal_listeners(self, model):\n+        return (\n+            signals.pre_delete.has_listeners(model) or\n+            signals.post_delete.has_listeners(model)\n+        )\n+\n     def can_fast_delete(self, objs, from_field=None):\n         \"\"\"\n         Determine if the objects in the given queryset-like or single object\n@@ -135,8 +142,7 @@ def can_fast_delete(self, objs, from_field=None):\n             model = objs.model\n         else:\n             return False\n-        if (signals.pre_delete.has_listeners(model) or\n-                signals.post_delete.has_listeners(model)):\n+        if self._has_signal_listeners(model):\n             return False\n         # The use of from_field comes from the need to avoid cascade back to\n         # parent when parent delete is cascading to child.\n@@ -219,8 +225,23 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                     sub_objs = self.related_objects(related, batch)\n                     if self.can_fast_delete(sub_objs, from_field=field):\n                         self.fast_deletes.append(sub_objs)\n-                    elif sub_objs:\n-                        field.remote_field.on_delete(self, field, sub_objs, self.using)\n+                    else:\n+                        related_model = related.related_model\n+                        # Non-referenced fields can be deferred if no signal\n+                        # receivers are connected for the related model as\n+                        # they'll never be exposed to the user. Skip field\n+                        # deferring when some relationships are select_related\n+                        # as interactions between both features are hard to\n+                        # get right. This should only happen in the rare\n+                        # cases where .related_objects is overridden anyway.\n+                        if not (sub_objs.query.select_related or self._has_signal_listeners(related_model)):\n+                            referenced_fields = set(chain.from_iterable(\n+                                (rf.attname for rf in rel.field.foreign_related_fields)\n+                                for rel in get_candidate_relations_to_delete(related_model._meta)\n+                            ))\n+                            sub_objs = sub_objs.only(*tuple(referenced_fields))\n+                        if sub_objs:\n+                            field.remote_field.on_delete(self, field, sub_objs, self.using)\n             for field in model._meta.private_fields:\n                 if hasattr(field, 'bulk_related_objects'):\n                     # It's something like generic foreign key."
+        }
+      ]
+    },
+    {
+      "sha": "86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+      "date": "2019-05-06T11:04:31Z",
+      "message": "Fixed #30339 -- Made Model.delete(keep_parents=True) preserves nested parent reverse relationships.\n\nThanks Simon Charette for the review.",
+      "html_url": "https://github.com/django/django/commit/86a3ad351ec18d9dcd50cac1fc8ada6f904675db",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 2,
+          "deletions": 1,
+          "changes": 3,
+          "patch_present": true,
+          "patch": "@@ -212,7 +212,8 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                                  collect_related=False,\n                                  reverse_dependency=True)\n         if collect_related:\n-            parents = model._meta.parents\n+            if keep_parents:\n+                parents = set(model._meta.get_parent_list())\n             for related in get_candidate_relations_to_delete(model._meta):\n                 # Preserve parent reverse relationships if keep_parents=True.\n                 if keep_parents and related.model in parents:"
+        }
+      ]
+    },
+    {
+      "sha": "832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+      "date": "2019-10-09T07:49:27Z",
+      "message": "Used defaultdict in deletion.Collector.",
+      "html_url": "https://github.com/django/django/commit/832aa08afecee4f59cb480c4e4a6b29bcbb22b94",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 9,
+          "deletions": 10,
+          "changes": 19,
+          "patch_present": true,
+          "patch": "@@ -1,4 +1,5 @@\n-from collections import Counter\n+from collections import Counter, defaultdict\n+from functools import partial\n from itertools import chain\n from operator import attrgetter\n \n@@ -65,8 +66,9 @@ class Collector:\n     def __init__(self, using):\n         self.using = using\n         # Initially, {model: {instances}}, later values become lists.\n-        self.data = {}\n-        self.field_updates = {}  # {model: {(field, value): {instances}}}\n+        self.data = defaultdict(set)\n+        # {model: {(field, value): {instances}}}\n+        self.field_updates = defaultdict(partial(defaultdict, set))\n         # fast_deletes is a list of queryset-likes that can be deleted without\n         # fetching the objects into memory.\n         self.fast_deletes = []\n@@ -76,7 +78,7 @@ def __init__(self, using):\n         # should be included, as the dependencies exist only between actual\n         # database tables; proxy models are represented here by their concrete\n         # parent.\n-        self.dependencies = {}  # {model: {models}}\n+        self.dependencies = defaultdict(set)  # {model: {models}}\n \n     def add(self, objs, source=None, nullable=False, reverse_dependency=False):\n         \"\"\"\n@@ -90,7 +92,7 @@ def add(self, objs, source=None, nullable=False, reverse_dependency=False):\n             return []\n         new_objs = []\n         model = objs[0].__class__\n-        instances = self.data.setdefault(model, set())\n+        instances = self.data[model]\n         for obj in objs:\n             if obj not in instances:\n                 new_objs.append(obj)\n@@ -101,8 +103,7 @@ def add(self, objs, source=None, nullable=False, reverse_dependency=False):\n         if source is not None and not nullable:\n             if reverse_dependency:\n                 source, model = model, source\n-            self.dependencies.setdefault(\n-                source._meta.concrete_model, set()).add(model._meta.concrete_model)\n+            self.dependencies[source._meta.concrete_model].add(model._meta.concrete_model)\n         return new_objs\n \n     def add_field_update(self, field, value, objs):\n@@ -113,9 +114,7 @@ def add_field_update(self, field, value, objs):\n         if not objs:\n             return\n         model = objs[0].__class__\n-        self.field_updates.setdefault(\n-            model, {}).setdefault(\n-            (field, value), set()).update(objs)\n+        self.field_updates[model][field, value].update(objs)\n \n     def _has_signal_listeners(self, model):\n         return ("
+        }
+      ]
+    },
+    {
+      "sha": "26c66f45193fa65125ca06328817927d6bbc2b22",
+      "date": "2019-10-09T07:49:53Z",
+      "message": "Fixed #30856 -- Combined fast-delete queries by model during cascade deletion.\n\nReduced the number of queries required when performing cascade deletion\nfor a model referenced multiple time by another one by performing an\nunion of reference lookups.",
+      "html_url": "https://github.com/django/django/commit/26c66f45193fa65125ca06328817927d6bbc2b22",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 40,
+          "deletions": 32,
+          "changes": 72,
+          "patch_present": true,
+          "patch": "@@ -1,10 +1,11 @@\n+import operator\n from collections import Counter, defaultdict\n-from functools import partial\n+from functools import partial, reduce\n from itertools import chain\n from operator import attrgetter\n \n from django.db import IntegrityError, connections, transaction\n-from django.db.models import signals, sql\n+from django.db.models import query_utils, signals, sql\n \n \n class ProtectedError(IntegrityError):\n@@ -136,7 +137,7 @@ def can_fast_delete(self, objs, from_field=None):\n         if from_field and from_field.remote_field.on_delete is not CASCADE:\n             return False\n         if hasattr(objs, '_meta'):\n-            model = type(objs)\n+            model = objs._meta.model\n         elif hasattr(objs, 'model') and hasattr(objs, '_raw_delete'):\n             model = objs.model\n         else:\n@@ -158,12 +159,13 @@ def can_fast_delete(self, objs, from_field=None):\n             )\n         )\n \n-    def get_del_batches(self, objs, field):\n+    def get_del_batches(self, objs, fields):\n         \"\"\"\n         Return the objs in suitably sized batches for the used connection.\n         \"\"\"\n+        field_names = [field.name for field in fields]\n         conn_batch_size = max(\n-            connections[self.using].ops.bulk_batch_size([field.name], objs), 1)\n+            connections[self.using].ops.bulk_batch_size(field_names, objs), 1)\n         if len(objs) > conn_batch_size:\n             return [objs[i:i + conn_batch_size]\n                     for i in range(0, len(objs), conn_batch_size)]\n@@ -215,49 +217,55 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n \n         if keep_parents:\n             parents = set(model._meta.get_parent_list())\n+        model_fast_deletes = defaultdict(list)\n         for related in get_candidate_relations_to_delete(model._meta):\n             # Preserve parent reverse relationships if keep_parents=True.\n             if keep_parents and related.model in parents:\n                 continue\n             field = related.field\n             if field.remote_field.on_delete == DO_NOTHING:\n                 continue\n-            batches = self.get_del_batches(new_objs, field)\n+            related_model = related.related_model\n+            if self.can_fast_delete(related_model, from_field=field):\n+                model_fast_deletes[related_model].append(field)\n+                continue\n+            batches = self.get_del_batches(new_objs, [field])\n             for batch in batches:\n-                sub_objs = self.related_objects(related, batch)\n-                if self.can_fast_delete(sub_objs, from_field=field):\n-                    self.fast_deletes.append(sub_objs)\n-                else:\n-                    related_model = related.related_model\n-                    # Non-referenced fields can be deferred if no signal\n-                    # receivers are connected for the related model as\n-                    # they'll never be exposed to the user. Skip field\n-                    # deferring when some relationships are select_related\n-                    # as interactions between both features are hard to\n-                    # get right. This should only happen in the rare\n-                    # cases where .related_objects is overridden anyway.\n-                    if not (sub_objs.query.select_related or self._has_signal_listeners(related_model)):\n-                        referenced_fields = set(chain.from_iterable(\n-                            (rf.attname for rf in rel.field.foreign_related_fields)\n-                            for rel in get_candidate_relations_to_delete(related_model._meta)\n-                        ))\n-                        sub_objs = sub_objs.only(*tuple(referenced_fields))\n-                    if sub_objs:\n-                        field.remote_field.on_delete(self, field, sub_objs, self.using)\n-\n+                sub_objs = self.related_objects(related_model, [field], batch)\n+                # Non-referenced fields can be deferred if no signal receivers\n+                # are connected for the related model as they'll never be\n+                # exposed to the user. Skip field deferring when some\n+                # relationships are select_related as interactions between both\n+                # features are hard to get right. This should only happen in\n+                # the rare cases where .related_objects is overridden anyway.\n+                if not (sub_objs.query.select_related or self._has_signal_listeners(related_model)):\n+                    referenced_fields = set(chain.from_iterable(\n+                        (rf.attname for rf in rel.field.foreign_related_fields)\n+                        for rel in get_candidate_relations_to_delete(related_model._meta)\n+                    ))\n+                    sub_objs = sub_objs.only(*tuple(referenced_fields))\n+                if sub_objs:\n+                    field.remote_field.on_delete(self, field, sub_objs, self.using)\n+        for related_model, related_fields in model_fast_deletes.items():\n+            batches = self.get_del_batches(new_objs, related_fields)\n+            for batch in batches:\n+                sub_objs = self.related_objects(related_model, related_fields, batch)\n+                self.fast_deletes.append(sub_objs)\n         for field in model._meta.private_fields:\n             if hasattr(field, 'bulk_related_objects'):\n                 # It's something like generic foreign key.\n                 sub_objs = field.bulk_related_objects(new_objs, self.using)\n                 self.collect(sub_objs, source=model, nullable=True)\n \n-    def related_objects(self, related, objs):\n+    def related_objects(self, related_model, related_fields, objs):\n         \"\"\"\n-        Get a QuerySet of objects related to `objs` via the relation `related`.\n+        Get a QuerySet of the related model to objs via related fields.\n         \"\"\"\n-        return related.related_model._base_manager.using(self.using).filter(\n-            **{\"%s__in\" % related.field.name: objs}\n-        )\n+        predicate = reduce(operator.or_, (\n+            query_utils.Q(**{'%s__in' % related_field.name: objs})\n+            for related_field in related_fields\n+        ))\n+        return related_model._base_manager.using(self.using).filter(predicate)\n \n     def instances_with_model(self):\n         for model, instances in self.data.items():"
+        }
+      ]
+    },
+    {
+      "sha": "44522d1036604e13a5adf4e084e1c8f7b56c82c0",
+      "date": "2019-10-09T07:49:53Z",
+      "message": "Made Collector.collect() return immediately for disabled related collection.",
+      "html_url": "https://github.com/django/django/commit/44522d1036604e13a5adf4e084e1c8f7b56c82c0",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 40,
+          "deletions": 37,
+          "changes": 77,
+          "patch_present": true,
+          "patch": "@@ -210,43 +210,46 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                                  source_attr=ptr.remote_field.related_name,\n                                  collect_related=False,\n                                  reverse_dependency=True)\n-        if collect_related:\n-            if keep_parents:\n-                parents = set(model._meta.get_parent_list())\n-            for related in get_candidate_relations_to_delete(model._meta):\n-                # Preserve parent reverse relationships if keep_parents=True.\n-                if keep_parents and related.model in parents:\n-                    continue\n-                field = related.field\n-                if field.remote_field.on_delete == DO_NOTHING:\n-                    continue\n-                batches = self.get_del_batches(new_objs, field)\n-                for batch in batches:\n-                    sub_objs = self.related_objects(related, batch)\n-                    if self.can_fast_delete(sub_objs, from_field=field):\n-                        self.fast_deletes.append(sub_objs)\n-                    else:\n-                        related_model = related.related_model\n-                        # Non-referenced fields can be deferred if no signal\n-                        # receivers are connected for the related model as\n-                        # they'll never be exposed to the user. Skip field\n-                        # deferring when some relationships are select_related\n-                        # as interactions between both features are hard to\n-                        # get right. This should only happen in the rare\n-                        # cases where .related_objects is overridden anyway.\n-                        if not (sub_objs.query.select_related or self._has_signal_listeners(related_model)):\n-                            referenced_fields = set(chain.from_iterable(\n-                                (rf.attname for rf in rel.field.foreign_related_fields)\n-                                for rel in get_candidate_relations_to_delete(related_model._meta)\n-                            ))\n-                            sub_objs = sub_objs.only(*tuple(referenced_fields))\n-                        if sub_objs:\n-                            field.remote_field.on_delete(self, field, sub_objs, self.using)\n-            for field in model._meta.private_fields:\n-                if hasattr(field, 'bulk_related_objects'):\n-                    # It's something like generic foreign key.\n-                    sub_objs = field.bulk_related_objects(new_objs, self.using)\n-                    self.collect(sub_objs, source=model, nullable=True)\n+        if not collect_related:\n+            return\n+\n+        if keep_parents:\n+            parents = set(model._meta.get_parent_list())\n+        for related in get_candidate_relations_to_delete(model._meta):\n+            # Preserve parent reverse relationships if keep_parents=True.\n+            if keep_parents and related.model in parents:\n+                continue\n+            field = related.field\n+            if field.remote_field.on_delete == DO_NOTHING:\n+                continue\n+            batches = self.get_del_batches(new_objs, field)\n+            for batch in batches:\n+                sub_objs = self.related_objects(related, batch)\n+                if self.can_fast_delete(sub_objs, from_field=field):\n+                    self.fast_deletes.append(sub_objs)\n+                else:\n+                    related_model = related.related_model\n+                    # Non-referenced fields can be deferred if no signal\n+                    # receivers are connected for the related model as\n+                    # they'll never be exposed to the user. Skip field\n+                    # deferring when some relationships are select_related\n+                    # as interactions between both features are hard to\n+                    # get right. This should only happen in the rare\n+                    # cases where .related_objects is overridden anyway.\n+                    if not (sub_objs.query.select_related or self._has_signal_listeners(related_model)):\n+                        referenced_fields = set(chain.from_iterable(\n+                            (rf.attname for rf in rel.field.foreign_related_fields)\n+                            for rel in get_candidate_relations_to_delete(related_model._meta)\n+                        ))\n+                        sub_objs = sub_objs.only(*tuple(referenced_fields))\n+                    if sub_objs:\n+                        field.remote_field.on_delete(self, field, sub_objs, self.using)\n+\n+        for field in model._meta.private_fields:\n+            if hasattr(field, 'bulk_related_objects'):\n+                # It's something like generic foreign key.\n+                sub_objs = field.bulk_related_objects(new_objs, self.using)\n+                self.collect(sub_objs, source=model, nullable=True)\n \n     def related_objects(self, related, objs):\n         \"\"\""
+        }
+      ]
+    },
+    {
+      "sha": "4e1d809aa570c0e0736587672607f9d6c22e42c9",
+      "date": "2019-11-19T09:49:47Z",
+      "message": "Refs #27272 -- Added Collector.add_dependency().",
+      "html_url": "https://github.com/django/django/commit/4e1d809aa570c0e0736587672607f9d6c22e42c9",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 7,
+          "deletions": 3,
+          "changes": 10,
+          "patch_present": true,
+          "patch": "@@ -102,11 +102,15 @@ def add(self, objs, source=None, nullable=False, reverse_dependency=False):\n         # deleting, and therefore do not affect the order in which objects have\n         # to be deleted.\n         if source is not None and not nullable:\n-            if reverse_dependency:\n-                source, model = model, source\n-            self.dependencies[source._meta.concrete_model].add(model._meta.concrete_model)\n+            self.add_dependency(source, model, reverse_dependency=reverse_dependency)\n         return new_objs\n \n+    def add_dependency(self, model, dependency, reverse_dependency=False):\n+        if reverse_dependency:\n+            model, dependency = dependency, model\n+        self.dependencies[model._meta.concrete_model].add(dependency._meta.concrete_model)\n+        self.data.setdefault(dependency, self.data.default_factory())\n+\n     def add_field_update(self, field, value, objs):\n         \"\"\"\n         Schedule a field update. 'objs' must be a homogeneous iterable"
+        }
+      ]
+    },
+    {
+      "sha": "89abecc75d7eadab681f29be5237972c6c2f997b",
+      "date": "2019-11-19T09:55:05Z",
+      "message": "Fixed #27272 -- Added an on_delete RESTRICT handler to allow cascading deletions while protecting direct ones.",
+      "html_url": "https://github.com/django/django/commit/89abecc75d7eadab681f29be5237972c6c2f997b",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 69,
+          "deletions": 5,
+          "changes": 74,
+          "patch_present": true,
+          "patch": "@@ -14,9 +14,17 @@ def __init__(self, msg, protected_objects):\n         super().__init__(msg, protected_objects)\n \n \n+class RestrictedError(IntegrityError):\n+    def __init__(self, msg, restricted_objects):\n+        self.restricted_objects = restricted_objects\n+        super().__init__(msg, restricted_objects)\n+\n+\n def CASCADE(collector, field, sub_objs, using):\n-    collector.collect(sub_objs, source=field.remote_field.model,\n-                      source_attr=field.name, nullable=field.null)\n+    collector.collect(\n+        sub_objs, source=field.remote_field.model, source_attr=field.name,\n+        nullable=field.null, fail_on_restricted=False,\n+    )\n     if field.null and not connections[using].features.can_defer_constraint_checks:\n         collector.add_field_update(field, None, sub_objs)\n \n@@ -31,6 +39,11 @@ def PROTECT(collector, field, sub_objs, using):\n     )\n \n \n+def RESTRICT(collector, field, sub_objs, using):\n+    collector.add_restricted_objects(field, sub_objs)\n+    collector.add_dependency(field.remote_field.model, field.model)\n+\n+\n def SET(value):\n     if callable(value):\n         def set_on_delete(collector, field, sub_objs, using):\n@@ -70,6 +83,8 @@ def __init__(self, using):\n         self.data = defaultdict(set)\n         # {model: {(field, value): {instances}}}\n         self.field_updates = defaultdict(partial(defaultdict, set))\n+        # {model: {field: {instances}}}\n+        self.restricted_objects = defaultdict(partial(defaultdict, set))\n         # fast_deletes is a list of queryset-likes that can be deleted without\n         # fetching the objects into memory.\n         self.fast_deletes = []\n@@ -121,6 +136,26 @@ def add_field_update(self, field, value, objs):\n         model = objs[0].__class__\n         self.field_updates[model][field, value].update(objs)\n \n+    def add_restricted_objects(self, field, objs):\n+        if objs:\n+            model = objs[0].__class__\n+            self.restricted_objects[model][field].update(objs)\n+\n+    def clear_restricted_objects_from_set(self, model, objs):\n+        if model in self.restricted_objects:\n+            self.restricted_objects[model] = {\n+                field: items - objs\n+                for field, items in self.restricted_objects[model].items()\n+            }\n+\n+    def clear_restricted_objects_from_queryset(self, model, qs):\n+        if model in self.restricted_objects:\n+            objs = set(qs.filter(pk__in=[\n+                obj.pk\n+                for objs in self.restricted_objects[model].values() for obj in objs\n+            ]))\n+            self.clear_restricted_objects_from_set(model, objs)\n+\n     def _has_signal_listeners(self, model):\n         return (\n             signals.pre_delete.has_listeners(model) or\n@@ -177,7 +212,8 @@ def get_del_batches(self, objs, fields):\n             return [objs]\n \n     def collect(self, objs, source=None, nullable=False, collect_related=True,\n-                source_attr=None, reverse_dependency=False, keep_parents=False):\n+                source_attr=None, reverse_dependency=False, keep_parents=False,\n+                fail_on_restricted=True):\n         \"\"\"\n         Add 'objs' to the collection of objects to be deleted as well as all\n         parent instances.  'objs' must be a homogeneous iterable collection of\n@@ -194,6 +230,12 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n         direction of an FK rather than the reverse direction.)\n \n         If 'keep_parents' is True, data of parent model's will be not deleted.\n+\n+        If 'fail_on_restricted' is False, error won't be raised even if it's\n+        prohibited to delete such objects due to RESTRICT, that defers\n+        restricted object checking in recursive calls where the top-level call\n+        may need to collect more objects to determine whether restricted ones\n+        can be deleted.\n         \"\"\"\n         if self.can_fast_delete(objs):\n             self.fast_deletes.append(objs)\n@@ -215,7 +257,8 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                     self.collect(parent_objs, source=model,\n                                  source_attr=ptr.remote_field.related_name,\n                                  collect_related=False,\n-                                 reverse_dependency=True)\n+                                 reverse_dependency=True,\n+                                 fail_on_restricted=False)\n         if not collect_related:\n             return\n \n@@ -259,7 +302,28 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n             if hasattr(field, 'bulk_related_objects'):\n                 # It's something like generic foreign key.\n                 sub_objs = field.bulk_related_objects(new_objs, self.using)\n-                self.collect(sub_objs, source=model, nullable=True)\n+                self.collect(sub_objs, source=model, nullable=True, fail_on_restricted=False)\n+\n+        if fail_on_restricted:\n+            # Raise an error if collected restricted objects (RESTRICT) aren't\n+            # candidates for deletion also collected via CASCADE.\n+            for model, instances in self.data.items():\n+                self.clear_restricted_objects_from_set(model, instances)\n+            for qs in self.fast_deletes:\n+                self.clear_restricted_objects_from_queryset(qs.model, qs)\n+            for model, fields in self.restricted_objects.items():\n+                for field, objs in fields.items():\n+                    for obj in objs:\n+                        raise RestrictedError(\n+                            \"Cannot delete some instances of model '%s' \"\n+                            \"because they are referenced through a restricted \"\n+                            \"foreign key: '%s.%s'.\" % (\n+                                field.remote_field.model.__name__,\n+                                obj.__class__.__name__,\n+                                field.name,\n+                            ),\n+                            objs,\n+                        )\n \n     def related_objects(self, related_model, related_fields, objs):\n         \"\"\""
+        }
+      ]
+    },
+    {
+      "sha": "ab3cbd8b9a315911248227208630a020cedca08f",
+      "date": "2020-01-27T11:21:02Z",
+      "message": "Refs #27852 -- Fixed object deletion to show all protected related objects rather than just the first one.\n\nThanks Anton Samarchyan for the initial patch.",
+      "html_url": "https://github.com/django/django/commit/ab3cbd8b9a315911248227208630a020cedca08f",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 18,
+          "deletions": 1,
+          "changes": 19,
+          "patch_present": true,
+          "patch": "@@ -265,6 +265,7 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n         if keep_parents:\n             parents = set(model._meta.get_parent_list())\n         model_fast_deletes = defaultdict(list)\n+        protected_objects = defaultdict(list)\n         for related in get_candidate_relations_to_delete(model._meta):\n             # Preserve parent reverse relationships if keep_parents=True.\n             if keep_parents and related.model in parents:\n@@ -292,7 +293,23 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                     ))\n                     sub_objs = sub_objs.only(*tuple(referenced_fields))\n                 if sub_objs:\n-                    field.remote_field.on_delete(self, field, sub_objs, self.using)\n+                    try:\n+                        field.remote_field.on_delete(self, field, sub_objs, self.using)\n+                    except ProtectedError as error:\n+                        key = \"'%s.%s'\" % (\n+                            error.protected_objects[0].__class__.__name__,\n+                            field.name,\n+                        )\n+                        protected_objects[key] += error.protected_objects\n+        if protected_objects:\n+            raise ProtectedError(\n+                'Cannot delete some instances of model %r because they are '\n+                'referenced through protected foreign keys: %s.' % (\n+                    model.__name__,\n+                    ', '.join(protected_objects),\n+                ),\n+                chain.from_iterable(protected_objects.values()),\n+            )\n         for related_model, related_fields in model_fast_deletes.items():\n             batches = self.get_del_batches(new_objs, related_fields)\n             for batch in batches:"
+        }
+      ]
+    },
+    {
+      "sha": "4ca5c565f4dc9e97845036e86416abc5cfde766c",
+      "date": "2020-01-29T08:02:23Z",
+      "message": "Refs #27852 -- Fixed object deletion to show all restricted related objects rather than just the first one.",
+      "html_url": "https://github.com/django/django/commit/4ca5c565f4dc9e97845036e86416abc5cfde766c",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 17,
+          "deletions": 13,
+          "changes": 30,
+          "patch_present": true,
+          "patch": "@@ -328,19 +328,23 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                 self.clear_restricted_objects_from_set(related_model, instances)\n             for qs in self.fast_deletes:\n                 self.clear_restricted_objects_from_queryset(qs.model, qs)\n-            for model, fields in self.restricted_objects.items():\n-                for field, objs in fields.items():\n-                    for obj in objs:\n-                        raise RestrictedError(\n-                            \"Cannot delete some instances of model '%s' \"\n-                            \"because they are referenced through a restricted \"\n-                            \"foreign key: '%s.%s'.\" % (\n-                                field.remote_field.model.__name__,\n-                                obj.__class__.__name__,\n-                                field.name,\n-                            ),\n-                            objs,\n-                        )\n+            if self.restricted_objects.values():\n+                restricted_objects = defaultdict(list)\n+                for related_model, fields in self.restricted_objects.items():\n+                    for field, objs in fields.items():\n+                        if objs:\n+                            key = \"'%s.%s'\" % (related_model.__name__, field.name)\n+                            restricted_objects[key] += objs\n+                if restricted_objects:\n+                    raise RestrictedError(\n+                        'Cannot delete some instances of model %r because '\n+                        'they are referenced through restricted foreign keys: '\n+                        '%s.' % (\n+                            model.__name__,\n+                            ', '.join(restricted_objects),\n+                        ),\n+                        chain.from_iterable(restricted_objects.values()),\n+                    )\n \n     def related_objects(self, related_model, related_fields, objs):\n         \"\"\""
+        }
+      ]
+    },
+    {
+      "sha": "2a6fc89018881c07e38f81989ff0c012e7539390",
+      "date": "2020-01-29T08:02:23Z",
+      "message": "Refs #27852 -- Renamed a loop variable in Collector.collect() to avoid redefinition.",
+      "html_url": "https://github.com/django/django/commit/2a6fc89018881c07e38f81989ff0c012e7539390",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "patch_present": true,
+          "patch": "@@ -324,8 +324,8 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n         if fail_on_restricted:\n             # Raise an error if collected restricted objects (RESTRICT) aren't\n             # candidates for deletion also collected via CASCADE.\n-            for model, instances in self.data.items():\n-                self.clear_restricted_objects_from_set(model, instances)\n+            for related_model, instances in self.data.items():\n+                self.clear_restricted_objects_from_set(related_model, instances)\n             for qs in self.fast_deletes:\n                 self.clear_restricted_objects_from_queryset(qs.model, qs)\n             for model, fields in self.restricted_objects.items():"
+        }
+      ]
+    },
+    {
+      "sha": "4e8d89020cca87fcf484eb6b6b514b4c9bfa592f",
+      "date": "2020-01-31T08:07:58Z",
+      "message": "Fixed #31219 -- Fixed object deletion crash for nested protected related objects.",
+      "html_url": "https://github.com/django/django/commit/4e8d89020cca87fcf484eb6b6b514b4c9bfa592f",
+      "files": [
+        {
+          "filename": "django/db/models/deletion.py",
+          "additions": 1,
+          "deletions": 4,
+          "changes": 5,
+          "patch_present": true,
+          "patch": "@@ -296,10 +296,7 @@ def collect(self, objs, source=None, nullable=False, collect_related=True,\n                     try:\n                         field.remote_field.on_delete(self, field, sub_objs, self.using)\n                     except ProtectedError as error:\n-                        key = \"'%s.%s'\" % (\n-                            error.protected_objects[0].__class__.__name__,\n-                            field.name,\n-                        )\n+                        key = \"'%s.%s'\" % (field.model.__name__, field.name)\n                         protected_objects[key] += error.protected_objects\n         if protected_objects:\n             raise ProtectedError("
+        }
+      ]
+    }
+  ],
+  "limitations": "Default-branch file churn, not attributed defects. PR merge and metadata patch may differ; inspect exact code. No rename-follow across paths."
+}

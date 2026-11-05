@@ -1,0 +1,19 @@
+{
+  "summary": "The one-line change from `>` to `>=` fixes the reported mincnt inconsistency for mincnt>=1, but because `mincnt` still defaults to 0 when unspecified, the comparison `len(acc) >= 0` is now always true, so `reduce_C_function` gets invoked on genuinely empty bins instead of being skipped. This crashes for common reduce functions like `np.min`/`np.max` (ValueError on empty array) and produces spurious RuntimeWarnings even for the default `np.mean`, whereas previously empty bins were guaranteed to bypass the reduction entirely.",
+  "issues": [
+    {
+      "failure_mode": "F2",
+      "severity": "blocking",
+      "description": "Previously the `>` comparison with default mincnt=0 guaranteed `reduce_C_function` was never called on an empty accumulator (`len(acc) > 0` required at least one point). Switching to `>=` removes that guarantee for the default/unspecified-mincnt case: `len(acc) >= 0` is always true, so empty hex bins are now passed to `reduce_C_function`. For reduce functions that don't tolerate empty input (e.g. `np.max`, `np.min`), this raises a ValueError on any hexbin call with a sparse/non-uniform data distribution and no explicit `mincnt` — a very common usage pattern. Even with the default `np.mean`, it"
+    },
+    {
+      "failure_mode": "F1",
+      "severity": "major",
+      "description": "The fix addresses the mincnt>=1 symmetry with the C-is-None path but does not add a guard (e.g. `len(acc) > 0 and len(acc) >= mincnt`) to preserve the pre-existing invariant that empty bins are excluded before reduction, leaving the empty-bin edge case unresolved."
+    }
+  ],
+  "merge_decision": "request_changes",
+  "mergeable": false,
+  "confidence": 0.72,
+  "packet_id": "pk_bb39d399d903"
+}

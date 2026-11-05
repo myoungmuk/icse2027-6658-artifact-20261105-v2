@@ -1,0 +1,137 @@
+{
+  "sha": "6e86bdfa2d3b787c5436db312ac23c67bbeceb69",
+  "node_id": "C_kwDOABUiotoAKDZlODZiZGZhMmQzYjc4N2M1NDM2ZGIzMTJhYzIzYzY3YmJlY2ViNjk",
+  "commit": {
+    "author": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2023-08-31T00:58:18Z"
+    },
+    "committer": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2023-08-31T02:18:42Z"
+    },
+    "message": "TYP: Accept tuples in Legend handles list\n\nFixes #26639",
+    "tree": {
+      "sha": "7354a744f9389ffd915c1ee586739bf46a9982b8",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/7354a744f9389ffd915c1ee586739bf46a9982b8"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/6e86bdfa2d3b787c5436db312ac23c67bbeceb69",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/6e86bdfa2d3b787c5436db312ac23c67bbeceb69",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/6e86bdfa2d3b787c5436db312ac23c67bbeceb69",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/comments",
+  "author": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "fa2304c681bc3e595f6040e9b66a0238c520908c",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/fa2304c681bc3e595f6040e9b66a0238c520908c",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/fa2304c681bc3e595f6040e9b66a0238c520908c"
+    }
+  ],
+  "stats": {
+    "total": 15,
+    "additions": 9,
+    "deletions": 6
+  },
+  "files": [
+    {
+      "sha": "c1ad5956e2cb36ea8fca21c325119605e91137a0",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 1,
+      "changes": 5,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=6e86bdfa2d3b787c5436db312ac23c67bbeceb69",
+      "patch": "@@ -280,7 +280,7 @@ def legend(self, *args, **kwargs):\n \n         Parameters\n         ----------\n-        handles : sequence of `.Artist`, optional\n+        handles : sequence of (`.Artist` or tuple of `.Artist`), optional\n             A list of Artists (lines, patches) to be added to the legend.\n             Use this together with *labels*, if you need full control on what\n             is shown in the legend and the automatic mechanism described above\n@@ -289,6 +289,9 @@ def legend(self, *args, **kwargs):\n             The length of handles and labels should be the same in this\n             case. If they are not, they are truncated to the smaller length.\n \n+            If an entry contains a tuple, then the legend handler for all Artists in the\n+            tuple will be placed alongside a single label.\n+\n         labels : list of str, optional\n             A list of labels to show next to the artists.\n             Use this together with *handles*, if you need full control on what"
+    },
+    {
+      "sha": "96ea087f7eb943be0e56f6ee68d8ffb55ed233b3",
+      "filename": "lib/matplotlib/axes/_axes.pyi",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.pyi?ref=6e86bdfa2d3b787c5436db312ac23c67bbeceb69",
+      "patch": "@@ -57,9 +57,9 @@ class Axes(_AxesBase):\n     @overload\n     def legend(self) -> Legend: ...\n     @overload\n-    def legend(self, handles: Sequence[Artist], labels: Sequence[str], **kwargs) -> Legend: ...\n+    def legend(self, handles: Sequence[Artist | tuple[Artist, ...]], labels: Sequence[str], **kwargs) -> Legend: ...\n     @overload\n-    def legend(self, *, handles: Sequence[Artist], **kwargs) -> Legend: ...\n+    def legend(self, *, handles: Sequence[Artist | tuple[Artist, ...]], **kwargs) -> Legend: ...\n     @overload\n     def legend(self, labels: Sequence[str], **kwargs) -> Legend: ...\n     @overload"
+    },
+    {
+      "sha": "bdabacdfedbfecd7e574fcd63bcb919ae7865a85",
+      "filename": "lib/matplotlib/legend.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/lib%2Fmatplotlib%2Flegend.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/lib%2Fmatplotlib%2Flegend.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Flegend.py?ref=6e86bdfa2d3b787c5436db312ac23c67bbeceb69",
+      "patch": "@@ -401,7 +401,7 @@ def __init__(\n         parent : `~matplotlib.axes.Axes` or `.Figure`\n             The artist that contains the legend.\n \n-        handles : list of `.Artist`\n+        handles : list of (`.Artist` or tuple of `.Artist`)\n             A list of Artists (lines, patches) to be added to the legend.\n \n         labels : list of str\n@@ -1322,7 +1322,7 @@ def _parse_legend_args(axs, *args, handles=None, labels=None, **kwargs):\n \n     Returns\n     -------\n-    handles : list of `.Artist`\n+    handles : list of (`.Artist` or tuple of `.Artist`)\n         The legend handles.\n     labels : list of str\n         The legend labels."
+    },
+    {
+      "sha": "d559b06c5d5de0d8d37253aaccf9f2597d7819b7",
+      "filename": "lib/matplotlib/legend.pyi",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/lib%2Fmatplotlib%2Flegend.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/6e86bdfa2d3b787c5436db312ac23c67bbeceb69/lib%2Fmatplotlib%2Flegend.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Flegend.pyi?ref=6e86bdfa2d3b787c5436db312ac23c67bbeceb69",
+      "patch": "@@ -52,7 +52,7 @@ class Legend(Artist):\n     def __init__(\n         self,\n         parent: Axes | Figure,\n-        handles: Iterable[Artist],\n+        handles: Iterable[Artist | tuple[Artist, ...]],\n         labels: Iterable[str],\n         *,\n         loc: str | tuple[float, float] | int | None = ...,"
+    }
+  ]
+}

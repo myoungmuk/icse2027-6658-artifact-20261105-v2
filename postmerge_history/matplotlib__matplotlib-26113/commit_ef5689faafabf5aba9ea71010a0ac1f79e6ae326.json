@@ -1,0 +1,173 @@
+{
+  "sha": "ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+  "node_id": "C_kwDOABUiotoAKGVmNTY4OWZhYWZhYmY1YWJhOWVhNzEwMTBhMGFjMWY3OWU2YWUzMjY",
+  "commit": {
+    "author": {
+      "name": "Kyle Sunden",
+      "email": "git@ksunden.space",
+      "date": "2023-08-21T17:59:08Z"
+    },
+    "committer": {
+      "name": "Kyle Sunden",
+      "email": "git@ksunden.space",
+      "date": "2023-08-21T17:59:08Z"
+    },
+    "message": "MAINT: Numpy 2.0 deprecations for row_stack and in1d\n\nPart of #26422, xref numpy/numpy#24445",
+    "tree": {
+      "sha": "eec3ed71a87c76c62b0e1ebbc7732736ab6f4dee",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/eec3ed71a87c76c62b0e1ebbc7732736ab6f4dee"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/comments",
+  "author": {
+    "login": "ksunden",
+    "id": 2501846,
+    "node_id": "MDQ6VXNlcjI1MDE4NDY=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2501846?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ksunden",
+    "html_url": "https://github.com/ksunden",
+    "followers_url": "https://api.github.com/users/ksunden/followers",
+    "following_url": "https://api.github.com/users/ksunden/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ksunden/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ksunden/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ksunden/subscriptions",
+    "organizations_url": "https://api.github.com/users/ksunden/orgs",
+    "repos_url": "https://api.github.com/users/ksunden/repos",
+    "events_url": "https://api.github.com/users/ksunden/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ksunden/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ksunden",
+    "id": 2501846,
+    "node_id": "MDQ6VXNlcjI1MDE4NDY=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2501846?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ksunden",
+    "html_url": "https://github.com/ksunden",
+    "followers_url": "https://api.github.com/users/ksunden/followers",
+    "following_url": "https://api.github.com/users/ksunden/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ksunden/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ksunden/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ksunden/subscriptions",
+    "organizations_url": "https://api.github.com/users/ksunden/orgs",
+    "repos_url": "https://api.github.com/users/ksunden/repos",
+    "events_url": "https://api.github.com/users/ksunden/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ksunden/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "db533bf5999b56b610e21c877818ab12cbda65c3",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/db533bf5999b56b610e21c877818ab12cbda65c3",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/db533bf5999b56b610e21c877818ab12cbda65c3"
+    }
+  ],
+  "stats": {
+    "total": 24,
+    "additions": 12,
+    "deletions": 12
+  },
+  "files": [
+    {
+      "sha": "4bd1e83d2f5a1bd2e4de9c3df11150b4c50f8619",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "patch": "@@ -3674,7 +3674,7 @@ def apply_mask(arrays, mask):\n             #     elow, ehigh = np.broadcast_to(...)\n             #     return dep - elow * ~lolims, dep + ehigh * ~uplims\n             # except that broadcast_to would strip units.\n-            low, high = dep + np.row_stack([-(1 - lolims), 1 - uplims]) * err\n+            low, high = dep + np.vstack([-(1 - lolims), 1 - uplims]) * err\n             barcols.append(lines_func(\n                 *apply_mask([indep, low, high], everymask), **eb_lines_style))\n             if self.name == \"polar\" and dep_axis == \"x\":\n@@ -5471,8 +5471,8 @@ def get_interp_point(idx):\n         collection = mcoll.PolyCollection(polys, **kwargs)\n \n         # now update the datalim and autoscale\n-        pts = np.row_stack([np.column_stack([ind[where], dep1[where]]),\n-                            np.column_stack([ind[where], dep2[where]])])\n+        pts = np.vstack([np.column_stack([ind[where], dep1[where]]),\n+                         np.column_stack([ind[where], dep2[where]])])\n         if ind_dir == \"y\":\n             pts = pts[:, ::-1]\n "
+    },
+    {
+      "sha": "b55ce7e99886e89d86a0bd7d2a09b156b7428f6d",
+      "filename": "lib/matplotlib/axes/_base.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Faxes%2F_base.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Faxes%2F_base.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_base.py?ref=ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "patch": "@@ -2403,7 +2403,7 @@ def _update_patch_limits(self, patch):\n             vertices.append(curve([0, *dzeros, 1]))\n \n         if len(vertices):\n-            vertices = np.row_stack(vertices)\n+            vertices = np.vstack(vertices)\n \n         patch_trf = patch.get_transform()\n         updatex, updatey = patch_trf.contains_branch_seperately(self.transData)"
+    },
+    {
+      "sha": "f148d35618dd357bf75e23a1bc768b878b18c849",
+      "filename": "lib/matplotlib/contour.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Fcontour.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Fcontour.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fcontour.py?ref=ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "patch": "@@ -511,13 +511,13 @@ def calc_label_rot_and_inline(self, slc, ind, lw, lc=None, spacing=5):\n             if closed:\n                 # This will remove contour if shorter than label\n                 if all(i != -1 for i in I):\n-                    nlc.append(np.row_stack([xy2, lc[I[1]:I[0]+1], xy1]))\n+                    nlc.append(np.vstack([xy2, lc[I[1]:I[0]+1], xy1]))\n             else:\n                 # These will remove pieces of contour if they have length zero\n                 if I[0] != -1:\n-                    nlc.append(np.row_stack([lc[:I[0]+1], xy1]))\n+                    nlc.append(np.vstack([lc[:I[0]+1], xy1]))\n                 if I[1] != -1:\n-                    nlc.append(np.row_stack([xy2, lc[I[1]:]]))\n+                    nlc.append(np.vstack([xy2, lc[I[1]:]]))\n \n             # The current implementation removes contours completely\n             # covered by labels.  Uncomment line below to keep"
+    },
+    {
+      "sha": "0bff320e57289f807f377c7a31532d2fecdb9edf",
+      "filename": "lib/matplotlib/projections/polar.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Fprojections%2Fpolar.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Fprojections%2Fpolar.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fprojections%2Fpolar.py?ref=ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "patch": "@@ -121,7 +121,7 @@ def transform_path_non_affine(self, path):\n                         codes.extend(arc.codes[1:])\n                 else:  # Interpolate.\n                     trs = cbook.simple_linear_interpolation(\n-                        np.row_stack([(last_t, last_r), trs]),\n+                        np.vstack([(last_t, last_r), trs]),\n                         path._interpolation_steps)[1:]\n                     xys.extend(self.transform_non_affine(trs))\n                     codes.extend([Path.LINETO] * len(trs))"
+    },
+    {
+      "sha": "2629593683e56b288f4b77625690f70f3a163eff",
+      "filename": "lib/matplotlib/stackplot.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Fstackplot.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Fstackplot.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fstackplot.py?ref=ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "patch": "@@ -68,7 +68,7 @@ def stackplot(axes, x, *args,\n         stacked area plot.\n     \"\"\"\n \n-    y = np.row_stack(args)\n+    y = np.vstack(args)\n \n     labels = iter(labels)\n     if colors is not None:"
+    },
+    {
+      "sha": "14c591abd4e5399f91a0f3bc84dc62fe51244668",
+      "filename": "lib/matplotlib/tests/test_triangulation.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Ftests%2Ftest_triangulation.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmatplotlib%2Ftests%2Ftest_triangulation.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_triangulation.py?ref=ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "patch": "@@ -1035,7 +1035,7 @@ def test_trirefine():\n     x_verif, y_verif = np.meshgrid(x_verif, x_verif)\n     x_verif = x_verif.ravel()\n     y_verif = y_verif.ravel()\n-    ind1d = np.in1d(np.around(x_verif*(2.5+y_verif), 8),\n+    ind1d = np.isin(np.around(x_verif*(2.5+y_verif), 8),\n                     np.around(x_refi*(2.5+y_refi), 8))\n     assert_array_equal(ind1d, True)\n "
+    },
+    {
+      "sha": "ac6e841f501986882678b603aae56f7db28656f0",
+      "filename": "lib/mpl_toolkits/mplot3d/art3d.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmpl_toolkits%2Fmplot3d%2Fart3d.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/ef5689faafabf5aba9ea71010a0ac1f79e6ae326/lib%2Fmpl_toolkits%2Fmplot3d%2Fart3d.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmpl_toolkits%2Fmplot3d%2Fart3d.py?ref=ef5689faafabf5aba9ea71010a0ac1f79e6ae326",
+      "patch": "@@ -942,8 +942,8 @@ def set_zsort(self, zsort):\n     def get_vector(self, segments3d):\n         \"\"\"Optimize points for projection.\"\"\"\n         if len(segments3d):\n-            xs, ys, zs = np.row_stack(segments3d).T\n-        else:  # row_stack can't stack zero arrays.\n+            xs, ys, zs = np.vstack(segments3d).T\n+        else:  # vstack can't stack zero arrays.\n             xs, ys, zs = [], [], []\n         ones = np.ones(len(xs))\n         self._vec = np.array([xs, ys, zs, ones])"
+    }
+  ]
+}

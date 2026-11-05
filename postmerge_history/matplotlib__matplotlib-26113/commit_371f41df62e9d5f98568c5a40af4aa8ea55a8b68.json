@@ -1,0 +1,137 @@
+{
+  "sha": "371f41df62e9d5f98568c5a40af4aa8ea55a8b68",
+  "node_id": "C_kwDOABUiotoAKDM3MWY0MWRmNjJlOWQ1Zjk4NTY4YzVhNDBhZjRhYThlYTU1YThiNjg",
+  "commit": {
+    "author": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2023-08-05T00:18:53Z"
+    },
+    "committer": {
+      "name": "Elliott Sales de Andrade",
+      "email": "quantum.analyst@gmail.com",
+      "date": "2023-08-05T01:12:05Z"
+    },
+    "message": "Tighten return type of Axes.bar_label\n\nAlso, tweak tests to use canonical (and thus typed) getters.",
+    "tree": {
+      "sha": "2ed173f289768af4fc4c230f87af613ae71e05b1",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/2ed173f289768af4fc4c230f87af613ae71e05b1"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/371f41df62e9d5f98568c5a40af4aa8ea55a8b68",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/371f41df62e9d5f98568c5a40af4aa8ea55a8b68",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/371f41df62e9d5f98568c5a40af4aa8ea55a8b68",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/comments",
+  "author": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "QuLogic",
+    "id": 302469,
+    "node_id": "MDQ6VXNlcjMwMjQ2OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/302469?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/QuLogic",
+    "html_url": "https://github.com/QuLogic",
+    "followers_url": "https://api.github.com/users/QuLogic/followers",
+    "following_url": "https://api.github.com/users/QuLogic/following{/other_user}",
+    "gists_url": "https://api.github.com/users/QuLogic/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/QuLogic/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/QuLogic/subscriptions",
+    "organizations_url": "https://api.github.com/users/QuLogic/orgs",
+    "repos_url": "https://api.github.com/users/QuLogic/repos",
+    "events_url": "https://api.github.com/users/QuLogic/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/QuLogic/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "532d92566d7e0a1e83741e8fb0a3caf026049f90",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/532d92566d7e0a1e83741e8fb0a3caf026049f90",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/532d92566d7e0a1e83741e8fb0a3caf026049f90"
+    }
+  ],
+  "stats": {
+    "total": 76,
+    "additions": 38,
+    "deletions": 38
+  },
+  "files": [
+    {
+      "sha": "036d4f284fe534ba6e86052f71132bb19b82c65e",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=371f41df62e9d5f98568c5a40af4aa8ea55a8b68",
+      "patch": "@@ -2745,8 +2745,8 @@ def bar_label(self, container, labels=None, *, fmt=\"%g\", label_type=\"edge\",\n \n         Returns\n         -------\n-        list of `.Text`\n-            A list of `.Text` instances for the labels.\n+        list of `.Annotation`\n+            A list of `.Annotation` instances for the labels.\n         \"\"\"\n         for key in ['horizontalalignment', 'ha', 'verticalalignment', 'va']:\n             if key in kwargs:"
+    },
+    {
+      "sha": "bdd29684925d1a99726c9c2978d79eb3d3f1b93d",
+      "filename": "lib/matplotlib/axes/_axes.pyi",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.pyi?ref=371f41df62e9d5f98568c5a40af4aa8ea55a8b68",
+      "patch": "@@ -274,7 +274,7 @@ class Axes(_AxesBase):\n         label_type: Literal[\"center\", \"edge\"] = ...,\n         padding: float = ...,\n         **kwargs\n-    ) -> list[Text]: ...\n+    ) -> list[Annotation]: ...\n     def broken_barh(\n         self,\n         xranges: Sequence[tuple[float, float]],"
+    },
+    {
+      "sha": "ef8e54a98cae85dcf6aa0d795b5ae97ddbc132fb",
+      "filename": "lib/matplotlib/pyplot.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/lib%2Fmatplotlib%2Fpyplot.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/lib%2Fmatplotlib%2Fpyplot.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fpyplot.py?ref=371f41df62e9d5f98568c5a40af4aa8ea55a8b68",
+      "patch": "@@ -2728,7 +2728,7 @@ def bar_label(\n     label_type: Literal[\"center\", \"edge\"] = \"edge\",\n     padding: float = 0,\n     **kwargs,\n-) -> list[Text]:\n+) -> list[Annotation]:\n     return gca().bar_label(\n         container,\n         labels=labels,"
+    },
+    {
+      "sha": "ac9dd0787a4359ace490e82186bc864dca845827",
+      "filename": "lib/matplotlib/tests/test_axes.py",
+      "status": "modified",
+      "additions": 34,
+      "deletions": 34,
+      "changes": 68,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/371f41df62e9d5f98568c5a40af4aa8ea55a8b68/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_axes.py?ref=371f41df62e9d5f98568c5a40af4aa8ea55a8b68",
+      "patch": "@@ -8154,11 +8154,11 @@ def test_bar_label_location_vertical():\n     rects = ax.bar(xs, heights)\n     labels = ax.bar_label(rects)\n     assert labels[0].xy == (xs[0], heights[0])\n-    assert labels[0].get_ha() == 'center'\n-    assert labels[0].get_va() == 'bottom'\n+    assert labels[0].get_horizontalalignment() == 'center'\n+    assert labels[0].get_verticalalignment() == 'bottom'\n     assert labels[1].xy == (xs[1], heights[1])\n-    assert labels[1].get_ha() == 'center'\n-    assert labels[1].get_va() == 'top'\n+    assert labels[1].get_horizontalalignment() == 'center'\n+    assert labels[1].get_verticalalignment() == 'top'\n \n \n def test_bar_label_location_vertical_yinverted():\n@@ -8168,11 +8168,11 @@ def test_bar_label_location_vertical_yinverted():\n     rects = ax.bar(xs, heights)\n     labels = ax.bar_label(rects)\n     assert labels[0].xy == (xs[0], heights[0])\n-    assert labels[0].get_ha() == 'center'\n-    assert labels[0].get_va() == 'top'\n+    assert labels[0].get_horizontalalignment() == 'center'\n+    assert labels[0].get_verticalalignment() == 'top'\n     assert labels[1].xy == (xs[1], heights[1])\n-    assert labels[1].get_ha() == 'center'\n-    assert labels[1].get_va() == 'bottom'\n+    assert labels[1].get_horizontalalignment() == 'center'\n+    assert labels[1].get_verticalalignment() == 'bottom'\n \n \n def test_bar_label_location_horizontal():\n@@ -8181,11 +8181,11 @@ def test_bar_label_location_horizontal():\n     rects = ax.barh(ys, widths)\n     labels = ax.bar_label(rects)\n     assert labels[0].xy == (widths[0], ys[0])\n-    assert labels[0].get_ha() == 'left'\n-    assert labels[0].get_va() == 'center'\n+    assert labels[0].get_horizontalalignment() == 'left'\n+    assert labels[0].get_verticalalignment() == 'center'\n     assert labels[1].xy == (widths[1], ys[1])\n-    assert labels[1].get_ha() == 'right'\n-    assert labels[1].get_va() == 'center'\n+    assert labels[1].get_horizontalalignment() == 'right'\n+    assert labels[1].get_verticalalignment() == 'center'\n \n \n def test_bar_label_location_horizontal_yinverted():\n@@ -8195,11 +8195,11 @@ def test_bar_label_location_horizontal_yinverted():\n     rects = ax.barh(ys, widths)\n     labels = ax.bar_label(rects)\n     assert labels[0].xy == (widths[0], ys[0])\n-    assert labels[0].get_ha() == 'left'\n-    assert labels[0].get_va() == 'center'\n+    assert labels[0].get_horizontalalignment() == 'left'\n+    assert labels[0].get_verticalalignment() == 'center'\n     assert labels[1].xy == (widths[1], ys[1])\n-    assert labels[1].get_ha() == 'right'\n-    assert labels[1].get_va() == 'center'\n+    assert labels[1].get_horizontalalignment() == 'right'\n+    assert labels[1].get_verticalalignment() == 'center'\n \n \n def test_bar_label_location_horizontal_xinverted():\n@@ -8209,11 +8209,11 @@ def test_bar_label_location_horizontal_xinverted():\n     rects = ax.barh(ys, widths)\n     labels = ax.bar_label(rects)\n     assert labels[0].xy == (widths[0], ys[0])\n-    assert labels[0].get_ha() == 'right'\n-    assert labels[0].get_va() == 'center'\n+    assert labels[0].get_horizontalalignment() == 'right'\n+    assert labels[0].get_verticalalignment() == 'center'\n     assert labels[1].xy == (widths[1], ys[1])\n-    assert labels[1].get_ha() == 'left'\n-    assert labels[1].get_va() == 'center'\n+    assert labels[1].get_horizontalalignment() == 'left'\n+    assert labels[1].get_verticalalignment() == 'center'\n \n \n def test_bar_label_location_horizontal_xyinverted():\n@@ -8224,11 +8224,11 @@ def test_bar_label_location_horizontal_xyinverted():\n     rects = ax.barh(ys, widths)\n     labels = ax.bar_label(rects)\n     assert labels[0].xy == (widths[0], ys[0])\n-    assert labels[0].get_ha() == 'right'\n-    assert labels[0].get_va() == 'center'\n+    assert labels[0].get_horizontalalignment() == 'right'\n+    assert labels[0].get_verticalalignment() == 'center'\n     assert labels[1].xy == (widths[1], ys[1])\n-    assert labels[1].get_ha() == 'left'\n-    assert labels[1].get_va() == 'center'\n+    assert labels[1].get_horizontalalignment() == 'left'\n+    assert labels[1].get_verticalalignment() == 'center'\n \n \n def test_bar_label_location_center():\n@@ -8237,11 +8237,11 @@ def test_bar_label_location_center():\n     rects = ax.barh(ys, widths)\n     labels = ax.bar_label(rects, label_type='center')\n     assert labels[0].xy == (0.5, 0.5)\n-    assert labels[0].get_ha() == 'center'\n-    assert labels[0].get_va() == 'center'\n+    assert labels[0].get_horizontalalignment() == 'center'\n+    assert labels[0].get_verticalalignment() == 'center'\n     assert labels[1].xy == (0.5, 0.5)\n-    assert labels[1].get_ha() == 'center'\n-    assert labels[1].get_va() == 'center'\n+    assert labels[1].get_horizontalalignment() == 'center'\n+    assert labels[1].get_verticalalignment() == 'center'\n \n \n @image_comparison(['test_centered_bar_label_nonlinear.svg'])\n@@ -8273,11 +8273,11 @@ def test_bar_label_location_errorbars():\n     rects = ax.bar(xs, heights, yerr=1)\n     labels = ax.bar_label(rects)\n     assert labels[0].xy == (xs[0], heights[0] + 1)\n-    assert labels[0].get_ha() == 'center'\n-    assert labels[0].get_va() == 'bottom'\n+    assert labels[0].get_horizontalalignment() == 'center'\n+    assert labels[0].get_verticalalignment() == 'bottom'\n     assert labels[1].xy == (xs[1], heights[1] - 1)\n-    assert labels[1].get_ha() == 'center'\n-    assert labels[1].get_va() == 'top'\n+    assert labels[1].get_horizontalalignment() == 'center'\n+    assert labels[1].get_verticalalignment() == 'top'\n \n \n @pytest.mark.parametrize('fmt', [\n@@ -8312,7 +8312,7 @@ def test_bar_label_nan_ydata():\n     labels = ax.bar_label(bars)\n     assert [l.get_text() for l in labels] == ['', '1']\n     assert labels[0].xy == (2, 0)\n-    assert labels[0].get_va() == 'bottom'\n+    assert labels[0].get_verticalalignment() == 'bottom'\n \n \n def test_bar_label_nan_ydata_inverted():\n@@ -8322,7 +8322,7 @@ def test_bar_label_nan_ydata_inverted():\n     labels = ax.bar_label(bars)\n     assert [l.get_text() for l in labels] == ['', '1']\n     assert labels[0].xy == (2, 0)\n-    assert labels[0].get_va() == 'bottom'\n+    assert labels[0].get_verticalalignment() == 'bottom'\n \n \n def test_nan_barlabels():"
+    }
+  ]
+}

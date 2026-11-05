@@ -1,0 +1,149 @@
+{
+  "sha": "95890c2f82db570220c797e865c5747ba1ae1f94",
+  "node_id": "C_kwDOABUiotoAKDk1ODkwYzJmODJkYjU3MDIyMGM3OTdlODY1YzU3NDdiYTFhZTFmOTQ",
+  "commit": {
+    "author": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-03-09T10:28:53Z"
+    },
+    "committer": {
+      "name": "saranti",
+      "email": "tsarantis@proton.me",
+      "date": "2024-03-16T04:34:34Z"
+    },
+    "message": "add legend to boxplot",
+    "tree": {
+      "sha": "8e3694f06d423cd697326d9e1ec089fdaef59dad",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/git/trees/8e3694f06d423cd697326d9e1ec089fdaef59dad"
+    },
+    "url": "https://api.github.com/repos/matplotlib/matplotlib/git/commits/95890c2f82db570220c797e865c5747ba1ae1f94",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/95890c2f82db570220c797e865c5747ba1ae1f94",
+  "html_url": "https://github.com/matplotlib/matplotlib/commit/95890c2f82db570220c797e865c5747ba1ae1f94",
+  "comments_url": "https://api.github.com/repos/matplotlib/matplotlib/commits/95890c2f82db570220c797e865c5747ba1ae1f94/comments",
+  "author": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "saranti",
+    "id": 9763064,
+    "node_id": "MDQ6VXNlcjk3NjMwNjQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/9763064?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/saranti",
+    "html_url": "https://github.com/saranti",
+    "followers_url": "https://api.github.com/users/saranti/followers",
+    "following_url": "https://api.github.com/users/saranti/following{/other_user}",
+    "gists_url": "https://api.github.com/users/saranti/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/saranti/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/saranti/subscriptions",
+    "organizations_url": "https://api.github.com/users/saranti/orgs",
+    "repos_url": "https://api.github.com/users/saranti/repos",
+    "events_url": "https://api.github.com/users/saranti/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/saranti/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "72731a570e024ce4a89f10a8338cc5d621257bcf",
+      "url": "https://api.github.com/repos/matplotlib/matplotlib/commits/72731a570e024ce4a89f10a8338cc5d621257bcf",
+      "html_url": "https://github.com/matplotlib/matplotlib/commit/72731a570e024ce4a89f10a8338cc5d621257bcf"
+    }
+  ],
+  "stats": {
+    "total": 156,
+    "additions": 152,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "fa6069ebb9589b0d6a217290ab07567ea1d9b22c",
+      "filename": "doc/users/next_whats_new/boxplot_legend_support.rst",
+      "status": "added",
+      "additions": 60,
+      "deletions": 0,
+      "changes": 60,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/95890c2f82db570220c797e865c5747ba1ae1f94/doc%2Fusers%2Fnext_whats_new%2Fboxplot_legend_support.rst",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/95890c2f82db570220c797e865c5747ba1ae1f94/doc%2Fusers%2Fnext_whats_new%2Fboxplot_legend_support.rst",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/doc%2Fusers%2Fnext_whats_new%2Fboxplot_legend_support.rst?ref=95890c2f82db570220c797e865c5747ba1ae1f94",
+      "patch": "@@ -0,0 +1,60 @@\n+Legend support for Boxplot\n+~~~~~~~~~~~~~~~~~~~~~~~~~~\n+Boxplots now support a *label* parameter to create legend entries.\n+\n+Legend labels can be passed as a list of strings to label multiple boxes in a single\n+boxplot call:\n+\n+\n+.. plot::\n+    :include-source: true\n+    :alt: Example of creating 3 boxplots and assigning legend labels as a sequence.\n+\n+    import matplotlib.pyplot as plt\n+    import numpy as np\n+\n+    np.random.seed(19680801)\n+    fruit_weights = [\n+        np.random.normal(130, 10, size=100),\n+        np.random.normal(125, 20, size=100),\n+        np.random.normal(120, 30, size=100),\n+    ]\n+    labels = ['peaches', 'oranges', 'tomatoes']\n+    colors = ['peachpuff', 'orange', 'tomato']\n+\n+    fig, ax = plt.subplots()\n+    ax.set_ylabel('fruit weight (g)')\n+\n+    bplot = ax.boxplot(fruit_weights,\n+                       patch_artist=True,  # fill with color\n+                       label=labels)\n+\n+    # fill with colors\n+    for patch, color in zip(bplot['boxes'], colors):\n+        patch.set_facecolor(color)\n+\n+    ax.set_xticks([])\n+    ax.legend()\n+\n+\n+Or as a single string to each individual boxplot:\n+\n+.. plot::\n+    :include-source: true\n+    :alt: Example of creating 2 boxplots and assigning each legend label as a string.\n+\n+    import matplotlib.pyplot as plt\n+    import numpy as np\n+\n+    fig, ax = plt.subplots()\n+\n+    data_A = np.random.random((100, 3))\n+    data_B = np.random.random((100, 3)) + 0.2\n+    pos = np.arange(3)\n+\n+    ax.boxplot(data_A, positions=pos - 0.2, patch_artist=True, label='Box A',\n+               boxprops={'facecolor': 'steelblue'})\n+    ax.boxplot(data_B, positions=pos + 0.2, patch_artist=True, label='Box B',\n+               boxprops={'facecolor': 'lightblue'})\n+\n+    ax.legend()"
+    },
+    {
+      "sha": "14f575a5b4db78306c2240f17332be2f70311a0a",
+      "filename": "lib/matplotlib/axes/_axes.py",
+      "status": "modified",
+      "additions": 41,
+      "deletions": 4,
+      "changes": 45,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/95890c2f82db570220c797e865c5747ba1ae1f94/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/95890c2f82db570220c797e865c5747ba1ae1f94/lib%2Fmatplotlib%2Faxes%2F_axes.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.py?ref=95890c2f82db570220c797e865c5747ba1ae1f94",
+      "patch": "@@ -3798,7 +3798,7 @@ def boxplot(self, x, notch=None, sym=None, vert=None, whis=None,\n                 tick_labels=None, flierprops=None, medianprops=None,\n                 meanprops=None, capprops=None, whiskerprops=None,\n                 manage_ticks=True, autorange=False, zorder=None,\n-                capwidths=None):\n+                capwidths=None, label=None):\n         \"\"\"\n         Draw a box and whisker plot.\n \n@@ -3985,6 +3985,18 @@ def boxplot(self, x, notch=None, sym=None, vert=None, whis=None,\n             The style of the median.\n         meanprops : dict, default: None\n             The style of the mean.\n+        label : str or list of str, optional\n+            Legend labels. Use a single string when all boxes have the same style and\n+            you only want a single legend entry for them. Use a list of strings to\n+            label all boxes individually. To be distinguishable, the boxes should be\n+            styled individually, which is currently only possible by modifying the\n+            returned artists, see e.g. :doc:`/gallery/statistics/boxplot_demo`.\n+\n+            In the case of a single string, the legend entry will technically be\n+            associated with the first box only. By default, the legend will show the\n+            median line (``result[\"medians\"]``); if *patch_artist* is True, the legend\n+            will show the box `Patch` artists (``result[\"boxes\"]``) instead.\n+\n         data : indexable object, optional\n             DATA_PARAMETER_PLACEHOLDER\n \n@@ -4105,7 +4117,7 @@ def boxplot(self, x, notch=None, sym=None, vert=None, whis=None,\n                            meanline=meanline, showfliers=showfliers,\n                            capprops=capprops, whiskerprops=whiskerprops,\n                            manage_ticks=manage_ticks, zorder=zorder,\n-                           capwidths=capwidths)\n+                           capwidths=capwidths, label=label)\n         return artists\n \n     def bxp(self, bxpstats, positions=None, widths=None, vert=True,\n@@ -4114,7 +4126,7 @@ def bxp(self, bxpstats, positions=None, widths=None, vert=True,\n             boxprops=None, whiskerprops=None, flierprops=None,\n             medianprops=None, capprops=None, meanprops=None,\n             meanline=False, manage_ticks=True, zorder=None,\n-            capwidths=None):\n+            capwidths=None, label=None):\n         \"\"\"\n         Draw a box and whisker plot from pre-computed statistics.\n \n@@ -4197,6 +4209,18 @@ def bxp(self, bxpstats, positions=None, widths=None, vert=True,\n           If True, the tick locations and labels will be adjusted to match the\n           boxplot positions.\n \n+        label : str or list of str, optional\n+            Legend labels. Use a single string when all boxes have the same style and\n+            you only want a single legend entry for them. Use a list of strings to\n+            label all boxes individually. To be distinguishable, the boxes should be\n+            styled individually, which is currently only possible by modifying the\n+            returned artists, see e.g. :doc:`/gallery/statistics/boxplot_demo`.\n+\n+            In the case of a single string, the legend entry will technically be\n+            associated with the first box only. By default, the legend will show the\n+            median line (``result[\"medians\"]``); if *patch_artist* is True, the legend\n+            will show the box `Patch` artists (``result[\"boxes\"]``) instead.\n+\n         zorder : float, default: ``Line2D.zorder = 2``\n           The zorder of the resulting boxplot.\n \n@@ -4361,6 +4385,7 @@ def do_patch(xs, ys, **kwargs):\n             if showbox:\n                 do_box = do_patch if patch_artist else do_plot\n                 boxes.append(do_box(box_x, box_y, **box_kw))\n+                median_kw.setdefault('label', '_nolegend_')\n             # draw the whiskers\n             whisker_kw.setdefault('label', '_nolegend_')\n             whiskers.append(do_plot(whis_x, whislo_y, **whisker_kw))\n@@ -4371,7 +4396,6 @@ def do_patch(xs, ys, **kwargs):\n                 caps.append(do_plot(cap_x, cap_lo, **cap_kw))\n                 caps.append(do_plot(cap_x, cap_hi, **cap_kw))\n             # draw the medians\n-            median_kw.setdefault('label', '_nolegend_')\n             medians.append(do_plot(med_x, med_y, **median_kw))\n             # maybe draw the means\n             if showmeans:\n@@ -4389,6 +4413,19 @@ def do_patch(xs, ys, **kwargs):\n                 flier_y = stats['fliers']\n                 fliers.append(do_plot(flier_x, flier_y, **flier_kw))\n \n+        # Set legend labels\n+        if label:\n+            box_or_med = boxes if showbox and patch_artist else medians\n+            if cbook.is_scalar_or_string(label):\n+                # assign the label only to the first box\n+                box_or_med[0].set_label(label)\n+            else:  # label is a sequence\n+                if len(box_or_med) != len(label):\n+                    raise ValueError(\"There must be an equal number of legend\"\n+                                     \" labels and boxplots.\")\n+                for artist, lbl in zip(box_or_med, label):\n+                    artist.set_label(lbl)\n+\n         if manage_ticks:\n             axis_name = \"x\" if vert else \"y\"\n             interval = getattr(self.dataLim, f\"interval{axis_name}\")"
+    },
+    {
+      "sha": "d00008623633fb8229e7f80926f686f976c7bcf8",
+      "filename": "lib/matplotlib/axes/_axes.pyi",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/95890c2f82db570220c797e865c5747ba1ae1f94/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/95890c2f82db570220c797e865c5747ba1ae1f94/lib%2Fmatplotlib%2Faxes%2F_axes.pyi",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Faxes%2F_axes.pyi?ref=95890c2f82db570220c797e865c5747ba1ae1f94",
+      "patch": "@@ -372,6 +372,7 @@ class Axes(_AxesBase):\n         autorange: bool = ...,\n         zorder: float | None = ...,\n         capwidths: float | ArrayLike | None = ...,\n+\t\tlabel: Sequence[str] | None = ...,\n         *,\n         data=...,\n     ) -> dict[str, Any]: ...\n@@ -397,6 +398,7 @@ class Axes(_AxesBase):\n         manage_ticks: bool = ...,\n         zorder: float | None = ...,\n         capwidths: float | ArrayLike | None = ...,\n+\t\tlabel: Sequence[str] | None = ...,\n     ) -> dict[str, Any]: ...\n     def scatter(\n         self,"
+    },
+    {
+      "sha": "81a6622db77ea0f2401b5993ce3d05cb6d33c539",
+      "filename": "lib/matplotlib/pyplot.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/95890c2f82db570220c797e865c5747ba1ae1f94/lib%2Fmatplotlib%2Fpyplot.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/95890c2f82db570220c797e865c5747ba1ae1f94/lib%2Fmatplotlib%2Fpyplot.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Fpyplot.py?ref=95890c2f82db570220c797e865c5747ba1ae1f94",
+      "patch": "@@ -2871,6 +2871,7 @@ def boxplot(\n     autorange: bool = False,\n     zorder: float | None = None,\n     capwidths: float | ArrayLike | None = None,\n+    label: Sequence[str] | None = None,\n     *,\n     data=None,\n ) -> dict[str, Any]:\n@@ -2902,6 +2903,7 @@ def boxplot(\n         autorange=autorange,\n         zorder=zorder,\n         capwidths=capwidths,\n+        label=label,\n         **({\"data\": data} if data is not None else {}),\n     )\n "
+    },
+    {
+      "sha": "4b8fc1b12f604a5117d3cab1b675b055f3503420",
+      "filename": "lib/matplotlib/tests/test_legend.py",
+      "status": "modified",
+      "additions": 47,
+      "deletions": 0,
+      "changes": 47,
+      "blob_url": "https://github.com/matplotlib/matplotlib/blob/95890c2f82db570220c797e865c5747ba1ae1f94/lib%2Fmatplotlib%2Ftests%2Ftest_legend.py",
+      "raw_url": "https://github.com/matplotlib/matplotlib/raw/95890c2f82db570220c797e865c5747ba1ae1f94/lib%2Fmatplotlib%2Ftests%2Ftest_legend.py",
+      "contents_url": "https://api.github.com/repos/matplotlib/matplotlib/contents/lib%2Fmatplotlib%2Ftests%2Ftest_legend.py?ref=95890c2f82db570220c797e865c5747ba1ae1f94",
+      "patch": "@@ -1435,3 +1435,50 @@ def test_legend_text():\n         leg_bboxes.append(\n             leg.get_window_extent().transformed(ax.transAxes.inverted()))\n     assert_allclose(leg_bboxes[1].bounds, leg_bboxes[0].bounds)\n+\n+\n+def test_boxplot_labels():\n+    # Test that boxplot(..., labels=) sets the tick labels but not legend entries\n+    # This is not consistent with other plot types but is the current behavior.\n+    fig, ax = plt.subplots()\n+    np.random.seed(19680801)\n+    data = np.random.random((10, 3))\n+    bp = ax.boxplot(data, labels=['A', 'B', 'C'])\n+    # Check that labels set the tick labels ...\n+    assert [l.get_text() for l in ax.get_xticklabels()] == ['A', 'B', 'C']\n+    # ... but not legend entries\n+    handles, labels = ax.get_legend_handles_labels()\n+    assert len(handles) == 0\n+    assert len(labels) == 0\n+\n+\n+def test_boxplot_legend_labels():\n+    # Test that legend entries are generated when passing `label`.\n+    np.random.seed(19680801)\n+    data = np.random.random((10, 4))\n+    fig, axs = plt.subplots(nrows=1, ncols=4)\n+    legend_labels = ['box A', 'box B', 'box C', 'box D']\n+\n+    # Testing legend labels and patch passed to legend.\n+    bp1 = axs[0].boxplot(data, patch_artist=True, label=legend_labels)\n+    assert [v.get_label() for v in bp1['boxes']] == legend_labels\n+    handles, labels = axs[0].get_legend_handles_labels()\n+    assert labels == legend_labels\n+    assert all(isinstance(h, mpl.patches.PathPatch) for h in handles)\n+\n+    # Testing legend without `box`.\n+    bp2 = axs[1].boxplot(data, label=legend_labels, showbox=False)\n+    # Without a box, The legend entries should be passed from the medians.\n+    assert [v.get_label() for v in bp2['medians']] == legend_labels\n+    handles, labels = axs[1].get_legend_handles_labels()\n+    assert labels == legend_labels\n+    assert all(isinstance(h, mpl.lines.Line2D) for h in handles)\n+\n+    # Testing legend with number of labels different from number of boxes.\n+    with pytest.raises(ValueError, match='There must be an equal number'):\n+        bp3 = axs[2].boxplot(data, label=legend_labels[:-1])\n+\n+    # Test that for a string label, only the first box gets a label.\n+    bp4 = axs[3].boxplot(data, label='box A')\n+    assert bp4['medians'][0].get_label() == 'box A'\n+    assert all(x.get_label().startswith(\"_\") for x in bp4['medians'][1:])"
+    }
+  ]
+}
