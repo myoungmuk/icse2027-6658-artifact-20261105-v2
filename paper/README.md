@@ -1,4 +1,4 @@
-# ICSE #6658 camera-ready candidate (2026-11-05, v2)
+# ICSE #6658 camera-ready candidate (2026-11-05, v3)
 
 The approved displayed title is **Beyond %Resolved:Reassessing SWE-bench Through Human
 and LLM Code Review**. Authors: Myeongmuk Kang and Geunseok Yang, Hankyong National University.
@@ -26,14 +26,13 @@ with a new directory outside this repository. This does not perform new inferenc
 
 This manuscript uses IEEE `10pt,conference` with the standard margins and body font size.
 The user's binding limit is **9 body pages + 1 reference page, 10 pages total**.
-Both user-supplied ORCIDs are included. The public artifact is versioned at
-https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v2 .
+Both user-supplied ORCIDs are included. Geunseok Yang is the user-confirmed corresponding author. The public artifact is versioned at
+https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v3 .
 The new Table IX reports the prospective disjoint pilot, separately from historical data.
 Shi's formal AI-SQE 2026 citation is verified through Crossref; the experimental
 method remains pinned to arXiv:2511.10865v1.
 
-Confirm the latest private author kit, corresponding-author designation, rights/DOI
-metadata, and any publisher-specific PDF validation before final conference upload.
+Confirm the latest private author kit, rights/DOI metadata, and any publisher-specific PDF validation before final conference upload.
 Do not substitute invented values. The supplied PDF was built from this source;
 its SHA-256 is recorded in `../submission_metadata.json`. Local checks do not certify
 PDF eXpress acceptance. No final conference upload is claimed.

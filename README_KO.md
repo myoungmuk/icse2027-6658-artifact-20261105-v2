@@ -1,8 +1,9 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-05 v2
+# ICSE 2027 #6658 공개 자료 — 2026-11-05 v3
 
 논문: **Beyond %Resolved:Reassessing SWE-bench Through Human and LLM Code Review**
 
 - 저자 순서: Myeongmuk Kang, Geunseok Yang.
+- 교신저자: **Geunseok Yang(양근석)**, `gsyang@hknu.ac.kr` — 사용자 명시 확인.
 - ORCID: 강명묵 0009-0002-5351-0269, 양근석 0000-0001-5677-5129.
 - `paper/main.pdf`: 본문 9쪽＋참고문헌 1쪽, 총 **10쪽**. 페이지 추가 없음.
 - `historical_analysis/`: 과거 패킷·판정·분석 및 원래 파일 검증 목록.
@@ -42,7 +43,7 @@ python tools/reproduce_pilots.py --output ../icse6658-reanalysis
 
 ## 최종 제출에서 별도 확인할 사실
 
-최신 비공개 author kit, 교신저자 지정, 출판사가 발급하는 권리·DOI 정보,
+최신 비공개 author kit, 출판사가 발급하는 권리·DOI 정보,
 요구되는 출판사 PDF 검사 및 실제 학회 업로드는 이 GitHub 배포와 별도다.
 과거 hosted 모델의 정확한 snapshot, 누락된 rubric 수정 이력, 독립 사람 검증은
 자료만으로 복원할 수 없어 한계로 명시했다. 식별자나 검토 결과를 임의로 만들지 않았다.

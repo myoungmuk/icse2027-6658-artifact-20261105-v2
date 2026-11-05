@@ -6,7 +6,9 @@ Myeongmuk Kang ([0009-0002-5351-0269](https://orcid.org/0009-0002-5351-0269)) an
 Geunseok Yang ([0000-0001-5677-5129](https://orcid.org/0000-0001-5677-5129)),
 Hankyong National University.
 
-Version: [`2026.11.05-v2`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v2).
+Corresponding author: **Geunseok Yang** (`gsyang@hknu.ac.kr`), confirmed by the authors.
+
+Version: [`2026.11.05-v3`](https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2/releases/tag/2026.11.05-v3).
 See [README_KO.md](README_KO.md) for the Korean handoff.
 
 This release preserves the historical analysis and separately versions two new,
