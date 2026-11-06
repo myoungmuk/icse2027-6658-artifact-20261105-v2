@@ -1,0 +1,50 @@
+{
+  "id": "d12b6dbdab8769c60610cf42",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_c1c6508409ca",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_c1c6508409ca.json",
+  "historical_output_sha256": "b8b270f0dea98c3108993c06fc01b50260223b5a44caec51127edf925660f32e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1024,
+  "messages_sha256": "83220020a14a59b4b7469e8e38d4d5fa247762e5f04cd01c03b58844072f9bd0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue of setting a session header to None, but it introduces a non-minimal change by modifying the merge_setting function.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch modifies the merge_setting function to remove headers with None values, which is not directly related to the issue of setting a session header to None. This change may have unintended side effects and is not minimal.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1705",
+      "completed_at_utc": "2026-11-06T04:10:23.393876+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue of setting a session header to None, but it introduces a non-minimal change by modifying the merge_setting function.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch modifies the merge_setting function to remove headers with None values, which is not directly related to the issue of setting a session header to None. This change may have unintended side effects and is not minimal."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue of setting a session header to None, but it introduces a non-minimal change by modifying the merge_setting function.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch modifies the merge_setting function to remove headers with None values, which is not directly related to the issue of setting a session header to None. This change may have unintended side effects and is not minimal."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

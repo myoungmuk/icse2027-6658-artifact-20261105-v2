@@ -1,0 +1,50 @@
+{
+  "id": "8ca3d095e0af695a20480a6c",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_2ee9a7f51542",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_2ee9a7f51542.json",
+  "historical_output_sha256": "7044f7259047c6738558398ee921c0757f5fa2968f03a451300f334264b20a4b",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1651,
+  "messages_sha256": "f4cf573091c4ddaf4e845997fea7704d98cf9e2b6977e9e15366f88005db3460",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of documenting methods decorated with both @classmethod and @property by modifying the autodoc extension. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor maintainability/readability defect by adding a conditional check within the `can_document_member` method, which could be slightly confusing for future maintainers.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "1204",
+      "completed_at_utc": "2026-11-06T04:07:22.380918+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of documenting methods decorated with both @classmethod and @property by modifying the autodoc extension. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding a conditional check within the `can_document_member` method, which could be slightly confusing for future maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of documenting methods decorated with both @classmethod and @property by modifying the autodoc extension. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding a conditional check within the `can_document_member` method, which could be slightly confusing for future maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

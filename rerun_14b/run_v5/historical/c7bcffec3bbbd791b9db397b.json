@@ -1,0 +1,50 @@
+{
+  "id": "c7bcffec3bbbd791b9db397b",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_d9302c2f26cf",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_d9302c2f26cf.json",
+  "historical_output_sha256": "93435c539048dbe6f66a59fbd89939a2e5051aa86f5b90e199299314cb323eb6",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1060,
+  "messages_sha256": "ef18532ea36bbc871649c3dbcb6ecc76640df4a0008dcab367bf5693ea5784ee",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a potential issue with string inputs and does not address the root cause of the bug.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch attempts to sympify string inputs, but it does not handle the case where the input is a float string, which is the root cause of the issue. This could lead to incorrect behavior in other cases.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1186",
+      "completed_at_utc": "2026-11-06T04:07:03.958790+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a potential issue with string inputs and does not address the root cause of the bug.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch attempts to sympify string inputs, but it does not handle the case where the input is a float string, which is the root cause of the issue. This could lead to incorrect behavior in other cases."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch introduces a potential issue with string inputs and does not address the root cause of the bug.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch attempts to sympify string inputs, but it does not handle the case where the input is a float string, which is the root cause of the issue. This could lead to incorrect behavior in other cases."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

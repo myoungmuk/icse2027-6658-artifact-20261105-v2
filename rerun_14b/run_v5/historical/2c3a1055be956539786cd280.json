@@ -1,0 +1,60 @@
+{
+  "id": "2c3a1055be956539786cd280",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_fe4eb2569615",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_fe4eb2569615.json",
+  "historical_output_sha256": "6883e462c875324f358693f45c5bb6cefbf7ceaa9e60ee4f20775679debd8e0d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 768,
+  "messages_sha256": "c86a13e8a4bc98090f7efa7a10928b6a775f1253b6775ec4b4ea1c5066e99c3a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses a specific query syntax error but may introduce other issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch adds a space after 'DISTINCT', which may cause issues in SQL syntax for certain database backends that do not support spaces after 'DISTINCT'.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify the fix or ensure that the change does not introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 152,
+      "returned_model_request_id": "550",
+      "completed_at_utc": "2026-11-06T04:03:24.721210+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses a specific query syntax error but may introduce other issues.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch adds a space after 'DISTINCT', which may cause issues in SQL syntax for certain database backends that do not support spaces after 'DISTINCT'."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify the fix or ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses a specific query syntax error but may introduce other issues.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch adds a space after 'DISTINCT', which may cause issues in SQL syntax for certain database backends that do not support spaces after 'DISTINCT'."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify the fix or ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

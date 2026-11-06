@@ -1,0 +1,60 @@
+{
+  "id": "8bf61803b90aa4a8f2030134",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_c0b5f6544e31",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_c0b5f6544e31.json",
+  "historical_output_sha256": "6ba02edb669ae6b47383ef6e2e07524ddcb997c48f2963d2f72f6191706b6f8d",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1928,
+  "messages_sha256": "20d918cbe22b7da1c37ac5523012a75cfcbb973982ba133e1ecfb0b0c9fb01b6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch simplifies the substitution logic in ConditionSet, but it may introduce behavioral changes that could affect other parts of the code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the substitution behavior, which might break existing code that relies on the previous behavior.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be more readable with comments explaining the changes and the reasoning behind them.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 145,
+      "returned_model_request_id": "1385",
+      "completed_at_utc": "2026-11-06T04:08:18.339333+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch simplifies the substitution logic in ConditionSet, but it may introduce behavioral changes that could affect other parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the substitution behavior, which might break existing code that relies on the previous behavior."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with comments explaining the changes and the reasoning behind them."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch simplifies the substitution logic in ConditionSet, but it may introduce behavioral changes that could affect other parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the substitution behavior, which might break existing code that relies on the previous behavior."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with comments explaining the changes and the reasoning behind them."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

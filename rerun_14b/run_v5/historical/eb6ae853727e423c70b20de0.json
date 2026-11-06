@@ -1,0 +1,50 @@
+{
+  "id": "eb6ae853727e423c70b20de0",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_f9767c1ab828",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_f9767c1ab828.json",
+  "historical_output_sha256": "df4f13878a4308236123506705b72a0b6100fb997183ce4e12df0594398241d6",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1119,
+  "messages_sha256": "52ee0c1985e2af5096f21ff7c964eeb1d08fec5dd1f8bfef4467c74d60a16da3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly handles the case where `__all__` is empty, but it may introduce a behavioral regression for cases where `__all__` is `None`.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior when `__all__` is `None`. Previously, it would document all members, but now it will treat `None` as if `__all__` is empty, which may break existing behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 140,
+      "returned_model_request_id": "355",
+      "completed_at_utc": "2026-11-06T04:02:17.671379+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly handles the case where `__all__` is empty, but it may introduce a behavioral regression for cases where `__all__` is `None`.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior when `__all__` is `None`. Previously, it would document all members, but now it will treat `None` as if `__all__` is empty, which may break existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly handles the case where `__all__` is empty, but it may introduce a behavioral regression for cases where `__all__` is `None`.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior when `__all__` is `None`. Previously, it would document all members, but now it will treat `None` as if `__all__` is empty, which may break existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "fc76003032135d5b4cc24383",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_602bc4db6335",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_602bc4db6335.json",
+  "historical_output_sha256": "8db133f7c26e5922d792fe7a7964bf008422e2ed93f4e353d9293614516d22ec",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2447,
+  "messages_sha256": "bc7b68bf03a9f170fe1d5f5856a1a411116dc5be602e1478d31976f0a118ff1e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific deprecation warning issue but introduces a potential regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a condition that checks if `values.size` and `data.size` are non-zero before issuing warnings or updating mappings. This could inadvertently suppress legitimate warnings or updates for non-empty data that should trigger these actions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "488",
+      "completed_at_utc": "2026-11-06T04:03:08.418932+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific deprecation warning issue but introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a condition that checks if `values.size` and `data.size` are non-zero before issuing warnings or updating mappings. This could inadvertently suppress legitimate warnings or updates for non-empty data that should trigger these actions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific deprecation warning issue but introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a condition that checks if `values.size` and `data.size` are non-zero before issuing warnings or updating mappings. This could inadvertently suppress legitimate warnings or updates for non-empty data that should trigger these actions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

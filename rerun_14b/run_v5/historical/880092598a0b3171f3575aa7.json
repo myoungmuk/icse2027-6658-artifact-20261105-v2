@@ -1,0 +1,60 @@
+{
+  "id": "880092598a0b3171f3575aa7",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_9021bc860e77",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_9021bc860e77.json",
+  "historical_output_sha256": "79ae410a8dc8606829fa94b21671302cf6ea58554ad5bb2ec17a6320d29d60d7",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 9189,
+  "messages_sha256": "dc97e02d790d72bde898119f572a28495411355e5d90289678a8727d99b73ef6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds precomputed CDFs for several distributions, which should resolve the integration issues mentioned. The code is well-structured and follows the existing conventions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new file `new_crv_types.py` has a different naming convention than the existing files in the `sympy.stats` directory. It would be better to follow the existing naming convention to maintain consistency.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could benefit from some additional comments to explain the logic behind the precomputed CDFs, especially for less common distributions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 184,
+      "returned_model_request_id": "2051",
+      "completed_at_utc": "2026-11-06T04:13:37.410754+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds precomputed CDFs for several distributions, which should resolve the integration issues mentioned. The code is well-structured and follows the existing conventions.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new file `new_crv_types.py` has a different naming convention than the existing files in the `sympy.stats` directory. It would be better to follow the existing naming convention to maintain consistency."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from some additional comments to explain the logic behind the precomputed CDFs, especially for less common distributions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR adds precomputed CDFs for several distributions, which should resolve the integration issues mentioned. The code is well-structured and follows the existing conventions.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new file `new_crv_types.py` has a different naming convention than the existing files in the `sympy.stats` directory. It would be better to follow the existing naming convention to maintain consistency."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from some additional comments to explain the logic behind the precomputed CDFs, especially for less common distributions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

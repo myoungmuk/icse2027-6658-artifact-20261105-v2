@@ -1,0 +1,50 @@
+{
+  "id": "54285b7a26905b4684cf5e6a",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_2e71180c5c16",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_2e71180c5c16.json",
+  "historical_output_sha256": "a283c88f1e8447c99f44b1865bdcd51e94dec2f52bda247e36ea4501d8161574",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1197,
+  "messages_sha256": "7620b213888736b6fe8481c00516d3c91235d53130db1ec15624a3b5c2836925",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch simplifies the `_check_homomorphism` function but introduces a potential issue with handling inverted generators.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a fragile approach by directly manipulating the generator indices and handling inverted generators in a way that may not cover all edge cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "688",
+      "completed_at_utc": "2026-11-06T04:04:16.297251+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch simplifies the `_check_homomorphism` function but introduces a potential issue with handling inverted generators.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch introduces a fragile approach by directly manipulating the generator indices and handling inverted generators in a way that may not cover all edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch simplifies the `_check_homomorphism` function but introduces a potential issue with handling inverted generators.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch introduces a fragile approach by directly manipulating the generator indices and handling inverted generators in a way that may not cover all edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

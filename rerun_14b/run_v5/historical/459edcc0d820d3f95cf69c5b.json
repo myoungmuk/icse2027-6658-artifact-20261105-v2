@@ -1,0 +1,60 @@
+{
+  "id": "459edcc0d820d3f95cf69c5b",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_e17c0a922112",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_e17c0a922112.json",
+  "historical_output_sha256": "af50547acd266cfd2904bfb750be874b5aa9ec1f6cb75292b2e9921bcc227c74",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2139,
+  "messages_sha256": "fe3e25e052eecd6498a6e8a5864ddc7cddeda0442b67d58d6ed53950095306a7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by excluding the return type from class documentation, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch modifies the behavior of type hint handling for class methods, which could potentially break existing documentation generation for other classes or methods.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a conditional block that could be refactored for better readability and maintainability.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 150,
+      "returned_model_request_id": "2087",
+      "completed_at_utc": "2026-11-06T04:14:03.534904+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by excluding the return type from class documentation, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch modifies the behavior of type hint handling for class methods, which could potentially break existing documentation generation for other classes or methods."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a conditional block that could be refactored for better readability and maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by excluding the return type from class documentation, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch modifies the behavior of type hint handling for class methods, which could potentially break existing documentation generation for other classes or methods."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a conditional block that could be refactored for better readability and maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

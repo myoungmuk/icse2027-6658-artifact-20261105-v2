@@ -1,0 +1,60 @@
+{
+  "id": "8d19e2dd3d62fd90bea56dab",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_428808e9cef1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_428808e9cef1.json",
+  "historical_output_sha256": "1a6b866d61d6636abc13ec6690ffd9076a215d9d0e5fd3fce625b183d28c47c6",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1604,
+  "messages_sha256": "d06e6f4ac9dcf7e959752397097fb8bb6113001f9507d8322e5fb5317c2ef519",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring collation is propagated to foreign keys, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch modifies the type of foreign key columns, which could potentially break existing migrations or assumptions about column types in other parts of the application.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be more readable with comments explaining why collation is being added to foreign key columns.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 154,
+      "returned_model_request_id": "1453",
+      "completed_at_utc": "2026-11-06T04:08:55.021154+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring collation is propagated to foreign keys, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch modifies the type of foreign key columns, which could potentially break existing migrations or assumptions about column types in other parts of the application."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with comments explaining why collation is being added to foreign key columns."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring collation is propagated to foreign keys, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch modifies the type of foreign key columns, which could potentially break existing migrations or assumptions about column types in other parts of the application."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with comments explaining why collation is being added to foreign key columns."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

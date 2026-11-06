@@ -1,0 +1,60 @@
+{
+  "id": "5b411de762a84dd701763d19",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_b01bdd7c4762",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_b01bdd7c4762.json",
+  "historical_output_sha256": "336aa7e008d0a3d4a504576a55ffd48982e03ca582b18fdd3b48086604ffe5e9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1978,
+  "messages_sha256": "b6783d47e74ffcb6d923cf070ca448678e5656a3d955b88e178b0efb16560007",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces a newline parameter to the file opening, which might affect other parts of the codebase.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change might introduce a behavioral regression risk by affecting how other parts of the codebase handle newline characters.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change does not follow the project's convention of not specifying the newline parameter, which might lead to inconsistencies.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 147,
+      "returned_model_request_id": "1555",
+      "completed_at_utc": "2026-11-06T04:09:29.769151+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces a newline parameter to the file opening, which might affect other parts of the codebase.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change might introduce a behavioral regression risk by affecting how other parts of the codebase handle newline characters."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change does not follow the project's convention of not specifying the newline parameter, which might lead to inconsistencies."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change introduces a newline parameter to the file opening, which might affect other parts of the codebase.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change might introduce a behavioral regression risk by affecting how other parts of the codebase handle newline characters."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change does not follow the project's convention of not specifying the newline parameter, which might lead to inconsistencies."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

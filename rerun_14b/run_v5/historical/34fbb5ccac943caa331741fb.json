@@ -1,0 +1,50 @@
+{
+  "id": "34fbb5ccac943caa331741fb",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_626a0fc0cb9f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_626a0fc0cb9f.json",
+  "historical_output_sha256": "e3ada12fc15620b3d76aa14033e498df6944909b5153ecaf8700379e9ca8833a",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1016,
+  "messages_sha256": "3bf81cde637a2c9b75c3b501bb0171cb92a65794e843df2cb2e090d58acb4d38",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of named groups not being replaced if the URL pattern lacks a trailing slash. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not handle cases where the URL pattern has multiple trailing slashes or other edge cases involving slashes.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "1356",
+      "completed_at_utc": "2026-11-06T04:08:18.332316+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of named groups not being replaced if the URL pattern lacks a trailing slash. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle cases where the URL pattern has multiple trailing slashes or other edge cases involving slashes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of named groups not being replaced if the URL pattern lacks a trailing slash. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle cases where the URL pattern has multiple trailing slashes or other edge cases involving slashes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

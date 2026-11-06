@@ -1,0 +1,29 @@
+{
+  "code": "24ee2354464a7f732bdc",
+  "instance_id": "astropy__astropy-13477",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "24ee2354464a7f732bdc_strict",
+  "arm": "strict",
+  "input_tokens": 2150,
+  "messages_sha256": "05e31c006b60eb0b72c058ca38f094720311dc94359226a2efb46d6c1d18762d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a fragile approach by directly comparing Frame and SkyCoord instances without ensuring they are in the same frame. This could lead to incorrect results or unexpected behavior. Additionally, the patch lacks comprehensive tests to verify its correctness and maintainability.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 69,
+      "returned_model_request_id": "2624",
+      "completed_at_utc": "2026-11-06T04:17:31.229449+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a fragile approach by directly comparing Frame and SkyCoord instances without ensuring they are in the same frame. This could lead to incorrect results or unexpected behavior. Additionally, the patch lacks comprehensive tests to verify its correctness and maintainability."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

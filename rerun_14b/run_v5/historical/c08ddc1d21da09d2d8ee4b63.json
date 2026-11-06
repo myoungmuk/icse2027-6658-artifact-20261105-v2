@@ -1,0 +1,50 @@
+{
+  "id": "c08ddc1d21da09d2d8ee4b63",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_7dc1c0161c01",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_7dc1c0161c01.json",
+  "historical_output_sha256": "dc39c6142c96fa02a981bee172e1165f6904dad809ff69a781a35f68a2e7d61a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 983,
+  "messages_sha256": "073c952134ac1639dbd44498c5caf30851506de8a391251e961da6d9e453e232",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with the `timesince` function when `USE_TZ=True` and the interval is greater than one month. The change is minimal and directly related to the problem statement.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify that the change does not introduce any regressions or issues in other scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "464",
+      "completed_at_utc": "2026-11-06T04:02:50.464771+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with the `timesince` function when `USE_TZ=True` and the interval is greater than one month. The change is minimal and directly related to the problem statement.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify that the change does not introduce any regressions or issues in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with the `timesince` function when `USE_TZ=True` and the interval is greater than one month. The change is minimal and directly related to the problem statement.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify that the change does not introduce any regressions or issues in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

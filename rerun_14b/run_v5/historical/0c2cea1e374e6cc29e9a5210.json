@@ -1,0 +1,50 @@
+{
+  "id": "0c2cea1e374e6cc29e9a5210",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_dc15059aa9ae",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_dc15059aa9ae.json",
+  "historical_output_sha256": "ab43b86f7951bbf229063fc01b2c6968cad6d01d6d0601040e4ae25b868faf08",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1105,
+  "messages_sha256": "0d8243d308fa7e33d2b4d50ea8b20cc2cac93ed7fa11de31b4eefb30e9d6d87e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the issue by preserving the input iterable type, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of resolving lookup values by preserving the input iterable type. This may introduce unexpected behavior in other parts of the codebase that rely on the previous behavior of converting lists to tuples.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "1572",
+      "completed_at_utc": "2026-11-06T04:09:29.772513+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the issue by preserving the input iterable type, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of resolving lookup values by preserving the input iterable type. This may introduce unexpected behavior in other parts of the codebase that rely on the previous behavior of converting lists to tuples."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch resolves the issue by preserving the input iterable type, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of resolving lookup values by preserving the input iterable type. This may introduce unexpected behavior in other parts of the codebase that rely on the previous behavior of converting lists to tuples."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

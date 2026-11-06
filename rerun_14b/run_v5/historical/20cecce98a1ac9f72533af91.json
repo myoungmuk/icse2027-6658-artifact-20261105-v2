@@ -1,0 +1,50 @@
+{
+  "id": "20cecce98a1ac9f72533af91",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_fbeca7c3cc03",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_fbeca7c3cc03.json",
+  "historical_output_sha256": "a8a225fc8edd1980c789812cd84e0ce8266de8fe5e9c2a79de3432f944d2a317",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1060,
+  "messages_sha256": "e1a033119b5a088c5a7a29e8583bd29ac3b5472aca36274cf3a31d883ca35473",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of incomplete results depending on the order of symbols with permute=True, but it introduces a non-minimal change by modifying the function signature and potentially affecting other parts of the codebase.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a non-minimal change by modifying the function signature and potentially affecting other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "410",
+      "completed_at_utc": "2026-11-06T04:02:33.746311+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of incomplete results depending on the order of symbols with permute=True, but it introduces a non-minimal change by modifying the function signature and potentially affecting other parts of the codebase.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The change introduces a non-minimal change by modifying the function signature and potentially affecting other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of incomplete results depending on the order of symbols with permute=True, but it introduces a non-minimal change by modifying the function signature and potentially affecting other parts of the codebase.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The change introduces a non-minimal change by modifying the function signature and potentially affecting other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "17cb4211ccb774262302536d",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_2c2f1e74acd3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_2c2f1e74acd3.json",
+  "historical_output_sha256": "9fc52df026de5b715338cd057063971dc54d793859cd960024447e4ff1cc05cc",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 997,
+  "messages_sha256": "5f875aee23cf3167ce06942e358fa104ccf6af10967ae779c8b5b81b2eb55bb3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by allowing Dagger instances to be simplified with IdentityOperator, but it may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may lead to unexpected behavior when multiplying Dagger instances with other operators, as it now returns the other operator directly without further simplification.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1313",
+      "completed_at_utc": "2026-11-06T04:07:59.671530+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by allowing Dagger instances to be simplified with IdentityOperator, but it may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may lead to unexpected behavior when multiplying Dagger instances with other operators, as it now returns the other operator directly without further simplification."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by allowing Dagger instances to be simplified with IdentityOperator, but it may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may lead to unexpected behavior when multiplying Dagger instances with other operators, as it now returns the other operator directly without further simplification."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

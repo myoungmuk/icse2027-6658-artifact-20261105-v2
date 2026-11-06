@@ -1,0 +1,50 @@
+{
+  "id": "bd38bbb0e5b78a0a3f11d091",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_0b62ee0d2855",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_0b62ee0d2855.json",
+  "historical_output_sha256": "64877ba29fe33c45d33224186c3e6642ea1bff4d5a02dc1d5a25e1678b90668b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 897,
+  "messages_sha256": "a2fac0fac8a51653ce3f2f7f5d382044d642dc7a5b2afe34519b15d1c8845b8c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a regression in input validation for clustering metrics but introduces a non-minimal change by modifying unrelated parts of the code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR modifies the `dtype` parameter in the `check_array` function calls, which is unrelated to the issue of string input validation. This introduces unnecessary changes and increases the risk of introducing new bugs.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "33",
+      "completed_at_utc": "2026-11-06T04:00:16.940745+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a regression in input validation for clustering metrics but introduces a non-minimal change by modifying unrelated parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The PR modifies the `dtype` parameter in the `check_array` function calls, which is unrelated to the issue of string input validation. This introduces unnecessary changes and increases the risk of introducing new bugs."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR addresses a regression in input validation for clustering metrics but introduces a non-minimal change by modifying unrelated parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The PR modifies the `dtype` parameter in the `check_array` function calls, which is unrelated to the issue of string input validation. This introduces unnecessary changes and increases the risk of introducing new bugs."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

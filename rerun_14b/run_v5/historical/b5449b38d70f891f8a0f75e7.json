@@ -1,0 +1,50 @@
+{
+  "id": "b5449b38d70f891f8a0f75e7",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_04284f654b23",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_04284f654b23.json",
+  "historical_output_sha256": "9dde3496366d3df75434d19803df03df1f2201a1297faa895b31601eab655aac",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1116,
+  "messages_sha256": "f1035bbeb5c4f9a9a4c0a825cdff9dbfc5e0a44ab56e7b56b14aebaafb7afd1a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly quotes the 'qop' options as per RFC2617, but it may not handle all possible 'qop' values.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change only quotes the 'qop' value as 'auth'. It should handle other possible 'qop' values as well.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "1004",
+      "completed_at_utc": "2026-11-06T04:05:55.616673+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly quotes the 'qop' options as per RFC2617, but it may not handle all possible 'qop' values.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change only quotes the 'qop' value as 'auth'. It should handle other possible 'qop' values as well."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly quotes the 'qop' options as per RFC2617, but it may not handle all possible 'qop' values.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change only quotes the 'qop' value as 'auth'. It should handle other possible 'qop' values as well."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

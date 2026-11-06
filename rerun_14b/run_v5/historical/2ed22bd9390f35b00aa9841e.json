@@ -1,0 +1,50 @@
+{
+  "id": "2ed22bd9390f35b00aa9841e",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_83dc5e435f0a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_83dc5e435f0a.json",
+  "historical_output_sha256": "02412717ef10a79bd6fc83b6b12d5e60b2c451d680d86ceb1621f113beec2fa5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2945,
+  "messages_sha256": "e3993b0534cd6c2b174d657e60340dfbad6ba8ee5a8fe98ce12a5cd65c3ab0cd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of pickling query objects with values()/values_list() by ensuring the correct iterable class and fields are set upon unpickling. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new attributes and methods in Query and QuerySet classes without aligning with the existing naming conventions and style of the Django codebase.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "2156",
+      "completed_at_utc": "2026-11-06T04:14:31.726084+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of pickling query objects with values()/values_list() by ensuring the correct iterable class and fields are set upon unpickling. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new attributes and methods in Query and QuerySet classes without aligning with the existing naming conventions and style of the Django codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of pickling query objects with values()/values_list() by ensuring the correct iterable class and fields are set upon unpickling. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new attributes and methods in Query and QuerySet classes without aligning with the existing naming conventions and style of the Django codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

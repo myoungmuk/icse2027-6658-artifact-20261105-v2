@@ -1,0 +1,60 @@
+{
+  "id": "dbec6764cdfa2b0e19eeabc9",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_b8cb98cd6fb9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_b8cb98cd6fb9.json",
+  "historical_output_sha256": "a0fd0ee1ff2d165e1c683b0a458b02efb3122905e8e95a1afbdb0a809cee29d1",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1104,
+  "messages_sha256": "badeb7fb332fd98aa0fc2fc258666a2aba784f81e504a96dfe50c521d9bdaa8a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a hardcoded set of valid ordering lookups, which may not be sufficient or flexible.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"major\",\n      \"description\": \"The patch special-cases 'isnull' lookup without considering other potential valid lookups, leading to potential regressions or missed cases.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new attribute 'valid_ordering_lookups' without clear context or explanation, which may reduce maintainability.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 155,
+      "returned_model_request_id": "1192",
+      "completed_at_utc": "2026-11-06T04:07:03.959838+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a hardcoded set of valid ordering lookups, which may not be sufficient or flexible.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The patch special-cases 'isnull' lookup without considering other potential valid lookups, leading to potential regressions or missed cases."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new attribute 'valid_ordering_lookups' without clear context or explanation, which may reduce maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a hardcoded set of valid ordering lookups, which may not be sufficient or flexible.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The patch special-cases 'isnull' lookup without considering other potential valid lookups, leading to potential regressions or missed cases."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new attribute 'valid_ordering_lookups' without clear context or explanation, which may reduce maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

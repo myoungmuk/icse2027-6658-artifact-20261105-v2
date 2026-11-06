@@ -1,0 +1,29 @@
+{
+  "code": "6879ddfe2b4bcba978b4",
+  "instance_id": "scikit-learn__scikit-learn-15495",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "6879ddfe2b4bcba978b4_strict",
+  "arm": "strict",
+  "input_tokens": 1411,
+  "messages_sha256": "8e0bbcc652a7a1e0e415271deb5a505b959da2b17482e742900ae6dbd987785d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a potential issue in the DBSCAN class where the sample_weight check is conditionally executed only if sample_weight is not None. This could lead to inconsistent behavior compared to other estimators where the check is always performed. Additionally, the patch does not address the entire list of estimators mentioned in the issue, and it lacks comprehensive test coverage to ensure the changes do not introduce regressions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 101,
+      "returned_model_request_id": "2474",
+      "completed_at_utc": "2026-11-06T04:16:43.893645+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a potential issue in the DBSCAN class where the sample_weight check is conditionally executed only if sample_weight is not None. This could lead to inconsistent behavior compared to other estimators where the check is always performed. Additionally, the patch does not address the entire list of estimators mentioned in the issue, and it lacks comprehensive test coverage to ensure the changes do not introduce regressions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

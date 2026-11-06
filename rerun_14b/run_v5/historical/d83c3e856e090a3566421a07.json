@@ -1,0 +1,50 @@
+{
+  "id": "d83c3e856e090a3566421a07",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_834a0894b660",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_834a0894b660.json",
+  "historical_output_sha256": "6a4060ff75732c8b70cf9b753cb91e1b7ef9f59257d927a8f95a3153fdc2b2f6",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1613,
+  "messages_sha256": "4822eb13988efba2fb07d25d91c8eca3129d05dab8751d3f4c3d01f4e81f6612",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of duplicate yields in HashedFilesMixin's post_process() method, but it introduces a new set to track processed files, which may have performance implications.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The introduction of a set to track processed files may introduce performance overhead, especially for large numbers of files.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "762",
+      "completed_at_utc": "2026-11-06T04:04:32.845354+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of duplicate yields in HashedFilesMixin's post_process() method, but it introduces a new set to track processed files, which may have performance implications.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The introduction of a set to track processed files may introduce performance overhead, especially for large numbers of files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of duplicate yields in HashedFilesMixin's post_process() method, but it introduces a new set to track processed files, which may have performance implications.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The introduction of a set to track processed files may introduce performance overhead, especially for large numbers of files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "e6e73ce1f90d1e2aea10a990",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_c67957e1ed29",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_c67957e1ed29.json",
+  "historical_output_sha256": "9f0d7aa3398bf8a9b7cb90ba246016ec25d87e82c92463928e670f957dcd06ee",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1024,
+  "messages_sha256": "9927b4ac6dd0a8725fc32dbb8c480266cc02555931f4d26168416b54a089afa7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. However, it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"Setting SECURE_REFERRER_POLICY to 'same-origin' by default may break existing websites that rely on the Referer header for verification. This is a fragile technique and can be spoofed.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 131,
+      "returned_model_request_id": "1618",
+      "completed_at_utc": "2026-11-06T04:09:46.495199+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. However, it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "Setting SECURE_REFERRER_POLICY to 'same-origin' by default may break existing websites that rely on the Referer header for verification. This is a fragile technique and can be spoofed."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. However, it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "Setting SECURE_REFERRER_POLICY to 'same-origin' by default may break existing websites that rely on the Referer header for verification. This is a fragile technique and can be spoofed."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

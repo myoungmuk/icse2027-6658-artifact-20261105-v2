@@ -1,0 +1,50 @@
+{
+  "id": "b6c04120cf441fe342679ba2",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_a0574e523de0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_a0574e523de0.json",
+  "historical_output_sha256": "b1a517aa0055a69b9eb4f18e40398623dd65a16ac08445dbf501990ae3b40df8",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1135,
+  "messages_sha256": "2c27fe593d3a9ed3609804061ebc23001b7516608d210f795981b7687b7e0898",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of separability matrix computation for nested CompoundModels but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by handling the '&' operator specifically, which may not be the best approach for all compound model operations.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "50",
+      "completed_at_utc": "2026-11-06T04:00:36.143378+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of separability matrix computation for nested CompoundModels but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by handling the '&' operator specifically, which may not be the best approach for all compound model operations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of separability matrix computation for nested CompoundModels but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by handling the '&' operator specifically, which may not be the best approach for all compound model operations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

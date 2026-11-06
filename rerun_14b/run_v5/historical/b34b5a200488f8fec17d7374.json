@@ -1,0 +1,50 @@
+{
+  "id": "b34b5a200488f8fec17d7374",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_8dae66bcae14",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_8dae66bcae14.json",
+  "historical_output_sha256": "cbde4775d6d871874be1164919ae393ffc3f2cacb665482baae300e3672040ea",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1541,
+  "messages_sha256": "1906cb0b57febeed0e1ad6b153bdf2ef81f154c3395bb6e52e7dd1b4a867a4aa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of offset dash linestyle not having an effect in patch objects. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a change in style that does not match the existing code conventions, specifically the removal of the parentheses around the tuple in the _setattr_cm call.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "990",
+      "completed_at_utc": "2026-11-06T04:05:55.614041+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of offset dash linestyle not having an effect in patch objects. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a change in style that does not match the existing code conventions, specifically the removal of the parentheses around the tuple in the _setattr_cm call."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of offset dash linestyle not having an effect in patch objects. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a change in style that does not match the existing code conventions, specifically the removal of the parentheses around the tuple in the _setattr_cm call."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

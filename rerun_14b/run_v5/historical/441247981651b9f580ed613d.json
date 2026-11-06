@@ -1,0 +1,50 @@
+{
+  "id": "441247981651b9f580ed613d",
+  "scope": "agents/rag-gpt4",
+  "arm": "calibrated",
+  "packet_id": "pa_b0bca8730591",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/rag-gpt4/reviewer-14b-cal/pa_b0bca8730591.json",
+  "historical_output_sha256": "f2f7322c5aff5a75ce72e6f330469478d0e4178dfa7cd30e3b8cc8ecc09b1b6f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2552,
+  "messages_sha256": "c3e47e4da713926dfc5bb13697eee6e296f431825073fb1d295563fbfef81c76",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch attempts to address the issue by ensuring the timeout is converted to a string, but it does not directly fix the root cause of the UnicodeDecodeError in the HTTP headers.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a fragile approach by conditionally converting the timeout to a string, which may not address the root cause of the UnicodeDecodeError in the HTTP headers. The issue seems to stem from the method name being a Unicode string, which should be handled properly in the requests library.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 151,
+      "returned_model_request_id": "1751",
+      "completed_at_utc": "2026-11-06T04:10:43.125007+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch attempts to address the issue by ensuring the timeout is converted to a string, but it does not directly fix the root cause of the UnicodeDecodeError in the HTTP headers.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch introduces a fragile approach by conditionally converting the timeout to a string, which may not address the root cause of the UnicodeDecodeError in the HTTP headers. The issue seems to stem from the method name being a Unicode string, which should be handled properly in the requests library."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The proposed patch attempts to address the issue by ensuring the timeout is converted to a string, but it does not directly fix the root cause of the UnicodeDecodeError in the HTTP headers.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch introduces a fragile approach by conditionally converting the timeout to a string, which may not address the root cause of the UnicodeDecodeError in the HTTP headers. The issue seems to stem from the method name being a Unicode string, which should be handled properly in the requests library."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

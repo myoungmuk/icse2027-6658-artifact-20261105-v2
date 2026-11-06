@@ -1,0 +1,29 @@
+{
+  "code": "26f5a6f82894ad08b1ba",
+  "instance_id": "django__django-13553",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "26f5a6f82894ad08b1ba_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1376,
+  "messages_sha256": "b4558e0effce4c03b436a67ec6875ee1fbdb78d2dc569d512a89692e0c8001bb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue by returning the non-empty queryset directly when there's only one non-empty queryset in the union operation. This prevents the database error and aligns with the user's expectation. The patch is straightforward and maintains readability.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 67,
+      "returned_model_request_id": "2703",
+      "completed_at_utc": "2026-11-06T04:18:08.357885+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue by returning the non-empty queryset directly when there's only one non-empty queryset in the union operation. This prevents the database error and aligns with the user's expectation. The patch is straightforward and maintains readability."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

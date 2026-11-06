@@ -1,0 +1,50 @@
+{
+  "id": "6a700f72ae73e94110f0cc7a",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_f3b82c56696a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_f3b82c56696a.json",
+  "historical_output_sha256": "212d12bfbbc569e4879f3737cd7a194e6db546ec572b86ca3273bdc6004edf52",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1166,
+  "messages_sha256": "b8518725a51db3f8c59b4966d6379afa8e8c963e81e79c078a5b5437ffea3be6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces support for Python type hints in UML generation, which is a useful feature. The code modification is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change does not address the issue of `None` as a default value being represented correctly in the UML output. It only adds support for type hints, but the specific problem with `None` is not resolved.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1268",
+      "completed_at_utc": "2026-11-06T04:07:40.858698+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces support for Python type hints in UML generation, which is a useful feature. The code modification is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address the issue of `None` as a default value being represented correctly in the UML output. It only adds support for type hints, but the specific problem with `None` is not resolved."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change introduces support for Python type hints in UML generation, which is a useful feature. The code modification is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address the issue of `None` as a default value being represented correctly in the UML output. It only adds support for type hints, but the specific problem with `None` is not resolved."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

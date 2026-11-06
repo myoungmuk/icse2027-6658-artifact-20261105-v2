@@ -1,0 +1,50 @@
+{
+  "id": "cd17ae43bd159d2d61911500",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_c8e2db61e345",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_c8e2db61e345.json",
+  "historical_output_sha256": "a10b203448239f498f7b34be613fed43e7b1c708c86120d6e71659588f1c768c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 796,
+  "messages_sha256": "5b254166c66c83a5e393b96cf63fa4350c41a1519360da25461849ccfac7886e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a call to `self.save_m2m()` in `UserCreationForm.save()`, which is necessary for saving ManyToMany fields. However, it lacks tests to ensure the fix works as expected.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the ManyToMany fields are saved correctly when using `UserCreationForm` with a custom User model.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 131,
+      "returned_model_request_id": "522",
+      "completed_at_utc": "2026-11-06T04:03:08.425410+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a call to `self.save_m2m()` in `UserCreationForm.save()`, which is necessary for saving ManyToMany fields. However, it lacks tests to ensure the fix works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the ManyToMany fields are saved correctly when using `UserCreationForm` with a custom User model."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds a call to `self.save_m2m()` in `UserCreationForm.save()`, which is necessary for saving ManyToMany fields. However, it lacks tests to ensure the fix works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the ManyToMany fields are saved correctly when using `UserCreationForm` with a custom User model."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

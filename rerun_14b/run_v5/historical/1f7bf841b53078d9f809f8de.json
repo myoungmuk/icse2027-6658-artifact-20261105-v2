@@ -1,0 +1,60 @@
+{
+  "id": "1f7bf841b53078d9f809f8de",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_729016b37630",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_729016b37630.json",
+  "historical_output_sha256": "bfae19f64f9745297ea3335659fcad65e2130083b456f93430fbe628254282e6",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1369,
+  "messages_sha256": "76f0725f088e7deb542d1d4ad8df4da429deba884fe6d355190f50df2978399a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed fix introduces a non-minimal change and may introduce performance regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change casts all elements to objects, which may introduce performance regressions and is not minimal.\"\n    },\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"Casting all elements to objects may introduce performance regressions, especially for large datasets.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 136,
+      "returned_model_request_id": "54",
+      "completed_at_utc": "2026-11-06T04:00:36.144770+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed fix introduces a non-minimal change and may introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change casts all elements to objects, which may introduce performance regressions and is not minimal."
+      },
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "Casting all elements to objects may introduce performance regressions, especially for large datasets."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed fix introduces a non-minimal change and may introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change casts all elements to objects, which may introduce performance regressions and is not minimal."
+      },
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "Casting all elements to objects may introduce performance regressions, especially for large datasets."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

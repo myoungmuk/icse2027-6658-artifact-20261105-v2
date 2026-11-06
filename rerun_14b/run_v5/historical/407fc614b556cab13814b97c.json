@@ -1,0 +1,50 @@
+{
+  "id": "407fc614b556cab13814b97c",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_b3b345edb511",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_b3b345edb511.json",
+  "historical_output_sha256": "28a05795236ae64a12cbc0e91825f89f6c4ec8fe92050f60d64774beb7661570",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1273,
+  "messages_sha256": "de758286f52360b0399eb37a6c9d2d728bdbb881281e5cdb3cff1fe0e4b82274",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly passes -X options to the child process, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change adds -X options to the child process, which may break existing behavior or compatibility with other Python implementations.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 102,
+      "returned_model_request_id": "1424",
+      "completed_at_utc": "2026-11-06T04:08:36.611862+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly passes -X options to the child process, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change adds -X options to the child process, which may break existing behavior or compatibility with other Python implementations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly passes -X options to the child process, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change adds -X options to the child process, which may break existing behavior or compatibility with other Python implementations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

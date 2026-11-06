@@ -1,0 +1,60 @@
+{
+  "id": "c09cf1872b0f33a2231bd011",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_afa550357525",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_afa550357525.json",
+  "historical_output_sha256": "5884e4c47f19c1a41f6cdb8b0b31629556728cf8ba18d62e47331856c00c5d52",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1198,
+  "messages_sha256": "4970a514afae764133d737c7600ca3129c0bfbeff42c8fe89edc4b128046d39c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a non-minimal change and may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces an unrelated edit to the `hist_kwargs` dictionary, which is not directly related to fixing the bug.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may introduce a behavioral regression risk by altering the `hist_kwargs` dictionary in a way that could affect other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 152,
+      "returned_model_request_id": "716",
+      "completed_at_utc": "2026-11-06T04:04:16.302729+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a non-minimal change and may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces an unrelated edit to the `hist_kwargs` dictionary, which is not directly related to fixing the bug."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may introduce a behavioral regression risk by altering the `hist_kwargs` dictionary in a way that could affect other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a non-minimal change and may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces an unrelated edit to the `hist_kwargs` dictionary, which is not directly related to fixing the bug."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may introduce a behavioral regression risk by altering the `hist_kwargs` dictionary in a way that could affect other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

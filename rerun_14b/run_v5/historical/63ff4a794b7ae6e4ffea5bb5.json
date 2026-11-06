@@ -1,0 +1,50 @@
+{
+  "id": "63ff4a794b7ae6e4ffea5bb5",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_0c4081fe3702",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_0c4081fe3702.json",
+  "historical_output_sha256": "c284b121670aacc93d621373b5963086a13cf6b0994637cf34310232724ce9a5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1874,
+  "messages_sha256": "bd707f10b0c0f57ccc216710db2d090a9d955670d4f5e210ad61089f892e36a2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR exposes the `warm_start` parameter in `IsolationForest` and updates the documentation. The tests already pass, and the change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR does not mention the `warm_start` parameter in the 'IsolationForest example' documentation entry.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "2178",
+      "completed_at_utc": "2026-11-06T04:14:46.804847+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR exposes the `warm_start` parameter in `IsolationForest` and updates the documentation. The tests already pass, and the change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "minor",
+        "description": "The PR does not mention the `warm_start` parameter in the 'IsolationForest example' documentation entry."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR exposes the `warm_start` parameter in `IsolationForest` and updates the documentation. The tests already pass, and the change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "minor",
+        "description": "The PR does not mention the `warm_start` parameter in the 'IsolationForest example' documentation entry."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

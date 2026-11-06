@@ -1,0 +1,60 @@
+{
+  "id": "92f57a8b168905a9022eca0e",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_9bd96a6318fe",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_9bd96a6318fe.json",
+  "historical_output_sha256": "132f7489c4273b139a0d66ebb69398f285695c0ff661d347a1673d54abd73fe2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2105,
+  "messages_sha256": "d698c2fd8ce345a29b73a5517f73bf913978f93c0bb2146a26f5cc20f0cbdd80",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with handling signed bytes from OPeNDAP via pydap, but it introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by adding additional logic for handling signed bytes, which may not be necessary or could introduce unintended side effects.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR lacks sufficient tests to verify the correctness of the new logic for handling signed bytes from OPeNDAP via pydap.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 170,
+      "returned_model_request_id": "445",
+      "completed_at_utc": "2026-11-06T04:02:50.460889+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with handling signed bytes from OPeNDAP via pydap, but it introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding additional logic for handling signed bytes, which may not be necessary or could introduce unintended side effects."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR lacks sufficient tests to verify the correctness of the new logic for handling signed bytes from OPeNDAP via pydap."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with handling signed bytes from OPeNDAP via pydap, but it introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding additional logic for handling signed bytes, which may not be necessary or could introduce unintended side effects."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR lacks sufficient tests to verify the correctness of the new logic for handling signed bytes from OPeNDAP via pydap."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

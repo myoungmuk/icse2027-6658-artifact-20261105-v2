@@ -1,0 +1,70 @@
+{
+  "id": "80e0a0fd684dc78f8431729b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_f3f295d28daa",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_f3f295d28daa.json",
+  "historical_output_sha256": "da8902af709ebd66bf387d3bd92edd550894c814b3bac664c3dd71b3c7452013",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 893,
+  "messages_sha256": "081aea693cd6aac55f284e92eb0ff35f4856ca3ab21711382adf23a8d38e3546",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a precision issue with the floatformat filter for Decimal numbers but may introduce regressions or non-minimal changes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change from repr(text) to str(text) may break existing behavior for other types or formats that rely on the previous representation.\"\n    },\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change is not minimal as it affects the conversion of all inputs to strings, potentially impacting performance or introducing new issues.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no additional tests provided to ensure the change does not introduce new regressions or handle other edge cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 205,
+      "returned_model_request_id": "559",
+      "completed_at_utc": "2026-11-06T04:03:24.723342+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a precision issue with the floatformat filter for Decimal numbers but may introduce regressions or non-minimal changes.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change from repr(text) to str(text) may break existing behavior for other types or formats that rely on the previous representation."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it affects the conversion of all inputs to strings, potentially impacting performance or introducing new issues."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure the change does not introduce new regressions or handle other edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a precision issue with the floatformat filter for Decimal numbers but may introduce regressions or non-minimal changes.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change from repr(text) to str(text) may break existing behavior for other types or formats that rely on the previous representation."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it affects the conversion of all inputs to strings, potentially impacting performance or introducing new issues."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure the change does not introduce new regressions or handle other edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "19a06a9dbd7463c127f44bf7",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ffab7c37579d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ffab7c37579d.json",
+  "historical_output_sha256": "28b6c6ae7974e24fd794f1b8cef7b17f90f3ef58827bf3da7bc03a73c4722368",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 857,
+  "messages_sha256": "9d134e75df2aa7b0a140bc5a7e7977b9a962014a40d90fbf7139b48093ab7ee7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a call to clear the lookup cache in _unregister_lookup, but it does not provide a test for the new functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include a test for the new functionality added to _unregister_lookup, which could lead to regressions in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "598",
+      "completed_at_utc": "2026-11-06T04:03:41.539598+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a call to clear the lookup cache in _unregister_lookup, but it does not provide a test for the new functionality.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include a test for the new functionality added to _unregister_lookup, which could lead to regressions in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds a call to clear the lookup cache in _unregister_lookup, but it does not provide a test for the new functionality.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include a test for the new functionality added to _unregister_lookup, which could lead to regressions in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

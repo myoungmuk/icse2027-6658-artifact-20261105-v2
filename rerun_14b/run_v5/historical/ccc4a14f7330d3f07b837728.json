@@ -1,0 +1,50 @@
+{
+  "id": "ccc4a14f7330d3f07b837728",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_b687b57b861d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_b687b57b861d.json",
+  "historical_output_sha256": "f26644c0c87015b8f28755e01f318d4470b4d7f8d6bf93f5cc6e44d6375a6440",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1218,
+  "messages_sha256": "df114d1fc9d736be2a17f62510eb132c5a0c059fdeb403c33342e96823ffb860",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly fixes the issue with the length of rank-0 arrays, but it introduces a non-minimal change by modifying an unrelated line.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the initialization of `_loop_size` to use a default value of 1, which is unrelated to the fix for the length of rank-0 arrays. This introduces unnecessary complexity and potential side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "1547",
+      "completed_at_utc": "2026-11-06T04:09:29.767654+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly fixes the issue with the length of rank-0 arrays, but it introduces a non-minimal change by modifying an unrelated line.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the initialization of `_loop_size` to use a default value of 1, which is unrelated to the fix for the length of rank-0 arrays. This introduces unnecessary complexity and potential side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly fixes the issue with the length of rank-0 arrays, but it introduces a non-minimal change by modifying an unrelated line.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the initialization of `_loop_size` to use a default value of 1, which is unrelated to the fix for the length of rank-0 arrays. This introduces unnecessary complexity and potential side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

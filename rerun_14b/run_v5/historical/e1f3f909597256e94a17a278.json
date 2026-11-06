@@ -1,0 +1,60 @@
+{
+  "id": "e1f3f909597256e94a17a278",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_45b80f84d9dc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_45b80f84d9dc.json",
+  "historical_output_sha256": "5ebf288d2ecbfb138d43c15d6e30952aff30ce56dc9228076a94f1154ea79721",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1121,
+  "messages_sha256": "33595f96ddaa8c7229f635885e9c5d3a24229723aaa067cee36b3b0060cfd01f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch reverts the hash calculation for Django model fields to be based solely on the creation counter, which should resolve the issue of hash immutability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch may introduce a behavioral regression risk by potentially breaking existing behavior that relies on the current hash calculation involving the model and field names.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a style inconsistency by removing the tuple parentheses around the hash arguments, which may not align with the project's coding style.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 169,
+      "returned_model_request_id": "1526",
+      "completed_at_utc": "2026-11-06T04:09:11.759732+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch reverts the hash calculation for Django model fields to be based solely on the creation counter, which should resolve the issue of hash immutability.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch may introduce a behavioral regression risk by potentially breaking existing behavior that relies on the current hash calculation involving the model and field names."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a style inconsistency by removing the tuple parentheses around the hash arguments, which may not align with the project's coding style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch reverts the hash calculation for Django model fields to be based solely on the creation counter, which should resolve the issue of hash immutability.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch may introduce a behavioral regression risk by potentially breaking existing behavior that relies on the current hash calculation involving the model and field names."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a style inconsistency by removing the tuple parentheses around the hash arguments, which may not align with the project's coding style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "b28dcc1735fa3bf72630f5c0",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_2a4dd2089aae",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_2a4dd2089aae.json",
+  "historical_output_sha256": "51eafa70f624ab4d2fdb9f52780e4b126f2f2341c000ffc595eaa9595c928452",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1673,
+  "messages_sha256": "3901306c07f54be1f1e522ed820ec460368189bce7e2a5263fc49c9a5dcabc7e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change appears to fix the issue by modifying the way module names are constructed, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the way module names are constructed by replacing '::' with '.'. This could potentially break existing behavior or introduce unexpected side effects in other parts of the codebase.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The change is minimal but could be improved for readability by adding a comment explaining the reasoning behind the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 163,
+      "returned_model_request_id": "1428",
+      "completed_at_utc": "2026-11-06T04:08:36.612606+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change appears to fix the issue by modifying the way module names are constructed, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the way module names are constructed by replacing '::' with '.'. This could potentially break existing behavior or introduce unexpected side effects in other parts of the codebase."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change is minimal but could be improved for readability by adding a comment explaining the reasoning behind the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change appears to fix the issue by modifying the way module names are constructed, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the way module names are constructed by replacing '::' with '.'. This could potentially break existing behavior or introduce unexpected side effects in other parts of the codebase."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change is minimal but could be improved for readability by adding a comment explaining the reasoning behind the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

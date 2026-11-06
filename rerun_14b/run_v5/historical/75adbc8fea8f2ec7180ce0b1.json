@@ -1,0 +1,50 @@
+{
+  "id": "75adbc8fea8f2ec7180ce0b1",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_d748b582b9ba",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_d748b582b9ba.json",
+  "historical_output_sha256": "e36b3c2cf01a072c79eb34028e57630c98d9134b45515a4cd5639440d60441d4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1855,
+  "messages_sha256": "38ee76f91c1851dc1639a316200b4c5ae4db3d61da84a4238b041eb700fdb54e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue by returning `np.nan` when no finite value is found, which should resolve the `StopIteration` exception. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a minor maintainability/readability defect by adding a default value to the `next` function, which could be slightly confusing.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "1151",
+      "completed_at_utc": "2026-11-06T04:06:46.636130+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue by returning `np.nan` when no finite value is found, which should resolve the `StopIteration` exception. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a minor maintainability/readability defect by adding a default value to the `next` function, which could be slightly confusing."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue by returning `np.nan` when no finite value is found, which should resolve the `StopIteration` exception. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a minor maintainability/readability defect by adding a default value to the `next` function, which could be slightly confusing."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

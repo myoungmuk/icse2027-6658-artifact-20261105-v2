@@ -1,0 +1,60 @@
+{
+  "id": "926c6a226bdc6eaa78b62f8e",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_4e7013073c89",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_4e7013073c89.json",
+  "historical_output_sha256": "07e7f854bc843a3d04628a8a99241cc7d39a19a833a99ffa40cd1beb11194aec",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1500,
+  "messages_sha256": "380020f16ab01f1330b64ede412ff83695f08176cb69e8de26d5133100d49f48",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a new attribute `refit_time_` to measure the time taken to refit the best model. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The import statement for `time` is added at the top of the file, which is a minor stylistic change.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"minor\",\n      \"description\": \"The documentation for `refit_time_` is added, but it could be more detailed to explain how this time is calculated and what it represents.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 171,
+      "returned_model_request_id": "1506",
+      "completed_at_utc": "2026-11-06T04:09:11.756056+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a new attribute `refit_time_` to measure the time taken to refit the best model. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statement for `time` is added at the top of the file, which is a minor stylistic change."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The documentation for `refit_time_` is added, but it could be more detailed to explain how this time is calculated and what it represents."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR adds a new attribute `refit_time_` to measure the time taken to refit the best model. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statement for `time` is added at the top of the file, which is a minor stylistic change."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The documentation for `refit_time_` is added, but it could be more detailed to explain how this time is calculated and what it represents."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

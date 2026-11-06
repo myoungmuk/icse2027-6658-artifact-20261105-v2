@@ -1,0 +1,50 @@
+{
+  "id": "e6a4b90ca8bafa690dfe0068",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_b62bf038dd88",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_b62bf038dd88.json",
+  "historical_output_sha256": "dad5d20114b9c35bfa7126c41efa9af18a0f43b9a7cffbd5973701150325b00d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1553,
+  "messages_sha256": "02908bcfe08ea5a59cdf619d01a450f4c7e8403a2b944588ff9e66313f334810",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a new hook `get_inlines` to `ModelAdmin` to allow dynamic inlines based on the request or model instance. The change is minimal and well-tested.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new method `get_inlines` is added, but it does not follow the naming convention of other similar methods in `ModelAdmin` (e.g., `get_fields`, `get_readonly_fields`). It might be more consistent to name it `get_inline_classes`.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 150,
+      "returned_model_request_id": "1886",
+      "completed_at_utc": "2026-11-06T04:12:04.307395+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a new hook `get_inlines` to `ModelAdmin` to allow dynamic inlines based on the request or model instance. The change is minimal and well-tested.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new method `get_inlines` is added, but it does not follow the naming convention of other similar methods in `ModelAdmin` (e.g., `get_fields`, `get_readonly_fields`). It might be more consistent to name it `get_inline_classes`."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR adds a new hook `get_inlines` to `ModelAdmin` to allow dynamic inlines based on the request or model instance. The change is minimal and well-tested.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new method `get_inlines` is added, but it does not follow the naming convention of other similar methods in `ModelAdmin` (e.g., `get_fields`, `get_readonly_fields`). It might be more consistent to name it `get_inline_classes`."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

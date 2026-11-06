@@ -1,0 +1,50 @@
+{
+  "id": "5baf210c4985b0a0b94ee78c",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_4ec1103df1d6",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_4ec1103df1d6.json",
+  "historical_output_sha256": "62fa8fa632b10a643e36afc3637177f8b2d8b1a36999ed915cf1833d10906a06",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1492,
+  "messages_sha256": "2a495ad52521eb49b572bff106232dbc3258a81511e338a55636af7522fe189d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of incorrect file paths in test failures when the working directory is changed in a fixture. However, it introduces a non-minimal change by importing additional modules and modifying the code in a way that may not be necessary or optimal.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by importing additional modules and modifying the code in a way that may not be necessary or optimal.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 135,
+      "returned_model_request_id": "27",
+      "completed_at_utc": "2026-11-06T04:00:16.939567+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of incorrect file paths in test failures when the working directory is changed in a fixture. However, it introduces a non-minimal change by importing additional modules and modifying the code in a way that may not be necessary or optimal.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by importing additional modules and modifying the code in a way that may not be necessary or optimal."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of incorrect file paths in test failures when the working directory is changed in a fixture. However, it introduces a non-minimal change by importing additional modules and modifying the code in a way that may not be necessary or optimal.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by importing additional modules and modifying the code in a way that may not be necessary or optimal."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

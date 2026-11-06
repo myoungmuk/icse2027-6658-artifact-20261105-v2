@@ -1,0 +1,60 @@
+{
+  "id": "01c5583748a7aaeed6feea5d",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_181f8a6b034a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_181f8a6b034a.json",
+  "historical_output_sha256": "ad3929c08c8677536603372604fa27c1da9b9bd6ce632d72f56571ebb3979a2b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2740,
+  "messages_sha256": "84aac5c83ddaacb088719959484367403a060abbd509689c96bffbca7d25b328",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the issue by allowing subclasses of BigAutoField and SmallAutoField in the _subclasses property. It introduces new test files to reproduce and verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new files (example/core/__init__.py, example/core/models.py, reproduce.py, test_edge_cases.py) which are not strictly necessary for fixing the issue.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch does not follow the project's convention for naming test files. It uses 'reproduce.py' and 'test_edge_cases.py' instead of the conventional 'test_*.py'.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 193,
+      "returned_model_request_id": "2055",
+      "completed_at_utc": "2026-11-06T04:13:37.411467+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the issue by allowing subclasses of BigAutoField and SmallAutoField in the _subclasses property. It introduces new test files to reproduce and verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The patch introduces new files (example/core/__init__.py, example/core/models.py, reproduce.py, test_edge_cases.py) which are not strictly necessary for fixing the issue."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch does not follow the project's convention for naming test files. It uses 'reproduce.py' and 'test_edge_cases.py' instead of the conventional 'test_*.py'."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch resolves the issue by allowing subclasses of BigAutoField and SmallAutoField in the _subclasses property. It introduces new test files to reproduce and verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The patch introduces new files (example/core/__init__.py, example/core/models.py, reproduce.py, test_edge_cases.py) which are not strictly necessary for fixing the issue."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch does not follow the project's convention for naming test files. It uses 'reproduce.py' and 'test_edge_cases.py' instead of the conventional 'test_*.py'."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

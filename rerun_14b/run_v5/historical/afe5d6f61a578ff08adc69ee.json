@@ -1,0 +1,70 @@
+{
+  "id": "afe5d6f61a578ff08adc69ee",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_1bd6849aed49",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_1bd6849aed49.json",
+  "historical_output_sha256": "3dad1d740d15c054ccd5b70c54a41393189eba9282add17d48b75b62aeb77b54",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1056,
+  "messages_sha256": "56cb6078d0fcae047880f7582f25b8f18ffd7d0241e8521aff1c03b6a55cfc98",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds an async response function to ASGIStaticFilesHandler, which should resolve the issue. However, there are concerns about maintainability and potential regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The added async function is not clearly separated from the synchronous one, which may reduce maintainability.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"There is a risk that the new async function may introduce unexpected behavior or regressions in existing use cases.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the functionality of the added async response function.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 200,
+      "returned_model_request_id": "121",
+      "completed_at_utc": "2026-11-06T04:00:52.709626+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds an async response function to ASGIStaticFilesHandler, which should resolve the issue. However, there are concerns about maintainability and potential regressions.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The added async function is not clearly separated from the synchronous one, which may reduce maintainability."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that the new async function may introduce unexpected behavior or regressions in existing use cases."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the functionality of the added async response function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR adds an async response function to ASGIStaticFilesHandler, which should resolve the issue. However, there are concerns about maintainability and potential regressions.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The added async function is not clearly separated from the synchronous one, which may reduce maintainability."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that the new async function may introduce unexpected behavior or regressions in existing use cases."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the functionality of the added async response function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

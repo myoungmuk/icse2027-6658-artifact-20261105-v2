@@ -1,0 +1,50 @@
+{
+  "id": "1340e50f20fa0cc4e8ccc513",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_cb9a6239bcaa",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_cb9a6239bcaa.json",
+  "historical_output_sha256": "e1870485d2e0c0c4d07e8dc9d70d4b3ead6ffe3be79b4eae5606160651476571",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1886,
+  "messages_sha256": "e18611dcd34928399738391e7288bb7baa5e34e86aec465cd26b9e2457118bdf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed change modifies `Quantity.__array_ufunc__` to return `NotImplemented` instead of raising `ValueError` when inputs are incompatible. This aligns with NumPy's documentation and could improve compatibility with duck types.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"major\",\n      \"description\": \"This change could introduce a compatibility break for users who rely on the current behavior of raising `ValueError` for incompatible inputs.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "1199",
+      "completed_at_utc": "2026-11-06T04:07:03.961133+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed change modifies `Quantity.__array_ufunc__` to return `NotImplemented` instead of raising `ValueError` when inputs are incompatible. This aligns with NumPy's documentation and could improve compatibility with duck types.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "This change could introduce a compatibility break for users who rely on the current behavior of raising `ValueError` for incompatible inputs."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed change modifies `Quantity.__array_ufunc__` to return `NotImplemented` instead of raising `ValueError` when inputs are incompatible. This aligns with NumPy's documentation and could improve compatibility with duck types.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "This change could introduce a compatibility break for users who rely on the current behavior of raising `ValueError` for incompatible inputs."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

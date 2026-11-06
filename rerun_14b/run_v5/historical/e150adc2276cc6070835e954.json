@@ -1,0 +1,50 @@
+{
+  "id": "e150adc2276cc6070835e954",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a8b047f93c03",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a8b047f93c03.json",
+  "historical_output_sha256": "703cb93bb1d6fa50a34fd4a377bf03ac1a69e6994c1e82c70cbe167ae053263c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 975,
+  "messages_sha256": "be055aeb0e66c1a56f09a5e2f67aad44b8c283e350da9e1f838967cf21c2b2fa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a non-minimal change by modifying the error message for 'invalid_choice' in both ModelChoiceField and ModelMultipleChoiceField, which may not be necessary.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the error message for 'invalid_choice' in both ModelChoiceField and ModelMultipleChoiceField, which may not be necessary and introduces a non-minimal change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "525",
+      "completed_at_utc": "2026-11-06T04:03:08.425978+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a non-minimal change by modifying the error message for 'invalid_choice' in both ModelChoiceField and ModelMultipleChoiceField, which may not be necessary.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the error message for 'invalid_choice' in both ModelChoiceField and ModelMultipleChoiceField, which may not be necessary and introduces a non-minimal change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a non-minimal change by modifying the error message for 'invalid_choice' in both ModelChoiceField and ModelMultipleChoiceField, which may not be necessary.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the error message for 'invalid_choice' in both ModelChoiceField and ModelMultipleChoiceField, which may not be necessary and introduces a non-minimal change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

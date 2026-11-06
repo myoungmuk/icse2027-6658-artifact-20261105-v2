@@ -1,0 +1,29 @@
+{
+  "code": "befc5f701a840b02ae76",
+  "instance_id": "sympy__sympy-16474",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "befc5f701a840b02ae76_strict",
+  "arm": "strict",
+  "input_tokens": 1963,
+  "messages_sha256": "57ee2ae97e32e9cdfdfca6dd54e2c3a555ea4a1d57b80d33c3b5d02475bbf9a8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new helper function `_helper_print_standard_power` without corresponding changes in the pretty printer or MathML printer, which are part of the issue. Additionally, the patch modifies the precedence of `Transpose` and `Adjoint` in `precedence_traditional`, which may have unintended side effects on other parts of the code. The patch is incomplete and does not meet the functional completeness required.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 103,
+      "returned_model_request_id": "2520",
+      "completed_at_utc": "2026-11-06T04:16:59.780155+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new helper function `_helper_print_standard_power` without corresponding changes in the pretty printer or MathML printer, which are part of the issue. Additionally, the patch modifies the precedence of `Transpose` and `Adjoint` in `precedence_traditional`, which may have unintended side effects on other parts of the code. The patch is incomplete and does not meet the functional completeness required."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

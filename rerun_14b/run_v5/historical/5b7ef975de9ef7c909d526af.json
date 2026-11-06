@@ -1,0 +1,50 @@
+{
+  "id": "5b7ef975de9ef7c909d526af",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_9eca581557a6",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_9eca581557a6.json",
+  "historical_output_sha256": "9e62cf91f95a91d5cf2d64117c94dbdd2cca39843a8a08a4b4d05c66fb7b5cba",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1011,
+  "messages_sha256": "f053b7570e6d10f8d8b16d8918593105cc2997a19fe9a3455431237bfc2c9b8e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch attempts to ensure that chunks are strings after decoding, but it may not address the root cause of the issue and could introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a redundant decoding step that may not be necessary and could lead to incorrect behavior if the chunks are already strings.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "371",
+      "completed_at_utc": "2026-11-06T04:02:17.674384+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch attempts to ensure that chunks are strings after decoding, but it may not address the root cause of the issue and could introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch introduces a redundant decoding step that may not be necessary and could lead to incorrect behavior if the chunks are already strings."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch attempts to ensure that chunks are strings after decoding, but it may not address the root cause of the issue and could introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch introduces a redundant decoding step that may not be necessary and could lead to incorrect behavior if the chunks are already strings."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

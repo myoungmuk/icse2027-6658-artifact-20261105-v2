@@ -1,0 +1,29 @@
+{
+  "code": "7a5566db3de10e38d731",
+  "instance_id": "scikit-learn__scikit-learn-12908",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "7a5566db3de10e38d731_strict",
+  "arm": "strict",
+  "input_tokens": 1887,
+  "messages_sha256": "4d7852bda67daea32c976b79d652d80bbe2d98cd9c35260b88bc3ba07ca7e04b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new feature `drop_first` to `OneHotEncoder`, but it lacks comprehensive test coverage and documentation. Additionally, the implementation may introduce unexpected behavior, such as compatibility issues with `handle_missing='ignore'`. A more robust and thoroughly tested implementation is needed before merging.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 79,
+      "returned_model_request_id": "2442",
+      "completed_at_utc": "2026-11-06T04:16:23.787505+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new feature `drop_first` to `OneHotEncoder`, but it lacks comprehensive test coverage and documentation. Additionally, the implementation may introduce unexpected behavior, such as compatibility issues with `handle_missing='ignore'`. A more robust and thoroughly tested implementation is needed before merging."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

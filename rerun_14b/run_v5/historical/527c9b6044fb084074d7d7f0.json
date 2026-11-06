@@ -1,0 +1,60 @@
+{
+  "id": "527c9b6044fb084074d7d7f0",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_47b9febb768a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_47b9febb768a.json",
+  "historical_output_sha256": "1da3449156df34a678805501331037535fdbf23e8ef650cc79838694d4836435",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1130,
+  "messages_sha256": "b4267c747a4ace4dd99181d6c09608803d77e4594ce2831a6d50a7aeea40b60c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of adding a nullable OneToOneField on SQLite, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the behavior of adding fields to models by remaking the table for more cases than necessary, which could lead to performance regressions or other unforeseen issues.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any new tests to verify that the change does not introduce regressions or other issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 162,
+      "returned_model_request_id": "553",
+      "completed_at_utc": "2026-11-06T04:03:24.721790+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of adding a nullable OneToOneField on SQLite, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the behavior of adding fields to models by remaking the table for more cases than necessary, which could lead to performance regressions or other unforeseen issues."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify that the change does not introduce regressions or other issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of adding a nullable OneToOneField on SQLite, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the behavior of adding fields to models by remaking the table for more cases than necessary, which could lead to performance regressions or other unforeseen issues."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify that the change does not introduce regressions or other issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

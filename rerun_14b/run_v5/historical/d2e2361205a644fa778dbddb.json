@@ -1,0 +1,60 @@
+{
+  "id": "d2e2361205a644fa778dbddb",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_225b82011363",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_225b82011363.json",
+  "historical_output_sha256": "c0e91019115619cd389a6fb41347dd928145ab26aeeb017cc6d8f1b036ab7c83",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 926,
+  "messages_sha256": "f3456e407fd616531cdb4fee1d5c3eda62340056ee6dbcd0948e25dcdee53f35",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR sets a default file upload permission, but it lacks documentation updates and test coverage for the change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update the documentation to reflect the new default file upload permission.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the new default file upload permission is applied correctly.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "20",
+      "completed_at_utc": "2026-11-06T04:00:16.938247+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR sets a default file upload permission, but it lacks documentation updates and test coverage for the change.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the new default file upload permission."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the new default file upload permission is applied correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR sets a default file upload permission, but it lacks documentation updates and test coverage for the change.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the new default file upload permission."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the new default file upload permission is applied correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "5b63afe093253b84fc92",
+  "instance_id": "matplotlib__matplotlib-26089",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "5b63afe093253b84fc92_strict",
+  "arm": "strict",
+  "input_tokens": 3351,
+  "messages_sha256": "28feae624a223aa70814df8e5b6e134c8ff2ec428754a5adaa0fc8cbf9e6c52b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new public method `set_loc` in the `Legend` class, but it duplicates the existing logic from the `__init__` method. This leads to code duplication and potential maintenance issues. Additionally, the patch does not address the issue of updating the legend location after it has been created, as the new method is only called during initialization.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 94,
+      "returned_model_request_id": "2584",
+      "completed_at_utc": "2026-11-06T04:17:15.376975+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new public method `set_loc` in the `Legend` class, but it duplicates the existing logic from the `__init__` method. This leads to code duplication and potential maintenance issues. Additionally, the patch does not address the issue of updating the legend location after it has been created, as the new method is only called during initialization."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

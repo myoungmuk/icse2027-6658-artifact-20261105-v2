@@ -1,0 +1,50 @@
+{
+  "id": "b08a22509a5adebb68b52f67",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_f8b5cbf62a75",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_f8b5cbf62a75.json",
+  "historical_output_sha256": "baf6ca166b05a774f046daed022b70de48860249f314c7b9ebe9836911e9efd9",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 940,
+  "messages_sha256": "d1fc31b3c4d759306288e240e2ee44098093f96ac73cb0c9b2513ce3b812c40d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of incorrect URL translation when optional named groups are missing in the URL pattern. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the condition from checking for symmetric difference to a simple difference, which might inadvertently allow some incorrect URL translations. This could lead to unexpected behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "1400",
+      "completed_at_utc": "2026-11-06T04:08:36.607178+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of incorrect URL translation when optional named groups are missing in the URL pattern. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch changes the condition from checking for symmetric difference to a simple difference, which might inadvertently allow some incorrect URL translations. This could lead to unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of incorrect URL translation when optional named groups are missing in the URL pattern. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch changes the condition from checking for symmetric difference to a simple difference, which might inadvertently allow some incorrect URL translations. This could lead to unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "06f27964a37ba29378a71c0d",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_d368e2d5b15e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_d368e2d5b15e.json",
+  "historical_output_sha256": "6da4fa7a07950a744e6d45b05668ec44a398d89b8fa90a34c689583c3d9074fe",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1174,
+  "messages_sha256": "ba0011164399913fec6ebc301a87c881f39efd25f0d71f3e947891806ec5357e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a functional issue by ensuring that lists and tuples in settings are also cleansed. However, it lacks tests to verify the change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the new functionality works as expected.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "12",
+      "completed_at_utc": "2026-11-06T04:00:16.936715+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a functional issue by ensuring that lists and tuples in settings are also cleansed. However, it lacks tests to verify the change.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the new functionality works as expected."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a functional issue by ensuring that lists and tuples in settings are also cleansed. However, it lacks tests to verify the change.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the new functionality works as expected."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

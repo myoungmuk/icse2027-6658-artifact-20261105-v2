@@ -1,0 +1,70 @@
+{
+  "id": "2152378c6531bafc34ff65b5",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_d5f3fe057cd7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_d5f3fe057cd7.json",
+  "historical_output_sha256": "d868c9f3f97627d0ce84a04e807e8c23476d59668a6ccec9d26ec71d3e2cea47",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2373,
+  "messages_sha256": "31ae5a40c62563f1ea491d3bfd6d47c7703d459e78595d23aa5d86e502061fd9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with ColumnTransformer and pandas output, but it may introduce unintended behavior or regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior by filtering out transformers with no features, which could lead to unexpected results in other scenarios.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include additional tests to verify the fix and ensure it does not introduce new issues.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code change could be made more readable by adding a comment explaining why the filter is necessary.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 194,
+      "returned_model_request_id": "88",
+      "completed_at_utc": "2026-11-06T04:00:36.151577+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with ColumnTransformer and pandas output, but it may introduce unintended behavior or regressions.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior by filtering out transformers with no features, which could lead to unexpected results in other scenarios."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to verify the fix and ensure it does not introduce new issues."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code change could be made more readable by adding a comment explaining why the filter is necessary."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with ColumnTransformer and pandas output, but it may introduce unintended behavior or regressions.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior by filtering out transformers with no features, which could lead to unexpected results in other scenarios."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to verify the fix and ensure it does not introduce new issues."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code change could be made more readable by adding a comment explaining why the filter is necessary."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "78d312ed22a49f36d2ae8866",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_784e1e13226e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_784e1e13226e.json",
+  "historical_output_sha256": "0707d1ef579b6c97a81f9d8bf7d80bb82a35aa83b233998f49d8271cf4add2db",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1983,
+  "messages_sha256": "f70245616d2f2abfe74b3b43ade768af957c6658b1a3096b019e1c6a3f721508",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the `store_cv_values` parameter to `RidgeClassifierCV` and updates the documentation. The change is minimal and aligns with the expected behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not handle the case where `cv` is not `None`. The `cv_values_` attribute should only be stored when `cv=None`, but this is not enforced in the code.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The parameter `store_cv_values` is added with a default value of `False`, but the documentation does not mention the default value.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 185,
+      "returned_model_request_id": "1807",
+      "completed_at_utc": "2026-11-06T04:11:18.905957+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the `store_cv_values` parameter to `RidgeClassifierCV` and updates the documentation. The change is minimal and aligns with the expected behavior.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not handle the case where `cv` is not `None`. The `cv_values_` attribute should only be stored when `cv=None`, but this is not enforced in the code."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The parameter `store_cv_values` is added with a default value of `False`, but the documentation does not mention the default value."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds the `store_cv_values` parameter to `RidgeClassifierCV` and updates the documentation. The change is minimal and aligns with the expected behavior.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not handle the case where `cv` is not `None`. The `cv_values_` attribute should only be stored when `cv=None`, but this is not enforced in the code."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The parameter `store_cv_values` is added with a default value of `False`, but the documentation does not mention the default value."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "f14ab8a11105873a32c34e4f",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_dd19322920ab",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_dd19322920ab.json",
+  "historical_output_sha256": "5d5e4fcf94886db36d84579fb981c81e3c0b3885bd507cb32ab097adb4a8004d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1667,
+  "messages_sha256": "e2b3b38a484dfbe9c35d1f6c480f403b1a48130f419456d86fa22d6208dc71ee",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of handling HTML escaped strings and trailing punctuation correctly in the `urlize` function. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding comments to explain the logic, especially around the handling of HTML entities.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "1997",
+      "completed_at_utc": "2026-11-06T04:13:06.091433+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of handling HTML escaped strings and trailing punctuation correctly in the `urlize` function. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the logic, especially around the handling of HTML entities."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of handling HTML escaped strings and trailing punctuation correctly in the `urlize` function. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the logic, especially around the handling of HTML entities."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

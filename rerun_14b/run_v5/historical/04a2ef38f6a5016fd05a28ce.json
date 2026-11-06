@@ -1,0 +1,50 @@
+{
+  "id": "04a2ef38f6a5016fd05a28ce",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_28434fabef18",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_28434fabef18.json",
+  "historical_output_sha256": "6e57c3a7c00b12e60420e6cd01044a798309e0f8cd3497db2ffc2f46df50f435",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1679,
+  "messages_sha256": "828f88ce539b1d0a8146c5b7f59e01e0ec478984c63c94dc54dd40e17cc919ac",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch removes the unnecessary post_init signal handler for ImageField when width_field and height_field are not set, which should improve performance. The new test script helps measure the impact.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test script is not integrated into the existing test suite, which could lead to future maintenance issues.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "1936",
+      "completed_at_utc": "2026-11-06T04:12:42.348412+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch removes the unnecessary post_init signal handler for ImageField when width_field and height_field are not set, which should improve performance. The new test script helps measure the impact.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test script is not integrated into the existing test suite, which could lead to future maintenance issues."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch removes the unnecessary post_init signal handler for ImageField when width_field and height_field are not set, which should improve performance. The new test script helps measure the impact.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test script is not integrated into the existing test suite, which could lead to future maintenance issues."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

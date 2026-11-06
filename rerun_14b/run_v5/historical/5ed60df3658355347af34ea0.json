@@ -1,0 +1,60 @@
+{
+  "id": "5ed60df3658355347af34ea0",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_a7dac700314d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_a7dac700314d.json",
+  "historical_output_sha256": "31837b868d564e539036d0ac204357ef07c75e319b4093eb7e812c34cb4fd2ad",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2110,
+  "messages_sha256": "03e0426abf696f9a85e76aa058a41f9b5f900ec911defe5e1b86edd036fcf748",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with null bytes in file paths but lacks comprehensive testing and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify the fix for the 'ValueError: embedded null byte' issue.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR does not include any documentation updates to explain the change or the potential impact.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 143,
+      "returned_model_request_id": "64",
+      "completed_at_utc": "2026-11-06T04:00:36.146998+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with null bytes in file paths but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify the fix for the 'ValueError: embedded null byte' issue."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not include any documentation updates to explain the change or the potential impact."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with null bytes in file paths but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify the fix for the 'ValueError: embedded null byte' issue."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not include any documentation updates to explain the change or the potential impact."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

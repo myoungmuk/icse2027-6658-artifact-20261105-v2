@@ -1,0 +1,29 @@
+{
+  "code": "a72ace1d4465ceb73622",
+  "instance_id": "pylint-dev__pylint-6820",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "a72ace1d4465ceb73622_strict",
+  "arm": "strict",
+  "input_tokens": 789,
+  "messages_sha256": "f6867356db3a39517d11c7a0f0f49b60750e9ee0eb42772e229a664cf98f14db",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new function `_handle_incorrect_plugin_option` that prints a message and then calls `_add_plugins`. This approach is fragile and does not address the root cause of the issue. The patch should instead correct the parsing logic to handle both `--load-plugin` and `--load-plugins` correctly.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 84,
+      "returned_model_request_id": "2374",
+      "completed_at_utc": "2026-11-06T04:16:06.970085+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new function `_handle_incorrect_plugin_option` that prints a message and then calls `_add_plugins`. This approach is fragile and does not address the root cause of the issue. The patch should instead correct the parsing logic to handle both `--load-plugin` and `--load-plugins` correctly."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

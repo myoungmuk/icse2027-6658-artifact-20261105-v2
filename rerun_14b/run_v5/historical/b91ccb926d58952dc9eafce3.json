@@ -1,0 +1,50 @@
+{
+  "id": "b91ccb926d58952dc9eafce3",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_ed75bd4309a4",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_ed75bd4309a4.json",
+  "historical_output_sha256": "34c7adfed336c24e43df64e8eac2237506485dffb21c68de05a7c23ecd8b559a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1959,
+  "messages_sha256": "4cf230a0717edfff69e07883ac5d13100b751627e19219a5fe885b0a8586ef5e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue with `subs` on `ConditionSet` with `ImageSet` but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch includes unrelated changes to the docstring and formatting, which are not directly related to fixing the issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "1574",
+      "completed_at_utc": "2026-11-06T04:09:29.772875+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue with `subs` on `ConditionSet` with `ImageSet` but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch includes unrelated changes to the docstring and formatting, which are not directly related to fixing the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue with `subs` on `ConditionSet` with `ImageSet` but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch includes unrelated changes to the docstring and formatting, which are not directly related to fixing the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

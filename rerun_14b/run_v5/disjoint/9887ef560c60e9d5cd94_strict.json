@@ -1,0 +1,29 @@
+{
+  "code": "9887ef560c60e9d5cd94",
+  "instance_id": "django__django-15995",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "9887ef560c60e9d5cd94_strict",
+  "arm": "strict",
+  "input_tokens": 729,
+  "messages_sha256": "9f6bb8ab60ce73703c36905be99d9816a2b00594f06efaab65f3cc4ff4147e8e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch comments out the primary key check without providing an alternative solution. This could lead to potential issues where the related manager is used before the instance is saved to the database. Additionally, the patch does not include any tests to verify the behavior change, which is crucial for maintaining the integrity of the codebase.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 83,
+      "returned_model_request_id": "2542",
+      "completed_at_utc": "2026-11-06T04:16:59.785059+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch comments out the primary key check without providing an alternative solution. This could lead to potential issues where the related manager is used before the instance is saved to the database. Additionally, the patch does not include any tests to verify the behavior change, which is crucial for maintaining the integrity of the codebase."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

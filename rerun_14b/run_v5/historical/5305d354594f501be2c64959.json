@@ -1,0 +1,60 @@
+{
+  "id": "5305d354594f501be2c64959",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_d9412de4022c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_d9412de4022c.json",
+  "historical_output_sha256": "813a3468c9c6ef1fc6e31c4f8678e642118daf9edcfc02c39d922db1ce4be4e5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1115,
+  "messages_sha256": "e9e5b3367a801cad5ed9f2aacac8c90bcaee41fa8d3147c8370383ac41815902",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring consistent decoding behavior between `iter_content` and `text` attributes. It introduces a more robust error handling mechanism for encoding issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new variable `encoding` which is redundant since `r.encoding` is already used. This could be simplified for better readability.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch could benefit from a minor refactoring to reduce code duplication and improve readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 162,
+      "returned_model_request_id": "255",
+      "completed_at_utc": "2026-11-06T04:01:44.411485+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring consistent decoding behavior between `iter_content` and `text` attributes. It introduces a more robust error handling mechanism for encoding issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new variable `encoding` which is redundant since `r.encoding` is already used. This could be simplified for better readability."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could benefit from a minor refactoring to reduce code duplication and improve readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring consistent decoding behavior between `iter_content` and `text` attributes. It introduces a more robust error handling mechanism for encoding issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new variable `encoding` which is redundant since `r.encoding` is already used. This could be simplified for better readability."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could benefit from a minor refactoring to reduce code duplication and improve readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

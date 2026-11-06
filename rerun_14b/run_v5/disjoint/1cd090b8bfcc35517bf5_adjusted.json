@@ -1,0 +1,29 @@
+{
+  "code": "1cd090b8bfcc35517bf5",
+  "instance_id": "django__django-13371",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "1cd090b8bfcc35517bf5_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1109,
+  "messages_sha256": "56f4781102cd5ca7bda5f181ea68587a5be948ebcda4be0594b97e6926621e03",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue of making django.db.models.query.Row pickleable by moving the namedtuple creation logic to a separate function and adding a custom __reduce__ method. This change should resolve the pickling error without introducing significant issues.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 66,
+      "returned_model_request_id": "2425",
+      "completed_at_utc": "2026-11-06T04:16:23.784596+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue of making django.db.models.query.Row pickleable by moving the namedtuple creation logic to a separate function and adding a custom __reduce__ method. This change should resolve the pickling error without introducing significant issues."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

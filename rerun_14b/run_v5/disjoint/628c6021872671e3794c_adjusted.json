@@ -1,0 +1,29 @@
+{
+  "code": "628c6021872671e3794c",
+  "instance_id": "django__django-13667",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "628c6021872671e3794c_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1347,
+  "messages_sha256": "80288e5a119c9368ddf280969b928d469472c54efdb72850c941a647cc6facd1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch optimizes the SQL generated for QuerySet.union().exists() by reducing the SELECT clause and limiting the number of results to 1 where possible. This should improve performance for some query planners. The changes are well-contained and do not introduce apparent regressions or compatibility issues.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 76,
+      "returned_model_request_id": "2393",
+      "completed_at_utc": "2026-11-06T04:16:06.973519+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch optimizes the SQL generated for QuerySet.union().exists() by reducing the SELECT clause and limiting the number of results to 1 where possible. This should improve performance for some query planners. The changes are well-contained and do not introduce apparent regressions or compatibility issues."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

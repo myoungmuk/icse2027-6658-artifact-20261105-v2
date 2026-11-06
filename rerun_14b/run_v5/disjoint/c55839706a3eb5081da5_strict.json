@@ -1,0 +1,29 @@
+{
+  "code": "c55839706a3eb5081da5",
+  "instance_id": "django__django-13667",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "c55839706a3eb5081da5_strict",
+  "arm": "strict",
+  "input_tokens": 862,
+  "messages_sha256": "9b70deb4135183bcdf0bd0394a36968570eccd3d39557221be3dea94c8854d55",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces an optimization that may not be universally applicable or correct. It assumes that clearing the select clause and ordering is safe for all queries, which may not be true. Additionally, the patch does not handle the case where the queries are distinct, which could lead to incorrect results. The patch also lacks tests to verify its correctness and potential edge cases.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 92,
+      "returned_model_request_id": "2394",
+      "completed_at_utc": "2026-11-06T04:16:06.973689+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces an optimization that may not be universally applicable or correct. It assumes that clearing the select clause and ordering is safe for all queries, which may not be true. Additionally, the patch does not handle the case where the queries are distinct, which could lead to incorrect results. The patch also lacks tests to verify its correctness and potential edge cases."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

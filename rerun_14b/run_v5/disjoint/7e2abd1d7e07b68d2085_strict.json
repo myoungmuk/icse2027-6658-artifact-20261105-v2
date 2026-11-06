@@ -1,0 +1,29 @@
+{
+  "code": "7e2abd1d7e07b68d2085",
+  "instance_id": "scikit-learn__scikit-learn-12486",
+  "split": "development",
+  "kind": "developer",
+  "id": "7e2abd1d7e07b68d2085_strict",
+  "arm": "strict",
+  "input_tokens": 1303,
+  "messages_sha256": "7038ec035ee9f947bb04d293de13f1f4690dc53438360408e190ad2ae407e7ee",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a check for the number of classes in the predict_proba output, but it does not address the root cause of the issue. The GMM model does not support predict_proba for binary classification, and the patch does not modify the GMM model to handle this. Additionally, the patch introduces redundant code by duplicating the check in two different places.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 93,
+      "returned_model_request_id": "2344",
+      "completed_at_utc": "2026-11-06T04:15:51.279931+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a check for the number of classes in the predict_proba output, but it does not address the root cause of the issue. The GMM model does not support predict_proba for binary classification, and the patch does not modify the GMM model to handle this. Additionally, the patch introduces redundant code by duplicating the check in two different places."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

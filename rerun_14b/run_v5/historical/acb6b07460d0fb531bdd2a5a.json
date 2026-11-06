@@ -1,0 +1,50 @@
+{
+  "id": "acb6b07460d0fb531bdd2a5a",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_4b62df622965",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_4b62df622965.json",
+  "historical_output_sha256": "db2cf5e836b938afad18802396e3a8c71638d65c2df0ae00b818d7d07c68da68",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2157,
+  "messages_sha256": "b6dfe6f0f63103d0acdcb4779409c06c3143d8a5e1fa1dbdbd8325781f22f4b7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the issue by modifying the `_safe_first_finite` function to return `np.nan` when no finite values are found. The change is minimal and does not introduce any apparent regressions or compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The import statements in `cbook/__init__.py` are duplicated, which is a minor style issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "1905",
+      "completed_at_utc": "2026-11-06T04:12:04.311275+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the issue by modifying the `_safe_first_finite` function to return `np.nan` when no finite values are found. The change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statements in `cbook/__init__.py` are duplicated, which is a minor style issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR fixes the issue by modifying the `_safe_first_finite` function to return `np.nan` when no finite values are found. The change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statements in `cbook/__init__.py` are duplicated, which is a minor style issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

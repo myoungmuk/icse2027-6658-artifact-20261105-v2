@@ -1,0 +1,50 @@
+{
+  "id": "099915f2e1ae2fae0460ffb9",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_91a6ea17df6a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_91a6ea17df6a.json",
+  "historical_output_sha256": "8cfb2c8cf8c716334a318cb4f9a83f2b1c51757615929611e64c28de2f805f26",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1280,
+  "messages_sha256": "2dd64e46aa4c034a2a9c0a44da5c6fcf50e00ff57f4e00d986c13d82a6700922",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a functional issue but introduces a potential maintainability concern.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a conditional check for `tzinfo` which may complicate future maintenance and readability.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 92,
+      "returned_model_request_id": "492",
+      "completed_at_utc": "2026-11-06T04:03:08.419715+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a functional issue but introduces a potential maintainability concern.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The change introduces a conditional check for `tzinfo` which may complicate future maintenance and readability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a functional issue but introduces a potential maintainability concern.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The change introduces a conditional check for `tzinfo` which may complicate future maintenance and readability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

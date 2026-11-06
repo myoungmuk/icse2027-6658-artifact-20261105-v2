@@ -1,0 +1,50 @@
+{
+  "id": "f656168eab5d17bd96114e81",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_b38def3df66d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_b38def3df66d.json",
+  "historical_output_sha256": "af13cf8c7b3cf87fedce5f77dc0af1d1fd9cd3f206842f4d9172218eb25610e1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 970,
+  "messages_sha256": "b81c5456d976cddc0abb78c74787c247893e055d8c9011d3adeeafbadbb18e35",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly resolves the issue by preserving the input type, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may break existing behavior for other types of iterables that were previously coerced to tuples.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 99,
+      "returned_model_request_id": "2192",
+      "completed_at_utc": "2026-11-06T04:14:46.807577+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly resolves the issue by preserving the input type, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing behavior for other types of iterables that were previously coerced to tuples."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly resolves the issue by preserving the input type, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing behavior for other types of iterables that were previously coerced to tuples."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

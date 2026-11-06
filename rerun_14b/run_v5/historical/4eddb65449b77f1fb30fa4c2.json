@@ -1,0 +1,70 @@
+{
+  "id": "4eddb65449b77f1fb30fa4c2",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_73b8d9d7b4f7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_73b8d9d7b4f7.json",
+  "historical_output_sha256": "af6c1d1fe070c437270c6716a5b77ed1c4e0b081102fe28190da7b4213d3f266",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1464,
+  "messages_sha256": "af5920cf07ad90b5ebbaad278fc0a9bebe06e8c354f5cf673d215c190caa074d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the `fill_value` parameter to `IterativeImputer`, but it lacks proper validation and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"blocking\",\n      \"description\": \"The `fill_value` parameter is added without validation logic, which could lead to unexpected behavior or errors.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update the documentation to reflect the new `fill_value` parameter.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests for the new `fill_value` parameter.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 187,
+      "returned_model_request_id": "468",
+      "completed_at_utc": "2026-11-06T04:02:50.465522+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the `fill_value` parameter to `IterativeImputer`, but it lacks proper validation and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "blocking",
+        "description": "The `fill_value` parameter is added without validation logic, which could lead to unexpected behavior or errors."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the new `fill_value` parameter."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests for the new `fill_value` parameter."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds the `fill_value` parameter to `IterativeImputer`, but it lacks proper validation and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "blocking",
+        "description": "The `fill_value` parameter is added without validation logic, which could lead to unexpected behavior or errors."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the new `fill_value` parameter."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests for the new `fill_value` parameter."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

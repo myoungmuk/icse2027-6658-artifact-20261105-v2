@@ -1,0 +1,50 @@
+{
+  "id": "690cb0c782fe13f9d78b3e6d",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_7c51d39f7d43",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_7c51d39f7d43.json",
+  "historical_output_sha256": "e756dbc8042631540a745314316b0702193bb95e5208055207b9a3854347219f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2098,
+  "messages_sha256": "c5387b1d05f4119278525ef8686d6f7bf895adebcca26f3ec7ecbf9fa03790b1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of not unsetting model options when optimizing CreateModel and AlterModelOptions. The changes are minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding comments to explain the logic of removing and updating options.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "2078",
+      "completed_at_utc": "2026-11-06T04:14:03.532614+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of not unsetting model options when optimizing CreateModel and AlterModelOptions. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the logic of removing and updating options."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of not unsetting model options when optimizing CreateModel and AlterModelOptions. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the logic of removing and updating options."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

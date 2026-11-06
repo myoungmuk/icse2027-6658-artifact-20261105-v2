@@ -1,0 +1,29 @@
+{
+  "code": "e86aebeaf83474f15fae",
+  "instance_id": "sympy__sympy-23021",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "e86aebeaf83474f15fae_strict",
+  "arm": "strict",
+  "input_tokens": 2165,
+  "messages_sha256": "ad8d189e49e7178b5cce630d74e0f26e7abe81463283a03058f74b9775e37f6a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch adds support for Min/Max functions in decompogen, but it does not handle the case where the decomposition of the arguments is different. This can lead to incorrect results. Additionally, the patch does not include any tests to verify the correctness of the changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 75,
+      "returned_model_request_id": "2680",
+      "completed_at_utc": "2026-11-06T04:17:49.118498+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch adds support for Min/Max functions in decompogen, but it does not handle the case where the decomposition of the arguments is different. This can lead to incorrect results. Additionally, the patch does not include any tests to verify the correctness of the changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

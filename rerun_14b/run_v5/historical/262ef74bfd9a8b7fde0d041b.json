@@ -1,0 +1,50 @@
+{
+  "id": "262ef74bfd9a8b7fde0d041b",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_b02ced2333f2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_b02ced2333f2.json",
+  "historical_output_sha256": "ad6d9e61cdd35aee16405739443eace04b94a296454851551fc741f6e126e8ba",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 918,
+  "messages_sha256": "c8491b619668409e0e38d0baef31a8d415aad78139236cf52d46cef26e7438b7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch adds a hash method to ModelChoiceIteratorValue, which should resolve the unhashable type error. However, it lacks tests to ensure the change doesn't introduce regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify that the change does not break existing behavior or introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "147",
+      "completed_at_utc": "2026-11-06T04:01:09.162212+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch adds a hash method to ModelChoiceIteratorValue, which should resolve the unhashable type error. However, it lacks tests to ensure the change doesn't introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the change does not break existing behavior or introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch adds a hash method to ModelChoiceIteratorValue, which should resolve the unhashable type error. However, it lacks tests to ensure the change doesn't introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the change does not break existing behavior or introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

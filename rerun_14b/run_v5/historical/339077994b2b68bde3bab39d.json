@@ -1,0 +1,60 @@
+{
+  "id": "339077994b2b68bde3bab39d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_27ca6b292622",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_27ca6b292622.json",
+  "historical_output_sha256": "3d65a40a0cd6e8a2edc9977f4f508e477e0265328e17628831dfcf4b5b520e99",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2287,
+  "messages_sha256": "89c217f80da7483c773405b5d9d5102ff9d4c0f02b640549df40388ee1d7487f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a functional issue but lacks comprehensive testing and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify the fix for the issue.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update the documentation to reflect the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "462",
+      "completed_at_utc": "2026-11-06T04:02:50.464390+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a functional issue but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the fix for the issue."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a functional issue but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the fix for the issue."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

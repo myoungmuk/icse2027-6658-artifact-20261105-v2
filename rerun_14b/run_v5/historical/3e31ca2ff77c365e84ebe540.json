@@ -1,0 +1,60 @@
+{
+  "id": "3e31ca2ff77c365e84ebe540",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_414fbf750b2b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_414fbf750b2b.json",
+  "historical_output_sha256": "0b231c083e7d22ef182c0b5b802695ea56629c750b80549157f768ada0e8a8ee",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 938,
+  "messages_sha256": "d445a70053e12b30f8a2c5c82e0d38c6a404e09b8e35b5e6e906ad41bfbe6c3c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a conditional check that may not be necessary and could lead to regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR introduces a conditional check `if not self._meta_ordering:` which may not be necessary and could lead to regressions if `self._meta_ordering` is not properly defined or used elsewhere in the code.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The code introduces a new conditional check that could make the code less readable and maintainable, especially if `self._meta_ordering` is not a well-established convention in the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 202,
+      "returned_model_request_id": "556",
+      "completed_at_utc": "2026-11-06T04:03:24.722743+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a conditional check that may not be necessary and could lead to regressions.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The PR introduces a conditional check `if not self._meta_ordering:` which may not be necessary and could lead to regressions if `self._meta_ordering` is not properly defined or used elsewhere in the code."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code introduces a new conditional check that could make the code less readable and maintainable, especially if `self._meta_ordering` is not a well-established convention in the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a conditional check that may not be necessary and could lead to regressions.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The PR introduces a conditional check `if not self._meta_ordering:` which may not be necessary and could lead to regressions if `self._meta_ordering` is not properly defined or used elsewhere in the code."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code introduces a new conditional check that could make the code less readable and maintainable, especially if `self._meta_ordering` is not a well-established convention in the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

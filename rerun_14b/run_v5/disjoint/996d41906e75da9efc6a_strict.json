@@ -1,0 +1,29 @@
+{
+  "code": "996d41906e75da9efc6a",
+  "instance_id": "django__django-11216",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "996d41906e75da9efc6a_strict",
+  "arm": "strict",
+  "input_tokens": 1003,
+  "messages_sha256": "a9193b2c25fade0de29acf9adb753446767095e98fe271d549dbddc3f36c8bed",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new property `keep_intermediate_files` but does not properly handle the deletion of intermediate files. The deletion logic is incomplete and may lead to incorrect behavior. Additionally, the patch does not include tests to verify the functionality.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 69,
+      "returned_model_request_id": "2742",
+      "completed_at_utc": "2026-11-06T04:18:15.141052+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new property `keep_intermediate_files` but does not properly handle the deletion of intermediate files. The deletion logic is incomplete and may lead to incorrect behavior. Additionally, the patch does not include tests to verify the functionality."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "9cc8f557c5f04a2bba24ba13",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_a1011d98d1ad",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_a1011d98d1ad.json",
+  "historical_output_sha256": "6f74f6b8a2ba58fb8e9180dffd1163cddf9e4f1e1b3d85b683d9f5df1c054582",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1153,
+  "messages_sha256": "7e23a574cd762e9cbb3828bef36d5546ec24001ae1a533d676cf1d95cfed9fce",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by modifying the behavior of the short option for the 'verbose' option. It ensures that the short option does not expect an argument, similar to the long option.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a conditional check for the 'verbose' option, which slightly deviates from the project's coding style.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1415",
+      "completed_at_utc": "2026-11-06T04:08:36.610214+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by modifying the behavior of the short option for the 'verbose' option. It ensures that the short option does not expect an argument, similar to the long option.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a conditional check for the 'verbose' option, which slightly deviates from the project's coding style."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by modifying the behavior of the short option for the 'verbose' option. It ensures that the short option does not expect an argument, similar to the long option.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a conditional check for the 'verbose' option, which slightly deviates from the project's coding style."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

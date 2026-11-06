@@ -1,0 +1,50 @@
+{
+  "id": "86d79ec0ae5a4d1a411d0be1",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_26e0ed3390c5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_26e0ed3390c5.json",
+  "historical_output_sha256": "2f7f305838313be2483bc11bdb680c9a58e7532aff5bb38bffc24f0eb61cc292",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 950,
+  "messages_sha256": "ce9752a8392fe764ba301b21cf22a0c5b3f5380c00d8afd52bb170c866254d73",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change resolves the issue by making the `String` class argument invariant, but it lacks a clear explanation of why the `not_in_args` list was modified and what the implications are.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the `not_in_args` list without providing context or explanation for why this is necessary. This could lead to confusion for future maintainers.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "839",
+      "completed_at_utc": "2026-11-06T04:05:05.885509+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change resolves the issue by making the `String` class argument invariant, but it lacks a clear explanation of why the `not_in_args` list was modified and what the implications are.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The change modifies the `not_in_args` list without providing context or explanation for why this is necessary. This could lead to confusion for future maintainers."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change resolves the issue by making the `String` class argument invariant, but it lacks a clear explanation of why the `not_in_args` list was modified and what the implications are.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The change modifies the `not_in_args` list without providing context or explanation for why this is necessary. This could lead to confusion for future maintainers."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

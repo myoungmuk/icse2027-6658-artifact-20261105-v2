@@ -1,0 +1,50 @@
+{
+  "id": "af17c5bc9a73872e27a83e9f",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_5ad8e2a396d6",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_5ad8e2a396d6.json",
+  "historical_output_sha256": "188011b3921d8f7afc266265e5fe5585f444e38a311e66572e23fe29456d0f5b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2074,
+  "messages_sha256": "df70a700a510dbe7ac88a93299c0636274db434a0f21bb9cd860b4d67f090f24",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR replaces Django's custom HTML escaping with Python's standard library function, which is faster and more widely used. However, it introduces a backward-incompatible change in the escaping of single quotes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR changes the escaping of single quotes from '&#39;' to '&#x27;', which is a backward-incompatible change. This may affect existing templates or applications that rely on the specific escaping behavior.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "1835",
+      "completed_at_utc": "2026-11-06T04:11:40.856801+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR replaces Django's custom HTML escaping with Python's standard library function, which is faster and more widely used. However, it introduces a backward-incompatible change in the escaping of single quotes.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The PR changes the escaping of single quotes from '&#39;' to '&#x27;', which is a backward-incompatible change. This may affect existing templates or applications that rely on the specific escaping behavior."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR replaces Django's custom HTML escaping with Python's standard library function, which is faster and more widely used. However, it introduces a backward-incompatible change in the escaping of single quotes.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The PR changes the escaping of single quotes from '&#39;' to '&#x27;', which is a backward-incompatible change. This may affect existing templates or applications that rely on the specific escaping behavior."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

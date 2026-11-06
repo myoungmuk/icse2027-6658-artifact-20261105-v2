@@ -1,0 +1,50 @@
+{
+  "id": "052aa7145737f27ddc3e3d77",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_eb349f476cb9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_eb349f476cb9.json",
+  "historical_output_sha256": "c4758e49e8d0f2416260b5b2a825645e020d80902c252c4ac3eb7302b1d80a64",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 874,
+  "messages_sha256": "ade3439b82a1447aba7705427362b818974a04ea5a94f6095051367d9be679e9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change sets a default for SECURE_REFERRER_POLICY, which could introduce a behavioral regression risk for applications that rely on the Referer header.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"Changing the default to 'same-origin' may break existing applications that depend on the Referer header for verification or analytics.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "519",
+      "completed_at_utc": "2026-11-06T04:03:08.424820+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change sets a default for SECURE_REFERRER_POLICY, which could introduce a behavioral regression risk for applications that rely on the Referer header.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "Changing the default to 'same-origin' may break existing applications that depend on the Referer header for verification or analytics."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change sets a default for SECURE_REFERRER_POLICY, which could introduce a behavioral regression risk for applications that rely on the Referer header.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "Changing the default to 'same-origin' may break existing applications that depend on the Referer header for verification or analytics."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

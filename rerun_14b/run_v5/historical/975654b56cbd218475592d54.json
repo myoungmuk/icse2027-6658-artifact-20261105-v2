@@ -1,0 +1,50 @@
+{
+  "id": "975654b56cbd218475592d54",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_8a7d265e5dac",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_8a7d265e5dac.json",
+  "historical_output_sha256": "2a75e135541de89efd68f0dee3bed9db3d4b7015c5b9c3259089d9e1aa0f7a3c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1199,
+  "messages_sha256": "f10fee262e66a964ee9ea773256342fbc10e94704c27020c35122c2aefa70f84",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the race condition by handling FileNotFoundError, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of `has_key` to return `False` on `FileNotFoundError`, which might not be the expected behavior in all cases. It could potentially mask other issues or change the semantics of the function.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "306",
+      "completed_at_utc": "2026-11-06T04:02:01.127734+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the race condition by handling FileNotFoundError, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of `has_key` to return `False` on `FileNotFoundError`, which might not be the expected behavior in all cases. It could potentially mask other issues or change the semantics of the function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the race condition by handling FileNotFoundError, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of `has_key` to return `False` on `FileNotFoundError`, which might not be the expected behavior in all cases. It could potentially mask other issues or change the semantics of the function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

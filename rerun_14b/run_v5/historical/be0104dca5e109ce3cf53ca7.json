@@ -1,0 +1,50 @@
+{
+  "id": "be0104dca5e109ce3cf53ca7",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_c35e0e6ee633",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_c35e0e6ee633.json",
+  "historical_output_sha256": "129c80efa77e5f954343735ea496bf1163102d1d36ef93581879e7bb0beb9f16",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1234,
+  "messages_sha256": "6d0d38237a07da7ad2a87a1ca8c618b3423a26dbd4e86cdc04e1ff62dd52be79",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue with keyword-only arguments in template tags but introduces a non-minimal change by handling keyword-only defaults separately.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by handling keyword-only defaults separately, which may not be necessary and could lead to maintenance issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "1364",
+      "completed_at_utc": "2026-11-06T04:08:18.334246+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue with keyword-only arguments in template tags but introduces a non-minimal change by handling keyword-only defaults separately.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by handling keyword-only defaults separately, which may not be necessary and could lead to maintenance issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue with keyword-only arguments in template tags but introduces a non-minimal change by handling keyword-only defaults separately.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by handling keyword-only defaults separately, which may not be necessary and could lead to maintenance issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

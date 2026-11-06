@@ -1,0 +1,60 @@
+{
+  "id": "68e19cd7e18fd7eb085bee58",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_f5cf1072e191",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_f5cf1072e191.json",
+  "historical_output_sha256": "13c6bc75f1bf562a1428c6d41cf5884fb50ed2c674086cbe04e1bddc37ad2281",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3229,
+  "messages_sha256": "ba3d902692c34f5c005f3b766ef4c11da1d1e99028646abb2e8890f1c3fb7737",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of adding a nullable OneToOneField on SQLite by modifying the schema editor to handle such fields correctly. The patch includes multiple reproduction scripts to demonstrate the problem and the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new files (reproduce.py, reproduce2.py, reproduce3.py, reproduce4.py) that are not part of the main codebase and are not included in the diff. These files should be reviewed for consistency with project conventions.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch could benefit from additional comments to explain why certain conditions are checked and why the schema editor needs to be modified in this way.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 199,
+      "returned_model_request_id": "2081",
+      "completed_at_utc": "2026-11-06T04:14:03.533352+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of adding a nullable OneToOneField on SQLite by modifying the schema editor to handle such fields correctly. The patch includes multiple reproduction scripts to demonstrate the problem and the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files (reproduce.py, reproduce2.py, reproduce3.py, reproduce4.py) that are not part of the main codebase and are not included in the diff. These files should be reviewed for consistency with project conventions."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could benefit from additional comments to explain why certain conditions are checked and why the schema editor needs to be modified in this way."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of adding a nullable OneToOneField on SQLite by modifying the schema editor to handle such fields correctly. The patch includes multiple reproduction scripts to demonstrate the problem and the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files (reproduce.py, reproduce2.py, reproduce3.py, reproduce4.py) that are not part of the main codebase and are not included in the diff. These files should be reviewed for consistency with project conventions."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could benefit from additional comments to explain why certain conditions are checked and why the schema editor needs to be modified in this way."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

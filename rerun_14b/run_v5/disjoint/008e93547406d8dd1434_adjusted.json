@@ -1,0 +1,29 @@
+{
+  "code": "008e93547406d8dd1434",
+  "instance_id": "django__django-15995",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "008e93547406d8dd1434_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 844,
+  "messages_sha256": "102502702cf49851b9b55aa2b509232f473a440e6a6baab61afdf81cd81e9935",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch moves the primary key check from the constructor to the get_queryset method, which could lead to unexpected behavior if the related manager is accessed before the instance is saved. This change introduces a potential regression in the initialization of the related manager.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 69,
+      "returned_model_request_id": "2541",
+      "completed_at_utc": "2026-11-06T04:16:59.784379+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch moves the primary key check from the constructor to the get_queryset method, which could lead to unexpected behavior if the related manager is accessed before the instance is saved. This change introduces a potential regression in the initialization of the related manager."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

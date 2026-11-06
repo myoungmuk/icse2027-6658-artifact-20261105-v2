@@ -1,0 +1,29 @@
+{
+  "code": "c86ecd14824ce06d127d",
+  "instance_id": "django__django-16311",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "c86ecd14824ce06d127d_strict",
+  "arm": "strict",
+  "input_tokens": 720,
+  "messages_sha256": "b65bb8e150f537b241333665f2ff8a00bf8cb24a015567d5e43cb5a45c639f6c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new dependency on the `secrets` module without ensuring it is available in all supported Python environments. Additionally, the patch modifies the `compress_string` function in a way that could introduce compatibility issues with existing code that relies on the original implementation. The patch also lacks comprehensive tests to verify its effectiveness against the BREACH attack.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 90,
+      "returned_model_request_id": "2594",
+      "completed_at_utc": "2026-11-06T04:17:15.378735+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new dependency on the `secrets` module without ensuring it is available in all supported Python environments. Additionally, the patch modifies the `compress_string` function in a way that could introduce compatibility issues with existing code that relies on the original implementation. The patch also lacks comprehensive tests to verify its effectiveness against the BREACH attack."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

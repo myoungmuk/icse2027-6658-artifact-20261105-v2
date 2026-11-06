@@ -1,0 +1,29 @@
+{
+  "code": "fc046d24c5f9394ef59e",
+  "instance_id": "scikit-learn__scikit-learn-12486",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "fc046d24c5f9394ef59e_strict",
+  "arm": "strict",
+  "input_tokens": 1186,
+  "messages_sha256": "dd9037d7457e60fb783147c88df955f475a4ffb81095f2763e59e6f1d66360b3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a check for the number of classes in the prediction probabilities, which is not the correct approach. The issue is with the GMM model not supporting the 'roc_auc' scoring method directly. The patch should instead handle the scoring method appropriately for GMM or document the limitation.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 79,
+      "returned_model_request_id": "2346",
+      "completed_at_utc": "2026-11-06T04:15:51.280674+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a check for the number of classes in the prediction probabilities, which is not the correct approach. The issue is with the GMM model not supporting the 'roc_auc' scoring method directly. The patch should instead handle the scoring method appropriately for GMM or document the limitation."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

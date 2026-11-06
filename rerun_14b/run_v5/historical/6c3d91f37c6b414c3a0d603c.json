@@ -1,0 +1,50 @@
+{
+  "id": "6c3d91f37c6b414c3a0d603c",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_1207c6f6aac9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_1207c6f6aac9.json",
+  "historical_output_sha256": "416711e38183a8671b9b14f4cd9697efca13dfb342bce075915acdd282199fcd",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1795,
+  "messages_sha256": "a10ed78d51477e0929b640a93382b80c2a43e2429318e9d57462a37636306bb6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR optimizes multiple AlterFooTogether operations into one, which is a good improvement. The code changes are minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code introduces new methods (`reduce`) that are not consistent with the existing naming conventions in the file.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "2169",
+      "completed_at_utc": "2026-11-06T04:14:46.802921+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR optimizes multiple AlterFooTogether operations into one, which is a good improvement. The code changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces new methods (`reduce`) that are not consistent with the existing naming conventions in the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR optimizes multiple AlterFooTogether operations into one, which is a good improvement. The code changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces new methods (`reduce`) that are not consistent with the existing naming conventions in the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "56b60faf915f0ad75699",
+  "instance_id": "django__django-13371",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "56b60faf915f0ad75699_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1083,
+  "messages_sha256": "ac3713e9939a944ba027f8a355840264a82e7c3f8edc81f8111c95d415ef18e7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue by setting the __module__ attribute of the namedtuple class to 'django.db.models.query', making it pickleable. The new file 'reproduce_pickle_issue.py' is a test script to verify the fix, which is appropriate. There are no apparent blocking concerns.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 78,
+      "returned_model_request_id": "2427",
+      "completed_at_utc": "2026-11-06T04:16:23.784925+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue by setting the __module__ attribute of the namedtuple class to 'django.db.models.query', making it pickleable. The new file 'reproduce_pickle_issue.py' is a test script to verify the fix, which is appropriate. There are no apparent blocking concerns."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "3f1a1d60eed09ff1eb171912",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_209537e49bf3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_209537e49bf3.json",
+  "historical_output_sha256": "6d6fe1ef68ca4debd091221c82f60fdacaa35810ddea4b59bd9540b51c25d0bf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1228,
+  "messages_sha256": "af47da043f4f819ae93b52b84e3b53901d7c5b2aa7b54824529e7e285aaa9289",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a critical bug in version comparison but introduces a non-minimal change and potential maintainability issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by adding a new import and modifying the logic in a way that could be simplified.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The code becomes less readable due to the introduction of a new variable 'fulfilled' and the added complexity of the version comparison logic.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 157,
+      "returned_model_request_id": "470",
+      "completed_at_utc": "2026-11-06T04:02:50.465895+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a critical bug in version comparison but introduces a non-minimal change and potential maintainability issues.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding a new import and modifying the logic in a way that could be simplified."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code becomes less readable due to the introduction of a new variable 'fulfilled' and the added complexity of the version comparison logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a critical bug in version comparison but introduces a non-minimal change and potential maintainability issues.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding a new import and modifying the logic in a way that could be simplified."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code becomes less readable due to the introduction of a new variable 'fulfilled' and the added complexity of the version comparison logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "4a38092b01a5522e20221f4d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_56f0a11a9664",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_56f0a11a9664.json",
+  "historical_output_sha256": "362cf6ce57f126cce16e79cb77c68cbb67827f2db27f924b6f3a559890885782",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 893,
+  "messages_sha256": "393b02f27bfbf34ca1f3ad7fde06b01a9b8cb25e61085c28928822f7f0deaa98",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch changes the behavior of `Contains.as_set` to return the set it contains, which may introduce unexpected behavior and break existing code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the behavior of `Contains.as_set` to return the set it contains, which may break existing code that relies on the current behavior of raising `NotImplementedError`.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify the new behavior of `Contains.as_set`, which is a critical issue for ensuring the correctness of the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 180,
+      "returned_model_request_id": "710",
+      "completed_at_utc": "2026-11-06T04:04:16.301566+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch changes the behavior of `Contains.as_set` to return the set it contains, which may introduce unexpected behavior and break existing code.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the behavior of `Contains.as_set` to return the set it contains, which may break existing code that relies on the current behavior of raising `NotImplementedError`."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the new behavior of `Contains.as_set`, which is a critical issue for ensuring the correctness of the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch changes the behavior of `Contains.as_set` to return the set it contains, which may introduce unexpected behavior and break existing code.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the behavior of `Contains.as_set` to return the set it contains, which may break existing code that relies on the current behavior of raising `NotImplementedError`."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the new behavior of `Contains.as_set`, which is a critical issue for ensuring the correctness of the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

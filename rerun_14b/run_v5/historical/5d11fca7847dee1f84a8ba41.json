@@ -1,0 +1,50 @@
+{
+  "id": "5d11fca7847dee1f84a8ba41",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_0fd2774c17c0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_0fd2774c17c0.json",
+  "historical_output_sha256": "b1ca307f2a1231531ac5bec8c684028cd74ee80bf24108cfa1c17eaaebe9e250",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 958,
+  "messages_sha256": "283d84c2a637af2e562e43dd4ad11e423bb0bafd88c4ec06ce436641ff9aefe7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of inconsistent year formatting but introduces a potential regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior for users who rely on the current implementation of `y` to return the last two digits of the year without leading zeros.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "399",
+      "completed_at_utc": "2026-11-06T04:02:33.744201+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of inconsistent year formatting but introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior for users who rely on the current implementation of `y` to return the last two digits of the year without leading zeros."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of inconsistent year formatting but introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior for users who rely on the current implementation of `y` to return the last two digits of the year without leading zeros."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "398f9439914083ae4442017a",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_b8fbb5266e72",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_b8fbb5266e72.json",
+  "historical_output_sha256": "57cef5d464228e790e1bcd9d33cd10baff73c699d9516c69b936bc2a59a05b43",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1093,
+  "messages_sha256": "d304bb7ce7f44930ddd3742590a5fcff04bc3198b934410540a456f6d0c0209f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly resolves the issue by preserving wrapper assignments, but it introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by adding a call to `update_wrapper` in the `method_decorator` function, which may have unintended side effects or impact on existing behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "812",
+      "completed_at_utc": "2026-11-06T04:04:49.265430+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly resolves the issue by preserving wrapper assignments, but it introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by adding a call to `update_wrapper` in the `method_decorator` function, which may have unintended side effects or impact on existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly resolves the issue by preserving wrapper assignments, but it introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by adding a call to `update_wrapper` in the `method_decorator` function, which may have unintended side effects or impact on existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

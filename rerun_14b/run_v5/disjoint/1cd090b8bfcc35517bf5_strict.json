@@ -1,0 +1,29 @@
+{
+  "code": "1cd090b8bfcc35517bf5",
+  "instance_id": "django__django-13371",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "1cd090b8bfcc35517bf5_strict",
+  "arm": "strict",
+  "input_tokens": 1097,
+  "messages_sha256": "f9d1dd61b7f1c8113b325de5a1338eb48740d62e34c7aa91ac746fcb338fdd71",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue of making django.db.models.query.Row pickleable by adding a custom unpickling method and caching the namedtuple creation. This ensures compatibility with packages like cacheops and maintains performance by caching the type creation.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 65,
+      "returned_model_request_id": "2424",
+      "completed_at_utc": "2026-11-06T04:16:23.784433+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue of making django.db.models.query.Row pickleable by adding a custom unpickling method and caching the namedtuple creation. This ensures compatibility with packages like cacheops and maintains performance by caching the type creation."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

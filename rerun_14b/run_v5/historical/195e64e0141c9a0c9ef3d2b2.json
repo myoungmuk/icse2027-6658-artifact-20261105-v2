@@ -1,0 +1,50 @@
+{
+  "id": "195e64e0141c9a0c9ef3d2b2",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_602bc4db6335",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_602bc4db6335.json",
+  "historical_output_sha256": "4c1c0d119eb05fdff86d1026ba324453f5a18b8c13ab0cc6b32db0a63baf7e6b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2634,
+  "messages_sha256": "3a5885eb3f7a80b4553fd11e24766192f0ae3e3c0ff332d1f789c60bf33a0466",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the deprecation warning issue by checking if the data is empty before issuing the warning. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a minor readability issue by adding an unnecessary check for `values.size` in the `convert` function.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "876",
+      "completed_at_utc": "2026-11-06T04:05:22.634762+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the deprecation warning issue by checking if the data is empty before issuing the warning. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a minor readability issue by adding an unnecessary check for `values.size` in the `convert` function."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the deprecation warning issue by checking if the data is empty before issuing the warning. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a minor readability issue by adding an unnecessary check for `values.size` in the `convert` function."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

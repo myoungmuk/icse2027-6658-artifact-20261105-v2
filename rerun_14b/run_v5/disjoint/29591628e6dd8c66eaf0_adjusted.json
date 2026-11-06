@@ -1,0 +1,29 @@
+{
+  "code": "29591628e6dd8c66eaf0",
+  "instance_id": "django__django-12122",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "29591628e6dd8c66eaf0_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1229,
+  "messages_sha256": "3dfb37594b5807430b9552a1515086fb21cbcc8a6780a2c25e24cb33c715dd8e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch changes the behavior of the 'D' format to always return English day abbreviations, which contradicts the localization feature. Additionally, the 'r' format should not be hardcoded to English in get_format.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 64,
+      "returned_model_request_id": "2691",
+      "completed_at_utc": "2026-11-06T04:17:49.120436+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch changes the behavior of the 'D' format to always return English day abbreviations, which contradicts the localization feature. Additionally, the 'r' format should not be hardcoded to English in get_format."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

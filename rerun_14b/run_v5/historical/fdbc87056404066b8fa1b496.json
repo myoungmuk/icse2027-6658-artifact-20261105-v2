@@ -1,0 +1,60 @@
+{
+  "id": "fdbc87056404066b8fa1b496",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ecae1d7d3222",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ecae1d7d3222.json",
+  "historical_output_sha256": "c1cc9c2a8d463b20869e8b6d0cf5eeeaed89682c85f6e6dea98200ff1819969c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1292,
+  "messages_sha256": "99cd7e19eee4a4fe392ad03775c3fbbe3c9ed9718ed0308f32e2f2e2e4d87e68",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses a specific issue with middleware handling in ASGI context but may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change modifies the middleware handling logic, which could potentially break existing middleware that relies on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix or ensure that the change does not introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 147,
+      "returned_model_request_id": "406",
+      "completed_at_utc": "2026-11-06T04:02:33.745583+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses a specific issue with middleware handling in ASGI context but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the middleware handling logic, which could potentially break existing middleware that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix or ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses a specific issue with middleware handling in ASGI context but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the middleware handling logic, which could potentially break existing middleware that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix or ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

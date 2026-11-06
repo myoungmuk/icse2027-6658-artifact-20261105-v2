@@ -1,0 +1,50 @@
+{
+  "id": "3f7f7a62e5b59ea6dc1da245",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_0936dfc7d9f6",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_0936dfc7d9f6.json",
+  "historical_output_sha256": "d4dc2b5c602d12bebc3025fd4af5c0fd8e9304058b92d418ad4b1d9e5f2e9cae",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1458,
+  "messages_sha256": "9b53c2ea5c23dd1e5884646b497d2b19416f52d0d8200d9795c1d53d6c7e3451",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a logical error in the subclass check, which could lead to incorrect behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes `__subclasscheck__` to use `issubclass(subclass, self._subclasses)` instead of `subclass in self._subclasses`. This is incorrect because `self._subclasses` is a tuple of classes, not a class itself. The correct approach would be to check if `subclass` is a subclass of any class in `self._subclasses`.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 156,
+      "returned_model_request_id": "165",
+      "completed_at_utc": "2026-11-06T04:01:09.166985+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a logical error in the subclass check, which could lead to incorrect behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch changes `__subclasscheck__` to use `issubclass(subclass, self._subclasses)` instead of `subclass in self._subclasses`. This is incorrect because `self._subclasses` is a tuple of classes, not a class itself. The correct approach would be to check if `subclass` is a subclass of any class in `self._subclasses`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a logical error in the subclass check, which could lead to incorrect behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch changes `__subclasscheck__` to use `issubclass(subclass, self._subclasses)` instead of `subclass in self._subclasses`. This is incorrect because `self._subclasses` is a tuple of classes, not a class itself. The correct approach would be to check if `subclass` is a subclass of any class in `self._subclasses`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "d95a3ef54311d8876e7936dc",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_6e5abdfbef12",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_6e5abdfbef12.json",
+  "historical_output_sha256": "3dcc17a95097adb00e2496718c4eb50d54f129600e2b228021196c6ca787f06b",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1117,
+  "messages_sha256": "1ce0d46bc392c22be761ac94deacf68728114aee0aee713756face5bc54823bb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a non-minimal change and may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of the `save` method for all models, not just the child models. This could have unintended side effects on other parts of the codebase.\"\n    },\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The approach of setting `force_insert` to `True` when `self.pk is None` may not be the correct or intended behavior for all cases. It could lead to incorrect data insertion or updates.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 174,
+      "returned_model_request_id": "1304",
+      "completed_at_utc": "2026-11-06T04:07:59.669725+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a non-minimal change and may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the behavior of the `save` method for all models, not just the child models. This could have unintended side effects on other parts of the codebase."
+      },
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of setting `force_insert` to `True` when `self.pk is None` may not be the correct or intended behavior for all cases. It could lead to incorrect data insertion or updates."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch introduces a non-minimal change and may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the behavior of the `save` method for all models, not just the child models. This could have unintended side effects on other parts of the codebase."
+      },
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of setting `force_insert` to `True` when `self.pk is None` may not be the correct or intended behavior for all cases. It could lead to incorrect data insertion or updates."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

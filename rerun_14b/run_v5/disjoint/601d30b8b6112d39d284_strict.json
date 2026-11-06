@@ -1,0 +1,29 @@
+{
+  "code": "601d30b8b6112d39d284",
+  "instance_id": "django__django-13460",
+  "split": "development",
+  "kind": "developer",
+  "id": "601d30b8b6112d39d284_strict",
+  "arm": "strict",
+  "input_tokens": 778,
+  "messages_sha256": "b75f2b0e98897d5db7f2c3276d494e07bebaf0f923000ee95aa0a017aaee0fc4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new dependency on the Decimal class and adds a type check that could potentially break existing code. It also does not address the root cause of the issue, which is the incompatibility between gettext's string formatting and float values. A more robust solution should be considered.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 78,
+      "returned_model_request_id": "2336",
+      "completed_at_utc": "2026-11-06T04:15:45.340562+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new dependency on the Decimal class and adds a type check that could potentially break existing code. It also does not address the root cause of the issue, which is the incompatibility between gettext's string formatting and float values. A more robust solution should be considered."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "1dd4f704bbe96ff5f0d8",
+  "instance_id": "scikit-learn__scikit-learn-25697",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "1dd4f704bbe96ff5f0d8_strict",
+  "arm": "strict",
+  "input_tokens": 1153,
+  "messages_sha256": "8afad5a08e3204b64bd8547456f03f3c2d507cb1ed35b46bd62c4ab601050876",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a deprecated parameter `n_iter` without removing it, which can lead to confusion and potential bugs. Additionally, the patch does not update the documentation or tests to reflect the changes, which is crucial for maintaining the quality and consistency of the codebase.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 74,
+      "returned_model_request_id": "2666",
+      "completed_at_utc": "2026-11-06T04:17:49.116113+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a deprecated parameter `n_iter` without removing it, which can lead to confusion and potential bugs. Additionally, the patch does not update the documentation or tests to reflect the changes, which is crucial for maintaining the quality and consistency of the codebase."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

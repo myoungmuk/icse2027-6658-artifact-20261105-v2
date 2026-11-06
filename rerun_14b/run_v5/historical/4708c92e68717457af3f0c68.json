@@ -1,0 +1,50 @@
+{
+  "id": "4708c92e68717457af3f0c68",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_aa42bfd0a299",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_aa42bfd0a299.json",
+  "historical_output_sha256": "e4d929d3ae6ac21911d09cd36d0c8e51200e08f887971595c3af56ce97e3156e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1339,
+  "messages_sha256": "a583e9e7db5f724ba45a6d776c4d5b39f7d36dd7a702e61e4f5471367b5289af",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch may not fully resolve the issue as it only changes one line and does not account for all possible edge cases or quaternion values.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "978",
+      "completed_at_utc": "2026-11-06T04:05:55.611719+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch may not fully resolve the issue as it only changes one line and does not account for all possible edge cases or quaternion values."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch may not fully resolve the issue as it only changes one line and does not account for all possible edge cases or quaternion values."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "4e8b8375ccb26f5a81de",
+  "instance_id": "scikit-learn__scikit-learn-13549",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "4e8b8375ccb26f5a81de_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1659,
+  "messages_sha256": "fb59489287ffa79fef8bb4be5995df3ce4db4f20183e9681cf5abb0abd26bd3d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new `stratify` parameter to `resample`, but it lacks proper implementation details and examples. The existing logic is not fully compatible with stratified resampling, and the patch does not address the original issue of handling edge cases in `train_test_split`. Additionally, the patch introduces a new file `reproduce_issue.py` without context or explanation of its purpose.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 100,
+      "returned_model_request_id": "2711",
+      "completed_at_utc": "2026-11-06T04:18:08.359715+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new `stratify` parameter to `resample`, but it lacks proper implementation details and examples. The existing logic is not fully compatible with stratified resampling, and the patch does not address the original issue of handling edge cases in `train_test_split`. Additionally, the patch introduces a new file `reproduce_issue.py` without context or explanation of its purpose."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

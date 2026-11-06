@@ -1,0 +1,50 @@
+{
+  "id": "570426c6fd2bb3385a1f6eb4",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_e0ea2a7a00ab",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_e0ea2a7a00ab.json",
+  "historical_output_sha256": "13a50fc73defdabe8a47e6d75e2bcc275c1f7dbb6fe1d745b5891743484ae648",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 895,
+  "messages_sha256": "a4004b2443b7417f55aafeab0ad6173558ed593e7565c7e8d85611692029bf17",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce performance regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The patch calls evalf recursively on all arguments, which may introduce performance regressions for functions with many arguments or complex expressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 96,
+      "returned_model_request_id": "699",
+      "completed_at_utc": "2026-11-06T04:04:16.299422+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch calls evalf recursively on all arguments, which may introduce performance regressions for functions with many arguments or complex expressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch calls evalf recursively on all arguments, which may introduce performance regressions for functions with many arguments or complex expressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

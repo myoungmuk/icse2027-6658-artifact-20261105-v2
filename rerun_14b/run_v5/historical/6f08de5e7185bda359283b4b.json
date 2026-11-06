@@ -1,0 +1,50 @@
+{
+  "id": "6f08de5e7185bda359283b4b",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_345eac52429f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_345eac52429f.json",
+  "historical_output_sha256": "2841d8e11859e6b0e99276ac548aa60c81fa05082a2e54e9236a292a64ee7019",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1527,
+  "messages_sha256": "82b94f69b4151b715433014c1daaf9e024eb77db5242d2677b121bf66a287d7e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of queryset update behavior with multiple inheritance by modifying the query chain to include the proxy model if applicable. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a conditional check for the proxy model, which slightly deviates from the usual style of handling model metadata in Django.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1370",
+      "completed_at_utc": "2026-11-06T04:08:18.335748+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of queryset update behavior with multiple inheritance by modifying the query chain to include the proxy model if applicable. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a conditional check for the proxy model, which slightly deviates from the usual style of handling model metadata in Django."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of queryset update behavior with multiple inheritance by modifying the query chain to include the proxy model if applicable. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a conditional check for the proxy model, which slightly deviates from the usual style of handling model metadata in Django."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

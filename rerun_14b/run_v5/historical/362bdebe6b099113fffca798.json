@@ -1,0 +1,50 @@
+{
+  "id": "362bdebe6b099113fffca798",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_dc2b6bed73cb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_dc2b6bed73cb.json",
+  "historical_output_sha256": "2ff095616946d321bfa0b394c6a393d5ab8fc47d1c60bc6b3795de6c353eb546",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1196,
+  "messages_sha256": "efea1dfba083c4511e4f17ac95f6fce3b1f5aafc58c695276343865550ef5358",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a legacy encoding method to handle session data decoding during the transition to Django 3.1. It seems to address the issue without introducing clear regressions or compatibility breaks.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The approach of using a legacy encoding method is somewhat hacky and may not be the most robust solution. It could lead to maintenance challenges in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "1053",
+      "completed_at_utc": "2026-11-06T04:06:12.551444+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a legacy encoding method to handle session data decoding during the transition to Django 3.1. It seems to address the issue without introducing clear regressions or compatibility breaks.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of using a legacy encoding method is somewhat hacky and may not be the most robust solution. It could lead to maintenance challenges in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a legacy encoding method to handle session data decoding during the transition to Django 3.1. It seems to address the issue without introducing clear regressions or compatibility breaks.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of using a legacy encoding method is somewhat hacky and may not be the most robust solution. It could lead to maintenance challenges in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

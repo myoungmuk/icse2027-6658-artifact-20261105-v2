@@ -1,0 +1,50 @@
+{
+  "id": "29ed230d06c4d682f2e7c94b",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_0797981e61d9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_0797981e61d9.json",
+  "historical_output_sha256": "39895991b7a2573318bb96281a55537f36f87eaac5b49d481d0f3bc38829e004",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1557,
+  "messages_sha256": "3812ed9017adcebb9f8de2697c66ff1fe5d0ccc328abd270ee846f5c905c23ae",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change optimizes multiple AlterFooTogether operations into one, but the implementation could be clearer and more maintainable.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The code is less readable due to the use of a while loop with manual index management, which can be error-prone and harder to understand than a for loop.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "1363",
+      "completed_at_utc": "2026-11-06T04:08:18.334008+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change optimizes multiple AlterFooTogether operations into one, but the implementation could be clearer and more maintainable.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code is less readable due to the use of a while loop with manual index management, which can be error-prone and harder to understand than a for loop."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change optimizes multiple AlterFooTogether operations into one, but the implementation could be clearer and more maintainable.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code is less readable due to the use of a while loop with manual index management, which can be error-prone and harder to understand than a for loop."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

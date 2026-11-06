@@ -1,0 +1,50 @@
+{
+  "id": "141ba1add644e6292b1b727b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_e325ee81e20d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_e325ee81e20d.json",
+  "historical_output_sha256": "ddeedabeea66dab29d6cc07081d08e47c52b02dbfd6769e12ee605409ea541d4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 936,
+  "messages_sha256": "b0b6dc6457a7463630a17faa9f3248e888335e174ff4d0b0a5f7544693f3ecb4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a change to the `use_required_attribute` method in `FileInput` and `ClearableFileInput` widgets, but it does not address the issue of the `required` attribute being displayed when initial data exists.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not fully resolve the issue. The `use_required_attribute` method is moved from `ClearableFileInput` to `FileInput`, but the logic for handling initial data is not correctly implemented. The `required` attribute should only be omitted when initial data exists, but the current implementation does not ensure this.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 170,
+      "returned_model_request_id": "722",
+      "completed_at_utc": "2026-11-06T04:04:32.837403+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a change to the `use_required_attribute` method in `FileInput` and `ClearableFileInput` widgets, but it does not address the issue of the `required` attribute being displayed when initial data exists.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not fully resolve the issue. The `use_required_attribute` method is moved from `ClearableFileInput` to `FileInput`, but the logic for handling initial data is not correctly implemented. The `required` attribute should only be omitted when initial data exists, but the current implementation does not ensure this."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a change to the `use_required_attribute` method in `FileInput` and `ClearableFileInput` widgets, but it does not address the issue of the `required` attribute being displayed when initial data exists.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not fully resolve the issue. The `use_required_attribute` method is moved from `ClearableFileInput` to `FileInput`, but the logic for handling initial data is not correctly implemented. The `required` attribute should only be omitted when initial data exists, but the current implementation does not ensure this."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

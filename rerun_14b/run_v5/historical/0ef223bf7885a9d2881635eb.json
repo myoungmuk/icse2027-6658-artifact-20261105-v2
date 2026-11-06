@@ -1,0 +1,50 @@
+{
+  "id": "0ef223bf7885a9d2881635eb",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_a51a29a35397",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_a51a29a35397.json",
+  "historical_output_sha256": "042ef1014e3c24db8a84bb2acbf86b6636ecedda36169a4010359fce7c4207c7",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1958,
+  "messages_sha256": "20232d1ad172ae550a3ff7611ca241a2bfa8071b1354f16f985dab833c9db852",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the AttributeError by ensuring the renderer is not None, which is a reasonable fix for the issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a style inconsistency by adding a conditional check for the renderer, which deviates from the existing coding style in the file.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "1616",
+      "completed_at_utc": "2026-11-06T04:09:46.494829+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the AttributeError by ensuring the renderer is not None, which is a reasonable fix for the issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a style inconsistency by adding a conditional check for the renderer, which deviates from the existing coding style in the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the AttributeError by ensuring the renderer is not None, which is a reasonable fix for the issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a style inconsistency by adding a conditional check for the renderer, which deviates from the existing coding style in the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

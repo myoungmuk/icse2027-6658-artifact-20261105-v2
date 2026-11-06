@@ -1,0 +1,50 @@
+{
+  "id": "33aca3a9b6f8cadddfc88aa7",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_0b43c357a181",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_0b43c357a181.json",
+  "historical_output_sha256": "402a1d291a874c57e098272a939b1dc61c13c070e26bb9d2df1e8aa5ca9b7b75",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1376,
+  "messages_sha256": "fc4bdc12b22f3e5d48b3c8c9dedb73250003ff5e9e58a65d5a184958b9c75ed0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the _escape_pgpass function which might be used elsewhere.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The _escape_pgpass function is removed, which might be used in other parts of the codebase. This could lead to potential issues if the function is relied upon elsewhere.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "2094",
+      "completed_at_utc": "2026-11-06T04:14:03.536604+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the _escape_pgpass function which might be used elsewhere.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The _escape_pgpass function is removed, which might be used in other parts of the codebase. This could lead to potential issues if the function is relied upon elsewhere."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the _escape_pgpass function which might be used elsewhere.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The _escape_pgpass function is removed, which might be used in other parts of the codebase. This could lead to potential issues if the function is relied upon elsewhere."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

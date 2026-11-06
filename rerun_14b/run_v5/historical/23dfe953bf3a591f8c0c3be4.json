@@ -1,0 +1,60 @@
+{
+  "id": "23dfe953bf3a591f8c0c3be4",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_431ea7dc653d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_431ea7dc653d.json",
+  "historical_output_sha256": "6ea80b25fc5b190db7ae02b0a730cbd87f0178d195733546e9607b295ae1bc67",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1027,
+  "messages_sha256": "61b62c40bb499fd2c7f918a5727c17089473d11af5c831f3cbe4aca2663cb4e9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed change addresses a specific issue but may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior for estimators that are instances of classes without the `get_params` method.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no tests provided to ensure that the change does not introduce regressions or other issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "555",
+      "completed_at_utc": "2026-11-06T04:03:24.722167+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed change addresses a specific issue but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior for estimators that are instances of classes without the `get_params` method."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no tests provided to ensure that the change does not introduce regressions or other issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The proposed change addresses a specific issue but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior for estimators that are instances of classes without the `get_params` method."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no tests provided to ensure that the change does not introduce regressions or other issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

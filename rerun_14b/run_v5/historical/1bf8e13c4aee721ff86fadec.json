@@ -1,0 +1,50 @@
+{
+  "id": "1bf8e13c4aee721ff86fadec",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_c44b6c6782a9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_c44b6c6782a9.json",
+  "historical_output_sha256": "d85efc549300068f2d9b433d6386a992e2894944192c6c942ddb8f3f2cdd0c8b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1207,
+  "messages_sha256": "1d7f3c811efa52dd58bb69d41ff987cc3211faa289fde3d534eeb99f9640e5af",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by modifying the `EvaluateFalseTransformer` to handle relational operators correctly. The change is minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new dictionary `relational_operators` and a method `visit_Compare`, which slightly deviates from the existing coding style in the file.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "1631",
+      "completed_at_utc": "2026-11-06T04:09:46.497508+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by modifying the `EvaluateFalseTransformer` to handle relational operators correctly. The change is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new dictionary `relational_operators` and a method `visit_Compare`, which slightly deviates from the existing coding style in the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by modifying the `EvaluateFalseTransformer` to handle relational operators correctly. The change is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new dictionary `relational_operators` and a method `visit_Compare`, which slightly deviates from the existing coding style in the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

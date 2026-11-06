@@ -1,0 +1,29 @@
+{
+  "code": "1751419a891534fa9645",
+  "instance_id": "sphinx-doc__sphinx-10481",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "1751419a891534fa9645_strict",
+  "arm": "strict",
+  "input_tokens": 1708,
+  "messages_sha256": "8f6136b178d2e7fd0e5dd7d1ecb3de158ccb28d7f8cb800e6ccb5a3f6f2ac9cb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file `conf.py` and `simulate_build.py` which are not relevant to the issue described. The actual change should be made in `sphinx/config.py` to handle the case when `language` is `None`. The patch should be simplified to only include the necessary changes in `sphinx/config.py`.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 90,
+      "returned_model_request_id": "2276",
+      "completed_at_utc": "2026-11-06T04:15:26.685259+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file `conf.py` and `simulate_build.py` which are not relevant to the issue described. The actual change should be made in `sphinx/config.py` to handle the case when `language` is `None`. The patch should be simplified to only include the necessary changes in `sphinx/config.py`."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

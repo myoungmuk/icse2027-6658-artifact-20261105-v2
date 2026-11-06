@@ -1,0 +1,50 @@
+{
+  "id": "888b09fb38387801331c090c",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_118ac5add823",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_118ac5add823.json",
+  "historical_output_sha256": "4cc9926f462b7074a8cff8e2028a89bbcb05a8dd29c6e1bb0458f295328a2490",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1137,
+  "messages_sha256": "df5ad3f6fbdafffd93f097025230b5043cb4a8e3e72aaf6a720fcd43f8476082",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change sets a default permission for file uploads, which is a reasonable fix for the reported issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change does not address the underlying issue of inconsistent file permissions depending on the type of temporary file used. It only sets a default permission, which may not resolve the root cause.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "288",
+      "completed_at_utc": "2026-11-06T04:02:01.122678+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change sets a default permission for file uploads, which is a reasonable fix for the reported issue.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address the underlying issue of inconsistent file permissions depending on the type of temporary file used. It only sets a default permission, which may not resolve the root cause."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change sets a default permission for file uploads, which is a reasonable fix for the reported issue.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address the underlying issue of inconsistent file permissions depending on the type of temporary file used. It only sets a default permission, which may not resolve the root cause."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

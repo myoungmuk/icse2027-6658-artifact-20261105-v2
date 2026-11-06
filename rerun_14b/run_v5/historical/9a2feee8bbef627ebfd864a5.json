@@ -1,0 +1,60 @@
+{
+  "id": "9a2feee8bbef627ebfd864a5",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ee5b4e2603e3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ee5b4e2603e3.json",
+  "historical_output_sha256": "b65ff4b6e5d676a7dbabefa29bf291b1c148f530a24b42a66833efa625310c3e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1090,
+  "messages_sha256": "441c6b07d183bb2089c84aea6f1ea2c7110ee4f3e3a151e9b907eb06f5b80929",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a change that may break existing behavior and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a call to `response.raise_for_status()`, which may raise an exception for HTTP errors. This could break existing behavior where the code previously handled anchor not found errors differently.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify the behavior of the change. Without tests, there is no assurance that the change works as intended or does not introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.5\n}",
+      "finish_reason": "stop",
+      "output_tokens": 172,
+      "returned_model_request_id": "495",
+      "completed_at_utc": "2026-11-06T04:03:08.420278+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a change that may break existing behavior and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a call to `response.raise_for_status()`, which may raise an exception for HTTP errors. This could break existing behavior where the code previously handled anchor not found errors differently."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the behavior of the change. Without tests, there is no assurance that the change works as intended or does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.5
+  },
+  "normalized": {
+    "summary": "The PR introduces a change that may break existing behavior and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a call to `response.raise_for_status()`, which may raise an exception for HTTP errors. This could break existing behavior where the code previously handled anchor not found errors differently."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the behavior of the change. Without tests, there is no assurance that the change works as intended or does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.5
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

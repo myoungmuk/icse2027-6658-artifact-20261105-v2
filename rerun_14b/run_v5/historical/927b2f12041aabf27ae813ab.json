@@ -1,0 +1,50 @@
+{
+  "id": "927b2f12041aabf27ae813ab",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_01d7a752c66d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_01d7a752c66d.json",
+  "historical_output_sha256": "c242e364f44a1fd1bcc169cfeb975bcde0cba3b498da8b6c5ad1e0574bce6145",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1682,
+  "messages_sha256": "34ccf591935daecefba50e5c860aeb4026c250a27d843eb7e7275c6d0d746a4a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of `tearDown` being executed for skipped `unittest.TestCase` classes when running with `--trace`. The change is minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces an assertion that assumes the parent is a `UnitTestCase`, which may not be clear to future maintainers.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "1672",
+      "completed_at_utc": "2026-11-06T04:10:03.687820+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of `tearDown` being executed for skipped `unittest.TestCase` classes when running with `--trace`. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces an assertion that assumes the parent is a `UnitTestCase`, which may not be clear to future maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of `tearDown` being executed for skipped `unittest.TestCase` classes when running with `--trace`. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces an assertion that assumes the parent is a `UnitTestCase`, which may not be clear to future maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

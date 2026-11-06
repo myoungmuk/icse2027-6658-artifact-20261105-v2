@@ -1,0 +1,50 @@
+{
+  "id": "50da9e9efd92b431990bb9b6",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_b770ce406637",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_b770ce406637.json",
+  "historical_output_sha256": "e0c961f32a7d75cb24770ef0fe5a660c41c4fdaf08783f980c046938c920b172",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1081,
+  "messages_sha256": "12faa53dbeaf260efc5458d3f3c5dc4556c5f7e16f5ab3bad35d02ddebc3e84c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with the PasswordResetForm link in the UserAdmin, but it may introduce a regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change assumes that the UserAdmin is always accessed via its primary key, which may not be true if the UserAdmin is accessed via another field (e.g., 'uuid'). This could lead to incorrect URLs and potential 404 errors.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 133,
+      "returned_model_request_id": "115",
+      "completed_at_utc": "2026-11-06T04:00:52.708120+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with the PasswordResetForm link in the UserAdmin, but it may introduce a regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change assumes that the UserAdmin is always accessed via its primary key, which may not be true if the UserAdmin is accessed via another field (e.g., 'uuid'). This could lead to incorrect URLs and potential 404 errors."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with the PasswordResetForm link in the UserAdmin, but it may introduce a regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change assumes that the UserAdmin is always accessed via its primary key, which may not be true if the UserAdmin is accessed via another field (e.g., 'uuid'). This could lead to incorrect URLs and potential 404 errors."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

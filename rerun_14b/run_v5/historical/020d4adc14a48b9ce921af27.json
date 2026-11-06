@@ -1,0 +1,70 @@
+{
+  "id": "020d4adc14a48b9ce921af27",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_d8856beb1f80",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_d8856beb1f80.json",
+  "historical_output_sha256": "6415decdb7fb3c2277ec38c61a76e44c08f4588c84689e27b6286c6c0b02c0c0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 941,
+  "messages_sha256": "2d074e5bdb480bf241d16ca6bf3d169b692197ae69f6fec44808bb5ff7ede05f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with docstring rendering but may introduce regressions or have incomplete functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change skips the first line of the docstring, which may break existing behavior where the first line is meaningful and indented.\"\n    },\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not handle cases where the first line is indented but not empty, which is a common scenario in docstrings.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no tests provided to verify the change, increasing the risk of regressions in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 200,
+      "returned_model_request_id": "607",
+      "completed_at_utc": "2026-11-06T04:03:41.541297+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with docstring rendering but may introduce regressions or have incomplete functionality.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change skips the first line of the docstring, which may break existing behavior where the first line is meaningful and indented."
+      },
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not handle cases where the first line is indented but not empty, which is a common scenario in docstrings."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no tests provided to verify the change, increasing the risk of regressions in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with docstring rendering but may introduce regressions or have incomplete functionality.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change skips the first line of the docstring, which may break existing behavior where the first line is meaningful and indented."
+      },
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not handle cases where the first line is indented but not empty, which is a common scenario in docstrings."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no tests provided to verify the change, increasing the risk of regressions in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

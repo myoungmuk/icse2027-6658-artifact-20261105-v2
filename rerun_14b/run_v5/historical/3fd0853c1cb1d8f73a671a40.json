@@ -1,0 +1,50 @@
+{
+  "id": "3fd0853c1cb1d8f73a671a40",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_aec73b3ef93d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_aec73b3ef93d.json",
+  "historical_output_sha256": "e1df4e0d90850f972def7d7ec2f353330fa6aa7deed30eb6fe99a2010b929b14",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1006,
+  "messages_sha256": "8f432e0e2c49dcf3091729234d48e6f464c8865b4998019b0fa5022f32766490",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch correctly resolves the issue by calling `self.save_m2m()` in `UserCreationForm.save()`. However, there is a minor stylistic issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The `user.save()` call is duplicated. It should be removed to maintain minimal and clean code.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "872",
+      "completed_at_utc": "2026-11-06T04:05:22.634040+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch correctly resolves the issue by calling `self.save_m2m()` in `UserCreationForm.save()`. However, there is a minor stylistic issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The `user.save()` call is duplicated. It should be removed to maintain minimal and clean code."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The proposed patch correctly resolves the issue by calling `self.save_m2m()` in `UserCreationForm.save()`. However, there is a minor stylistic issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The `user.save()` call is duplicated. It should be removed to maintain minimal and clean code."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

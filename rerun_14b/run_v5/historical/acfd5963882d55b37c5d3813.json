@@ -1,0 +1,50 @@
+{
+  "id": "acfd5963882d55b37c5d3813",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_2ad8223d6747",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_2ad8223d6747.json",
+  "historical_output_sha256": "57164f7b1a7a6ac974284d27d80b967a35c7065679ad542a9c785479c5be8865",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 880,
+  "messages_sha256": "55de1687819f9e2aaca9e89f78070708e749b72f753359e39605aceecb739305",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds support for memoryview objects in HttpResponse, but lacks tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the functionality of the added memoryview handling.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 91,
+      "returned_model_request_id": "745",
+      "completed_at_utc": "2026-11-06T04:04:32.842136+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds support for memoryview objects in HttpResponse, but lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the added memoryview handling."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds support for memoryview objects in HttpResponse, but lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the added memoryview handling."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

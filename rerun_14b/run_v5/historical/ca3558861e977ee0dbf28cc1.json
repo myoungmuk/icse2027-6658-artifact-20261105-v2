@@ -1,0 +1,50 @@
+{
+  "id": "ca3558861e977ee0dbf28cc1",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_b2bde2563429",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_b2bde2563429.json",
+  "historical_output_sha256": "fe02df004a36041da6ddf9dd38c7b53b01faa40816af3225c94eafee3f2abfdf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 948,
+  "messages_sha256": "87f13a97c0779f82196c0c8bedbe213a1b1d4cafedc1df2f6c132f74ca225687",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly updates the primary key to None after deletion, but it may not handle all edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not address cases where the model has dependencies or when deletion fails. It should be extended to handle these scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "207",
+      "completed_at_utc": "2026-11-06T04:01:25.596733+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly updates the primary key to None after deletion, but it may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not address cases where the model has dependencies or when deletion fails. It should be extended to handle these scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly updates the primary key to None after deletion, but it may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not address cases where the model has dependencies or when deletion fails. It should be extended to handle these scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

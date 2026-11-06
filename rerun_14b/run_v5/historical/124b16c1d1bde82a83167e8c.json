@@ -1,0 +1,50 @@
+{
+  "id": "124b16c1d1bde82a83167e8c",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_2a0005287840",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_2a0005287840.json",
+  "historical_output_sha256": "5c8f0bb13647731ae5d75dcd4717022727408696c92c0922187958a1de9a0634",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 956,
+  "messages_sha256": "50c5c1580b269a6d831fb13b5d90a97d9da1df7ea14611238418ebea8734adf3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with the `timesince` function when `USE_TZ=True` and the interval is >1 month, but it lacks a comprehensive test suite to ensure no other edge cases are affected.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR includes a test for the specific case that was failing, but it does not provide a comprehensive test suite to ensure that the change does not introduce new issues or regressions in other scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "440",
+      "completed_at_utc": "2026-11-06T04:02:50.459918+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with the `timesince` function when `USE_TZ=True` and the interval is >1 month, but it lacks a comprehensive test suite to ensure no other edge cases are affected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR includes a test for the specific case that was failing, but it does not provide a comprehensive test suite to ensure that the change does not introduce new issues or regressions in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with the `timesince` function when `USE_TZ=True` and the interval is >1 month, but it lacks a comprehensive test suite to ensure no other edge cases are affected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR includes a test for the specific case that was failing, but it does not provide a comprehensive test suite to ensure that the change does not introduce new issues or regressions in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

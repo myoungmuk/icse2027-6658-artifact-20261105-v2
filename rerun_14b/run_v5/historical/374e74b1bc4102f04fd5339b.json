@@ -1,0 +1,60 @@
+{
+  "id": "374e74b1bc4102f04fd5339b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_27aea6367e2d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_27aea6367e2d.json",
+  "historical_output_sha256": "d7ee4919b3947941cfc19969a0b384592343e91da453206386e1054355bccd83",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1055,
+  "messages_sha256": "aab806d31eafb1fa9952fdd2fa4c1d1719685964874b08190a440149742b5d0b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce regressions and lacks tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch may break existing behavior for other rational numbers or expressions involving rationals.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no tests provided to ensure the patch works correctly in various scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.5\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "438",
+      "completed_at_utc": "2026-11-06T04:02:50.459496+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce regressions and lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior for other rational numbers or expressions involving rationals."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests provided to ensure the patch works correctly in various scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.5
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce regressions and lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior for other rational numbers or expressions involving rationals."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests provided to ensure the patch works correctly in various scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.5
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

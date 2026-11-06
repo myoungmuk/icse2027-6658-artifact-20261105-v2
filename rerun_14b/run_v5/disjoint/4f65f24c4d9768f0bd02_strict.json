@@ -1,0 +1,29 @@
+{
+  "code": "4f65f24c4d9768f0bd02",
+  "instance_id": "psf__requests-2393",
+  "split": "development",
+  "kind": "developer",
+  "id": "4f65f24c4d9768f0bd02_strict",
+  "arm": "strict",
+  "input_tokens": 724,
+  "messages_sha256": "01eecd982b826bfc9b1dc716a006c39d3fe49648823987ac30e3091fecb4491c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a fragile approach by catching a generic exception and handling it in a way that may not address the root cause. It also introduces a potential performance issue by unquoting and re-quoting the URI, which could lead to unnecessary processing. Additionally, the patch does not include any tests to verify the correctness of the changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 88,
+      "returned_model_request_id": "2250",
+      "completed_at_utc": "2026-11-06T04:15:26.679206+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a fragile approach by catching a generic exception and handling it in a way that may not address the root cause. It also introduces a potential performance issue by unquoting and re-quoting the URI, which could lead to unnecessary processing. Additionally, the patch does not include any tests to verify the correctness of the changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

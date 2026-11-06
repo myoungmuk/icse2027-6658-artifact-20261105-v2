@@ -1,0 +1,50 @@
+{
+  "id": "c29684a7d42e2dbc18eda76e",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_6a1d9132823a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_6a1d9132823a.json",
+  "historical_output_sha256": "7ecb37a99fc6d91603098019fb36dee56e9c41aaa118057f407e19306f99b995",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1036,
+  "messages_sha256": "ef16a8d3430babd17e5b9287c54153bc66c7e0e48d2ee9ce395e4094deeb23b0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue of trailing slashes in directory names for django-admin startapp, but it may introduce unexpected behavior with other path separators.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change uses os.sep, which is the path separator for the current platform. This might introduce unexpected behavior if the code is run on a different platform with a different path separator.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "327",
+      "completed_at_utc": "2026-11-06T04:02:01.131639+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue of trailing slashes in directory names for django-admin startapp, but it may introduce unexpected behavior with other path separators.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change uses os.sep, which is the path separator for the current platform. This might introduce unexpected behavior if the code is run on a different platform with a different path separator."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue of trailing slashes in directory names for django-admin startapp, but it may introduce unexpected behavior with other path separators.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change uses os.sep, which is the path separator for the current platform. This might introduce unexpected behavior if the code is run on a different platform with a different path separator."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "244a07c758360619a49aec1e",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_a20a5f3e7a3d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_a20a5f3e7a3d.json",
+  "historical_output_sha256": "4cb9bd5e8877460361d4d6fe47ba6ca016b3f4b85d067a772dbcc83154876b98",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2311,
+  "messages_sha256": "b94b1fb99760e7a64aaa079c3e6bcdc6c606bddea785e15d7ace4a0d632620c5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a new parameter `dtypes` to preserve dtypes in DataFrame output, but it may not handle all edge cases and could introduce behavioral regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not handle cases where the input DataFrame has different dtypes than the original input, which could lead to unexpected behavior.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The PR may break existing behavior for transformers that do not support dtype preservation, as it introduces a new parameter that could affect their output.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be more readable if the changes were split into smaller functions or if comments were added to explain the new logic.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.7\n}",
+      "finish_reason": "stop",
+      "output_tokens": 219,
+      "returned_model_request_id": "1650",
+      "completed_at_utc": "2026-11-06T04:10:03.682218+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a new parameter `dtypes` to preserve dtypes in DataFrame output, but it may not handle all edge cases and could introduce behavioral regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not handle cases where the input DataFrame has different dtypes than the original input, which could lead to unexpected behavior."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The PR may break existing behavior for transformers that do not support dtype preservation, as it introduces a new parameter that could affect their output."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable if the changes were split into smaller functions or if comments were added to explain the new logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.7
+  },
+  "normalized": {
+    "summary": "The PR introduces a new parameter `dtypes` to preserve dtypes in DataFrame output, but it may not handle all edge cases and could introduce behavioral regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not handle cases where the input DataFrame has different dtypes than the original input, which could lead to unexpected behavior."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The PR may break existing behavior for transformers that do not support dtype preservation, as it introduces a new parameter that could affect their output."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable if the changes were split into smaller functions or if comments were added to explain the new logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.7
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

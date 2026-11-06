@@ -1,0 +1,50 @@
+{
+  "id": "85a30d42f376bee27eb8cb8f",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_6ab6aac8cede",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_6ab6aac8cede.json",
+  "historical_output_sha256": "d90d0e1021b9d31ce0a672b9a0204795c79eee82407d414ccff447cb253aae29",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1638,
+  "messages_sha256": "7cfecaefcb4d7b28603a1e6489a8fecb8c8d9b58b45b9aacd7b200bbd2b14a7a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change is a micro-optimization that addresses a specific issue with CharField validators. It is minimal and does not introduce any apparent regressions or compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a conditional check for `self.max_length` which is not aligned with the style of the surrounding code. It could be more consistent with the existing pattern.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "980",
+      "completed_at_utc": "2026-11-06T04:05:55.612092+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change is a micro-optimization that addresses a specific issue with CharField validators. It is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a conditional check for `self.max_length` which is not aligned with the style of the surrounding code. It could be more consistent with the existing pattern."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change is a micro-optimization that addresses a specific issue with CharField validators. It is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a conditional check for `self.max_length` which is not aligned with the style of the surrounding code. It could be more consistent with the existing pattern."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

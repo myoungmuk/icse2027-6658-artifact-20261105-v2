@@ -1,0 +1,50 @@
+{
+  "id": "3f2793ac914f317dd8b15c0f",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_0c664dc1ea32",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_0c664dc1ea32.json",
+  "historical_output_sha256": "d84320b54c6f5b539055dbeee021ce8b25f0e67bac6e6bb49f7433af1d0634b9",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1022,
+  "messages_sha256": "d41783637f8c82a02f9d14b7aece8362937444e145ac9ab0bd4938aaabbe85af",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a non-minimal change by adding an argument to the `as_sql` method call, which may not be necessary or could have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change adds the `with_col_aliases=True` argument to the `as_sql` method call, which is not directly related to the issue of composed queries not changing the list of columns. This could introduce unintended side effects or indicate that the fix is not minimal.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 144,
+      "returned_model_request_id": "1238",
+      "completed_at_utc": "2026-11-06T04:07:22.387643+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a non-minimal change by adding an argument to the `as_sql` method call, which may not be necessary or could have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change adds the `with_col_aliases=True` argument to the `as_sql` method call, which is not directly related to the issue of composed queries not changing the list of columns. This could introduce unintended side effects or indicate that the fix is not minimal."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a non-minimal change by adding an argument to the `as_sql` method call, which may not be necessary or could have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change adds the `with_col_aliases=True` argument to the `as_sql` method call, which is not directly related to the issue of composed queries not changing the list of columns. This could introduce unintended side effects or indicate that the fix is not minimal."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

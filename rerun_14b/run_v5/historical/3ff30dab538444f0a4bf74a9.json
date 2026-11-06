@@ -1,0 +1,50 @@
+{
+  "id": "3ff30dab538444f0a4bf74a9",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_067f596b3de8",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_067f596b3de8.json",
+  "historical_output_sha256": "81b66b8ad0ad7442f3cb61f5701dce6ba0b34dd2448ee56f5ea21c4269d71970",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 768,
+  "messages_sha256": "58493ed780635b6569dc46163b1774e213ef62bc8edd3c9307396156227e39d2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a __reversed__() method to OrderedSet, which is a straightforward change. However, it lacks tests to ensure the functionality works as expected.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the __reversed__() method works correctly with OrderedSet.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "542",
+      "completed_at_utc": "2026-11-06T04:03:24.719494+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a __reversed__() method to OrderedSet, which is a straightforward change. However, it lacks tests to ensure the functionality works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the __reversed__() method works correctly with OrderedSet."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds a __reversed__() method to OrderedSet, which is a straightforward change. However, it lacks tests to ensure the functionality works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the __reversed__() method works correctly with OrderedSet."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

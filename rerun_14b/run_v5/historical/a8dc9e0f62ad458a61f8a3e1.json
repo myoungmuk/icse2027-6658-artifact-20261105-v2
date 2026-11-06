@@ -1,0 +1,60 @@
+{
+  "id": "a8dc9e0f62ad458a61f8a3e1",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_d9412de4022c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_d9412de4022c.json",
+  "historical_output_sha256": "b4eb3b2ba8b89f0b1f6e4003197895103f41b996bcd9966de2137820a0fc5826",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 928,
+  "messages_sha256": "4b68d8431f8aa45c83eaf3263aac3a4d1866344e1228a820132c277716fefde2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a change to handle encoding more robustly but may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a new default behavior by using `r.apparent_encoding` when `r.encoding` is `None`. This could lead to unexpected behavior if `r.apparent_encoding` is incorrect or if it changes the behavior of existing code that relies on `r.encoding` being `None`.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the behavior of the change. This increases the risk of regressions or unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 189,
+      "returned_model_request_id": "63",
+      "completed_at_utc": "2026-11-06T04:00:36.146764+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a change to handle encoding more robustly but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a new default behavior by using `r.apparent_encoding` when `r.encoding` is `None`. This could lead to unexpected behavior if `r.apparent_encoding` is incorrect or if it changes the behavior of existing code that relies on `r.encoding` being `None`."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the behavior of the change. This increases the risk of regressions or unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR introduces a change to handle encoding more robustly but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a new default behavior by using `r.apparent_encoding` when `r.encoding` is `None`. This could lead to unexpected behavior if `r.apparent_encoding` is incorrect or if it changes the behavior of existing code that relies on `r.encoding` being `None`."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the behavior of the change. This increases the risk of regressions or unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

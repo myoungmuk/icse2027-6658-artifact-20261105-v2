@@ -1,0 +1,29 @@
+{
+  "code": "6744ef87bc9c46c940cc",
+  "instance_id": "django__django-16657",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "6744ef87bc9c46c940cc_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 721,
+  "messages_sha256": "37abc6a1e14b8d66ff0073bd9d32e7964b497605552f356c533b8d773adc263f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch modifies the behavior of QuerySet.update() to handle descending order by annotations, but it does not address the root cause of the issue. The error is due to the inability to resolve the annotated field 'message_length' into a field. The patch only adds a test skip for a descending annotation test, which does not resolve the underlying problem.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 91,
+      "returned_model_request_id": "2697",
+      "completed_at_utc": "2026-11-06T04:18:08.356845+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch modifies the behavior of QuerySet.update() to handle descending order by annotations, but it does not address the root cause of the issue. The error is due to the inability to resolve the annotated field 'message_length' into a field. The patch only adds a test skip for a descending annotation test, which does not resolve the underlying problem."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

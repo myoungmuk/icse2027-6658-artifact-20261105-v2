@@ -1,0 +1,50 @@
+{
+  "id": "fdc97a0d028e5f3b6d06f74a",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_300d45238137",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_300d45238137.json",
+  "historical_output_sha256": "dde71d3eaf31217990414ce55dd39e897d0d90f9d3891330d83c78818ccd4583",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1020,
+  "messages_sha256": "f04cba7ac87ad9155bd0e576c2f2040d38591fc1c78f8d50a3ce37c9177b01bc",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the return type matches the input type, but it may introduce unexpected behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a conditional check that may not cover all edge cases, potentially leading to unexpected behavior in other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "1339",
+      "completed_at_utc": "2026-11-06T04:07:59.676430+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the return type matches the input type, but it may introduce unexpected behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a conditional check that may not cover all edge cases, potentially leading to unexpected behavior in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the return type matches the input type, but it may introduce unexpected behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a conditional check that may not cover all edge cases, potentially leading to unexpected behavior in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "4a726ef130c5df521045e1ad",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_a7c79010c9ab",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_a7c79010c9ab.json",
+  "historical_output_sha256": "8572579af9910d4305850990a313a19b5606ce1086c0d255c997a822d0ee4def",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2534,
+  "messages_sha256": "2b8ab678f2c9502ddaceaaccb1d9c5575335eec9c0c60d098298118d063d3a22",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change resolves the KeyError issue with the custom ForeignKey field by using `pop` instead of `del`. The test file is included to reproduce the issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"minor\",\n      \"description\": \"The fix is specific to the failing test and may not cover other similar cases.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "1770",
+      "completed_at_utc": "2026-11-06T04:10:43.129542+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change resolves the KeyError issue with the custom ForeignKey field by using `pop` instead of `del`. The test file is included to reproduce the issue.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The fix is specific to the failing test and may not cover other similar cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change resolves the KeyError issue with the custom ForeignKey field by using `pop` instead of `del`. The test file is included to reproduce the issue.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The fix is specific to the failing test and may not cover other similar cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

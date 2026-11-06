@@ -1,0 +1,50 @@
+{
+  "id": "285c5f467b72ad56388ddcec",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_2b9055384639",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_2b9055384639.json",
+  "historical_output_sha256": "53fbd0cbd4fa343459f790e86de82ce9cee11246bf9b85186d1bb8059569845c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1612,
+  "messages_sha256": "eca5887375af7bfc9b28af9ce5a9c4b8df910082fc9e0ee9395c0f240b9cc0b9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces a new variable 'dependencies' that is not used in the function.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The variable 'dependencies' is declared but not used in the function 'generate_altered_fields'. This introduces unnecessary complexity and reduces readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 101,
+      "returned_model_request_id": "1485",
+      "completed_at_utc": "2026-11-06T04:08:55.027437+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces a new variable 'dependencies' that is not used in the function.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The variable 'dependencies' is declared but not used in the function 'generate_altered_fields'. This introduces unnecessary complexity and reduces readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The change introduces a new variable 'dependencies' that is not used in the function.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The variable 'dependencies' is declared but not used in the function 'generate_altered_fields'. This introduces unnecessary complexity and reduces readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "8e3edb3717cdb903d762ee46",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a33b4547caaa",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a33b4547caaa.json",
+  "historical_output_sha256": "9552fafc2de558a3d6112c5b4f67be96def3a992b1237fbfdd72db93e23539e5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1095,
+  "messages_sha256": "081a68a68214e00d3058b1f5adb57e87b642a8998d0a1c64b4492db144564b0a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue but may introduce regressions or have incomplete test coverage.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change assumes that the UserAdmin is always accessed via its primary key, which may not be true in all cases. This could lead to unexpected behavior or 404 errors in other scenarios.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify that the change does not introduce regressions or that it works correctly in different scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 167,
+      "returned_model_request_id": "593",
+      "completed_at_utc": "2026-11-06T04:03:41.538542+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue but may introduce regressions or have incomplete test coverage.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change assumes that the UserAdmin is always accessed via its primary key, which may not be true in all cases. This could lead to unexpected behavior or 404 errors in other scenarios."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify that the change does not introduce regressions or that it works correctly in different scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue but may introduce regressions or have incomplete test coverage.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change assumes that the UserAdmin is always accessed via its primary key, which may not be true in all cases. This could lead to unexpected behavior or 404 errors in other scenarios."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify that the change does not introduce regressions or that it works correctly in different scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

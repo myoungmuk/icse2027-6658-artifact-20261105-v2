@@ -1,0 +1,50 @@
+{
+  "id": "8eac66d8dbfe488687051dd9",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_952195424f8a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_952195424f8a.json",
+  "historical_output_sha256": "38b59ef136bac827234ecedd1a42e8acbf2e1495361ed691ffff7d50a959fdf1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2038,
+  "messages_sha256": "53bee0c1c430008e6ddca476addc21a4831dc8b6b9dd240d14d6ee22cb4db989",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue of unnecessary expansion of float values in FITS cards, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the formatting of float values to use Python's string representation, which may not always produce the desired output for FITS cards. This could lead to unexpected behavior or compatibility issues with existing FITS files.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "1717",
+      "completed_at_utc": "2026-11-06T04:10:23.396587+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue of unnecessary expansion of float values in FITS cards, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch changes the formatting of float values to use Python's string representation, which may not always produce the desired output for FITS cards. This could lead to unexpected behavior or compatibility issues with existing FITS files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue of unnecessary expansion of float values in FITS cards, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch changes the formatting of float values to use Python's string representation, which may not always produce the desired output for FITS cards. This could lead to unexpected behavior or compatibility issues with existing FITS files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

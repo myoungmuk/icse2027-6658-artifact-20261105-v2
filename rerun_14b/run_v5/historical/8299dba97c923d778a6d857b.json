@@ -1,0 +1,50 @@
+{
+  "id": "8299dba97c923d778a6d857b",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_3dbe47a0ddd2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_3dbe47a0ddd2.json",
+  "historical_output_sha256": "e43b5fd585bbb4638ce9026c084d8086e7f74eaaeb5e25a3f41b8de309befcfc",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1663,
+  "messages_sha256": "e7bf768b2c2536403392f542cd7e5c6e05625b6ec39cf02fd58fc7ef9f76de1f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue with SimpleLazyObject in nested subquery annotations by modifying the output_field property in query.py. The change is minimal and focused on resolving the reported bug.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor maintainability/readability defect by adding an additional line of code without clear context. The use of getattr with a default value could be clearer.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "1681",
+      "completed_at_utc": "2026-11-06T04:10:23.389034+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue with SimpleLazyObject in nested subquery annotations by modifying the output_field property in query.py. The change is minimal and focused on resolving the reported bug.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding an additional line of code without clear context. The use of getattr with a default value could be clearer."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue with SimpleLazyObject in nested subquery annotations by modifying the output_field property in query.py. The change is minimal and focused on resolving the reported bug.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding an additional line of code without clear context. The use of getattr with a default value could be clearer."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "9d45e7ad4a318b7dae53b09a",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_e3e5cb56a018",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_e3e5cb56a018.json",
+  "historical_output_sha256": "b52558c9f2e1253571abf905962aff4fbf0820b5ad90595ea215155d8a03aa84",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1079,
+  "messages_sha256": "18974d13efa14101086b8e31337338dab5289630f21bcdee887fa46abcb656dc",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of Rational not being wrapped correctly in mpmath, but it lacks tests to ensure its correctness and completeness.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify that the Rational wrapping works as expected in various scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "514",
+      "completed_at_utc": "2026-11-06T04:03:08.423883+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of Rational not being wrapped correctly in mpmath, but it lacks tests to ensure its correctness and completeness.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the Rational wrapping works as expected in various scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of Rational not being wrapped correctly in mpmath, but it lacks tests to ensure its correctness and completeness.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the Rational wrapping works as expected in various scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

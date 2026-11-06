@@ -1,0 +1,50 @@
+{
+  "id": "7a89eaae579548d16a7bfdc8",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_5c19ff208e91",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_5c19ff208e91.json",
+  "historical_output_sha256": "f7d925f597af94021b9c551c83fb854ba1f77cde677f0470e5aafbbddc97a14f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2363,
+  "messages_sha256": "8236943660be3373350e424b13cd5b9acd10c1203c76a3a6a342886b62e0da1f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the pickling issue by replacing weak references with strong references in the Grouper class. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new PicklableGrouper class uses strong references instead of weak references, which may have implications for memory management and could potentially lead to memory leaks if not handled carefully.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "1818",
+      "completed_at_utc": "2026-11-06T04:11:18.907989+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the pickling issue by replacing weak references with strong references in the Grouper class. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new PicklableGrouper class uses strong references instead of weak references, which may have implications for memory management and could potentially lead to memory leaks if not handled carefully."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR resolves the pickling issue by replacing weak references with strong references in the Grouper class. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new PicklableGrouper class uses strong references instead of weak references, which may have implications for memory management and could potentially lead to memory leaks if not handled carefully."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

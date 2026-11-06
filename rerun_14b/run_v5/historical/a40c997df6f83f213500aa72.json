@@ -1,0 +1,50 @@
+{
+  "id": "a40c997df6f83f213500aa72",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_897eb9728733",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_897eb9728733.json",
+  "historical_output_sha256": "7afd31ed2e4cb8d5287c7ad3c1efa8e9d70788a4ac4472d71f929adab771b654",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3047,
+  "messages_sha256": "ebf3be2c50b257bec959998956b514ee490bba4f95e1ebc2c995cfbe7c1d11db",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of inconsistent results between single-threaded and multi-threaded KMeans runs by ensuring consistent random seeds. The changes are minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces new test files, which are not shown in the diff. However, since the tests already pass, this is not a blocking issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "2085",
+      "completed_at_utc": "2026-11-06T04:14:03.534338+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of inconsistent results between single-threaded and multi-threaded KMeans runs by ensuring consistent random seeds. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new test files, which are not shown in the diff. However, since the tests already pass, this is not a blocking issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of inconsistent results between single-threaded and multi-threaded KMeans runs by ensuring consistent random seeds. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new test files, which are not shown in the diff. However, since the tests already pass, this is not a blocking issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

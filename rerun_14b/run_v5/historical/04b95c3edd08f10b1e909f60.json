@@ -1,0 +1,50 @@
+{
+  "id": "04b95c3edd08f10b1e909f60",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_d9af8c60e284",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_d9af8c60e284.json",
+  "historical_output_sha256": "87ba00aafaab444b2ec29faab56ec7b338d71af1e50adcf391e720ead8481668",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1351,
+  "messages_sha256": "1d68a7e5e3ee84e8b2e9701c57ccc208de4b64a9e596deb2a9dc208f320fc34a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the handling of UnicodeEncodeError, which could lead to a functional issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR removes the handling of UnicodeEncodeError, which could cause the password input to fail if the current locale can't encode the data.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "1629",
+      "completed_at_utc": "2026-11-06T04:09:46.497152+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the handling of UnicodeEncodeError, which could lead to a functional issue.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR removes the handling of UnicodeEncodeError, which could cause the password input to fail if the current locale can't encode the data."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the handling of UnicodeEncodeError, which could lead to a functional issue.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR removes the handling of UnicodeEncodeError, which could cause the password input to fail if the current locale can't encode the data."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "f99f8266e1f8460b63201e05",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_02faca9f3721",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_02faca9f3721.json",
+  "historical_output_sha256": "2c05d77c9e88edca61e42268eb1af180620f54b3c2852774f4fd0fc6a688b186",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1114,
+  "messages_sha256": "0bdcca9d1451c2f9439718d371eb8addc165e5c839289eb0c1f66bdca6e08c18",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue of model options not being cleared when squashing migrations, but it introduces a non-minimal change by modifying the `CreateModel` operation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the `CreateModel` operation, which may have unintended side effects or introduce complexity.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "994",
+      "completed_at_utc": "2026-11-06T04:05:55.614778+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue of model options not being cleared when squashing migrations, but it introduces a non-minimal change by modifying the `CreateModel` operation.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the `CreateModel` operation, which may have unintended side effects or introduce complexity."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue of model options not being cleared when squashing migrations, but it introduces a non-minimal change by modifying the `CreateModel` operation.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the `CreateModel` operation, which may have unintended side effects or introduce complexity."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

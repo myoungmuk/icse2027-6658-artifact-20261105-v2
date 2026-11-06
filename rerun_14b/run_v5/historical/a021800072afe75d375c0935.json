@@ -1,0 +1,50 @@
+{
+  "id": "a021800072afe75d375c0935",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_8d71239888ac",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_8d71239888ac.json",
+  "historical_output_sha256": "ef35b82f7cf4821d32765277b89ff1397a64a583aefa32397c6ad6689b5cda86",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1054,
+  "messages_sha256": "889076078a03b47440c113f39a635644914948a5146a2f3ec9d9ad9d720ec12d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change adds a `do_not_call_in_templates` attribute to enumeration types to prevent them from being called in Django templates. This resolves the issue of enumeration types not being usable in templates.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new attribute `do_not_call_in_templates` which is not aligned with the existing conventions in the Django codebase. It would be better to follow the existing style and naming conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 136,
+      "returned_model_request_id": "1943",
+      "completed_at_utc": "2026-11-06T04:12:42.349684+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change adds a `do_not_call_in_templates` attribute to enumeration types to prevent them from being called in Django templates. This resolves the issue of enumeration types not being usable in templates.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new attribute `do_not_call_in_templates` which is not aligned with the existing conventions in the Django codebase. It would be better to follow the existing style and naming conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change adds a `do_not_call_in_templates` attribute to enumeration types to prevent them from being called in Django templates. This resolves the issue of enumeration types not being usable in templates.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new attribute `do_not_call_in_templates` which is not aligned with the existing conventions in the Django codebase. It would be better to follow the existing style and naming conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

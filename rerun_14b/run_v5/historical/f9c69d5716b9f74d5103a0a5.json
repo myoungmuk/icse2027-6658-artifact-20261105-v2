@@ -1,0 +1,50 @@
+{
+  "id": "f9c69d5716b9f74d5103a0a5",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_09670bcd78a1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_09670bcd78a1.json",
+  "historical_output_sha256": "21284f29ec77741386f626f30aa20086e94161e1bc76f7caea0b0d131b0a3258",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1546,
+  "messages_sha256": "d69daee80c78c99c93e9e5b6181527a7a542fb58f3ad9fc735faee7ecab4b2dd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific bug with boolean weights but introduces a non-minimal change by duplicating the reduction logic.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR introduces a non-minimal change by duplicating the reduction logic based on the data type of the weights. This can lead to code bloat and maintenance challenges.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "626",
+      "completed_at_utc": "2026-11-06T04:03:59.180666+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific bug with boolean weights but introduces a non-minimal change by duplicating the reduction logic.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR introduces a non-minimal change by duplicating the reduction logic based on the data type of the weights. This can lead to code bloat and maintenance challenges."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific bug with boolean weights but introduces a non-minimal change by duplicating the reduction logic.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR introduces a non-minimal change by duplicating the reduction logic based on the data type of the weights. This can lead to code bloat and maintenance challenges."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "673445b8b819b39f5d972a67",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_5a2b369dc4c9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_5a2b369dc4c9.json",
+  "historical_output_sha256": "848380aac213bbbe0a6c2abb48204e73dec84b19756822b6c4295b6907df596b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 854,
+  "messages_sha256": "922e6a144b83ec70de856be0d57c8002ff1fb5868966d633d89c6a58e8b482b7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR changes the behavior of `0**-oo` to return `zoo`, aligning with the documentation. However, it introduces a potential regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior or assumptions in other parts of the codebase that rely on `0**-oo` returning `0`. This could lead to unexpected results or errors in calculations.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "110",
+      "completed_at_utc": "2026-11-06T04:00:52.706549+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR changes the behavior of `0**-oo` to return `zoo`, aligning with the documentation. However, it introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior or assumptions in other parts of the codebase that rely on `0**-oo` returning `0`. This could lead to unexpected results or errors in calculations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR changes the behavior of `0**-oo` to return `zoo`, aligning with the documentation. However, it introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior or assumptions in other parts of the codebase that rely on `0**-oo` returning `0`. This could lead to unexpected results or errors in calculations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

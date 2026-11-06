@@ -1,0 +1,50 @@
+{
+  "id": "14943d6eb6b132dc00ae44ff",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_51a098ff7349",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_51a098ff7349.json",
+  "historical_output_sha256": "0af1719c5849d8de53d53d0c9e5b7701a5464b2db44c6ad3ff10ae5264778d88",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1527,
+  "messages_sha256": "0b4ee0b15bae8c5e7eb8fae2481cf3df81a29fc301a21b9dd900470c7fcc0b14",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly updates the regex to reject invalid characters in the username and password, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The updated regex may inadvertently break existing URLs that were previously valid but now contain disallowed characters in the username or password.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "996",
+      "completed_at_utc": "2026-11-06T04:05:55.615152+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly updates the regex to reject invalid characters in the username and password, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The updated regex may inadvertently break existing URLs that were previously valid but now contain disallowed characters in the username or password."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly updates the regex to reject invalid characters in the username and password, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The updated regex may inadvertently break existing URLs that were previously valid but now contain disallowed characters in the username or password."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

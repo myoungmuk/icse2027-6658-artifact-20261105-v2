@@ -1,0 +1,50 @@
+{
+  "id": "62c27b8db495f27e5cbf2259",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_81461dfdbdb5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_81461dfdbdb5.json",
+  "historical_output_sha256": "e0870a63b4099b4d5497588f4abca84151b125803626e1de3f17a4bdd76af974",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1511,
+  "messages_sha256": "a172d1dc29ee43cd7a236d8cab83ae6fb4312448eee5bbb2858d4f866820f7c5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by skipping the first line when calculating indentation, which should resolve the error. The new test file is included, but the test function does not assert any outcomes, which is a minor issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test function in test_trim_docstring.py does not include assertions, which is not ideal for automated testing.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "1786",
+      "completed_at_utc": "2026-11-06T04:11:18.901784+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by skipping the first line when calculating indentation, which should resolve the error. The new test file is included, but the test function does not assert any outcomes, which is a minor issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test function in test_trim_docstring.py does not include assertions, which is not ideal for automated testing."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by skipping the first line when calculating indentation, which should resolve the error. The new test file is included, but the test function does not assert any outcomes, which is a minor issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test function in test_trim_docstring.py does not include assertions, which is not ideal for automated testing."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

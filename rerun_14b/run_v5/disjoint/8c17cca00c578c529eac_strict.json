@@ -1,0 +1,29 @@
+{
+  "code": "8c17cca00c578c529eac",
+  "instance_id": "psf__requests-2393",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "8c17cca00c578c529eac_strict",
+  "arm": "strict",
+  "input_tokens": 833,
+  "messages_sha256": "7dcf9673e57cc09d5bff0e1fd81ea600fa8f0fb0a27762343738e187b8d2b209",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch removes the '%' character from the safe characters in the `requote_uri` function, which could lead to incorrect URL encoding and potential security issues. Additionally, the patch includes a new script to reproduce the issue, but it does not address the root cause of the problem.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 77,
+      "returned_model_request_id": "2252",
+      "completed_at_utc": "2026-11-06T04:15:26.679732+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch removes the '%' character from the safe characters in the `requote_uri` function, which could lead to incorrect URL encoding and potential security issues. Additionally, the patch includes a new script to reproduce the issue, but it does not address the root cause of the problem."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

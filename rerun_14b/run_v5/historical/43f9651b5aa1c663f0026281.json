@@ -1,0 +1,50 @@
+{
+  "id": "43f9651b5aa1c663f0026281",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_7936d3a09818",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_7936d3a09818.json",
+  "historical_output_sha256": "d7b7d16be48b8f38721c4867608c6be2e933d6d638dec4aacee6053201876a4d",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 2885,
+  "messages_sha256": "157cf4a10b18cdb4e10e3c13b1a13b7639b399eebd2f4dba9111404dd925658e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds precomputed CDF methods for several distributions, which should resolve the integration issues reported. The changes are minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces duplicate class definitions for ArcsinDistribution, DagumDistribution, FrechetDistribution, GammaDistribution, and GammaInverseDistribution. This is likely a mistake and should be corrected.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "1340",
+      "completed_at_utc": "2026-11-06T04:07:59.676611+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds precomputed CDF methods for several distributions, which should resolve the integration issues reported. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces duplicate class definitions for ArcsinDistribution, DagumDistribution, FrechetDistribution, GammaDistribution, and GammaInverseDistribution. This is likely a mistake and should be corrected."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR adds precomputed CDF methods for several distributions, which should resolve the integration issues reported. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces duplicate class definitions for ArcsinDistribution, DagumDistribution, FrechetDistribution, GammaDistribution, and GammaInverseDistribution. This is likely a mistake and should be corrected."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

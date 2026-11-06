@@ -1,4 +1,4 @@
-# ICSE 2027 #6658 공개 자료 — 2026-11-06 v13
+# ICSE 2027 #6658 공개 자료 — 2026-11-06 v14
 
 v13은 이전에 미검증이던4사례의 원인 분리 실험을 추가했다. 최종26프로세스·
 테스트122슬롯·관찰51시나리오이며, 이전 Dask skip48슬롯도 실제 실행했다.
@@ -152,7 +152,7 @@ tested configurations. Raw controls, diagnostic variants, source hashes, native
 saved outputs, separate invalid-response accounting and offline scripts are
 included. These are targeted technical findings, not independent human labels,
 fresh native-model inference or all-system same-task comparisons. Checklist
-coverage remains49/58(84.48%). The manuscript stays9+1 pages; prior releases remain.
+coverage remains 49/58(84.48%). The manuscript stays9+1 pages; prior releases remain.
 
 
 ## v13 residual CPU diagnostics
@@ -161,4 +161,14 @@ See [residual_diagnostics](residual_diagnostics/README.md) for4 post-hoc cases,
 26 final processes,122 executed test slots and51 witness scenarios. Separate
 warning-policy and import-only interventions expose deeper functional effects;
 PCA provides a normal-path qualification. No new human ratings or model inference.
-Checklist coverage remains49/58(84.48%); the paper remains9+1 pages.
+Checklist coverage remains 49/58(84.48%); the paper remains9+1 pages.
+
+
+## v14 fresh 14B inference
+
+See [rerun_14b](rerun_14b/README.md). All 2,197 archived 14B configurations
+receive a fresh known-condition rerun, followed by 560 planned inputs on 140 new
+development/heldout tasks. Actual model calls: 2,756.
+Exact historical runtime identity remains unknown; archived false negative-control
+instructions remain explicitly flagged. No human ratings or native Cihan/Shi full
+pipeline. Paper 9+1 pages; checklist 49/58(84.48%). Prior releases remain.

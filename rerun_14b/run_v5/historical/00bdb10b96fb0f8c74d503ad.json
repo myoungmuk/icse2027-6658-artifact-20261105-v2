@@ -1,0 +1,50 @@
+{
+  "id": "00bdb10b96fb0f8c74d503ad",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_0e7afd11bd75",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_0e7afd11bd75.json",
+  "historical_output_sha256": "690928dc6bcc58d9dfa684e8ad427cc68004f476f4ce889cf04c27644d83036f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1081,
+  "messages_sha256": "12faa53dbeaf260efc5458d3f3c5dc4556c5f7e16f5ab3bad35d02ddebc3e84c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with the PasswordResetForm link in the UserAdmin, but it may introduce a regression risk due to the assumption about the URL structure.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change assumes that the UserAdmin URL structure will always be two levels deep, which may not be true for all configurations. This could lead to a behavioral regression if the URL structure is different.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "637",
+      "completed_at_utc": "2026-11-06T04:03:59.183101+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with the PasswordResetForm link in the UserAdmin, but it may introduce a regression risk due to the assumption about the URL structure.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change assumes that the UserAdmin URL structure will always be two levels deep, which may not be true for all configurations. This could lead to a behavioral regression if the URL structure is different."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with the PasswordResetForm link in the UserAdmin, but it may introduce a regression risk due to the assumption about the URL structure.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change assumes that the UserAdmin URL structure will always be two levels deep, which may not be true for all configurations. This could lead to a behavioral regression if the URL structure is different."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

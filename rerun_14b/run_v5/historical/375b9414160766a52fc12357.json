@@ -1,0 +1,50 @@
+{
+  "id": "375b9414160766a52fc12357",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_44c76d4584e2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_44c76d4584e2.json",
+  "historical_output_sha256": "3dad9285319ddcc73e250b4edd4d1bf83948605fa3fa959785af0193fbf72f82",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1789,
+  "messages_sha256": "9b1030b7f116bd703ba6bc6ddc833a3f1deccde0856c1414ed93ae7d17f4e145",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of duplicate yields in HashedFilesMixin's post_process() method, but introduces a non-minimal change by altering the method's behavior and structure.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR introduces a non-minimal change by altering the method's behavior and structure, which may increase complexity and maintenance overhead.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "724",
+      "completed_at_utc": "2026-11-06T04:04:32.837842+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of duplicate yields in HashedFilesMixin's post_process() method, but introduces a non-minimal change by altering the method's behavior and structure.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR introduces a non-minimal change by altering the method's behavior and structure, which may increase complexity and maintenance overhead."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of duplicate yields in HashedFilesMixin's post_process() method, but introduces a non-minimal change by altering the method's behavior and structure.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR introduces a non-minimal change by altering the method's behavior and structure, which may increase complexity and maintenance overhead."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

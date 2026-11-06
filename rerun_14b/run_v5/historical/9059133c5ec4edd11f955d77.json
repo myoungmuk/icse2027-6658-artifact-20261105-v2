@@ -1,0 +1,50 @@
+{
+  "id": "9059133c5ec4edd11f955d77",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_222253f4e735",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_222253f4e735.json",
+  "historical_output_sha256": "a9e01f9372ab2e34157c538a2eea5633d3be84a95d14f54ba4b7e827611c1f29",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 965,
+  "messages_sha256": "c6ea91465d08717a85ba9fb9ed7612bdb4e9678f499790d9863365d63f6ccaea",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of handling binary strings for the HTTP method, but it introduces a new function `to_native_string` without defining it.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a new function `to_native_string` without defining it, which will cause a NameError at runtime.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "166",
+      "completed_at_utc": "2026-11-06T04:01:09.167189+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of handling binary strings for the HTTP method, but it introduces a new function `to_native_string` without defining it.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `to_native_string` without defining it, which will cause a NameError at runtime."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of handling binary strings for the HTTP method, but it introduces a new function `to_native_string` without defining it.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `to_native_string` without defining it, which will cause a NameError at runtime."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

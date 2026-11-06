@@ -1,0 +1,21 @@
+{
+  "model_id": "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ",
+  "revision": "eb3172f06a6d6b3a15f08947b0668d782e4d2d2c",
+  "model_path": "/workspace/models/huggingface/Qwen/Qwen2.5-Coder-14B-Instruct-AWQ/eb3172f06a6d6b3a15f08947b0668d782e4d2d2c",
+  "seed": 6658,
+  "max_input_tokens": 32256,
+  "max_new_tokens": 512,
+  "dtype": "float16",
+  "do_sample": false,
+  "arms": [
+    "strict",
+    "adjusted"
+  ],
+  "development_tasks": 40,
+  "heldout_tasks": 100,
+  "selection_score": "(developer ACCEPT + official-unresolved REJECT) / 80 planned development packets; invalid decisions contribute zero correct, never an imputed verdict",
+  "tie_break": "strict",
+  "no_heldout_retuning": true,
+  "backend": "vllm",
+  "effective_runtime_configuration": "../inputs/config.json"
+}

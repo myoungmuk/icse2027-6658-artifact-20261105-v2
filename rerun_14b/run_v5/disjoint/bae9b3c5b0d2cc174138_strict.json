@@ -1,0 +1,29 @@
+{
+  "code": "bae9b3c5b0d2cc174138",
+  "instance_id": "django__django-15483",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "bae9b3c5b0d2cc174138_strict",
+  "arm": "strict",
+  "input_tokens": 1315,
+  "messages_sha256": "46ca566ca9dc90048737a4df4d95fc5b20a722428e4e485f6163dc68679cdb64",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file `app_admin.py` with an `AppAdmin` class, which is not backward compatible with the current Django admin API. It also lacks proper documentation and tests, which are essential for maintaining the quality and reliability of the Django project.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 74,
+      "returned_model_request_id": "2602",
+      "completed_at_utc": "2026-11-06T04:17:31.225007+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file `app_admin.py` with an `AppAdmin` class, which is not backward compatible with the current Django admin API. It also lacks proper documentation and tests, which are essential for maintaining the quality and reliability of the Django project."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

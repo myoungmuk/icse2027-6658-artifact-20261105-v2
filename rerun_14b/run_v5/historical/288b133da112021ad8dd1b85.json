@@ -1,0 +1,50 @@
+{
+  "id": "288b133da112021ad8dd1b85",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_fcbcea07e2b0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_fcbcea07e2b0.json",
+  "historical_output_sha256": "8f4c25719735a7dd4b71eefefe333cf9dce0805dde8f4d4e3ae5c4c93694faa5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1418,
+  "messages_sha256": "763719619c0e9e9670440683e5b9810bc012defd5f1dea0b54468c8b72c2c633",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The addition of `store_cv_values` may change the behavior of existing code that relies on the current initialization parameters of `RidgeClassifierCV`. This could lead to unexpected behavior or errors in user code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "1149",
+      "completed_at_utc": "2026-11-06T04:06:46.635774+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The addition of `store_cv_values` may change the behavior of existing code that relies on the current initialization parameters of `RidgeClassifierCV`. This could lead to unexpected behavior or errors in user code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The addition of `store_cv_values` may change the behavior of existing code that relies on the current initialization parameters of `RidgeClassifierCV`. This could lead to unexpected behavior or errors in user code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

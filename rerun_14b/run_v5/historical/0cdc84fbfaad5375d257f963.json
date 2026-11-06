@@ -1,0 +1,60 @@
+{
+  "id": "0cdc84fbfaad5375d257f963",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_bba98acfbb2f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_bba98acfbb2f.json",
+  "historical_output_sha256": "dba07950273801c7bdec829c8165d160be4eb15442d9d3672a29e8c82f25faf2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3568,
+  "messages_sha256": "2ea5ec3975cc511971b166561f98818dd89e503d1d34ee76466ec6275927caa6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of loading data into a non-default database with natural keys using foreign keys. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new files and changes that do not fully align with the project's conventions, such as the use of `testapp` instead of `testbug`.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code in `base.py` is slightly less readable due to the added comments and the change in the order of operations.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 173,
+      "returned_model_request_id": "2112",
+      "completed_at_utc": "2026-11-06T04:14:31.716651+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of loading data into a non-default database with natural keys using foreign keys. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files and changes that do not fully align with the project's conventions, such as the use of `testapp` instead of `testbug`."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code in `base.py` is slightly less readable due to the added comments and the change in the order of operations."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of loading data into a non-default database with natural keys using foreign keys. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files and changes that do not fully align with the project's conventions, such as the use of `testapp` instead of `testbug`."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code in `base.py` is slightly less readable due to the added comments and the change in the order of operations."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

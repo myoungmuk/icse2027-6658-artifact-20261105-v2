@@ -1,0 +1,60 @@
+{
+  "id": "998d621b35eb624db4690987",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_e48b12d987df",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_e48b12d987df.json",
+  "historical_output_sha256": "71233c6539d5a5ecff55f9f09280c94ef325c23ac6bfa2e1fd84391111e5458e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1937,
+  "messages_sha256": "2ae8ca04a0ac3cd78cd2210774e2d9c3da174bf0c632b374721249725019ca90",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific bug but lacks comprehensive testing and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix for the specific bug.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR does not update any documentation to reflect the changes made.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "89",
+      "completed_at_utc": "2026-11-06T04:00:36.151770+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific bug but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the specific bug."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not update any documentation to reflect the changes made."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific bug but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the specific bug."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not update any documentation to reflect the changes made."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

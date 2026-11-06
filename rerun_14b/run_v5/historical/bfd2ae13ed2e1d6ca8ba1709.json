@@ -1,0 +1,50 @@
+{
+  "id": "bfd2ae13ed2e1d6ca8ba1709",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_b888e811931e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_b888e811931e.json",
+  "historical_output_sha256": "ff4d674d046898d8352b85a2dbdb457bb491cfb1df90d71da52045dc79c7251b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1170,
+  "messages_sha256": "1acee9a074137027c70317ed244c30741146d3d95e4a34ebacc0c57bf1a66311",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. The addition of a new log file is not directly related to the functionality change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"minor\",\n      \"description\": \"The addition of a new log file 'server.log' is unrelated to the functionality change and may not be necessary.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "2089",
+      "completed_at_utc": "2026-11-06T04:14:03.535394+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. The addition of a new log file is not directly related to the functionality change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The addition of a new log file 'server.log' is unrelated to the functionality change and may not be necessary."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. The addition of a new log file is not directly related to the functionality change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The addition of a new log file 'server.log' is unrelated to the functionality change and may not be necessary."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

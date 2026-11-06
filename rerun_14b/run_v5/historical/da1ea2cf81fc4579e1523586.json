@@ -1,0 +1,50 @@
+{
+  "id": "da1ea2cf81fc4579e1523586",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_e8e0f1c5e6eb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_e8e0f1c5e6eb.json",
+  "historical_output_sha256": "0ac7ccd86b153da9c7fe00859dd63df9c94ae5e4469a5c2f808897889bf92793",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2037,
+  "messages_sha256": "07d7da8bce7f96b91c5c987dee0d82e19525b9d0cf917fa19421a5704279a9ee",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue of TypeError when using Q() & Exists() by adding __rand__, __ror__, __and__, and __or__ methods to the Exists class. It also updates the Q class to handle Exists objects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces new methods to the Exists class and updates the Q class, which may not align with the project's conventions for handling such operations.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 133,
+      "returned_model_request_id": "2076",
+      "completed_at_utc": "2026-11-06T04:14:03.532132+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue of TypeError when using Q() & Exists() by adding __rand__, __ror__, __and__, and __or__ methods to the Exists class. It also updates the Q class to handle Exists objects.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new methods to the Exists class and updates the Q class, which may not align with the project's conventions for handling such operations."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue of TypeError when using Q() & Exists() by adding __rand__, __ror__, __and__, and __or__ methods to the Exists class. It also updates the Q class to handle Exists objects.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new methods to the Exists class and updates the Q class, which may not align with the project's conventions for handling such operations."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

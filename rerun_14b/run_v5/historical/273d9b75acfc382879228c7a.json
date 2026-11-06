@@ -1,0 +1,50 @@
+{
+  "id": "273d9b75acfc382879228c7a",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_701a2f7b028d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_701a2f7b028d.json",
+  "historical_output_sha256": "8611b9dac11e824336d0da4f571d12f0550afb42530235472e39fef5b76b0caa",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1455,
+  "messages_sha256": "ac07be9d0767175a862bfc2f10cf441d2550738188ec10f88e3c41a99aa407a2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch changes the 'kbd' role to use 'addnodes.literal_kbd' instead of 'nodes.literal'. This change is likely intended to fix the issue with compound-key separators in the 'kbd' role, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the 'kbd' role to use 'addnodes.literal_kbd' instead of 'nodes.literal', which may break existing behavior or compatibility. The 'addnodes.literal_kbd' node type is not a standard part of the Sphinx documentation system, and its use may not be supported by all output formats or extensions.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 174,
+      "returned_model_request_id": "1398",
+      "completed_at_utc": "2026-11-06T04:08:36.606797+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch changes the 'kbd' role to use 'addnodes.literal_kbd' instead of 'nodes.literal'. This change is likely intended to fix the issue with compound-key separators in the 'kbd' role, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The patch changes the 'kbd' role to use 'addnodes.literal_kbd' instead of 'nodes.literal', which may break existing behavior or compatibility. The 'addnodes.literal_kbd' node type is not a standard part of the Sphinx documentation system, and its use may not be supported by all output formats or extensions."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch changes the 'kbd' role to use 'addnodes.literal_kbd' instead of 'nodes.literal'. This change is likely intended to fix the issue with compound-key separators in the 'kbd' role, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The patch changes the 'kbd' role to use 'addnodes.literal_kbd' instead of 'nodes.literal', which may break existing behavior or compatibility. The 'addnodes.literal_kbd' node type is not a standard part of the Sphinx documentation system, and its use may not be supported by all output formats or extensions."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

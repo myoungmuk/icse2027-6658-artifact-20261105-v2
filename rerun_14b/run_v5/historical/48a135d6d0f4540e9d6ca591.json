@@ -1,0 +1,50 @@
+{
+  "id": "48a135d6d0f4540e9d6ca591",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_294636913408",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_294636913408.json",
+  "historical_output_sha256": "9ee08f7e46c59c3917147fa9f4fb467361d7a4b82ac11c554ce36e8c7f8a10f9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 893,
+  "messages_sha256": "5289357453d3f0996f48473078464565c7a9dadec90e5d88ca6204d0cec80a8b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with handling binary strings as HTTP methods but introduces a non-minimal change by adding an unnecessary type check.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces an unnecessary type check for 'method' before converting it to a string, which is not needed as the subsequent 'builtin_str(method)' call will handle both string and binary string inputs correctly.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "93",
+      "completed_at_utc": "2026-11-06T04:00:36.152498+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with handling binary strings as HTTP methods but introduces a non-minimal change by adding an unnecessary type check.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces an unnecessary type check for 'method' before converting it to a string, which is not needed as the subsequent 'builtin_str(method)' call will handle both string and binary string inputs correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with handling binary strings as HTTP methods but introduces a non-minimal change by adding an unnecessary type check.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces an unnecessary type check for 'method' before converting it to a string, which is not needed as the subsequent 'builtin_str(method)' call will handle both string and binary string inputs correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

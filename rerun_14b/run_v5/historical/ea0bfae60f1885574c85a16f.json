@@ -1,0 +1,50 @@
+{
+  "id": "ea0bfae60f1885574c85a16f",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a9442acf69ae",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a9442acf69ae.json",
+  "historical_output_sha256": "158c78a32214eea359b4cff759b21386ecde30e9b9524ca3aad0f6b899a0d837",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 963,
+  "messages_sha256": "cb5a25eb60c71e39bc382b5e6c1c10da40c48aacda353f0d377d2c099a3fd596",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the specific issue but may not handle all edge cases related to adding zero vectors.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch only checks if the other vector is exactly 0, but it should also handle cases where the other vector is a scalar multiple of a zero vector or a vector with zero components.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "754",
+      "completed_at_utc": "2026-11-06T04:04:32.843816+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the specific issue but may not handle all edge cases related to adding zero vectors.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only checks if the other vector is exactly 0, but it should also handle cases where the other vector is a scalar multiple of a zero vector or a vector with zero components."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the specific issue but may not handle all edge cases related to adding zero vectors.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only checks if the other vector is exactly 0, but it should also handle cases where the other vector is a scalar multiple of a zero vector or a vector with zero components."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

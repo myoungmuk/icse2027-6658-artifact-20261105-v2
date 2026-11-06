@@ -1,0 +1,50 @@
+{
+  "id": "8bf6c65542db71f341695aea",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_8f439d0002e1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_8f439d0002e1.json",
+  "historical_output_sha256": "b1a7327dd10b690ea6acfb86735dc5d43ab5f2ec47c8f82af1e5256ce814cc27",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1336,
+  "messages_sha256": "ec74c22ea3f180c4ef0b9427cafff9dbdcaeff11b7cdacb75ca8dfdb89ad68c1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds support for C++ user-defined literals, but the regex used may not cover all valid UDLs.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The regex `user_defined_literal_re` may not cover all valid user-defined literals, such as those with suffixes like `1.0q` or `1.0_q`. This could lead to functional incompleteness.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "1296",
+      "completed_at_utc": "2026-11-06T04:07:59.667004+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds support for C++ user-defined literals, but the regex used may not cover all valid UDLs.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The regex `user_defined_literal_re` may not cover all valid user-defined literals, such as those with suffixes like `1.0q` or `1.0_q`. This could lead to functional incompleteness."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds support for C++ user-defined literals, but the regex used may not cover all valid UDLs.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The regex `user_defined_literal_re` may not cover all valid user-defined literals, such as those with suffixes like `1.0q` or `1.0_q`. This could lead to functional incompleteness."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "a59a69c71a16e4cf0988f2dd",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_3f184d1e5fd9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_3f184d1e5fd9.json",
+  "historical_output_sha256": "8d8fda7e4c121096edf79f4039e8119d95cf519ab8f4450cc020a7984641bed6",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1083,
+  "messages_sha256": "d49a00d6ce6a5f0363d88266ba61adb273e6b4a12d1916ad6c6c027d6beecc4f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch appears to resolve the issue by ensuring removed fields are generated before created models, but it lacks context on the broader implications.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a non-minimal change by altering the order of operations in the autodetector, which could potentially affect other parts of the migration generation process.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch does not align with the existing style of the code, as it introduces a new method call without proper context or explanation.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 168,
+      "returned_model_request_id": "1315",
+      "completed_at_utc": "2026-11-06T04:07:59.671913+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch appears to resolve the issue by ensuring removed fields are generated before created models, but it lacks context on the broader implications.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a non-minimal change by altering the order of operations in the autodetector, which could potentially affect other parts of the migration generation process."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch does not align with the existing style of the code, as it introduces a new method call without proper context or explanation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch appears to resolve the issue by ensuring removed fields are generated before created models, but it lacks context on the broader implications.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a non-minimal change by altering the order of operations in the autodetector, which could potentially affect other parts of the migration generation process."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch does not align with the existing style of the code, as it introduces a new method call without proper context or explanation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

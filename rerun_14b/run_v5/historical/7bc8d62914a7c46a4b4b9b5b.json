@@ -1,0 +1,60 @@
+{
+  "id": "7bc8d62914a7c46a4b4b9b5b",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_4ce247c6ecaa",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_4ce247c6ecaa.json",
+  "historical_output_sha256": "7b2debd533c9fb4fe718d6092aea2a86a24ae79a54890139ae1fc320f159c108",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1892,
+  "messages_sha256": "26af910e23e4a3a45d5c8e9215cc44a4dec02aa33d276e3303b2463056b079c0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by using the correct timezone for the database, but it is hardcoded for the 'legacy' database.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change is not minimal and scope creeped by hardcoding the 'legacy' database. It does not handle other databases with different timezone settings.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"major\",\n      \"description\": \"The code does not follow the project convention of using settings.DATABASES[alias] to get the database configuration.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 160,
+      "returned_model_request_id": "1457",
+      "completed_at_utc": "2026-11-06T04:08:55.021902+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by using the correct timezone for the database, but it is hardcoded for the 'legacy' database.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The change is not minimal and scope creeped by hardcoding the 'legacy' database. It does not handle other databases with different timezone settings."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The code does not follow the project convention of using settings.DATABASES[alias] to get the database configuration."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by using the correct timezone for the database, but it is hardcoded for the 'legacy' database.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The change is not minimal and scope creeped by hardcoding the 'legacy' database. It does not handle other databases with different timezone settings."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The code does not follow the project convention of using settings.DATABASES[alias] to get the database configuration."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

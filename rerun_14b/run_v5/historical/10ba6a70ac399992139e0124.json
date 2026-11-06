@@ -1,0 +1,50 @@
+{
+  "id": "10ba6a70ac399992139e0124",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_04f8ef933012",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_04f8ef933012.json",
+  "historical_output_sha256": "440f740969d4ca5da3e6905c6c748f1373bc2c1c7441baca06b1acd20c9f71f8",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1210,
+  "messages_sha256": "72c7d48e2772aae9baa49c5e220eb258dd06631caf8ec2a959255946271f9f98",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of inherited attributes not being recognized by autodoc. It iterates through the method resolution order (MRO) of the class to find inherited attributes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding comments to explain the purpose of iterating through the MRO and handling attributes.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "1416",
+      "completed_at_utc": "2026-11-06T04:08:36.610396+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of inherited attributes not being recognized by autodoc. It iterates through the method resolution order (MRO) of the class to find inherited attributes.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the purpose of iterating through the MRO and handling attributes."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of inherited attributes not being recognized by autodoc. It iterates through the method resolution order (MRO) of the class to find inherited attributes.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the purpose of iterating through the MRO and handling attributes."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

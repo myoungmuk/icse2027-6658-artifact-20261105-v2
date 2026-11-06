@@ -1,0 +1,60 @@
+{
+  "id": "3de40e9171c14e5027e08c07",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_4b592227872b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_4b592227872b.json",
+  "historical_output_sha256": "16dc982b0ccb3b1bb77aa856bfcc499830ff36e9d03758dfa50fe566c5a863e4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2073,
+  "messages_sha256": "b3da069acb928ced333313ae0128d91e44ae1e071f6527b6d69021f6d6da5c69",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the inconsistency in the API by changing the 'dim' argument to 'coord' in DataArray.integrate. It includes a deprecation warning and a new test file.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces a new test file 'reproduce.py' which is not shown in the diff. This is expected, but it should be noted that the test file is not included in the diff.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR does not update the documentation for the 'integrate' method in DataArray. It should be noted that the documentation should be updated to reflect the change.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 194,
+      "returned_model_request_id": "1940",
+      "completed_at_utc": "2026-11-06T04:12:42.349135+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the inconsistency in the API by changing the 'dim' argument to 'coord' in DataArray.integrate. It includes a deprecation warning and a new test file.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new test file 'reproduce.py' which is not shown in the diff. This is expected, but it should be noted that the test file is not included in the diff."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not update the documentation for the 'integrate' method in DataArray. It should be noted that the documentation should be updated to reflect the change."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR resolves the inconsistency in the API by changing the 'dim' argument to 'coord' in DataArray.integrate. It includes a deprecation warning and a new test file.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new test file 'reproduce.py' which is not shown in the diff. This is expected, but it should be noted that the test file is not included in the diff."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not update the documentation for the 'integrate' method in DataArray. It should be noted that the documentation should be updated to reflect the change."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

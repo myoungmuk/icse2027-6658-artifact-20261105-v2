@@ -1,0 +1,50 @@
+{
+  "id": "c98243671b2939ce20a7d2eb",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_95473aa37802",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_95473aa37802.json",
+  "historical_output_sha256": "99869f8244a71e9f69b1112524dcad5f559a5685862e41bb25c913f29375ee2b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1208,
+  "messages_sha256": "8d97b4e28527c3008bad3c41c7497c2b7c4d71744417a47461ba093f6e732f76",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by modifying the logic to calculate the number of valid elements, but it introduces a potential regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change replaces `mask.shape[axis]` with `np.take(mask.shape, axis).prod()`, which may not handle all cases correctly and could introduce unexpected behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "965",
+      "completed_at_utc": "2026-11-06T04:05:55.609244+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by modifying the logic to calculate the number of valid elements, but it introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change replaces `mask.shape[axis]` with `np.take(mask.shape, axis).prod()`, which may not handle all cases correctly and could introduce unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by modifying the logic to calculate the number of valid elements, but it introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change replaces `mask.shape[axis]` with `np.take(mask.shape, axis).prod()`, which may not handle all cases correctly and could introduce unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

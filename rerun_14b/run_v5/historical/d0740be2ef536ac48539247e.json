@@ -1,0 +1,50 @@
+{
+  "id": "d0740be2ef536ac48539247e",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_032aebbf8108",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_032aebbf8108.json",
+  "historical_output_sha256": "44b5d378993aaed28fdbcb06c5347ae7725108d70ebc7506ff53584e6acd2267",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1243,
+  "messages_sha256": "5c4ad3a53be893b3a185a49a406a497dc517932655219c1c9e2924244a946794",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the empty_form is created with the correct form_kwargs, but it introduces a non-minimal change by restructuring the form instantiation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch restructures the form instantiation, which is not necessary for fixing the issue and may introduce unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "217",
+      "completed_at_utc": "2026-11-06T04:01:25.598654+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the empty_form is created with the correct form_kwargs, but it introduces a non-minimal change by restructuring the form instantiation.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch restructures the form instantiation, which is not necessary for fixing the issue and may introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the empty_form is created with the correct form_kwargs, but it introduces a non-minimal change by restructuring the form instantiation.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch restructures the form instantiation, which is not necessary for fixing the issue and may introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "39ec8d25bf1a57c11e2d7075",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_1da0661692c5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_1da0661692c5.json",
+  "historical_output_sha256": "ed49fbdba2943cfd8662944ea615c8aca7e2e62da89ccfe2a65430494337ccf2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 5596,
+  "messages_sha256": "599aa5237784f900b6e09c5eb3195e32816c3ae934d2767c49bc1a116ffb04d3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue with StratifiedKFold shuffling by modifying the implementation and documentation. The changes seem to align with the expected behavior and the tests pass.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The documentation update slightly deviates from the original style, which could be improved for consistency.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1813",
+      "completed_at_utc": "2026-11-06T04:11:18.907054+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue with StratifiedKFold shuffling by modifying the implementation and documentation. The changes seem to align with the expected behavior and the tests pass.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The documentation update slightly deviates from the original style, which could be improved for consistency."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue with StratifiedKFold shuffling by modifying the implementation and documentation. The changes seem to align with the expected behavior and the tests pass.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The documentation update slightly deviates from the original style, which could be improved for consistency."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

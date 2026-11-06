@@ -1,0 +1,50 @@
+{
+  "id": "494382370eb21e8edda3908a",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_097402ad8dd4",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_097402ad8dd4.json",
+  "historical_output_sha256": "532b7a87a54d85d7f1f277365aeea67d292e0b2d81f1b8b37ef740d2b35271c0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2359,
+  "messages_sha256": "7ee0b57ee10db10b34866d5b3cda0946694948cc1b8fce6f979d2afd86b75310",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly fixes the issue by ensuring min_samples is an integer, but it introduces a default value change for min_samples which may not be intended.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR changes the default value of min_samples from None to 5, which may not be intended and could break existing code that relies on the default being None.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "1130",
+      "completed_at_utc": "2026-11-06T04:06:46.632095+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly fixes the issue by ensuring min_samples is an integer, but it introduces a default value change for min_samples which may not be intended.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR changes the default value of min_samples from None to 5, which may not be intended and could break existing code that relies on the default being None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR correctly fixes the issue by ensuring min_samples is an integer, but it introduces a default value change for min_samples which may not be intended.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR changes the default value of min_samples from None to 5, which may not be intended and could break existing code that relies on the default being None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

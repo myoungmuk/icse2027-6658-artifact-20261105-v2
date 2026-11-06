@@ -1,0 +1,50 @@
+{
+  "id": "cc533c17b49e808a9cbc547a",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_6ebfa157121c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_6ebfa157121c.json",
+  "historical_output_sha256": "1c61d39b16cda78d295da01c775c194666db24c6682b80fab28f9618bcfa5b65",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1094,
+  "messages_sha256": "9607c27ce96481392842425809180618ff6789ded6952ad5f17948c4a6f39697",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes a bug in the posix implementation of locks but introduces a non-blocking error handling issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR incorrectly handles BlockingIOError by returning False, which is not the intended behavior for non-blocking locks. It should raise the exception or handle it appropriately.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "681",
+      "completed_at_utc": "2026-11-06T04:04:16.295891+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes a bug in the posix implementation of locks but introduces a non-blocking error handling issue.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The PR incorrectly handles BlockingIOError by returning False, which is not the intended behavior for non-blocking locks. It should raise the exception or handle it appropriately."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes a bug in the posix implementation of locks but introduces a non-blocking error handling issue.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The PR incorrectly handles BlockingIOError by returning False, which is not the intended behavior for non-blocking locks. It should raise the exception or handle it appropriately."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

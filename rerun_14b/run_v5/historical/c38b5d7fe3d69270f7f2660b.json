@@ -1,0 +1,60 @@
+{
+  "id": "c38b5d7fe3d69270f7f2660b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_8dae66bcae14",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_8dae66bcae14.json",
+  "historical_output_sha256": "cac7cfa796c2e57edf1b21944439e264574ff120a213351ea0a2367228b57720",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1354,
+  "messages_sha256": "63cc9921da7b0db859378e85883d07d516e0e31c715352c18bab3dc642bbc3c3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of dash offset not working for patch objects, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change modifies the behavior of dash patterns for all patch objects, which could potentially break existing code that relies on the traditional behavior of ignoring dash offsets.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify that the change does not introduce regressions or that the dash offset works as expected for different types of patch objects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 167,
+      "returned_model_request_id": "602",
+      "completed_at_utc": "2026-11-06T04:03:41.540359+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of dash offset not working for patch objects, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of dash patterns for all patch objects, which could potentially break existing code that relies on the traditional behavior of ignoring dash offsets."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the change does not introduce regressions or that the dash offset works as expected for different types of patch objects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of dash offset not working for patch objects, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of dash patterns for all patch objects, which could potentially break existing code that relies on the traditional behavior of ignoring dash offsets."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the change does not introduce regressions or that the dash offset works as expected for different types of patch objects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "44b15517ea6820970b79e52b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_93979c3d855c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_93979c3d855c.json",
+  "historical_output_sha256": "8dc68dd42f528a63e417748f4537c63a756b5209c508fed25b2640966876afff",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1261,
+  "messages_sha256": "6fd82f71ddd25b80a21277c5dde31876f7eef086d44684ee1d0956ee1218f896",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a bug in window correction but introduces potential issues with negative window values.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change removes the `np.abs` function, which may lead to incorrect results for windows with negative values, such as `flattop`. This could introduce a behavioral regression risk.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix for the bug or to ensure that the change does not introduce new issues. This is a significant oversight in terms of test adequacy.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 176,
+      "returned_model_request_id": "609",
+      "completed_at_utc": "2026-11-06T04:03:41.541685+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a bug in window correction but introduces potential issues with negative window values.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change removes the `np.abs` function, which may lead to incorrect results for windows with negative values, such as `flattop`. This could introduce a behavioral regression risk."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the bug or to ensure that the change does not introduce new issues. This is a significant oversight in terms of test adequacy."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a bug in window correction but introduces potential issues with negative window values.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change removes the `np.abs` function, which may lead to incorrect results for windows with negative values, such as `flattop`. This could introduce a behavioral regression risk."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the bug or to ensure that the change does not introduce new issues. This is a significant oversight in terms of test adequacy."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

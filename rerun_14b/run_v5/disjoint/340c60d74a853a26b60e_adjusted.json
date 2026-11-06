@@ -1,0 +1,29 @@
+{
+  "code": "340c60d74a853a26b60e",
+  "instance_id": "django__django-15423",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "340c60d74a853a26b60e_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 815,
+  "messages_sha256": "ad951ec7b289ba8a98a428231917959f46c245a63280f4f46f1480e4c3a05ec8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes unrelated to the issue described. The changes in `django/conf/__init__.py` and `django/utils/functional.py` do not address the problem of LazyObject defining magic methods that may not exist on the wrapped object. The patch appears to be addressing a different concern, specifically related to the `USE_L10N` setting and attribute masking, which are not relevant to the reported issue.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "2481",
+      "completed_at_utc": "2026-11-06T04:16:43.894952+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes unrelated to the issue described. The changes in `django/conf/__init__.py` and `django/utils/functional.py` do not address the problem of LazyObject defining magic methods that may not exist on the wrapped object. The patch appears to be addressing a different concern, specifically related to the `USE_L10N` setting and attribute masking, which are not relevant to the reported issue."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

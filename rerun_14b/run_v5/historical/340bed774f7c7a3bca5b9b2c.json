@@ -1,0 +1,50 @@
+{
+  "id": "340bed774f7c7a3bca5b9b2c",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_fb6141665bac",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_fb6141665bac.json",
+  "historical_output_sha256": "248ede2e6dc32e0428b3250e545ff97d5a8b0ba5925c7f509c0b114a151c945a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1875,
+  "messages_sha256": "03a28185e2a2aac2f505b61fc8acbef68d85da78cf7d76c63622b72a3255d2e3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of tearDown being executed on skipped tests when running with --pdb. The change is minimal and focused on the problem.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new function _is_skipped, which could be considered a minor style inconsistency with the rest of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "974",
+      "completed_at_utc": "2026-11-06T04:05:55.610971+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of tearDown being executed on skipped tests when running with --pdb. The change is minimal and focused on the problem.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new function _is_skipped, which could be considered a minor style inconsistency with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of tearDown being executed on skipped tests when running with --pdb. The change is minimal and focused on the problem.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new function _is_skipped, which could be considered a minor style inconsistency with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

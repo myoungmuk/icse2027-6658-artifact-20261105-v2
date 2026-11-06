@@ -1,0 +1,50 @@
+{
+  "id": "5f2adf0320d609437f0b6c8b",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_9c8a4cc2eaa5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_9c8a4cc2eaa5.json",
+  "historical_output_sha256": "0a9ad9c5bd1c16d8aa0afdcc7c174e2a056fb7d2a698e461b7bb590add263d88",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2794,
+  "messages_sha256": "3b1edb92a5754782703ba9555fc42940cc509cea876cd5e2eae0c2ccdd9ca13d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by checking if `ax.axis` is a method and handling it accordingly. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new import (`MethodType`) and a conditional check that may not align with the project's style or conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "270",
+      "completed_at_utc": "2026-11-06T04:01:44.414321+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by checking if `ax.axis` is a method and handling it accordingly. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new import (`MethodType`) and a conditional check that may not align with the project's style or conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by checking if `ax.axis` is a method and handling it accordingly. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new import (`MethodType`) and a conditional check that may not align with the project's style or conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

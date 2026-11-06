@@ -1,0 +1,50 @@
+{
+  "id": "ad6b14cb8c24e46a0fab1309",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_ebe2a785395b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_ebe2a785395b.json",
+  "historical_output_sha256": "5bc1241c66a47e7c94e3a3d4f9a7553e6848703a986ed58b57f8fc5cb819dd2f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2030,
+  "messages_sha256": "19ad05bb6ca6a484482c2379ce4b846611ed4bf1c78d5b05ea449eceb5985c8d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue of reused dictionary objects in the partitions iterator by returning new dictionary objects for each partition. It includes a new test file to verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces a new test file, which is not shown in the diff. However, the change itself is minimal and does not introduce any significant style or convention mismatches.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "1837",
+      "completed_at_utc": "2026-11-06T04:11:40.857234+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue of reused dictionary objects in the partitions iterator by returning new dictionary objects for each partition. It includes a new test file to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new test file, which is not shown in the diff. However, the change itself is minimal and does not introduce any significant style or convention mismatches."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue of reused dictionary objects in the partitions iterator by returning new dictionary objects for each partition. It includes a new test file to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new test file, which is not shown in the diff. However, the change itself is minimal and does not introduce any significant style or convention mismatches."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

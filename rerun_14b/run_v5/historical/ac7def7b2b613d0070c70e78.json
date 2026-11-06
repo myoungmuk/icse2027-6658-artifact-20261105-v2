@@ -1,0 +1,60 @@
+{
+  "id": "ac7def7b2b613d0070c70e78",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_71d7fd0e774e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_71d7fd0e774e.json",
+  "historical_output_sha256": "577c398cda0659d2aa3e5caf54b5830dacd6eacfcb566fcac8162e68b939e218",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1470,
+  "messages_sha256": "cfcd393e59c7e0e6a452b2e274985709547f50e11936dcc96bd2fd14bc066cd7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by updating data limits, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change updates data limits for all histogram types, which might affect other histogram types or existing behavior.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be more readable with a comment explaining why data limits are updated for step histograms.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 140,
+      "returned_model_request_id": "1201",
+      "completed_at_utc": "2026-11-06T04:07:22.379760+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by updating data limits, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change updates data limits for all histogram types, which might affect other histogram types or existing behavior."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with a comment explaining why data limits are updated for step histograms."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by updating data limits, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change updates data limits for all histogram types, which might affect other histogram types or existing behavior."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with a comment explaining why data limits are updated for step histograms."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

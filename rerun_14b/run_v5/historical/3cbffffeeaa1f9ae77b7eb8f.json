@@ -1,0 +1,60 @@
+{
+  "id": "3cbffffeeaa1f9ae77b7eb8f",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_4b2c21b4236e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_4b2c21b4236e.json",
+  "historical_output_sha256": "56cc986c17d87df1bd436782e9be4ebc33041498beb482b7139409f317f3289d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1061,
+  "messages_sha256": "3e82f7167fb9ded164ea3fe321bd2ecc5c5b2632bf7d8febbb261af6e80a347e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of F expressions not being resolved in bulk_update, but it lacks comprehensive tests and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any new tests to verify the fix for F expressions in bulk_update.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not update any documentation to reflect the change or the new behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 142,
+      "returned_model_request_id": "668",
+      "completed_at_utc": "2026-11-06T04:03:59.189086+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of F expressions not being resolved in bulk_update, but it lacks comprehensive tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any new tests to verify the fix for F expressions in bulk_update."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The patch does not update any documentation to reflect the change or the new behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of F expressions not being resolved in bulk_update, but it lacks comprehensive tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any new tests to verify the fix for F expressions in bulk_update."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The patch does not update any documentation to reflect the change or the new behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

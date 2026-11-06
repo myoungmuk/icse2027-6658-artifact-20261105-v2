@@ -1,0 +1,50 @@
+{
+  "id": "cd45d88764061db27b76a293",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_20cd8a0126ec",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_20cd8a0126ec.json",
+  "historical_output_sha256": "d9186bf2e34d2cf84f7463e9b4a0dc754599522dca85eba5206ca08d81efad92",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 795,
+  "messages_sha256": "276a68cffa4e5a93a81fc7c1ff0e2e366c16fe34d2c5da2e17fd5173755bbba0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of squashed migrations not being marked as unapplied, but it lacks tests to verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to ensure that the squashed migration is correctly marked as unapplied.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "386",
+      "completed_at_utc": "2026-11-06T04:02:33.741669+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of squashed migrations not being marked as unapplied, but it lacks tests to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to ensure that the squashed migration is correctly marked as unapplied."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of squashed migrations not being marked as unapplied, but it lacks tests to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to ensure that the squashed migration is correctly marked as unapplied."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

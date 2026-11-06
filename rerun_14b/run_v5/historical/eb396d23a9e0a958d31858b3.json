@@ -1,0 +1,50 @@
+{
+  "id": "eb396d23a9e0a958d31858b3",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_6da4054d195c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_6da4054d195c.json",
+  "historical_output_sha256": "49d587ba15b3b080bb928e0739082e699a19e4de71556876f393da1084fb5e6d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2602,
+  "messages_sha256": "ce5addbf332673f6acc134603c5fbf22197ded8cd09a85e619fed0f5773d03da",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue of HistGradientBoostingClassifier not working with string targets when early stopping is turned on. The change is minimal and focused on the necessary fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding a comment explaining why the conversion to integer is necessary.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "1563",
+      "completed_at_utc": "2026-11-06T04:09:29.770603+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue of HistGradientBoostingClassifier not working with string targets when early stopping is turned on. The change is minimal and focused on the necessary fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding a comment explaining why the conversion to integer is necessary."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue of HistGradientBoostingClassifier not working with string targets when early stopping is turned on. The change is minimal and focused on the necessary fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding a comment explaining why the conversion to integer is necessary."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

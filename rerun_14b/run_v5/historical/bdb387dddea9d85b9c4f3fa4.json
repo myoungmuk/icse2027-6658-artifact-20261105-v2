@@ -1,0 +1,50 @@
+{
+  "id": "bdb387dddea9d85b9c4f3fa4",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_5356d4d46d1a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_5356d4d46d1a.json",
+  "historical_output_sha256": "f668368219938f8e5b8342b010c814ea5186dc411a843d0b724af14adc441780",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1576,
+  "messages_sha256": "3e4a2210a9f47a06ccbeb5983290c0ea97be9ad364a27fd3051caa40e260246e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a new check for unsafe characters in URLs, which may not be necessary given the behavior change in Python.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"major\",\n      \"description\": \"The patch special-cases the issue by checking for unsafe characters, which may not be a general fix if the Python behavior change already handles these cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "1128",
+      "completed_at_utc": "2026-11-06T04:06:46.631718+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a new check for unsafe characters in URLs, which may not be necessary given the behavior change in Python.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The patch special-cases the issue by checking for unsafe characters, which may not be a general fix if the Python behavior change already handles these cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a new check for unsafe characters in URLs, which may not be necessary given the behavior change in Python.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The patch special-cases the issue by checking for unsafe characters, which may not be a general fix if the Python behavior change already handles these cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

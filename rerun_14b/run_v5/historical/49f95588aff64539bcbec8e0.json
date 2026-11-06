@@ -1,0 +1,50 @@
+{
+  "id": "49f95588aff64539bcbec8e0",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_98e50fa4c6db",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_98e50fa4c6db.json",
+  "historical_output_sha256": "01ef12b8263dde26de4b48751e72d2068e1d81ae6a746da91de5f8f2d9a47d04",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 837,
+  "messages_sha256": "f1f8d62b1cd56659ed5bd125cf42dce9d16d51c8b13bc7fa2d0bdbf780c7683b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a flush call to ensure output is immediately printed, which addresses the issue. However, it lacks tests to verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the flush call resolves the issue of output not being immediately printed.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "397",
+      "completed_at_utc": "2026-11-06T04:02:33.743793+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a flush call to ensure output is immediately printed, which addresses the issue. However, it lacks tests to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the flush call resolves the issue of output not being immediately printed."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds a flush call to ensure output is immediately printed, which addresses the issue. However, it lacks tests to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the flush call resolves the issue of output not being immediately printed."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

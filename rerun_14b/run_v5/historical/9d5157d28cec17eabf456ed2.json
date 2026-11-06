@@ -1,0 +1,50 @@
+{
+  "id": "9d5157d28cec17eabf456ed2",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_73c422662f14",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_73c422662f14.json",
+  "historical_output_sha256": "fb99d28bab78b7e98c0144851043bd1429be9c45161d57eb792737ca863857b7",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1380,
+  "messages_sha256": "ad1edff32f75a9ced2c1f3c012d1817096eaca3811bfb91421806b6aa7557fa0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes a bug in the order of leading uncontracted gamma matrices but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the loop that inserts leading matrices, which may have unintended side effects on other parts of the code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "508",
+      "completed_at_utc": "2026-11-06T04:03:08.422795+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes a bug in the order of leading uncontracted gamma matrices but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the loop that inserts leading matrices, which may have unintended side effects on other parts of the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes a bug in the order of leading uncontracted gamma matrices but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the loop that inserts leading matrices, which may have unintended side effects on other parts of the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

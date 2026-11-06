@@ -1,0 +1,50 @@
+{
+  "id": "e226e1c3cd78078b98ecdfbb",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_309e27c2b106",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_309e27c2b106.json",
+  "historical_output_sha256": "2ae33f2236863ee164b96a8d0aae8839c62ab1daba5e6cc296f3341928572c98",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 882,
+  "messages_sha256": "4ecc87d20ea86e2127c67cf71d0680147523a086f65e613b714fb5d61d28248f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of handling memoryview objects in HttpResponse but lacks tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify that memoryview objects are correctly handled in HttpResponse.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 93,
+      "returned_model_request_id": "7",
+      "completed_at_utc": "2026-11-06T04:00:16.935534+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of handling memoryview objects in HttpResponse but lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that memoryview objects are correctly handled in HttpResponse."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of handling memoryview objects in HttpResponse but lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that memoryview objects are correctly handled in HttpResponse."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

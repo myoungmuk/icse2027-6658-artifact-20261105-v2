@@ -1,0 +1,60 @@
+{
+  "id": "057871f1f97c0dac05f9fe88",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_edc36eea5a32",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_edc36eea5a32.json",
+  "historical_output_sha256": "ca0768fa6ed440ceceae3b42d2ad0c8d1a1835cbde69d08205f2341e72c36ad3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1010,
+  "messages_sha256": "49102d1f275cd84bbdfd35af2ff20a6a49d3e7e3513c55ffb7369614bc5fa287",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds an async response function to ASGIStaticFilesHandler, which should resolve the issue. However, there are concerns about maintainability and potential performance implications.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The addition of sync_to_async in get_response_async may introduce performance overhead and reduce the clarity of the code.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the functionality of the async response handler.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 156,
+      "returned_model_request_id": "185",
+      "completed_at_utc": "2026-11-06T04:01:09.170799+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds an async response function to ASGIStaticFilesHandler, which should resolve the issue. However, there are concerns about maintainability and potential performance implications.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The addition of sync_to_async in get_response_async may introduce performance overhead and reduce the clarity of the code."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the functionality of the async response handler."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds an async response function to ASGIStaticFilesHandler, which should resolve the issue. However, there are concerns about maintainability and potential performance implications.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The addition of sync_to_async in get_response_async may introduce performance overhead and reduce the clarity of the code."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the functionality of the async response handler."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

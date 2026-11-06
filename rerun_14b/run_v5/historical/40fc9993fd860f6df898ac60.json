@@ -1,0 +1,50 @@
+{
+  "id": "40fc9993fd860f6df898ac60",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_2a3f8b2a69a5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_2a3f8b2a69a5.json",
+  "historical_output_sha256": "e45c1e565d8b7913cb322369e8b65384106962a07bc9e2995ff10db365dd5783",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 965,
+  "messages_sha256": "867964b1ae6da03d783103d6f3b18ff8dcb4bff9e9d77f7f65d8f98041b17b9f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the two-digit year issue correctly but lacks tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify the new logic for handling two-digit years.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 89,
+      "returned_model_request_id": "614",
+      "completed_at_utc": "2026-11-06T04:03:41.542623+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the two-digit year issue correctly but lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the new logic for handling two-digit years."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the two-digit year issue correctly but lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the new logic for handling two-digit years."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

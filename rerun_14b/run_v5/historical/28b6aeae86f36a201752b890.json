@@ -1,0 +1,70 @@
+{
+  "id": "28b6aeae86f36a201752b890",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_4eb50b60407a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_4eb50b60407a.json",
+  "historical_output_sha256": "c3a4b56f6a1cd369a4ab92df0834918e2fe2e068d27c69fa9660be4363eca807",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1214,
+  "messages_sha256": "23e3ffed79c43a460107a78773d049f14b42eecb9a29303585f0be846e1de99f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a change to enforce consistent signs on eigenvectors, but it may not fully resolve the issue and could introduce behavioral regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not address the root cause of the sign differences, which could be due to numerical precision issues or other factors. This may not fully resolve the issue.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"Enforcing consistent signs on eigenvectors could potentially break existing behavior or introduce unexpected results in other scenarios where sign differences are meaningful.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any additional tests to verify that the change does not introduce new issues or regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 218,
+      "returned_model_request_id": "75",
+      "completed_at_utc": "2026-11-06T04:00:36.149071+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a change to enforce consistent signs on eigenvectors, but it may not fully resolve the issue and could introduce behavioral regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not address the root cause of the sign differences, which could be due to numerical precision issues or other factors. This may not fully resolve the issue."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "Enforcing consistent signs on eigenvectors could potentially break existing behavior or introduce unexpected results in other scenarios where sign differences are meaningful."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any additional tests to verify that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch introduces a change to enforce consistent signs on eigenvectors, but it may not fully resolve the issue and could introduce behavioral regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not address the root cause of the sign differences, which could be due to numerical precision issues or other factors. This may not fully resolve the issue."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "Enforcing consistent signs on eigenvectors could potentially break existing behavior or introduce unexpected results in other scenarios where sign differences are meaningful."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any additional tests to verify that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

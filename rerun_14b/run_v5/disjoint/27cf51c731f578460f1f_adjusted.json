@@ -1,0 +1,29 @@
+{
+  "code": "27cf51c731f578460f1f",
+  "instance_id": "django__django-12073",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "27cf51c731f578460f1f_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1636,
+  "messages_sha256": "d9aa33327b9447e30b72bc12a1c986bc3c42add17dce2cd2df6eb395b4de0307",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch deprecates the InvalidQuery exception by replacing its documented usage with FieldDoesNotExist and its undocumented usage with FieldError. A deprecation shim is added to warn users of the change. The patch maintains functionality and provides clear documentation of the change in the release notes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 75,
+      "returned_model_request_id": "2503",
+      "completed_at_utc": "2026-11-06T04:16:59.776472+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch deprecates the InvalidQuery exception by replacing its documented usage with FieldDoesNotExist and its undocumented usage with FieldError. A deprecation shim is added to warn users of the change. The patch maintains functionality and provides clear documentation of the change in the release notes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "e72dc3a8c3256fe7b458da0c",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_687e2ba6356e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_687e2ba6356e.json",
+  "historical_output_sha256": "5eed24297513ed3a6c4b37ea170251d8844db380ccf48858b920570789f16941",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 793,
+  "messages_sha256": "caf272bb4461779ce18c3cc631f5381782aa3fb202544040daacdb5c9e86d393",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. It adds a .distinct() call to the queryset to ensure unique options.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any new tests to verify that the fix works as expected in different scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "654",
+      "completed_at_utc": "2026-11-06T04:03:59.186464+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. It adds a .distinct() call to the queryset to ensure unique options.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify that the fix works as expected in different scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. It adds a .distinct() call to the queryset to ensure unique options.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify that the fix works as expected in different scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "9906857cea5579dbdd56231d",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_31a0a6548f44",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_31a0a6548f44.json",
+  "historical_output_sha256": "bd22645b808de4e2efb4e6ba7e1dfbd2e1eb9f76ff70a62a7bc881308d8d0740",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1098,
+  "messages_sha256": "faaa1252b9c24a4b7b0e6a881c4f1ccd06e85259f2c57430cfd220bd701fa8e4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with the migration optimizer but lacks comprehensive testing and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify the behavior of the migration optimizer with the proposed changes.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update the documentation to reflect the changes made to the migration optimizer.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 139,
+      "returned_model_request_id": "122",
+      "completed_at_utc": "2026-11-06T04:00:52.709889+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with the migration optimizer but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the behavior of the migration optimizer with the proposed changes."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the changes made to the migration optimizer."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with the migration optimizer but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the behavior of the migration optimizer with the proposed changes."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the changes made to the migration optimizer."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

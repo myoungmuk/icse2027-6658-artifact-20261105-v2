@@ -1,0 +1,50 @@
+{
+  "id": "6d8e9a35d9d97d4fbdc5765f",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_0277390b1477",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_0277390b1477.json",
+  "historical_output_sha256": "63ca553d8e43625a7cff70684ec800bebf53ef3ffbb782febad1b12e1b91eda2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1593,
+  "messages_sha256": "b86f4b0bd76967ec618bf88a3a6f1ac5afc913e44021f65351d5204884bf6d73",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the deprecation warnings by ensuring proper handling of out-of-bound values and casting. The change is minimal and focused on the issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new `with np.errstate(invalid='ignore')` block that is not aligned with the existing style of the code. It would be better to maintain consistency with the surrounding code style.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1560",
+      "completed_at_utc": "2026-11-06T04:09:29.770059+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the deprecation warnings by ensuring proper handling of out-of-bound values and casting. The change is minimal and focused on the issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new `with np.errstate(invalid='ignore')` block that is not aligned with the existing style of the code. It would be better to maintain consistency with the surrounding code style."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the deprecation warnings by ensuring proper handling of out-of-bound values and casting. The change is minimal and focused on the issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new `with np.errstate(invalid='ignore')` block that is not aligned with the existing style of the code. It would be better to maintain consistency with the surrounding code style."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "0018846a3be143c5ccc75fb6",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_52670a5af054",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_52670a5af054.json",
+  "historical_output_sha256": "9fb1e1eafada74dfd88c1b46ed45a8dc364d9b90c5ae7e4da1d6b7075ae40c46",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1368,
+  "messages_sha256": "598cdf0a24912e10764d771c3fb983c71cbf5c0e13d9b807b642c7002c16b759",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with `strip_accents_unicode` but may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change removes the check if the string is already in NFKD form, which might inadvertently affect other strings that rely on this behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "427",
+      "completed_at_utc": "2026-11-06T04:02:33.749427+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with `strip_accents_unicode` but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change removes the check if the string is already in NFKD form, which might inadvertently affect other strings that rely on this behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with `strip_accents_unicode` but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change removes the check if the string is already in NFKD form, which might inadvertently affect other strings that rely on this behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

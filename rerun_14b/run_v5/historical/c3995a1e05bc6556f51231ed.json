@@ -1,0 +1,50 @@
+{
+  "id": "c3995a1e05bc6556f51231ed",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_2b75489faceb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_2b75489faceb.json",
+  "historical_output_sha256": "08cf65b5971c2a636cfa5ff8032be02fdc65ed5152d826d26abce777303f8203",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1848,
+  "messages_sha256": "e5e5a61853c9c486c4ada2ee2af8e15e3077ab0cd52151d3d756818fe3567274",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue by handling the case where the return annotation is None, ensuring the decorator does not attempt to call the 'to' method on None. The patch is minimal and focused on the problem.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor maintainability/readability defect by adding an explicit check for None return annotation, which slightly increases the complexity of the code.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "2146",
+      "completed_at_utc": "2026-11-06T04:14:31.724145+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue by handling the case where the return annotation is None, ensuring the decorator does not attempt to call the 'to' method on None. The patch is minimal and focused on the problem.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding an explicit check for None return annotation, which slightly increases the complexity of the code."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue by handling the case where the return annotation is None, ensuring the decorator does not attempt to call the 'to' method on None. The patch is minimal and focused on the problem.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding an explicit check for None return annotation, which slightly increases the complexity of the code."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "310f471666b6c5e9b84e9873",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_2675fb70cbff",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_2675fb70cbff.json",
+  "historical_output_sha256": "2f43f2164a8f61364fe8c4f5b69b151c47ec51e5785292d4dec708c06a8009be",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2069,
+  "messages_sha256": "84b8086993f885cee5718151f1dec4a24a2dc7af53a6e5d39c14981bca211ef8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the AttributeError by ensuring a renderer is available when creating inset axes. The change is minimal and focused on resolving the specific issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new import for FigureCanvasAgg, which is not aligned with the project's convention of keeping imports minimal and grouped at the top of the file.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "2044",
+      "completed_at_utc": "2026-11-06T04:13:37.409483+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the AttributeError by ensuring a renderer is available when creating inset axes. The change is minimal and focused on resolving the specific issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new import for FigureCanvasAgg, which is not aligned with the project's convention of keeping imports minimal and grouped at the top of the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the AttributeError by ensuring a renderer is available when creating inset axes. The change is minimal and focused on resolving the specific issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new import for FigureCanvasAgg, which is not aligned with the project's convention of keeping imports minimal and grouped at the top of the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

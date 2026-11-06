@@ -1,0 +1,50 @@
+{
+  "id": "6197c34370fa1ac4d4abe4ac",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_6362b43d95e3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_6362b43d95e3.json",
+  "historical_output_sha256": "57b7b998aeeaebae3ff35d44d2dff021d8f45e2f9adb8c929f7733500753fd5d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1515,
+  "messages_sha256": "87e63eba71c81c0f073d10c9f96fd3b0407334149d00ee6b3394f264f9a5b169",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly resolves the issue by ensuring rationals are wrapped in mpmath.mpf, but introduces a non-minimal change by adding a new file for reproduction.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR introduces a new file 'reproduce.py' for reproduction, which is not necessary for fixing the issue and adds to the scope of the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "1917",
+      "completed_at_utc": "2026-11-06T04:12:04.313553+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly resolves the issue by ensuring rationals are wrapped in mpmath.mpf, but introduces a non-minimal change by adding a new file for reproduction.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR introduces a new file 'reproduce.py' for reproduction, which is not necessary for fixing the issue and adds to the scope of the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR correctly resolves the issue by ensuring rationals are wrapped in mpmath.mpf, but introduces a non-minimal change by adding a new file for reproduction.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR introduces a new file 'reproduce.py' for reproduction, which is not necessary for fixing the issue and adds to the scope of the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "91c86005bfb23f667a0f99cf",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_7f558843d4e2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_7f558843d4e2.json",
+  "historical_output_sha256": "0d5ff8bbaf33797f91eaae23a39b7449897d2b7f85cd81402570f38336889627",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1378,
+  "messages_sha256": "72874f3a405f5e04e58700385b5fc910210ab1c3d93b04a6f8243dc033687ad1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue by ensuring that `get_feature_names` does not raise `NotFittedError` when the vocabulary is provided. The change is minimal and does not introduce any apparent regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor maintainability/readability defect by adding an unnecessary check for `hasattr(self, 'vocabulary_')` since `_validate_vocabulary` will set it if it doesn't exist.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 142,
+      "returned_model_request_id": "1156",
+      "completed_at_utc": "2026-11-06T04:07:03.952948+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue by ensuring that `get_feature_names` does not raise `NotFittedError` when the vocabulary is provided. The change is minimal and does not introduce any apparent regressions.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding an unnecessary check for `hasattr(self, 'vocabulary_')` since `_validate_vocabulary` will set it if it doesn't exist."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue by ensuring that `get_feature_names` does not raise `NotFittedError` when the vocabulary is provided. The change is minimal and does not introduce any apparent regressions.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding an unnecessary check for `hasattr(self, 'vocabulary_')` since `_validate_vocabulary` will set it if it doesn't exist."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

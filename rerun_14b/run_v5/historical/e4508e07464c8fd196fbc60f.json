@@ -1,0 +1,50 @@
+{
+  "id": "e4508e07464c8fd196fbc60f",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_f65fbbe5e4b5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_f65fbbe5e4b5.json",
+  "historical_output_sha256": "7bc52033c6617e7c872782ca5417a128a0ba3116673217fea80b8dbfaca006f3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1733,
+  "messages_sha256": "669d6ea89e90aebb3519da2f88ecce4525e60d8472e0ecb29849743c375e81b6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of mask propagation in NDDataRef arithmetic operations, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of mask handling when one operand has a mask and the other does not. This may introduce unexpected behavior in other parts of the code that rely on the previous behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1478",
+      "completed_at_utc": "2026-11-06T04:08:55.026135+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of mask propagation in NDDataRef arithmetic operations, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of mask handling when one operand has a mask and the other does not. This may introduce unexpected behavior in other parts of the code that rely on the previous behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of mask propagation in NDDataRef arithmetic operations, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of mask handling when one operand has a mask and the other does not. This may introduce unexpected behavior in other parts of the code that rely on the previous behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

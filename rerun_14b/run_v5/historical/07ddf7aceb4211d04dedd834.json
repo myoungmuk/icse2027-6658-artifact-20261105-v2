@@ -1,0 +1,50 @@
+{
+  "id": "07ddf7aceb4211d04dedd834",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_9cf664ee00d5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_9cf664ee00d5.json",
+  "historical_output_sha256": "35d57ab94a3346472441142129eb25f64d796c5a6ad85de9355d54d243a4b442",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 925,
+  "messages_sha256": "a134f3035b555ead686d192fe454de56351384a6ea0b58d62ac6f3bf5d4e1857",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces a method to reduce AddIndex/RemoveIndex operations, but it lacks a corresponding implementation for the RemoveIndex class.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The RemoveIndex class does not have a 'reduce' method, which is required for the change to be complete and functional.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "817",
+      "completed_at_utc": "2026-11-06T04:05:05.880967+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces a method to reduce AddIndex/RemoveIndex operations, but it lacks a corresponding implementation for the RemoveIndex class.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The RemoveIndex class does not have a 'reduce' method, which is required for the change to be complete and functional."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change introduces a method to reduce AddIndex/RemoveIndex operations, but it lacks a corresponding implementation for the RemoveIndex class.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The RemoveIndex class does not have a 'reduce' method, which is required for the change to be complete and functional."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

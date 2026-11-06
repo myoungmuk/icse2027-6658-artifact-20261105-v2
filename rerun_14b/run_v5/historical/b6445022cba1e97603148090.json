@@ -1,0 +1,50 @@
+{
+  "id": "b6445022cba1e97603148090",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_576cfd2732d2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_576cfd2732d2.json",
+  "historical_output_sha256": "bd1f876da88c8d52325c67835594f34fefbbfa3bafa690c77e00deee2ca028a0",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1367,
+  "messages_sha256": "a1cb88cb61ee2c2a651905e5f21ca1c62a86c39f45fe58267fdbbf77c34c3218",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the conflict between `caplog.get_records()` and `caplog.clear()` by ensuring `caplog.get_records()` is cleared when `caplog.clear()` is called. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new line that slightly decreases maintainability by adding a direct reference to `self._item.stash[caplog_records_key].clear()`, which might not be immediately clear to all contributors.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 144,
+      "returned_model_request_id": "1401",
+      "completed_at_utc": "2026-11-06T04:08:36.607356+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the conflict between `caplog.get_records()` and `caplog.clear()` by ensuring `caplog.get_records()` is cleared when `caplog.clear()` is called. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new line that slightly decreases maintainability by adding a direct reference to `self._item.stash[caplog_records_key].clear()`, which might not be immediately clear to all contributors."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the conflict between `caplog.get_records()` and `caplog.clear()` by ensuring `caplog.get_records()` is cleared when `caplog.clear()` is called. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new line that slightly decreases maintainability by adding a direct reference to `self._item.stash[caplog_records_key].clear()`, which might not be immediately clear to all contributors."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

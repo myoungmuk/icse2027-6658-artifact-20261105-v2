@@ -1,0 +1,50 @@
+{
+  "id": "b88aa7cf41bdf60f4845d123",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_d809f5946ed2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_d809f5946ed2.json",
+  "historical_output_sha256": "1f9c0003da0624d49fe345dd2bd15245a4e5f4079ac8e47de76e097c62c28512",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1303,
+  "messages_sha256": "f130fcfda045f4b9f1659f343e2d4f14449eaeb7dbef203e235e00940b6b3dbd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a new attribute check that may not be necessary or correct for all time zone objects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new attribute check for 'zone' which may not be present in all time zone objects, potentially leading to incorrect behavior or errors.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "1244",
+      "completed_at_utc": "2026-11-06T04:07:22.388749+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a new attribute check that may not be necessary or correct for all time zone objects.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The patch introduces a new attribute check for 'zone' which may not be present in all time zone objects, potentially leading to incorrect behavior or errors."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a new attribute check that may not be necessary or correct for all time zone objects.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The patch introduces a new attribute check for 'zone' which may not be present in all time zone objects, potentially leading to incorrect behavior or errors."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

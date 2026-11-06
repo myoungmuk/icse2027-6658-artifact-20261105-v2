@@ -1,0 +1,50 @@
+{
+  "id": "6d74348aba0734c73471112c",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_25018c7f56ee",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_25018c7f56ee.json",
+  "historical_output_sha256": "87578b93bb057ebbb2e7c25387d79a4a21b1c471167ffdc96425bdceee794cb5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1071,
+  "messages_sha256": "c910593a25f741898c335da8c462ba76834c45bdcce114b88613e0409c8074fe",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes a bug in argument parsing but introduces a non-minimal change by adding unnecessary whitespace.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces non-minimal whitespace changes that are not necessary for the fix.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 94,
+      "returned_model_request_id": "125",
+      "completed_at_utc": "2026-11-06T04:00:52.710640+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes a bug in argument parsing but introduces a non-minimal change by adding unnecessary whitespace.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces non-minimal whitespace changes that are not necessary for the fix."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes a bug in argument parsing but introduces a non-minimal change by adding unnecessary whitespace.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces non-minimal whitespace changes that are not necessary for the fix."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

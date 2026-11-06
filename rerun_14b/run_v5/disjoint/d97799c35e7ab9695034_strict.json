@@ -1,0 +1,29 @@
+{
+  "code": "d97799c35e7ab9695034",
+  "instance_id": "sphinx-doc__sphinx-7859",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "d97799c35e7ab9695034_strict",
+  "arm": "strict",
+  "input_tokens": 4623,
+  "messages_sha256": "bca638420f4a1cec848941a669425a27a2b2139a92437ac8ad346273bc98d26f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file `simulate_sphinx_build.py` which is not related to fixing the `KeyError: 'module'` issue. Additionally, the change to `conf.py` is incorrectly placed and does not address the root cause of the error. The fix in `typehints.py` is necessary but should be reviewed for correctness and completeness.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 93,
+      "returned_model_request_id": "2490",
+      "completed_at_utc": "2026-11-06T04:16:43.896500+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file `simulate_sphinx_build.py` which is not related to fixing the `KeyError: 'module'` issue. Additionally, the change to `conf.py` is incorrectly placed and does not address the root cause of the error. The fix in `typehints.py` is necessary but should be reviewed for correctness and completeness."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

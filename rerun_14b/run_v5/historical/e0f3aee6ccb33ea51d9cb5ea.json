@@ -1,0 +1,60 @@
+{
+  "id": "e0f3aee6ccb33ea51d9cb5ea",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_5772dfbb0117",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_5772dfbb0117.json",
+  "historical_output_sha256": "f4c9ad764fe95ed5a36e66b254874573d30d0c2ec16477fb78aa96297530aebc",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 774,
+  "messages_sha256": "ed7010e97282bc4c1a331ddbdec5f70c373af3f2e60fb6485c68ea47d5fb29f9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds support for item_comments but lacks documentation and tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update the documentation to reflect the new 'comments' argument in the feed.add_item() method.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the functionality of the new 'comments' argument.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 139,
+      "returned_model_request_id": "100",
+      "completed_at_utc": "2026-11-06T04:00:52.703566+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds support for item_comments but lacks documentation and tests.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the new 'comments' argument in the feed.add_item() method."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the new 'comments' argument."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds support for item_comments but lacks documentation and tests.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the new 'comments' argument in the feed.add_item() method."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the new 'comments' argument."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

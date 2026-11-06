@@ -1,0 +1,29 @@
+{
+  "code": "73872569934e4cd386b4",
+  "instance_id": "sympy__sympy-17809",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "73872569934e4cd386b4_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 877,
+  "messages_sha256": "199e35759f11cc010b670641be710dcb567be489655c95cba26ef428712da815",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a method that only checks if the argument is a `cosh` function with a real symbol, which is too restrictive. It does not handle other cases where `cosh(x)` is positive for real `x`. Additionally, the patch does not include tests to verify the correctness of the changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 84,
+      "returned_model_request_id": "2599",
+      "completed_at_utc": "2026-11-06T04:17:31.224080+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a method that only checks if the argument is a `cosh` function with a real symbol, which is too restrictive. It does not handle other cases where `cosh(x)` is positive for real `x`. Additionally, the patch does not include tests to verify the correctness of the changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

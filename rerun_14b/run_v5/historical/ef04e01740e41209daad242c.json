@@ -1,0 +1,60 @@
+{
+  "id": "ef04e01740e41209daad242c",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_478a58d5bee7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_478a58d5bee7.json",
+  "historical_output_sha256": "eac3276e8ddc1e4f266581552d80ed8e454c5a6cefb6f84839d7f9f0217a921f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1221,
+  "messages_sha256": "3958ceb49374cb5796b7cd081ece4eceacb661c7af821b9f1ef5dc400c4e581c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a potential behavioral regression risk and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change modifies the behavior of `get_resolver` by introducing a new function `_get_cached_resolver` that directly accesses `settings.ROOT_URLCONF`. This could break existing behavior where `urlconf` is explicitly passed to `get_resolver`.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify the correctness of the changes. Without tests, there is no assurance that the optimization does not introduce new bugs.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 177,
+      "returned_model_request_id": "651",
+      "completed_at_utc": "2026-11-06T04:03:59.185902+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of `get_resolver` by introducing a new function `_get_cached_resolver` that directly accesses `settings.ROOT_URLCONF`. This could break existing behavior where `urlconf` is explicitly passed to `get_resolver`."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the correctness of the changes. Without tests, there is no assurance that the optimization does not introduce new bugs."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of `get_resolver` by introducing a new function `_get_cached_resolver` that directly accesses `settings.ROOT_URLCONF`. This could break existing behavior where `urlconf` is explicitly passed to `get_resolver`."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the correctness of the changes. Without tests, there is no assurance that the optimization does not introduce new bugs."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

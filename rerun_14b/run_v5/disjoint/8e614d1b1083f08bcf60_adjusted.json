@@ -1,0 +1,29 @@
+{
+  "code": "8e614d1b1083f08bcf60",
+  "instance_id": "matplotlib__matplotlib-20374",
+  "split": "development",
+  "kind": "developer",
+  "id": "8e614d1b1083f08bcf60_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 2431,
+  "messages_sha256": "213fe37d141ef23d86edc25ddd7083e81d9bce105b17772b5373583dbc5a3678",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue by ensuring that plot directives with the :context: option are re-run when included files are modified. This resolves the discrepancy between Sphinx's rebuild logic and the plot_directive's out_of_date function, preventing errors in plots that depend on context variables. The patch is well-integrated and maintains the expected behavior of re-running context-dependent plots when necessary.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 95,
+      "returned_model_request_id": "2243",
+      "completed_at_utc": "2026-11-06T04:15:08.244556+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue by ensuring that plot directives with the :context: option are re-run when included files are modified. This resolves the discrepancy between Sphinx's rebuild logic and the plot_directive's out_of_date function, preventing errors in plots that depend on context variables. The patch is well-integrated and maintains the expected behavior of re-running context-dependent plots when necessary."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

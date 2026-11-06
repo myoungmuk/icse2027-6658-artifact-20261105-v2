@@ -1,0 +1,50 @@
+{
+  "id": "dd2675ed98333ea23e6af2c5",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_9d499b93340e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_9d499b93340e.json",
+  "historical_output_sha256": "41ab26271a4bdd8e056d486d102bf656767c37b7d5762ea93ca4d3d6702b0093",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1671,
+  "messages_sha256": "c4d00e916015a0b47880cfcb591f1df443987e2ae0413814d58792f31c6440fb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of extra ticks and tick labels appearing after calling `ax.clear()` on shared axes. The change is minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces some minor maintainability/readability issues by adding comments and changing the order of method calls in the `clear` method.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "1521",
+      "completed_at_utc": "2026-11-06T04:09:11.758845+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of extra ticks and tick labels appearing after calling `ax.clear()` on shared axes. The change is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces some minor maintainability/readability issues by adding comments and changing the order of method calls in the `clear` method."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of extra ticks and tick labels appearing after calling `ax.clear()` on shared axes. The change is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces some minor maintainability/readability issues by adding comments and changing the order of method calls in the `clear` method."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

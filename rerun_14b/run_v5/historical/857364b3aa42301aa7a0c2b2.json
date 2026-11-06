@@ -1,0 +1,60 @@
+{
+  "id": "857364b3aa42301aa7a0c2b2",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a9efbb8f0f27",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a9efbb8f0f27.json",
+  "historical_output_sha256": "fae2594a9b956a9b2635a96a6958022eebdea47659178fd733c639a66d57e79d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1146,
+  "messages_sha256": "375a928a2885175bea50b604e1c22bc0f83cadd26a27ca632e4660c511f763c7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch may cause unexpected behavior when other mutually exclusive groups are present, as it does not handle nested or complex group structures.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch lacks tests to verify its correctness in various scenarios, including nested mutually exclusive groups and different argument types.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "706",
+      "completed_at_utc": "2026-11-06T04:04:16.300831+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may cause unexpected behavior when other mutually exclusive groups are present, as it does not handle nested or complex group structures."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch lacks tests to verify its correctness in various scenarios, including nested mutually exclusive groups and different argument types."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may cause unexpected behavior when other mutually exclusive groups are present, as it does not handle nested or complex group structures."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch lacks tests to verify its correctness in various scenarios, including nested mutually exclusive groups and different argument types."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

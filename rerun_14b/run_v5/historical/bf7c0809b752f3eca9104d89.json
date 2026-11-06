@@ -1,0 +1,50 @@
+{
+  "id": "bf7c0809b752f3eca9104d89",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_b5a63fdbad67",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_b5a63fdbad67.json",
+  "historical_output_sha256": "cf04faefff31849561873546b6828fb8dfd5dcf6784764adff670e94010e3b26",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2186,
+  "messages_sha256": "d63bae72f465e020b13179260aa4eafc82e015fa7c98b66f0768c78ebaa5f277",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change converts all X inputs to float, which may not be necessary or efficient for all use cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 93,
+      "returned_model_request_id": "502",
+      "completed_at_utc": "2026-11-06T04:03:08.421692+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change converts all X inputs to float, which may not be necessary or efficient for all use cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change converts all X inputs to float, which may not be necessary or efficient for all use cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

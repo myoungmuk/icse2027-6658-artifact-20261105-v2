@@ -1,0 +1,50 @@
+{
+  "id": "2718f3ac12ca3953c6485567",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_a818b3fe603b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_a818b3fe603b.json",
+  "historical_output_sha256": "f19ff4baf366dacee27fd71980c2f4fe2d4bb7bfee6c10e9b3d4b94728a3dcbf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 944,
+  "messages_sha256": "8f1bb4626c037bfcfedee47c17a3b540dfd194918585d139fa4f6d1cddc9e0d3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with named tuples in range queries but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a conditional check for '_fields' which is not a standard or documented attribute for all tuple types, potentially leading to unexpected behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "19",
+      "completed_at_utc": "2026-11-06T04:00:16.938067+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with named tuples in range queries but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a conditional check for '_fields' which is not a standard or documented attribute for all tuple types, potentially leading to unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with named tuples in range queries but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a conditional check for '_fields' which is not a standard or documented attribute for all tuple types, potentially leading to unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

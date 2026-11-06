@@ -1,0 +1,70 @@
+{
+  "id": "c7b7a7ce9bea7fdb631fffd3",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_dbbe73b95a43",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_dbbe73b95a43.json",
+  "historical_output_sha256": "b588eb6446751876b49c7580243e6f2c621f6acba9c869b8742b065ceab25966",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 931,
+  "messages_sha256": "eeb192daa515453eb3a7199258eb07dbaca704ef2f8a8fd3826d3c3dc7ad3f83",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a new method `set_paths` to `ContourSet`, but it does not address the functional completeness or behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not provide a complete solution to the problem. It only adds a new method without modifying the existing workaround in Cartopy.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR introduces a new method that may break existing behavior in Cartopy or other parts of the project that rely on the current implementation.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the functionality of the new method `set_paths`.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.3\n}",
+      "finish_reason": "stop",
+      "output_tokens": 211,
+      "returned_model_request_id": "669",
+      "completed_at_utc": "2026-11-06T04:03:59.189278+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a new method `set_paths` to `ContourSet`, but it does not address the functional completeness or behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not provide a complete solution to the problem. It only adds a new method without modifying the existing workaround in Cartopy."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The PR introduces a new method that may break existing behavior in Cartopy or other parts of the project that rely on the current implementation."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the new method `set_paths`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.3
+  },
+  "normalized": {
+    "summary": "The PR adds a new method `set_paths` to `ContourSet`, but it does not address the functional completeness or behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not provide a complete solution to the problem. It only adds a new method without modifying the existing workaround in Cartopy."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The PR introduces a new method that may break existing behavior in Cartopy or other parts of the project that rely on the current implementation."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the new method `set_paths`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.3
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

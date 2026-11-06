@@ -1,0 +1,50 @@
+{
+  "id": "bd7a806a115c461ce384d314",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_6949e8d96eed",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_6949e8d96eed.json",
+  "historical_output_sha256": "30d81cb0348ad99e3db45e525c8d01d8301680fa4cb095cc7d3488610d7004b2",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1164,
+  "messages_sha256": "fa68b4aa2623ba3f6b5ee17baf7d2a3685b6aca53973e9295086b47db62a1ac9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change sets the 'disabled' property on ReadOnlyPasswordHashField and UserChangeForm, which should resolve the issue without introducing clear problems.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new default argument 'disabled' to the __init__ method of ReadOnlyPasswordHashField and UserChangeForm, which may not align with the project's convention of setting default arguments in the method body.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "1302",
+      "completed_at_utc": "2026-11-06T04:07:59.669252+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change sets the 'disabled' property on ReadOnlyPasswordHashField and UserChangeForm, which should resolve the issue without introducing clear problems.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new default argument 'disabled' to the __init__ method of ReadOnlyPasswordHashField and UserChangeForm, which may not align with the project's convention of setting default arguments in the method body."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change sets the 'disabled' property on ReadOnlyPasswordHashField and UserChangeForm, which should resolve the issue without introducing clear problems.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new default argument 'disabled' to the __init__ method of ReadOnlyPasswordHashField and UserChangeForm, which may not align with the project's convention of setting default arguments in the method body."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

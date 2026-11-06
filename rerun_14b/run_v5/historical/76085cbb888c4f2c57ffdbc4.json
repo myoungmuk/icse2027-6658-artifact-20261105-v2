@@ -1,0 +1,60 @@
+{
+  "id": "76085cbb888c4f2c57ffdbc4",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_2b09e8061867",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_2b09e8061867.json",
+  "historical_output_sha256": "37ed8a013cf290577138b0f4d148ec17b6c2d03e233fbe78b2ec39251d36f46c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1025,
+  "messages_sha256": "c6c71b2a8e4579abb24a50119d2b4cba88d3725de9545f273ae527d9402ef3a2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a non-minimal change and may cause a behavioral regression.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a new function `_get_resolver` and modifies `get_resolver` to call it, which is not a minimal change. It also changes the behavior of `get_resolver` by always using `settings.ROOT_URLCONF` if `urlconf` is `None`, which may break existing behavior.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch may cause a behavioral regression by always using `settings.ROOT_URLCONF` if `urlconf` is `None`. This could break existing code that relies on the current behavior of `get_resolver`.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 204,
+      "returned_model_request_id": "604",
+      "completed_at_utc": "2026-11-06T04:03:41.540737+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a non-minimal change and may cause a behavioral regression.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `_get_resolver` and modifies `get_resolver` to call it, which is not a minimal change. It also changes the behavior of `get_resolver` by always using `settings.ROOT_URLCONF` if `urlconf` is `None`, which may break existing behavior."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may cause a behavioral regression by always using `settings.ROOT_URLCONF` if `urlconf` is `None`. This could break existing code that relies on the current behavior of `get_resolver`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a non-minimal change and may cause a behavioral regression.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `_get_resolver` and modifies `get_resolver` to call it, which is not a minimal change. It also changes the behavior of `get_resolver` by always using `settings.ROOT_URLCONF` if `urlconf` is `None`, which may break existing behavior."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may cause a behavioral regression by always using `settings.ROOT_URLCONF` if `urlconf` is `None`. This could break existing code that relies on the current behavior of `get_resolver`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

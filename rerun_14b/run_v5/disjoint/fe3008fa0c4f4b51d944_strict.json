@@ -1,0 +1,29 @@
+{
+  "code": "fe3008fa0c4f4b51d944",
+  "instance_id": "sympy__sympy-20741",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "fe3008fa0c4f4b51d944_strict",
+  "arm": "strict",
+  "input_tokens": 925,
+  "messages_sha256": "6f48ba932c7fa0b799a7ce22711049552ab59d43a660d97b2d63a1a02b465335",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new function `distribute_monom` that attempts to distribute rational terms in matrix multiplications. However, it does not address the core issue of simplifying matrix expressions properly. The patch lacks comprehensive tests to ensure it does not introduce regressions or handle edge cases. Additionally, the patch modifies the `rules` tuple without proper context or explanation of why this order is necessary. The maintainability and readability of the code are also questionable due to the abrupt addition of a new function without clear integration into the existing simplification process.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "2360",
+      "completed_at_utc": "2026-11-06T04:16:06.967358+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new function `distribute_monom` that attempts to distribute rational terms in matrix multiplications. However, it does not address the core issue of simplifying matrix expressions properly. The patch lacks comprehensive tests to ensure it does not introduce regressions or handle edge cases. Additionally, the patch modifies the `rules` tuple without proper context or explanation of why this order is necessary. The maintainability and readability of the code are also questionable due to the abrupt addition of a new function without clear integration into the existing simplification process."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "8e43add21a14921e2752",
+  "instance_id": "pytest-dev__pytest-9249",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "8e43add21a14921e2752_strict",
+  "arm": "strict",
+  "input_tokens": 832,
+  "messages_sha256": "cbbf0787d678af720645538d103e70853f9dc72973075b35ef0df3e4184f4dc6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch only addresses the issue of slashes in test IDs but does not handle the problem with square brackets. Additionally, the patch modifies the lexer to accept slashes, which may have unintended consequences on other parts of the codebase. A more comprehensive solution is needed to address both issues while ensuring compatibility and maintainability.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 83,
+      "returned_model_request_id": "2408",
+      "completed_at_utc": "2026-11-06T04:16:23.781365+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch only addresses the issue of slashes in test IDs but does not handle the problem with square brackets. Additionally, the patch modifies the lexer to accept slashes, which may have unintended consequences on other parts of the codebase. A more comprehensive solution is needed to address both issues while ensuring compatibility and maintainability."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

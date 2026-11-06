@@ -1,0 +1,50 @@
+{
+  "id": "0b7ff81ce3c7d658b3e72eb4",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_35cf4c4b226a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_35cf4c4b226a.json",
+  "historical_output_sha256": "67338a03827d48c8febf6a1ca7b7b84e48d5b04652405dd535b8e4765f805eec",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2718,
+  "messages_sha256": "1705b91ae6a9ee32e42b334d92653359360afffedaf6b6a7f466d2e8ecabc641",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of inconsistent double single-quote management in FITS cards. It includes a new test file to reproduce the error.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new test file, which is not shown in the diff. However, since the tests already pass, this is not a blocking issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "2159",
+      "completed_at_utc": "2026-11-06T04:14:31.726648+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of inconsistent double single-quote management in FITS cards. It includes a new test file to reproduce the error.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new test file, which is not shown in the diff. However, since the tests already pass, this is not a blocking issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of inconsistent double single-quote management in FITS cards. It includes a new test file to reproduce the error.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new test file, which is not shown in the diff. However, since the tests already pass, this is not a blocking issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

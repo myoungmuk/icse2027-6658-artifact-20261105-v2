@@ -1,0 +1,50 @@
+{
+  "id": "0f3909c8edd49d9d91fb922a",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_af608ea24f0f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_af608ea24f0f.json",
+  "historical_output_sha256": "b2b6e9e93c3da19466f468522ef9fca152e868b0256a5a512ec02e5ad3ece609",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1023,
+  "messages_sha256": "fc85c16d41cefe4a00d571bd98568f0fa5ed0d49b978db04081eaf3ec17e1e73",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly orders the parameters for psql, but it may not handle all edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change does not handle cases where the database name is not provided or is None.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 94,
+      "returned_model_request_id": "1739",
+      "completed_at_utc": "2026-11-06T04:10:43.121880+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly orders the parameters for psql, but it may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not handle cases where the database name is not provided or is None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly orders the parameters for psql, but it may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not handle cases where the database name is not provided or is None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

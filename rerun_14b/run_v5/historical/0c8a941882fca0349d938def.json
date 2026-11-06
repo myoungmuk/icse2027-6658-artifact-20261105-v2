@@ -1,0 +1,50 @@
+{
+  "id": "0c8a941882fca0349d938def",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_6923d059aa94",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_6923d059aa94.json",
+  "historical_output_sha256": "94f37c043f07813e2c4790a8de1d8ac26e2d35922546261c983fd283ac2fa546",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1225,
+  "messages_sha256": "cba7b3b563e7209b16e3fc9c8e87d0afabb5564515888c773b8b7b7271fb0f5f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the --skip-checks option to management commands, which is a useful feature. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new command-line option, which should be documented in the relevant documentation files. The diff does not show any updates to the documentation.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "970",
+      "completed_at_utc": "2026-11-06T04:05:55.610214+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the --skip-checks option to management commands, which is a useful feature. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new command-line option, which should be documented in the relevant documentation files. The diff does not show any updates to the documentation."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR adds the --skip-checks option to management commands, which is a useful feature. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new command-line option, which should be documented in the relevant documentation files. The diff does not show any updates to the documentation."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

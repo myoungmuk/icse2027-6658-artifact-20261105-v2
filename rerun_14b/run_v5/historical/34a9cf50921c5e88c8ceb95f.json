@@ -1,0 +1,50 @@
+{
+  "id": "34a9cf50921c5e88c8ceb95f",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_5e43bb8d5067",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_5e43bb8d5067.json",
+  "historical_output_sha256": "4a83a2f09643b35bef9c052bd54be581f89a0a0e528c9f1b3837d380e9058e02",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 750,
+  "messages_sha256": "32b79a181115f5f9604a15390bf3dff822efdcc5be15bca3a0d535748d1a63b2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly addresses the issue of zero-padding for the Y specifier in DateFormat, but it lacks tests to ensure the fix works as expected.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify that the Y specifier now correctly returns a four-digit year padded with zeros.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "443",
+      "completed_at_utc": "2026-11-06T04:02:50.460509+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly addresses the issue of zero-padding for the Y specifier in DateFormat, but it lacks tests to ensure the fix works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the Y specifier now correctly returns a four-digit year padded with zeros."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch correctly addresses the issue of zero-padding for the Y specifier in DateFormat, but it lacks tests to ensure the fix works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the Y specifier now correctly returns a four-digit year padded with zeros."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

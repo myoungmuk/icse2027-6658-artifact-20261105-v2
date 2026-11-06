@@ -1,0 +1,50 @@
+{
+  "id": "575ec7a0016e63542432ebce",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_47596e530e24",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_47596e530e24.json",
+  "historical_output_sha256": "a66c1744e31d42821fb74752fdc82a6878d7681375a926f9cbb2964b41fae89e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 881,
+  "messages_sha256": "54306e683933308772bd61566c71a8a996b5d5058f4b84c8491b739189e44d7e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes a specific bug but may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the condition from checking `cotm` to `cothm`, which might affect other parts of the code that rely on the original condition.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "770",
+      "completed_at_utc": "2026-11-06T04:04:49.256813+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes a specific bug but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the condition from checking `cotm` to `cothm`, which might affect other parts of the code that rely on the original condition."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes a specific bug but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the condition from checking `cotm` to `cothm`, which might affect other parts of the code that rely on the original condition."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "88490a807c4b211cbdca752a",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_a6190c351f24",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_a6190c351f24.json",
+  "historical_output_sha256": "5b30684c6a37e8c63634a29c9ff2a7d620b069f40210dfbc4ca654d5d92112c4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1372,
+  "messages_sha256": "97524d4638333d51ea85ef700a5ba3dfa6ddccf9567ef63b64b4676a03f60786",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds `hostname` and `timestamp` to the JUnit XML report, which resolves the issue. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The import statements for `socket` and `datetime` are added inside the method, which is not consistent with the project's convention of importing at the top of the file.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "200",
+      "completed_at_utc": "2026-11-06T04:01:25.595472+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds `hostname` and `timestamp` to the JUnit XML report, which resolves the issue. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statements for `socket` and `datetime` are added inside the method, which is not consistent with the project's convention of importing at the top of the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR adds `hostname` and `timestamp` to the JUnit XML report, which resolves the issue. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statements for `socket` and `datetime` are added inside the method, which is not consistent with the project's convention of importing at the top of the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

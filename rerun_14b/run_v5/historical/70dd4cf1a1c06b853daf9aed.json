@@ -1,0 +1,50 @@
+{
+  "id": "70dd4cf1a1c06b853daf9aed",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_130e87c97f4e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_130e87c97f4e.json",
+  "historical_output_sha256": "4d3c0a77679f2f7f27ca1a8ea8d3d3fdb1cd42636e3c3eec4f77047247cd1534",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1567,
+  "messages_sha256": "1e64278ceccd87255ed08b052257a5402b64dfb33996eb40b64c37c1f16233e1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue with LooseVersion by using a regex to match only the dotted numbers in the version string. This should resolve the TypeError encountered with version strings containing 'dev' or 'rc'.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a regex import and a new function, which slightly increases the maintainability complexity.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "1613",
+      "completed_at_utc": "2026-11-06T04:09:46.494291+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue with LooseVersion by using a regex to match only the dotted numbers in the version string. This should resolve the TypeError encountered with version strings containing 'dev' or 'rc'.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a regex import and a new function, which slightly increases the maintainability complexity."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue with LooseVersion by using a regex to match only the dotted numbers in the version string. This should resolve the TypeError encountered with version strings containing 'dev' or 'rc'.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a regex import and a new function, which slightly increases the maintainability complexity."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

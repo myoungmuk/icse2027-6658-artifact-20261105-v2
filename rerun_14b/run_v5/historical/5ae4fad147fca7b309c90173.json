@@ -1,0 +1,50 @@
+{
+  "id": "5ae4fad147fca7b309c90173",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_d3b7704161f3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_d3b7704161f3.json",
+  "historical_output_sha256": "d45c1e60f59a672496514274654ccc10b1dd718cdf3c8ad534358df0ab759a42",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 3049,
+  "messages_sha256": "ddfa4c91d293f7110909edb3f298565dc0acf6c8beb42d7366391b4f6c473c34",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change appears to fix the issue with `polyval` and `timedelta64` coordinates, but it introduces a potential regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the conversion factor based on the `datetime_unit`, which could introduce unexpected behavior if other parts of the code rely on the previous conversion method.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "1454",
+      "completed_at_utc": "2026-11-06T04:08:55.021351+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change appears to fix the issue with `polyval` and `timedelta64` coordinates, but it introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the conversion factor based on the `datetime_unit`, which could introduce unexpected behavior if other parts of the code rely on the previous conversion method."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change appears to fix the issue with `polyval` and `timedelta64` coordinates, but it introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the conversion factor based on the `datetime_unit`, which could introduce unexpected behavior if other parts of the code rely on the previous conversion method."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

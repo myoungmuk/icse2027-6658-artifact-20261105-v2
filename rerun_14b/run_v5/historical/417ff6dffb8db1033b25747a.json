@@ -1,0 +1,50 @@
+{
+  "id": "417ff6dffb8db1033b25747a",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_b27120330a66",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_b27120330a66.json",
+  "historical_output_sha256": "ec3d7234261b769b11c963663cd59951bdb3e15d8de7d7d28324bd5a36d11f04",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1624,
+  "messages_sha256": "73ccd37dbdb46b90f952a26788e9fffea2becca12426be18eafd9635ad637ecb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch correctly resolves the issue by allowing subclasses of BigAutoField and SmallAutoField in the _subclasses property. The change is minimal and maintains readability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch uses 'issubclass' instead of 'in' which may not be the correct approach. 'issubclass' checks if a class is a subclass of another class, but the intention here seems to be to check if a class is in a predefined list of classes.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 148,
+      "returned_model_request_id": "1620",
+      "completed_at_utc": "2026-11-06T04:09:46.495560+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch correctly resolves the issue by allowing subclasses of BigAutoField and SmallAutoField in the _subclasses property. The change is minimal and maintains readability.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch uses 'issubclass' instead of 'in' which may not be the correct approach. 'issubclass' checks if a class is a subclass of another class, but the intention here seems to be to check if a class is in a predefined list of classes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch correctly resolves the issue by allowing subclasses of BigAutoField and SmallAutoField in the _subclasses property. The change is minimal and maintains readability.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch uses 'issubclass' instead of 'in' which may not be the correct approach. 'issubclass' checks if a class is a subclass of another class, but the intention here seems to be to check if a class is in a predefined list of classes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

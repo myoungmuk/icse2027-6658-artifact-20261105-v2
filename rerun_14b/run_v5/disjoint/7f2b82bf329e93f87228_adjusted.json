@@ -1,0 +1,29 @@
+{
+  "code": "7f2b82bf329e93f87228",
+  "instance_id": "astropy__astropy-7008",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "7f2b82bf329e93f87228_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 921,
+  "messages_sha256": "dcb2839cb8f7b63a96cd27eef365061f33127d0ee16a561cfdf34ebed48d307e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a context manager that manipulates `sys.modules`, which can lead to unexpected behavior and compatibility issues. Additionally, the test file is incomplete and does not verify the correctness of the context manager.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 62,
+      "returned_model_request_id": "2217",
+      "completed_at_utc": "2026-11-06T04:15:08.240163+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a context manager that manipulates `sys.modules`, which can lead to unexpected behavior and compatibility issues. Additionally, the test file is incomplete and does not verify the correctness of the context manager."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

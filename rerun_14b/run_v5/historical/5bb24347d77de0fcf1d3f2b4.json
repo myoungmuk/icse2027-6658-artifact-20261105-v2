@@ -1,0 +1,50 @@
+{
+  "id": "5bb24347d77de0fcf1d3f2b4",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_e3404592cbcf",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_e3404592cbcf.json",
+  "historical_output_sha256": "329e7722a3f93256fc1e56fc3389e5380cd6a6918af4055af9d0b9c1bc804ffa",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 890,
+  "messages_sha256": "cf916f2520371daf245f2a3376bbba2e761d64481c395454535ae2697c9bc88d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of handling binary strings for the HTTP method, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change from `builtin_str` to `to_native_string` may break existing behavior in Python 2.6, where the original code worked correctly.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "719",
+      "completed_at_utc": "2026-11-06T04:04:16.303309+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of handling binary strings for the HTTP method, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change from `builtin_str` to `to_native_string` may break existing behavior in Python 2.6, where the original code worked correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of handling binary strings for the HTTP method, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change from `builtin_str` to `to_native_string` may break existing behavior in Python 2.6, where the original code worked correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

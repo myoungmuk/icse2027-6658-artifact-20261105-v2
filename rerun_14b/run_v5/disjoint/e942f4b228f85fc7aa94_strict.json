@@ -1,0 +1,29 @@
+{
+  "code": "e942f4b228f85fc7aa94",
+  "instance_id": "sympy__sympy-19182",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "e942f4b228f85fc7aa94_strict",
+  "arm": "strict",
+  "input_tokens": 786,
+  "messages_sha256": "185028aba39358a7b84112340f1d25afe444046d01d4c97f85b5f46d35cc1d2a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes to the `_eval_is_integer` method in `sympy/core/mul.py` that are not clearly related to the issue described. The patch includes unnecessary imports and logic that may introduce bugs or performance issues. Additionally, the patch does not address the test failure mentioned in the issue. The changes are not well-documented, and the patch may have unintended side effects.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 100,
+      "returned_model_request_id": "2752",
+      "completed_at_utc": "2026-11-06T04:18:15.143309+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes to the `_eval_is_integer` method in `sympy/core/mul.py` that are not clearly related to the issue described. The patch includes unnecessary imports and logic that may introduce bugs or performance issues. Additionally, the patch does not address the test failure mentioned in the issue. The changes are not well-documented, and the patch may have unintended side effects."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

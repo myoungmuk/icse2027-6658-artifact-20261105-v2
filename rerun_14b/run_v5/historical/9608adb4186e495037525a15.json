@@ -1,0 +1,50 @@
+{
+  "id": "9608adb4186e495037525a15",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_6430daa78ebe",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_6430daa78ebe.json",
+  "historical_output_sha256": "4d9dcdae925af0bc50b355608ffeac726929c1eabe337b3848dae860b7628d96",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1293,
+  "messages_sha256": "1cb49066bc4fd5bf702bc89b46bbd7245a8b18fc43f1f4b0d8b06c27bf9d40a9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the IndexError in the sylow_subgroup method by adding a bounds check before deleting elements from lists. The change is minimal and focused on fixing the reported issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor style inconsistency by using a comma after the if condition, which is not consistent with the rest of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "1194",
+      "completed_at_utc": "2026-11-06T04:07:03.960219+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the IndexError in the sylow_subgroup method by adding a bounds check before deleting elements from lists. The change is minimal and focused on fixing the reported issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a minor style inconsistency by using a comma after the if condition, which is not consistent with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch addresses the IndexError in the sylow_subgroup method by adding a bounds check before deleting elements from lists. The change is minimal and focused on fixing the reported issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a minor style inconsistency by using a comma after the if condition, which is not consistent with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

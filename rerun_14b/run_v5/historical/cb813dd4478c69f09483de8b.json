@@ -1,0 +1,50 @@
+{
+  "id": "cb813dd4478c69f09483de8b",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_2b9b4624645c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_2b9b4624645c.json",
+  "historical_output_sha256": "7f69d12cec9b079adae22fcb3ed33f3d6cc4ff07f1f73d4f77f2fd7b5bc99c49",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1070,
+  "messages_sha256": "03978a3b95ddf9d915e502699b43ac471909de9cbdf50144c22b7f21a8f325e0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly allows lists of hook functions in the hooks argument, but it could be improved for clarity and maintainability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be made more readable by using a list comprehension or a more descriptive variable name.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 101,
+      "returned_model_request_id": "271",
+      "completed_at_utc": "2026-11-06T04:01:44.414498+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly allows lists of hook functions in the hooks argument, but it could be improved for clarity and maintainability.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be made more readable by using a list comprehension or a more descriptive variable name."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch correctly allows lists of hook functions in the hooks argument, but it could be improved for clarity and maintainability.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be made more readable by using a list comprehension or a more descriptive variable name."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

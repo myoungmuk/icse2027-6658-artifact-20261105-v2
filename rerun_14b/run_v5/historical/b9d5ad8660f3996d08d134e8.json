@@ -1,0 +1,50 @@
+{
+  "id": "b9d5ad8660f3996d08d134e8",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_c28c65dc2c8c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_c28c65dc2c8c.json",
+  "historical_output_sha256": "e3306cf7cf8dfd53a06b0fed8cd1f57d48dfec130957e756c9399039459319de",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1147,
+  "messages_sha256": "a21b970e806dbb8ff20302f88be13d7aa1f49b6b54d33391b04d78c96807446c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes a critical version comparison issue but introduces a new dependency without tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR introduces a new dependency on the 'packaging' module without any tests to verify its usage or potential impact.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 98,
+      "returned_model_request_id": "518",
+      "completed_at_utc": "2026-11-06T04:03:08.424637+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes a critical version comparison issue but introduces a new dependency without tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR introduces a new dependency on the 'packaging' module without any tests to verify its usage or potential impact."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes a critical version comparison issue but introduces a new dependency without tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR introduces a new dependency on the 'packaging' module without any tests to verify its usage or potential impact."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

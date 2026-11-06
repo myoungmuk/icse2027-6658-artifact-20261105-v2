@@ -1,0 +1,50 @@
+{
+  "id": "7814f6dd0ef09d805fd6b484",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_196e642e96ee",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_196e642e96ee.json",
+  "historical_output_sha256": "de221c969434ca62f75441115477edfbd99b72972213c1b12170415b2ef52e0d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1664,
+  "messages_sha256": "d4c7337367088dae7c0e163c4c1ecbc6ab6fafa866faf2f1ba19ad5f8ddd3249",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with pylint crashing in Kubernetes Pods by ensuring the number of available CPUs is never zero. The change is minimal and directly related to the problem.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify that the fix works as expected in the Kubernetes environment. It is crucial to have tests that cover this specific scenario to prevent regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "426",
+      "completed_at_utc": "2026-11-06T04:02:33.749249+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with pylint crashing in Kubernetes Pods by ensuring the number of available CPUs is never zero. The change is minimal and directly related to the problem.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the fix works as expected in the Kubernetes environment. It is crucial to have tests that cover this specific scenario to prevent regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with pylint crashing in Kubernetes Pods by ensuring the number of available CPUs is never zero. The change is minimal and directly related to the problem.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the fix works as expected in the Kubernetes environment. It is crucial to have tests that cover this specific scenario to prevent regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

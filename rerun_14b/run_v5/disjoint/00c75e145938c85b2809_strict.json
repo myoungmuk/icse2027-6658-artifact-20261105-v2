@@ -1,0 +1,29 @@
+{
+  "code": "00c75e145938c85b2809",
+  "instance_id": "mwaskom__seaborn-3217",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "00c75e145938c85b2809_strict",
+  "arm": "strict",
+  "input_tokens": 1777,
+  "messages_sha256": "9e8a73a76ac636b6c74a5da2c125bd34b1099032b45326743566a0d89471ab28",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces print statements in production code, which is not appropriate. Additionally, the test script does not verify the correctness of the fix and instead saves images, which is not suitable for automated testing. The patch lacks proper documentation and does not address the root cause of the issue.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 77,
+      "returned_model_request_id": "2570",
+      "completed_at_utc": "2026-11-06T04:17:15.374443+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces print statements in production code, which is not appropriate. Additionally, the test script does not verify the correctness of the fix and instead saves images, which is not suitable for automated testing. The patch lacks proper documentation and does not address the root cause of the issue."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

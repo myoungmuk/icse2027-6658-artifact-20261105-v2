@@ -1,0 +1,50 @@
+{
+  "id": "31928089def053ffcaa0c465",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_2445d604595d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_2445d604595d.json",
+  "historical_output_sha256": "3b4bb59b7fa77b7d491d77ef2af5745f256361c63465cf312a9d5f671267a921",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 2439,
+  "messages_sha256": "abd3673ff4fc08143cb2ae7eccefe1c379ef1f87c89f3db279bb5865baac341e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a non-minimal change and may not address the root cause of the issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch emits a 'source-read' event on the doctree, which is not the correct approach to modifying included files. This change is not minimal and may introduce unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "1218",
+      "completed_at_utc": "2026-11-06T04:07:22.384065+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a non-minimal change and may not address the root cause of the issue.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch emits a 'source-read' event on the doctree, which is not the correct approach to modifying included files. This change is not minimal and may introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a non-minimal change and may not address the root cause of the issue.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch emits a 'source-read' event on the doctree, which is not the correct approach to modifying included files. This change is not minimal and may introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

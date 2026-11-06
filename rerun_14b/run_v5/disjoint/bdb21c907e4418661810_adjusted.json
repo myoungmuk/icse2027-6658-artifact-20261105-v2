@@ -1,0 +1,29 @@
+{
+  "code": "bdb21c907e4418661810",
+  "instance_id": "sphinx-doc__sphinx-7305",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "bdb21c907e4418661810_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 2726,
+  "messages_sha256": "0352e44778aac88786a883e2327fab6e48e4eb4f4870a5fb12887551a1ba855a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces new files (build_docs.py, conf.py, parse_args.py, reproduce.rst, test_parse_arglist.py) that are not directly related to fixing the issue with parsing arglists. Additionally, the changes in sphinx/domains/python.py are not clear and may not address the root cause of the problem. The patch lacks proper documentation and test coverage for the changes made.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 100,
+      "returned_model_request_id": "2237",
+      "completed_at_utc": "2026-11-06T04:15:08.243548+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces new files (build_docs.py, conf.py, parse_args.py, reproduce.rst, test_parse_arglist.py) that are not directly related to fixing the issue with parsing arglists. Additionally, the changes in sphinx/domains/python.py are not clear and may not address the root cause of the problem. The patch lacks proper documentation and test coverage for the changes made."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

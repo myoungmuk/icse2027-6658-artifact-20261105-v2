@@ -1,0 +1,60 @@
+{
+  "id": "fd3cb9a0d301acb08f5c680c",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_54db6787df1c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_54db6787df1c.json",
+  "historical_output_sha256": "8e7f1fceeaef2750e7d5576c59e512c2f4a550a36002fd5f173ea52bacc7a297",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1221,
+  "messages_sha256": "bec66196f2e2efe49aea30d67cca1e7b02d9088d620c718211136992733ed852",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue but may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the condition for checking imaginary coordinates, which might inadvertently allow points with non-zero imaginary parts to be created, potentially breaking existing code that relies on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any tests to verify that the change does not introduce new issues or regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 151,
+      "returned_model_request_id": "389",
+      "completed_at_utc": "2026-11-06T04:02:33.742253+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the condition for checking imaginary coordinates, which might inadvertently allow points with non-zero imaginary parts to be created, potentially breaking existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any tests to verify that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the condition for checking imaginary coordinates, which might inadvertently allow points with non-zero imaginary parts to be created, potentially breaking existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any tests to verify that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

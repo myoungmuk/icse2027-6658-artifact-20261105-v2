@@ -1,0 +1,60 @@
+{
+  "id": "2db68fb63dd6ccf071ed8873",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_0f2533a56063",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_0f2533a56063.json",
+  "historical_output_sha256": "b76accc848d55be700e64ac096df41cb0f6ca4c13318973d55ee678ba20dc144",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 978,
+  "messages_sha256": "a0317d6e36fd3cefb44cc93418dfec97fb68a3c229c8d807a0e3ea8239c1489c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the migration import ordering issue but may not fully resolve all edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not handle cases where imports are already correctly ordered or when there are mixed import styles within the same section.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include tests to verify that the new import ordering works as expected in various scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.7\n}",
+      "finish_reason": "stop",
+      "output_tokens": 144,
+      "returned_model_request_id": "624",
+      "completed_at_utc": "2026-11-06T04:03:59.179875+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the migration import ordering issue but may not fully resolve all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not handle cases where imports are already correctly ordered or when there are mixed import styles within the same section."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include tests to verify that the new import ordering works as expected in various scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.7
+  },
+  "normalized": {
+    "summary": "The PR addresses the migration import ordering issue but may not fully resolve all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not handle cases where imports are already correctly ordered or when there are mixed import styles within the same section."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include tests to verify that the new import ordering works as expected in various scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.7
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

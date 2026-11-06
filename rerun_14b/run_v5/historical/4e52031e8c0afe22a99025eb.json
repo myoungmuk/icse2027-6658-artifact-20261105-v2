@@ -1,0 +1,60 @@
+{
+  "id": "4e52031e8c0afe22a99025eb",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_3abfd019fd71",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_3abfd019fd71.json",
+  "historical_output_sha256": "5b3eacd1692fc48d5634b945b5a6c2d333d253ee9892ea07374633a3c260c26a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1015,
+  "messages_sha256": "83e85591569e12a33db51beb6b95690c7e7fd57c07b29e2dc5d36694e5cac716",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce behavioral regression risks.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a call to `equivalent_dims` which may alter the behavior of existing code that relies on strict dimension checking.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no additional tests provided to ensure that the change does not introduce new issues or regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "670",
+      "completed_at_utc": "2026-11-06T04:03:59.189478+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce behavioral regression risks.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change introduces a call to `equivalent_dims` which may alter the behavior of existing code that relies on strict dimension checking."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce behavioral regression risks.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change introduces a call to `equivalent_dims` which may alter the behavior of existing code that relies on strict dimension checking."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

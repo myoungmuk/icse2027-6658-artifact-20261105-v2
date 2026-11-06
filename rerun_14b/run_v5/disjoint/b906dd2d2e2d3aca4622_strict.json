@@ -1,0 +1,29 @@
+{
+  "code": "b906dd2d2e2d3aca4622",
+  "instance_id": "mwaskom__seaborn-2946",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "b906dd2d2e2d3aca4622_strict",
+  "arm": "strict",
+  "input_tokens": 922,
+  "messages_sha256": "69dab308f788aeb415882fca8e44a9dffd34e954c8cae8f6a1b6ab1241ff20a5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue by ensuring that the custom estimator is called directly if it is a callable, rather than using `agg`. This change maintains the functionality and avoids the TypeError raised with custom numpy functions. The patch is straightforward and aligns with the project's conventions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 74,
+      "returned_model_request_id": "2732",
+      "completed_at_utc": "2026-11-06T04:18:08.364816+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue by ensuring that the custom estimator is called directly if it is a callable, rather than using `agg`. This change maintains the functionality and avoids the TypeError raised with custom numpy functions. The patch is straightforward and aligns with the project's conventions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

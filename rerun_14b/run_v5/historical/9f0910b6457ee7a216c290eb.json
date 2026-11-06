@@ -1,0 +1,60 @@
+{
+  "id": "9f0910b6457ee7a216c290eb",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_9a0fde6f3136",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_9a0fde6f3136.json",
+  "historical_output_sha256": "bca31f8b9987aff0130195a26a3ffe35e9144473822898df9cb96964a3c5ab2d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1305,
+  "messages_sha256": "475eea6ae92464b03dfd9cc09c06b9dd29c647d5cd5f6590d68af046ef3b2b26",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a handler for the `arg` function in `refine.py`, but it may not cover all edge cases and lacks comprehensive tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The handler for `arg` does not cover all possible cases, such as when the argument is zero or when the expression is complex.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the correctness of the added handler for the `arg` function.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 163,
+      "returned_model_request_id": "132",
+      "completed_at_utc": "2026-11-06T04:00:52.712353+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a handler for the `arg` function in `refine.py`, but it may not cover all edge cases and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The handler for `arg` does not cover all possible cases, such as when the argument is zero or when the expression is complex."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the correctness of the added handler for the `arg` function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR adds a handler for the `arg` function in `refine.py`, but it may not cover all edge cases and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The handler for `arg` does not cover all possible cases, such as when the argument is zero or when the expression is complex."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the correctness of the added handler for the `arg` function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

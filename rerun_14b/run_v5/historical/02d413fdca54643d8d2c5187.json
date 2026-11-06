@@ -1,0 +1,50 @@
+{
+  "id": "02d413fdca54643d8d2c5187",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_c4515dd84703",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_c4515dd84703.json",
+  "historical_output_sha256": "030ad78429d9a23bc4fb2705e3734ce606dc528eaa51de319c613f156dc3c084",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1596,
+  "messages_sha256": "86be153500dc54c890d598a915350d3f74b80ba96434c94075761edcb0e70e00",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the bug in the posix implementation of locks by correctly handling the return values of fcntl.flock. The new test file is added to verify the functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test file is not integrated into the existing test suite, which is a minor convention mismatch.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "1834",
+      "completed_at_utc": "2026-11-06T04:11:40.856234+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the bug in the posix implementation of locks by correctly handling the return values of fcntl.flock. The new test file is added to verify the functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file is not integrated into the existing test suite, which is a minor convention mismatch."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR fixes the bug in the posix implementation of locks by correctly handling the return values of fcntl.flock. The new test file is added to verify the functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file is not integrated into the existing test suite, which is a minor convention mismatch."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "1884b129a9fa55085327c698",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_c22a5b1ff7ed",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_c22a5b1ff7ed.json",
+  "historical_output_sha256": "be976b2b5e285239762ed0b6e31f311ac7d4f3c55001ba3f5ad7a4e92443bb80",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1515,
+  "messages_sha256": "d29d33a26708e31b7027046a2cbb416e050593b7031876723631fe221db7d90d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the issue by allowing an empty string as a valid path name in `sphinx-quickstart`. The added test script helps reproduce the issue and verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new file `reproduce.py` which is not aligned with the project's convention of using `test_` prefix for test files.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "2019",
+      "completed_at_utc": "2026-11-06T04:13:37.404740+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the issue by allowing an empty string as a valid path name in `sphinx-quickstart`. The added test script helps reproduce the issue and verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new file `reproduce.py` which is not aligned with the project's convention of using `test_` prefix for test files."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch resolves the issue by allowing an empty string as a valid path name in `sphinx-quickstart`. The added test script helps reproduce the issue and verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new file `reproduce.py` which is not aligned with the project's convention of using `test_` prefix for test files."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

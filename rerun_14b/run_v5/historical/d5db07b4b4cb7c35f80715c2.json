@@ -1,0 +1,50 @@
+{
+  "id": "d5db07b4b4cb7c35f80715c2",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_a175575fc30d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_a175575fc30d.json",
+  "historical_output_sha256": "42a0202dd492661af5a0984440d0b96330d26fafec7d8212802298f2bb891f51",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2443,
+  "messages_sha256": "128cdd45382da186f9f24ef45f8b1f424ebaff2150d3be745021a494c3634e8c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly addresses the issue by ensuring the `multi_class` parameter is passed to the `LogisticRegression` instance used for scoring. The change is minimal and does not introduce any apparent regressions or compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new parameter `multi_class` to the `LogisticRegression` instantiation, which may not align with the project's style or conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 133,
+      "returned_model_request_id": "1687",
+      "completed_at_utc": "2026-11-06T04:10:23.390330+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly addresses the issue by ensuring the `multi_class` parameter is passed to the `LogisticRegression` instance used for scoring. The change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new parameter `multi_class` to the `LogisticRegression` instantiation, which may not align with the project's style or conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change correctly addresses the issue by ensuring the `multi_class` parameter is passed to the `LogisticRegression` instance used for scoring. The change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new parameter `multi_class` to the `LogisticRegression` instantiation, which may not align with the project's style or conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

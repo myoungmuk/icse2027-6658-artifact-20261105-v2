@@ -1,0 +1,50 @@
+{
+  "id": "6449f0c81d25f2f49886d4cb",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_3891e43c1409",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_3891e43c1409.json",
+  "historical_output_sha256": "bfd7b4f4c7a4effb42e9a0674fb61d51ded7537ff54379dec636a57e072e5624",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1567,
+  "messages_sha256": "d3d256da53fa06c8304cfed79999c9e5682d27669920031ede07f8ca3e2c1997",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly resolves the issue by ensuring two-digit years have leading zeros, but it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of the 'y' format character to always return two digits with leading zeros. This may break existing code that relies on the current behavior of 'y' for years < 1000.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "2190",
+      "completed_at_utc": "2026-11-06T04:14:46.807204+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly resolves the issue by ensuring two-digit years have leading zeros, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of the 'y' format character to always return two digits with leading zeros. This may break existing code that relies on the current behavior of 'y' for years < 1000."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly resolves the issue by ensuring two-digit years have leading zeros, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of the 'y' format character to always return two digits with leading zeros. This may break existing code that relies on the current behavior of 'y' for years < 1000."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

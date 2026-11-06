@@ -1,0 +1,50 @@
+{
+  "id": "f3b75891c1ae2ca8816a54bc",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_3d499c7d0c0c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_3d499c7d0c0c.json",
+  "historical_output_sha256": "c6cb52092c270fbbeab41cb4a2399ecb686dff9e36dc5561ac85eb2226306068",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1290,
+  "messages_sha256": "ec765fb95db2b7a3beba1b8021071a1fd58069693ab1cbf0fb4cadad337b5580",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR improves consistency and readability by using BoundField objects, but it lacks a method like bf._did_change() in the proposed changes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The proposed changes do not include a method like bf._did_change() in the BoundField class, which is mentioned as part of the improvement. This could lead to maintainability issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "1162",
+      "completed_at_utc": "2026-11-06T04:07:03.954254+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR improves consistency and readability by using BoundField objects, but it lacks a method like bf._did_change() in the proposed changes.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The proposed changes do not include a method like bf._did_change() in the BoundField class, which is mentioned as part of the improvement. This could lead to maintainability issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR improves consistency and readability by using BoundField objects, but it lacks a method like bf._did_change() in the proposed changes.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The proposed changes do not include a method like bf._did_change() in the BoundField class, which is mentioned as part of the improvement. This could lead to maintainability issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

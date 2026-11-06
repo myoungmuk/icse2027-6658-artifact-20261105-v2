@@ -1,0 +1,29 @@
+{
+  "code": "300b62d7db3710f5caa9",
+  "instance_id": "scikit-learn__scikit-learn-12421",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "300b62d7db3710f5caa9_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 965,
+  "messages_sha256": "5f38a9303ed4df86dad63cdf1157325f6703960db6f83dbf41c432017414b680",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the inconsistency between the documentation and the implementation of `core_distances_` in the OPTICS class. It ensures that points which will never be core have a distance of `inf`, aligning with the expected behavior as observed in R. The change is straightforward and maintains the functionality and readability of the code.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 84,
+      "returned_model_request_id": "2455",
+      "completed_at_utc": "2026-11-06T04:16:43.890291+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the inconsistency between the documentation and the implementation of `core_distances_` in the OPTICS class. It ensures that points which will never be core have a distance of `inf`, aligning with the expected behavior as observed in R. The change is straightforward and maintains the functionality and readability of the code."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

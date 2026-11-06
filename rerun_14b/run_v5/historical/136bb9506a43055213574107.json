@@ -1,0 +1,50 @@
+{
+  "id": "136bb9506a43055213574107",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_899b642e4a6a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_899b642e4a6a.json",
+  "historical_output_sha256": "534d724cf56c466860736a62088dcdf25e665a3ac6b1885fd4bd43c16fa9f8fc",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1009,
+  "messages_sha256": "301b5acddc7135339a91edbc7c80f897fe0be5bbfd25d7bc7c922dfc5760f2d1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR removes a post_init signal handler from ImageField, which could lead to unexpected behavior if width_field or height_field are set.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change removes the post_init signal handler only if width_field or height_field are not set. This could lead to unexpected behavior if these fields are set, as the signal handler is responsible for updating dimension fields after initialization.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "673",
+      "completed_at_utc": "2026-11-06T04:04:16.294025+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR removes a post_init signal handler from ImageField, which could lead to unexpected behavior if width_field or height_field are set.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change removes the post_init signal handler only if width_field or height_field are not set. This could lead to unexpected behavior if these fields are set, as the signal handler is responsible for updating dimension fields after initialization."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR removes a post_init signal handler from ImageField, which could lead to unexpected behavior if width_field or height_field are set.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change removes the post_init signal handler only if width_field or height_field are not set. This could lead to unexpected behavior if these fields are set, as the signal handler is responsible for updating dimension fields after initialization."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

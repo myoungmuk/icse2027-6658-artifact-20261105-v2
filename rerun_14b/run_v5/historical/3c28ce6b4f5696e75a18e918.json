@@ -1,0 +1,60 @@
+{
+  "id": "3c28ce6b4f5696e75a18e918",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_b1d3478e8272",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_b1d3478e8272.json",
+  "historical_output_sha256": "ff3f8902a5e89a54f4398194c3362fb55ef37a38c15c4e7a1af94fa920ad0aaf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1497,
+  "messages_sha256": "d7407b1496cbe49152d1fa331451687d0c73de7c09366e17899085fc3ee0af02",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses a specific issue with proxy models but may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a potential behavioral regression risk by altering how meta options are accessed, which could affect other parts of the codebase that rely on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no additional tests provided to ensure that the change does not introduce new issues or regressions in other scenarios involving proxy models or related queries.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 160,
+      "returned_model_request_id": "188",
+      "completed_at_utc": "2026-11-06T04:01:09.171367+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses a specific issue with proxy models but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a potential behavioral regression risk by altering how meta options are accessed, which could affect other parts of the codebase that rely on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure that the change does not introduce new issues or regressions in other scenarios involving proxy models or related queries."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses a specific issue with proxy models but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a potential behavioral regression risk by altering how meta options are accessed, which could affect other parts of the codebase that rely on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure that the change does not introduce new issues or regressions in other scenarios involving proxy models or related queries."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

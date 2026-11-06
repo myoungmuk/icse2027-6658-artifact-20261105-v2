@@ -1,0 +1,60 @@
+{
+  "id": "ea6d6ed07cae06982c0618d7",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_578125374281",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_578125374281.json",
+  "historical_output_sha256": "d7cf52185bd65fc0b467dd2813349a866ef6e43d0686cd6b0c96e660cabcc0d5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1031,
+  "messages_sha256": "8a3d8d0e3bcd4a4296bfccb7ce139fb20392ee3f1f7be526fcb1ff180b33a194",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the precision issue with Decimal numbers in the floatformat filter but introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces additional logic for handling Decimal types, which is not minimal and may introduce complexity.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include new tests to verify the behavior of the floatformat filter with Decimal numbers, which is crucial for ensuring the fix is robust.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 158,
+      "returned_model_request_id": "573",
+      "completed_at_utc": "2026-11-06T04:03:24.726098+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the precision issue with Decimal numbers in the floatformat filter but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional logic for handling Decimal types, which is not minimal and may introduce complexity."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include new tests to verify the behavior of the floatformat filter with Decimal numbers, which is crucial for ensuring the fix is robust."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the precision issue with Decimal numbers in the floatformat filter but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional logic for handling Decimal types, which is not minimal and may introduce complexity."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include new tests to verify the behavior of the floatformat filter with Decimal numbers, which is crucial for ensuring the fix is robust."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "76749ca40e0e83a27aa1239f",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_bbff7cdac56a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_bbff7cdac56a.json",
+  "historical_output_sha256": "09bf3d1105f82166e40cbf63b4e43936ce81d59448bed485c42f5418417d5a4d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 857,
+  "messages_sha256": "4c05f83c1ac2acdd00e6f9c765a1f49509d46d542a0a284be958c9f2b9da428e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but introduces complexity and potential regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces additional complexity in the code, making it harder to read and maintain.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"There is a risk that the change may break existing behavior, especially for non-binary data types.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include additional tests to verify the behavior for different types of data.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 174,
+      "returned_model_request_id": "656",
+      "completed_at_utc": "2026-11-06T04:03:59.186840+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but introduces complexity and potential regressions.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The change introduces additional complexity in the code, making it harder to read and maintain."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that the change may break existing behavior, especially for non-binary data types."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include additional tests to verify the behavior for different types of data."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but introduces complexity and potential regressions.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The change introduces additional complexity in the code, making it harder to read and maintain."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that the change may break existing behavior, especially for non-binary data types."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include additional tests to verify the behavior for different types of data."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

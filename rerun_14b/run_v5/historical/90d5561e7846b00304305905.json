@@ -1,0 +1,50 @@
+{
+  "id": "90d5561e7846b00304305905",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_0493276c15fb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_0493276c15fb.json",
+  "historical_output_sha256": "3de9c7eda7dd93ad2876606f7315ebfc38f30ad0b6c562f45fbb1d1b54f46925",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 762,
+  "messages_sha256": "334e64019b448f39d1fe6c407b746091e373c93ef0454ac40f4dc429abfed64e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with fixture directories containing Path instances but introduces a non-minimal change by converting all fixture_dirs to strings.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change converts all fixture_dirs to strings, which may not be necessary and could introduce unexpected behavior if other parts of the code expect Path instances.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "629",
+      "completed_at_utc": "2026-11-06T04:03:59.181564+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with fixture directories containing Path instances but introduces a non-minimal change by converting all fixture_dirs to strings.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change converts all fixture_dirs to strings, which may not be necessary and could introduce unexpected behavior if other parts of the code expect Path instances."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with fixture directories containing Path instances but introduces a non-minimal change by converting all fixture_dirs to strings.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change converts all fixture_dirs to strings, which may not be necessary and could introduce unexpected behavior if other parts of the code expect Path instances."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

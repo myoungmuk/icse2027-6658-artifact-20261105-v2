@@ -1,0 +1,60 @@
+{
+  "id": "ad4839e10249b4e8f44aa7d3",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_75c7f9d61cdc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_75c7f9d61cdc.json",
+  "historical_output_sha256": "08915b57563f7bc4ca64eaaf6249bbf2b93fe13215728f81ea4cf41b1e39436e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1345,
+  "messages_sha256": "c3a6d64ccb36b8a14ae90f3ae3aae416147b7d2274a01a51dd12a6caddf63e91",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue by short-circuiting the authentication process when either username or password is None. This prevents unnecessary database queries and password hashing.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not handle the case where the username is provided but the password is None. This could lead to unexpected behavior if other authentication backends rely on the password being checked.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new line that could be considered a minor style inconsistency with the surrounding code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 169,
+      "returned_model_request_id": "887",
+      "completed_at_utc": "2026-11-06T04:05:22.636935+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue by short-circuiting the authentication process when either username or password is None. This prevents unnecessary database queries and password hashing.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle the case where the username is provided but the password is None. This could lead to unexpected behavior if other authentication backends rely on the password being checked."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new line that could be considered a minor style inconsistency with the surrounding code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue by short-circuiting the authentication process when either username or password is None. This prevents unnecessary database queries and password hashing.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle the case where the username is provided but the password is None. This could lead to unexpected behavior if other authentication backends rely on the password being checked."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new line that could be considered a minor style inconsistency with the surrounding code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "b8d1f9aecab92bece40e",
+  "instance_id": "django__django-14681",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "b8d1f9aecab92bece40e_strict",
+  "arm": "strict",
+  "input_tokens": 816,
+  "messages_sha256": "18272cbfde47fdb1d808f35e44e513c9254dd7ee39a3aa68af937c2f34f84b06",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch incorrectly handles CSRF token verification by catching UnreadablePostError, which is not related to CSRF failures. This change does not address the root cause of the issue, which is related to file storage errors. The patch may introduce unexpected behavior and does not align with the expected error handling for CSRF tokens.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 83,
+      "returned_model_request_id": "2396",
+      "completed_at_utc": "2026-11-06T04:16:06.974033+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch incorrectly handles CSRF token verification by catching UnreadablePostError, which is not related to CSRF failures. This change does not address the root cause of the issue, which is related to file storage errors. The patch may introduce unexpected behavior and does not align with the expected error handling for CSRF tokens."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

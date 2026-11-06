@@ -1,0 +1,50 @@
+{
+  "id": "742beb72a671e5d517cbe716",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_b1dbda9958d5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_b1dbda9958d5.json",
+  "historical_output_sha256": "8ba89ff71a5aa7130ac41a68c3658e8313b64944ce895ea58435f21b849591dd",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1421,
+  "messages_sha256": "bdcb1ea2be1b907ad1aab379c0095e424bc21fc97e8d472de4dfff263fbd1d4b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the IndexError in the sylow_subgroup method by using a mask to track blocks to remove, which should resolve the issue without introducing significant changes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new list, blocks_remove_mask, which slightly increases the complexity of the code.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "1675",
+      "completed_at_utc": "2026-11-06T04:10:03.688663+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the IndexError in the sylow_subgroup method by using a mask to track blocks to remove, which should resolve the issue without introducing significant changes.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a new list, blocks_remove_mask, which slightly increases the complexity of the code."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the IndexError in the sylow_subgroup method by using a mask to track blocks to remove, which should resolve the issue without introducing significant changes.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a new list, blocks_remove_mask, which slightly increases the complexity of the code."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

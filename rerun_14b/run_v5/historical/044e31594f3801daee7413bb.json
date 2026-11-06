@@ -1,0 +1,70 @@
+{
+  "id": "044e31594f3801daee7413bb",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_2d6d55c42a72",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_2d6d55c42a72.json",
+  "historical_output_sha256": "18b11ae98df59e6a73d49474c85a48d88784dc1538979dc05da28f8bb2f40ba4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1457,
+  "messages_sha256": "85a4cddd24058fb943c9791afd975514177262a4ea5dba8ebfafc2227c9291de",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses a specific issue with proxy models and select_related/only methods, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch modifies the behavior of query construction, which could potentially break existing queries that rely on the current implementation.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify that the change does not introduce regressions or new issues.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch could be more readable with additional comments explaining the change and why it is necessary.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 195,
+      "returned_model_request_id": "640",
+      "completed_at_utc": "2026-11-06T04:03:59.183657+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses a specific issue with proxy models and select_related/only methods, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch modifies the behavior of query construction, which could potentially break existing queries that rely on the current implementation."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify that the change does not introduce regressions or new issues."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be more readable with additional comments explaining the change and why it is necessary."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses a specific issue with proxy models and select_related/only methods, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch modifies the behavior of query construction, which could potentially break existing queries that rely on the current implementation."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify that the change does not introduce regressions or new issues."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be more readable with additional comments explaining the change and why it is necessary."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "c63e166ce76b2690bfcfa630",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_2e6f71536285",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_2e6f71536285.json",
+  "historical_output_sha256": "c8c41ed2680159bbba49960180cc0d4fdec94507c5570638bf23d514db3754d8",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1958,
+  "messages_sha256": "a94d0cf62f32a57d68bf43458922679971c56f8435316c02f7ef3d57ef64a58c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of the 'center' kwarg being ignored when manually iterating over DataArrayRolling. The changes are minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding comments to explain the logic for calculating 'starts' and 'stops' when 'center' is True.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "1804",
+      "completed_at_utc": "2026-11-06T04:11:18.905432+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of the 'center' kwarg being ignored when manually iterating over DataArrayRolling. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the logic for calculating 'starts' and 'stops' when 'center' is True."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of the 'center' kwarg being ignored when manually iterating over DataArrayRolling. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the logic for calculating 'starts' and 'stops' when 'center' is True."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "30ce9116be50a1cd723f3b33",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_00cb72fe4dad",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_00cb72fe4dad.json",
+  "historical_output_sha256": "c3c97387dc84f2d4f029b9cac751bb91dd22abef74edafc36a079e02251820fb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3007,
+  "messages_sha256": "2f87ddee77030c8d7c3007822f54f8efc95732e391e67d5e2fb7c74ce87ae520",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly resolves the issue by ensuring additional parameters are passed before the database name in PostgreSQL. The added files for a test project are not necessary for the fix and should be removed.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR includes unnecessary files for a test project, which are not related to the fix and increase the scope of the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1815",
+      "completed_at_utc": "2026-11-06T04:11:18.907402+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly resolves the issue by ensuring additional parameters are passed before the database name in PostgreSQL. The added files for a test project are not necessary for the fix and should be removed.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR includes unnecessary files for a test project, which are not related to the fix and increase the scope of the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR correctly resolves the issue by ensuring additional parameters are passed before the database name in PostgreSQL. The added files for a test project are not necessary for the fix and should be removed.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR includes unnecessary files for a test project, which are not related to the fix and increase the scope of the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

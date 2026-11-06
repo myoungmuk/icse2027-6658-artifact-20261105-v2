@@ -1,0 +1,60 @@
+{
+  "id": "95a84c3a54fbb8f4228f5f2b",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_778081176a78",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_778081176a78.json",
+  "historical_output_sha256": "1130ad9465ba141d8d8f66550eebbbf8ebf8f2a05092f468f6bbca44fd812407",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1589,
+  "messages_sha256": "94ace528058f4c32133fdcaf8b23341e420df6b56e9198c456d07d0330f5cef2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of linting failing when a module contains a file of the same name as the directory. It introduces a check for the existence of an `__init__.py` file to determine if the path is a package.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch may introduce a behavioral regression risk by changing how directories are identified as packages. It assumes that the presence of an `__init__.py` file is sufficient to treat a directory as a package, which might not be the case in all scenarios.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch could be improved for maintainability by adding a comment explaining the logic behind checking for the `__init__.py` file.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 209,
+      "returned_model_request_id": "221",
+      "completed_at_utc": "2026-11-06T04:01:25.599375+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of linting failing when a module contains a file of the same name as the directory. It introduces a check for the existence of an `__init__.py` file to determine if the path is a package.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch may introduce a behavioral regression risk by changing how directories are identified as packages. It assumes that the presence of an `__init__.py` file is sufficient to treat a directory as a package, which might not be the case in all scenarios."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be improved for maintainability by adding a comment explaining the logic behind checking for the `__init__.py` file."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of linting failing when a module contains a file of the same name as the directory. It introduces a check for the existence of an `__init__.py` file to determine if the path is a package.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch may introduce a behavioral regression risk by changing how directories are identified as packages. It assumes that the presence of an `__init__.py` file is sufficient to treat a directory as a package, which might not be the case in all scenarios."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be improved for maintainability by adding a comment explaining the logic behind checking for the `__init__.py` file."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

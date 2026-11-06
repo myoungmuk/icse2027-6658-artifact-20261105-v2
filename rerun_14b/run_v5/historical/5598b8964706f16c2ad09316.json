@@ -1,0 +1,60 @@
+{
+  "id": "5598b8964706f16c2ad09316",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_3b364c1f4593",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_3b364c1f4593.json",
+  "historical_output_sha256": "34e9174f66e4bf72738eb916a3ffc6dda5d27b4f725d2d66ae9b4b3873d39e81",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 995,
+  "messages_sha256": "d392a6c43e57d2b4c73c630c81e7be555f00ce613831f2380e6dfeb5305fc173",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce behavioral regression risks and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may break existing behavior by altering the dimension checking logic, which could have unforeseen consequences in other parts of the codebase.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no additional tests provided to ensure that the change does not introduce new issues or regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "171",
+      "completed_at_utc": "2026-11-06T04:01:09.168109+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce behavioral regression risks and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing behavior by altering the dimension checking logic, which could have unforeseen consequences in other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce behavioral regression risks and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing behavior by altering the dimension checking logic, which could have unforeseen consequences in other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

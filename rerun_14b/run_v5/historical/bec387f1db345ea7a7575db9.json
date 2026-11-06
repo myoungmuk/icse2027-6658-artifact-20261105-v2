@@ -1,0 +1,50 @@
+{
+  "id": "bec387f1db345ea7a7575db9",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_c3f16768fe61",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_c3f16768fe61.json",
+  "historical_output_sha256": "fa9dd8c15f9bfcf9bce99e1bb7fa726ae2c760223704a6d578c0a8e218919228",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1187,
+  "messages_sha256": "c49ed716321b3e1bd5dfa01e43f0494798ef5759c5966fbe93e06c381f4d7ec4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of deleting an index_together when there is a unique_together on the same fields. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new parameter 'unique' in the _delete_composed_index call, which is not aligned with the existing code style and conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "1682",
+      "completed_at_utc": "2026-11-06T04:10:23.389252+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of deleting an index_together when there is a unique_together on the same fields. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new parameter 'unique' in the _delete_composed_index call, which is not aligned with the existing code style and conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of deleting an index_together when there is a unique_together on the same fields. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new parameter 'unique' in the _delete_composed_index call, which is not aligned with the existing code style and conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

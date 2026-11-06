@@ -1,0 +1,50 @@
+{
+  "id": "ddab376c60a719061c6cf53b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_085a480336d5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_085a480336d5.json",
+  "historical_output_sha256": "65154180e672ecb1aa930adc9343b978f1f82365f8e5603e253f3aa83dcea16c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 997,
+  "messages_sha256": "8a7f1e1f81cbd4aae949cad8fe37ca5939f8c380e4c75d85d5874487f008e4c2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR changes the lexer to 'text' for the pastebin feature, which may resolve the HTTP error issue. However, it lacks a test to verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include a test to verify that the change resolves the HTTP error issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "750",
+      "completed_at_utc": "2026-11-06T04:04:32.843072+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR changes the lexer to 'text' for the pastebin feature, which may resolve the HTTP error issue. However, it lacks a test to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include a test to verify that the change resolves the HTTP error issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR changes the lexer to 'text' for the pastebin feature, which may resolve the HTTP error issue. However, it lacks a test to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include a test to verify that the change resolves the HTTP error issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

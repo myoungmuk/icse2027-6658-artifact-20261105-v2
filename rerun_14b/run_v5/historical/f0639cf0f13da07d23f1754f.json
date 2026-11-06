@@ -1,0 +1,50 @@
+{
+  "id": "f0639cf0f13da07d23f1754f",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_c57f9973a50f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_c57f9973a50f.json",
+  "historical_output_sha256": "94cd619b596b92a0f54efb5c166044ec64d770cfaa1bfe37b84d878e7a2e9260",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1104,
+  "messages_sha256": "96af4a2dc44a6eb278a158ebd45def5d66d32d068207bdf7c02ba99d595bb7b0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific edge case but introduces a non-minimal change by adding a default parameter to the max function.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by adding a default parameter to the max function, which may not be the best approach to handle the edge case.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "23",
+      "completed_at_utc": "2026-11-06T04:00:16.938811+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific edge case but introduces a non-minimal change by adding a default parameter to the max function.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding a default parameter to the max function, which may not be the best approach to handle the edge case."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific edge case but introduces a non-minimal change by adding a default parameter to the max function.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding a default parameter to the max function, which may not be the best approach to handle the edge case."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

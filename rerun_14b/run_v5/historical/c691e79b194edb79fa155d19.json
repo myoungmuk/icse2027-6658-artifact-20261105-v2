@@ -1,0 +1,50 @@
+{
+  "id": "c691e79b194edb79fa155d19",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ad31ea8af359",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ad31ea8af359.json",
+  "historical_output_sha256": "6c658211e078a0161070ab7c15db4663166a4598fa3d70759a41df2c5d416391",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 964,
+  "messages_sha256": "01d6193a9fce7a5a52a45c31912d9777d9d12637c50408829f8e8ccf29223baf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a change to the `FileInput` widget to conditionally remove the `required` attribute based on initial data. However, it does not address the same logic in `ClearableFileInput`, leading to potential inconsistencies.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change only modifies `FileInput` but not `ClearableFileInput`, which may lead to inconsistent behavior between the two widgets.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 132,
+      "returned_model_request_id": "463",
+      "completed_at_utc": "2026-11-06T04:02:50.464586+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a change to the `FileInput` widget to conditionally remove the `required` attribute based on initial data. However, it does not address the same logic in `ClearableFileInput`, leading to potential inconsistencies.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The change only modifies `FileInput` but not `ClearableFileInput`, which may lead to inconsistent behavior between the two widgets."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a change to the `FileInput` widget to conditionally remove the `required` attribute based on initial data. However, it does not address the same logic in `ClearableFileInput`, leading to potential inconsistencies.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The change only modifies `FileInput` but not `ClearableFileInput`, which may lead to inconsistent behavior between the two widgets."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

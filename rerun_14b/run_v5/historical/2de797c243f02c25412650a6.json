@@ -1,0 +1,50 @@
+{
+  "id": "2de797c243f02c25412650a6",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_10dc9b85d1d5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_10dc9b85d1d5.json",
+  "historical_output_sha256": "f975cbe50694931f5da13ebe6eb8249ad78093db0e2375f0a73bf0e727ec7d0f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2150,
+  "messages_sha256": "5b45c5bbafc13bff23db9b41fc40f7b3a810df6c7b690de1a18a5b35d5be6274",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly resolves the issue by calling `self.save_m2m()` in `UserCreationForm.save()`. It also includes a new migration and a script to reproduce the issue, but the script is not a test.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"major\",\n      \"description\": \"The script `reproduce_m2m_issue.py` is not a test and should be converted into a proper test case to ensure the fix is robust and not regress in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 140,
+      "returned_model_request_id": "2017",
+      "completed_at_utc": "2026-11-06T04:13:37.404291+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly resolves the issue by calling `self.save_m2m()` in `UserCreationForm.save()`. It also includes a new migration and a script to reproduce the issue, but the script is not a test.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The script `reproduce_m2m_issue.py` is not a test and should be converted into a proper test case to ensure the fix is robust and not regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR correctly resolves the issue by calling `self.save_m2m()` in `UserCreationForm.save()`. It also includes a new migration and a script to reproduce the issue, but the script is not a test.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The script `reproduce_m2m_issue.py` is not a test and should be converted into a proper test case to ensure the fix is robust and not regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

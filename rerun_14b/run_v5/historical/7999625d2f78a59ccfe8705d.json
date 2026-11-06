@@ -1,0 +1,50 @@
+{
+  "id": "7999625d2f78a59ccfe8705d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_b7646fa57033",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_b7646fa57033.json",
+  "historical_output_sha256": "c961ea81e57187946abb031ff914ce65fb7f2ed86e92df137b758e189bac41de",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 764,
+  "messages_sha256": "b40fcce11e736e767bc9561a81238478bf8af00276365b388d8861655e8005fd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a functional issue but lacks tests to ensure the fix is robust.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the autoescape attribute is correctly honored in Engine.render_to_string().\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 98,
+      "returned_model_request_id": "734",
+      "completed_at_utc": "2026-11-06T04:04:32.839881+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a functional issue but lacks tests to ensure the fix is robust.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the autoescape attribute is correctly honored in Engine.render_to_string()."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a functional issue but lacks tests to ensure the fix is robust.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the autoescape attribute is correctly honored in Engine.render_to_string()."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

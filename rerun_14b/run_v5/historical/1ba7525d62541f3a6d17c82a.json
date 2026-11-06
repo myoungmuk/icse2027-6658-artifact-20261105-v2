@@ -1,0 +1,60 @@
+{
+  "id": "1ba7525d62541f3a6d17c82a",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_c3abe07a69cb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_c3abe07a69cb.json",
+  "historical_output_sha256": "2c7a6ddc539dea8b34da0ef1c63479f6ad2ecf42ffc241d45996a053f79ff74c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 789,
+  "messages_sha256": "ac6dfba71e69bdb7f2316ffbb804948d8e05b51c549d00c3982fd9d846c61146",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds support for item_comments but lacks tests and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"No tests are provided to ensure the new functionality works as expected.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"No documentation updates are provided to inform users about the new 'comments' argument.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "160",
+      "completed_at_utc": "2026-11-06T04:01:09.165770+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds support for item_comments but lacks tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "No tests are provided to ensure the new functionality works as expected."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "No documentation updates are provided to inform users about the new 'comments' argument."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds support for item_comments but lacks tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "No tests are provided to ensure the new functionality works as expected."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "No documentation updates are provided to inform users about the new 'comments' argument."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

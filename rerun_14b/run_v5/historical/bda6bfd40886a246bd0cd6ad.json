@@ -1,0 +1,50 @@
+{
+  "id": "bda6bfd40886a246bd0cd6ad",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_a61e0a2b6cad",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_a61e0a2b6cad.json",
+  "historical_output_sha256": "d7f401ccef033c415bbbd981b3ef443e27b1d28f3f800e595fcae45e0910d74b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1622,
+  "messages_sha256": "93af53c0f470b9adbbbbe62bb42ae420c2c3e061d93e277c5c219aca243d0990",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the issue with bulk_update() not working with plain F('...') expressions by using a duck type check. The new test file reproduces the issue and verifies the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new test file, which is not shown in the diff. However, the absence of test files in the diff is expected and not a problem.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "2079",
+      "completed_at_utc": "2026-11-06T04:14:03.532875+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the issue with bulk_update() not working with plain F('...') expressions by using a duck type check. The new test file reproduces the issue and verifies the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new test file, which is not shown in the diff. However, the absence of test files in the diff is expected and not a problem."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch resolves the issue with bulk_update() not working with plain F('...') expressions by using a duck type check. The new test file reproduces the issue and verifies the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new test file, which is not shown in the diff. However, the absence of test files in the diff is expected and not a problem."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

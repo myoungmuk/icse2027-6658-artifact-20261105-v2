@@ -1,0 +1,50 @@
+{
+  "id": "b9c305900a2e3c377f1560c7",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_bcc056c05abb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_bcc056c05abb.json",
+  "historical_output_sha256": "9f7c35dc037445853055b8e1ffaba6f4f08662015fd02341a31b55a8b1ffb1e5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1438,
+  "messages_sha256": "4754944c8e555552c9ae15f850b79d6475e1f8ae43d8e422d5851e503201ebd5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change sets a default Referrer-Policy of 'same-origin' for security improvements. Documentation is updated accordingly.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"This change introduces a behavioral regression risk for websites that rely on the Referer header for verification. While this is a fragile technique, it could break existing functionality.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "1852",
+      "completed_at_utc": "2026-11-06T04:11:40.860031+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change sets a default Referrer-Policy of 'same-origin' for security improvements. Documentation is updated accordingly.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "This change introduces a behavioral regression risk for websites that rely on the Referer header for verification. While this is a fragile technique, it could break existing functionality."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change sets a default Referrer-Policy of 'same-origin' for security improvements. Documentation is updated accordingly.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "This change introduces a behavioral regression risk for websites that rely on the Referer header for verification. While this is a fragile technique, it could break existing functionality."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

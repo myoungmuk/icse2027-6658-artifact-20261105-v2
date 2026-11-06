@@ -1,0 +1,50 @@
+{
+  "id": "d0f69e57e8d46c93c7658736",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_b2bde2563429",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_b2bde2563429.json",
+  "historical_output_sha256": "0d5feb81b015271ebaa1bb3fe170eb1245ddaf78f7b3d279827459e12895d5d0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 761,
+  "messages_sha256": "7058b644159f7b59286a0cb584aefd69b4b8008e055010bd72eeb80ad851fafa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a change to set the primary key to None after deletion, but it lacks tests to ensure the behavior is correct and doesn't break existing functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify that the primary key is correctly set to None after deletion and that it does not break existing behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "15",
+      "completed_at_utc": "2026-11-06T04:00:16.937303+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a change to set the primary key to None after deletion, but it lacks tests to ensure the behavior is correct and doesn't break existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the primary key is correctly set to None after deletion and that it does not break existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a change to set the primary key to None after deletion, but it lacks tests to ensure the behavior is correct and doesn't break existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the primary key is correctly set to None after deletion and that it does not break existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

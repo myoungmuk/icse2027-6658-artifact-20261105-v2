@@ -1,0 +1,50 @@
+{
+  "id": "54afd75bf175344d0cc7b7c0",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_be7ea323ac47",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_be7ea323ac47.json",
+  "historical_output_sha256": "1182ac1a16105005ae90d1dec9764400b35af2ca663fd3af7cf1ee37d2f33782",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1441,
+  "messages_sha256": "ca9b5914905be3040a3efc15dc4f2b2601521240173ef6e16d20823f0c2e8441",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly addresses the issue by making AlterField a no-op for choices on SQLite. The test added is specific to the issue and does not introduce any regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"minor\",\n      \"description\": \"The test is specific to the issue and may not cover all edge cases or other database backends.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "1862",
+      "completed_at_utc": "2026-11-06T04:11:40.861952+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly addresses the issue by making AlterField a no-op for choices on SQLite. The test added is specific to the issue and does not introduce any regressions.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The test is specific to the issue and may not cover all edge cases or other database backends."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change correctly addresses the issue by making AlterField a no-op for choices on SQLite. The test added is specific to the issue and does not introduce any regressions.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The test is specific to the issue and may not cover all edge cases or other database backends."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

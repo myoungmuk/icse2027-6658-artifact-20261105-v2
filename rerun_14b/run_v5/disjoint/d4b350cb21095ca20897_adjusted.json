@@ -1,0 +1,29 @@
+{
+  "code": "d4b350cb21095ca20897",
+  "instance_id": "sympy__sympy-16632",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "d4b350cb21095ca20897_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 2052,
+  "messages_sha256": "484002b121190c4f2a7e5a3788eea46a47613c9fb5f2aee26e300ed7203a567e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes to multiple files unrelated to the issue of parsing expressions with powers. The changes to `plot.py` and `diophantine.py` are not relevant to the problem described and may introduce unintended side effects. Additionally, the patch does not address the core issue of why `expr1 - expr2` does not simplify to zero. The proposed solution in `sympy_parser.py` is incomplete and may not resolve the underlying parsing problem.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "2269",
+      "completed_at_utc": "2026-11-06T04:15:26.683375+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes to multiple files unrelated to the issue of parsing expressions with powers. The changes to `plot.py` and `diophantine.py` are not relevant to the problem described and may introduce unintended side effects. Additionally, the patch does not address the core issue of why `expr1 - expr2` does not simplify to zero. The proposed solution in `sympy_parser.py` is incomplete and may not resolve the underlying parsing problem."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

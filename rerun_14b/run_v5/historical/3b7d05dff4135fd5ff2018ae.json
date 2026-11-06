@@ -1,0 +1,50 @@
+{
+  "id": "3b7d05dff4135fd5ff2018ae",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_86c7daa52750",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_86c7daa52750.json",
+  "historical_output_sha256": "db93c1a419190d60d4e0b759cce7b4affe0ed667075ca83c62b4f468407e8aa0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 4354,
+  "messages_sha256": "b1e13ade7d66fdbdbafa9c24636517f0216c0397786e2bd8d5780a973a9e6b21",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the inconsistency in the `hexbin` `mincnt` parameter behavior when `C` is specified. The change is minimal and well-documented.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The docstring for `mincnt` could be more explicit about its behavior when `C` is specified.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "1840",
+      "completed_at_utc": "2026-11-06T04:11:40.857778+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the inconsistency in the `hexbin` `mincnt` parameter behavior when `C` is specified. The change is minimal and well-documented.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for `mincnt` could be more explicit about its behavior when `C` is specified."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR resolves the inconsistency in the `hexbin` `mincnt` parameter behavior when `C` is specified. The change is minimal and well-documented.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for `mincnt` could be more explicit about its behavior when `C` is specified."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

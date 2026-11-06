@@ -1,0 +1,60 @@
+{
+  "id": "f6c7629ef087b353bb7d5f94",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_41c4a762b47b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_41c4a762b47b.json",
+  "historical_output_sha256": "70edbc0949c54e6ca44753a92977a7f587a4d04806f1d3d5a816d6dde809cdea",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1407,
+  "messages_sha256": "f2ccd603ab93344556dcb620adee84f5f6b7d2b68bb61cb93cced40055c1c4e3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of adding a zero vector but introduces some non-minimal changes and potential behavioral regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces unrelated changes such as modifying the `__eq__` method and the `_check_vector` function, which may not be necessary for fixing the original issue.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of the `__eq__` method by introducing a special case for zero, which may break existing behavior that assumes vectors are only equal if they are instances of `Vector`.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 181,
+      "returned_model_request_id": "2037",
+      "completed_at_utc": "2026-11-06T04:13:37.408113+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of adding a zero vector but introduces some non-minimal changes and potential behavioral regressions.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces unrelated changes such as modifying the `__eq__` method and the `_check_vector` function, which may not be necessary for fixing the original issue."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of the `__eq__` method by introducing a special case for zero, which may break existing behavior that assumes vectors are only equal if they are instances of `Vector`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of adding a zero vector but introduces some non-minimal changes and potential behavioral regressions.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces unrelated changes such as modifying the `__eq__` method and the `_check_vector` function, which may not be necessary for fixing the original issue."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of the `__eq__` method by introducing a special case for zero, which may break existing behavior that assumes vectors are only equal if they are instances of `Vector`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

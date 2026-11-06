@@ -1,0 +1,50 @@
+{
+  "id": "0d38b95500380210e3ba6a54",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_02fead967a0f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_02fead967a0f.json",
+  "historical_output_sha256": "fcaf4cabe61c4aff39a86ac5c407f57686ad45330b3a41f882182f88bbce6b32",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1729,
+  "messages_sha256": "ca19e0834910949c4233a749b201bedc1b767db85e7193efa31923e19fac6ed5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result(). The change is minimal and maintains existing functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The docstring for the new serialize_result() method could be more detailed to clarify its purpose and parameters.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "241",
+      "completed_at_utc": "2026-11-06T04:01:44.407754+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result(). The change is minimal and maintains existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for the new serialize_result() method could be more detailed to clarify its purpose and parameters."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result(). The change is minimal and maintains existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for the new serialize_result() method could be more detailed to clarify its purpose and parameters."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

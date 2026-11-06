@@ -1,0 +1,50 @@
+{
+  "id": "aa4b0af55f9dac54bd102f03",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_5aaa6032c762",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_5aaa6032c762.json",
+  "historical_output_sha256": "5a27cc24bddf0c57c092ee27004300eaabc6d172fd3df66757a3d5b3994f6f7b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 929,
+  "messages_sha256": "9960d9ba95bb0f7d438aac053a85a845aa7af99642013abebfad68432a4ae583",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of viewcode pages being created for epub when disabled, but it lacks tests to ensure the fix works as expected.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the fix works correctly and prevents viewcode pages from being created for epub when `viewcode_enable_epub=False`.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "646",
+      "completed_at_utc": "2026-11-06T04:03:59.184971+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of viewcode pages being created for epub when disabled, but it lacks tests to ensure the fix works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the fix works correctly and prevents viewcode pages from being created for epub when `viewcode_enable_epub=False`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of viewcode pages being created for epub when disabled, but it lacks tests to ensure the fix works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the fix works correctly and prevents viewcode pages from being created for epub when `viewcode_enable_epub=False`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

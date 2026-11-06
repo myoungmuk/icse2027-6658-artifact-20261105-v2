@@ -1,0 +1,50 @@
+{
+  "id": "626ff5d1c30d87d095402068",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_d271cb4492dc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_d271cb4492dc.json",
+  "historical_output_sha256": "acb659daff9cafb55522a54b0a95bbc5e8f07fc3084419ce2f800d03975f0fef",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1873,
+  "messages_sha256": "144306a61a3184f249bef4384061ec3b1b23d4d8e710cfa00a4e8cbcafda1701",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of inconsistent results between fit_predict and predict when n_init > 1, but it does not add any new tests to verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not add any new tests to verify the fix for the issue where fit_predict and predict return different results when n_init > 1.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "535",
+      "completed_at_utc": "2026-11-06T04:03:24.718150+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of inconsistent results between fit_predict and predict when n_init > 1, but it does not add any new tests to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not add any new tests to verify the fix for the issue where fit_predict and predict return different results when n_init > 1."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of inconsistent results between fit_predict and predict when n_init > 1, but it does not add any new tests to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not add any new tests to verify the fix for the issue where fit_predict and predict return different results when n_init > 1."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

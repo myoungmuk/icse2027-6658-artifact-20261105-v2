@@ -1,0 +1,50 @@
+{
+  "id": "de108a06bbae5533dad9579d",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_3615621a1201",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_3615621a1201.json",
+  "historical_output_sha256": "2f4fbe4a2aad82cdc54160b26555418981531b32de455167af7da74573980ffd",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2262,
+  "messages_sha256": "a6e226c4b62f8be397c6175ce6cbfbe30d8d96bed69ac68273931d096a953ed5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue with SplitArrayField and CheckboxInput widgets, but introduces a new file (test_settings.py) that is not necessary for the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new file (test_settings.py) that is not necessary for the fix. This file seems to be a duplicate of existing settings files and could lead to confusion or maintenance issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1907",
+      "completed_at_utc": "2026-11-06T04:12:04.311661+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue with SplitArrayField and CheckboxInput widgets, but introduces a new file (test_settings.py) that is not necessary for the fix.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The patch introduces a new file (test_settings.py) that is not necessary for the fix. This file seems to be a duplicate of existing settings files and could lead to confusion or maintenance issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue with SplitArrayField and CheckboxInput widgets, but introduces a new file (test_settings.py) that is not necessary for the fix.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The patch introduces a new file (test_settings.py) that is not necessary for the fix. This file seems to be a duplicate of existing settings files and could lead to confusion or maintenance issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "4972657c6e06afcca916ea2c",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_c3abe07a69cb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_c3abe07a69cb.json",
+  "historical_output_sha256": "ebb7ddd83db31a267bc546922e5f015d386ac1da6497de213302b8789fb0b716",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 976,
+  "messages_sha256": "9678efafa45f9fe4d43f599bab34cfc6922438711ba0c49cd296d5ad9c857b7b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change adds support for item_comments in the syndication framework, but it is not clear if it handles all edge cases or if it breaks existing behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change does not address how item_comments should be handled if they are not provided or if they are invalid. This could lead to functional incompleteness.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a new attribute (comments) to the feed items, which could potentially break existing code that relies on the current feed item structure. This introduces a risk of behavioral regression.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.7\n}",
+      "finish_reason": "stop",
+      "output_tokens": 182,
+      "returned_model_request_id": "352",
+      "completed_at_utc": "2026-11-06T04:02:17.670824+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change adds support for item_comments in the syndication framework, but it is not clear if it handles all edge cases or if it breaks existing behavior.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address how item_comments should be handled if they are not provided or if they are invalid. This could lead to functional incompleteness."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change introduces a new attribute (comments) to the feed items, which could potentially break existing code that relies on the current feed item structure. This introduces a risk of behavioral regression."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.7
+  },
+  "normalized": {
+    "summary": "The change adds support for item_comments in the syndication framework, but it is not clear if it handles all edge cases or if it breaks existing behavior.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address how item_comments should be handled if they are not provided or if they are invalid. This could lead to functional incompleteness."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change introduces a new attribute (comments) to the feed items, which could potentially break existing code that relies on the current feed item structure. This introduces a risk of behavioral regression."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.7
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

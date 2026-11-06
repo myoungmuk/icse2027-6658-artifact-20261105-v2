@@ -1,0 +1,29 @@
+{
+  "code": "a9b09ec32476b3a8ba8b",
+  "instance_id": "sympy__sympy-21476",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "a9b09ec32476b3a8ba8b_strict",
+  "arm": "strict",
+  "input_tokens": 3167,
+  "messages_sha256": "598f52722dd6769f0e6eaafa9102202ab0a559c009dd260a02eed82dbd885a6e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new method `_str_to_coordsys` that iterates over all relations to find a matching coordinate system by name. This approach is inefficient and can lead to performance issues, especially in larger systems with many coordinate systems. Additionally, the patch does not address the root cause of the KeyError, which seems to be related to the comparison between `CoordSystem` objects and `Str` objects in the Dijkstra algorithm. A more robust solution should be implemented to handle these comparisons correctly.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "2342",
+      "completed_at_utc": "2026-11-06T04:15:51.279113+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new method `_str_to_coordsys` that iterates over all relations to find a matching coordinate system by name. This approach is inefficient and can lead to performance issues, especially in larger systems with many coordinate systems. Additionally, the patch does not address the root cause of the KeyError, which seems to be related to the comparison between `CoordSystem` objects and `Str` objects in the Dijkstra algorithm. A more robust solution should be implemented to handle these comparisons correctly."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

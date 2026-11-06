@@ -1,0 +1,29 @@
+{
+  "code": "98cefb89ca87c3dd5a8e",
+  "instance_id": "django__django-14109",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "98cefb89ca87c3dd5a8e_strict",
+  "arm": "strict",
+  "input_tokens": 602,
+  "messages_sha256": "44e97d888eb51a153c88edf67e0ae38219c71f1d90fcd24bf69110562ff85ee9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a placeholder for operation-based migration names without implementing the actual function to generate these names. This results in incomplete functionality and a fragile approach, as the migration names will not reflect the operations they contain. Additionally, the patch lacks tests to ensure the new naming scheme works as intended.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 79,
+      "returned_model_request_id": "2382",
+      "completed_at_utc": "2026-11-06T04:16:06.971569+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a placeholder for operation-based migration names without implementing the actual function to generate these names. This results in incomplete functionality and a fragile approach, as the migration names will not reflect the operations they contain. Additionally, the patch lacks tests to ensure the new naming scheme works as intended."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

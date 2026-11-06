@@ -1,0 +1,60 @@
+{
+  "id": "b6039db4776343c1065ecd59",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_73bad00420c6",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_73bad00420c6.json",
+  "historical_output_sha256": "aae5e721402fde2972d996334707a6e35496fef3984b949aae479b014801dc28",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1207,
+  "messages_sha256": "1aa6dc3ff3d44f1f62bbbbbe72b4bb037a182697bf2bf50c870742e6982d215a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a potential behavioral regression risk and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the string representation of enum values, which may break existing code that relies on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include tests that cover the new behavior or ensure that it does not introduce regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 139,
+      "returned_model_request_id": "412",
+      "completed_at_utc": "2026-11-06T04:02:33.746670+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the string representation of enum values, which may break existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include tests that cover the new behavior or ensure that it does not introduce regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the string representation of enum values, which may break existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include tests that cover the new behavior or ensure that it does not introduce regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

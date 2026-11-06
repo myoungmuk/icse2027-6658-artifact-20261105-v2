@@ -1,0 +1,60 @@
+{
+  "id": "8c2345675f1f2313607e39dc",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_e0d39fee3c30",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_e0d39fee3c30.json",
+  "historical_output_sha256": "685cfa5954d3f0af63d42dfd050c0ca6c66eb712782baac2b06cdc66186c1d26",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1114,
+  "messages_sha256": "3d99f1ec141a4fc3a1ba53c0b2d7bd67db477892fa70560d67e80e74527b66b4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of parent_link ordering in MTI models but may not be minimal or comprehensive.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a conditional check for parent_link, which might not be the most minimal approach to solving the issue.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could benefit from additional comments to explain the reasoning behind the conditional check for parent_link.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "1355",
+      "completed_at_utc": "2026-11-06T04:08:18.332049+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of parent_link ordering in MTI models but may not be minimal or comprehensive.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a conditional check for parent_link, which might not be the most minimal approach to solving the issue."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from additional comments to explain the reasoning behind the conditional check for parent_link."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of parent_link ordering in MTI models but may not be minimal or comprehensive.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a conditional check for parent_link, which might not be the most minimal approach to solving the issue."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from additional comments to explain the reasoning behind the conditional check for parent_link."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

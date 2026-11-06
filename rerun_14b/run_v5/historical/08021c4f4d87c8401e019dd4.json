@@ -1,0 +1,50 @@
+{
+  "id": "08021c4f4d87c8401e019dd4",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_90d94679c37e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_90d94679c37e.json",
+  "historical_output_sha256": "eb4bb20e6cfd39ad4026391f3d215701a4bcb710fbe4341f1d3fad3057bd5adb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1773,
+  "messages_sha256": "061f1a8240612df26707548a617b0464713aebb11897963c84684c110ac6ca69",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR removes the unnecessary __file__ check and updates the migration loader to correctly handle empty directories. The changes are minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code style could be improved by aligning with Django's PEP 8 conventions, such as consistent spacing and line length.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "1794",
+      "completed_at_utc": "2026-11-06T04:11:18.903237+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR removes the unnecessary __file__ check and updates the migration loader to correctly handle empty directories. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style could be improved by aligning with Django's PEP 8 conventions, such as consistent spacing and line length."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR removes the unnecessary __file__ check and updates the migration loader to correctly handle empty directories. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style could be improved by aligning with Django's PEP 8 conventions, such as consistent spacing and line length."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

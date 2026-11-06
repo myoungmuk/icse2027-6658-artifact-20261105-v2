@@ -1,0 +1,50 @@
+{
+  "id": "7ca3251a0387b5b7fe36f8cf",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_70dae3e159d9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_70dae3e159d9.json",
+  "historical_output_sha256": "3d08705618a7c8df3bbfbfb8b262765ce1e09a7b14c580c8783577a708c58ca8",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1190,
+  "messages_sha256": "e3eda06ec9919c63a55726aa46363dc7da72d86fbeb7cf99cb68e5c3128e51a1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the issue of TypeError when comparing UnrecognizedUnit with None, but it may introduce unexpected behavior for other None comparisons.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of None comparisons, which might affect other parts of the code that rely on the exception being raised.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1368",
+      "completed_at_utc": "2026-11-06T04:08:18.335271+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the issue of TypeError when comparing UnrecognizedUnit with None, but it may introduce unexpected behavior for other None comparisons.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of None comparisons, which might affect other parts of the code that rely on the exception being raised."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch resolves the issue of TypeError when comparing UnrecognizedUnit with None, but it may introduce unexpected behavior for other None comparisons.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of None comparisons, which might affect other parts of the code that rely on the exception being raised."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

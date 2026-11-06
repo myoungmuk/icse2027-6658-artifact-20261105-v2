@@ -1,0 +1,50 @@
+{
+  "id": "baee81f0839fe0222fd8ba8e",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_d8856beb1f80",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_d8856beb1f80.json",
+  "historical_output_sha256": "f701e75c087ff213f11e30d343d35db14c7ff2fdc36fd563c251b8d3bcdcb692",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1128,
+  "messages_sha256": "d89d28d9466d28deec444c0c0c9e8a10f386a95b0115857d14d31719c85a10b3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by skipping the first line in the indentation calculation, which should resolve the error reported by docutils.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change does not handle cases where the first line is not empty but subsequent lines are indented. This could lead to incorrect trimming of docstrings.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "995",
+      "completed_at_utc": "2026-11-06T04:05:55.614968+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by skipping the first line in the indentation calculation, which should resolve the error reported by docutils.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not handle cases where the first line is not empty but subsequent lines are indented. This could lead to incorrect trimming of docstrings."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by skipping the first line in the indentation calculation, which should resolve the error reported by docutils.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not handle cases where the first line is not empty but subsequent lines are indented. This could lead to incorrect trimming of docstrings."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

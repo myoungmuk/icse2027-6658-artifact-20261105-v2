@@ -1,0 +1,50 @@
+{
+  "id": "6e28850600a25d52473e5389",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_bc638a5707f4",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_bc638a5707f4.json",
+  "historical_output_sha256": "876a2bd542fca3ba6b9bb4376cf403f815f028938802ceaf210b3c912e59d629",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1055,
+  "messages_sha256": "1f6db7d8cc930dbaae2a158d7f28e9b3aae9dedf45b612aab1cdeeb9edbc0c8d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of adding a nullable OneToOneField on SQLite, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of adding fields with default values or unique constraints, which might affect other migrations or use cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "726",
+      "completed_at_utc": "2026-11-06T04:04:32.838239+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of adding a nullable OneToOneField on SQLite, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of adding fields with default values or unique constraints, which might affect other migrations or use cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of adding a nullable OneToOneField on SQLite, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of adding fields with default values or unique constraints, which might affect other migrations or use cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "4b709bb1b38946abdb48",
+  "instance_id": "sphinx-doc__sphinx-9053",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "4b709bb1b38946abdb48_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 429,
+  "messages_sha256": "a28c01a163b315dfc0e75382370991c37e168ad829e80774b060ae5e32cfdd16",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new test file that runs the entire pytest suite using subprocess, which is not a recommended approach. This can lead to issues with test isolation, maintainability, and compatibility. Additionally, the patch does not specify which tests are being run or how they relate to the issue of testing with docutils-0.17b1. A more targeted and integrated testing approach is needed.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 101,
+      "returned_model_request_id": "2615",
+      "completed_at_utc": "2026-11-06T04:17:31.227708+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new test file that runs the entire pytest suite using subprocess, which is not a recommended approach. This can lead to issues with test isolation, maintainability, and compatibility. Additionally, the patch does not specify which tests are being run or how they relate to the issue of testing with docutils-0.17b1. A more targeted and integrated testing approach is needed."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

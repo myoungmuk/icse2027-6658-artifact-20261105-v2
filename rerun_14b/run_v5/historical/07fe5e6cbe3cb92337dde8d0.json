@@ -1,0 +1,60 @@
+{
+  "id": "07fe5e6cbe3cb92337dde8d0",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_77f3d9d4d7d0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_77f3d9d4d7d0.json",
+  "historical_output_sha256": "fa9b086b5fe259bdd6d522ef09f4b76fd87ffed60680770d557d4f67c261a621",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1738,
+  "messages_sha256": "1f1896632669affea22061b302cb3e20412b78c3947577d7ae1a496870464ae2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of setting a header to None in a session, but introduces a non-minimal change and potential maintainability issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by modifying the `prepare_headers` method in `requests/models.py` to handle the case where a header value is None. This change could have unintended side effects on other headers or future changes.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch could be improved for maintainability by adding comments to explain the logic for handling None values in headers.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 180,
+      "returned_model_request_id": "1877",
+      "completed_at_utc": "2026-11-06T04:12:04.305689+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of setting a header to None in a session, but introduces a non-minimal change and potential maintainability issues.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by modifying the `prepare_headers` method in `requests/models.py` to handle the case where a header value is None. This change could have unintended side effects on other headers or future changes."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be improved for maintainability by adding comments to explain the logic for handling None values in headers."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of setting a header to None in a session, but introduces a non-minimal change and potential maintainability issues.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by modifying the `prepare_headers` method in `requests/models.py` to handle the case where a header value is None. This change could have unintended side effects on other headers or future changes."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be improved for maintainability by adding comments to explain the logic for handling None values in headers."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

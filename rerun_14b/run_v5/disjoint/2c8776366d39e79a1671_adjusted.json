@@ -1,0 +1,29 @@
+{
+  "code": "2c8776366d39e79a1671",
+  "instance_id": "sympy__sympy-16449",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "2c8776366d39e79a1671_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1050,
+  "messages_sha256": "924459dd5741b335db25b26299f729fd2a6a0e68fe9c4bca0d12b40aa46cee66",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch adds a CDF method for the Maxwell distribution, but it is incorrectly implemented. The CDF for the Maxwell distribution should involve the error function (erf) and not the arctangent function (atan). This change could lead to incorrect results and should be corrected before merging.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 79,
+      "returned_model_request_id": "2457",
+      "completed_at_utc": "2026-11-06T04:16:43.890690+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch adds a CDF method for the Maxwell distribution, but it is incorrectly implemented. The CDF for the Maxwell distribution should involve the error function (erf) and not the arctangent function (atan). This change could lead to incorrect results and should be corrected before merging."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

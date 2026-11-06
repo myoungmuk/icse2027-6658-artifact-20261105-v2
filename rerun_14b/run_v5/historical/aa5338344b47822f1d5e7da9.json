@@ -1,0 +1,60 @@
+{
+  "id": "aa5338344b47822f1d5e7da9",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_e7e1c7e2792e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_e7e1c7e2792e.json",
+  "historical_output_sha256": "fc1454960e31bf99ccc6eeea1b870471a0797656c4036c253343bcc795dc8cd1",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1474,
+  "messages_sha256": "b833981537dcf88b18fc1fc811afbb7618a359f7d743e437a67c37a8db0e7d20",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds support for header rows in RestructuredText output, but the implementation is incomplete and may introduce a behavioral regression.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not handle the 'header_rows' argument correctly. The 'header_rows' parameter is not used in the 'write' method, and the 'header_class' is not updated to handle the new header rows.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR may break existing behavior by introducing a new argument 'header_rows' that is not used in the 'write' method. This could lead to unexpected behavior for users who do not provide the 'header_rows' argument.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 198,
+      "returned_model_request_id": "1275",
+      "completed_at_utc": "2026-11-06T04:07:40.860237+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds support for header rows in RestructuredText output, but the implementation is incomplete and may introduce a behavioral regression.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not handle the 'header_rows' argument correctly. The 'header_rows' parameter is not used in the 'write' method, and the 'header_class' is not updated to handle the new header rows."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The PR may break existing behavior by introducing a new argument 'header_rows' that is not used in the 'write' method. This could lead to unexpected behavior for users who do not provide the 'header_rows' argument."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR adds support for header rows in RestructuredText output, but the implementation is incomplete and may introduce a behavioral regression.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not handle the 'header_rows' argument correctly. The 'header_rows' parameter is not used in the 'write' method, and the 'header_class' is not updated to handle the new header rows."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The PR may break existing behavior by introducing a new argument 'header_rows' that is not used in the 'write' method. This could lead to unexpected behavior for users who do not provide the 'header_rows' argument."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

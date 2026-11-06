@@ -1,0 +1,50 @@
+{
+  "id": "8b5c0afbd8a9422362e3a75f",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_87b4bf9da3c5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_87b4bf9da3c5.json",
+  "historical_output_sha256": "6a5d4f690b2a8ad5ae05b7c223a328e83f3e3f9cefb6cabdecaaee3b860862fa",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1791,
+  "messages_sha256": "fb270199f045faa45982aa3f4ae93210ef7774d29ac2693e588565c604c3b98c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch changes the default auto field to BigAutoField, which may not be appropriate for all projects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"major\",\n      \"description\": \"This change introduces a compatibility break by altering the default auto field, which could affect projects that rely on the current AutoField behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "1323",
+      "completed_at_utc": "2026-11-06T04:07:59.673476+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch changes the default auto field to BigAutoField, which may not be appropriate for all projects.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "This change introduces a compatibility break by altering the default auto field, which could affect projects that rely on the current AutoField behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch changes the default auto field to BigAutoField, which may not be appropriate for all projects.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "This change introduces a compatibility break by altering the default auto field, which could affect projects that rely on the current AutoField behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

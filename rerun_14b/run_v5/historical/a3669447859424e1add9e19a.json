@@ -1,0 +1,50 @@
+{
+  "id": "a3669447859424e1add9e19a",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_ef83155852fb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_ef83155852fb.json",
+  "historical_output_sha256": "dd317f77d3ce1c7a65f6e8c79d1c6fb0d3881632d68d8f550a390dc69307c8f2",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1349,
+  "messages_sha256": "4863c8c4abda9fdea54f15754bee6b22373b034db2b3e4bf0d386673ac49ec0b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue by ensuring the correct calculation of data variables, but it may introduce a performance regression.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The patch uses a generator expression within the `__len__` method, which may introduce a performance regression compared to the original approach.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1217",
+      "completed_at_utc": "2026-11-06T04:07:22.383882+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue by ensuring the correct calculation of data variables, but it may introduce a performance regression.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch uses a generator expression within the `__len__` method, which may introduce a performance regression compared to the original approach."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue by ensuring the correct calculation of data variables, but it may introduce a performance regression.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch uses a generator expression within the `__len__` method, which may introduce a performance regression compared to the original approach."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

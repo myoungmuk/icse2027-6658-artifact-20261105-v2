@@ -1,0 +1,60 @@
+{
+  "id": "bd92d5ed4cbeb4d1d03b93c6",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_88abaab5e81e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_88abaab5e81e.json",
+  "historical_output_sha256": "8946828a67743a151df94889358645136ab105127df6f8d5252ff86f5b1dcbcd",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1012,
+  "messages_sha256": "68e19b260307f59a7cc9f69e4d2f413352637c8195fc691e93f59a2181228d5d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a potential behavioral regression risk and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch raises an exception for HTTP errors, which may break existing behavior where users expect to see anchor not found errors.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify the new behavior or ensure it does not regress existing functionality.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "691",
+      "completed_at_utc": "2026-11-06T04:04:16.297818+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch raises an exception for HTTP errors, which may break existing behavior where users expect to see anchor not found errors."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the new behavior or ensure it does not regress existing functionality."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch raises an exception for HTTP errors, which may break existing behavior where users expect to see anchor not found errors."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the new behavior or ensure it does not regress existing functionality."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

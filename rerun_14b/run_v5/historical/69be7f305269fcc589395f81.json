@@ -1,0 +1,50 @@
+{
+  "id": "69be7f305269fcc589395f81",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_6923d059aa94",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_6923d059aa94.json",
+  "historical_output_sha256": "532226a7ff105561078d2067809b384b258e0695032c938ff604610ad71bade7",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1038,
+  "messages_sha256": "e9eec71f73c6d46755aad7edc38df8e20c3223da0deea368d475aed7a3b5bf06",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a --skip-checks option to management commands, which is a useful feature. However, it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of management commands by adding a new option. This could potentially break existing scripts or workflows that rely on the current behavior without system checks.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "582",
+      "completed_at_utc": "2026-11-06T04:03:41.536472+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a --skip-checks option to management commands, which is a useful feature. However, it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of management commands by adding a new option. This could potentially break existing scripts or workflows that rely on the current behavior without system checks."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds a --skip-checks option to management commands, which is a useful feature. However, it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of management commands by adding a new option. This could potentially break existing scripts or workflows that rely on the current behavior without system checks."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

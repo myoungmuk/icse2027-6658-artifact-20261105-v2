@@ -1,0 +1,50 @@
+{
+  "id": "dad428278a99370232541a65",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_dd80c129aee6",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_dd80c129aee6.json",
+  "historical_output_sha256": "c8d0e51abf9e7c5e89b82e093447a16f6e317a0c00a669b5b53f900dd425e833",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1982,
+  "messages_sha256": "f17be2d30fa9b5e818046bde3700453a7ab58ab4c08057d74bbe1a14153f3d13",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch optimizes URLResolver construction by ensuring consistent use of settings.ROOT_URLCONF, which should reduce unnecessary calls to _populate. The changes are minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new function _get_resolver, which is not immediately clear from the function name alone. It could benefit from a more descriptive name or a comment explaining its purpose.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 131,
+      "returned_model_request_id": "2127",
+      "completed_at_utc": "2026-11-06T04:14:31.720638+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch optimizes URLResolver construction by ensuring consistent use of settings.ROOT_URLCONF, which should reduce unnecessary calls to _populate. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new function _get_resolver, which is not immediately clear from the function name alone. It could benefit from a more descriptive name or a comment explaining its purpose."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch optimizes URLResolver construction by ensuring consistent use of settings.ROOT_URLCONF, which should reduce unnecessary calls to _populate. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new function _get_resolver, which is not immediately clear from the function name alone. It could benefit from a more descriptive name or a comment explaining its purpose."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "6e903b682d6134ca3770916e",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_75c7f9d61cdc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_75c7f9d61cdc.json",
+  "historical_output_sha256": "b9e3a1c86ea8b5a3fe0f5586e2fdf946f778d89d2248284acbdc43335cb44a8f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1158,
+  "messages_sha256": "09315fe660f9f9dbdd420354e82126813701a0c698a70100935dfb21cfbf52d9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed change introduces a potential behavioral regression risk and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior where other authentication backends rely on the current implementation to handle cases where username or password is None.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no tests provided to verify the correctness of the change, which is crucial for ensuring that the new behavior does not introduce any issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 151,
+      "returned_model_request_id": "499",
+      "completed_at_utc": "2026-11-06T04:03:08.421008+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed change introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior where other authentication backends rely on the current implementation to handle cases where username or password is None."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests provided to verify the correctness of the change, which is crucial for ensuring that the new behavior does not introduce any issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed change introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior where other authentication backends rely on the current implementation to handle cases where username or password is None."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests provided to verify the correctness of the change, which is crucial for ensuring that the new behavior does not introduce any issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

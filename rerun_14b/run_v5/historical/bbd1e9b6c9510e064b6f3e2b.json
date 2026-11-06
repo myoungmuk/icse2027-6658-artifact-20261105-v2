@@ -1,0 +1,50 @@
+{
+  "id": "bbd1e9b6c9510e064b6f3e2b",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_0cbe4076b494",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_0cbe4076b494.json",
+  "historical_output_sha256": "b3d9bbd1d63386d850adc4f0821eed3c62cdb5e87b6b8c911fd1140f5de2976d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2115,
+  "messages_sha256": "c53647bc5bebc5c276ed83f143e4cf787526b9722bdaf6ac704921538d8c2a77",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a new parameter to `RidgeClassifierCV`, which is a non-minimal change. It also modifies the constructor signature and adds new attributes, which could potentially affect existing code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "365",
+      "completed_at_utc": "2026-11-06T04:02:17.673261+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a new parameter to `RidgeClassifierCV`, which is a non-minimal change. It also modifies the constructor signature and adds new attributes, which could potentially affect existing code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a new parameter to `RidgeClassifierCV`, which is a non-minimal change. It also modifies the constructor signature and adds new attributes, which could potentially affect existing code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

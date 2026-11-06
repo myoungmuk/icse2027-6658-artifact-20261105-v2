@@ -1,0 +1,50 @@
+{
+  "id": "1199840dcfb123e27591460d",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_38a6b957880a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_38a6b957880a.json",
+  "historical_output_sha256": "3448fddfe527149e290472b1a75fba38421217830f272ef55cf1f888adc03644",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1383,
+  "messages_sha256": "c59ce3e1508ddfb2fb0027a3a69cb9864e7afcdb1ba0020e30cb184d31609c86",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change reverses the order of locale directories, which may affect translation precedence.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"Reversing the order of locale directories may introduce unexpected behavior or break existing translations.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 91,
+      "returned_model_request_id": "1436",
+      "completed_at_utc": "2026-11-06T04:08:36.614051+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change reverses the order of locale directories, which may affect translation precedence.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "Reversing the order of locale directories may introduce unexpected behavior or break existing translations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change reverses the order of locale directories, which may affect translation precedence.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "Reversing the order of locale directories may introduce unexpected behavior or break existing translations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

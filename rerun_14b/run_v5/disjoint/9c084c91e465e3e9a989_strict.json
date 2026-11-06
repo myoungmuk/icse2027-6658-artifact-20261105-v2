@@ -1,0 +1,29 @@
+{
+  "code": "9c084c91e465e3e9a989",
+  "instance_id": "sphinx-doc__sphinx-7350",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "9c084c91e465e3e9a989_strict",
+  "arm": "strict",
+  "input_tokens": 848,
+  "messages_sha256": "65d7e569b004519f32fcc9bdffffc1c82d4fd238651de898adcdb823c68e36cb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a fragile approach by directly modifying the `_parse_attributes_section` and `_parse_methods_section` methods without considering the broader implications on other directives or potential regressions. Additionally, the patch does not include tests to verify the correctness of the changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 72,
+      "returned_model_request_id": "2628",
+      "completed_at_utc": "2026-11-06T04:17:31.230161+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a fragile approach by directly modifying the `_parse_attributes_section` and `_parse_methods_section` methods without considering the broader implications on other directives or potential regressions. Additionally, the patch does not include tests to verify the correctness of the changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "e5bcbcc3478743d0f84254ab",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_84bf9c59c2d1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_84bf9c59c2d1.json",
+  "historical_output_sha256": "406380d6dba5b580e9a163e6d783e624ca8bc1f81b34429ed20a9974ab102b36",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 973,
+  "messages_sha256": "2334d04632053aec35d455cecf918fd2c0787ac591e1793fe0682593542b75d4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the two-digit year issue correctly but introduces potential regressions and lacks tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch may break existing behavior for timestamps that are exactly 50 years in the future or within the next 50 years.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"No new tests are added to verify the correctness of the patch.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The code becomes slightly less readable due to the introduction of additional variables and logic.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 182,
+      "returned_model_request_id": "176",
+      "completed_at_utc": "2026-11-06T04:01:09.169048+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the two-digit year issue correctly but introduces potential regressions and lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior for timestamps that are exactly 50 years in the future or within the next 50 years."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "No new tests are added to verify the correctness of the patch."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code becomes slightly less readable due to the introduction of additional variables and logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the two-digit year issue correctly but introduces potential regressions and lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior for timestamps that are exactly 50 years in the future or within the next 50 years."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "No new tests are added to verify the correctness of the patch."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code becomes slightly less readable due to the introduction of additional variables and logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

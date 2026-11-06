@@ -1,0 +1,50 @@
+{
+  "id": "095ece5de09c7bf9cccaa3c8",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_217c0119224e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_217c0119224e.json",
+  "historical_output_sha256": "8eeaa89147ed1df6f4dfa501eccdad2185166a0760b9337d44a0dcd1b72f7589",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1334,
+  "messages_sha256": "52d94d1b7d6a0b66afc5c94806190d954de6dbff68c45361fc13110ea3cad06a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch removes the deprecation warning for passing URL kwargs to the context, which may lead to unexpected behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch removes the deprecation warning for passing URL kwargs to the context, which may lead to unexpected behavior in existing code that relies on this warning.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1197",
+      "completed_at_utc": "2026-11-06T04:07:03.960779+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch removes the deprecation warning for passing URL kwargs to the context, which may lead to unexpected behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch removes the deprecation warning for passing URL kwargs to the context, which may lead to unexpected behavior in existing code that relies on this warning."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch removes the deprecation warning for passing URL kwargs to the context, which may lead to unexpected behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch removes the deprecation warning for passing URL kwargs to the context, which may lead to unexpected behavior in existing code that relies on this warning."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

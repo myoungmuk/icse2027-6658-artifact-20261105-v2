@@ -1,0 +1,60 @@
+{
+  "id": "f45cbbb7ebcca1bc0a75b839",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_691b9bbb5dcc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_691b9bbb5dcc.json",
+  "historical_output_sha256": "a52c9bcad7010a1cc124ed5b98bf6ef693a7f43ad830bb6cc731ac69a86b04cf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1850,
+  "messages_sha256": "1f34daa6b6d2e61fd13349a2a63f18567a045156ec4afa912866944dc69b06f4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific KeyError issue in the migration autodetector but may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change uses `pop` with a default value of `None`, which could lead to unexpected behavior if the 'to' key is missing for other reasons.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include additional tests to ensure that the change does not introduce new issues or regressions in other scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 160,
+      "returned_model_request_id": "601",
+      "completed_at_utc": "2026-11-06T04:03:41.540162+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific KeyError issue in the migration autodetector but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change uses `pop` with a default value of `None`, which could lead to unexpected behavior if the 'to' key is missing for other reasons."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to ensure that the change does not introduce new issues or regressions in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific KeyError issue in the migration autodetector but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change uses `pop` with a default value of `None`, which could lead to unexpected behavior if the 'to' key is missing for other reasons."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to ensure that the change does not introduce new issues or regressions in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -122,23 +122,14 @@ Our contribution is the SWE-bench-specific historical-acceptance comparison and 
 empirical diagnosis, not the first use of calibration or positive controls.
 
 \section{Background}
-\textbf{Execution-based agent evaluation.} SWE-bench~\cite{swebench} casts coding-agent
-evaluation as resolving real GitHub issues and scores an attempt by running the repository's
-test suite: a task is \emph{resolved} when the agent's patch turns the \texttt{FAIL\_TO\_PASS}
-tests green without breaking the \texttt{PASS\_TO\_PASS} tests. SWE-bench Verified is a
-500-task subset that human annotators confirmed to be well-specified and
-solvable~\cite{swebenchverified}, partly in response to concerns that some original tasks were
-under-specified or had weak tests. A large ecosystem of scaffolds (Agentless~\cite{agentless},
+\textbf{Execution-based agent evaluation.} SWE-bench~\cite{swebench} scores patches for
+real GitHub issues using held-out failure and regression tests. Verified is a $500$-task
+subset annotated as well-specified and solvable~\cite{swebenchverified}. Scaffolds include Agentless~\cite{agentless},
 SWE-agent~\cite{sweagent}, OpenHands~\cite{wang2024openhands},
 AutoCodeRover~\cite{zhang2024autocoderover}, and the multimodal
-extension~\cite{yang2024swebenchmm}, among many others) now competes on \%Resolved, which has
-become the field's de-facto figure of merit. Execution-based scoring also has a known
-fragility: benchmark contamination of code LLMs can inflate it~\cite{riddell2024contamination},
-which further motivates evaluation criteria that do not reduce to a
-single passed test. Crucially, \%Resolved is an \emph{execution} signal: it
-certifies that a specific, held-out test passes, not that the change is one a project would
-actually accept. Our work does not compete on the metric; it treats the test-passing patches
-as the object of study.
+extension~\cite{yang2024swebenchmm}. Benchmark contamination can inflate execution
+scores~\cite{riddell2024contamination}. Our study examines test-passing patches:
+\%Resolved certifies the specified test outcome, rather than a project's acceptance.
 
 \textbf{Anatomy of a SWE-bench task and why it shapes review.} Each SWE-bench task bundles an
 issue (the natural-language \texttt{problem\_statement}), a base commit, the developer's merged
@@ -177,6 +168,7 @@ different scale and family?
 \section{Experiments}
 \subsection{Experimental setup}
 \subsubsection{Data and test-passing labels}
+Headline tables use archived reviews; fresh reruns are labeled separately.
 We study both standard SWE-bench splits: Lite (\nTotalLite{} tasks) and the human-validated
 Verified (\nTotalVerified{} tasks), each task pairing a GitHub issue with the developer's
 merged fix and a hidden test that encodes the bug. The agent under study is
@@ -628,46 +620,64 @@ explicitly. This is not equivalence, new harness execution, or independent calib
 
 
 A prospectively frozen follow-up excludes all $707$ prior tasks, selecting between
-two test-blind configurations on $40$ development tasks before reviewing $100$
-disjoint held-out tasks, each with developer/unresolved SWE-agent patches.
-Development proxy agreement selects adjusted ($43/80$ versus strict $38/80$);
-selection/output hashes are sealed before held-out inference. Of $560$ planned
-inputs, $558$ generate valid outputs; two overlength developer inputs are skipped,
-without truncation or replacement. Adjusted accepts $57/99$ developer and $49/100$
-unresolved patches. On $99$ complete pairs, functional-proxy agreement is $54.04\%$
-(task-bootstrap $95\%$ CI $47.47$--$60.61\%$); its difference from strict is $2.53$
-percentage points (CI $-3.03$--$8.59$). This finite two-configuration study shows no
-clear proxy improvement and does not validate historical calibration, maintainer
-truth, or repository/pretraining independence; that study runs no tests.
+two test-blind 7B configurations on $40$ development tasks before $100$ disjoint
+held-out tasks with developer/unresolved SWE-agent patches. Development selects
+adjusted ($43/80$ versus $38/80$); selection/output hashes are sealed before
+held-out inference. Of $560$ inputs, $558$ are valid; two overlength developer
+inputs are skipped without truncation/replacement. Adjusted accepts $57/99$
+developer and $49/100$ unresolved patches. Complete-pair proxy agreement is
+$54.04\%$ over $99$ tasks (task-bootstrap $95\%$ CI $47.47$--$60.61\%$);
+the difference from strict is $2.53$ points (CI $-3.03$--$8.59$). This supplies
+no clear proxy improvement or maintainer validation, excludes no pretraining
+exposure, and runs no tests.
+
+\textbf{Fresh 14B rerun and validation.} We rerun all $2,197$ archived packet/
+configuration records with identical messages, parser and retry settings, using
+the now-pinned Qwen-14B-AWQ revision and vLLM~0.10.2. Strict gold acceptance is
+$6/96$ on Lite and $15/194$ on Verified;
+adjusted acceptance is $72/96$ and $153/194$, respectively. Adjusted Verified gold decisions agree with the archive on
+$162/194$ inputs. Historical revision/runtime identity
+remains unknown; this is a known-condition rerun, not exact recovery. Repeating
+the archived false pass assertion does not validate its negative control.
+
+A separate frozen $140$-task study excludes all $847$ previously reviewed tasks.
+Development selects adjusted ($47/80$), sealed
+before $100$ held-out tasks. Of $560$ planned inputs across both arms/splits,
+$558$ are valid;
+missing/overlength outputs are not rejections or replaced tasks. The selected arm
+accepts $62/100$ developer and
+$53/100$ unresolved patches.
+Complete-pair proxy agreement is $54.50\%$ over
+$100$ tasks (task-bootstrap $95\%$ CI $49.00$--$60.00\%$);
+adjusted-minus-strict is $2.00$ points on $100$ common tasks
+(CI $-4.00$--$8.00$). Labels remain functional proxies, not maintainer truth.
+Cohorts, quantization and runtime differ from 7B; these studies isolate no size effect.
 
 \subsection{Qualitative inspection of cited concerns}
 A post-hoc audit selects the first two nonaccepted hosted cases lexically
 within resolved-agent ($30$), gold ($3$), and failing-agent ($38$) strata.
-Five focused claims have local probe support; Django's ordinary-path stale-PK
-objection is contradicted, including $15$ full-package SQLite scenarios.
-Official regressions for all $38$ hosted nonaccepted failing candidates in pinned
-source trees fail on base/candidate and pass on developer. Their $114$ final
-processes execute $387$ slots, with $60$ skips and $24$ earlier attempts retained.
-xarray's \texttt{sortby} NameError is reproduced; several ``issue resolved'' summaries
-conflict with regressions. ``Django merged'' remains a cue, not proof of exposure.
+Five focused claims have local probe support; Django's ordinary-path stale-PK objection is
+contradicted, including $15$ full-package SQLite scenarios. Official regressions
+for all $38$ hosted nonaccepted failing candidates fail on base/candidate and
+pass on developer: $114$ final processes, $387$ slots, $60$ skips and $24$ earlier
+attempts retained. xarray's \texttt{sortby} NameError is reproduced; several
+``issue resolved'' summaries conflict with regressions. ``Django merged'' is no exposure proof.
 
 For all three hosted nonaccepted gold cases, official targets fail on base and
-pass on gold ($8$ processes, $24$ slots); six witness processes record $33$ scenarios.
-Matplotlib's default empty-bin maximum/minimum errors disappear with diagnostic
-\texttt{mincnt=1}, consistent with fix \#27179; explicit zero still errors.
-Restoring scikit-learn's omitted \texttt{fit\_intercept} leaves scores, C,
-coefficients, intercepts and probabilities identical in four Iris settings.
-The $365$-day file audit measures churn, not defect counts.
+pass on gold ($8$ processes, $24$ slots); $6$ witness processes cover $33$ scenarios.
+Matplotlib's empty-bin errors disappear with diagnostic \texttt{mincnt=1},
+consistent with fix \#27179; explicit zero still errors. Restoring scikit-learn's
+omitted \texttt{fit\_intercept} changes no scores, C, coefficients, intercepts
+or probabilities in four Iris settings. The $365$-day audit measures churn, not defects.
 
 Four residual cases add $26$ final processes, $122$ original/amended-policy test
-slots and $51$ witness scenarios. They expose Django constraint errors behind a
-missing import, scikit-learn's default-path NameError and integer truncation,
-and Astropy's lost structured mask beyond its warning; a PCA path remains correct.
-All $48$ previously skipped Dask slots execute; candidate rolling labels repeat.
-Ten replaced infrastructure/witness attempts remain archived. These post-hoc checks
-support functional findings, not every rationale sentence, independent adjudication,
-or an error rate; diagnostic interventions are not original patches. No full
-container harness is run.
+slots and $51$ witness scenarios: Django constraint errors behind a missing import,
+scikit-learn default NameError/integer truncation, Astropy structured-mask loss
+beyond its warning, and repeated candidate rolling labels. All $48$ previously skipped
+Dask slots now execute. A PCA path remains correct. Ten replaced attempts remain archived.
+These post-hoc probes support functional findings, not every rationale sentence
+or a population error rate. Diagnostic interventions are not original patches;
+no full container harness is run.
 
 \subsection{A human-review pilot}
 Author Myeongmuk Kang, a non-independent, source-blinded rater, reviewed $40$ packets from
@@ -724,43 +734,41 @@ cross-scaffold differences and the hosted result rule out a blanket agent--gold
 null. Scale alone does not explain Qwen results; training/alignment histories differ.
 
 \textbf{Analysis reproduction versus fresh inference.} Stored verdicts regenerate
-tables/figures without model calls. Fresh inference requires weights and serving
-software; the missing hosted snapshot prevents exact replay. Computational
-checking supplies neither adjudication nor missing identity.
+analyses without model calls. Fresh inference requires weights/serving software;
+the missing hosted snapshot prevents exact replay. Computation supplies neither
+independent adjudication nor missing identity.
 
 \subsection{Threats to validity}
-\textbf{Construct.} Historical merge outcomes can tolerate imperfections and depend on PR
-discussion, CI, project plans, and social context absent from packets. Our binary labels
-operationalize a reviewer decision, not a verified maintainer decision or an objection's
-truth. The technical probes and three-case history audit provide no independent
-rationale adjudication or population defect incidence. Historical merges can contain
-defects. A single non-independent rater cannot supply that validation. Its shorter input limits further complicate human--LLM comparisons.
+\textbf{Construct.} Historical merges can contain defects and depend on PR
+context, CI, plans and social factors absent from packets. Binary labels record
+reviewer decisions, without validating maintainers or objections. Technical probes
+and the three-case history audit establish neither independent rationale truth nor
+population defect incidence. The single non-independent rater and shorter human
+inputs limit validation and human--LLM comparison.
 
-\textbf{Internal.} Rubric development reused the evaluation gold cohort, and intermediate
-versions, inspected IDs, and iteration count were not preserved. Five subsets of fixed
-verdicts do not establish task independence. The two prompt changes were not separated.
-Negative-control inputs incorrectly asserted a pass and used disjoint task populations;
-therefore their apparent separation cannot validate discrimination in the intended
-condition. The hosted $81$-packet execution sample also has an unexplained missing position.
+\textbf{Internal.} Development reused evaluation gold; intermediate rubrics,
+inspected IDs and iteration count were lost. Fixed-verdict subsets establish no
+task independence. Joint prompt changes were not separated. False pass assertions
+and different negative/positive populations invalidate the intended discrimination
+control. The hosted $81$-packet sample also has an unexplained missing position.
 
-\textbf{Contamination and blinding.} Agents and reviewers may recognize public issues,
-repository states or fixes. Explicit source masking cannot remove pretraining exposure;
-either gold or agent acceptance could be affected, with unmeasured direction/magnitude.
-Equal aggregate rates do not rule out recognition. This differs from documented gold-task
-reuse in rubric development; public post-merge histories also predate the judging.
+\textbf{Contamination and blinding.} Agents/reviewers may recognize public issues,
+states or fixes. Source masking excludes no pretraining exposure; its direction
+and magnitude remain unknown. Equal aggregate rates cannot rule out recognition.
+This differs from documented rubric-development gold reuse; public post-merge
+histories also predate judging.
 
-\textbf{External.} Selected Python tasks, four coding-agent prediction sets, five
-open-weight reviewers and one unrecorded hosted snapshot do not cover all methods,
-languages or model versions. Historical positive controls use resolved subsets;
-the full-split extension covers only the test-blind 7B adapter. RAG's $14$ tasks support
-no broad weak-agent claim. Industrial effort and deployment effects are unmeasured.
+\textbf{External.} Selected Python tasks, four scaffolds, five open reviewers and
+one unknown hosted snapshot cover limited methods, languages and versions.
+Historical controls use resolved subsets; full-split coverage uses only the
+7B adapter. RAG's $14$ tasks justify no broad weak-agent claim. Industrial effort
+and deployment effects are unmeasured.
 
-\textbf{Statistical and computational.} Tests are exploratory and use valid complete
-pairs. Historical parsing, normalization and higher-temperature retries can affect the
-population; their effects were not isolated. Wilson intervals rely on binomial assumptions;
-aggregate correlations are descriptive. Non-significance is not equivalence, and low
-agreement identifies no correct rater. Serving/numerical dependencies and the hosted
-identity gap limit exact inference reproduction.
+\textbf{Statistical and computational.} Tests are exploratory on valid complete
+pairs. Parsing, normalization and higher-temperature retry effects were not
+isolated. Wilson intervals assume binomial sampling; correlations are descriptive.
+Non-significance is not equivalence, and disagreement identifies no correct rater.
+Serving/numerical dependencies and missing hosted identity limit exact replay.
 
 \section{Related Work}
 \textbf{Execution and patch correctness.} Plausible but incorrect repairs are a longstanding
@@ -799,17 +807,18 @@ Review-based scores require examining the judge as well as the patch. Historical
 adjustment changes agent and gold acceptance; reviewer/scaffold differences and paired
 results do not establish equivalence or maintainer validity. The hosted identity is
 missing and archived negative inputs are flawed. New full-split and matched controls
-remain limited to a test-blind 7B adapter; targeted code/history checks establish no
-population objection-error rate. The task-disjoint study tests only two new 7B
-configurations. Broader calibration and human validation remain necessary before
+use a test-blind 7B adapter; targeted code/history checks establish no population
+objection-error rate. Separate task-disjoint studies test two configurations under
+7B and 14B, without isolating a model-size effect. Broader calibration and human validation remain necessary before
 operational merge decisions.
 
 \section*{Data and Artifact Availability}
-Version \texttt{2026.11.06-v13} at
+Version \texttt{2026.11.06-v14} at
 \url{https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2}
 contains preserved inputs/outputs and regeneration instructions for historical analyses,
-adapted pilots, full-split/disjoint controls and technical/history checks. Analysis reproduction
-does not recover the missing hosted identity or rubric history, or rerun inference.
+adapted pilots, full-split/disjoint controls, fresh 14B outputs and technical/history
+checks. Offline analysis does not rerun inference or recover the missing hosted identity
+or rubric history.
 
 \section*{Acknowledgments}
 OpenAI Codex~\cite{openaicodex} assisted revision, analysis, figures, reference checks and

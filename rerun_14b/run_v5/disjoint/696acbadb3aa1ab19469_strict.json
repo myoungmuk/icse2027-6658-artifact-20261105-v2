@@ -1,0 +1,29 @@
+{
+  "code": "696acbadb3aa1ab19469",
+  "instance_id": "django__django-12951",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "696acbadb3aa1ab19469_strict",
+  "arm": "strict",
+  "input_tokens": 833,
+  "messages_sha256": "71769dd2465d97527243ed2c56fc0779baf42d5952a44c1b909c7711a396ff70",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch modifies the `When` class to allow mixing `Exists` expressions with keyword arguments, but it does not address the root cause of the issue. The error message indicates that the `When` method requires a `Q` object, a boolean expression, or lookups as a condition. The patch introduces additional complexity without ensuring compatibility or correctness. It also lacks comprehensive test coverage to verify the behavior in various scenarios.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "2432",
+      "completed_at_utc": "2026-11-06T04:16:23.785772+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch modifies the `When` class to allow mixing `Exists` expressions with keyword arguments, but it does not address the root cause of the issue. The error message indicates that the `When` method requires a `Q` object, a boolean expression, or lookups as a condition. The patch introduces additional complexity without ensuring compatibility or correctness. It also lacks comprehensive test coverage to verify the behavior in various scenarios."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

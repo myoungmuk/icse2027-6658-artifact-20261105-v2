@@ -1,0 +1,50 @@
+{
+  "id": "d1fee0eac9dca9e92215d35e",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_65f0ee16f2ee",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_65f0ee16f2ee.json",
+  "historical_output_sha256": "83b00aa5329a85a2c7e2c7a0fff30a9cc510eaa8c0c957d3b1253592696410a4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1225,
+  "messages_sha256": "cba7b3b563e7209b16e3fc9c8e87d0afabb5564515888c773b8b7b7271fb0f5f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the --skip-checks option to management commands, which is a useful feature. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new command-line option, which should be documented in the relevant documentation files.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "1661",
+      "completed_at_utc": "2026-11-06T04:10:03.685124+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the --skip-checks option to management commands, which is a useful feature. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new command-line option, which should be documented in the relevant documentation files."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR adds the --skip-checks option to management commands, which is a useful feature. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new command-line option, which should be documented in the relevant documentation files."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

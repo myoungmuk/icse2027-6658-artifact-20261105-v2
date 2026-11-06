@@ -1,0 +1,50 @@
+{
+  "id": "3d7326d42e865dba18e79280",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_9cf664ee00d5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_9cf664ee00d5.json",
+  "historical_output_sha256": "0ed39d9e712369da2538a7d84233493bcf77fee9846a12c2d6ea9d7eb770e941",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 738,
+  "messages_sha256": "2577b49eecc6403eca60ae702f8b04acf688321ef7c1f88895b12cac63d4796d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a method `reduce` to `AddIndex` operation, but it lacks corresponding changes in `RemoveIndex` and other related operations, potentially leading to functional incompleteness.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The `reduce` method is only implemented for `AddIndex`, but not for `RemoveIndex` or other related operations, which may lead to functional incompleteness.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "429",
+      "completed_at_utc": "2026-11-06T04:02:33.749795+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a method `reduce` to `AddIndex` operation, but it lacks corresponding changes in `RemoveIndex` and other related operations, potentially leading to functional incompleteness.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The `reduce` method is only implemented for `AddIndex`, but not for `RemoveIndex` or other related operations, which may lead to functional incompleteness."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a method `reduce` to `AddIndex` operation, but it lacks corresponding changes in `RemoveIndex` and other related operations, potentially leading to functional incompleteness.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The `reduce` method is only implemented for `AddIndex`, but not for `RemoveIndex` or other related operations, which may lead to functional incompleteness."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

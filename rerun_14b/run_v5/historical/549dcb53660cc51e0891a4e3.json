@@ -1,0 +1,60 @@
+{
+  "id": "549dcb53660cc51e0891a4e3",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_d748b582b9ba",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_d748b582b9ba.json",
+  "historical_output_sha256": "c155ad5441b51dd203415363a980ee176a9e8a93390e951faffc5112593793cb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1668,
+  "messages_sha256": "da466d034a78bc0c205eda09462e2b4d6d55dba099b9f492adf087b9479e550c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific bug but introduces a potential non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies a utility function that may have unintended side effects on other parts of the codebase.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include tests that cover the specific bug fix or ensure that the change does not introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.7\n}",
+      "finish_reason": "stop",
+      "output_tokens": 145,
+      "returned_model_request_id": "763",
+      "completed_at_utc": "2026-11-06T04:04:32.845539+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific bug but introduces a potential non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies a utility function that may have unintended side effects on other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include tests that cover the specific bug fix or ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.7
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific bug but introduces a potential non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies a utility function that may have unintended side effects on other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include tests that cover the specific bug fix or ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.7
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

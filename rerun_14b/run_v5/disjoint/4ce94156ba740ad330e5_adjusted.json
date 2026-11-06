@@ -1,0 +1,29 @@
+{
+  "code": "4ce94156ba740ad330e5",
+  "instance_id": "pydata__xarray-3631",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "4ce94156ba740ad330e5_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 2711,
+  "messages_sha256": "b0db815e02c382e765899be9e8cfabcc0bb4afef6adc5053cab6c55b809d0ed9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file 'reproduce.py' which is not related to fixing the issue. Additionally, the change in 'duck_array_ops.py' directly converts datetime.timedelta objects to seconds, which may not be the correct approach for handling long time periods. This could lead to precision loss or other issues. The patch should focus on fixing the error without introducing unrelated files or potentially incorrect conversions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 100,
+      "returned_model_request_id": "2407",
+      "completed_at_utc": "2026-11-06T04:16:23.781183+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file 'reproduce.py' which is not related to fixing the issue. Additionally, the change in 'duck_array_ops.py' directly converts datetime.timedelta objects to seconds, which may not be the correct approach for handling long time periods. This could lead to precision loss or other issues. The patch should focus on fixing the error without introducing unrelated files or potentially incorrect conversions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

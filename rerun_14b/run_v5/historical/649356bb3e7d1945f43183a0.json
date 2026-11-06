@@ -1,0 +1,50 @@
+{
+  "id": "649356bb3e7d1945f43183a0",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_cda468b54284",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_cda468b54284.json",
+  "historical_output_sha256": "e92c5ecf09c9c8d72690b1e2dee4f38667c8af8d8f3930bd35669ce31aedc9c0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 957,
+  "messages_sha256": "488a1c6871cbb800edefb210d6bb533333521143887bdea03ed09d7c6399b0f2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch adds a space before 'CASE' in the template string, which should resolve the query syntax error. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a space before 'CASE' which may not align with the project's style conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "1010",
+      "completed_at_utc": "2026-11-06T04:06:12.543175+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch adds a space before 'CASE' in the template string, which should resolve the query syntax error. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a space before 'CASE' which may not align with the project's style conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch adds a space before 'CASE' in the template string, which should resolve the query syntax error. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a space before 'CASE' which may not align with the project's style conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

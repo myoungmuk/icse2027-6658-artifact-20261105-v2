@@ -1,0 +1,50 @@
+{
+  "id": "ecd1031e9505e28a120f0729",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_cb7afec2fe4c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_cb7afec2fe4c.json",
+  "historical_output_sha256": "b8c0a4f0adf0f34d2c5607a4c2b7773ffe3f5db477f0709d2ac7da10763ba9be",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1170,
+  "messages_sha256": "637226493c2bb62b1fd783a261ddd36dff209ca3a966e9a47024feb36e8f8397",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly preserves the finiteness assumption when using posify, but it may not handle other assumptions as intended.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change only addresses the finiteness assumption and does not handle other assumptions like integer, rational, prime, even, odd, etc. This may lead to incomplete resolution of the issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1699",
+      "completed_at_utc": "2026-11-06T04:10:23.392500+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly preserves the finiteness assumption when using posify, but it may not handle other assumptions as intended.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change only addresses the finiteness assumption and does not handle other assumptions like integer, rational, prime, even, odd, etc. This may lead to incomplete resolution of the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly preserves the finiteness assumption when using posify, but it may not handle other assumptions as intended.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change only addresses the finiteness assumption and does not handle other assumptions like integer, rational, prime, even, odd, etc. This may lead to incomplete resolution of the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

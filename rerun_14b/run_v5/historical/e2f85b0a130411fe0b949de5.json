@@ -1,0 +1,50 @@
+{
+  "id": "e2f85b0a130411fe0b949de5",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_16d575b032ee",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_16d575b032ee.json",
+  "historical_output_sha256": "cf3b3592e57c436638c1979b375e77f6d89e456736a940d7aac216ef6f2ffebb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1936,
+  "messages_sha256": "bdb60a30a414759a3ca02f8c2e084947dd06d0a4e56e8ea94ef71a7744a1e555",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue of pickling a figure with aligned labels by modifying the `Grouper` class to handle weak references during pickling. It includes a reproduction script and additional test cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new files (`reproduce_error.py` and `test_edge_cases.py`) without updating the documentation or contributing guidelines.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "2067",
+      "completed_at_utc": "2026-11-06T04:14:03.529637+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue of pickling a figure with aligned labels by modifying the `Grouper` class to handle weak references during pickling. It includes a reproduction script and additional test cases.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files (`reproduce_error.py` and `test_edge_cases.py`) without updating the documentation or contributing guidelines."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue of pickling a figure with aligned labels by modifying the `Grouper` class to handle weak references during pickling. It includes a reproduction script and additional test cases.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files (`reproduce_error.py` and `test_edge_cases.py`) without updating the documentation or contributing guidelines."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

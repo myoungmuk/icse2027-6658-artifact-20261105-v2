@@ -1,0 +1,50 @@
+{
+  "id": "6a639b5cc86de8edbd0d2221",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_c9aa6d4da6ee",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_c9aa6d4da6ee.json",
+  "historical_output_sha256": "1820f9453eb5050204f76aa00984414ac721b6fb58f1ec6ef8b2e7862183023d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 999,
+  "messages_sha256": "fe7659c609884c06b2272aa932598f39e833e7ac2fdd16b2239e8c9d28757ea0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring binary payloads are not converted to native strings, but it introduces a potential behavioral regression.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of how parameters are encoded, which might affect other parts of the codebase that rely on the current encoding behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "842",
+      "completed_at_utc": "2026-11-06T04:05:05.886051+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring binary payloads are not converted to native strings, but it introduces a potential behavioral regression.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of how parameters are encoded, which might affect other parts of the codebase that rely on the current encoding behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring binary payloads are not converted to native strings, but it introduces a potential behavioral regression.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of how parameters are encoded, which might affect other parts of the codebase that rely on the current encoding behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

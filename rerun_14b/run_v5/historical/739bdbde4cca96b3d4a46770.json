@@ -1,0 +1,50 @@
+{
+  "id": "739bdbde4cca96b3d4a46770",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_8c44aedcf8d7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_8c44aedcf8d7.json",
+  "historical_output_sha256": "e8a94d0a31720a646cb2396d1618e2cec51370c94609ac705efa629ca0a28327",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1229,
+  "messages_sha256": "535f8f4c50babb7c188cff1c9eb391b45e1002cdb5daf765fcab4413f7647aab",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of using aggregates over window functions by modifying the query generation logic. It introduces a new flag to track window function references and adjusts the aggregation logic accordingly.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new flag `refs_window` and modifies the aggregation logic. This could potentially make the code slightly less readable for maintainers who are not familiar with the new flag.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "960",
+      "completed_at_utc": "2026-11-06T04:05:55.608157+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of using aggregates over window functions by modifying the query generation logic. It introduces a new flag to track window function references and adjusts the aggregation logic accordingly.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new flag `refs_window` and modifies the aggregation logic. This could potentially make the code slightly less readable for maintainers who are not familiar with the new flag."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of using aggregates over window functions by modifying the query generation logic. It introduces a new flag to track window function references and adjusts the aggregation logic accordingly.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new flag `refs_window` and modifies the aggregation logic. This could potentially make the code slightly less readable for maintainers who are not familiar with the new flag."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

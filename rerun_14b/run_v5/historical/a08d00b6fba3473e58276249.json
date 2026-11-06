@@ -1,0 +1,50 @@
+{
+  "id": "a08d00b6fba3473e58276249",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_0b7fa3eabe64",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_0b7fa3eabe64.json",
+  "historical_output_sha256": "c15401a98ee194bfcf433a5c58c2c5246d10ce6725818b031096f60bd44cf400",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2743,
+  "messages_sha256": "01c5695dc3fdbb59beede95ce7f7d5dc3ec735537618c7b1c6ab4c9d5bfad44d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the docstring is a string before checking for 'PYTEST_DONT_REWRITE'.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The type hint for `docstring` in `is_rewrite_disabled` method is removed, which may not align with the project's convention of using type hints.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "320",
+      "completed_at_utc": "2026-11-06T04:02:01.130362+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the docstring is a string before checking for 'PYTEST_DONT_REWRITE'.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The type hint for `docstring` in `is_rewrite_disabled` method is removed, which may not align with the project's convention of using type hints."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the docstring is a string before checking for 'PYTEST_DONT_REWRITE'.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The type hint for `docstring` in `is_rewrite_disabled` method is removed, which may not align with the project's convention of using type hints."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

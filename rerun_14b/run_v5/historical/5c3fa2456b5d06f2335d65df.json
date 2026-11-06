@@ -1,0 +1,50 @@
+{
+  "id": "5c3fa2456b5d06f2335d65df",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_b4b6159851e5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_b4b6159851e5.json",
+  "historical_output_sha256": "a90b3cc83730a6c7d93f17d99f1f14b8100cc340a401cab699738350c16c13fa",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 954,
+  "messages_sha256": "2213b3377a71063a7b761d6da8f2bae1a6821d7e57dfdc134052d4eb7b7a51e2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce unexpected behavior due to changes in field retrieval.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the way field choices are retrieved, which might inadvertently affect other parts of the codebase that rely on the current behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 102,
+      "returned_model_request_id": "184",
+      "completed_at_utc": "2026-11-06T04:01:09.170580+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce unexpected behavior due to changes in field retrieval.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the way field choices are retrieved, which might inadvertently affect other parts of the codebase that rely on the current behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce unexpected behavior due to changes in field retrieval.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the way field choices are retrieved, which might inadvertently affect other parts of the codebase that rely on the current behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

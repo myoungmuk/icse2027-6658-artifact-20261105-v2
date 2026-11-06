@@ -1,0 +1,50 @@
+{
+  "id": "f0d79064aa05186d585703ff",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_382f151205ea",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_382f151205ea.json",
+  "historical_output_sha256": "335e74067147f580597f6174c076053a46ec360c0ba759c6658cfc9ca820be05",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1098,
+  "messages_sha256": "385114df6715aaa9e89dc21113418258d985f3cf12cde792ccb01d0ec360be90",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the 'nonform' CSS class for non-form errors in FormSets, which is a reasonable enhancement. However, it introduces a non-minimal change by modifying the error class initialization in multiple places.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces non-minimal modifications by altering the error class initialization in multiple places, which could lead to potential issues if not thoroughly reviewed.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1530",
+      "completed_at_utc": "2026-11-06T04:09:11.760463+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the 'nonform' CSS class for non-form errors in FormSets, which is a reasonable enhancement. However, it introduces a non-minimal change by modifying the error class initialization in multiple places.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces non-minimal modifications by altering the error class initialization in multiple places, which could lead to potential issues if not thoroughly reviewed."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds the 'nonform' CSS class for non-form errors in FormSets, which is a reasonable enhancement. However, it introduces a non-minimal change by modifying the error class initialization in multiple places.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces non-minimal modifications by altering the error class initialization in multiple places, which could lead to potential issues if not thoroughly reviewed."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

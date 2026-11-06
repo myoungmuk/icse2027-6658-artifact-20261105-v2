@@ -1,0 +1,50 @@
+{
+  "id": "b3cbb1748261c67ad47b0b1a",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_50b3084307fc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_50b3084307fc.json",
+  "historical_output_sha256": "bde23d89ae48baa862a4af615baab41077714d7bb8a5ded26b43e31363043a6e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2615,
+  "messages_sha256": "4fe004d9e0744bdfb27311e5a7f981a8e60f82664a826acee57a249b577ca472",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue with PositionField by modifying the _check_list_display_item function. It removes the hasattr check and restructures the exception handling to ensure correct behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch slightly changes the structure of the function, which could be considered a non-minimal change. However, it is necessary to fix the issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "1773",
+      "completed_at_utc": "2026-11-06T04:10:43.130243+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue with PositionField by modifying the _check_list_display_item function. It removes the hasattr check and restructures the exception handling to ensure correct behavior.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch slightly changes the structure of the function, which could be considered a non-minimal change. However, it is necessary to fix the issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue with PositionField by modifying the _check_list_display_item function. It removes the hasattr check and restructures the exception handling to ensure correct behavior.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch slightly changes the structure of the function, which could be considered a non-minimal change. However, it is necessary to fix the issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "720766496390f6fab86a41bc",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_aec73b3ef93d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_aec73b3ef93d.json",
+  "historical_output_sha256": "6e6a7c5c49c003b935732310a1cb33b11a28f46b52af771c0babcb491ed4e28a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 819,
+  "messages_sha256": "ede52fb8f711050292fba0be061b3bd6b6f52027e267e30bea45ed0af817dd03",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a non-minimal change and has a maintainability issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change includes an unnecessary duplicate call to `user.save()`.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The code is less readable due to the unnecessary duplication and lack of proper formatting.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "484",
+      "completed_at_utc": "2026-11-06T04:03:08.418137+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a non-minimal change and has a maintainability issue.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The change includes an unnecessary duplicate call to `user.save()`."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code is less readable due to the unnecessary duplication and lack of proper formatting."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a non-minimal change and has a maintainability issue.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The change includes an unnecessary duplicate call to `user.save()`."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code is less readable due to the unnecessary duplication and lack of proper formatting."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "b8d1f9aecab92bece40e",
+  "instance_id": "django__django-14681",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "b8d1f9aecab92bece40e_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 828,
+  "messages_sha256": "19682b09905a8005645b9001c0a539281a401c667661fb243cbec8d08668711c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch incorrectly handles CSRF token verification by catching UnreadablePostError, which is not related to CSRF failures. This change could mask actual CSRF issues and does not address the root cause of the reported problem with media storage.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 66,
+      "returned_model_request_id": "2397",
+      "completed_at_utc": "2026-11-06T04:16:06.974209+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch incorrectly handles CSRF token verification by catching UnreadablePostError, which is not related to CSRF failures. This change could mask actual CSRF issues and does not address the root cause of the reported problem with media storage."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

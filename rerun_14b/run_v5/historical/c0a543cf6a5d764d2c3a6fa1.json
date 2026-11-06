@@ -1,0 +1,50 @@
+{
+  "id": "c0a543cf6a5d764d2c3a6fa1",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_d340c5a44149",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_d340c5a44149.json",
+  "historical_output_sha256": "96179b1e0e78f08db20460007be2055c4ec33c9060e9c858930ea2460007338f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2858,
+  "messages_sha256": "48a2161d370115e56bea6491169644902e555a43644927e4360a044125c40b09",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the deprecation warning by handling empty arrays, but it introduces a new method that may not be necessary.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new method to handle empty arrays, which may not be the most minimal or efficient approach.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 103,
+      "returned_model_request_id": "1897",
+      "completed_at_utc": "2026-11-06T04:12:04.309782+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the deprecation warning by handling empty arrays, but it introduces a new method that may not be necessary.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The patch introduces a new method to handle empty arrays, which may not be the most minimal or efficient approach."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch addresses the deprecation warning by handling empty arrays, but it introduces a new method that may not be necessary.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The patch introduces a new method to handle empty arrays, which may not be the most minimal or efficient approach."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

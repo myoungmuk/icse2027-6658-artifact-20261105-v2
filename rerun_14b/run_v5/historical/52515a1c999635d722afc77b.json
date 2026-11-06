@@ -1,0 +1,60 @@
+{
+  "id": "52515a1c999635d722afc77b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_396d4236bd06",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_396d4236bd06.json",
+  "historical_output_sha256": "fc285569b70dca050866021e425150189cfe3d46fd8c83b54115b336d46d8173",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 811,
+  "messages_sha256": "ccd691a39e4dc3130496b87dda2859590efd339578ebbf669e1c5624d7c3dde5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds DISTINCT support for Avg and Sum aggregates, but lacks tests and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the functionality of the added DISTINCT support for Avg and Sum aggregates.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update the documentation to reflect the new DISTINCT support for Avg and Sum aggregates.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 142,
+      "returned_model_request_id": "713",
+      "completed_at_utc": "2026-11-06T04:04:16.302153+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds DISTINCT support for Avg and Sum aggregates, but lacks tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the added DISTINCT support for Avg and Sum aggregates."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the new DISTINCT support for Avg and Sum aggregates."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds DISTINCT support for Avg and Sum aggregates, but lacks tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the added DISTINCT support for Avg and Sum aggregates."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation to reflect the new DISTINCT support for Avg and Sum aggregates."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

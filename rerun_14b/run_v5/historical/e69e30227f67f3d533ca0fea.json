@@ -1,0 +1,70 @@
+{
+  "id": "e69e30227f67f3d533ca0fea",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_9801295cee4d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_9801295cee4d.json",
+  "historical_output_sha256": "86e4c6428995c800432df907ed705b648ed9c142a159024f96ee8b474654f7d8",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1252,
+  "messages_sha256": "9fb6aceef7742f3170cadf28584649a81bca9065dac19b76556eed0668583796",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a method to handle the identity matrix elements correctly, but it may not address all edge cases or potential regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch only handles the identity matrix case and does not address other types of matrices or potential edge cases.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"There is a risk that this change may break existing behavior for other matrix types or operations.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new method that could be improved for readability and maintainability.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.7\n}",
+      "finish_reason": "stop",
+      "output_tokens": 189,
+      "returned_model_request_id": "1441",
+      "completed_at_utc": "2026-11-06T04:08:55.018638+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a method to handle the identity matrix elements correctly, but it may not address all edge cases or potential regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only handles the identity matrix case and does not address other types of matrices or potential edge cases."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that this change may break existing behavior for other matrix types or operations."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new method that could be improved for readability and maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.7
+  },
+  "normalized": {
+    "summary": "The patch introduces a method to handle the identity matrix elements correctly, but it may not address all edge cases or potential regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only handles the identity matrix case and does not address other types of matrices or potential edge cases."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that this change may break existing behavior for other matrix types or operations."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new method that could be improved for readability and maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.7
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

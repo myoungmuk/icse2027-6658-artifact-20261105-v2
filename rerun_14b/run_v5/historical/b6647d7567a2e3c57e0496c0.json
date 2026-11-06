@@ -1,0 +1,50 @@
+{
+  "id": "b6647d7567a2e3c57e0496c0",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_05e846148511",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_05e846148511.json",
+  "historical_output_sha256": "a55316b1a676396b41dba274ef3f6ea03c7bd10c97327e8d01903fc8335e775b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2188,
+  "messages_sha256": "7e707e3699e8952a1f02e72350551bc020a99ddc262d531e0e0377f4f81dc21d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue by converting CN colors to RGBA values before setting the property cycle. It includes a new reproduction script and test cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces a new file `reproduce_error.py` without a newline at the end, which is a minor style issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "1990",
+      "completed_at_utc": "2026-11-06T04:13:06.090162+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue by converting CN colors to RGBA values before setting the property cycle. It includes a new reproduction script and test cases.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new file `reproduce_error.py` without a newline at the end, which is a minor style issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue by converting CN colors to RGBA values before setting the property cycle. It includes a new reproduction script and test cases.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new file `reproduce_error.py` without a newline at the end, which is a minor style issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

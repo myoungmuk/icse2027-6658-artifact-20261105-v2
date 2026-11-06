@@ -1,0 +1,50 @@
+{
+  "id": "0705067796b95f885f9cace6",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_77c127572ce2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_77c127572ce2.json",
+  "historical_output_sha256": "2c372724e60cfc2cd681f51edf09a6ed44f612741deef1cb65cf43c2c3626e3b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2009,
+  "messages_sha256": "762542ac041592ae8b4c63bbc24f399ebe230ce76bd53edb1e20d200b65860ed",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue with self-referencing foreign keys and ordering, but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the `find_ordering_name` method to include additional conditions, which may not be necessary and could introduce unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1554",
+      "completed_at_utc": "2026-11-06T04:09:29.768966+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue with self-referencing foreign keys and ordering, but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the `find_ordering_name` method to include additional conditions, which may not be necessary and could introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue with self-referencing foreign keys and ordering, but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the `find_ordering_name` method to include additional conditions, which may not be necessary and could introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "a5ca971efe00904edb95db5d",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_a340c45649fc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_a340c45649fc.json",
+  "historical_output_sha256": "16a466cd3307664afe54181d68ba5c44570bc40d96ba8b6f1713b254b2b9ede4",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1166,
+  "messages_sha256": "54c02e12a87b35a2c33b0df80210ef287227ecc43f69ad1e9acae743122fff46",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the issue with OuterRef in exclude() or ~Q() by modifying the as_sql method in ResolvedOuterRef. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of the as_sql method, which might have unintended consequences. The approach seems fragile as it directly modifies the SQL generation without thorough consideration of other potential use cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1430",
+      "completed_at_utc": "2026-11-06T04:08:36.612973+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the issue with OuterRef in exclude() or ~Q() by modifying the as_sql method in ResolvedOuterRef. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch changes the behavior of the as_sql method, which might have unintended consequences. The approach seems fragile as it directly modifies the SQL generation without thorough consideration of other potential use cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch resolves the issue with OuterRef in exclude() or ~Q() by modifying the as_sql method in ResolvedOuterRef. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch changes the behavior of the as_sql method, which might have unintended consequences. The approach seems fragile as it directly modifies the SQL generation without thorough consideration of other potential use cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

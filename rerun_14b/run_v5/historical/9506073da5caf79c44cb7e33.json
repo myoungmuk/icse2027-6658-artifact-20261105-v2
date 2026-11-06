@@ -1,0 +1,50 @@
+{
+  "id": "9506073da5caf79c44cb7e33",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_e51a4f6f9cf5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_e51a4f6f9cf5.json",
+  "historical_output_sha256": "ffaa755880fae3709f0f3cba6f577933608d77153b5babfab19e6fd3aa3e59ad",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1204,
+  "messages_sha256": "2e856d8a7e1f5210969e23fcebac03135e334c4ca9dcb612c02429d45d784f2a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly preserves the 'finite' assumption during posification, but it may not address other potential assumptions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch only addresses the 'finite' assumption. Other assumptions like 'integer', 'rational', 'prime', 'even', 'odd' should also be considered for preservation.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "1294",
+      "completed_at_utc": "2026-11-06T04:07:40.863834+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly preserves the 'finite' assumption during posification, but it may not address other potential assumptions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only addresses the 'finite' assumption. Other assumptions like 'integer', 'rational', 'prime', 'even', 'odd' should also be considered for preservation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly preserves the 'finite' assumption during posification, but it may not address other potential assumptions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only addresses the 'finite' assumption. Other assumptions like 'integer', 'rational', 'prime', 'even', 'odd' should also be considered for preservation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

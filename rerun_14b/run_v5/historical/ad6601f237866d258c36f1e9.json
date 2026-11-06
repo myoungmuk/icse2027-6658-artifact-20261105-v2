@@ -1,0 +1,50 @@
+{
+  "id": "ad6601f237866d258c36f1e9",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_3931099d3b1d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_3931099d3b1d.json",
+  "historical_output_sha256": "bb1f1f34677e5289ae5dbaf86e8c3d3c9bdc2499e0011b658a714bb490cde9d6",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2596,
+  "messages_sha256": "50334076b58815b397c571b23480abf6f1eddd6909636c23bc6821c212a79739",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by applying column formats if provided, but it may introduce a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces additional logic to apply column formats, which is not minimal and may have unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 101,
+      "returned_model_request_id": "1009",
+      "completed_at_utc": "2026-11-06T04:06:12.542937+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by applying column formats if provided, but it may introduce a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces additional logic to apply column formats, which is not minimal and may have unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by applying column formats if provided, but it may introduce a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces additional logic to apply column formats, which is not minimal and may have unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

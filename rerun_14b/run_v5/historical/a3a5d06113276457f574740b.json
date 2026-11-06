@@ -1,0 +1,50 @@
+{
+  "id": "a3a5d06113276457f574740b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_072d681f376d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_072d681f376d.json",
+  "historical_output_sha256": "e6c0d029ee6d83871b6b36d1a2f1b9a0747dccc854ac59ffd2b6272e347a6733",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 933,
+  "messages_sha256": "e3b8aa3fd178d4460010bb6444503d3f8a5a6dc0ebd649550e6e4f1192c2c804",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with the output of the runserver command but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a conditional logic that checks if the address is '0' and replaces it with '0.0.0.0'. This is not a minimal change and may introduce unintended side effects or confusion.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "435",
+      "completed_at_utc": "2026-11-06T04:02:50.458824+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with the output of the runserver command but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a conditional logic that checks if the address is '0' and replaces it with '0.0.0.0'. This is not a minimal change and may introduce unintended side effects or confusion."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with the output of the runserver command but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a conditional logic that checks if the address is '0' and replaces it with '0.0.0.0'. This is not a minimal change and may introduce unintended side effects or confusion."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

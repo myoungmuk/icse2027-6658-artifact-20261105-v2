@@ -1,0 +1,50 @@
+{
+  "id": "129974fb66270c5d9527991e",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_e74895f2a18a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_e74895f2a18a.json",
+  "historical_output_sha256": "c4debd563d262f8a493fbbae941bce5ba5d9b314bc754625c28b4b2a93f86bb8",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1554,
+  "messages_sha256": "7beb8053a1472203daaf43cf1e5d1fdca12f2a90bc7ebac4b565645cfbbea839",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by ensuring that artists' `.axes` and `.figure` attributes are unset when they are removed or when axes are cleared. The changes are minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code style in `figure.py` could be improved by using a loop to remove artists from the figure's collections instead of manually checking each list.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "1888",
+      "completed_at_utc": "2026-11-06T04:12:04.307757+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by ensuring that artists' `.axes` and `.figure` attributes are unset when they are removed or when axes are cleared. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style in `figure.py` could be improved by using a loop to remove artists from the figure's collections instead of manually checking each list."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by ensuring that artists' `.axes` and `.figure` attributes are unset when they are removed or when axes are cleared. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style in `figure.py` could be improved by using a loop to remove artists from the figure's collections instead of manually checking each list."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

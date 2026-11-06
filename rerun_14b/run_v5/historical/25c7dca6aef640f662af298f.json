@@ -1,0 +1,50 @@
+{
+  "id": "25c7dca6aef640f662af298f",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_b0501b2f3c69",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_b0501b2f3c69.json",
+  "historical_output_sha256": "1539780b6de0549661d1851b2c1f7db7db582e5e38aeba91681d146263c833a6",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1396,
+  "messages_sha256": "c2f76cb5237d373389832a41de7f52bcaad81e1fce1ae51c4b872b5ae17f241a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR exposes the `warm_start` parameter in `IsolationForest` and updates the documentation. It appears to be a straightforward and necessary change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The parameter `warm_start` is added to the `__init__` method, which is consistent with the style of other ensemble methods in scikit-learn. However, the parameter is not explicitly documented in the class docstring, which could lead to confusion.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "1381",
+      "completed_at_utc": "2026-11-06T04:08:18.338378+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR exposes the `warm_start` parameter in `IsolationForest` and updates the documentation. It appears to be a straightforward and necessary change.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The parameter `warm_start` is added to the `__init__` method, which is consistent with the style of other ensemble methods in scikit-learn. However, the parameter is not explicitly documented in the class docstring, which could lead to confusion."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR exposes the `warm_start` parameter in `IsolationForest` and updates the documentation. It appears to be a straightforward and necessary change.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The parameter `warm_start` is added to the `__init__` method, which is consistent with the style of other ensemble methods in scikit-learn. However, the parameter is not explicitly documented in the class docstring, which could lead to confusion."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

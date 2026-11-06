@@ -1,0 +1,50 @@
+{
+  "id": "1865b9d40b786488071622e0",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_0b62ee0d2855",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_0b62ee0d2855.json",
+  "historical_output_sha256": "6993b8605182ff3c11bd24839d5179870ac5eec8cb166516693c9c5cb1a47f4b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1084,
+  "messages_sha256": "9bc0a4a1c91f4c74d02a5661bf0c898d891797b51477653ab79ddb08bda0b1fb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the input validation issue by allowing non-numeric types, but it may introduce unintended behavior or compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"major\",\n      \"description\": \"The change allows non-numeric types for clustering labels, which may break existing code that assumes numeric labels. This could lead to compatibility issues with other parts of the library or user code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "225",
+      "completed_at_utc": "2026-11-06T04:01:25.600125+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the input validation issue by allowing non-numeric types, but it may introduce unintended behavior or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change allows non-numeric types for clustering labels, which may break existing code that assumes numeric labels. This could lead to compatibility issues with other parts of the library or user code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the input validation issue by allowing non-numeric types, but it may introduce unintended behavior or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change allows non-numeric types for clustering labels, which may break existing code that assumes numeric labels. This could lead to compatibility issues with other parts of the library or user code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

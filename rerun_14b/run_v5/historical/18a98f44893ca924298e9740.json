@@ -1,0 +1,60 @@
+{
+  "id": "18a98f44893ca924298e9740",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_a43858139409",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_a43858139409.json",
+  "historical_output_sha256": "b3b2a645a6ff63e1b71261438ff0c6cf186c6b4d3db97765e6ee907a57754ae1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3357,
+  "messages_sha256": "2e7a9104b6fc0f746ac6a4810ab95dc1bbc0dcc824ff33d8b14766963d6f6662",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of float precision in FITS cards, but introduces a loop that may not be optimal.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The loop that attempts different precisions until the string representation converts back to the same float may introduce unnecessary computational overhead.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could benefit from comments explaining the logic behind the loop and the normalization of the exponent format.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 150,
+      "returned_model_request_id": "1915",
+      "completed_at_utc": "2026-11-06T04:12:04.313167+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of float precision in FITS cards, but introduces a loop that may not be optimal.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The loop that attempts different precisions until the string representation converts back to the same float may introduce unnecessary computational overhead."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from comments explaining the logic behind the loop and the normalization of the exponent format."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of float precision in FITS cards, but introduces a loop that may not be optimal.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The loop that attempts different precisions until the string representation converts back to the same float may introduce unnecessary computational overhead."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from comments explaining the logic behind the loop and the normalization of the exponent format."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

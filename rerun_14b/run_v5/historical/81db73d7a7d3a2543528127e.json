@@ -1,0 +1,50 @@
+{
+  "id": "81db73d7a7d3a2543528127e",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_488c2fd253a9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_488c2fd253a9.json",
+  "historical_output_sha256": "7dcc16618e54a4e0f7df2a11a7044b0cee897e99a05ac6cefd28713be4798b06",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1404,
+  "messages_sha256": "ba470b1de7f20ca166325ff7456f9b313b60aad0d950b2edc5e9969acf6b2be3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces a new parameter `allow_new` to control new object creation in model formsets, which seems to address the issue without introducing clear problems.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new parameter `allow_new` is added to the `modelformset_factory` function, which slightly deviates from the existing parameter naming conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1331",
+      "completed_at_utc": "2026-11-06T04:07:59.674990+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces a new parameter `allow_new` to control new object creation in model formsets, which seems to address the issue without introducing clear problems.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new parameter `allow_new` is added to the `modelformset_factory` function, which slightly deviates from the existing parameter naming conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change introduces a new parameter `allow_new` to control new object creation in model formsets, which seems to address the issue without introducing clear problems.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new parameter `allow_new` is added to the `modelformset_factory` function, which slightly deviates from the existing parameter naming conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

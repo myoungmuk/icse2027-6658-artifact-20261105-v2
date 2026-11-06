@@ -1,0 +1,50 @@
+{
+  "id": "43143ce1332dae014e70f59b",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_ab40e58a724e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_ab40e58a724e.json",
+  "historical_output_sha256": "42d9506a8988986a8d3f08485d7b1841938886c5367197daab5fe7c24bd26eef",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1095,
+  "messages_sha256": "9f42d68e7968f3f4b364c8dc38cd89958a9865bb816460ab76953e080a46440b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue of `:meta public:` not affecting variables, but it may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of private members by checking for 'public' in metadata, which might inadvertently affect other parts of the code that rely on the current behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "1241",
+      "completed_at_utc": "2026-11-06T04:07:22.388211+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue of `:meta public:` not affecting variables, but it may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of private members by checking for 'public' in metadata, which might inadvertently affect other parts of the code that rely on the current behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue of `:meta public:` not affecting variables, but it may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of private members by checking for 'public' in metadata, which might inadvertently affect other parts of the code that rely on the current behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

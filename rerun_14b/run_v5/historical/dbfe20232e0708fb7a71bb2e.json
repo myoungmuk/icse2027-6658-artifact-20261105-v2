@@ -1,0 +1,50 @@
+{
+  "id": "dbfe20232e0708fb7a71bb2e",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_8619f9730a5f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_8619f9730a5f.json",
+  "historical_output_sha256": "9156c3b6584405de7209bed6f5a5091943894d8c5785849e6d759110430634ab",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 9610,
+  "messages_sha256": "9e56971369d0528d80dfa2d57388230830ccfe9d8398e4388be56469481c9b3c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces new CSS files and updates, but does not address the reported issue with autodoc_type_aliases not working when autodoc_typehints is set to 'description'.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not resolve the issue with autodoc_type_aliases not working when autodoc_typehints is set to 'description'. The changes are unrelated to the reported bug.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "2056",
+      "completed_at_utc": "2026-11-06T04:13:37.411661+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces new CSS files and updates, but does not address the reported issue with autodoc_type_aliases not working when autodoc_typehints is set to 'description'.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not resolve the issue with autodoc_type_aliases not working when autodoc_typehints is set to 'description'. The changes are unrelated to the reported bug."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR introduces new CSS files and updates, but does not address the reported issue with autodoc_type_aliases not working when autodoc_typehints is set to 'description'.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR does not resolve the issue with autodoc_type_aliases not working when autodoc_typehints is set to 'description'. The changes are unrelated to the reported bug."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

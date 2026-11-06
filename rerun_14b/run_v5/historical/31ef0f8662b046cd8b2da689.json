@@ -1,0 +1,50 @@
+{
+  "id": "31ef0f8662b046cd8b2da689",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_a476b79c0a07",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_a476b79c0a07.json",
+  "historical_output_sha256": "93123bb82f26a190008ab25de8a84619576c3398c902cc97ecc2aab6e03ec07e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1335,
+  "messages_sha256": "1e42b946448ba0211daddccb9dbaeb93c1ae17b2d137eb0ba47d2d624e131192",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the `is_zero` method for complex numbers in the `Add` class, but it introduces a potential issue with handling non-zero terms.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a potential issue with handling non-zero terms. The comment suggests that if all terms are known to be non-zero, we can't determine if their sum is zero without further analysis, but the implementation does not account for this correctly.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "2140",
+      "completed_at_utc": "2026-11-06T04:14:31.723059+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the `is_zero` method for complex numbers in the `Add` class, but it introduces a potential issue with handling non-zero terms.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The change introduces a potential issue with handling non-zero terms. The comment suggests that if all terms are known to be non-zero, we can't determine if their sum is zero without further analysis, but the implementation does not account for this correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes the `is_zero` method for complex numbers in the `Add` class, but it introduces a potential issue with handling non-zero terms.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The change introduces a potential issue with handling non-zero terms. The comment suggests that if all terms are known to be non-zero, we can't determine if their sum is zero without further analysis, but the implementation does not account for this correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

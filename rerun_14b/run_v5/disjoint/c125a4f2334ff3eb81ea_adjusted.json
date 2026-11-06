@@ -1,0 +1,29 @@
+{
+  "code": "c125a4f2334ff3eb81ea",
+  "instance_id": "django__django-14324",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "c125a4f2334ff3eb81ea_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1189,
+  "messages_sha256": "f4e906682641c0ab8c45fa852f46cc077cbbca72a37f54d3553e8f0ab9ad8b71",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes to the initialization of related fields, which could potentially break existing code that relies on the current behavior of related_name generation for self-referential ManyToManyFields. The patch should be reviewed for compatibility and tested thoroughly to ensure no unintended side effects.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 74,
+      "returned_model_request_id": "2549",
+      "completed_at_utc": "2026-11-06T04:17:15.370251+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes to the initialization of related fields, which could potentially break existing code that relies on the current behavior of related_name generation for self-referential ManyToManyFields. The patch should be reviewed for compatibility and tested thoroughly to ensure no unintended side effects."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

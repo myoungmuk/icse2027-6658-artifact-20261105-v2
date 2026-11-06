@@ -1,0 +1,50 @@
+{
+  "id": "283e8cc0bceef3c441865111",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_6da397913277",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_6da397913277.json",
+  "historical_output_sha256": "c9ac40661a5d8e9a86bd082f11f36cbe548be02e5cbfbdc1bcab4d79d343ffe7",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1012,
+  "messages_sha256": "907da3c803565bff7afeef7b69dd0360abe7094541f428db4528056d4c176a97",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a new assumption that even numbers must be finite, which may not align with the intended mathematical semantics.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a new assumption that even numbers must be finite, which may not align with the intended mathematical semantics and could break existing code that relies on the current behavior.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "1213",
+      "completed_at_utc": "2026-11-06T04:07:22.383163+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a new assumption that even numbers must be finite, which may not align with the intended mathematical semantics.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The change introduces a new assumption that even numbers must be finite, which may not align with the intended mathematical semantics and could break existing code that relies on the current behavior."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a new assumption that even numbers must be finite, which may not align with the intended mathematical semantics.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The change introduces a new assumption that even numbers must be finite, which may not align with the intended mathematical semantics and could break existing code that relies on the current behavior."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

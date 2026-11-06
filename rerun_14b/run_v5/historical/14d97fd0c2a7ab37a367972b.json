@@ -1,0 +1,50 @@
+{
+  "id": "14d97fd0c2a7ab37a367972b",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_2136eb41bde4",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_2136eb41bde4.json",
+  "historical_output_sha256": "74a81521b1daafb44c7f8691947430bbd6a15c941e1045a34e502791e1f3517b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1226,
+  "messages_sha256": "562f382f57cb8ee4ad870fb6e9278b52e31416d21f8c95f5f11b565f6e99c90c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces `String` to inherit from `Atom`, which aligns with the expected behavior. However, the addition of `kwargs` and `func` methods seems unnecessary and could lead to confusion.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces `kwargs` and `func` methods to `String`, which are not necessary and could lead to confusion. These methods are typically used for expressions, not atoms.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 135,
+      "returned_model_request_id": "1727",
+      "completed_at_utc": "2026-11-06T04:10:23.398985+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces `String` to inherit from `Atom`, which aligns with the expected behavior. However, the addition of `kwargs` and `func` methods seems unnecessary and could lead to confusion.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The patch introduces `kwargs` and `func` methods to `String`, which are not necessary and could lead to confusion. These methods are typically used for expressions, not atoms."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces `String` to inherit from `Atom`, which aligns with the expected behavior. However, the addition of `kwargs` and `func` methods seems unnecessary and could lead to confusion.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The patch introduces `kwargs` and `func` methods to `String`, which are not necessary and could lead to confusion. These methods are typically used for expressions, not atoms."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

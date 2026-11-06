@@ -1,0 +1,60 @@
+{
+  "id": "92af33d155e67b837140d579",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_7a391f39e8a0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_7a391f39e8a0.json",
+  "historical_output_sha256": "0c40dbeacb3c9ebc0907bcd300fd520c5f0d8bd5174bfbee887d1c5adeb69c89",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2424,
+  "messages_sha256": "d25a9733498177380ea2b2be0fb5b5d1d83ac0d6c9df101c834865e4d551bc25",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue with PositionField but may introduce regressions or functional incompleteness.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch removes the check for hasattr(obj.model, item), which may break existing behavior for other valid use cases.\"\n    },\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not fully resolve the issue for all edge cases, as it does not handle the case where hasattr(obj.model, item) is true but the field is None.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 161,
+      "returned_model_request_id": "510",
+      "completed_at_utc": "2026-11-06T04:03:08.423160+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue with PositionField but may introduce regressions or functional incompleteness.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch removes the check for hasattr(obj.model, item), which may break existing behavior for other valid use cases."
+      },
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The patch does not fully resolve the issue for all edge cases, as it does not handle the case where hasattr(obj.model, item) is true but the field is None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue with PositionField but may introduce regressions or functional incompleteness.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch removes the check for hasattr(obj.model, item), which may break existing behavior for other valid use cases."
+      },
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The patch does not fully resolve the issue for all edge cases, as it does not handle the case where hasattr(obj.model, item) is true but the field is None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

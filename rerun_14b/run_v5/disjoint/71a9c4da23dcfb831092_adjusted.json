@@ -1,0 +1,29 @@
+{
+  "code": "71a9c4da23dcfb831092",
+  "instance_id": "django__django-12734",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "71a9c4da23dcfb831092_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 886,
+  "messages_sha256": "aea6364f8cb6eadda11f7696f27aecbb01ba91e76857ace1d48c4fc635698819",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new migration file and a script to reproduce the bug, but it does not address the root cause of the issue. The patch assumes the intermediary model name and app name, which may not be accurate. Additionally, the patch does not provide a solution to automatically detect and update the intermediary model field length when the primary model field length changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 92,
+      "returned_model_request_id": "2487",
+      "completed_at_utc": "2026-11-06T04:16:43.895998+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new migration file and a script to reproduce the bug, but it does not address the root cause of the issue. The patch assumes the intermediary model name and app name, which may not be accurate. Additionally, the patch does not provide a solution to automatically detect and update the intermediary model field length when the primary model field length changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

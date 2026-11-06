@@ -1,0 +1,50 @@
+{
+  "id": "6895fbe496c99896a6b113ed",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_0b7fa3eabe64",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_0b7fa3eabe64.json",
+  "historical_output_sha256": "4255d30808a448cb7c1f90c1cde1d79fd0a1c580c837a6b5978dc657fdf72e8f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2556,
+  "messages_sha256": "d5aefe39d72ab642aa5fb25fc4509ce6e00f213d4ae6155c22b0b9d270c9b5b7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with assertion rewriting but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the `is_rewrite_disabled` method to handle non-string docstrings, which is not a minimal fix for the reported issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 103,
+      "returned_model_request_id": "128",
+      "completed_at_utc": "2026-11-06T04:00:52.711381+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with assertion rewriting but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the `is_rewrite_disabled` method to handle non-string docstrings, which is not a minimal fix for the reported issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with assertion rewriting but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the `is_rewrite_disabled` method to handle non-string docstrings, which is not a minimal fix for the reported issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

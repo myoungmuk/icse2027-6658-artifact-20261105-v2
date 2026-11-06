@@ -1,0 +1,50 @@
+{
+  "id": "7ddeff69b0229ead2341785c",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_e56c043ec68a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_e56c043ec68a.json",
+  "historical_output_sha256": "f845ce2681ff03bdb0f37d38ae975f59a1510e4af90c651508b15b6e543eeba1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1624,
+  "messages_sha256": "ca9703dbf71f07e2885586a8e3a6f6be47c555ff65dffca0a6d357c33ba2bcfe",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch removes a specific string replacement that appears to be causing an issue with test report headlines. The change is minimal and focused on resolving the reported bug.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The change removes a string replacement that may have been intentional for a specific reason, potentially leading to unexpected behavior in other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "819",
+      "completed_at_utc": "2026-11-06T04:05:05.881532+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch removes a specific string replacement that appears to be causing an issue with test report headlines. The change is minimal and focused on resolving the reported bug.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The change removes a string replacement that may have been intentional for a specific reason, potentially leading to unexpected behavior in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch removes a specific string replacement that appears to be causing an issue with test report headlines. The change is minimal and focused on resolving the reported bug.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The change removes a string replacement that may have been intentional for a specific reason, potentially leading to unexpected behavior in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "80a5d5d267620cc8b2e4",
+  "instance_id": "django__django-11894",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "80a5d5d267620cc8b2e4_strict",
+  "arm": "strict",
+  "input_tokens": 1057,
+  "messages_sha256": "2ca168d1b083ce070d30f71c1ebe35e8f85c0934e61298748193e38df642542d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch sets the default SameSite attribute to 'None' without requiring the Secure attribute, which can lead to security vulnerabilities. Additionally, the patch does not address the issue of explicitly setting SameSite to 'None' in the cookie header, which is necessary for cross-origin requests.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 77,
+      "returned_model_request_id": "2290",
+      "completed_at_utc": "2026-11-06T04:15:26.688435+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch sets the default SameSite attribute to 'None' without requiring the Secure attribute, which can lead to security vulnerabilities. Additionally, the patch does not address the issue of explicitly setting SameSite to 'None' in the cookie header, which is necessary for cross-origin requests."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

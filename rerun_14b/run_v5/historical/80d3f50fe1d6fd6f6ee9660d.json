@@ -1,0 +1,50 @@
+{
+  "id": "80d3f50fe1d6fd6f6ee9660d",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_90740aa5fdcd",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_90740aa5fdcd.json",
+  "historical_output_sha256": "23a2f0ce099c2b26540c57ab48f10a50a9a1b6e5cf951bf341ad96b4a450202c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2711,
+  "messages_sha256": "504dbc916f314eff358dec3a489ca4db60d1a8ea7ca2d620a9f4f9bbea7cc759",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue with `to_unstacked_dataset` for single-dim variables and includes additional test cases. The changes are minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code introduces new files (`reproduce_error.py` and `test_edge_cases.py`) without updating the documentation or README to reflect the new test cases.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "2115",
+      "completed_at_utc": "2026-11-06T04:14:31.717836+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue with `to_unstacked_dataset` for single-dim variables and includes additional test cases. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces new files (`reproduce_error.py` and `test_edge_cases.py`) without updating the documentation or README to reflect the new test cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue with `to_unstacked_dataset` for single-dim variables and includes additional test cases. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces new files (`reproduce_error.py` and `test_edge_cases.py`) without updating the documentation or README to reflect the new test cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

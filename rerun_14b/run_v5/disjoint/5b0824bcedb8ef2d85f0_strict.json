@@ -1,0 +1,29 @@
+{
+  "code": "5b0824bcedb8ef2d85f0",
+  "instance_id": "sympy__sympy-17809",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "5b0824bcedb8ef2d85f0_strict",
+  "arm": "strict",
+  "input_tokens": 1298,
+  "messages_sha256": "a48c3be7f1adefcee7b7c1eec1e57ceb1b3a1982fb8447137a9af8bc58b405e0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces complex logic for determining the positivity of cosh(x) that is not necessary and may lead to incorrect results. The patch also modifies the behavior of the Abs function in a way that is not clearly justified or tested. Additionally, the patch does not include any tests to verify the correctness of the changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 84,
+      "returned_model_request_id": "2596",
+      "completed_at_utc": "2026-11-06T04:17:31.222833+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces complex logic for determining the positivity of cosh(x) that is not necessary and may lead to incorrect results. The patch also modifies the behavior of the Abs function in a way that is not clearly justified or tested. Additionally, the patch does not include any tests to verify the correctness of the changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

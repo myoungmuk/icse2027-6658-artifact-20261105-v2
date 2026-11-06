@@ -1,0 +1,29 @@
+{
+  "code": "6cbb37666b354958da4d",
+  "instance_id": "django__django-13233",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "6cbb37666b354958da4d_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 946,
+  "messages_sha256": "856104b422eb12da8e00ae1a93496c6a1754fec49aa6629e01e09f09d30592aa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces duplicate calls to `cls._meta.add_field(self, private=private_only)` which is incorrect and could lead to unexpected behavior. Additionally, the patch does not address the issue of finding the concrete model an image field belongs to after the change in Django 3.2.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 79,
+      "returned_model_request_id": "2351",
+      "completed_at_utc": "2026-11-06T04:15:51.282075+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces duplicate calls to `cls._meta.add_field(self, private=private_only)` which is incorrect and could lead to unexpected behavior. Additionally, the patch does not address the issue of finding the concrete model an image field belongs to after the change in Django 3.2."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

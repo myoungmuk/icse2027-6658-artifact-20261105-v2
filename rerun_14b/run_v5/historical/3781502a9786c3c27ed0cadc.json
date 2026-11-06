@@ -1,0 +1,60 @@
+{
+  "id": "3781502a9786c3c27ed0cadc",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_b4f7c2b88e96",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_b4f7c2b88e96.json",
+  "historical_output_sha256": "5a51b1932ecaec7e35961d6ffc2d594eb9465371d22edf36a8cedb2af28f55cf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2016,
+  "messages_sha256": "4227fdc8a1e68e4c493ca839edd280193403259210bfcda8d7fb8b499f2c6f84",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of `:meta public:` not affecting variables by modifying the `get_module_members` method. The changes are minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces a new method `get_module_members` in `__init__.py` which is not aligned with the existing style of the file. The method is also marked as deprecated in `importer.py`, which might be confusing.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR does not update the documentation to reflect the changes made. It would be helpful to add a note about the new method and its deprecation.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 196,
+      "returned_model_request_id": "1546",
+      "completed_at_utc": "2026-11-06T04:09:29.767152+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of `:meta public:` not affecting variables by modifying the `get_module_members` method. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new method `get_module_members` in `__init__.py` which is not aligned with the existing style of the file. The method is also marked as deprecated in `importer.py`, which might be confusing."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not update the documentation to reflect the changes made. It would be helpful to add a note about the new method and its deprecation."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of `:meta public:` not affecting variables by modifying the `get_module_members` method. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new method `get_module_members` in `__init__.py` which is not aligned with the existing style of the file. The method is also marked as deprecated in `importer.py`, which might be confusing."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not update the documentation to reflect the changes made. It would be helpful to add a note about the new method and its deprecation."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

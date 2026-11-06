@@ -1,0 +1,29 @@
+{
+  "code": "4ce94156ba740ad330e5",
+  "instance_id": "pydata__xarray-3631",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "4ce94156ba740ad330e5_strict",
+  "arm": "strict",
+  "input_tokens": 2699,
+  "messages_sha256": "8de2c59be929f2dc241b7904f3dd66c35b4455a7ba7536a289a62bc0ccba7aa4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file 'reproduce.py' which is not related to fixing the issue. Additionally, the change in 'duck_array_ops.py' directly converts datetime.timedelta objects to seconds, which may not be the best approach for maintaining precision and compatibility with cftime dates. The patch lacks comprehensive testing and documentation.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 85,
+      "returned_model_request_id": "2406",
+      "completed_at_utc": "2026-11-06T04:16:23.781000+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file 'reproduce.py' which is not related to fixing the issue. Additionally, the change in 'duck_array_ops.py' directly converts datetime.timedelta objects to seconds, which may not be the best approach for maintaining precision and compatibility with cftime dates. The patch lacks comprehensive testing and documentation."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

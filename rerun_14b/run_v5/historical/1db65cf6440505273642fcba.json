@@ -1,0 +1,50 @@
+{
+  "id": "1db65cf6440505273642fcba",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_8ba72c3ead44",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_8ba72c3ead44.json",
+  "historical_output_sha256": "6ad414cad9b46a968a2b17d4051983082cdba5765596b93c16633630bc7749a1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1262,
+  "messages_sha256": "f62f07eea3ec8baab4f4b003fcfc99b8663f474d38e554702a4295996f6fa00d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the handling of UnicodeEncodeError, which could lead to issues if the password contains characters that cannot be encoded.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR removes the handling of UnicodeEncodeError, which could lead to issues if the password contains characters that cannot be encoded.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "871",
+      "completed_at_utc": "2026-11-06T04:05:22.633828+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the handling of UnicodeEncodeError, which could lead to issues if the password contains characters that cannot be encoded.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The PR removes the handling of UnicodeEncodeError, which could lead to issues if the password contains characters that cannot be encoded."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR simplifies the code by using subprocess.run and PGPASSWORD, but it removes the handling of UnicodeEncodeError, which could lead to issues if the password contains characters that cannot be encoded.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The PR removes the handling of UnicodeEncodeError, which could lead to issues if the password contains characters that cannot be encoded."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

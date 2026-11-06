@@ -1,0 +1,50 @@
+{
+  "id": "8ba4dea520d907e10ce972dc",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_679bf6a98d8e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_679bf6a98d8e.json",
+  "historical_output_sha256": "7da92d5dee601f8ac02973b611cc9f0073d3c13f960e98d927d178cc3dfaebd7",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1457,
+  "messages_sha256": "f641c6f260a3fc2dee863ec90c7c0a0b2bdc491dd78ee297b80333c7f5c7266b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of inverting a log axis using its limits, but it introduces a non-minimal change by modifying the warning messages and adding additional logic.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the warning messages and adding additional logic, which may not be necessary for resolving the issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "1338",
+      "completed_at_utc": "2026-11-06T04:07:59.676254+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of inverting a log axis using its limits, but it introduces a non-minimal change by modifying the warning messages and adding additional logic.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the warning messages and adding additional logic, which may not be necessary for resolving the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of inverting a log axis using its limits, but it introduces a non-minimal change by modifying the warning messages and adding additional logic.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the warning messages and adding additional logic, which may not be necessary for resolving the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

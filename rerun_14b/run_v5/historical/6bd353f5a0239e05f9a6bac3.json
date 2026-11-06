@@ -1,0 +1,50 @@
+{
+  "id": "6bd353f5a0239e05f9a6bac3",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_d760fbd62985",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_d760fbd62985.json",
+  "historical_output_sha256": "5bcdf14a027387a76dd30477ecf4615cf6b21346746aeb0bcd3a3e80f6b5d079",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3425,
+  "messages_sha256": "226026098bf7c908d93d22a83cb870246d216f740119ee7ec5191abf7fc28527",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of unnecessary joins in the admin changelist query by combining search terms into a single Q object. The change is minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new files (server.log, test.db, testapp/__init__.py, testapp/admin.py, testapp/migrations/0001_initial.py, testapp/migrations/__init__.py, testapp/models.py, tests/__init__.py) that are not directly related to fixing the issue. These files seem to be test setup files, but their inclusion in the diff is not clear.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 178,
+      "returned_model_request_id": "2031",
+      "completed_at_utc": "2026-11-06T04:13:37.406999+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of unnecessary joins in the admin changelist query by combining search terms into a single Q object. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files (server.log, test.db, testapp/__init__.py, testapp/admin.py, testapp/migrations/0001_initial.py, testapp/migrations/__init__.py, testapp/models.py, tests/__init__.py) that are not directly related to fixing the issue. These files seem to be test setup files, but their inclusion in the diff is not clear."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of unnecessary joins in the admin changelist query by combining search terms into a single Q object. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files (server.log, test.db, testapp/__init__.py, testapp/admin.py, testapp/migrations/0001_initial.py, testapp/migrations/__init__.py, testapp/models.py, tests/__init__.py) that are not directly related to fixing the issue. These files seem to be test setup files, but their inclusion in the diff is not clear."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

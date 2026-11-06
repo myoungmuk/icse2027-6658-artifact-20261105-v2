@@ -1,0 +1,60 @@
+{
+  "id": "abeaaf9c8c10016f3ab684bb",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_d648274a66de",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_d648274a66de.json",
+  "historical_output_sha256": "e939787d538515b00d9a7fc3e64614776bf4a04693dfae1f57334ad52a244549",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 965,
+  "messages_sha256": "d006d45586258524f9f8a059ef9cae58f62e30c7f1569de0630b6cf673357e90",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may not handle all edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the condition from `!= 1` to `< 1`, which may not fully resolve the issue if there are other unexpected numbers of constraints.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no additional tests provided to ensure the fix works for all scenarios, including the one described in the issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 151,
+      "returned_model_request_id": "564",
+      "completed_at_utc": "2026-11-06T04:03:24.724317+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch changes the condition from `!= 1` to `< 1`, which may not fully resolve the issue if there are other unexpected numbers of constraints."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure the fix works for all scenarios, including the one described in the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch changes the condition from `!= 1` to `< 1`, which may not fully resolve the issue if there are other unexpected numbers of constraints."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure the fix works for all scenarios, including the one described in the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

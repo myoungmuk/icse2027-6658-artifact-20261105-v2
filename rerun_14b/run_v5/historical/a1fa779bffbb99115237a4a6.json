@@ -1,0 +1,60 @@
+{
+  "id": "a1fa779bffbb99115237a4a6",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a465fe1fea01",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a465fe1fea01.json",
+  "historical_output_sha256": "355f82321c57e7f092d0cd648bf96cd26b9f686253a018bad0d4be0649242ac2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 868,
+  "messages_sha256": "9c8f1edc2d37405e47bfbc281aeb3651796731bd377fb81adb91339e9911b10f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of non-disjoint cycles but may introduce behavioral regressions and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior for users who rely on the current exception handling for non-disjoint cycles.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no tests added to verify the new behavior of handling non-disjoint cycles.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 142,
+      "returned_model_request_id": "753",
+      "completed_at_utc": "2026-11-06T04:04:32.843624+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of non-disjoint cycles but may introduce behavioral regressions and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior for users who rely on the current exception handling for non-disjoint cycles."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests added to verify the new behavior of handling non-disjoint cycles."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of non-disjoint cycles but may introduce behavioral regressions and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior for users who rely on the current exception handling for non-disjoint cycles."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests added to verify the new behavior of handling non-disjoint cycles."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

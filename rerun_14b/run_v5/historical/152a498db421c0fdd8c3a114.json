@@ -1,0 +1,50 @@
+{
+  "id": "152a498db421c0fdd8c3a114",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_c469dfdb559b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_c469dfdb559b.json",
+  "historical_output_sha256": "3a520bb2b49e51c64dc0100e9e3b4daa098c412a023d7fc8dba15072d3245142",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1425,
+  "messages_sha256": "8cd0efdb2a9611bd6a1a854f433cc52eff1d81f067312cc0c82f219db4209b3a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by modifying the `__init__` method signature and adding a new parameter, which could potentially affect other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "1987",
+      "completed_at_utc": "2026-11-06T04:13:06.089211+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by modifying the `__init__` method signature and adding a new parameter, which could potentially affect other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds the `store_cv_values` parameter to `RidgeClassifierCV`, which resolves the issue but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by modifying the `__init__` method signature and adding a new parameter, which could potentially affect other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

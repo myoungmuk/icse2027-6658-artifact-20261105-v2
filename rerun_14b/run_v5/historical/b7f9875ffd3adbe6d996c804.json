@@ -1,0 +1,50 @@
+{
+  "id": "b7f9875ffd3adbe6d996c804",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_189c0c714320",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_189c0c714320.json",
+  "historical_output_sha256": "7b2593cbe5436f5af80dd2ad6e1cba8bf74540185c3db857deb22bd26a7da4eb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1856,
+  "messages_sha256": "6cb69225bbbbcd78b1776a3c25f6be4b3b1a33359ea92887b618c73df6480ea1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue by handling the case where all elements are NaN, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of `_safe_first_finite` to return `None` when all elements are NaN, which might affect other parts of the code that rely on this function.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "334",
+      "completed_at_utc": "2026-11-06T04:02:01.132955+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue by handling the case where all elements are NaN, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of `_safe_first_finite` to return `None` when all elements are NaN, which might affect other parts of the code that rely on this function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue by handling the case where all elements are NaN, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of `_safe_first_finite` to return `None` when all elements are NaN, which might affect other parts of the code that rely on this function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

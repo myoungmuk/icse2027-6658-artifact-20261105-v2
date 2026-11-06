@@ -1,0 +1,60 @@
+{
+  "id": "da7727be777b6503afd8b8f0",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_02fead967a0f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_02fead967a0f.json",
+  "historical_output_sha256": "91ad788f245dfda85f118cab467a30ac1f636e6ebf4ab0af32342f746b8e9119",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1542,
+  "messages_sha256": "007117cd8cdf2c1a2de3320c78dee1bbe3337bea60bfa0e9efe0af2b4a0098a5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response, but it lacks documentation updates and tests for the new functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any updates to the documentation to reflect the new serialize_result method.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify that the new serialize_result method works as expected.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 150,
+      "returned_model_request_id": "49",
+      "completed_at_utc": "2026-11-06T04:00:36.142984+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response, but it lacks documentation updates and tests for the new functionality.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not include any updates to the documentation to reflect the new serialize_result method."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the new serialize_result method works as expected."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response, but it lacks documentation updates and tests for the new functionality.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not include any updates to the documentation to reflect the new serialize_result method."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the new serialize_result method works as expected."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

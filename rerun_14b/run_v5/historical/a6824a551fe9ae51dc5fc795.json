@@ -1,0 +1,60 @@
+{
+  "id": "a6824a551fe9ae51dc5fc795",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_f673696c80ca",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_f673696c80ca.json",
+  "historical_output_sha256": "bd7d11719e58fd081dd046163bb969e93beda7e11d7bfa82667f5ab50597749c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 872,
+  "messages_sha256": "7123f5b09c90d3a1eb2b67a81ca655d489ab71f5f8070e68a9b010953ed42897",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR allows lists in the hooks argument, but it may introduce behavioral regressions and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior where hooks are expected to be single functions. It should be verified that this does not affect other parts of the codebase.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no tests added to verify the new functionality. The PR should include tests to ensure that lists of hooks are correctly processed and do not cause issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 166,
+      "returned_model_request_id": "45",
+      "completed_at_utc": "2026-11-06T04:00:16.942983+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR allows lists in the hooks argument, but it may introduce behavioral regressions and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior where hooks are expected to be single functions. It should be verified that this does not affect other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests added to verify the new functionality. The PR should include tests to ensure that lists of hooks are correctly processed and do not cause issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR allows lists in the hooks argument, but it may introduce behavioral regressions and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior where hooks are expected to be single functions. It should be verified that this does not affect other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests added to verify the new functionality. The PR should include tests to ensure that lists of hooks are correctly processed and do not cause issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

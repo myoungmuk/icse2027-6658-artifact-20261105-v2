@@ -1,0 +1,29 @@
+{
+  "code": "4f65f24c4d9768f0bd02",
+  "instance_id": "psf__requests-2393",
+  "split": "development",
+  "kind": "developer",
+  "id": "4f65f24c4d9768f0bd02_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 736,
+  "messages_sha256": "e10eb1b6cef2db41be999a45973d612ffaf0b3a514f1b34be67e4423235f2849",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a try-except block that catches an `InvalidURL` exception, which is not defined in the provided diff. This could lead to a `NameError` at runtime. Additionally, the patch does not address the root cause of the issue, which is likely related to how percent-encoded characters are handled in URLs.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 87,
+      "returned_model_request_id": "2251",
+      "completed_at_utc": "2026-11-06T04:15:26.679506+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a try-except block that catches an `InvalidURL` exception, which is not defined in the provided diff. This could lead to a `NameError` at runtime. Additionally, the patch does not address the root cause of the issue, which is likely related to how percent-encoded characters are handled in URLs."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

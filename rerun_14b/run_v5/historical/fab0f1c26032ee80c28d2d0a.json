@@ -1,0 +1,60 @@
+{
+  "id": "fab0f1c26032ee80c28d2d0a",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_cd0ba666e3ce",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_cd0ba666e3ce.json",
+  "historical_output_sha256": "bbd130e09bac7aee16161a8530d70d556e7b4687289a4374d28ab4191da3f93f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3112,
+  "messages_sha256": "67ad1420cd8bfebe317064d735b6444bd311decd384dfe87d9c61eefdb399881",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue with PositionField by modifying the _check_list_display_item function. It removes the hasattr check for obj.model, ensuring that the field is retrieved via get_field before checking for ManyToManyField.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the _check_list_display_item function, which may affect other parts of the code that rely on this function.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch does not follow the project's convention for handling exceptions and error messages, which may lead to maintainability issues.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 182,
+      "returned_model_request_id": "2110",
+      "completed_at_utc": "2026-11-06T04:14:03.540491+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue with PositionField by modifying the _check_list_display_item function. It removes the hasattr check for obj.model, ensuring that the field is retrieved via get_field before checking for ManyToManyField.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a non-minimal change by modifying the _check_list_display_item function, which may affect other parts of the code that rely on this function."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch does not follow the project's convention for handling exceptions and error messages, which may lead to maintainability issues."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue with PositionField by modifying the _check_list_display_item function. It removes the hasattr check for obj.model, ensuring that the field is retrieved via get_field before checking for ManyToManyField.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a non-minimal change by modifying the _check_list_display_item function, which may affect other parts of the code that rely on this function."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch does not follow the project's convention for handling exceptions and error messages, which may lead to maintainability issues."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

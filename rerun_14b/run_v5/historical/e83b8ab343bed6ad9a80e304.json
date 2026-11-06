@@ -1,0 +1,50 @@
+{
+  "id": "e83b8ab343bed6ad9a80e304",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_6d8e7580c736",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_6d8e7580c736.json",
+  "historical_output_sha256": "ab4654c2920cdc23f8f8e182905021cc4829ce9a6fdb5854442f042fd276219f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1473,
+  "messages_sha256": "5e0c6de273f3b03c02d19810ab8d47d8f48daa64e8185f010bcf9f0f5534f674",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by modifying the `_eval_as_set` method to return a `ConditionSet` when `NotImplementedError` is raised. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by removing the redundant `try-except` block for `NotImplementedError`.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "1925",
+      "completed_at_utc": "2026-11-06T04:12:42.345934+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by modifying the `_eval_as_set` method to return a `ConditionSet` when `NotImplementedError` is raised. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by removing the redundant `try-except` block for `NotImplementedError`."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by modifying the `_eval_as_set` method to return a `ConditionSet` when `NotImplementedError` is raised. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by removing the redundant `try-except` block for `NotImplementedError`."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

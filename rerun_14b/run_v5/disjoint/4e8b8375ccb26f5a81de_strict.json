@@ -1,0 +1,29 @@
+{
+  "code": "4e8b8375ccb26f5a81de",
+  "instance_id": "scikit-learn__scikit-learn-13549",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "4e8b8375ccb26f5a81de_strict",
+  "arm": "strict",
+  "input_tokens": 1647,
+  "messages_sha256": "28e0f1a1b3d3d173df97e0ac1dece95e5a7617b544659beae526ecca63994e3e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new `stratify` parameter to `resample` but does not fully implement the stratified resampling logic. The existing resampling logic is not compatible with the new parameter, and there are no examples provided. Additionally, the patch does not address the issue of handling cases where `n_samples` is close to the number of samples in the input arrays.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 98,
+      "returned_model_request_id": "2710",
+      "completed_at_utc": "2026-11-06T04:18:08.359537+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new `stratify` parameter to `resample` but does not fully implement the stratified resampling logic. The existing resampling logic is not compatible with the new parameter, and there are no examples provided. Additionally, the patch does not address the issue of handling cases where `n_samples` is close to the number of samples in the input arrays."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

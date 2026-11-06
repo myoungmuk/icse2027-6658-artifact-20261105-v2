@@ -1,0 +1,50 @@
+{
+  "id": "67b1ecd9053d28395bab383d",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_6f13e13d92bf",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_6f13e13d92bf.json",
+  "historical_output_sha256": "166de15425b16835d6be4fb5879c22018c6fadce4ed5b1a287f01048f78a8d72",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1559,
+  "messages_sha256": "c439e7a52e1b1c8a1432a3d73985c468810389604e6e05eeee524ed41e40ea4f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue of merging a DataArray into a Dataset using the `ds.merge()` method. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The import statement for `DataArray` is added inside the method, which is not a common practice and could be moved to the top of the file for better readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "2064",
+      "completed_at_utc": "2026-11-06T04:14:03.528463+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue of merging a DataArray into a Dataset using the `ds.merge()` method. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statement for `DataArray` is added inside the method, which is not a common practice and could be moved to the top of the file for better readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue of merging a DataArray into a Dataset using the `ds.merge()` method. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statement for `DataArray` is added inside the method, which is not a common practice and could be moved to the top of the file for better readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

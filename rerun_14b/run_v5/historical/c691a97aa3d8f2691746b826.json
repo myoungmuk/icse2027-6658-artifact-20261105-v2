@@ -1,0 +1,50 @@
+{
+  "id": "c691a97aa3d8f2691746b826",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_09f5c6bd292a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_09f5c6bd292a.json",
+  "historical_output_sha256": "583b9d9953dfaefe48eccffef6be95c8644b8b1a15923b8a547a01be0a59f16a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1212,
+  "messages_sha256": "bef6589d2429b92c05c32cd16f400dc484685d4c8f04d2f1d6286aaac7f7d520",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch may not fully resolve the issue as it only addresses one specific case and does not account for other potential edge cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "2180",
+      "completed_at_utc": "2026-11-06T04:14:46.805200+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch may not fully resolve the issue as it only addresses one specific case and does not account for other potential edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch may not fully resolve the issue as it only addresses one specific case and does not account for other potential edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

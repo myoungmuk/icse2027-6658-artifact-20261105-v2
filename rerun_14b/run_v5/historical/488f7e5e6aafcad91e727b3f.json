@@ -1,0 +1,50 @@
+{
+  "id": "488f7e5e6aafcad91e727b3f",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_06d706ff45c9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_06d706ff45c9.json",
+  "historical_output_sha256": "15bbc9871e3aea922e4f5cf16da72c850b830452c658dc1f63652a286f46bb46",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 967,
+  "messages_sha256": "1e3d9af9ba1a29bb7f39065de94d943087ff49fe178a9aec0ed30ef392883e95",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a change to strip leading and trailing dashes and underscores from the slugified output, which could potentially break existing behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may introduce a behavioral regression risk by altering the output of slugify for inputs that previously had leading or trailing dashes or underscores.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "26",
+      "completed_at_utc": "2026-11-06T04:00:16.939380+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a change to strip leading and trailing dashes and underscores from the slugified output, which could potentially break existing behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may introduce a behavioral regression risk by altering the output of slugify for inputs that previously had leading or trailing dashes or underscores."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a change to strip leading and trailing dashes and underscores from the slugified output, which could potentially break existing behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may introduce a behavioral regression risk by altering the output of slugify for inputs that previously had leading or trailing dashes or underscores."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

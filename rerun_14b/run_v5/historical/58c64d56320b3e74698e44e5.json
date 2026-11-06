@@ -1,0 +1,60 @@
+{
+  "id": "58c64d56320b3e74698e44e5",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ba25da389db9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ba25da389db9.json",
+  "historical_output_sha256": "8866e57d84826f945d344cd67c3a1276284165b391eeda6263eceee5d1208518",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1172,
+  "messages_sha256": "a372c955030c3409b5813c4b7bdc82a7e6121add5e9326e4c91096eb7c3913e7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with bulk_update() and F() expressions but may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change uses hasattr(attr, 'resolve_expression') which might inadvertently allow other objects with this method to be treated as expressions, potentially leading to unexpected behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix or ensure that other types of expressions are handled correctly.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 158,
+      "returned_model_request_id": "450",
+      "completed_at_utc": "2026-11-06T04:02:50.461851+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with bulk_update() and F() expressions but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change uses hasattr(attr, 'resolve_expression') which might inadvertently allow other objects with this method to be treated as expressions, potentially leading to unexpected behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix or ensure that other types of expressions are handled correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with bulk_update() and F() expressions but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change uses hasattr(attr, 'resolve_expression') which might inadvertently allow other objects with this method to be treated as expressions, potentially leading to unexpected behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix or ensure that other types of expressions are handled correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "af89d69b501961bff144",
+  "instance_id": "matplotlib__matplotlib-26089",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "af89d69b501961bff144_strict",
+  "arm": "strict",
+  "input_tokens": 2768,
+  "messages_sha256": "e4306bcbfea72dc81446ee8372358b08dd095e7fdb4eb6f5d130f8f503dec6c6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new public method `set_loc` in the `Legend` class, but it does not address the issue of updating the legend location after initialization. The method should be added to the `Legend` class, not as a separate function. Additionally, the patch includes a new script `reproduce_issue.py` that is not related to the issue and should be removed.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 98,
+      "returned_model_request_id": "2586",
+      "completed_at_utc": "2026-11-06T04:17:15.377338+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new public method `set_loc` in the `Legend` class, but it does not address the issue of updating the legend location after initialization. The method should be added to the `Legend` class, not as a separate function. Additionally, the patch includes a new script `reproduce_issue.py` that is not related to the issue and should be removed."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

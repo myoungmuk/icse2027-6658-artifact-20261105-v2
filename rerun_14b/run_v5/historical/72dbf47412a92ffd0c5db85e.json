@@ -1,0 +1,60 @@
+{
+  "id": "72dbf47412a92ffd0c5db85e",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_f180931e545d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_f180931e545d.json",
+  "historical_output_sha256": "3ce4aef34397443ef77a59fb142671120485227177ae732f51ca880daccaec88",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1003,
+  "messages_sha256": "54b7d06b658e75f3192972ec839c6c79ebe7289b85001eda7f50aef6e3228b01",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR corrects a misleading hint in the error message for recursive relationships, but it does not address the underlying issue of the error itself.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR only changes the hint in the error message, but it does not address the root cause of the error. The error message still suggests using ForeignKey with symmetrical=False, which is incorrect for recursive relationships with an intermediary model.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify that the corrected hint is accurate and does not introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 179,
+      "returned_model_request_id": "97",
+      "completed_at_utc": "2026-11-06T04:00:52.702356+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR corrects a misleading hint in the error message for recursive relationships, but it does not address the underlying issue of the error itself.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR only changes the hint in the error message, but it does not address the root cause of the error. The error message still suggests using ForeignKey with symmetrical=False, which is incorrect for recursive relationships with an intermediary model."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the corrected hint is accurate and does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR corrects a misleading hint in the error message for recursive relationships, but it does not address the underlying issue of the error itself.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR only changes the hint in the error message, but it does not address the root cause of the error. The error message still suggests using ForeignKey with symmetrical=False, which is incorrect for recursive relationships with an intermediary model."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the corrected hint is accurate and does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

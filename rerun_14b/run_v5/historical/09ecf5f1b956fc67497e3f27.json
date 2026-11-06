@@ -1,0 +1,50 @@
+{
+  "id": "09ecf5f1b956fc67497e3f27",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_7412b208c37e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_7412b208c37e.json",
+  "historical_output_sha256": "d1b1c97926e8fc774c7bc5140e34f7bc62ff4e870e5bde35e1ef23d14b64be4e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 985,
+  "messages_sha256": "a42e0745eec2c5f1432d4ba11690621eecf670bb7a31f5ca26cd40e3a77732f1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a new property `kind` for the `Derivative` class, which seems to resolve the issue of incorrect `kind` attribute. The change is minimal and does not introduce any apparent regressions or compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new property `kind` without updating the documentation or comments, which may cause confusion for future maintainers.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "290",
+      "completed_at_utc": "2026-11-06T04:02:01.123520+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a new property `kind` for the `Derivative` class, which seems to resolve the issue of incorrect `kind` attribute. The change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new property `kind` without updating the documentation or comments, which may cause confusion for future maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a new property `kind` for the `Derivative` class, which seems to resolve the issue of incorrect `kind` attribute. The change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new property `kind` without updating the documentation or comments, which may cause confusion for future maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

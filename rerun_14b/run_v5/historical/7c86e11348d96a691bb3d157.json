@@ -1,0 +1,50 @@
+{
+  "id": "7c86e11348d96a691bb3d157",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_d648274a66de",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_d648274a66de.json",
+  "historical_output_sha256": "195e33fde4f0c60d16c6d629635ce63a2e091554036c6bbe7f08c3ee175d04a3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1152,
+  "messages_sha256": "f6415c4ba1ae6ff1e634a5d0eefb971e0764b551c29438075f625b6eca24c4e1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch changes the condition to allow for zero constraints, which may not be the correct fix for the issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the condition to allow for zero constraints, which may not be the correct fix for the issue. It could lead to other unexpected behavior or bugs.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "952",
+      "completed_at_utc": "2026-11-06T04:05:39.451967+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch changes the condition to allow for zero constraints, which may not be the correct fix for the issue.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch changes the condition to allow for zero constraints, which may not be the correct fix for the issue. It could lead to other unexpected behavior or bugs."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch changes the condition to allow for zero constraints, which may not be the correct fix for the issue.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch changes the condition to allow for zero constraints, which may not be the correct fix for the issue. It could lead to other unexpected behavior or bugs."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

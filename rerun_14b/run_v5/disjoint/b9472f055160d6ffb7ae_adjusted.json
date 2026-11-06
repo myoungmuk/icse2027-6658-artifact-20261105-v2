@@ -1,0 +1,29 @@
+{
+  "code": "b9472f055160d6ffb7ae",
+  "instance_id": "django__django-13460",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "b9472f055160d6ffb7ae_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 887,
+  "messages_sha256": "9073da0738b6e32be5ce4a7bbe46e1836051398408609372081914227604a85e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces new files without corresponding test files, which is not a good practice. Additionally, the patch does not address the issue of type compatibility with gettext's string formatting. Instead of swallowing TypeError, it should actively check the type's compatibility with the string format.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 74,
+      "returned_model_request_id": "2339",
+      "completed_at_utc": "2026-11-06T04:15:45.341074+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces new files without corresponding test files, which is not a good practice. Additionally, the patch does not address the issue of type compatibility with gettext's string formatting. Instead of swallowing TypeError, it should actively check the type's compatibility with the string format."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

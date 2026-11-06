@@ -1,0 +1,60 @@
+{
+  "id": "fd3290d15009c2bc19005711",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_00e98bcd78ed",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_00e98bcd78ed.json",
+  "historical_output_sha256": "382119ee4ef9abd9d5886135583b13e8c4c63a5d464beaf6d9698d887f51e98e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1327,
+  "messages_sha256": "9bc9e1c733d3a72488bd1b58aa773452ee06edb1e72b0f22a499e2e274d01c04",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch changes the behavior of path reporting in pytest, which could have unintended consequences.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch sets abspath to True unconditionally, which may break existing behavior where relative paths are desired.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any tests to verify the new behavior or ensure it does not regress other cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 142,
+      "returned_model_request_id": "62",
+      "completed_at_utc": "2026-11-06T04:00:36.146330+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch changes the behavior of path reporting in pytest, which could have unintended consequences.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch sets abspath to True unconditionally, which may break existing behavior where relative paths are desired."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any tests to verify the new behavior or ensure it does not regress other cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch changes the behavior of path reporting in pytest, which could have unintended consequences.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch sets abspath to True unconditionally, which may break existing behavior where relative paths are desired."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any tests to verify the new behavior or ensure it does not regress other cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

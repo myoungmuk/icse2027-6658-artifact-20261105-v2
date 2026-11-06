@@ -1,0 +1,60 @@
+{
+  "id": "114eb01d1f3290e233c424d1",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_e93168e4b167",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_e93168e4b167.json",
+  "historical_output_sha256": "2298f2dbadaf92d92ab17d041eb70bbe5968fe35feb8ba926984be9231ab39f0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1085,
+  "messages_sha256": "2d4e870c37d763bdb33fb1dad13801f0fdf7745b4c1ecebd8521152b3eca5b7f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue but may not fully resolve the underlying problem. It introduces a non-minimal change by adding a raise statement without understanding the root cause.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not fully resolve the issue as it only adds a raise statement without understanding the root cause of the UnboundLocalError.\"\n    },\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change is not minimal as it introduces a raise statement without addressing the root cause of the issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 163,
+      "returned_model_request_id": "393",
+      "completed_at_utc": "2026-11-06T04:02:33.743021+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue but may not fully resolve the underlying problem. It introduces a non-minimal change by adding a raise statement without understanding the root cause.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not fully resolve the issue as it only adds a raise statement without understanding the root cause of the UnboundLocalError."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it introduces a raise statement without addressing the root cause of the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue but may not fully resolve the underlying problem. It introduces a non-minimal change by adding a raise statement without understanding the root cause.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not fully resolve the issue as it only adds a raise statement without understanding the root cause of the UnboundLocalError."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it introduces a raise statement without addressing the root cause of the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

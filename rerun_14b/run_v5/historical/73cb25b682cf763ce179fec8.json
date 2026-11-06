@@ -1,0 +1,60 @@
+{
+  "id": "73cb25b682cf763ce179fec8",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_22795cc79a1d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_22795cc79a1d.json",
+  "historical_output_sha256": "cd1bce04507792caba5d4ec1640d5a62142923215c7d174f1ee08fb4b7ace37f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1184,
+  "messages_sha256": "a9b099646493b9add27a3d60439994a328d69ce2ef43dbfb22c49f720e29a115",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch may not fully resolve the issue as it only addresses one specific case and does not account for other potential edge cases.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor style inconsistency by changing the sign of the term without aligning with the rest of the code's style.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 165,
+      "returned_model_request_id": "1636",
+      "completed_at_utc": "2026-11-06T04:10:03.678342+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch may not fully resolve the issue as it only addresses one specific case and does not account for other potential edge cases."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a minor style inconsistency by changing the sign of the term without aligning with the rest of the code's style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch appears to fix the issue with the rotation matrix calculation, but it is unclear if it addresses all edge cases or if it introduces any new issues.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch may not fully resolve the issue as it only addresses one specific case and does not account for other potential edge cases."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a minor style inconsistency by changing the sign of the term without aligning with the rest of the code's style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

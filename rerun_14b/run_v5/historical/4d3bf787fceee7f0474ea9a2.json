@@ -1,0 +1,50 @@
+{
+  "id": "4d3bf787fceee7f0474ea9a2",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_8f48ced901fe",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_8f48ced901fe.json",
+  "historical_output_sha256": "84b5acc422f5bb8d7a395a3a39062369bde13816ea3b375a43c66ff319266b56",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1121,
+  "messages_sha256": "db9984d1f4222d0efdab2de9575e8cfbbafade263cdbeb9687bec5a6411d3e64",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change resolves the issue but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change reorders and modifies the logic in the `__eq__` method, which may introduce unintended side effects or make the code harder to understand.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 102,
+      "returned_model_request_id": "1557",
+      "completed_at_utc": "2026-11-06T04:09:29.769516+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change resolves the issue but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change reorders and modifies the logic in the `__eq__` method, which may introduce unintended side effects or make the code harder to understand."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change resolves the issue but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change reorders and modifies the logic in the `__eq__` method, which may introduce unintended side effects or make the code harder to understand."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

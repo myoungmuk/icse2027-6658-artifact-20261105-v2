@@ -1,0 +1,60 @@
+{
+  "id": "2fe5fde8cf0cc687801f307b",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_ac01d84c9555",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_ac01d84c9555.json",
+  "historical_output_sha256": "a58213b1fc73bf55695997d246c720dd0a8eaee359614ebd6006408fd09df9c3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 4506,
+  "messages_sha256": "64a7aabc78e384a18cf96970dbc6743250c4c6b30cc5e7bf46a5012b39d8c318",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a new hook `get_inlines` to `ModelAdmin` to allow dynamic inlines based on the request or model instance. It includes tests for the new functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new `get_inlines` method is added, but it does not follow the naming convention of other similar methods in `ModelAdmin` (e.g., `get_queryset`, `get_list_display`). It might be more consistent to name it `get_inline_classes` to match the naming pattern.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR does not update the documentation for `ModelAdmin` to include the new `get_inlines` method. Adding a docstring to the method and updating the relevant documentation would be beneficial.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 220,
+      "returned_model_request_id": "2068",
+      "completed_at_utc": "2026-11-06T04:14:03.529996+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a new hook `get_inlines` to `ModelAdmin` to allow dynamic inlines based on the request or model instance. It includes tests for the new functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new `get_inlines` method is added, but it does not follow the naming convention of other similar methods in `ModelAdmin` (e.g., `get_queryset`, `get_list_display`). It might be more consistent to name it `get_inline_classes` to match the naming pattern."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not update the documentation for `ModelAdmin` to include the new `get_inlines` method. Adding a docstring to the method and updating the relevant documentation would be beneficial."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR adds a new hook `get_inlines` to `ModelAdmin` to allow dynamic inlines based on the request or model instance. It includes tests for the new functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new `get_inlines` method is added, but it does not follow the naming convention of other similar methods in `ModelAdmin` (e.g., `get_queryset`, `get_list_display`). It might be more consistent to name it `get_inline_classes` to match the naming pattern."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not update the documentation for `ModelAdmin` to include the new `get_inlines` method. Adding a docstring to the method and updating the relevant documentation would be beneficial."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

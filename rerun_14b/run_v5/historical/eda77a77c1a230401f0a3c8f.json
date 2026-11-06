@@ -1,0 +1,50 @@
+{
+  "id": "eda77a77c1a230401f0a3c8f",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_42700dd3009c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_42700dd3009c.json",
+  "historical_output_sha256": "2065b6cac170522a7665a012df5616d236dc00245a90c86d120b324298e3358e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1572,
+  "messages_sha256": "025cc323fb12054931cdc0723c1264f7d079a642ddfe47899ff47a0b35732d31",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch adds redundant calls to `_validate_vocabulary` in `get_feature_names` and `transform` methods.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces non-minimal changes by adding redundant calls to `_validate_vocabulary` in both `get_feature_names` and `transform` methods. This can lead to unnecessary overhead and potential confusion.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "904",
+      "completed_at_utc": "2026-11-06T04:05:22.639953+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch adds redundant calls to `_validate_vocabulary` in `get_feature_names` and `transform` methods.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces non-minimal changes by adding redundant calls to `_validate_vocabulary` in both `get_feature_names` and `transform` methods. This can lead to unnecessary overhead and potential confusion."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch adds redundant calls to `_validate_vocabulary` in `get_feature_names` and `transform` methods.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces non-minimal changes by adding redundant calls to `_validate_vocabulary` in both `get_feature_names` and `transform` methods. This can lead to unnecessary overhead and potential confusion."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

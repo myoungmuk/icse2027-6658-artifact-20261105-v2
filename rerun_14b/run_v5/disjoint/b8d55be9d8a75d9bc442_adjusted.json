@@ -1,0 +1,29 @@
+{
+  "code": "b8d55be9d8a75d9bc442",
+  "instance_id": "sympy__sympy-17115",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "b8d55be9d8a75d9bc442_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1608,
+  "messages_sha256": "6b9d20a7b6e0e418a08c560489c4a03c106c51a5aaaa1ff631cffa004e7efb2b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch changes the condition from checking if `c` is not an instance of `Relational` to checking if it is not an instance of `Boolean`. This change could potentially break other parts of the code that rely on the distinction between `Relational` and `Boolean`. Additionally, the patch does not address the root cause of the issue, which is the `TypeError` raised when converting the condition to a set. A more targeted fix is needed to resolve the underlying problem.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "2727",
+      "completed_at_utc": "2026-11-06T04:18:08.363579+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch changes the condition from checking if `c` is not an instance of `Relational` to checking if it is not an instance of `Boolean`. This change could potentially break other parts of the code that rely on the distinction between `Relational` and `Boolean`. Additionally, the patch does not address the root cause of the issue, which is the `TypeError` raised when converting the condition to a set. A more targeted fix is needed to resolve the underlying problem."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

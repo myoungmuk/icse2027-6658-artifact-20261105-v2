@@ -1,0 +1,50 @@
+{
+  "id": "a605e91a11e47fcc5fee17b1",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_d93de907ba57",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_d93de907ba57.json",
+  "historical_output_sha256": "5b1f96395ee6126ee580194ca861f941fce307909e71eec99d50486d91cef7bf",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1223,
+  "messages_sha256": "e16a1fb45d7a6f07d0dff306c997360bf51ab14761923da21a6da02c1412cdf3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch attempts to fix the issue with duration expressions on SQLite and MySQL by converting the value to a float before creating a timedelta object. However, it does not handle the case where the value is None, which could lead to a TypeError.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not handle the case where the value is None, which could lead to a TypeError.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "1460",
+      "completed_at_utc": "2026-11-06T04:08:55.022504+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch attempts to fix the issue with duration expressions on SQLite and MySQL by converting the value to a float before creating a timedelta object. However, it does not handle the case where the value is None, which could lead to a TypeError.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch does not handle the case where the value is None, which could lead to a TypeError."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch attempts to fix the issue with duration expressions on SQLite and MySQL by converting the value to a float before creating a timedelta object. However, it does not handle the case where the value is None, which could lead to a TypeError.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch does not handle the case where the value is None, which could lead to a TypeError."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

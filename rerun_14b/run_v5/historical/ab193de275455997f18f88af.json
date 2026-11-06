@@ -1,0 +1,50 @@
+{
+  "id": "ab193de275455997f18f88af",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_455982b6bfa0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_455982b6bfa0.json",
+  "historical_output_sha256": "8e4ee1c716ec3177fb5c58a5c41a5ebced6bf87c3ab5038aa09dc9530bad861f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1029,
+  "messages_sha256": "23540830ba21151fa15b95a4a381ebff308ed4da02a265788822f4f83a48c1a7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of autoreloader not tracking changes in manage.py, but it introduces a non-minimal change by modifying the autoreload logic in a way that may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the autoreload logic in a way that may have unintended side effects. It adds additional conditions and logic that could affect other modules or files.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "137",
+      "completed_at_utc": "2026-11-06T04:00:52.713610+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of autoreloader not tracking changes in manage.py, but it introduces a non-minimal change by modifying the autoreload logic in a way that may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the autoreload logic in a way that may have unintended side effects. It adds additional conditions and logic that could affect other modules or files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of autoreloader not tracking changes in manage.py, but it introduces a non-minimal change by modifying the autoreload logic in a way that may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the autoreload logic in a way that may have unintended side effects. It adds additional conditions and logic that could affect other modules or files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

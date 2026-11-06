@@ -1,0 +1,50 @@
+{
+  "id": "8eb5f5fedf48a9dc5cbb1aa4",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_0c3939afefcb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_0c3939afefcb.json",
+  "historical_output_sha256": "ddda0e7261410396d31075d9c3e50f337388c733f8a6dbbcec4fdcc79bdb49c0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1181,
+  "messages_sha256": "d1cb1806197b8d4113ccc7d5f843cd85d6ab49c2ba7c58926f86e0ca05f2607e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch simplifies the prefix multiplication and division logic, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch removes the check for `fact == 1`, which may lead to unexpected behavior when multiplying or dividing prefixes that result in a scale factor of 1.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "294",
+      "completed_at_utc": "2026-11-06T04:02:01.124860+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch simplifies the prefix multiplication and division logic, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch removes the check for `fact == 1`, which may lead to unexpected behavior when multiplying or dividing prefixes that result in a scale factor of 1."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch simplifies the prefix multiplication and division logic, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch removes the check for `fact == 1`, which may lead to unexpected behavior when multiplying or dividing prefixes that result in a scale factor of 1."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "01ef6c5961f5ab817b8d02c1",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_1436c413a624",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_1436c413a624.json",
+  "historical_output_sha256": "15fbcbce990afa02d9b82fca1a766a512fd71fbf2893590e05a3294614d13887",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 952,
+  "messages_sha256": "a407a499e519cb414ea2ab85619f4c9fdbbd76b6c07a949deaec802306563312",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a conditional check that may not fully resolve the underlying problem.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR introduces a conditional check based on `self.query.default_ordering`, which may not cover all cases where Meta.ordering fields should not be included in the GROUP BY clause. This could lead to functional incompleteness.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 136,
+      "returned_model_request_id": "738",
+      "completed_at_utc": "2026-11-06T04:04:32.840654+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a conditional check that may not fully resolve the underlying problem.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR introduces a conditional check based on `self.query.default_ordering`, which may not cover all cases where Meta.ordering fields should not be included in the GROUP BY clause. This could lead to functional incompleteness."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a conditional check that may not fully resolve the underlying problem.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR introduces a conditional check based on `self.query.default_ordering`, which may not cover all cases where Meta.ordering fields should not be included in the GROUP BY clause. This could lead to functional incompleteness."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

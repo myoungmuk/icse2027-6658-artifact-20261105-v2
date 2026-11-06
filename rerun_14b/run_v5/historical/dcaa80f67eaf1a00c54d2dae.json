@@ -1,0 +1,50 @@
+{
+  "id": "dcaa80f67eaf1a00c54d2dae",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_633f7ec15ce8",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_633f7ec15ce8.json",
+  "historical_output_sha256": "55a5b74bdf883d7792069c969fe54055fa7eac4a1c4328d32dfbffa57eb32537",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2027,
+  "messages_sha256": "84a956205741f3370e160dc1c952dcae9096f74561cb448094c45eaedd50ce3a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the AttributeError by ensuring the renderer is not None, which is a reasonable fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new default parameter value for the renderer, which slightly deviates from the original API.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 98,
+      "returned_model_request_id": "789",
+      "completed_at_utc": "2026-11-06T04:04:49.261130+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the AttributeError by ensuring the renderer is not None, which is a reasonable fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new default parameter value for the renderer, which slightly deviates from the original API."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the AttributeError by ensuring the renderer is not None, which is a reasonable fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new default parameter value for the renderer, which slightly deviates from the original API."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

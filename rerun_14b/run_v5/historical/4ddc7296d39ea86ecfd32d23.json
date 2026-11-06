@@ -1,0 +1,60 @@
+{
+  "id": "4ddc7296d39ea86ecfd32d23",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_09dd9dbff8de",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_09dd9dbff8de.json",
+  "historical_output_sha256": "553c36a4ea3d69a36b99955db1ed0a5d509a6878ddcd473169efcfef2eeab2d4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1575,
+  "messages_sha256": "629e4504c2e9a382afa0d085547f52e7aa03574c1e51673e5af912b112a08e81",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue but may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change modifies the coordinate checking logic, which could potentially break existing behavior that relies on the current monotonicity check.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include additional tests to verify the fix and ensure no regressions occur.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "611",
+      "completed_at_utc": "2026-11-06T04:03:41.542066+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the coordinate checking logic, which could potentially break existing behavior that relies on the current monotonicity check."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to verify the fix and ensure no regressions occur."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the coordinate checking logic, which could potentially break existing behavior that relies on the current monotonicity check."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to verify the fix and ensure no regressions occur."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

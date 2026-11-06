@@ -1,0 +1,50 @@
+{
+  "id": "3c8905da50eb64e54d661028",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_937c2ba7f716",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_937c2ba7f716.json",
+  "historical_output_sha256": "05d29c8f75e53a1213d4af507fa81a3af9a66498fb40a05690ec1073755f87f3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1667,
+  "messages_sha256": "ab26f998cd840c1d87f11b1ac00f9d87e5da39be2856b2c1aa4a76aa4eb9ad5b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by modifying the logic to handle multiple dimensions correctly. The changes are minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The import statement for numpy is added inside the function, which is not a common practice and may affect readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "1828",
+      "completed_at_utc": "2026-11-06T04:11:40.855014+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by modifying the logic to handle multiple dimensions correctly. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statement for numpy is added inside the function, which is not a common practice and may affect readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by modifying the logic to handle multiple dimensions correctly. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The import statement for numpy is added inside the function, which is not a common practice and may affect readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "3022337e3fbb9fcc6047d7f6",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_eff4222b6bd2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_eff4222b6bd2.json",
+  "historical_output_sha256": "eea462f64c9491a9f08f21cd92fcfacb5937857ac03379a183f81e278505f638",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 895,
+  "messages_sha256": "c704e1a551f751b932e0a1de85277addd47898d7b8f9f8b9c4960f3ae0e61954",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of log level not being restored after a test, but it introduces a non-minimal change by modifying the handler level.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the handler level, which may not be necessary and could introduce unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "591",
+      "completed_at_utc": "2026-11-06T04:03:41.538172+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of log level not being restored after a test, but it introduces a non-minimal change by modifying the handler level.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the handler level, which may not be necessary and could introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of log level not being restored after a test, but it introduces a non-minimal change by modifying the handler level.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the handler level, which may not be necessary and could introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

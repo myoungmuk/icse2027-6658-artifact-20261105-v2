@@ -1,0 +1,60 @@
+{
+  "id": "7085569d571dcbc26c937b05",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_8344d2e89f68",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_8344d2e89f68.json",
+  "historical_output_sha256": "dbc0393fc249654e519ae534ca05afa8111fafa0c8f8363d0f8bf4bcdd7ead15",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1094,
+  "messages_sha256": "10bed984bb374ace041861858b71f291aa12fc67fd4c20c7613f1add04c764f3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by initializing 'substitutions' outside the loop, which may not be the most efficient or clear solution.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch lacks sufficient tests to ensure that the fix does not introduce new issues or regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 148,
+      "returned_model_request_id": "647",
+      "completed_at_utc": "2026-11-06T04:03:59.185157+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by initializing 'substitutions' outside the loop, which may not be the most efficient or clear solution."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch lacks sufficient tests to ensure that the fix does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by initializing 'substitutions' outside the loop, which may not be the most efficient or clear solution."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch lacks sufficient tests to ensure that the fix does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

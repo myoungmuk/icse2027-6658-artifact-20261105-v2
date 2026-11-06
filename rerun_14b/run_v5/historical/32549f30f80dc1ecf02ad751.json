@@ -1,0 +1,50 @@
+{
+  "id": "32549f30f80dc1ecf02ad751",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_2e4188edc32c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_2e4188edc32c.json",
+  "historical_output_sha256": "46b7584ce6e7e5e35a3feda4958c399916c90dde133620a71520e892723abe14",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3036,
+  "messages_sha256": "60d65be41ca8039b08c000e3b127a98bd5daa7b4b6b0920b81c03a7558ea15ab",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by modifying the `get_chunksizes` function to check for chunks on the raw data object, avoiding unnecessary data loading. The new test files help verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces new test files, which is a good practice, but it is not a blocking issue as the tests already pass.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "1932",
+      "completed_at_utc": "2026-11-06T04:12:42.347692+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by modifying the `get_chunksizes` function to check for chunks on the raw data object, avoiding unnecessary data loading. The new test files help verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new test files, which is a good practice, but it is not a blocking issue as the tests already pass."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by modifying the `get_chunksizes` function to check for chunks on the raw data object, avoiding unnecessary data loading. The new test files help verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new test files, which is a good practice, but it is not a blocking issue as the tests already pass."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

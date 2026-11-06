@@ -1,0 +1,50 @@
+{
+  "id": "75a87316d115e56021ae2107",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_8b5800a62671",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_8b5800a62671.json",
+  "historical_output_sha256": "556a8608466ffa237c746994ba678f26ae318ee03cbdf2ebedec3cf5858a8037",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1404,
+  "messages_sha256": "be4801ebcac5197ab44e69467842bd44e53c080511ff067dcdee04313895ab3b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly handles byte strings for the HTTP method, but it introduces a non-minimal change by adding a new test file.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new test file 'reproduce.py' which is not necessary for fixing the issue and may not be aligned with the project's testing conventions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "1938",
+      "completed_at_utc": "2026-11-06T04:12:42.348777+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly handles byte strings for the HTTP method, but it introduces a non-minimal change by adding a new test file.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new test file 'reproduce.py' which is not necessary for fixing the issue and may not be aligned with the project's testing conventions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly handles byte strings for the HTTP method, but it introduces a non-minimal change by adding a new test file.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new test file 'reproduce.py' which is not necessary for fixing the issue and may not be aligned with the project's testing conventions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "7e2abd1d7e07b68d2085",
+  "instance_id": "scikit-learn__scikit-learn-12486",
+  "split": "development",
+  "kind": "developer",
+  "id": "7e2abd1d7e07b68d2085_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1315,
+  "messages_sha256": "b90abd79045c2366359108f20ee092165c8d49ea04c237af20acde321a5b1992",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a ValueError check that is not appropriate for all classifiers. It assumes that all classifiers with binary output must have a predict_proba method that returns a 2D array with two columns, which is not true for all classifiers. This could lead to false positives and break compatibility with other classifiers that do not follow this convention.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 87,
+      "returned_model_request_id": "2345",
+      "completed_at_utc": "2026-11-06T04:15:51.280349+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a ValueError check that is not appropriate for all classifiers. It assumes that all classifiers with binary output must have a predict_proba method that returns a 2D array with two columns, which is not true for all classifiers. This could lead to false positives and break compatibility with other classifiers that do not follow this convention."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

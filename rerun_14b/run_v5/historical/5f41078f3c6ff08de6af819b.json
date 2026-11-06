@@ -1,0 +1,60 @@
+{
+  "id": "5f41078f3c6ff08de6af819b",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_00ad14106056",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_00ad14106056.json",
+  "historical_output_sha256": "cc27be82b2603108adda65223684494972d2146721b6cc6315bee5a1388bd3cc",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1711,
+  "messages_sha256": "2435edd8afa95cbfaa2987e90634e62af05620472a1472927348fad539ddb63a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a legacy encoding format for session data when DEFAULT_HASHING_ALGORITHM is 'sha1'. The new test script attempts to reproduce the session issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The approach of using legacy encoding format when DEFAULT_HASHING_ALGORITHM is 'sha1' is hacky and may not be the best solution. It could lead to maintenance issues in the future.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test script does not follow Django's project conventions, such as using Django's testing framework instead of subprocess calls.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 178,
+      "returned_model_request_id": "2181",
+      "completed_at_utc": "2026-11-06T04:14:46.805380+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a legacy encoding format for session data when DEFAULT_HASHING_ALGORITHM is 'sha1'. The new test script attempts to reproduce the session issue.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of using legacy encoding format when DEFAULT_HASHING_ALGORITHM is 'sha1' is hacky and may not be the best solution. It could lead to maintenance issues in the future."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test script does not follow Django's project conventions, such as using Django's testing framework instead of subprocess calls."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a legacy encoding format for session data when DEFAULT_HASHING_ALGORITHM is 'sha1'. The new test script attempts to reproduce the session issue.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of using legacy encoding format when DEFAULT_HASHING_ALGORITHM is 'sha1' is hacky and may not be the best solution. It could lead to maintenance issues in the future."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test script does not follow Django's project conventions, such as using Django's testing framework instead of subprocess calls."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

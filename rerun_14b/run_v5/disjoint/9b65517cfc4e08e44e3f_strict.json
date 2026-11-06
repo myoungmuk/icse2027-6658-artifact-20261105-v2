@@ -1,0 +1,29 @@
+{
+  "code": "9b65517cfc4e08e44e3f",
+  "instance_id": "matplotlib__matplotlib-19553",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "9b65517cfc4e08e44e3f_strict",
+  "arm": "strict",
+  "input_tokens": 3535,
+  "messages_sha256": "ba8e4196a31e17e5b9c73c14c489fb806368c42f9080b49dc6d6043560a1c025",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces significant changes to the `Normalize` class, including adding a `callbacks` mechanism and modifying the `set_clim` method. These changes are not fully explained or justified in the issue description, and the patch does not include any tests to verify the new functionality. Additionally, the patch modifies multiple files without clear evidence of a comprehensive review of potential side effects or compatibility issues. The patch should be reviewed more thoroughly, and tests should be added to ensure the new functionality works as expected and does not introduce regressions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "2704",
+      "completed_at_utc": "2026-11-06T04:18:08.358050+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces significant changes to the `Normalize` class, including adding a `callbacks` mechanism and modifying the `set_clim` method. These changes are not fully explained or justified in the issue description, and the patch does not include any tests to verify the new functionality. Additionally, the patch modifies multiple files without clear evidence of a comprehensive review of potential side effects or compatibility issues. The patch should be reviewed more thoroughly, and tests should be added to ensure the new functionality works as expected and does not introduce regressions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

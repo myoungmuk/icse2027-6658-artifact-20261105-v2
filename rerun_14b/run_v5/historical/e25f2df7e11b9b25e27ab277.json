@@ -1,0 +1,50 @@
+{
+  "id": "e25f2df7e11b9b25e27ab277",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_c9bcbf243f30",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_c9bcbf243f30.json",
+  "historical_output_sha256": "49be9334e69aa9f08defd4f164d51f0bc5b25b0b7dff3956a993ad1006ca426a",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1245,
+  "messages_sha256": "61b762ec493359d9956fd4c40eb1c10872d2a90b0158a178735db4aaa31d2b4d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the ordering issue in RelatedFieldListFilter and RelatedOnlyFieldListFilter, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new behavior where RelatedFieldListFilter falls back to the ordering defined in the related model's Meta.ordering field. This may break existing behavior where the ordering was not defined or was different.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "1350",
+      "completed_at_utc": "2026-11-06T04:08:18.330732+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the ordering issue in RelatedFieldListFilter and RelatedOnlyFieldListFilter, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a new behavior where RelatedFieldListFilter falls back to the ordering defined in the related model's Meta.ordering field. This may break existing behavior where the ordering was not defined or was different."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the ordering issue in RelatedFieldListFilter and RelatedOnlyFieldListFilter, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a new behavior where RelatedFieldListFilter falls back to the ordering defined in the related model's Meta.ordering field. This may break existing behavior where the ordering was not defined or was different."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

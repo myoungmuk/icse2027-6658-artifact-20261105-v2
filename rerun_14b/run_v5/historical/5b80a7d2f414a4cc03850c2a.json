@@ -1,0 +1,50 @@
+{
+  "id": "5b80a7d2f414a4cc03850c2a",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_1cc63c4847b7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_1cc63c4847b7.json",
+  "historical_output_sha256": "7427bdaff4dc022af5ca7f75b76908ff0607984dd931e90c2f4d2b25b1f299a9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1664,
+  "messages_sha256": "b88f70c2ff46845fcf8e7c3b6a7917f4d6962c59bc660ce68455a140e50015fb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result. The change is minimal and maintains existing functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The docstring for the new method serialize_result is missing a description of its parameters.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "231",
+      "completed_at_utc": "2026-11-06T04:01:25.601216+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result. The change is minimal and maintains existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for the new method serialize_result is missing a description of its parameters."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result. The change is minimal and maintains existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for the new method serialize_result is missing a description of its parameters."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

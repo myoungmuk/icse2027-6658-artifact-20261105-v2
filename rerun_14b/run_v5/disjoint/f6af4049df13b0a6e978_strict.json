@@ -1,0 +1,29 @@
+{
+  "code": "f6af4049df13b0a6e978",
+  "instance_id": "django__django-16311",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "f6af4049df13b0a6e978_strict",
+  "arm": "strict",
+  "input_tokens": 1241,
+  "messages_sha256": "cb25905aec55839c103361f44ed3ed2164005fbc09c26b175884fbd9d90dff14",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes to the gzip middleware and compression utilities without proper testing or documentation. It adds randomness to the gzip filename field, which could potentially break compatibility with existing systems or clients. Additionally, the patch lacks comprehensive test cases to ensure the mitigation works as intended and does not introduce new security vulnerabilities.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 81,
+      "returned_model_request_id": "2592",
+      "completed_at_utc": "2026-11-06T04:17:15.378361+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes to the gzip middleware and compression utilities without proper testing or documentation. It adds randomness to the gzip filename field, which could potentially break compatibility with existing systems or clients. Additionally, the patch lacks comprehensive test cases to ensure the mitigation works as intended and does not introduce new security vulnerabilities."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

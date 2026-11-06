@@ -1,0 +1,29 @@
+{
+  "code": "486bfd78e0a15eda9be5",
+  "instance_id": "pydata__xarray-3649",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "486bfd78e0a15eda9be5_strict",
+  "arm": "strict",
+  "input_tokens": 2219,
+  "messages_sha256": "8a999970f4e08091f31cae7158034e25ad90cdd421e0d4a9f1a1f720c938609f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file `reproduce_bug.py` without any tests, which is a concern for maintaining test coverage. Additionally, the patch modifies the behavior of `combine_by_coords` to allow for missing panels in a hypercube, which could lead to unexpected results and potential bugs. The patch should include comprehensive tests to ensure the new functionality works as expected and does not introduce regressions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 100,
+      "returned_model_request_id": "2212",
+      "completed_at_utc": "2026-11-06T04:15:08.239282+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file `reproduce_bug.py` without any tests, which is a concern for maintaining test coverage. Additionally, the patch modifies the behavior of `combine_by_coords` to allow for missing panels in a hypercube, which could lead to unexpected results and potential bugs. The patch should include comprehensive tests to ensure the new functionality works as expected and does not introduce regressions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

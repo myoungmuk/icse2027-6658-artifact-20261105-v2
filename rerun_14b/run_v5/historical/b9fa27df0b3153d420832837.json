@@ -1,0 +1,50 @@
+{
+  "id": "b9fa27df0b3153d420832837",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_6f5095876bc8",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_6f5095876bc8.json",
+  "historical_output_sha256": "49b4e8f9dfa077d692ae6fef5807357b79e8dca317c6e72993778f0aa471ad63",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1304,
+  "messages_sha256": "451301e87141fd512d6b8845f3408e1574245999255c8b2d993e7503e2cf787e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by modifying the split method, but it may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change uses `rsplit` instead of `split`, which could potentially break other parameter types or formats that rely on the original behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "1721",
+      "completed_at_utc": "2026-11-06T04:10:23.397515+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by modifying the split method, but it may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change uses `rsplit` instead of `split`, which could potentially break other parameter types or formats that rely on the original behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by modifying the split method, but it may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change uses `rsplit` instead of `split`, which could potentially break other parameter types or formats that rely on the original behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

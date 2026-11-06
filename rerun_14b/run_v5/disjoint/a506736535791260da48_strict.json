@@ -1,0 +1,29 @@
+{
+  "code": "a506736535791260da48",
+  "instance_id": "sympy__sympy-16474",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "a506736535791260da48_strict",
+  "arm": "strict",
+  "input_tokens": 1238,
+  "messages_sha256": "7b2a93ddc6c5738a690432cd83fd094d15c2d746b95cd18bf10e5e7b1be5fdba",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch adds LaTeX and pretty printers for HadamardPower but does not include a MathML printer. Additionally, the pretty printer implementation for HadamardPower is incorrect as it uses exponentiation instead of Hadamard power notation. The patch also lacks tests for the MathML printer and does not address the extension of HadamardProduct to support division.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 93,
+      "returned_model_request_id": "2522",
+      "completed_at_utc": "2026-11-06T04:16:59.780543+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch adds LaTeX and pretty printers for HadamardPower but does not include a MathML printer. Additionally, the pretty printer implementation for HadamardPower is incorrect as it uses exponentiation instead of Hadamard power notation. The patch also lacks tests for the MathML printer and does not address the extension of HadamardProduct to support division."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

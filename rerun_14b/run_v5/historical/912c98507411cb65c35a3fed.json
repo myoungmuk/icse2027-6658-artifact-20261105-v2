@@ -1,0 +1,50 @@
+{
+  "id": "912c98507411cb65c35a3fed",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_1cc63c4847b7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_1cc63c4847b7.json",
+  "historical_output_sha256": "e1f17399b1afe9235c64085dd644f124ec200a519a60cb134b5147378c705d28",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1477,
+  "messages_sha256": "cd7795f20290846365d3bcfaafbcbb6591fd5d02a7f8ba2c63fb77bddf29bf37",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a new method `serialize_result` to `AutocompleteJsonView`, which allows for easier customization of the autocomplete response. The change is minimal and maintains the existing functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any documentation updates for the new `serialize_result` method. This could lead to confusion for developers who are not familiar with the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "39",
+      "completed_at_utc": "2026-11-06T04:00:16.941873+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a new method `serialize_result` to `AutocompleteJsonView`, which allows for easier customization of the autocomplete response. The change is minimal and maintains the existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not include any documentation updates for the new `serialize_result` method. This could lead to confusion for developers who are not familiar with the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR introduces a new method `serialize_result` to `AutocompleteJsonView`, which allows for easier customization of the autocomplete response. The change is minimal and maintains the existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not include any documentation updates for the new `serialize_result` method. This could lead to confusion for developers who are not familiar with the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

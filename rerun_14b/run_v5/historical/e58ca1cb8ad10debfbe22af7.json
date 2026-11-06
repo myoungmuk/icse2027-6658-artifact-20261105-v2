@@ -1,0 +1,50 @@
+{
+  "id": "e58ca1cb8ad10debfbe22af7",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_9381d6cbd58e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_9381d6cbd58e.json",
+  "historical_output_sha256": "b2d17c18d02defed749b4ca9895a38f307fea1768fd740e12b2323de37572214",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1112,
+  "messages_sha256": "a5a8bf580c70de0806540a60c5639b6eda58713dabc58edd8ce16106f92fba0b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces `__slots__` to `Printable` class, which may affect subclasses. It is unclear if this resolves the issue with `Symbol` instances having `__dict__`.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces `__slots__` to `Printable` class, which may affect subclasses. It is unclear if this resolves the issue with `Symbol` instances having `__dict__`.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 137,
+      "returned_model_request_id": "1579",
+      "completed_at_utc": "2026-11-06T04:09:29.773802+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces `__slots__` to `Printable` class, which may affect subclasses. It is unclear if this resolves the issue with `Symbol` instances having `__dict__`.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The change introduces `__slots__` to `Printable` class, which may affect subclasses. It is unclear if this resolves the issue with `Symbol` instances having `__dict__`."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change introduces `__slots__` to `Printable` class, which may affect subclasses. It is unclear if this resolves the issue with `Symbol` instances having `__dict__`.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The change introduces `__slots__` to `Printable` class, which may affect subclasses. It is unclear if this resolves the issue with `Symbol` instances having `__dict__`."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

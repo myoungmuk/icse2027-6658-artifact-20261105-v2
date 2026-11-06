@@ -1,0 +1,60 @@
+{
+  "id": "50cf07b4e9d1935cad45ed11",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_9eca581557a6",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_9eca581557a6.json",
+  "historical_output_sha256": "bd432e4fd6230f1824e3b33447b300546ace737fc819b6c18c5888f2e866ada1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 824,
+  "messages_sha256": "e272fa2df9abef51d36b1b00748293bd6d8dffffb0c8b59fd2019e79cf7b3005",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a non-minimal change and may introduce a performance regression.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch adds an unnecessary decoding step that may already be handled by `stream_decode_response_unicode`. This introduces scope creep and potential performance overhead.\"\n    },\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces an additional decoding operation, which could lead to performance regressions, especially for large responses.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 149,
+      "returned_model_request_id": "179",
+      "completed_at_utc": "2026-11-06T04:01:09.169611+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a non-minimal change and may introduce a performance regression.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch adds an unnecessary decoding step that may already be handled by `stream_decode_response_unicode`. This introduces scope creep and potential performance overhead."
+      },
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch introduces an additional decoding operation, which could lead to performance regressions, especially for large responses."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a non-minimal change and may introduce a performance regression.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch adds an unnecessary decoding step that may already be handled by `stream_decode_response_unicode`. This introduces scope creep and potential performance overhead."
+      },
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch introduces an additional decoding operation, which could lead to performance regressions, especially for large responses."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

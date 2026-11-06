@@ -1,0 +1,70 @@
+{
+  "id": "6f086d1aa95004d1969bc741",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_42700dd3009c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_42700dd3009c.json",
+  "historical_output_sha256": "249a7f952751fe371b552e65dd0b468f50401bc6307b4428c49cf45c5e12ee5a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1385,
+  "messages_sha256": "b6a284091d3081edd49d1a543c41c976a8d6d877190473751618ef8e62936015",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR attempts to fix an issue with `get_feature_names` raising `NotFittedError` when `vocabulary` is provided, but the changes are not minimal and may introduce regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR introduces duplicate calls to `_validate_vocabulary` in `get_feature_names` and `transform`, which is non-minimal and may lead to unexpected behavior or performance issues.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The changes may introduce a behavioral regression risk by altering the internal state of the `CountVectorizer` object in unexpected ways, especially if other methods rely on the state being consistent.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify the fix, which is a critical oversight given the nature of the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 244,
+      "returned_model_request_id": "516",
+      "completed_at_utc": "2026-11-06T04:03:08.424246+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR attempts to fix an issue with `get_feature_names` raising `NotFittedError` when `vocabulary` is provided, but the changes are not minimal and may introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The PR introduces duplicate calls to `_validate_vocabulary` in `get_feature_names` and `transform`, which is non-minimal and may lead to unexpected behavior or performance issues."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The changes may introduce a behavioral regression risk by altering the internal state of the `CountVectorizer` object in unexpected ways, especially if other methods rely on the state being consistent."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the fix, which is a critical oversight given the nature of the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR attempts to fix an issue with `get_feature_names` raising `NotFittedError` when `vocabulary` is provided, but the changes are not minimal and may introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The PR introduces duplicate calls to `_validate_vocabulary` in `get_feature_names` and `transform`, which is non-minimal and may lead to unexpected behavior or performance issues."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The changes may introduce a behavioral regression risk by altering the internal state of the `CountVectorizer` object in unexpected ways, especially if other methods rely on the state being consistent."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the fix, which is a critical oversight given the nature of the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

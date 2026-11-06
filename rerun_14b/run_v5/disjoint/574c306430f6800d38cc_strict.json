@@ -1,0 +1,29 @@
+{
+  "code": "574c306430f6800d38cc",
+  "instance_id": "matplotlib__matplotlib-19553",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "574c306430f6800d38cc_strict",
+  "arm": "strict",
+  "input_tokens": 2225,
+  "messages_sha256": "a664119e0f62bc3fa9fe2ebfebe0c4b1c608d2cf80adfa275a07b5c8222cfa09",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file `reproduce_issue.py` which is not related to the issue being addressed. Additionally, the patch modifies `colorbar.py` and `colors.py` but does not address the core issue of notifying scalar-mappables on changes to the `Normalize` object. The patch lacks proper documentation and test cases to ensure its correctness and maintainability.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 96,
+      "returned_model_request_id": "2706",
+      "completed_at_utc": "2026-11-06T04:18:08.358808+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file `reproduce_issue.py` which is not related to the issue being addressed. Additionally, the patch modifies `colorbar.py` and `colors.py` but does not address the core issue of notifying scalar-mappables on changes to the `Normalize` object. The patch lacks proper documentation and test cases to ensure its correctness and maintainability."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

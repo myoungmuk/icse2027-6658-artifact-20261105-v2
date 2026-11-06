@@ -1,0 +1,50 @@
+{
+  "id": "c4546723d45e021e6f074ad6",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_e93168e4b167",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_e93168e4b167.json",
+  "historical_output_sha256": "ce00acdf5d2f55a93ce8ed2683a13205fd014f2f5f8a0574c13129db84871528",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1272,
+  "messages_sha256": "c05bb8f248e63ff453d44e5c6064ec71a627c5c7269dd87ddea08aefcc500f42",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the UnboundLocalError by adding a raise NotImplementedError in the evalf function. The change is minimal and focused on the specific issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a raise NotImplementedError, which may not fully resolve the issue and could potentially break other parts of the code that rely on the current behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "781",
+      "completed_at_utc": "2026-11-06T04:04:49.259717+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the UnboundLocalError by adding a raise NotImplementedError in the evalf function. The change is minimal and focused on the specific issue.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch introduces a raise NotImplementedError, which may not fully resolve the issue and could potentially break other parts of the code that rely on the current behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the UnboundLocalError by adding a raise NotImplementedError in the evalf function. The change is minimal and focused on the specific issue.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch introduces a raise NotImplementedError, which may not fully resolve the issue and could potentially break other parts of the code that rely on the current behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "59bfcb046002c8dfe75c0f63",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_c9aa6d4da6ee",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_c9aa6d4da6ee.json",
+  "historical_output_sha256": "3f35375e1a60a0e10e9ebc7d4a50993b768539d21ed86dac388bae8082ff6bb5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 812,
+  "messages_sha256": "77aa453b4359118e4d0de80620da53d55f0da650d83df4e94e6fd32f8a3da094",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but introduces potential regressions and non-minimal changes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch may break existing behavior by changing how binary data is handled in the `prepare_url` method.\"\n    },\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces unrelated changes to the `_encode_params` method, which are not necessary to fix the original issue.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no tests provided to verify the changes made to the `prepare_url` method.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 186,
+      "returned_model_request_id": "454",
+      "completed_at_utc": "2026-11-06T04:02:50.462769+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but introduces potential regressions and non-minimal changes.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior by changing how binary data is handled in the `prepare_url` method."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The patch introduces unrelated changes to the `_encode_params` method, which are not necessary to fix the original issue."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests provided to verify the changes made to the `prepare_url` method."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but introduces potential regressions and non-minimal changes.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior by changing how binary data is handled in the `prepare_url` method."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The patch introduces unrelated changes to the `_encode_params` method, which are not necessary to fix the original issue."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests provided to verify the changes made to the `prepare_url` method."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "693cbb972a87debcb742c447",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_966eb20e20fe",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_966eb20e20fe.json",
+  "historical_output_sha256": "5230c7300d929e4f78d2dda563c7ac735670cbcd15466af90e973131d05a60c7",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1175,
+  "messages_sha256": "57d62b3533f0765a55a71b01ff62dcd9441f9db69eaba242e99a3c7d1f70fc28",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of pickling a figure with a draggable legend by excluding the canvas from the pickling process. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new method `__getstate__` and `__setstate__` which may not align with the project's conventions for handling pickling.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "235",
+      "completed_at_utc": "2026-11-06T04:01:25.601964+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of pickling a figure with a draggable legend by excluding the canvas from the pickling process. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new method `__getstate__` and `__setstate__` which may not align with the project's conventions for handling pickling."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of pickling a figure with a draggable legend by excluding the canvas from the pickling process. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new method `__getstate__` and `__setstate__` which may not align with the project's conventions for handling pickling."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

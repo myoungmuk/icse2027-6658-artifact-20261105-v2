@@ -1,0 +1,50 @@
+{
+  "id": "7e4efd14b9de2975e9f47543",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_89beda7b85a2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_89beda7b85a2.json",
+  "historical_output_sha256": "3cc794a99978c35dadd0af276e35dad4ad60b39f5dc5e9ea6f62001348e4ac94",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1255,
+  "messages_sha256": "a6db5526ede08e6a5d29a69c4fd7401057437a199c9c59eb1a9b5e75623938fc",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly allows specifying private members for autodoc, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of the `:private-members:` option, which may break existing documentation that relies on the current behavior of documenting all private members.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "1322",
+      "completed_at_utc": "2026-11-06T04:07:59.673284+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly allows specifying private members for autodoc, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of the `:private-members:` option, which may break existing documentation that relies on the current behavior of documenting all private members."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly allows specifying private members for autodoc, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of the `:private-members:` option, which may break existing documentation that relies on the current behavior of documenting all private members."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

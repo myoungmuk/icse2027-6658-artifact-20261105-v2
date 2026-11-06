@@ -1,0 +1,29 @@
+{
+  "code": "340c60d74a853a26b60e",
+  "instance_id": "django__django-15423",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "340c60d74a853a26b60e_strict",
+  "arm": "strict",
+  "input_tokens": 803,
+  "messages_sha256": "122ea4cf3ef9e79b8aae3dc4136634fa9372ab0d715feaaf2232a64e67d6147d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes unrelated to the issue described, specifically modifying the `USE_L10N` setting and adding a `_mask_wrapped` attribute. These changes do not address the problem of `LazyObject` defining magic methods that may not exist on the wrapped object.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 76,
+      "returned_model_request_id": "2480",
+      "completed_at_utc": "2026-11-06T04:16:43.894795+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes unrelated to the issue described, specifically modifying the `USE_L10N` setting and adding a `_mask_wrapped` attribute. These changes do not address the problem of `LazyObject` defining magic methods that may not exist on the wrapped object."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

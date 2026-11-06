@@ -1,0 +1,50 @@
+{
+  "id": "e8efc905382a215d6526a5a2",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_821f2a7ee7c1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_821f2a7ee7c1.json",
+  "historical_output_sha256": "1de83f0342378609b5464d47c4440566b0abe9239a92a30e1896c5bb54157853",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1336,
+  "messages_sha256": "ad2394e8c89ca84b6ca6a12763e0b2d8949435b1005fdff0d59ba22134f6ba45",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch combines fast delete queries, which is a good optimization. However, it introduces a potential issue with query complexity.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The patch combines queries using OR, which can lead to complex queries that may not perform well on large datasets or with specific database backends.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "1420",
+      "completed_at_utc": "2026-11-06T04:08:36.611121+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch combines fast delete queries, which is a good optimization. However, it introduces a potential issue with query complexity.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch combines queries using OR, which can lead to complex queries that may not perform well on large datasets or with specific database backends."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch combines fast delete queries, which is a good optimization. However, it introduces a potential issue with query complexity.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch combines queries using OR, which can lead to complex queries that may not perform well on large datasets or with specific database backends."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

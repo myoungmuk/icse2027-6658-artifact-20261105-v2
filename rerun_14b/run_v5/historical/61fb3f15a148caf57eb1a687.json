@@ -1,0 +1,50 @@
+{
+  "id": "61fb3f15a148caf57eb1a687",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_dd688a676c3e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_dd688a676c3e.json",
+  "historical_output_sha256": "ccda644ab85bf8edd3e1b57aa7c86a07f35785a078167a4c8699c54b25cabeee",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1995,
+  "messages_sha256": "baa0e7ad92b56ebc1fd32c426ee8d2c9aa4779c2802a86f1f2f01f8b115c3288",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a new validation check for newline, carriage return, and tab characters in URLs, which may not align with the new Python behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new validation check for newline, carriage return, and tab characters in URLs, which may not align with the new Python behavior. This could lead to unexpected behavior or conflicts with the updated Python URL parsing rules.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 132,
+      "returned_model_request_id": "1922",
+      "completed_at_utc": "2026-11-06T04:12:42.345360+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a new validation check for newline, carriage return, and tab characters in URLs, which may not align with the new Python behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a new validation check for newline, carriage return, and tab characters in URLs, which may not align with the new Python behavior. This could lead to unexpected behavior or conflicts with the updated Python URL parsing rules."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a new validation check for newline, carriage return, and tab characters in URLs, which may not align with the new Python behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a new validation check for newline, carriage return, and tab characters in URLs, which may not align with the new Python behavior. This could lead to unexpected behavior or conflicts with the updated Python URL parsing rules."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

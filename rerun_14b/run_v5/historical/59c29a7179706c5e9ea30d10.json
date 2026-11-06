@@ -1,0 +1,50 @@
+{
+  "id": "59c29a7179706c5e9ea30d10",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_809916406153",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_809916406153.json",
+  "historical_output_sha256": "e8c57cc0c636c461c09a39706dacd57c4806e49ef6dc8c925e2ffe5cea1f4d39",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2099,
+  "messages_sha256": "15a910e1155fa200afe5109a3d0fd3b9913d9808795199304ecbedc8a330c397",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the IndexError but may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch assumes that `args` will always have at least one element, which may not be true for all cases and could lead to unexpected behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 102,
+      "returned_model_request_id": "524",
+      "completed_at_utc": "2026-11-06T04:03:08.425792+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the IndexError but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch assumes that `args` will always have at least one element, which may not be true for all cases and could lead to unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the IndexError but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch assumes that `args` will always have at least one element, which may not be true for all cases and could lead to unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

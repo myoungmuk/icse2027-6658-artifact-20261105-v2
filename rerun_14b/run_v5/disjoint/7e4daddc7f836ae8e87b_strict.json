@@ -1,0 +1,29 @@
+{
+  "code": "7e4daddc7f836ae8e87b",
+  "instance_id": "django__django-12407",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "7e4daddc7f836ae8e87b_strict",
+  "arm": "strict",
+  "input_tokens": 1700,
+  "messages_sha256": "6caa6f1cf93c2d4688449b41da60b369150047645f8086bdf15a2f6105cb55b4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file `templates/admin/base.html` which is not necessary for the functionality change. Additionally, the `reproduce_issue.py` file contains duplicate code and is not a proper test. The patch should focus only on changing `get_template` to `select_template` in `loader_tags.py` and include a proper test for the new functionality.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 94,
+      "returned_model_request_id": "2658",
+      "completed_at_utc": "2026-11-06T04:17:49.114412+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file `templates/admin/base.html` which is not necessary for the functionality change. Additionally, the `reproduce_issue.py` file contains duplicate code and is not a proper test. The patch should focus only on changing `get_template` to `select_template` in `loader_tags.py` and include a proper test for the new functionality."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

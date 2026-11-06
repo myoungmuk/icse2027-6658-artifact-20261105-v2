@@ -1,0 +1,60 @@
+{
+  "id": "95382f7157e9a41e31f8a899",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_6ffae4d3744d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_6ffae4d3744d.json",
+  "historical_output_sha256": "26e466b5f3f57a698e417defa219cb65000f43ed3961b78a64834592c90eaeda",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2315,
+  "messages_sha256": "60113317a62069e4210bd2eca9b9737e7fcf71d6c5d20dece1b86006f8e1aaf3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of HTML table output not respecting the 'formats' argument, but it introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces additional lines of code that are not directly related to fixing the issue, potentially leading to scope creep.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify that the 'formats' argument is correctly applied to HTML output.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 159,
+      "returned_model_request_id": "737",
+      "completed_at_utc": "2026-11-06T04:04:32.840454+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of HTML table output not respecting the 'formats' argument, but it introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional lines of code that are not directly related to fixing the issue, potentially leading to scope creep."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify that the 'formats' argument is correctly applied to HTML output."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of HTML table output not respecting the 'formats' argument, but it introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional lines of code that are not directly related to fixing the issue, potentially leading to scope creep."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify that the 'formats' argument is correctly applied to HTML output."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

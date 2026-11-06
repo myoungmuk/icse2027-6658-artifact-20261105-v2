@@ -1,0 +1,29 @@
+{
+  "code": "51bb8ff07996adaa6aad",
+  "instance_id": "sympy__sympy-21259",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "51bb8ff07996adaa6aad_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1114,
+  "messages_sha256": "91ceb6d28d9c76527dc5acacbdb4ff895909c384e9093f12a3547737e68d4656",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new condition for `cond` that is not correctly handled. Specifically, the line `a = self.reversed.start` is incorrect and will raise an AttributeError because `Range` objects do not have a `reversed` attribute. Additionally, the patch does not address the issue of handling ranges with symbolic steps or infinite bounds correctly.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 91,
+      "returned_model_request_id": "2637",
+      "completed_at_utc": "2026-11-06T04:17:31.231722+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new condition for `cond` that is not correctly handled. Specifically, the line `a = self.reversed.start` is incorrect and will raise an AttributeError because `Range` objects do not have a `reversed` attribute. Additionally, the patch does not address the issue of handling ranges with symbolic steps or infinite bounds correctly."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

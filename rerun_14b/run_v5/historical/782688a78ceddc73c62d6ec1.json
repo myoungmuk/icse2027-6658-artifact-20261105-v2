@@ -1,0 +1,50 @@
+{
+  "id": "782688a78ceddc73c62d6ec1",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_b3776021e1bf",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_b3776021e1bf.json",
+  "historical_output_sha256": "2aef0836de00cfbc41d80891ae0d5e34fe8cf8587e55c930b6f3f4af455459f5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1616,
+  "messages_sha256": "4688cc13d874d735664d904f2425eca9af9bc2a75217ae2c4a0f51f5756876e1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed change addresses the overflow issue by modifying the calculation of the Fowlkes-Mallows score. The change is minimal and focused on the identified problem.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces an explicit type conversion to np.int64, which is not necessary for the fix and may not be consistent with the rest of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "1598",
+      "completed_at_utc": "2026-11-06T04:09:46.491310+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed change addresses the overflow issue by modifying the calculation of the Fowlkes-Mallows score. The change is minimal and focused on the identified problem.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces an explicit type conversion to np.int64, which is not necessary for the fix and may not be consistent with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed change addresses the overflow issue by modifying the calculation of the Fowlkes-Mallows score. The change is minimal and focused on the identified problem.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces an explicit type conversion to np.int64, which is not necessary for the fix and may not be consistent with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

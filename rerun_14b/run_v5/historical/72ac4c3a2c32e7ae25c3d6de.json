@@ -1,0 +1,50 @@
+{
+  "id": "72ac4c3a2c32e7ae25c3d6de",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_ae57cdb7efe5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_ae57cdb7efe5.json",
+  "historical_output_sha256": "dd0716f571de772b72ff3aa9b5acada219dd23b34471537841f049b0cbd99cc3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1243,
+  "messages_sha256": "ea9049db56d9f3e7650a2e14d638ab0bcd6e5ac994ee1b1972225433549ab670",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the correct address is displayed in the output when '0' is provided as the address. The change is minimal and does not introduce any apparent regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a conditional expression that could be simplified for better readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "1865",
+      "completed_at_utc": "2026-11-06T04:11:40.862467+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the correct address is displayed in the output when '0' is provided as the address. The change is minimal and does not introduce any apparent regressions.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a conditional expression that could be simplified for better readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the correct address is displayed in the output when '0' is provided as the address. The change is minimal and does not introduce any apparent regressions.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a conditional expression that could be simplified for better readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

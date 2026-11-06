@@ -1,0 +1,50 @@
+{
+  "id": "a6d4e53507ab2ab641053676",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_8c6bbf72af1f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_8c6bbf72af1f.json",
+  "historical_output_sha256": "eafe53716a2d337e19ff21f026ace422fb54da71fb00aae7e2305692c778cfca",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2655,
+  "messages_sha256": "0fd3ba6050281d83aa0be6275b08a2b50ef4516d835121ed1949c495b4848bb2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a reproduction script but does not address the underlying issue in the code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR only adds a reproduction script and does not fix the issue in the code. The actual fix should be made in `sessions.py` to handle Unicode method names correctly.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1851",
+      "completed_at_utc": "2026-11-06T04:11:40.859779+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a reproduction script but does not address the underlying issue in the code.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "blocking",
+        "description": "The PR only adds a reproduction script and does not fix the issue in the code. The actual fix should be made in `sessions.py` to handle Unicode method names correctly."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR adds a reproduction script but does not address the underlying issue in the code.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "blocking",
+        "description": "The PR only adds a reproduction script and does not fix the issue in the code. The actual fix should be made in `sessions.py` to handle Unicode method names correctly."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

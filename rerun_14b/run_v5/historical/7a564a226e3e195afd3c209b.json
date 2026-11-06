@@ -1,0 +1,60 @@
+{
+  "id": "7a564a226e3e195afd3c209b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_1e116c760a91",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_1e116c760a91.json",
+  "historical_output_sha256": "b9ffbecce3feb62de9840458b761551e89c54b09d8039894073e8b4c7f438bc2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 847,
+  "messages_sha256": "60b9ca9b1af42b9b89a2258884b8f109f6f2678d053541aa7625461cad7251fa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce regressions and lacks comprehensive tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch may break existing behavior by incorrectly handling punctuation in other scenarios.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no additional tests to ensure the patch works correctly in various edge cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "570",
+      "completed_at_utc": "2026-11-06T04:03:24.725528+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior by incorrectly handling punctuation in other scenarios."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no additional tests to ensure the patch works correctly in various edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior by incorrectly handling punctuation in other scenarios."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no additional tests to ensure the patch works correctly in various edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

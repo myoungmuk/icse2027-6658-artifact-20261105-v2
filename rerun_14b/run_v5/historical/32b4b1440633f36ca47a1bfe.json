@@ -1,0 +1,50 @@
+{
+  "id": "32b4b1440633f36ca47a1bfe",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_511fb00cd979",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_511fb00cd979.json",
+  "historical_output_sha256": "9b8fcd1045e9ebfd4d6b012f045e05a7897c6636491061c92d44bfd0d6110e13",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1413,
+  "messages_sha256": "19b6507074a72d5ccae1b7e4dcb2d02e7a5543bcba9080c4943ea8aeffafab10",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by ensuring the pivot datetime is timezone-aware when USE_TZ is True. The new test file is included, but the test file creation print statement should be removed.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The test file creation print statement should be removed as it is not necessary and can be confusing.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "1801",
+      "completed_at_utc": "2026-11-06T04:11:18.904867+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by ensuring the pivot datetime is timezone-aware when USE_TZ is True. The new test file is included, but the test file creation print statement should be removed.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The test file creation print statement should be removed as it is not necessary and can be confusing."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by ensuring the pivot datetime is timezone-aware when USE_TZ is True. The new test file is included, but the test file creation print statement should be removed.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The test file creation print statement should be removed as it is not necessary and can be confusing."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

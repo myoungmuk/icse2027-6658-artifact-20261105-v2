@@ -1,0 +1,60 @@
+{
+  "id": "41b627c3f86abfd4630c4da2",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_0a20aa5041ec",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_0a20aa5041ec.json",
+  "historical_output_sha256": "3bc563714e78332b6d75b2cc44fe1a87cda3b9ce943094424fb8775a38596e79",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 956,
+  "messages_sha256": "69191453759126fd7970ae58cf35c4b06587e3f7a9788d4deb5bb8f0b14b562a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a critical issue with deep copying form fields, but lacks comprehensive tests and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify that the deep copy of error messages works as intended.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update any documentation to reflect the change in the deep copy behavior of form fields.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 144,
+      "returned_model_request_id": "422",
+      "completed_at_utc": "2026-11-06T04:02:33.748487+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a critical issue with deep copying form fields, but lacks comprehensive tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify that the deep copy of error messages works as intended."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update any documentation to reflect the change in the deep copy behavior of form fields."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a critical issue with deep copying form fields, but lacks comprehensive tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify that the deep copy of error messages works as intended."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update any documentation to reflect the change in the deep copy behavior of form fields."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

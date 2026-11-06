@@ -1,0 +1,50 @@
+{
+  "id": "a0ab08bdc4edf1abf1f03223",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_14a83cfaa901",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_14a83cfaa901.json",
+  "historical_output_sha256": "1a4ec3ef72d78cc127de8638b840c4a78c6f5dd6d9694d9ab609a0c2441fe94a",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1289,
+  "messages_sha256": "93653e9c86721d6ecfffc9c916c03148a1b8611925e11bdb24d312955a8e674b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue of thresholds exceeding 1 in `roc_curve` by adding a conditional check to clip thresholds. The change is minimal and maintains readability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The approach of conditionally clipping thresholds may not be the most robust solution. It assumes that `y_score` is a probability estimate, which may not always be the case. A more general solution should be considered.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 134,
+      "returned_model_request_id": "1222",
+      "completed_at_utc": "2026-11-06T04:07:22.384768+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue of thresholds exceeding 1 in `roc_curve` by adding a conditional check to clip thresholds. The change is minimal and maintains readability.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of conditionally clipping thresholds may not be the most robust solution. It assumes that `y_score` is a probability estimate, which may not always be the case. A more general solution should be considered."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue of thresholds exceeding 1 in `roc_curve` by adding a conditional check to clip thresholds. The change is minimal and maintains readability.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of conditionally clipping thresholds may not be the most robust solution. It assumes that `y_score` is a probability estimate, which may not always be the case. A more general solution should be considered."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

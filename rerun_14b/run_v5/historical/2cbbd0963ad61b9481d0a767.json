@@ -1,0 +1,50 @@
+{
+  "id": "2cbbd0963ad61b9481d0a767",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_f8311cac015d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_f8311cac015d.json",
+  "historical_output_sha256": "5bd8147351f8a2477b626c3bd864a342d3b9bb599e4604c07dde180b4c33709b",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1593,
+  "messages_sha256": "b669cfcd2c002d14a5556b5d8bedc777e369263c88d8e5e0cb21317601c17bfa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue by copying the data limits from the original axis to the twin axis. This should prevent the data limits from being set to ±inf when a stackplot is added to the twin axis.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the data limits of the twin axis. This could potentially lead to unexpected behavior if the twin axis is intended to have its own data limits.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "1239",
+      "completed_at_utc": "2026-11-06T04:07:22.387842+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue by copying the data limits from the original axis to the twin axis. This should prevent the data limits from being set to ±inf when a stackplot is added to the twin axis.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a non-minimal change by modifying the data limits of the twin axis. This could potentially lead to unexpected behavior if the twin axis is intended to have its own data limits."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue by copying the data limits from the original axis to the twin axis. This should prevent the data limits from being set to ±inf when a stackplot is added to the twin axis.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a non-minimal change by modifying the data limits of the twin axis. This could potentially lead to unexpected behavior if the twin axis is intended to have its own data limits."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "51eafc5fc7e017b573d7a9e4",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_9cf19928ba86",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_9cf19928ba86.json",
+  "historical_output_sha256": "121f4deeef44484f930c45186c2a07e645a690fe3bd361c351b3fde56f0a33a4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2249,
+  "messages_sha256": "df02ec1075d0817dc41239d3587786c6d4921fce1aee9c94a4e938ae5d13376d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by suppressing the return type for classes when `autodoc_typehints = 'description'`. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new parameter `suppress_rtype` to `modify_field_list`, which slightly increases the complexity of the function.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "1641",
+      "completed_at_utc": "2026-11-06T04:10:03.679275+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by suppressing the return type for classes when `autodoc_typehints = 'description'`. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a new parameter `suppress_rtype` to `modify_field_list`, which slightly increases the complexity of the function."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by suppressing the return type for classes when `autodoc_typehints = 'description'`. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The change introduces a new parameter `suppress_rtype` to `modify_field_list`, which slightly increases the complexity of the function."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "47588fed200b6d83cd36b9ab",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_020586842a73",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_020586842a73.json",
+  "historical_output_sha256": "203f4e4d7b7ee1710c6105316bb4ae32b711a7666b740f9c48d69552470ee85a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 9185,
+  "messages_sha256": "cc6475a58e1c37ece8fad1c3cb6b5e7e38d3bd227b9455d04fc7c0e6d80c4854",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of `:meta public:` not affecting variables by modifying the autodoc and parser modules. The changes are minimal and focused on the intended functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces a new test file `test_meta_public.py` which is not shown in the diff. However, the absence of test files in the diff is expected and not a problem.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 131,
+      "returned_model_request_id": "2022",
+      "completed_at_utc": "2026-11-06T04:13:37.405318+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of `:meta public:` not affecting variables by modifying the autodoc and parser modules. The changes are minimal and focused on the intended functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new test file `test_meta_public.py` which is not shown in the diff. However, the absence of test files in the diff is expected and not a problem."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of `:meta public:` not affecting variables by modifying the autodoc and parser modules. The changes are minimal and focused on the intended functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new test file `test_meta_public.py` which is not shown in the diff. However, the absence of test files in the diff is expected and not a problem."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

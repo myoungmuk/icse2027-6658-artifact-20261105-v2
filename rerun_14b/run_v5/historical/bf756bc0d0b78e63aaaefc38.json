@@ -1,0 +1,50 @@
+{
+  "id": "bf756bc0d0b78e63aaaefc38",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_1392fcd2213d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_1392fcd2213d.json",
+  "historical_output_sha256": "23077f6c69799c4b69954e0462c2bb222fdf47c09c92aa43e8e025568716f7f2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1234,
+  "messages_sha256": "0f0c5d8a31007e327825dea989a34cf1c5a68855c9df559aac2d5a2638e16ffe",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of `lambdify` not working with certain `MatrixSymbol` names containing curly braces, even with `dummify=True`. The change is minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix. It is important to ensure that the change does not regress in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "14",
+      "completed_at_utc": "2026-11-06T04:00:16.937112+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of `lambdify` not working with certain `MatrixSymbol` names containing curly braces, even with `dummify=True`. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix. It is important to ensure that the change does not regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of `lambdify` not working with certain `MatrixSymbol` names containing curly braces, even with `dummify=True`. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix. It is important to ensure that the change does not regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "4918b6d38a2beb21daee84af",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_74e9426533b7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_74e9426533b7.json",
+  "historical_output_sha256": "b4159c8081ff406616e76cbfe23c818e849b15915c3254843efab08e58d25ac9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2665,
+  "messages_sha256": "332bf1e3d15690aa0b1f3d08786458bfebe478ea5f7d605549a3ccb17f57a8a8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the issue with attribute copying during merge but introduces a deep copy, which may have performance implications.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The use of `copy.deepcopy` may introduce performance regressions, especially for large datasets with complex attributes.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 102,
+      "returned_model_request_id": "2116",
+      "completed_at_utc": "2026-11-06T04:14:31.718187+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the issue with attribute copying during merge but introduces a deep copy, which may have performance implications.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The use of `copy.deepcopy` may introduce performance regressions, especially for large datasets with complex attributes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes the issue with attribute copying during merge but introduces a deep copy, which may have performance implications.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The use of `copy.deepcopy` may introduce performance regressions, especially for large datasets with complex attributes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

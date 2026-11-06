@@ -1,0 +1,50 @@
+{
+  "id": "15fc634ca07364fa3991e4db",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_453d241fd643",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_453d241fd643.json",
+  "historical_output_sha256": "d43e6dd2fe830dcb591e7ca3330d2edc443b7cde95ee54ce1521e4df85e2f36b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2410,
+  "messages_sha256": "a17eb40b18914de6ff6959417a4cf080d1ca05618eeb0bc505d48704f26d5589",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of an empty WHERE block in queries involving negated Exists subqueries with empty querysets. The changes are minimal and focused on the relevant parts of the code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code introduces new files (reproduce_exists.py and test_exists.py) that are not shown in the diff, which is expected. However, the style and structure of these new files could be improved to better match the existing codebase conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 144,
+      "returned_model_request_id": "2025",
+      "completed_at_utc": "2026-11-06T04:13:37.405861+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of an empty WHERE block in queries involving negated Exists subqueries with empty querysets. The changes are minimal and focused on the relevant parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces new files (reproduce_exists.py and test_exists.py) that are not shown in the diff, which is expected. However, the style and structure of these new files could be improved to better match the existing codebase conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of an empty WHERE block in queries involving negated Exists subqueries with empty querysets. The changes are minimal and focused on the relevant parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces new files (reproduce_exists.py and test_exists.py) that are not shown in the diff, which is expected. However, the style and structure of these new files could be improved to better match the existing codebase conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

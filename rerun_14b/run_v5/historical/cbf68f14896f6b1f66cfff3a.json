@@ -1,0 +1,50 @@
+{
+  "id": "cbf68f14896f6b1f66cfff3a",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_eb349f476cb9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_eb349f476cb9.json",
+  "historical_output_sha256": "af112fe9e497b05b577e5f8e8f6eaf59e5980406d409744ff2c8a995765f64ec",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1061,
+  "messages_sha256": "79592bb65ca85b6fddd21c8b3065846f125fd33162b312e951701896fd2b2606",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. However, it may introduce a behavioral regression risk for applications that rely on the Referer header.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"This change may break existing applications that depend on the Referer header for verification or analytics. The risk is significant due to the fragility of relying on the Referer header.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 136,
+      "returned_model_request_id": "907",
+      "completed_at_utc": "2026-11-06T04:05:22.640530+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. However, it may introduce a behavioral regression risk for applications that rely on the Referer header.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "This change may break existing applications that depend on the Referer header for verification or analytics. The risk is significant due to the fragility of relying on the Referer header."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change sets a default for SECURE_REFERRER_POLICY to 'same-origin', which is a reasonable security enhancement. However, it may introduce a behavioral regression risk for applications that rely on the Referer header.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "This change may break existing applications that depend on the Referer header for verification or analytics. The risk is significant due to the fragility of relying on the Referer header."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

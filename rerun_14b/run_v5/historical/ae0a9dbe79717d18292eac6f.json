@@ -1,0 +1,50 @@
+{
+  "id": "ae0a9dbe79717d18292eac6f",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_62df3ff0c7e2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_62df3ff0c7e2.json",
+  "historical_output_sha256": "d6c725cf53964dd82656dd53e3aef8edef115a27eb3bb6dc570d069f0876f886",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 998,
+  "messages_sha256": "85e51f53c6a5cbb0266fd5b98a67ab78a295894fd4b29f8faadd5425b5a7bafe",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly resolves the issue by returning `zoo` for `0**-oo`, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new behavior for `0**-oo` which may break existing code that relies on the current behavior of returning `0`. This could lead to unexpected results in user code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "258",
+      "completed_at_utc": "2026-11-06T04:01:44.412044+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly resolves the issue by returning `zoo` for `0**-oo`, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a new behavior for `0**-oo` which may break existing code that relies on the current behavior of returning `0`. This could lead to unexpected results in user code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly resolves the issue by returning `zoo` for `0**-oo`, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a new behavior for `0**-oo` which may break existing code that relies on the current behavior of returning `0`. This could lead to unexpected results in user code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

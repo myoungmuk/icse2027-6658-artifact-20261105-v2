@@ -1,0 +1,29 @@
+{
+  "code": "408804242a0602facd0a",
+  "instance_id": "sympy__sympy-19182",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "408804242a0602facd0a_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 598,
+  "messages_sha256": "ec530bc5c80ce29bd6750f4588aa5ce81e935f5a87bb38ea3a5f912b67370772",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new script `run_test.py` that directly imports and runs tests from `sympy.integrals.tests.test_integrals`. This approach bypasses the existing test infrastructure and could lead to issues with test discovery and execution. Additionally, the patch does not address the root cause of the test failure on master, which is the primary concern raised in the issue.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 98,
+      "returned_model_request_id": "2755",
+      "completed_at_utc": "2026-11-06T04:18:15.144006+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new script `run_test.py` that directly imports and runs tests from `sympy.integrals.tests.test_integrals`. This approach bypasses the existing test infrastructure and could lead to issues with test discovery and execution. Additionally, the patch does not address the root cause of the test failure on master, which is the primary concern raised in the issue."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

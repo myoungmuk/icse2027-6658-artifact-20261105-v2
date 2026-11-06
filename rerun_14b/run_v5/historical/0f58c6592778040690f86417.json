@@ -1,0 +1,50 @@
+{
+  "id": "0f58c6592778040690f86417",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_f2185603cd54",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_f2185603cd54.json",
+  "historical_output_sha256": "8a1c6576346effc34df5a7eb84106abdd12f973647876ab6ab9fa60b6327f709",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1628,
+  "messages_sha256": "c9bc32d881ba1015327f5aa5510986b11335ff1f9023c98756d87cc0482cdf55",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the exponent is real before comparison, which is a reasonable approach.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a check for `rv.exp.is_real`, which is a minor style inconsistency with the rest of the code.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 103,
+      "returned_model_request_id": "1293",
+      "completed_at_utc": "2026-11-06T04:07:40.863646+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the exponent is real before comparison, which is a reasonable approach.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a check for `rv.exp.is_real`, which is a minor style inconsistency with the rest of the code."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the exponent is real before comparison, which is a reasonable approach.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a check for `rv.exp.is_real`, which is a minor style inconsistency with the rest of the code."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

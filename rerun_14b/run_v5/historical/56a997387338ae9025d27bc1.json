@@ -1,0 +1,60 @@
+{
+  "id": "56a997387338ae9025d27bc1",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_db788a31bd10",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_db788a31bd10.json",
+  "historical_output_sha256": "88b82f3c9f321f9e73e6ce8bbaa8417a6126ec34060dc5411af3cae24281f49e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2263,
+  "messages_sha256": "aef80e624a7ee2cf17d9b023bd9d2eea05b3e52a64106998c7b479fded700fab",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces unnecessary print statements and does not address the actual issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR adds print statements that are not necessary for fixing the bug and may clutter the output.\"\n    },\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The PR uses a flawed approach by comparing `np.abs(window).sum()**2` and `window.sum()**2`, which is not relevant to the correctness of the spectral estimation.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 154,
+      "returned_model_request_id": "1855",
+      "completed_at_utc": "2026-11-06T04:11:40.860654+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces unnecessary print statements and does not address the actual issue.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR adds print statements that are not necessary for fixing the bug and may clutter the output."
+      },
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The PR uses a flawed approach by comparing `np.abs(window).sum()**2` and `window.sum()**2`, which is not relevant to the correctness of the spectral estimation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces unnecessary print statements and does not address the actual issue.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR adds print statements that are not necessary for fixing the bug and may clutter the output."
+      },
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The PR uses a flawed approach by comparing `np.abs(window).sum()**2` and `window.sum()**2`, which is not relevant to the correctness of the spectral estimation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

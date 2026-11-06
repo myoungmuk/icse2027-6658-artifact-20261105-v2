@@ -1,0 +1,50 @@
+{
+  "id": "114ea5e71664ac7990984c38",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_1137af70ca0f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_1137af70ca0f.json",
+  "historical_output_sha256": "b21abcbe67f5ebf48a35afb5746bf26fe94c9ae599fe281b4856650a6550b25c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 908,
+  "messages_sha256": "2cde8c0ca25566d08222e4dfb4978aef67d97a79db5deea01e786459785a74d9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch fixes a specific bug but may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the variable name from 'cotm' to 'cothm', which may inadvertently affect other parts of the code that rely on 'cotm'. This could lead to unexpected behavior or errors in other contexts.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "118",
+      "completed_at_utc": "2026-11-06T04:00:52.708852+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch fixes a specific bug but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the variable name from 'cotm' to 'cothm', which may inadvertently affect other parts of the code that rely on 'cotm'. This could lead to unexpected behavior or errors in other contexts."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch fixes a specific bug but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the variable name from 'cotm' to 'cothm', which may inadvertently affect other parts of the code that rely on 'cotm'. This could lead to unexpected behavior or errors in other contexts."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

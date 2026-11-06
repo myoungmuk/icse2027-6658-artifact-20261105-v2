@@ -1,0 +1,50 @@
+{
+  "id": "0b1f3b77eab9bba80888f3d1",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_85e0b1080d1e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_85e0b1080d1e.json",
+  "historical_output_sha256": "8e356e55cb3bfe87761adf1829b099ca7358f11dca534b6e8048bb422350877f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 931,
+  "messages_sha256": "ee49a4943ec437738848587d882989dd9c49e34f7bc69fa2592ebdfe7bc20ce2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of query strings being dropped in redirects but introduces a potential performance regression.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The use of `request.get_full_path(force_append_slash=True)` may introduce performance overhead, especially if called frequently.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 102,
+      "returned_model_request_id": "566",
+      "completed_at_utc": "2026-11-06T04:03:24.724719+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of query strings being dropped in redirects but introduces a potential performance regression.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The use of `request.get_full_path(force_append_slash=True)` may introduce performance overhead, especially if called frequently."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of query strings being dropped in redirects but introduces a potential performance regression.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The use of `request.get_full_path(force_append_slash=True)` may introduce performance overhead, especially if called frequently."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

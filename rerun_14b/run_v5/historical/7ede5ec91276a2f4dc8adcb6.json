@@ -1,0 +1,50 @@
+{
+  "id": "7ede5ec91276a2f4dc8adcb6",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_568e54df7f26",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_568e54df7f26.json",
+  "historical_output_sha256": "52a2a8c3b997331d227527de8bf3b74fc9ba915c893b317b9db810d227f28329",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1888,
+  "messages_sha256": "b5643362ec256080967b9e3db9319b91a9cb4ea4fd71a70cf44b300d472f2878",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly resolves the issue by using Python's documented way to determine if -m was used, but it introduces a non-minimal change by modifying unrelated parts of the code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR modifies unrelated parts of the code, such as the handling of sys.argv[0] and the removal of TODO comments, which are not directly related to the issue being fixed.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 131,
+      "returned_model_request_id": "1873",
+      "completed_at_utc": "2026-11-06T04:12:04.304564+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly resolves the issue by using Python's documented way to determine if -m was used, but it introduces a non-minimal change by modifying unrelated parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR modifies unrelated parts of the code, such as the handling of sys.argv[0] and the removal of TODO comments, which are not directly related to the issue being fixed."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR correctly resolves the issue by using Python's documented way to determine if -m was used, but it introduces a non-minimal change by modifying unrelated parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR modifies unrelated parts of the code, such as the handling of sys.argv[0] and the removal of TODO comments, which are not directly related to the issue being fixed."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "e0332983a9538e38280d182d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_8c44aedcf8d7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_8c44aedcf8d7.json",
+  "historical_output_sha256": "4d9d8b96c986a5cd9ce8520b53f2ed7ca5091b728f977a77d8b612a0d0695e40",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1042,
+  "messages_sha256": "fe11f885f15f0d7240271e00746297b7953726ff7fd58deb2a23157cb54e5d8d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of using aggregates over window functions but lacks sufficient tests and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the fix for the issue of using aggregates over window functions.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update any documentation to reflect the changes made to the code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 139,
+      "returned_model_request_id": "572",
+      "completed_at_utc": "2026-11-06T04:03:24.725905+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of using aggregates over window functions but lacks sufficient tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the fix for the issue of using aggregates over window functions."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update any documentation to reflect the changes made to the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of using aggregates over window functions but lacks sufficient tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the fix for the issue of using aggregates over window functions."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update any documentation to reflect the changes made to the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

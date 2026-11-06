@@ -1,0 +1,50 @@
+{
+  "id": "30504b8d532dd72b2d234924",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_8df3090bf401",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_8df3090bf401.json",
+  "historical_output_sha256": "376cb5cc069e3c19864f153cda14cf887f647e80a39c62d745ac08b03ae97618",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1490,
+  "messages_sha256": "c8d86a407eb9bf5bd8e3facde70c3c0c905ab47ab45bc47ed33adaa89a12620a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR sets the disabled property on ReadOnlyPasswordHashField, which removes the need for the clean_password method. The change is minimal and well-documented.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new default argument 'disabled' to the ReadOnlyPasswordHashField constructor, which may not align with the project's style guidelines.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "2036",
+      "completed_at_utc": "2026-11-06T04:13:37.407925+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR sets the disabled property on ReadOnlyPasswordHashField, which removes the need for the clean_password method. The change is minimal and well-documented.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new default argument 'disabled' to the ReadOnlyPasswordHashField constructor, which may not align with the project's style guidelines."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR sets the disabled property on ReadOnlyPasswordHashField, which removes the need for the clean_password method. The change is minimal and well-documented.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new default argument 'disabled' to the ReadOnlyPasswordHashField constructor, which may not align with the project's style guidelines."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

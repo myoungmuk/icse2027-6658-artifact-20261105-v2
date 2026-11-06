@@ -1,0 +1,50 @@
+{
+  "id": "72eb24294a6fa5cac66950ab",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_635244629635",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_635244629635.json",
+  "historical_output_sha256": "0054bb0bf287eac702bdb7f5760b15a40aaf6a3df8b2b4e964ae5d41b6c80355",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1704,
+  "messages_sha256": "3bd8fc55ea0c7939e51cf33c7ae2164ad8893f41f4c9c91a6b07feb0368bc094",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue of conflicting `copy_X` parameters in `LassoLarsIC` by allowing `fit` to override the class parameter only if explicitly specified. The change is minimal and maintains backward compatibility.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a new default value `None` for `copy_X` in `fit`, which could potentially break existing code that relies on the default behavior of `True`. While the PR aims to maintain backward compatibility, it is a significant change that should be carefully considered.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 157,
+      "returned_model_request_id": "1844",
+      "completed_at_utc": "2026-11-06T04:11:40.858511+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue of conflicting `copy_X` parameters in `LassoLarsIC` by allowing `fit` to override the class parameter only if explicitly specified. The change is minimal and maintains backward compatibility.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change introduces a new default value `None` for `copy_X` in `fit`, which could potentially break existing code that relies on the default behavior of `True`. While the PR aims to maintain backward compatibility, it is a significant change that should be carefully considered."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue of conflicting `copy_X` parameters in `LassoLarsIC` by allowing `fit` to override the class parameter only if explicitly specified. The change is minimal and maintains backward compatibility.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change introduces a new default value `None` for `copy_X` in `fit`, which could potentially break existing code that relies on the default behavior of `True`. While the PR aims to maintain backward compatibility, it is a significant change that should be carefully considered."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

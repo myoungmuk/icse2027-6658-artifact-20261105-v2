@@ -1,0 +1,60 @@
+{
+  "id": "a87067752d909527e67fc39b",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_8d7ecae10daa",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_8d7ecae10daa.json",
+  "historical_output_sha256": "4c3458602a7d08228794a2c4d3bbdb2893665e790159556b4e1ea3d1e12e779d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1470,
+  "messages_sha256": "8e2d3d4ab0a510bb844e052556f9e5566d2fc099512e8a2a166b51649fbaa285",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change limits the monotonicity check to only the dimensions that were combined, which might break existing behavior where the check was applied to all dimensions.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix and ensure it does not regress in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "678",
+      "completed_at_utc": "2026-11-06T04:04:16.295280+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change limits the monotonicity check to only the dimensions that were combined, which might break existing behavior where the check was applied to all dimensions."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix and ensure it does not regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change limits the monotonicity check to only the dimensions that were combined, which might break existing behavior where the check was applied to all dimensions."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix and ensure it does not regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

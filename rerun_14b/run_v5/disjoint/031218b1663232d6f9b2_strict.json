@@ -1,0 +1,29 @@
+{
+  "code": "031218b1663232d6f9b2",
+  "instance_id": "django__django-16322",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "031218b1663232d6f9b2_strict",
+  "arm": "strict",
+  "input_tokens": 3186,
+  "messages_sha256": "383a68ee617a8b5bd3fff125e38d4799beeb556fbd87fd6494164f18dfdf1ff6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch removes essential checks and logic for handling aggregate expressions, which could lead to incorrect query generation and potential SQL errors. The patch does not address the root cause of the issue and may introduce regressions or other bugs.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 65,
+      "returned_model_request_id": "2720",
+      "completed_at_utc": "2026-11-06T04:18:08.361943+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch removes essential checks and logic for handling aggregate expressions, which could lead to incorrect query generation and potential SQL errors. The patch does not address the root cause of the issue and may introduce regressions or other bugs."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

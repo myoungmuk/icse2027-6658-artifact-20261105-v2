@@ -1,0 +1,50 @@
+{
+  "id": "4fb0825ee7fb8f6abf737a78",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_996a4a75db2e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_996a4a75db2e.json",
+  "historical_output_sha256": "be1d3fd11ac4074e2f7f4c4f123e50cf148ba13ac311dc8d9d6e05bce9c82a94",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2062,
+  "messages_sha256": "b37e6af8f47fb7e1066ea0b9f6f7cf226467325dbd65cc13e470bda73ab50327",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by ensuring the calculated number of CPUs is never zero, which prevents a crash in Kubernetes environments.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding comments explaining the purpose of the `max(1, ...)` calls.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "1778",
+      "completed_at_utc": "2026-11-06T04:11:18.900150+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by ensuring the calculated number of CPUs is never zero, which prevents a crash in Kubernetes environments.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments explaining the purpose of the `max(1, ...)` calls."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by ensuring the calculated number of CPUs is never zero, which prevents a crash in Kubernetes environments.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments explaining the purpose of the `max(1, ...)` calls."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

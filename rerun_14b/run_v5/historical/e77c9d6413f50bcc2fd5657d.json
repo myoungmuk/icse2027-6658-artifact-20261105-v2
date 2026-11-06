@@ -1,0 +1,50 @@
+{
+  "id": "e77c9d6413f50bcc2fd5657d",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_aa5484719eb3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_aa5484719eb3.json",
+  "historical_output_sha256": "89a98ded3682a31e0a9a859ce93146e3153fb0675f15998b12d277f3df3805cf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1379,
+  "messages_sha256": "daf17f5d3ac45151edd99390de75c6ba8724aa64e9b055d28a39c3739e6420fa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the issue of StrPrinter settings not being respected by certain subexpressions. The changes are minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor style inconsistency by using `self._print` in some places and not in others, which could be improved for consistency.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "1065",
+      "completed_at_utc": "2026-11-06T04:06:29.901577+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the issue of StrPrinter settings not being respected by certain subexpressions. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a minor style inconsistency by using `self._print` in some places and not in others, which could be improved for consistency."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR fixes the issue of StrPrinter settings not being respected by certain subexpressions. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a minor style inconsistency by using `self._print` in some places and not in others, which could be improved for consistency."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "45dbef785fa4a6c8a5de",
+  "instance_id": "matplotlib__matplotlib-22734",
+  "split": "development",
+  "kind": "developer",
+  "id": "45dbef785fa4a6c8a5de_strict",
+  "arm": "strict",
+  "input_tokens": 937,
+  "messages_sha256": "3e0a5225b9d036c6822774fa1c1a332e4580ed019bef0cd10e189f6083bfefbf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a check for 'norm' type before it is used, but it does not address the core issue of 'clim' being ignored. The patch also modifies the order of operations, which could lead to unexpected behavior. Additionally, the patch does not include tests to verify the fix.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 81,
+      "returned_model_request_id": "2246",
+      "completed_at_utc": "2026-11-06T04:15:26.677749+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a check for 'norm' type before it is used, but it does not address the core issue of 'clim' being ignored. The patch also modifies the order of operations, which could lead to unexpected behavior. Additionally, the patch does not include tests to verify the fix."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "cc3f1236238d0ef462a6f56a",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_76db1d77b858",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_76db1d77b858.json",
+  "historical_output_sha256": "54c03260de76b311d3bb7adb59caf3f4e7494cb8f16016b14a5b25a08a28966a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1318,
+  "messages_sha256": "4e081b3dd201910985b6739947f1e66d4bbe02884c328843f644e7e71f5843ec",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly handles the specific case of an empty label in the URL, but it may not cover all edge cases related to invalid labels.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR only addresses the case of an empty label, but there may be other invalid label scenarios that are not handled.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "1610",
+      "completed_at_utc": "2026-11-06T04:09:46.493745+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly handles the specific case of an empty label in the URL, but it may not cover all edge cases related to invalid labels.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR only addresses the case of an empty label, but there may be other invalid label scenarios that are not handled."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR correctly handles the specific case of an empty label in the URL, but it may not cover all edge cases related to invalid labels.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR only addresses the case of an empty label, but there may be other invalid label scenarios that are not handled."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "985325116053f252275b9853",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_5c706ed344e5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_5c706ed344e5.json",
+  "historical_output_sha256": "1c3b4a04b76e554ee689b45c0fc0531e5c296dfc7746f5d91fcb323c36318c76",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1908,
+  "messages_sha256": "255fd734ab9fd7fd2f840be96f2e76757b45b511b4dd91b4197254f3a350067d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR removes the subquery from the DELETE statement, which resolves the performance regression and compatibility issue with LOCK TABLES. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not address the case where multiple tables are involved in the delete operation. This could lead to incomplete resolution of the issue.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code style has changed slightly, which may not align with the project's conventions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 158,
+      "returned_model_request_id": "1330",
+      "completed_at_utc": "2026-11-06T04:07:59.674798+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR removes the subquery from the DELETE statement, which resolves the performance regression and compatibility issue with LOCK TABLES. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not address the case where multiple tables are involved in the delete operation. This could lead to incomplete resolution of the issue."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style has changed slightly, which may not align with the project's conventions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR removes the subquery from the DELETE statement, which resolves the performance regression and compatibility issue with LOCK TABLES. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not address the case where multiple tables are involved in the delete operation. This could lead to incomplete resolution of the issue."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style has changed slightly, which may not align with the project's conventions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "1dd4f704bbe96ff5f0d8",
+  "instance_id": "scikit-learn__scikit-learn-25697",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "1dd4f704bbe96ff5f0d8_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1165,
+  "messages_sha256": "bd2f80f028bd4cf1e7b088698cd9af2d22e3029efef9c21f9458084f8a491006",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new parameter `max_iter` and deprecates `n_iter`, but it does not update the actual implementation to use `max_iter`. This would lead to a functional regression where the model does not behave as expected. Additionally, the patch is incomplete as it does not update the documentation or tests to reflect the change.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 89,
+      "returned_model_request_id": "2667",
+      "completed_at_utc": "2026-11-06T04:17:49.116290+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new parameter `max_iter` and deprecates `n_iter`, but it does not update the actual implementation to use `max_iter`. This would lead to a functional regression where the model does not behave as expected. Additionally, the patch is incomplete as it does not update the documentation or tests to reflect the change."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "f8665e20d76aed9c6e51",
+  "instance_id": "django__django-14031",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "f8665e20d76aed9c6e51_strict",
+  "arm": "strict",
+  "input_tokens": 952,
+  "messages_sha256": "4976b36dd076067dea89c5e9e267a5919fbe4f0e1df9ca51d8ec4b548dada77f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a fragile approach by hardcoding 'id' as the to_field_name for models with a parent_link. This may not be robust enough for all multi-table inheritance scenarios. Additionally, the patch lacks tests to verify the fix and ensure no regressions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 74,
+      "returned_model_request_id": "2422",
+      "completed_at_utc": "2026-11-06T04:16:23.784103+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a fragile approach by hardcoding 'id' as the to_field_name for models with a parent_link. This may not be robust enough for all multi-table inheritance scenarios. Additionally, the patch lacks tests to verify the fix and ensure no regressions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

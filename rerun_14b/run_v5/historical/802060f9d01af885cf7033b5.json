@@ -1,0 +1,70 @@
+{
+  "id": "802060f9d01af885cf7033b5",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_cc7968b334bf",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_cc7968b334bf.json",
+  "historical_output_sha256": "e4815b8d9871d0315ab8df03882fe26ecb5462e82f3b33654c38524b9082e9ea",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 888,
+  "messages_sha256": "7111476e51e2d7f7566bafa6600cf18d2ad8eaebc98a93acd9678ae25d48e6a9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a complex filter using Exists() to avoid duplicates, but it may not fully address all edge cases and could introduce performance regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not fully resolve the issue of duplicate options in formfield. It assumes that using Exists() will always avoid duplicates, which may not be true for all querysets and joins.\"\n    },\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a complex filter using Exists(), which could potentially lead to performance regressions, especially for large datasets or complex queries.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch does not include additional tests to verify that the change works as expected in different scenarios, such as with different types of joins and querysets.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 232,
+      "returned_model_request_id": "459",
+      "completed_at_utc": "2026-11-06T04:02:50.463777+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a complex filter using Exists() to avoid duplicates, but it may not fully address all edge cases and could introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not fully resolve the issue of duplicate options in formfield. It assumes that using Exists() will always avoid duplicates, which may not be true for all querysets and joins."
+      },
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch introduces a complex filter using Exists(), which could potentially lead to performance regressions, especially for large datasets or complex queries."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "minor",
+        "description": "The patch does not include additional tests to verify that the change works as expected in different scenarios, such as with different types of joins and querysets."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch introduces a complex filter using Exists() to avoid duplicates, but it may not fully address all edge cases and could introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not fully resolve the issue of duplicate options in formfield. It assumes that using Exists() will always avoid duplicates, which may not be true for all querysets and joins."
+      },
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch introduces a complex filter using Exists(), which could potentially lead to performance regressions, especially for large datasets or complex queries."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "minor",
+        "description": "The patch does not include additional tests to verify that the change works as expected in different scenarios, such as with different types of joins and querysets."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

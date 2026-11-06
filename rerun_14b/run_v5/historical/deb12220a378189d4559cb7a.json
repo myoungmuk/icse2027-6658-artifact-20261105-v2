@@ -1,0 +1,60 @@
+{
+  "id": "deb12220a378189d4559cb7a",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a18596891d83",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a18596891d83.json",
+  "historical_output_sha256": "d174c735e525ac24c51687e253d185c9284c71f1476942da0aaa0f6c1c056b81",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1123,
+  "messages_sha256": "fe612deafab3052b44391e0a6151babeec1e66ea7b48a4d7ef60f53ca35abe25",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change is minimal and appears to fix the reported issue, but it lacks sufficient tests and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix for the issue.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not update the documentation to reflect the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 132,
+      "returned_model_request_id": "540",
+      "completed_at_utc": "2026-11-06T04:03:24.719109+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change is minimal and appears to fix the reported issue, but it lacks sufficient tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the issue."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not update the documentation to reflect the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change is minimal and appears to fix the reported issue, but it lacks sufficient tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the issue."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not update the documentation to reflect the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

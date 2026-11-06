@@ -1,0 +1,29 @@
+{
+  "code": "628c6021872671e3794c",
+  "instance_id": "django__django-13667",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "628c6021872671e3794c_strict",
+  "arm": "strict",
+  "input_tokens": 1335,
+  "messages_sha256": "95c4904724effb64b3c5b60c3d15b23af3f214f9089fa3f3bf8d7f3ceb519b81",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes to the `exists` method in `QuerySet` that are not fully compatible with all database backends. Specifically, the use of `connections[using].features.supports_slicing_ordering_in_compound` is not defined in the provided diff, which could lead to runtime errors. Additionally, the patch does not include tests to verify the correctness of the new optimization, which is a critical concern for production code.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "2392",
+      "completed_at_utc": "2026-11-06T04:16:06.973334+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes to the `exists` method in `QuerySet` that are not fully compatible with all database backends. Specifically, the use of `connections[using].features.supports_slicing_ordering_in_compound` is not defined in the provided diff, which could lead to runtime errors. Additionally, the patch does not include tests to verify the correctness of the new optimization, which is a critical concern for production code."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

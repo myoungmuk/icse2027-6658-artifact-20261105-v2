@@ -1,0 +1,50 @@
+{
+  "id": "340034059c3d4d5a0cc0116f",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_601771bed85c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_601771bed85c.json",
+  "historical_output_sha256": "19885c897e904fdcd4513dc45c8e00d0ff6d468354b1dca9852755b30a5bc604",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1195,
+  "messages_sha256": "3bf0ba692e55f51e9d81b443357ab8f9ab78393ba03afed51a61dc9d1c695fdd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change aligns makemigrations --check behavior with other commands, but the order of exit checks may affect readability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The order of exit checks is changed, which might affect readability for some maintainers.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 99,
+      "returned_model_request_id": "1118",
+      "completed_at_utc": "2026-11-06T04:06:46.629877+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change aligns makemigrations --check behavior with other commands, but the order of exit checks may affect readability.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The order of exit checks is changed, which might affect readability for some maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change aligns makemigrations --check behavior with other commands, but the order of exit checks may affect readability.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The order of exit checks is changed, which might affect readability for some maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

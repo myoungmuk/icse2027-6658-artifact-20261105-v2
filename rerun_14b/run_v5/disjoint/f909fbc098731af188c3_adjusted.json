@@ -1,0 +1,29 @@
+{
+  "code": "f909fbc098731af188c3",
+  "instance_id": "sympy__sympy-17010",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "f909fbc098731af188c3_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1601,
+  "messages_sha256": "624fe468207bb0a51a5162a482a497d9cf5afc47cbee129a729e681fd5e8fa1e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a potential issue in the `laguerre` class where it raises a `ValueError` if `n` is negative. This change deviates from the original behavior and could lead to unexpected errors for valid inputs. Additionally, the patch does not address the core issue of infinite recursion in `could_extract_minus_sign` usage.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 90,
+      "returned_model_request_id": "2685",
+      "completed_at_utc": "2026-11-06T04:17:49.119388+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a potential issue in the `laguerre` class where it raises a `ValueError` if `n` is negative. This change deviates from the original behavior and could lead to unexpected errors for valid inputs. Additionally, the patch does not address the core issue of infinite recursion in `could_extract_minus_sign` usage."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

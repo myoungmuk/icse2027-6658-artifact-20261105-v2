@@ -1,0 +1,50 @@
+{
+  "id": "28d5dc80b89e21513caea9b8",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_db42fcab0413",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_db42fcab0413.json",
+  "historical_output_sha256": "1e6194c21c6014c1a24c399cc022a099229532f20ecc75f849e0829c3bc1a4cb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1089,
+  "messages_sha256": "9b365cac53376bee02ea05e16f26e18a3955a8a3c627280aed70f05757c649b1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of model options not being cleared when squashing migrations, but it introduces a non-minimal change by modifying the reduce method.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the reduce method, which may have unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1038",
+      "completed_at_utc": "2026-11-06T04:06:12.548734+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of model options not being cleared when squashing migrations, but it introduces a non-minimal change by modifying the reduce method.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the reduce method, which may have unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of model options not being cleared when squashing migrations, but it introduces a non-minimal change by modifying the reduce method.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the reduce method, which may have unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

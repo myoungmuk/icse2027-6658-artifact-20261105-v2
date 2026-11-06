@@ -1,0 +1,29 @@
+{
+  "code": "43ee2bbda4b9d62dbfdd",
+  "instance_id": "mwaskom__seaborn-3216",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "43ee2bbda4b9d62dbfdd_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1066,
+  "messages_sha256": "2d02f33c973af4be06039d75beafb126e8b5cbaf3badbcaf28ab720ee4056627",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces unrelated changes to layout engine handling in seaborn/_compat.py and seaborn/_core/plot.py, which are not addressing the issue of figure title removal when plotting on subfigures. The proposed change to _core/subplots.py is not included, and the patch does not provide evidence of resolving the original issue.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 85,
+      "returned_model_request_id": "2561",
+      "completed_at_utc": "2026-11-06T04:17:15.372822+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces unrelated changes to layout engine handling in seaborn/_compat.py and seaborn/_core/plot.py, which are not addressing the issue of figure title removal when plotting on subfigures. The proposed change to _core/subplots.py is not included, and the patch does not provide evidence of resolving the original issue."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "5d556f5d0c912c6e9bdff339",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_ffc0d640e117",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_ffc0d640e117.json",
+  "historical_output_sha256": "6802664849b23587b47ce7a47799c4bf93513494e2415812814490f09765a57b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2287,
+  "messages_sha256": "b6241ce9032def2a133da06e9752c46aafaacedca43d5d5634d62d81be5b714e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch adds a check to skip filenames containing null bytes, which should mitigate the intermittent 'ValueError: embedded null byte' issue. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not address the root cause of the null byte issue, only a symptom. It may not fully resolve the problem if null bytes can appear in other contexts.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new condition that is not consistent with the existing code style, which uses `if not filename:` for checks.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 177,
+      "returned_model_request_id": "274",
+      "completed_at_utc": "2026-11-06T04:01:44.415052+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch adds a check to skip filenames containing null bytes, which should mitigate the intermittent 'ValueError: embedded null byte' issue. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not address the root cause of the null byte issue, only a symptom. It may not fully resolve the problem if null bytes can appear in other contexts."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new condition that is not consistent with the existing code style, which uses `if not filename:` for checks."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch adds a check to skip filenames containing null bytes, which should mitigate the intermittent 'ValueError: embedded null byte' issue. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not address the root cause of the null byte issue, only a symptom. It may not fully resolve the problem if null bytes can appear in other contexts."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new condition that is not consistent with the existing code style, which uses `if not filename:` for checks."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

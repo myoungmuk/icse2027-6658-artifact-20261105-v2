@@ -1,0 +1,60 @@
+{
+  "id": "7c90bfd9b0556a07dc787e7e",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_06105345da1e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_06105345da1e.json",
+  "historical_output_sha256": "519a2f5706a679aac1a39a4f2a7acfe6174cf0ebd605546d6569cab5c858e176",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1110,
+  "messages_sha256": "9c6568d6ac422f94cd9f7ad49e3df0e1d89aa0a8816f2d05e6b735c44454b5dc",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the behavior of how foreign key fields are handled, which could potentially break existing code that relies on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include additional tests to verify that the change does not introduce new issues or regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "35",
+      "completed_at_utc": "2026-11-06T04:00:16.941118+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the behavior of how foreign key fields are handled, which could potentially break existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include additional tests to verify that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the behavior of how foreign key fields are handled, which could potentially break existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include additional tests to verify that the change does not introduce new issues or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

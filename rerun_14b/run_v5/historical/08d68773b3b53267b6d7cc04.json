@@ -1,0 +1,50 @@
+{
+  "id": "08d68773b3b53267b6d7cc04",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_dab2aebd6df7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_dab2aebd6df7.json",
+  "historical_output_sha256": "5a83a01d96bb6b44affcdc05d4226c4f3f87798f495c7f5bc6a0480299d8d6de",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2306,
+  "messages_sha256": "cc076a89cd34008f597af670e11072ee49706acbf0af0c6763a306565cd30ea7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue with `xr.where` and scalar values correctly, but the approach to handling `keep_attrs` could be improved for clarity and maintainability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The lambda function used to handle `keep_attrs` is not very clear and could be replaced with a more straightforward conditional check.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "1836",
+      "completed_at_utc": "2026-11-06T04:11:40.857033+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue with `xr.where` and scalar values correctly, but the approach to handling `keep_attrs` could be improved for clarity and maintainability.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The lambda function used to handle `keep_attrs` is not very clear and could be replaced with a more straightforward conditional check."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue with `xr.where` and scalar values correctly, but the approach to handling `keep_attrs` could be improved for clarity and maintainability.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The lambda function used to handle `keep_attrs` is not very clear and could be replaced with a more straightforward conditional check."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

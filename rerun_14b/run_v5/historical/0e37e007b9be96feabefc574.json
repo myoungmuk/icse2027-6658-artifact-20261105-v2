@@ -1,0 +1,60 @@
+{
+  "id": "0e37e007b9be96feabefc574",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_7185c9d8febe",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_7185c9d8febe.json",
+  "historical_output_sha256": "8f9e6a196c4719ea81d28bf0bff0f3c631a53c6e4d5be2f6fca6a94fbb4af0a8",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1065,
+  "messages_sha256": "d7b7684dba740f422b5a6d1306a6a0f7e26f613042693923c40e1e6f35385ddd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior by altering the way separability matrices are constructed for nested CompoundModels.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no additional tests provided to ensure the fix does not regress or introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 133,
+      "returned_model_request_id": "562",
+      "completed_at_utc": "2026-11-06T04:03:24.723941+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior by altering the way separability matrices are constructed for nested CompoundModels."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure the fix does not regress or introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior by altering the way separability matrices are constructed for nested CompoundModels."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure the fix does not regress or introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

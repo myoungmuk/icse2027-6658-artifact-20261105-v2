@@ -1,0 +1,60 @@
+{
+  "id": "1e3c4e1364693c47071462d1",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_cc7968b334bf",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_cc7968b334bf.json",
+  "historical_output_sha256": "1c6ff036163fc25f169f6e6efee16474847df085a4cf971d6e67b09e20de627b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1075,
+  "messages_sha256": "2ffa5caff0f759e5191829a1634eb513dac5ca69b345ee2efc95829b4e526ccf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. The change is minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces an import statement for `Exists`, `OuterRef`, and `Q` which could be moved to the top of the file for better maintainability.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch uses `Exists` and `OuterRef` which might not be consistent with the existing coding style in the file.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 173,
+      "returned_model_request_id": "847",
+      "completed_at_utc": "2026-11-06T04:05:05.886964+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces an import statement for `Exists`, `OuterRef`, and `Q` which could be moved to the top of the file for better maintainability."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch uses `Exists` and `OuterRef` which might not be consistent with the existing coding style in the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces an import statement for `Exists`, `OuterRef`, and `Q` which could be moved to the top of the file for better maintainability."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch uses `Exists` and `OuterRef` which might not be consistent with the existing coding style in the file."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

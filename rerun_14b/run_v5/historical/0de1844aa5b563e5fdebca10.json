@@ -1,0 +1,60 @@
+{
+  "id": "0de1844aa5b563e5fdebca10",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_fa22ef35c7a3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_fa22ef35c7a3.json",
+  "historical_output_sha256": "6f8610066a2d1ee2ad0180e8a2a6ef41ebf30d6c7bad0249008ee8831b72652b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1162,
+  "messages_sha256": "a794218a2490a6a6bdb7d9c8d7747577b32d85abea571b329d74a2ff39360b69",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with FITSDiff but may not be comprehensive enough.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch only addresses the 'Q' format for VLAs, but there may be other formats or scenarios that are not covered.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix for the identified issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.7\n}",
+      "finish_reason": "stop",
+      "output_tokens": 143,
+      "returned_model_request_id": "547",
+      "completed_at_utc": "2026-11-06T04:03:24.720483+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with FITSDiff but may not be comprehensive enough.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only addresses the 'Q' format for VLAs, but there may be other formats or scenarios that are not covered."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the identified issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.7
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with FITSDiff but may not be comprehensive enough.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only addresses the 'Q' format for VLAs, but there may be other formats or scenarios that are not covered."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the identified issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.7
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

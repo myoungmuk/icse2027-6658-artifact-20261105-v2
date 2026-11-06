@@ -1,0 +1,50 @@
+{
+  "id": "ffded3ae8518559b278260e0",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_1f5693c132fe",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_1f5693c132fe.json",
+  "historical_output_sha256": "653490214db98bffb5201dbd2efbd128161a08cd84f5b3c71f6aa7a1bea32999",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1539,
+  "messages_sha256": "07c7158b64dbc50b9c6521cfc34e969fde2719df23a974dd1c466549db4c7a90",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces an async function to handle HttpResponseNotAllowed, which seems unnecessary and could lead to confusion.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces an async function to handle HttpResponseNotAllowed, which seems unnecessary and could lead to confusion. The change is not minimal and does not clearly improve the code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "1674",
+      "completed_at_utc": "2026-11-06T04:10:03.688351+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces an async function to handle HttpResponseNotAllowed, which seems unnecessary and could lead to confusion.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The patch introduces an async function to handle HttpResponseNotAllowed, which seems unnecessary and could lead to confusion. The change is not minimal and does not clearly improve the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces an async function to handle HttpResponseNotAllowed, which seems unnecessary and could lead to confusion.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The patch introduces an async function to handle HttpResponseNotAllowed, which seems unnecessary and could lead to confusion. The change is not minimal and does not clearly improve the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "68acd20210c39abbe86dbc7a",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_65dabb53ae43",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_65dabb53ae43.json",
+  "historical_output_sha256": "ba10296e113e0734febac4d013dd9af1df080d73641cfff00846f35e3caa40ea",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3311,
+  "messages_sha256": "6bfffd414f747d7a066a044963781092a04b4a963d8ee8342be052bc7c44d0fd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the IndexError by checking if args is empty before accessing its first element. It also includes new test files to reproduce and verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test files are specific to the identified issue and may not cover all edge cases.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "1803",
+      "completed_at_utc": "2026-11-06T04:11:18.905238+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the IndexError by checking if args is empty before accessing its first element. It also includes new test files to reproduce and verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The new test files are specific to the identified issue and may not cover all edge cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the IndexError by checking if args is empty before accessing its first element. It also includes new test files to reproduce and verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The new test files are specific to the identified issue and may not cover all edge cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

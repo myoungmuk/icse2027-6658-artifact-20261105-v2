@@ -1,0 +1,29 @@
+{
+  "code": "818ec1c3ba185e0a2f65",
+  "instance_id": "pydata__xarray-3976",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "818ec1c3ba185e0a2f65_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1516,
+  "messages_sha256": "a30486f818f18150259be0985592fd906eb97e075ca738740258dc42ad4a004a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a redundant type check in formatting.py and does not address the core issue of in-place addition failing due to mismatched index order. The MCVE code sample should be included as a test case to demonstrate the problem, not as a new file. The actual fix for the in-place addition issue needs to be implemented in the data handling logic.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 92,
+      "returned_model_request_id": "2531",
+      "completed_at_utc": "2026-11-06T04:16:59.782251+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a redundant type check in formatting.py and does not address the core issue of in-place addition failing due to mismatched index order. The MCVE code sample should be included as a test case to demonstrate the problem, not as a new file. The actual fix for the in-place addition issue needs to be implemented in the data handling logic."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "57c8a9ca09b3d0f4c1bf688c",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_8ce88ae21cad",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_8ce88ae21cad.json",
+  "historical_output_sha256": "60240c7dedce1fb2e1174398d97900360119847d71f57b53bcca5abb7470ec11",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1484,
+  "messages_sha256": "01cd87b9f4fbe9f3676641d623fcff0a8a291181b351552402b1b690967b4327",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes a bug with boolean weights but may introduce performance regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The change converts boolean weights to float, which may introduce performance regressions for large datasets.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 92,
+      "returned_model_request_id": "413",
+      "completed_at_utc": "2026-11-06T04:02:33.746863+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes a bug with boolean weights but may introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The change converts boolean weights to float, which may introduce performance regressions for large datasets."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes a bug with boolean weights but may introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The change converts boolean weights to float, which may introduce performance regressions for large datasets."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

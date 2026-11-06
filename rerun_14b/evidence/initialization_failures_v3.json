@@ -1,0 +1,112 @@
+{
+  "recorded_at_utc": "2026-11-06T03:46:49.185576+00:00",
+  "failed_attempts": [
+    {
+      "job": {
+        "batch_id": "b0e3fb258c158a67d9f5e657a16b470c",
+        "command": [
+          "bash",
+          "/workspace/users/2022810001/ICSE2027_6658_Rerun_20261106_v14/run_gpu_wait_v2.sh"
+        ],
+        "finished_at": null,
+        "job_id": "c2e0718d31b483786dbeb9840144caf9",
+        "model": "RTX 4090",
+        "node": "work03",
+        "started_at": "2026-11-06T03:07:52Z",
+        "state": "failed",
+        "workspace": "personal"
+      },
+      "directory": "run_v1",
+      "model_outputs": 0,
+      "reason": "getpass UID resolution at model architecture inspection",
+      "log": "evidence/inference.log",
+      "log_sha256": "8bdbdbb4c6a1600cf985300f45d1ee60c26cb9f0c493445efe5ac3eb89952c26",
+      "node_available_verified_before_next_submission": true,
+      "finished_at_missing_in_status_not_invented": true
+    },
+    {
+      "job": {
+        "batch_id": "27e82982f6d1634f83d52aaec631c32d",
+        "command": [
+          "bash",
+          "/workspace/users/2022810001/ICSE2027_6658_Rerun_20261106_v14/run_gpu_retry_v3.sh"
+        ],
+        "finished_at": null,
+        "job_id": "9ab7a7b300ccf6015b4329dc2e8ed4b8",
+        "model": "RTX 4090",
+        "node": "work03",
+        "started_at": "2026-11-06T03:18:11Z",
+        "state": "failed",
+        "workspace": "personal"
+      },
+      "directory": "run_v2",
+      "model_outputs": 0,
+      "reason": "getpass still called despite explicit cache paths",
+      "log": "evidence/inference_retry_v2.log",
+      "log_sha256": "2a9f59f82e597f3c27c576b92b67f7cd6710c1577e19a1a2dec28972785e9405",
+      "node_available_verified_before_next_submission": true,
+      "finished_at_missing_in_status_not_invented": true
+    },
+    {
+      "job": {
+        "batch_id": "e56d92785e7c1b913999460a3c49f12a",
+        "command": [
+          "bash",
+          "/workspace/users/2022810001/ICSE2027_6658_Rerun_20261106_v14/run_gpu_retry_v4.sh"
+        ],
+        "finished_at": null,
+        "job_id": "3e5dcfb5b4bc3a157515d045ff7e0012",
+        "model": "RTX 4090",
+        "node": "work03",
+        "started_at": "2026-11-06T03:25:25Z",
+        "state": "failed",
+        "workspace": "personal"
+      },
+      "directory": "run_v3",
+      "model_outputs": 0,
+      "reason": "engine auto and request xgrammar backend mismatch at validation",
+      "log": "evidence/inference_retry_v3.log",
+      "log_sha256": "d856960c09bd975d7303501e1da443407f24dd0e648de88c9a0533efcfe370ef",
+      "node_available_verified_before_next_submission": true,
+      "finished_at_missing_in_status_not_invented": true
+    },
+    {
+      "job": {
+        "batch_id": "d3819aceb45bb7394bd71d6b5d30fef5",
+        "command": [
+          "bash",
+          "/workspace/users/2022810001/ICSE2027_6658_Rerun_20261106_v14/run_gpu_retry_v5.sh"
+        ],
+        "finished_at": null,
+        "job_id": "05f0f1144dc6222fcabd2c765c3fcc34",
+        "model": "RTX 4090",
+        "node": "work03",
+        "started_at": "2026-11-06T03:30:53Z",
+        "state": "failed",
+        "workspace": "personal"
+      },
+      "directory": null,
+      "model_outputs": 0,
+      "reason": "Dependency installation terminated; exact cause unavailable; only1.1GiB shared headroom observed. No inference log or run_v4 directory created.",
+      "log": "evidence/runtime_install_retry_v4.log",
+      "log_sha256": "824a9b6d4c4294fe6f84521b90a1599ef8f1704bbc883514ef3f768006969c3a",
+      "node_available_verified_before_next_submission": true
+    }
+  ],
+  "total_generated_outputs": 0,
+  "all_failed_attempts_preserved": true,
+  "cancelled_setup_attempts": [
+    {
+      "job_id": "acd036c8006cbb8b1dec91476833071a",
+      "node": "work03",
+      "state": "cancelled",
+      "started_at": "2026-11-06T03:37:30Z",
+      "model_outputs": 0,
+      "reason": "CuPy dependency download showed no log progress for several minutes; explicitly cancelled.",
+      "release_verified_by_node_available_and_job_absent_from_status": true,
+      "log": "evidence/runtime_install_retry_v5.log",
+      "log_sha256": "6cf82b4d0dbf3482cf23bcf6925cb60a6fe83be8b6b4d51bc041dffe1697062d",
+      "finished_at_not_invented": true
+    }
+  ]
+}

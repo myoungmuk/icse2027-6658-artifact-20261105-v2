@@ -1,0 +1,29 @@
+{
+  "code": "84ab432664c3c2d03024",
+  "instance_id": "pytest-dev__pytest-8447",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "84ab432664c3c2d03024_strict",
+  "arm": "strict",
+  "input_tokens": 3209,
+  "messages_sha256": "184dab04ff6d18d11143cd8289a5c96255260e9ad2570ec971876b846bdd5abc",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces significant changes to the `FSCollector` and `Item` classes, including the addition of a new parameter `path_or_parent` and changes to the constructor logic. These changes could introduce compatibility issues with existing plugins and may not be fully tested. Additionally, the patch does not address the root cause of the `TypeError` and may not resolve the issue with plugins like pytest-black and pytest-checkdocs. The patch also introduces new warnings that could be disruptive to users. Therefore, the patch needs further refinement and testing before it can be merged.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 134,
+      "returned_model_request_id": "2632",
+      "completed_at_utc": "2026-11-06T04:17:31.230850+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces significant changes to the `FSCollector` and `Item` classes, including the addition of a new parameter `path_or_parent` and changes to the constructor logic. These changes could introduce compatibility issues with existing plugins and may not be fully tested. Additionally, the patch does not address the root cause of the `TypeError` and may not resolve the issue with plugins like pytest-black and pytest-checkdocs. The patch also introduces new warnings that could be disruptive to users. Therefore, the patch needs further refinement and testing before it can be merged."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

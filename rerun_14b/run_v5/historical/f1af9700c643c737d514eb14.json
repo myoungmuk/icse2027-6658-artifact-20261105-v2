@@ -1,0 +1,50 @@
+{
+  "id": "f1af9700c643c737d514eb14",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_01aa7668f807",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_01aa7668f807.json",
+  "historical_output_sha256": "c113474001e3453a184a2d1cf2769a01da976501c241b1e5418d4ea1c16d42e7",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1186,
+  "messages_sha256": "cb75733f73d6f48a993b73bf0efeb998c652874610447f5ae564e78a1b4d5b6a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of inconsistent rendering of the 'Other parameters' section but introduces a non-minimal change by modifying the behavior of the '_consume_fields' method.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR modifies the '_consume_fields' method to accept an additional 'multiple' parameter, which is not used elsewhere in the code. This introduces a non-minimal change that may not be necessary and could lead to confusion.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 137,
+      "returned_model_request_id": "123",
+      "completed_at_utc": "2026-11-06T04:00:52.710139+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of inconsistent rendering of the 'Other parameters' section but introduces a non-minimal change by modifying the behavior of the '_consume_fields' method.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR modifies the '_consume_fields' method to accept an additional 'multiple' parameter, which is not used elsewhere in the code. This introduces a non-minimal change that may not be necessary and could lead to confusion."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of inconsistent rendering of the 'Other parameters' section but introduces a non-minimal change by modifying the behavior of the '_consume_fields' method.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR modifies the '_consume_fields' method to accept an additional 'multiple' parameter, which is not used elsewhere in the code. This introduces a non-minimal change that may not be necessary and could lead to confusion."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "ecf0da44dac13a838530e267",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_a087f8d94181",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_a087f8d94181.json",
+  "historical_output_sha256": "5db3173bf6dcc2abdfeec5541d4f8535b6f98d26c1a742e6b5a1c8263dfd97cc",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1367,
+  "messages_sha256": "38c8c9541c75a1649a919d2c0ad2e3ebffb20bbe7da58780bbe73e7aebb5e5b0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of incomplete results depending on the order of symbols with permute=True. The change is minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by using a list comprehension instead of a for-loop for generating signed permutations.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "991",
+      "completed_at_utc": "2026-11-06T04:05:55.614231+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of incomplete results depending on the order of symbols with permute=True. The change is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by using a list comprehension instead of a for-loop for generating signed permutations."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of incomplete results depending on the order of symbols with permute=True. The change is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by using a list comprehension instead of a for-loop for generating signed permutations."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

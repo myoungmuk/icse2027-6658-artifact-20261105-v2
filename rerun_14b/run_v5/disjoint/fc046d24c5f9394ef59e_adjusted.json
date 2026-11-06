@@ -1,0 +1,29 @@
+{
+  "code": "fc046d24c5f9394ef59e",
+  "instance_id": "scikit-learn__scikit-learn-12486",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "fc046d24c5f9394ef59e_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1198,
+  "messages_sha256": "e7c4633df28658064cd0e87a5b046937717bd324383a47bb82f4703a1d5b127d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch adds necessary checks to ensure that the estimator is a classifier with a predict_proba method and that it predicts probabilities for two classes, which is required for roc_auc scoring. This prevents the IndexError and improves the robustness of the scoring mechanism.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 69,
+      "returned_model_request_id": "2347",
+      "completed_at_utc": "2026-11-06T04:15:51.280981+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch adds necessary checks to ensure that the estimator is a classifier with a predict_proba method and that it predicts probabilities for two classes, which is required for roc_auc scoring. This prevents the IndexError and improves the robustness of the scoring mechanism."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

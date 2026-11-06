@@ -1,0 +1,60 @@
+{
+  "id": "b3d3e4965455e2ee4b08fbc9",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_0c3939afefcb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_0c3939afefcb.json",
+  "historical_output_sha256": "cb722ac514911897d3321fd90e64432263be1a6f3927d7d44116ea86eb9a44cc",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 994,
+  "messages_sha256": "6a3ce3d9a9e4f25e29db2a1e0d7988a6043ffb82e6028ca1eaaac670edf76a09",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific bug but may introduce behavioral regressions and lacks comprehensive tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change removes the check for `fact == 1`, which may break existing behavior where multiplying prefixes results in a scale factor of 1.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix or ensure that the change does not introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 152,
+      "returned_model_request_id": "102",
+      "completed_at_utc": "2026-11-06T04:00:52.704327+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific bug but may introduce behavioral regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change removes the check for `fact == 1`, which may break existing behavior where multiplying prefixes results in a scale factor of 1."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix or ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific bug but may introduce behavioral regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change removes the check for `fact == 1`, which may break existing behavior where multiplying prefixes results in a scale factor of 1."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix or ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

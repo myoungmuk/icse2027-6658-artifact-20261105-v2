@@ -1,0 +1,50 @@
+{
+  "id": "d3327f9727fb1115e2aa11bc",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_e0bb0a0aa0c8",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_e0bb0a0aa0c8.json",
+  "historical_output_sha256": "e9af7ab931953f816166273f3755d5b290d482f4eea272ae3dd0cebbc4230e4a",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1163,
+  "messages_sha256": "b4d11e258aff7daeede572d21d297d5189421fd1193b0da097abfbb914a60cf3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of pickling a figure with a draggable legend by making the `DraggableLegend` class picklable. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor maintainability/readability defect by adding `__getstate__` and `__setstate__` methods, which could be improved by using properties or a more structured approach.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 132,
+      "returned_model_request_id": "1212",
+      "completed_at_utc": "2026-11-06T04:07:22.382966+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of pickling a figure with a draggable legend by making the `DraggableLegend` class picklable. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding `__getstate__` and `__setstate__` methods, which could be improved by using properties or a more structured approach."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of pickling a figure with a draggable legend by making the `DraggableLegend` class picklable. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding `__getstate__` and `__setstate__` methods, which could be improved by using properties or a more structured approach."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "6181b98254a63283a790",
+  "instance_id": "django__django-14151",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "6181b98254a63283a790_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 577,
+  "messages_sha256": "197126a3c90509ad46f8202d014005760a90bfb7d5153e2f035d97ca308f9747",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses a potential issue where the HTTP referer header might not be valid, which could lead to a ValueError when parsed. By adding a try-except block, the patch ensures that the middleware can gracefully handle malformed referer headers without crashing. This change improves the robustness of the CSRF protection mechanism.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 82,
+      "returned_model_request_id": "2429",
+      "completed_at_utc": "2026-11-06T04:16:23.785273+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses a potential issue where the HTTP referer header might not be valid, which could lead to a ValueError when parsed. By adding a try-except block, the patch ensures that the middleware can gracefully handle malformed referer headers without crashing. This change improves the robustness of the CSRF protection mechanism."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

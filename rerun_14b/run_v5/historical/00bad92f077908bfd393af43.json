@@ -1,0 +1,50 @@
+{
+  "id": "00bad92f077908bfd393af43",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_ea9a00d8b74c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_ea9a00d8b74c.json",
+  "historical_output_sha256": "61a6b5c6a62d7faa3c26f124e4f2c8c03ca5fd81eef20923420024141ae6d24b",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1851,
+  "messages_sha256": "cae1601fc06db26b402bf45a235beb20ca45d34d246cebc9773439811b153f10",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of inconsistent double single-quote management in FITS Card values. The changes are minimal and focused on the identified problem.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch uses `replace` instead of a regular expression, which is more readable and idiomatic for this simple replacement.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1422",
+      "completed_at_utc": "2026-11-06T04:08:36.611475+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of inconsistent double single-quote management in FITS Card values. The changes are minimal and focused on the identified problem.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch uses `replace` instead of a regular expression, which is more readable and idiomatic for this simple replacement."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of inconsistent double single-quote management in FITS Card values. The changes are minimal and focused on the identified problem.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch uses `replace` instead of a regular expression, which is more readable and idiomatic for this simple replacement."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

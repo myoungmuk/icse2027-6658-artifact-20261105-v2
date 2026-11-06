@@ -1,0 +1,29 @@
+{
+  "code": "a09db086b4473c4b2e43",
+  "instance_id": "django__django-16614",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "a09db086b4473c4b2e43_strict",
+  "arm": "strict",
+  "input_tokens": 565,
+  "messages_sha256": "1c69a5b0ee9c492517d614267bd57690a01827d87509b700be0c6f045827701f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch changes the default URL scheme from 'http' to 'https', which could break existing applications that rely on the current behavior. Additionally, the security team did not consider this a security issue, suggesting that the current approach is acceptable.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 69,
+      "returned_model_request_id": "2554",
+      "completed_at_utc": "2026-11-06T04:17:15.371260+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch changes the default URL scheme from 'http' to 'https', which could break existing applications that rely on the current behavior. Additionally, the security team did not consider this a security issue, suggesting that the current approach is acceptable."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

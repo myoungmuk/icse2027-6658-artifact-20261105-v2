@@ -1,0 +1,50 @@
+{
+  "id": "5aae2f47e0df967daf1859b6",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_6f306de8e45c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_6f306de8e45c.json",
+  "historical_output_sha256": "273fac2b54cf220e0e0578ecca52652f198eee5a405630e4703a7fc5ae183406",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1070,
+  "messages_sha256": "248535f02f832a7eaf9d46a1293e312f9582692cdd71c24d65b60ef409dd3cab",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by checking if the field has an 'expression' attribute and using its name. This seems to be a minimal and targeted fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor maintainability/readability issue by adding a conditional check and attribute access without additional context or comments.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "848",
+      "completed_at_utc": "2026-11-06T04:05:05.887147+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by checking if the field has an 'expression' attribute and using its name. This seems to be a minimal and targeted fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability issue by adding a conditional check and attribute access without additional context or comments."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by checking if the field has an 'expression' attribute and using its name. This seems to be a minimal and targeted fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability issue by adding a conditional check and attribute access without additional context or comments."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

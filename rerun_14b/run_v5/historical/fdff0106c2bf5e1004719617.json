@@ -1,0 +1,50 @@
+{
+  "id": "fdff0106c2bf5e1004719617",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_601771bed85c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_601771bed85c.json",
+  "historical_output_sha256": "0f7e1aa9317ddd4e6aa8a861a0a495b866cab8f2743c943cdf8c9a828c110e98",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1008,
+  "messages_sha256": "131452ff0abc128c660035a8ebc7eb911abb66c8f6df7005e8a5897fb3480eee",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR changes the behavior of `makemigrations --check` to exit without writing migrations, which is consistent with other commands like `migrate --check`. However, it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may break existing scripts or workflows that rely on `makemigrations --check` to generate migrations without exiting.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "730",
+      "completed_at_utc": "2026-11-06T04:04:32.839075+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR changes the behavior of `makemigrations --check` to exit without writing migrations, which is consistent with other commands like `migrate --check`. However, it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing scripts or workflows that rely on `makemigrations --check` to generate migrations without exiting."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR changes the behavior of `makemigrations --check` to exit without writing migrations, which is consistent with other commands like `migrate --check`. However, it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing scripts or workflows that rely on `makemigrations --check` to generate migrations without exiting."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "ffa3d5c97b88add623af9e6f",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_7f558843d4e2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_7f558843d4e2.json",
+  "historical_output_sha256": "b30639858a0b558fd3e53d8ecbb3a54958797e0ad1d91dece4d6a18c987d2f14",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1191,
+  "messages_sha256": "7cdaa29e3048954a4c2ea0f7b39bc765ad47ac0d7bc9a9890ed7f50100051a9a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a potential behavioral regression risk and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior by modifying the internal state of the `vocabulary_` attribute without training.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no tests added to verify the new behavior of `get_feature_names` when `vocabulary` is provided but the vectorizer has not been trained.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 150,
+      "returned_model_request_id": "768",
+      "completed_at_utc": "2026-11-06T04:04:49.256193+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior by modifying the internal state of the `vocabulary_` attribute without training."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests added to verify the new behavior of `get_feature_names` when `vocabulary` is provided but the vectorizer has not been trained."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a potential behavioral regression risk and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior by modifying the internal state of the `vocabulary_` attribute without training."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests added to verify the new behavior of `get_feature_names` when `vocabulary` is provided but the vectorizer has not been trained."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

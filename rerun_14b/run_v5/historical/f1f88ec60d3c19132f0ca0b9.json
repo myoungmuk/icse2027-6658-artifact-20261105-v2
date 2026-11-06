@@ -1,0 +1,50 @@
+{
+  "id": "f1f88ec60d3c19132f0ca0b9",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_92d96f5b8b68",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_92d96f5b8b68.json",
+  "historical_output_sha256": "ba1d950937b4bd3dc93889af1422e563ad60104414942e146b1b9c0a1bb63643",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1727,
+  "messages_sha256": "8fd19bff7245d6e234ddc33a93386b77988bece4d1224741fcf9f26af7a25501",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change appears to fix the issue with unit parsing for MRT files, but it may introduce compatibility issues with other formats.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the unit conversion to 'fits' instead of 'cds', which may affect other parts of the codebase that rely on the 'cds' format.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "1442",
+      "completed_at_utc": "2026-11-06T04:08:55.018918+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change appears to fix the issue with unit parsing for MRT files, but it may introduce compatibility issues with other formats.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change modifies the unit conversion to 'fits' instead of 'cds', which may affect other parts of the codebase that rely on the 'cds' format."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change appears to fix the issue with unit parsing for MRT files, but it may introduce compatibility issues with other formats.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change modifies the unit conversion to 'fits' instead of 'cds', which may affect other parts of the codebase that rely on the 'cds' format."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

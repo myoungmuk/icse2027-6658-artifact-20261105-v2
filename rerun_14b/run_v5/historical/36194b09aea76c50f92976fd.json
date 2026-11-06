@@ -1,0 +1,50 @@
+{
+  "id": "36194b09aea76c50f92976fd",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_6a1d9132823a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_6a1d9132823a.json",
+  "historical_output_sha256": "e91703c87d94c9ae3ee3e3f1d4c4ed40090781337835e2b9ae5e94741373025e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 849,
+  "messages_sha256": "e1d11d766675481e597ff9356bc489c97c949e2ee8d2b54ecafbb8af961d0d2d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with trailing slashes in directory names for django-admin startapp, but it lacks tests to ensure the fix doesn't introduce regressions or handle other edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the fix works as intended and does not break other scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "135",
+      "completed_at_utc": "2026-11-06T04:00:52.713127+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with trailing slashes in directory names for django-admin startapp, but it lacks tests to ensure the fix doesn't introduce regressions or handle other edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the fix works as intended and does not break other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with trailing slashes in directory names for django-admin startapp, but it lacks tests to ensure the fix doesn't introduce regressions or handle other edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the fix works as intended and does not break other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "116d57b47251402c4884",
+  "instance_id": "pytest-dev__pytest-5281",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "116d57b47251402c4884_strict",
+  "arm": "strict",
+  "input_tokens": 1300,
+  "messages_sha256": "903b44b907f13f3528e58f168fb5fc58bb0ae3da1b1b4af07110f65cfebff861",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes to `capture.py` that are unrelated to the issue described in `terminal.py`. Additionally, the solution in `terminal.py` uses `six.unichr`, which is not necessary since the code already handles the Unicode character using a string literal. The patch should be focused on fixing the Unicode issue in `terminal.py` without introducing unrelated changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 95,
+      "returned_model_request_id": "2492",
+      "completed_at_utc": "2026-11-06T04:16:43.896848+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes to `capture.py` that are unrelated to the issue described in `terminal.py`. Additionally, the solution in `terminal.py` uses `six.unichr`, which is not necessary since the code already handles the Unicode character using a string literal. The patch should be focused on fixing the Unicode issue in `terminal.py` without introducing unrelated changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

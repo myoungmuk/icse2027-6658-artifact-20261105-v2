@@ -1,0 +1,29 @@
+{
+  "code": "8c97c6746a1ad29beaaf",
+  "instance_id": "django__django-12121",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "8c97c6746a1ad29beaaf_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1418,
+  "messages_sha256": "8066ada9ff413ee50388807f7a69f6e8b01c4cae502374b488149d8bcc6615ba",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue by modifying the URL resolver to handle ValueError exceptions raised by the to_url method of converters. This change aligns with the expected behavior described in the issue, where a ValueError indicates no match. The patch is well-documented and includes a new test file to verify the functionality. There are no apparent issues with compatibility, maintainability, or performance.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 94,
+      "returned_model_request_id": "2387",
+      "completed_at_utc": "2026-11-06T04:16:06.972398+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue by modifying the URL resolver to handle ValueError exceptions raised by the to_url method of converters. This change aligns with the expected behavior described in the issue, where a ValueError indicates no match. The patch is well-documented and includes a new test file to verify the functionality. There are no apparent issues with compatibility, maintainability, or performance."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "333e0ac3be3cc12a3c453f44",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_6b07fc700a15",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_6b07fc700a15.json",
+  "historical_output_sha256": "9ad5f5dc029d1f373c94c1999fed87da6202f9a98c4abd07d13c17b7bd101f70",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2239,
+  "messages_sha256": "cda4f6526942b18dcf05e6456d89cef574c2723dc33756b4a3cf89e5b6433e11",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds get/set_antialiased methods to Text objects and adjusts backend code accordingly. The changes seem minimal and focused on resolving the issue without introducing significant risks.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces new parameters and methods without updating the documentation, which could lead to confusion for users.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "948",
+      "completed_at_utc": "2026-11-06T04:05:39.451267+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds get/set_antialiased methods to Text objects and adjusts backend code accordingly. The changes seem minimal and focused on resolving the issue without introducing significant risks.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new parameters and methods without updating the documentation, which could lead to confusion for users."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR adds get/set_antialiased methods to Text objects and adjusts backend code accordingly. The changes seem minimal and focused on resolving the issue without introducing significant risks.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new parameters and methods without updating the documentation, which could lead to confusion for users."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

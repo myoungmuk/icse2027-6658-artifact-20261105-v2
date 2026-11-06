@@ -1,0 +1,50 @@
+{
+  "id": "74f4b1d0c381b2c4a3ead2d2",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_b415913279b4",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_b415913279b4.json",
+  "historical_output_sha256": "5e8f44fef367ac2311283d89c64650ed58aa5b9b5c4ba0019debf4f185eea807",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 714,
+  "messages_sha256": "7ca474bba1c3b68159679d05352985a5df7b843d670765af564d09baa1eae1b4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a check for non-empty Blueprint names, which is a good fix for the reported issue. However, it lacks tests to ensure the new check behaves as expected.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that a ValueError is raised when an empty name is provided to a Blueprint.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "448",
+      "completed_at_utc": "2026-11-06T04:02:50.461463+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a check for non-empty Blueprint names, which is a good fix for the reported issue. However, it lacks tests to ensure the new check behaves as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that a ValueError is raised when an empty name is provided to a Blueprint."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds a check for non-empty Blueprint names, which is a good fix for the reported issue. However, it lacks tests to ensure the new check behaves as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that a ValueError is raised when an empty name is provided to a Blueprint."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

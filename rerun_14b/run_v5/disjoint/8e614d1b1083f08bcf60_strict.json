@@ -1,0 +1,29 @@
+{
+  "code": "8e614d1b1083f08bcf60",
+  "instance_id": "matplotlib__matplotlib-20374",
+  "split": "development",
+  "kind": "developer",
+  "id": "8e614d1b1083f08bcf60_strict",
+  "arm": "strict",
+  "input_tokens": 2419,
+  "messages_sha256": "9150f14c0d257a199827f06bc27171a5322c7c413657503f78dc56a696f226e4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new parameter `includes` to the `out_of_date` function and modifies the `render_figures` function to accept `code_includes`. However, the patch does not address the root cause of the issue, which is the discrepancy between Sphinx's rebuild logic and the `out_of_date` function's logic. The patch also introduces potential compatibility issues with older versions of docutils and may lead to excessive regeneration of plots, which could negatively impact performance.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "2242",
+      "completed_at_utc": "2026-11-06T04:15:08.244381+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new parameter `includes` to the `out_of_date` function and modifies the `render_figures` function to accept `code_includes`. However, the patch does not address the root cause of the issue, which is the discrepancy between Sphinx's rebuild logic and the `out_of_date` function's logic. The patch also introduces potential compatibility issues with older versions of docutils and may lead to excessive regeneration of plots, which could negatively impact performance."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

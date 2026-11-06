@@ -1,0 +1,50 @@
+{
+  "id": "7718bf50a3a53278e7c8e840",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_93e534a2cda8",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_93e534a2cda8.json",
+  "historical_output_sha256": "0148dd74377d53246608ac7409279cd1136a8d1b8523615eeb02ad0a84c2c178",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1962,
+  "messages_sha256": "2aff73d50c12d580704c362dd9a6e1b9a0975a620ffbb6e3b62ff2d22b6e4fae",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed fix addresses the overflow issue by changing the calculation method, but it may introduce numerical instability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The proposed fix uses np.sqrt(tk / pk) * np.sqrt(tk / qk), which may introduce numerical instability due to potential division by zero or underflow.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "2135",
+      "completed_at_utc": "2026-11-06T04:14:31.722140+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed fix addresses the overflow issue by changing the calculation method, but it may introduce numerical instability.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The proposed fix uses np.sqrt(tk / pk) * np.sqrt(tk / qk), which may introduce numerical instability due to potential division by zero or underflow."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed fix addresses the overflow issue by changing the calculation method, but it may introduce numerical instability.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The proposed fix uses np.sqrt(tk / pk) * np.sqrt(tk / qk), which may introduce numerical instability due to potential division by zero or underflow."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

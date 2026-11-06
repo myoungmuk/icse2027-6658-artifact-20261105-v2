@@ -1,0 +1,60 @@
+{
+  "id": "ae7660beee2facbfe436184a",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_91d9bb522f2a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_91d9bb522f2a.json",
+  "historical_output_sha256": "578f956356ee098371b0b1d1e5d20dca916fbe71155824fe23144190c7a9ae25",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1419,
+  "messages_sha256": "447b9abcfa5df22d53e6e02e092a1023a442fa6b0fcba63e1225c81c7b148dd7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific bug but introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces additional logic for casting Xi into the largest string type, which is not minimal and may introduce unintended side effects.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix for the specific bug or to ensure that the change does not introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 154,
+      "returned_model_request_id": "18",
+      "completed_at_utc": "2026-11-06T04:00:16.937874+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific bug but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional logic for casting Xi into the largest string type, which is not minimal and may introduce unintended side effects."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the specific bug or to ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific bug but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional logic for casting Xi into the largest string type, which is not minimal and may introduce unintended side effects."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the specific bug or to ensure that the change does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

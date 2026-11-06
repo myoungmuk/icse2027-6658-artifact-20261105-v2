@@ -1,0 +1,50 @@
+{
+  "id": "92dc05180e7f9299c82a32da",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_9e5f7fb87955",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_9e5f7fb87955.json",
+  "historical_output_sha256": "6e4eb9568cd2ea6fdb0978315e1196faa551e8efe8cb85c771dc4a16f172db26",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1390,
+  "messages_sha256": "2b838038aacfb11ff9e968ba850a94a945ef0b66d75c17e366c499666c137302",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the alignment issue in HPacker but introduces potential regressions for other alignment options.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may break existing behavior for other alignment options ('left', 'top', 'right', 'bottom').\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 100,
+      "returned_model_request_id": "846",
+      "completed_at_utc": "2026-11-06T04:05:05.886773+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the alignment issue in HPacker but introduces potential regressions for other alignment options.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing behavior for other alignment options ('left', 'top', 'right', 'bottom')."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes the alignment issue in HPacker but introduces potential regressions for other alignment options.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing behavior for other alignment options ('left', 'top', 'right', 'bottom')."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

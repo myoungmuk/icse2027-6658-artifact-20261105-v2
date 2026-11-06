@@ -1,0 +1,50 @@
+{
+  "id": "eb85be5ca9b0e7ca7a435522",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_34bcb243ca5f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_34bcb243ca5f.json",
+  "historical_output_sha256": "496a47768c72d581c286aac9a719d3a05fdf112ff8893ecb1dc7312bdd463793",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 945,
+  "messages_sha256": "b778075ea8963de484b8bce510f94c4b9ec1bfad5d883e142ae13a196c1c900e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a default for verbose_name_plural based on verbose_name, which could lead to unexpected behavior in certain cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior where verbose_name_plural is intentionally different from verbose_name. This could lead to confusion and potential bugs in admin interfaces.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "138",
+      "completed_at_utc": "2026-11-06T04:00:52.713867+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a default for verbose_name_plural based on verbose_name, which could lead to unexpected behavior in certain cases.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior where verbose_name_plural is intentionally different from verbose_name. This could lead to confusion and potential bugs in admin interfaces."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a default for verbose_name_plural based on verbose_name, which could lead to unexpected behavior in certain cases.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior where verbose_name_plural is intentionally different from verbose_name. This could lead to confusion and potential bugs in admin interfaces."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

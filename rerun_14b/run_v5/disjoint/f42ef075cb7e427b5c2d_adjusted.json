@@ -1,0 +1,29 @@
+{
+  "code": "f42ef075cb7e427b5c2d",
+  "instance_id": "django__django-15483",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "f42ef075cb7e427b5c2d_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1376,
+  "messages_sha256": "441decec967b84444761903d7903908412bae4bfb06d6ef748f4a84a134578b2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new parameter `app_label` to `_build_app_dict` and `get_app_list`, which could be considered backwards incompatible. Additionally, the change in `app_index` method might not align with the intended use of `AppAdmin` as discussed in the issue. The patch does not address the core concerns raised by jkocherhans regarding the ordering and the potential misuse by third-party apps.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "2601",
+      "completed_at_utc": "2026-11-06T04:17:31.224693+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new parameter `app_label` to `_build_app_dict` and `get_app_list`, which could be considered backwards incompatible. Additionally, the change in `app_index` method might not align with the intended use of `AppAdmin` as discussed in the issue. The patch does not address the core concerns raised by jkocherhans regarding the ordering and the potential misuse by third-party apps."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

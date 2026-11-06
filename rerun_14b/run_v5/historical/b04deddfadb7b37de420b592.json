@@ -1,0 +1,60 @@
+{
+  "id": "b04deddfadb7b37de420b592",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_583b76fe75c5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_583b76fe75c5.json",
+  "historical_output_sha256": "a6446fca09045ed4dc675622a65d5099ee8f2e13f0efa2777104f8ff64ace8be",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1385,
+  "messages_sha256": "b116f776033b21453dcdc2d06b969d86a71a4dc45d493335723e6b68016149d6",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a method to ensure the string representation of enum values is the actual value, not the enum member itself.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"This change may introduce a behavioral regression risk as it alters the string representation of enum values, which could affect existing code that relies on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new method `__str__` in the `Choices` class, which is a minor style inconsistency with the rest of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 169,
+      "returned_model_request_id": "776",
+      "completed_at_utc": "2026-11-06T04:04:49.258179+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a method to ensure the string representation of enum values is the actual value, not the enum member itself.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "This change may introduce a behavioral regression risk as it alters the string representation of enum values, which could affect existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new method `__str__` in the `Choices` class, which is a minor style inconsistency with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a method to ensure the string representation of enum values is the actual value, not the enum member itself.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "This change may introduce a behavioral regression risk as it alters the string representation of enum values, which could affect existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new method `__str__` in the `Choices` class, which is a minor style inconsistency with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "f9b6d0f95a7206afdc86b3c0",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_472e63abdf83",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_472e63abdf83.json",
+  "historical_output_sha256": "788baeb545ea84cbfc8735fc25f796dfa19d6a25c9db8690d383ec249d96e20b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1058,
+  "messages_sha256": "738f7a2edf972623e28226799f8351670a6b39c51949dfe9afe99befa2d965e7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR removes a post_init signal handler from ImageField, which could lead to unexpected behavior if width_field or height_field are set in the future.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change removes the post_init signal handler unconditionally, which could lead to unexpected behavior if width_field or height_field are set in the future. This introduces a behavioral regression risk.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "474",
+      "completed_at_utc": "2026-11-06T04:02:50.466709+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR removes a post_init signal handler from ImageField, which could lead to unexpected behavior if width_field or height_field are set in the future.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change removes the post_init signal handler unconditionally, which could lead to unexpected behavior if width_field or height_field are set in the future. This introduces a behavioral regression risk."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR removes a post_init signal handler from ImageField, which could lead to unexpected behavior if width_field or height_field are set in the future.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change removes the post_init signal handler unconditionally, which could lead to unexpected behavior if width_field or height_field are set in the future. This introduces a behavioral regression risk."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

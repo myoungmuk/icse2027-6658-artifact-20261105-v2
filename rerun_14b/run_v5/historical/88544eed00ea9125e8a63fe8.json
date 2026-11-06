@@ -1,0 +1,50 @@
+{
+  "id": "88544eed00ea9125e8a63fe8",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_8629d084aeb7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_8629d084aeb7.json",
+  "historical_output_sha256": "ded5717262972c388d7ea6532d5c369c35db5c8ec410dfdf31ddd827d872654c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1271,
+  "messages_sha256": "6d4f30124b21d87ce9e58da6f15b2798a7d69216f4267579719ecba35d6257fd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by correctly handling dimensionless expressions within functions, but it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the behavior of dimension handling for functions, which might affect other parts of the code that rely on the previous behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "926",
+      "completed_at_utc": "2026-11-06T04:05:39.447175+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by correctly handling dimensionless expressions within functions, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of dimension handling for functions, which might affect other parts of the code that rely on the previous behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by correctly handling dimensionless expressions within functions, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the behavior of dimension handling for functions, which might affect other parts of the code that rely on the previous behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

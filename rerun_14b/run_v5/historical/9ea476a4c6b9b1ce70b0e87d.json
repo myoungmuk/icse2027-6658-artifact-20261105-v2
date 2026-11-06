@@ -1,0 +1,60 @@
+{
+  "id": "9ea476a4c6b9b1ce70b0e87d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_8e085d871ed0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_8e085d871ed0.json",
+  "historical_output_sha256": "757f7794a57d20abe2aaf3ca6cca0eff7eb8ecbc1c46292e345bba56de019657",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 920,
+  "messages_sha256": "d1cc2f8d78c19c45dcfd6059b933411d88003d657c964d2708fc70d4427241a0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce regressions and lacks tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch modifies the behavior of the `urlize` function, which could introduce regressions in other parts of the application that rely on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify the correctness of the changes, which is essential for ensuring the fix is robust and does not break in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 160,
+      "returned_model_request_id": "718",
+      "completed_at_utc": "2026-11-06T04:04:16.303120+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce regressions and lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch modifies the behavior of the `urlize` function, which could introduce regressions in other parts of the application that rely on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the correctness of the changes, which is essential for ensuring the fix is robust and does not break in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce regressions and lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch modifies the behavior of the `urlize` function, which could introduce regressions in other parts of the application that rely on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the correctness of the changes, which is essential for ensuring the fix is robust and does not break in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

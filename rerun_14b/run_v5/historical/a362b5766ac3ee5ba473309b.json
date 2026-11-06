@@ -1,0 +1,50 @@
+{
+  "id": "a362b5766ac3ee5ba473309b",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_241316cf4bb9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_241316cf4bb9.json",
+  "historical_output_sha256": "51c8b6d3022c5c8ae038ed9dd126e643aedec851bc8a5c73490a73c82c79dfd0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1787,
+  "messages_sha256": "0d81d73554352258394114f569afc0c736f06606580adf531fab3785634b7fd1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the caplog fixture issue by resetting the log level after each test. It includes a new test file to verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test file is not included in the diff, but it is mentioned in the description. Ensure the test file is included in the PR.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "1771",
+      "completed_at_utc": "2026-11-06T04:10:43.129782+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the caplog fixture issue by resetting the log level after each test. It includes a new test file to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file is not included in the diff, but it is mentioned in the description. Ensure the test file is included in the PR."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR fixes the caplog fixture issue by resetting the log level after each test. It includes a new test file to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file is not included in the diff, but it is mentioned in the description. Ensure the test file is included in the PR."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

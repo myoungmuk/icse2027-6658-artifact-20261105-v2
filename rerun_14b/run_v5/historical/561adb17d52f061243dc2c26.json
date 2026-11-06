@@ -1,0 +1,50 @@
+{
+  "id": "561adb17d52f061243dc2c26",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_21d37d82f196",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_21d37d82f196.json",
+  "historical_output_sha256": "b32add20ac45e5d80a3d8bd0a030d429ec75123c75f5c4e9af8aae84b98e1e8e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 934,
+  "messages_sha256": "aafa7bd49aa2914fb6eb267bc4177a18faab6e854413e4fba5d5b7f8c9fa7633",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR reverts the hash method of Model Field to be immutable, which addresses the issue of hash value changes. However, it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"Reverting the hash method to only use the creation_counter may break existing behavior where the hash was based on the model and field names. This could lead to unexpected issues in applications that rely on the current hash behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 134,
+      "returned_model_request_id": "509",
+      "completed_at_utc": "2026-11-06T04:03:08.422982+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR reverts the hash method of Model Field to be immutable, which addresses the issue of hash value changes. However, it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "Reverting the hash method to only use the creation_counter may break existing behavior where the hash was based on the model and field names. This could lead to unexpected issues in applications that rely on the current hash behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR reverts the hash method of Model Field to be immutable, which addresses the issue of hash value changes. However, it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "Reverting the hash method to only use the creation_counter may break existing behavior where the hash was based on the model and field names. This could lead to unexpected issues in applications that rely on the current hash behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

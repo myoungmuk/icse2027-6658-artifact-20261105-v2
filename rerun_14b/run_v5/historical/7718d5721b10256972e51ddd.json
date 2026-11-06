@@ -1,0 +1,70 @@
+{
+  "id": "7718d5721b10256972e51ddd",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_295726535b60",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_295726535b60.json",
+  "historical_output_sha256": "85e0e1e67dbbde5dc4f2fc8e9341e0ea9beb3aecf686021da3aa117b1c5a7968",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 965,
+  "messages_sha256": "c6ea91465d08717a85ba9fb9ed7612bdb4e9678f499790d9863365d63f6ccaea",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of handling binary strings for the HTTP method, but it introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to potential scope creep and maintainability issues.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to a project convention mismatch as it deviates from the current handling of string conversion.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to insufficient tests for the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 250,
+      "returned_model_request_id": "769",
+      "completed_at_utc": "2026-11-06T04:04:49.256519+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of handling binary strings for the HTTP method, but it introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to potential scope creep and maintainability issues."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to a project convention mismatch as it deviates from the current handling of string conversion."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to insufficient tests for the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of handling binary strings for the HTTP method, but it introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to potential scope creep and maintainability issues."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to a project convention mismatch as it deviates from the current handling of string conversion."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch introduces a new function `to_native_string` without ensuring its existence or usage elsewhere in the codebase, leading to insufficient tests for the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

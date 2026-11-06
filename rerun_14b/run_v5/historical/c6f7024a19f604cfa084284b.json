@@ -1,0 +1,50 @@
+{
+  "id": "c6f7024a19f604cfa084284b",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_c6b49696dacb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_c6b49696dacb.json",
+  "historical_output_sha256": "109e90a6d1a8f268241aac3e56d8ff440fc80b38483e2d5f5ced02c30c6621e2",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1493,
+  "messages_sha256": "ecba079b7d79728f93ed04c58d127756dae401520e6fd56bea1f8ff08e9e0808",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue with `to_unstacked_dataset` for single-dim variables by replacing `None` with `np.nan` in the `assign_coords` dictionary. The change is minimal and focused on the reported issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a project convention mismatch by using `np.nan` instead of `None` for missing coordinates. This could be inconsistent with the rest of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 139,
+      "returned_model_request_id": "1449",
+      "completed_at_utc": "2026-11-06T04:08:55.020379+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue with `to_unstacked_dataset` for single-dim variables by replacing `None` with `np.nan` in the `assign_coords` dictionary. The change is minimal and focused on the reported issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a project convention mismatch by using `np.nan` instead of `None` for missing coordinates. This could be inconsistent with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change addresses the issue with `to_unstacked_dataset` for single-dim variables by replacing `None` with `np.nan` in the `assign_coords` dictionary. The change is minimal and focused on the reported issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a project convention mismatch by using `np.nan` instead of `None` for missing coordinates. This could be inconsistent with the rest of the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

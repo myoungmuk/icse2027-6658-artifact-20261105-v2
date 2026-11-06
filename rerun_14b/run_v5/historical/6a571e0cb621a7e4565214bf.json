@@ -1,0 +1,50 @@
+{
+  "id": "6a571e0cb621a7e4565214bf",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_6afbd3fee8ea",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_6afbd3fee8ea.json",
+  "historical_output_sha256": "6e5746a580c949b05926ff3d987a81ef1969b246e6c95e58544968d8a44a0c51",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1576,
+  "messages_sha256": "3e4a2210a9f47a06ccbeb5983290c0ea97be9ad364a27fd3051caa40e260246e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a new check for unsafe characters in URLs, which may not align with the new behavior of Python's URL splitting.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new check for unsafe characters in URLs, which may not align with the new behavior of Python's URL splitting. This could lead to a behavioral regression if Django's URL validation logic is expected to follow Python's updated behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 132,
+      "returned_model_request_id": "1471",
+      "completed_at_utc": "2026-11-06T04:08:55.024887+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a new check for unsafe characters in URLs, which may not align with the new behavior of Python's URL splitting.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a new check for unsafe characters in URLs, which may not align with the new behavior of Python's URL splitting. This could lead to a behavioral regression if Django's URL validation logic is expected to follow Python's updated behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a new check for unsafe characters in URLs, which may not align with the new behavior of Python's URL splitting.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a new check for unsafe characters in URLs, which may not align with the new behavior of Python's URL splitting. This could lead to a behavioral regression if Django's URL validation logic is expected to follow Python's updated behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

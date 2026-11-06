@@ -1,0 +1,60 @@
+{
+  "id": "62d370cddd3c554e28078a32",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_8a7ab9075870",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_8a7ab9075870.json",
+  "historical_output_sha256": "5d9c5030c3e61869294e68dfa347b0142bdfa840276c243258ff4592bb0fe7ad",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1213,
+  "messages_sha256": "492adb1b7ca1dd2924135fee23c424d9851e43928003634de55f864693a0329c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a special case for handling intersections with Reals, which may not be the most general solution.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"major\",\n      \"description\": \"The patch special-cases the intersection with Reals, which may not handle other similar cases correctly.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be more readable with better variable naming and comments.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "1427",
+      "completed_at_utc": "2026-11-06T04:08:36.612414+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a special case for handling intersections with Reals, which may not be the most general solution.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The patch special-cases the intersection with Reals, which may not handle other similar cases correctly."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with better variable naming and comments."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a special case for handling intersections with Reals, which may not be the most general solution.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The patch special-cases the intersection with Reals, which may not handle other similar cases correctly."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with better variable naming and comments."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

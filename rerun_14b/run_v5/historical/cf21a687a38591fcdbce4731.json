@@ -1,0 +1,50 @@
+{
+  "id": "cf21a687a38591fcdbce4731",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_785f08997384",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_785f08997384.json",
+  "historical_output_sha256": "11fed298cc2c2c2505075de49485fd713fd51b7783a6165866ac582e43569800",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1715,
+  "messages_sha256": "3f65b2c0803d03b1843cdf6169811ff0537907465a6ba60f302674d15edac373",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of preserving wrapper attributes in method decorators, but introduces a non-minimal change by adding new files and potentially unrelated test cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces new files (reproduce.py and test_edge_cases.py) and potentially unrelated test cases, which may not be necessary for resolving the specific issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1998",
+      "completed_at_utc": "2026-11-06T04:13:06.091627+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of preserving wrapper attributes in method decorators, but introduces a non-minimal change by adding new files and potentially unrelated test cases.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces new files (reproduce.py and test_edge_cases.py) and potentially unrelated test cases, which may not be necessary for resolving the specific issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of preserving wrapper attributes in method decorators, but introduces a non-minimal change by adding new files and potentially unrelated test cases.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces new files (reproduce.py and test_edge_cases.py) and potentially unrelated test cases, which may not be necessary for resolving the specific issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

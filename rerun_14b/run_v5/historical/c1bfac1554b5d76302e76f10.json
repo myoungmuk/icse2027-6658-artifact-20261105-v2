@@ -1,0 +1,60 @@
+{
+  "id": "c1bfac1554b5d76302e76f10",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_354b39cd1bcf",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_354b39cd1bcf.json",
+  "historical_output_sha256": "b8b37cd089b9ebcc7ad6ecfbe33ac5220e00f2d0da9772c301687f176c1baa11",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 782,
+  "messages_sha256": "ea73848fadc7a78d4170af3523623b6f53458e1568776dc0ee525d174e6c3a47",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific edge case but lacks broader context and tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the fix for the 'string index out of range' error.\"\n    },\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not handle other potential null or empty string cases that might cause similar issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 137,
+      "returned_model_request_id": "140",
+      "completed_at_utc": "2026-11-06T04:00:52.714340+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific edge case but lacks broader context and tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the fix for the 'string index out of range' error."
+      },
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not handle other potential null or empty string cases that might cause similar issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific edge case but lacks broader context and tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the fix for the 'string index out of range' error."
+      },
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not handle other potential null or empty string cases that might cause similar issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

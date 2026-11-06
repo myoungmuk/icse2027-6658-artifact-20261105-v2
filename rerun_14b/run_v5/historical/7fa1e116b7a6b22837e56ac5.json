@@ -1,0 +1,50 @@
+{
+  "id": "7fa1e116b7a6b22837e56ac5",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_93a9dd29b948",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_93a9dd29b948.json",
+  "historical_output_sha256": "0a9a3657bfc6e87edcbcf74afa318a5275e7213fba02ac79355c217a87ae99f1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2806,
+  "messages_sha256": "189fa3645339320a28664d2543fa81e4b77868115a003ffc7f8e028c74c9dcdb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue with HistGradientBoostingClassifier not working with string targets when early stopping is turned on. The changes are minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code introduces a new file `reproduce_issue.py` which is not necessary for the fix and could be considered a project convention mismatch.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "1921",
+      "completed_at_utc": "2026-11-06T04:12:42.345114+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue with HistGradientBoostingClassifier not working with string targets when early stopping is turned on. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces a new file `reproduce_issue.py` which is not necessary for the fix and could be considered a project convention mismatch."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue with HistGradientBoostingClassifier not working with string targets when early stopping is turned on. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces a new file `reproduce_issue.py` which is not necessary for the fix and could be considered a project convention mismatch."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

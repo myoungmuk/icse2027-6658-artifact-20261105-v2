@@ -1,0 +1,50 @@
+{
+  "id": "82dfb925fbd790124b18044d",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_c810dc6f1cb1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_c810dc6f1cb1.json",
+  "historical_output_sha256": "e74f23e1c3074cfd9e45e10ecf8a550ebfa970b05e536d0853a9fb89b141d175",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1059,
+  "messages_sha256": "35b2800817e3f001b4d26fdddd4008af21c25969955b91553eedb002ab6fbf08",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a method `clear_unused_annotations` which is not defined in the provided diff. This could lead to a runtime error.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The method `clear_unused_annotations` is called on `query_clone` but is not defined anywhere in the provided diff. This will result in an AttributeError at runtime.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "1266",
+      "completed_at_utc": "2026-11-06T04:07:40.858323+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a method `clear_unused_annotations` which is not defined in the provided diff. This could lead to a runtime error.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The method `clear_unused_annotations` is called on `query_clone` but is not defined anywhere in the provided diff. This will result in an AttributeError at runtime."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch introduces a method `clear_unused_annotations` which is not defined in the provided diff. This could lead to a runtime error.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The method `clear_unused_annotations` is called on `query_clone` but is not defined anywhere in the provided diff. This will result in an AttributeError at runtime."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

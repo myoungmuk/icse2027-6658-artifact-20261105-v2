@@ -1,0 +1,50 @@
+{
+  "id": "4ff497e1b1729e83ce4179b4",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_dee5b48db88c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_dee5b48db88c.json",
+  "historical_output_sha256": "326bba262cc4e933edfe17f15cd8ab76db6857eab90889d4f13bf9a1d31278de",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1431,
+  "messages_sha256": "f0b071c232bd1a95cefe37b90f54058d8ce54124530ec5fa38c77ca6c77b1529",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch changes the permission checks for auto-created intermediate models in admin inlines, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the permission checks from 'view' to 'change' for auto-created intermediate models. This may break existing behavior where users with only view permissions could not modify the intermediate model, which might be relied upon in some cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 130,
+      "returned_model_request_id": "1412",
+      "completed_at_utc": "2026-11-06T04:08:36.609685+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch changes the permission checks for auto-created intermediate models in admin inlines, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the permission checks from 'view' to 'change' for auto-created intermediate models. This may break existing behavior where users with only view permissions could not modify the intermediate model, which might be relied upon in some cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch changes the permission checks for auto-created intermediate models in admin inlines, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch changes the permission checks from 'view' to 'change' for auto-created intermediate models. This may break existing behavior where users with only view permissions could not modify the intermediate model, which might be relied upon in some cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

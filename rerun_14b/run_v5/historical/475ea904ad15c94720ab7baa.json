@@ -1,0 +1,60 @@
+{
+  "id": "475ea904ad15c94720ab7baa",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_c1839e2ebf72",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_c1839e2ebf72.json",
+  "historical_output_sha256": "72f400514075236a1ed370bf82fa9680f92a765e04f177127446c44c33082ec5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 929,
+  "messages_sha256": "578baddd9cf28be5488d13162b3461278013fd952429ede7c575a3af19f81020",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a non-minimal change and may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch checks if the method already exists before setting it, which is not a minimal change and may not be necessary.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch may introduce a behavioral regression risk by changing the behavior of how methods are set on the model class.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 145,
+      "returned_model_request_id": "150",
+      "completed_at_utc": "2026-11-06T04:01:09.163079+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a non-minimal change and may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch checks if the method already exists before setting it, which is not a minimal change and may not be necessary."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch may introduce a behavioral regression risk by changing the behavior of how methods are set on the model class."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a non-minimal change and may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch checks if the method already exists before setting it, which is not a minimal change and may not be necessary."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch may introduce a behavioral regression risk by changing the behavior of how methods are set on the model class."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

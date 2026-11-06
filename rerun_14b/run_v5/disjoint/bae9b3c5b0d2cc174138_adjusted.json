@@ -1,0 +1,29 @@
+{
+  "code": "bae9b3c5b0d2cc174138",
+  "instance_id": "django__django-15483",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "bae9b3c5b0d2cc174138_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1327,
+  "messages_sha256": "2a8adb0f064f967099b56857894f0022c20d9daac0abd0783342f2c168a628f4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new class `AppAdmin` that is intended to customize app listing in the admin index. However, it is marked as backwards incompatible with the current NFA API, which is a significant concern. Additionally, the `order` attribute is a global issue that should be handled by the app itself, not specified in the admin configuration. This could lead to confusion and potential conflicts with third-party apps. Therefore, the patch should not be merged as-is.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "2603",
+      "completed_at_utc": "2026-11-06T04:17:31.225316+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new class `AppAdmin` that is intended to customize app listing in the admin index. However, it is marked as backwards incompatible with the current NFA API, which is a significant concern. Additionally, the `order` attribute is a global issue that should be handled by the app itself, not specified in the admin configuration. This could lead to confusion and potential conflicts with third-party apps. Therefore, the patch should not be merged as-is."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "090a151d1437fb11935c84cf",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_19393c81711e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_19393c81711e.json",
+  "historical_output_sha256": "9521b479134c0b5a2e51e9761fb755638065bb8f306e8eb17b539ae4370879e5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 946,
+  "messages_sha256": "423de2836d6928affe7bf49f525ce80217d794a4cbc06c43de20c49bcc3ab528",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a non-minimal change and may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a condition that checks for `not raw`, which is not directly related to the issue of handling explicit PK values with defaults. This change may have unintended side effects on other parts of the codebase.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any tests to verify the behavior change. It is crucial to ensure that the new behavior does not introduce regressions or unexpected issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 172,
+      "returned_model_request_id": "771",
+      "completed_at_utc": "2026-11-06T04:04:49.257090+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a non-minimal change and may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The patch introduces a condition that checks for `not raw`, which is not directly related to the issue of handling explicit PK values with defaults. This change may have unintended side effects on other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any tests to verify the behavior change. It is crucial to ensure that the new behavior does not introduce regressions or unexpected issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch introduces a non-minimal change and may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The patch introduces a condition that checks for `not raw`, which is not directly related to the issue of handling explicit PK values with defaults. This change may have unintended side effects on other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any tests to verify the behavior change. It is crucial to ensure that the new behavior does not introduce regressions or unexpected issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

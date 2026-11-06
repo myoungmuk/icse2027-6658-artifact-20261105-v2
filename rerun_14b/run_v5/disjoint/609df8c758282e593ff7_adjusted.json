@@ -1,0 +1,29 @@
+{
+  "code": "609df8c758282e593ff7",
+  "instance_id": "astropy__astropy-13469",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "609df8c758282e593ff7_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 678,
+  "messages_sha256": "cd51dac9a124622b8d65befb853fc72c63119517eb82bbb20e323d3e54041e6d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch removes the check for `dtype=object`, which could lead to unexpected behavior and potential data corruption. Allowing `dtype=object` could result in incorrect data structures and violate the intended use of the `Table` class.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 68,
+      "returned_model_request_id": "2439",
+      "completed_at_utc": "2026-11-06T04:16:23.787001+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch removes the check for `dtype=object`, which could lead to unexpected behavior and potential data corruption. Allowing `dtype=object` could result in incorrect data structures and violate the intended use of the `Table` class."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

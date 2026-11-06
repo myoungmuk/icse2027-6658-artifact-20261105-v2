@@ -1,0 +1,60 @@
+{
+  "id": "58f102366321433eafc72335",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_6070b448c7c0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_6070b448c7c0.json",
+  "historical_output_sha256": "fa2b463a7bae7b73a4215172dfd999f3ef36a5bfeaff490e79ed1d79c0a1db4f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1851,
+  "messages_sha256": "f758c4abd9fc55bfd672e2b5ebc48719a56c3f761f857e5d4b42dc0fa8b7af31",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by ensuring the number of available CPUs is never zero, which prevents a crash in Kubernetes environments.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change does not address the calculation in line 55, which could potentially lead to similar issues in other environments.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a comment that does not follow the project's documentation style.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "1578",
+      "completed_at_utc": "2026-11-06T04:09:29.773607+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by ensuring the number of available CPUs is never zero, which prevents a crash in Kubernetes environments.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address the calculation in line 55, which could potentially lead to similar issues in other environments."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a comment that does not follow the project's documentation style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by ensuring the number of available CPUs is never zero, which prevents a crash in Kubernetes environments.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address the calculation in line 55, which could potentially lead to similar issues in other environments."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a comment that does not follow the project's documentation style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

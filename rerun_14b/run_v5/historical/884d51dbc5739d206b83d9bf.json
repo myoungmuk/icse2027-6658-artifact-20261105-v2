@@ -1,0 +1,50 @@
+{
+  "id": "884d51dbc5739d206b83d9bf",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_e4195f53b569",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_e4195f53b569.json",
+  "historical_output_sha256": "a5afa603a5b084144a7d6fb3b78e353b361e621b909eaae41548a6cebc315730",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1317,
+  "messages_sha256": "581e52918d0c102f7ac19b1c3fa79bf5a0065880c11efcacd77eb6a42f078dc7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of adding a nullable OneToOneField on SQLite by modifying the add_field method in schema.py. It checks for primary key, unique fields, and non-null fields before deciding whether to remake the table.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding a comment explaining the conditions under which the table is remade.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "1580",
+      "completed_at_utc": "2026-11-06T04:09:29.773987+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of adding a nullable OneToOneField on SQLite by modifying the add_field method in schema.py. It checks for primary key, unique fields, and non-null fields before deciding whether to remake the table.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding a comment explaining the conditions under which the table is remade."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of adding a nullable OneToOneField on SQLite by modifying the add_field method in schema.py. It checks for primary key, unique fields, and non-null fields before deciding whether to remake the table.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding a comment explaining the conditions under which the table is remade."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "36700e99f33efd5741f58ada",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_1371bdae0b91",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_1371bdae0b91.json",
+  "historical_output_sha256": "58059049da202f04ce827705d2880e8e3bd40ac74afc7ed9239bf7724054425f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 917,
+  "messages_sha256": "e5a487d349deffdea65ae99d1edaba28600dc34f42c94a15ff72d47200d34938",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR improves error messages for readonly_fields but may introduce inconsistencies with other field checks.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a new format for error messages that is not consistent with other field checks like list_editable, raw_id_fields, and list_display.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "671",
+      "completed_at_utc": "2026-11-06T04:03:59.189671+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR improves error messages for readonly_fields but may introduce inconsistencies with other field checks.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The change introduces a new format for error messages that is not consistent with other field checks like list_editable, raw_id_fields, and list_display."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR improves error messages for readonly_fields but may introduce inconsistencies with other field checks.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "major",
+        "description": "The change introduces a new format for error messages that is not consistent with other field checks like list_editable, raw_id_fields, and list_display."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

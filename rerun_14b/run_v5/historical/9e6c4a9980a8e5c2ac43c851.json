@@ -1,0 +1,60 @@
+{
+  "id": "9e6c4a9980a8e5c2ac43c851",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_3fe6730ba81f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_3fe6730ba81f.json",
+  "historical_output_sha256": "d1dff4897a1b4e03b0fde81eae8d344d29a8ce0967e2dd9f5bf36b10f932f15c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 764,
+  "messages_sha256": "02d495eae4da28e818c4685070b333db04b423757c151b82d37af28c2aed4397",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses a specific issue but introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces an 'else' block that is not necessary for fixing the referenced issue, leading to a non-minimal change.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any new tests to verify that the fix works as intended and does not regress other behaviors.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 150,
+      "returned_model_request_id": "541",
+      "completed_at_utc": "2026-11-06T04:03:24.719298+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses a specific issue but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces an 'else' block that is not necessary for fixing the referenced issue, leading to a non-minimal change."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify that the fix works as intended and does not regress other behaviors."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses a specific issue but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces an 'else' block that is not necessary for fixing the referenced issue, leading to a non-minimal change."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify that the fix works as intended and does not regress other behaviors."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

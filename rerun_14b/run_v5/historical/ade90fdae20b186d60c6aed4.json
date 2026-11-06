@@ -1,0 +1,50 @@
+{
+  "id": "ade90fdae20b186d60c6aed4",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_30665335c6ea",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_30665335c6ea.json",
+  "historical_output_sha256": "235788e2dfe7531a3b810e4c4b3843299cb971e7c9231a8cb2595730816e5f0b",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1122,
+  "messages_sha256": "a5de5cb958f28a076aafd44978ef5a4fd8cee64de8842a32e8d860c668f3cfc9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly addresses the issue by modifying the return dictionary to include the referenced field name. However, it introduces a non-minimal change by altering the return type of the function, which may affect other parts of the codebase.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the return type of the `get_relations` function to include an additional element in the tuple, which may affect other parts of the codebase that rely on the current return type.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 143,
+      "returned_model_request_id": "1269",
+      "completed_at_utc": "2026-11-06T04:07:40.858886+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly addresses the issue by modifying the return dictionary to include the referenced field name. However, it introduces a non-minimal change by altering the return type of the function, which may affect other parts of the codebase.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the return type of the `get_relations` function to include an additional element in the tuple, which may affect other parts of the codebase that rely on the current return type."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly addresses the issue by modifying the return dictionary to include the referenced field name. However, it introduces a non-minimal change by altering the return type of the function, which may affect other parts of the codebase.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the return type of the `get_relations` function to include an additional element in the tuple, which may affect other parts of the codebase that rely on the current return type."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

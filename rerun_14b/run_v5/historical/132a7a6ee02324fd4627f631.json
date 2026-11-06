@@ -1,0 +1,60 @@
+{
+  "id": "132a7a6ee02324fd4627f631",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_5255edf21cdd",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_5255edf21cdd.json",
+  "historical_output_sha256": "75d3e74fd0577e68058e65d2f4b2511fdb469434dd7bd081bb07995773928a36",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2465,
+  "messages_sha256": "3abdb4586c085d383d08e0dfb3f2b47cf638bbb6bfe398c36acce46d9c1a5ed5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR replaces the use of a temporary .pgpass file with the PGPASSWORD environment variable in the PostgreSQL client. It also adds new test files for the changes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code style is inconsistent with the rest of the repository, such as the removal of the blank line after the import statements and the addition of unnecessary blank lines.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR does not include any documentation updates for the changes made.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 163,
+      "returned_model_request_id": "1931",
+      "completed_at_utc": "2026-11-06T04:12:42.347484+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR replaces the use of a temporary .pgpass file with the PGPASSWORD environment variable in the PostgreSQL client. It also adds new test files for the changes.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style is inconsistent with the rest of the repository, such as the removal of the blank line after the import statements and the addition of unnecessary blank lines."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not include any documentation updates for the changes made."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR replaces the use of a temporary .pgpass file with the PGPASSWORD environment variable in the PostgreSQL client. It also adds new test files for the changes.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style is inconsistent with the rest of the repository, such as the removal of the blank line after the import statements and the addition of unnecessary blank lines."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The PR does not include any documentation updates for the changes made."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

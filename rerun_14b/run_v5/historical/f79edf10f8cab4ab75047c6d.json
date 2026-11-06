@@ -1,0 +1,50 @@
+{
+  "id": "f79edf10f8cab4ab75047c6d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_1665630c0822",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_1665630c0822.json",
+  "historical_output_sha256": "798001ce2274c3bea4c132ff86230ed344f9ca6cf617a88e68a6c132dba9df2d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1601,
+  "messages_sha256": "8fb581f5f8f65b6a33f87cb0cc2f4c4b3ba91d1cc783d37a41582813c4ad5314",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of stackplot not supporting color cycle references, but it introduces a non-minimal change by modifying the color handling logic.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR changes the color handling logic in a way that may introduce unintended side effects or break existing behavior. The changes are not minimal and involve more than just fixing the immediate issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "473",
+      "completed_at_utc": "2026-11-06T04:02:50.466519+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of stackplot not supporting color cycle references, but it introduces a non-minimal change by modifying the color handling logic.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR changes the color handling logic in a way that may introduce unintended side effects or break existing behavior. The changes are not minimal and involve more than just fixing the immediate issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of stackplot not supporting color cycle references, but it introduces a non-minimal change by modifying the color handling logic.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR changes the color handling logic in a way that may introduce unintended side effects or break existing behavior. The changes are not minimal and involve more than just fixing the immediate issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

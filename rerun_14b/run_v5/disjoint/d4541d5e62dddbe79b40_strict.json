@@ -1,0 +1,29 @@
+{
+  "code": "d4541d5e62dddbe79b40",
+  "instance_id": "pydata__xarray-3905",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "d4541d5e62dddbe79b40_strict",
+  "arm": "strict",
+  "input_tokens": 2321,
+  "messages_sha256": "8af3e10150f890dc87614cbc61b8923ed2771d1dab95fc3f7f632ec93663e10c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new function `limit_lines` to truncate long string representations, but it does not address the root cause of the issue. The expected behavior is not clearly defined, and the patch may not handle all edge cases, such as arrays with varying dimensions or specific data types. Additionally, the patch lacks tests to ensure the functionality works as intended and does not introduce regressions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 98,
+      "returned_model_request_id": "2644",
+      "completed_at_utc": "2026-11-06T04:17:49.111568+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new function `limit_lines` to truncate long string representations, but it does not address the root cause of the issue. The expected behavior is not clearly defined, and the patch may not handle all edge cases, such as arrays with varying dimensions or specific data types. Additionally, the patch lacks tests to ensure the functionality works as intended and does not introduce regressions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

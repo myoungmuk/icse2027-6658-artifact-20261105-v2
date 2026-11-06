@@ -1,0 +1,50 @@
+{
+  "id": "b75ee3c8f97da9f3889360ab",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_6f472d76e979",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_6f472d76e979.json",
+  "historical_output_sha256": "5132b93e2ba9b35c3c9ac07583988d1684a00f6b42437c1312605fb93bfae5b9",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1056,
+  "messages_sha256": "e61e30eeaef4dd004d913275b4f751092299da6fb06270595a3e2e0a4b171fe0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change removes the `follow_symlinks=False` parameter, which should resolve the issue of symlinked directories not being collected. The diff is minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a `follow_symlinks=True` parameter, which is not consistent with the existing code style and conventions in the repository.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "1281",
+      "completed_at_utc": "2026-11-06T04:07:40.861379+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change removes the `follow_symlinks=False` parameter, which should resolve the issue of symlinked directories not being collected. The diff is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a `follow_symlinks=True` parameter, which is not consistent with the existing code style and conventions in the repository."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change removes the `follow_symlinks=False` parameter, which should resolve the issue of symlinked directories not being collected. The diff is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a `follow_symlinks=True` parameter, which is not consistent with the existing code style and conventions in the repository."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

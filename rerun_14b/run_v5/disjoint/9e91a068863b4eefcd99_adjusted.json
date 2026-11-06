@@ -1,0 +1,29 @@
+{
+  "code": "9e91a068863b4eefcd99",
+  "instance_id": "sympy__sympy-22706",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "9e91a068863b4eefcd99_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 538,
+  "messages_sha256": "d4f150b882ccd81df28b031103fbb7b2dd3fd9bd5d02841223aa82b556726a8a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the IndexError by checking if the list `n` is not empty before accessing its first element. This prevents the error and maintains the functionality of the `StrPrinter` for `UnevaluatedMul`. The change is straightforward and does not introduce any apparent regressions or compatibility issues.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 79,
+      "returned_model_request_id": "2607",
+      "completed_at_utc": "2026-11-06T04:17:31.226240+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the IndexError by checking if the list `n` is not empty before accessing its first element. This prevents the error and maintains the functionality of the `StrPrinter` for `UnevaluatedMul`. The change is straightforward and does not introduce any apparent regressions or compatibility issues."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

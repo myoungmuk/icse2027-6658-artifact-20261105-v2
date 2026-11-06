@@ -1,0 +1,60 @@
+{
+  "id": "07abb379ab65a82218eda0b1",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_2b9b4624645c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_2b9b4624645c.json",
+  "historical_output_sha256": "46cdc3debc2ae72c06608c809264ba008b73ea6f1e2e5967a354238adda382e3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 883,
+  "messages_sha256": "9a8765ee68180d6e7f3269b0dd035a287df3a1ea6e244134aadd303b57075bc0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR allows lists in the hooks argument, but it may introduce behavioral regressions and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior where hooks are expected to be single functions. It could lead to unexpected behavior if a list of hooks is passed.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no tests added to verify the new functionality, which is crucial for ensuring the change works as intended and does not introduce regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.5\n}",
+      "finish_reason": "stop",
+      "output_tokens": 161,
+      "returned_model_request_id": "79",
+      "completed_at_utc": "2026-11-06T04:00:36.149824+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR allows lists in the hooks argument, but it may introduce behavioral regressions and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior where hooks are expected to be single functions. It could lead to unexpected behavior if a list of hooks is passed."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests added to verify the new functionality, which is crucial for ensuring the change works as intended and does not introduce regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.5
+  },
+  "normalized": {
+    "summary": "The PR allows lists in the hooks argument, but it may introduce behavioral regressions and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior where hooks are expected to be single functions. It could lead to unexpected behavior if a list of hooks is passed."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no tests added to verify the new functionality, which is crucial for ensuring the change works as intended and does not introduce regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.5
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

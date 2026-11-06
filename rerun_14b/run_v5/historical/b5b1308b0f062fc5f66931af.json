@@ -1,0 +1,50 @@
+{
+  "id": "b5b1308b0f062fc5f66931af",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_7ac5ea94a73f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_7ac5ea94a73f.json",
+  "historical_output_sha256": "2abe8e618cb16b3265a26b9cbe4e773bedb88ab43844697c28b6637eac983790",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2950,
+  "messages_sha256": "bef7222dd0c067b737f5329075f3ede023bc58dfb69af48627677a66a0bd4209",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a `keep_attrs` parameter to `xr.where` and updates the internal `apply_variable_ufunc` to preserve attributes. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces a new parameter `keep_attrs` to the `where` function, which is a minor API change. Ensure that this change is documented in the relevant sections of the documentation.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 134,
+      "returned_model_request_id": "1918",
+      "completed_at_utc": "2026-11-06T04:12:04.313747+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a `keep_attrs` parameter to `xr.where` and updates the internal `apply_variable_ufunc` to preserve attributes. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new parameter `keep_attrs` to the `where` function, which is a minor API change. Ensure that this change is documented in the relevant sections of the documentation."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR adds a `keep_attrs` parameter to `xr.where` and updates the internal `apply_variable_ufunc` to preserve attributes. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces a new parameter `keep_attrs` to the `where` function, which is a minor API change. Ensure that this change is documented in the relevant sections of the documentation."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

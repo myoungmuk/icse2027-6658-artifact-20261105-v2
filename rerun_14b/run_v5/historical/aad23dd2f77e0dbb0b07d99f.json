@@ -1,0 +1,50 @@
+{
+  "id": "aad23dd2f77e0dbb0b07d99f",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_108c5bccc4fe",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_108c5bccc4fe.json",
+  "historical_output_sha256": "8e0f13b9a1e976fefac29693334ce957b7ee52cbbf1d26244c5eaf4c63b5ebb3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2029,
+  "messages_sha256": "f266004604bb0db3fbea5de58b6138051ee014c46ab28656978763ddf19cbcf5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the version comparison issue in `needs_extensions` by using `packaging.version` for proper version parsing. It also includes a new test file `reproduce.py` to verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test file `reproduce.py` is not included in the diff, which is expected. However, it would be good to ensure that this test is added to the repository's test suite.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 139,
+      "returned_model_request_id": "2148",
+      "completed_at_utc": "2026-11-06T04:14:31.724532+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the version comparison issue in `needs_extensions` by using `packaging.version` for proper version parsing. It also includes a new test file `reproduce.py` to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file `reproduce.py` is not included in the diff, which is expected. However, it would be good to ensure that this test is added to the repository's test suite."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR fixes the version comparison issue in `needs_extensions` by using `packaging.version` for proper version parsing. It also includes a new test file `reproduce.py` to verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file `reproduce.py` is not included in the diff, which is expected. However, it would be good to ensure that this test is added to the repository's test suite."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

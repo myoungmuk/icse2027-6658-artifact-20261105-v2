@@ -1,0 +1,50 @@
+{
+  "id": "a6ec6cd2c711379dd41d1e53",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a49b570c445f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a49b570c445f.json",
+  "historical_output_sha256": "d4430c69ea25ce254541c8c47ff57d5e54fe6f2a9061b31f94ae13a5530fc1ec",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1067,
+  "messages_sha256": "50377cc7ca9c741395c0d3c5631eb003c886d4b8d3589ea4c0e4536cd4d9d652",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of multiple AlterField operations not being reduced, but it lacks tests to ensure its correctness and completeness.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a new behavior without accompanying tests to verify its correctness and ensure it doesn't regress in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "452",
+      "completed_at_utc": "2026-11-06T04:02:50.462235+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of multiple AlterField operations not being reduced, but it lacks tests to ensure its correctness and completeness.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch introduces a new behavior without accompanying tests to verify its correctness and ensure it doesn't regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of multiple AlterField operations not being reduced, but it lacks tests to ensure its correctness and completeness.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch introduces a new behavior without accompanying tests to verify its correctness and ensure it doesn't regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

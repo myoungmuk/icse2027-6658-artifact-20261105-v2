@@ -1,0 +1,50 @@
+{
+  "id": "3e01096a005b551ca3090b74",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_632dccb58940",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_632dccb58940.json",
+  "historical_output_sha256": "292be12c02d660c725a7975aa5254615791972964b2db1d761a0d077773be94d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2062,
+  "messages_sha256": "8e80984e23b9fc26b5bddb864f7e1add7f90d63eea8d1a10409a3226f59cf46c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue but introduces a non-minimal change by modifying the behavior of `modify_field_list` function.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a new parameter `suppress_rtype` to `modify_field_list`, which is not used in other parts of the code. This could lead to inconsistencies and maintenance issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "664",
+      "completed_at_utc": "2026-11-06T04:03:59.188308+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue but introduces a non-minimal change by modifying the behavior of `modify_field_list` function.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a new parameter `suppress_rtype` to `modify_field_list`, which is not used in other parts of the code. This could lead to inconsistencies and maintenance issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue but introduces a non-minimal change by modifying the behavior of `modify_field_list` function.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a new parameter `suppress_rtype` to `modify_field_list`, which is not used in other parts of the code. This could lead to inconsistencies and maintenance issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

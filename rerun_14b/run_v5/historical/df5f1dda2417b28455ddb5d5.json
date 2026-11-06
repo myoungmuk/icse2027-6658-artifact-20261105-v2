@@ -1,0 +1,50 @@
+{
+  "id": "df5f1dda2417b28455ddb5d5",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_d26985bf693f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_d26985bf693f.json",
+  "historical_output_sha256": "57192cbc9e7adba5c3117d5e90d0b6ff5d0a07c3cb2a2e0a7745aeea9511ffbe",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1204,
+  "messages_sha256": "567ed013bcf7cc8a684d42370c6d3ca0e5b0609ba2a89cefd67c0112e43015d1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly updates the hint for recursive relationships, but it does not address the underlying issue of the error message.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR only changes the hint message and does not fix the actual error that is being raised. The error message still suggests using ForeignKey instead of ManyToManyField, which is incorrect.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "382",
+      "completed_at_utc": "2026-11-06T04:02:17.676441+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly updates the hint for recursive relationships, but it does not address the underlying issue of the error message.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR only changes the hint message and does not fix the actual error that is being raised. The error message still suggests using ForeignKey instead of ManyToManyField, which is incorrect."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR correctly updates the hint for recursive relationships, but it does not address the underlying issue of the error message.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The PR only changes the hint message and does not fix the actual error that is being raised. The error message still suggests using ForeignKey instead of ManyToManyField, which is incorrect."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

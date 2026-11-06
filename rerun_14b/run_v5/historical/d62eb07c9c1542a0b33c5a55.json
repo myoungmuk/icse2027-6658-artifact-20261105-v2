@@ -1,0 +1,50 @@
+{
+  "id": "d62eb07c9c1542a0b33c5a55",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_1433b427d1ab",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_1433b427d1ab.json",
+  "historical_output_sha256": "4cce580948f4c7a68a51ecc38ab3ef47f6e2863e98b0cb4ecac52be482061207",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 830,
+  "messages_sha256": "e4b0b401874a3e8eba9ada64c07e8214a3f54bccd8a57ce6953fefc687772387",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a necessary permission check but lacks tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the new permission check.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 83,
+      "returned_model_request_id": "87",
+      "completed_at_utc": "2026-11-06T04:00:36.151406+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a necessary permission check but lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the new permission check."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a necessary permission check but lacks tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the new permission check."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

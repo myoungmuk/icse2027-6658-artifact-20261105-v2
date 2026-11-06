@@ -1,0 +1,29 @@
+{
+  "code": "f2c32e06de9f7d577e09",
+  "instance_id": "pydata__xarray-7003",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "f2c32e06de9f7d577e09_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 911,
+  "messages_sha256": "432fb3a2effd52809badb50ba61fb5779cbfe51336ab50678747af45d27c00ca",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces new files without any actual code or tests, which does not address the reported issue. The issue described is a TypeError when calling `get_unique()` on `ds.indexes` with a MultiIndex. The patch should include a fix for this issue, not just a script to reproduce it.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 82,
+      "returned_model_request_id": "2331",
+      "completed_at_utc": "2026-11-06T04:15:45.339673+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces new files without any actual code or tests, which does not address the reported issue. The issue described is a TypeError when calling `get_unique()` on `ds.indexes` with a MultiIndex. The patch should include a fix for this issue, not just a script to reproduce it."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

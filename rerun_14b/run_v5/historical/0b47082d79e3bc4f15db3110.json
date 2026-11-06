@@ -1,0 +1,50 @@
+{
+  "id": "0b47082d79e3bc4f15db3110",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_0df787c9c92c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_0df787c9c92c.json",
+  "historical_output_sha256": "9ca2edcfeb54bcacee0d7e150ad0fcd23cc12b1fb58a12f3210cfa470f17a108",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 980,
+  "messages_sha256": "826893bd9e4fa8879cbcf483f562731d1f0039c2d212f229e673bcc2a3d74269",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch adds a `.distinct()` call to the queryset to prevent duplicate options in formfields when using `limit_choices_to` with a Q object. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new method call `.distinct()` which may not align with the existing coding style or conventions in the Django project.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "193",
+      "completed_at_utc": "2026-11-06T04:01:25.593885+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch adds a `.distinct()` call to the queryset to prevent duplicate options in formfields when using `limit_choices_to` with a Q object. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new method call `.distinct()` which may not align with the existing coding style or conventions in the Django project."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch adds a `.distinct()` call to the queryset to prevent duplicate options in formfields when using `limit_choices_to` with a Q object. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new method call `.distinct()` which may not align with the existing coding style or conventions in the Django project."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

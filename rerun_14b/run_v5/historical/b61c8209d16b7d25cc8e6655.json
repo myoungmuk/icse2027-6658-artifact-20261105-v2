@@ -1,0 +1,60 @@
+{
+  "id": "b61c8209d16b7d25cc8e6655",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_bbd8ecf86280",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_bbd8ecf86280.json",
+  "historical_output_sha256": "4ca0db04799eedfc1b2ac6863142360724c7a7a821cf73d51d6ab34a82526816",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1032,
+  "messages_sha256": "9738d451ffd8c8416f7e465b3dbae8d964bac148d5e508568969990ee351259d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a non-minimal change and may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces additional logic that was not necessary, potentially leading to confusion and maintenance issues.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of the function by adding a conditional check for the 'widget' key in kwargs, which may inadvertently break existing behavior for users who rely on the default widget selection logic.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 156,
+      "returned_model_request_id": "469",
+      "completed_at_utc": "2026-11-06T04:02:50.465711+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a non-minimal change and may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional logic that was not necessary, potentially leading to confusion and maintenance issues."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of the function by adding a conditional check for the 'widget' key in kwargs, which may inadvertently break existing behavior for users who rely on the default widget selection logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a non-minimal change and may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional logic that was not necessary, potentially leading to confusion and maintenance issues."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of the function by adding a conditional check for the 'widget' key in kwargs, which may inadvertently break existing behavior for users who rely on the default widget selection logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

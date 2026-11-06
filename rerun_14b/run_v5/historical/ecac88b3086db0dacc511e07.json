@@ -1,0 +1,60 @@
+{
+  "id": "ecac88b3086db0dacc511e07",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_5772dfbb0117",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_5772dfbb0117.json",
+  "historical_output_sha256": "468ab12e98877dca1f15740d735ba467b046d5ab001411d1025ba1605fdb499e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 961,
+  "messages_sha256": "79c1ac3e0bba214398c74ac6dacd92ea63cb6b0691f1128141fb135dd24b2597",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change adds support for item_comments in the syndication framework, which is a functional enhancement.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The change does not address how item_comments should be formatted or validated, which could lead to incorrect or malformed comments in the feed.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new argument 'comments' to the feed.add_item() method, which should be documented in the relevant documentation files.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 155,
+      "returned_model_request_id": "292",
+      "completed_at_utc": "2026-11-06T04:02:01.124222+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change adds support for item_comments in the syndication framework, which is a functional enhancement.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address how item_comments should be formatted or validated, which could lead to incorrect or malformed comments in the feed."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new argument 'comments' to the feed.add_item() method, which should be documented in the relevant documentation files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change adds support for item_comments in the syndication framework, which is a functional enhancement.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The change does not address how item_comments should be formatted or validated, which could lead to incorrect or malformed comments in the feed."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new argument 'comments' to the feed.add_item() method, which should be documented in the relevant documentation files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

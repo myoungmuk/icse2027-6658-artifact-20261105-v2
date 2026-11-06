@@ -1,0 +1,50 @@
+{
+  "id": "70440f733df949230288847b",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_691b9bbb5dcc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_691b9bbb5dcc.json",
+  "historical_output_sha256": "f9c6c4833bbe2b9fd06e8868addf2e52281095b561990381764d742ac69ed296",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2037,
+  "messages_sha256": "5b0e789bae4bf551a65de798072f069e1c8f0d454f155fb675253d45558ccaaf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses a specific KeyError issue in the migration autodetector by using `pop` instead of `del`. The approach is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The change uses `pop` with a default value of `None`, which might not be the correct approach if the absence of the 'to' key is significant for other parts of the code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "989",
+      "completed_at_utc": "2026-11-06T04:05:55.613846+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses a specific KeyError issue in the migration autodetector by using `pop` instead of `del`. The approach is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The change uses `pop` with a default value of `None`, which might not be the correct approach if the absence of the 'to' key is significant for other parts of the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses a specific KeyError issue in the migration autodetector by using `pop` instead of `del`. The approach is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The change uses `pop` with a default value of `None`, which might not be the correct approach if the absence of the 'to' key is significant for other parts of the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

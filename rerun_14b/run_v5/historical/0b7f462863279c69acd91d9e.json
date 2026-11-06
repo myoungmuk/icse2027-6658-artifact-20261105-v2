@@ -1,0 +1,60 @@
+{
+  "id": "0b7f462863279c69acd91d9e",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a087f8d94181",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a087f8d94181.json",
+  "historical_output_sha256": "6c7478ce7f9ab52d913197a24c514847f6363daa9cbafad79711afed91541f77",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1180,
+  "messages_sha256": "b2e8778885ab4031db23b46aa7766deca61734129302839ccf51a07bda57ce49",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of incomplete results depending on the order of symbols with permute=True, but introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by adding a loop to generate signed permutations, which may not be necessary for the issue at hand.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR lacks sufficient tests to verify the correctness of the changes, particularly for the new logic added for signed permutations.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.7\n}",
+      "finish_reason": "stop",
+      "output_tokens": 165,
+      "returned_model_request_id": "603",
+      "completed_at_utc": "2026-11-06T04:03:41.540552+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of incomplete results depending on the order of symbols with permute=True, but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding a loop to generate signed permutations, which may not be necessary for the issue at hand."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR lacks sufficient tests to verify the correctness of the changes, particularly for the new logic added for signed permutations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.7
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of incomplete results depending on the order of symbols with permute=True, but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding a loop to generate signed permutations, which may not be necessary for the issue at hand."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR lacks sufficient tests to verify the correctness of the changes, particularly for the new logic added for signed permutations."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.7
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "16e5ae88620397a0e4abc1e2",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_32a9c5f7f287",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_32a9c5f7f287.json",
+  "historical_output_sha256": "f69ea329edc6e1ba70c08716f4176685159ba906d236aa15f2be988c8ed593da",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1113,
+  "messages_sha256": "df2a337707aa312858bdb4fb0663cc83b21e0faca059950589ba550bb27221c3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of using the value of an Enum object instead of its name in migrations, which can cause problems with translations. The proposed patch seems to fix the issue by using the Enum name instead of its value.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify that the change works as expected. It is crucial to have tests to ensure that the fix does not introduce any new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 137,
+      "returned_model_request_id": "113",
+      "completed_at_utc": "2026-11-06T04:00:52.707291+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of using the value of an Enum object instead of its name in migrations, which can cause problems with translations. The proposed patch seems to fix the issue by using the Enum name instead of its value.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the change works as expected. It is crucial to have tests to ensure that the fix does not introduce any new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of using the value of an Enum object instead of its name in migrations, which can cause problems with translations. The proposed patch seems to fix the issue by using the Enum name instead of its value.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the change works as expected. It is crucial to have tests to ensure that the fix does not introduce any new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

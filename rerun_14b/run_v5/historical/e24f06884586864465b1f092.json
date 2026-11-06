@@ -1,0 +1,50 @@
+{
+  "id": "e24f06884586864465b1f092",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_ce2c8c80078a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_ce2c8c80078a.json",
+  "historical_output_sha256": "a7a61ad0da13727b8cedf73eb53aea5a15e3512740e0fa13737556eb95ed110e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1291,
+  "messages_sha256": "48dd7ec5ea506fd1e594e72352fcc711824db2d8d1d090610d4d0b40440a6253",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch appears to fix the issue with Matrix.col_insert() but lacks comprehensive tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include additional tests to verify the correctness of Matrix.col_insert() in various scenarios, which increases the risk of future regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "95",
+      "completed_at_utc": "2026-11-06T04:00:36.152899+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch appears to fix the issue with Matrix.col_insert() but lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include additional tests to verify the correctness of Matrix.col_insert() in various scenarios, which increases the risk of future regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch appears to fix the issue with Matrix.col_insert() but lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include additional tests to verify the correctness of Matrix.col_insert() in various scenarios, which increases the risk of future regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

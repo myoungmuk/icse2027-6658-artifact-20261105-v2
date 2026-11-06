@@ -1,0 +1,50 @@
+{
+  "id": "03e8f647d9254923b2d245c0",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_3f51282e8f6e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_3f51282e8f6e.json",
+  "historical_output_sha256": "3a70a914cacc4921c7bc082b9c92d7e335e31cfd4a7a627eb47247ed93a7a09c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 916,
+  "messages_sha256": "6fb8a794f56968766971470291b06c0995d77b0565286d65b3014551cad86d78",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a new method `set_paths` in `ContourSet` and removes the existing implementation, which may cause behavioral regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The removal of the existing `set_paths` method in `ContourSet` may break existing code that relies on this method. There is no indication that the existing method is unused or deprecated.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "461",
+      "completed_at_utc": "2026-11-06T04:02:50.464199+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a new method `set_paths` in `ContourSet` and removes the existing implementation, which may cause behavioral regressions.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The removal of the existing `set_paths` method in `ContourSet` may break existing code that relies on this method. There is no indication that the existing method is unused or deprecated."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a new method `set_paths` in `ContourSet` and removes the existing implementation, which may cause behavioral regressions.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The removal of the existing `set_paths` method in `ContourSet` may break existing code that relies on this method. There is no indication that the existing method is unused or deprecated."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

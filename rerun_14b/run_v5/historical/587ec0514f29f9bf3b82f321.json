@@ -1,0 +1,50 @@
+{
+  "id": "587ec0514f29f9bf3b82f321",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_6f183e993856",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_6f183e993856.json",
+  "historical_output_sha256": "ab9ec07226d0ee4fdf62a42f5fc51a68443c389e4299e1a390d97afdc8b39130",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1933,
+  "messages_sha256": "456d030c26343666a5e96637c98437dc7285a0f0dfa9c0f118405f421e4aadf3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the offset text color is based on the label color, not just the tick color. The changes are minimal and well-contained.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a conditional check that may not align with the project's style or conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "1808",
+      "completed_at_utc": "2026-11-06T04:11:18.906149+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the offset text color is based on the label color, not just the tick color. The changes are minimal and well-contained.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a conditional check that may not align with the project's style or conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the offset text color is based on the label color, not just the tick color. The changes are minimal and well-contained.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a conditional check that may not align with the project's style or conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

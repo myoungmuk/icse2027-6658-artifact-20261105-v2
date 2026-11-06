@@ -1,0 +1,60 @@
+{
+  "id": "ebab2cc38fa35a1c81762d09",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_e4f92c414769",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_e4f92c414769.json",
+  "historical_output_sha256": "15ca002fb3c0a2272bae3cedeaa093879841c95b995078b9435f87ecca1c01ee",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1382,
+  "messages_sha256": "09c3f2b005198442c77f10c41544ab8da76c532647ae12b008587b9cde8dd1ae",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of incomplete results depending on the order of symbols with permute=True. It introduces a more comprehensive approach to handle permutations and signed permutations.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be more readable by adding comments to explain the logic of handling permutations and signed permutations.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code style could be improved to match the project's conventions, such as consistent indentation and spacing.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 155,
+      "returned_model_request_id": "360",
+      "completed_at_utc": "2026-11-06T04:02:17.672363+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of incomplete results depending on the order of symbols with permute=True. It introduces a more comprehensive approach to handle permutations and signed permutations.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable by adding comments to explain the logic of handling permutations and signed permutations."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style could be improved to match the project's conventions, such as consistent indentation and spacing."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of incomplete results depending on the order of symbols with permute=True. It introduces a more comprehensive approach to handle permutations and signed permutations.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable by adding comments to explain the logic of handling permutations and signed permutations."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code style could be improved to match the project's conventions, such as consistent indentation and spacing."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

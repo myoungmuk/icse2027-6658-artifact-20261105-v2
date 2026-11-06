@@ -1,0 +1,29 @@
+{
+  "code": "c125a4f2334ff3eb81ea",
+  "instance_id": "django__django-14324",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "c125a4f2334ff3eb81ea_strict",
+  "arm": "strict",
+  "input_tokens": 1177,
+  "messages_sha256": "a164bd7164d2dea421aceb6433f6d986e3db4044105a47d016374b39bd7eb0fa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces changes to the initialization of related fields, which could lead to unexpected behavior or compatibility issues. It also modifies the deconstruction of fields, which might affect migration generation. Without thorough testing and validation, there is a risk of introducing regressions or breaking existing functionality.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 76,
+      "returned_model_request_id": "2548",
+      "completed_at_utc": "2026-11-06T04:17:15.369974+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces changes to the initialization of related fields, which could lead to unexpected behavior or compatibility issues. It also modifies the deconstruction of fields, which might affect migration generation. Without thorough testing and validation, there is a risk of introducing regressions or breaking existing functionality."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

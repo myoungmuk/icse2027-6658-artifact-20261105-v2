@@ -1,0 +1,29 @@
+{
+  "code": "0c912a274ea046f167c1",
+  "instance_id": "sympy__sympy-16858",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "0c912a274ea046f167c1_strict",
+  "arm": "strict",
+  "input_tokens": 1450,
+  "messages_sha256": "f477a4a6df2fcdd4ce3372020faffc96364c6995a6cc1d8d2d0fa73d78de65b8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch adds static check methods to several distributions, but it does not ensure these checks are called during the initialization of the distribution objects. This could lead to inconsistencies where the checks are not enforced. Additionally, the patch does not include any tests to verify the correctness of these new checks.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 78,
+      "returned_model_request_id": "2370",
+      "completed_at_utc": "2026-11-06T04:16:06.969352+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch adds static check methods to several distributions, but it does not ensure these checks are called during the initialization of the distribution objects. This could lead to inconsistencies where the checks are not enforced. Additionally, the patch does not include any tests to verify the correctness of these new checks."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

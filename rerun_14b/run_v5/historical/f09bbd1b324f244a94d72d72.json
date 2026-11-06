@@ -1,0 +1,50 @@
+{
+  "id": "f09bbd1b324f244a94d72d72",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_c2a3d2d76039",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_c2a3d2d76039.json",
+  "historical_output_sha256": "c11559628c249c2a6b9f51b08e4a802023749823301719383f07cd3f2ed69ffc",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1092,
+  "messages_sha256": "0952b2ef7cd38fa10c53ce5e94ad97748e4a0fd3b6512adefb322d2e596210f5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of merging a DataArray into a Dataset using the `ds.merge()` method, but it lacks tests to ensure the fix is robust and doesn't introduce regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the fix works as expected and does not break existing behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "666",
+      "completed_at_utc": "2026-11-06T04:03:59.188722+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of merging a DataArray into a Dataset using the `ds.merge()` method, but it lacks tests to ensure the fix is robust and doesn't introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the fix works as expected and does not break existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of merging a DataArray into a Dataset using the `ds.merge()` method, but it lacks tests to ensure the fix is robust and doesn't introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the fix works as expected and does not break existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

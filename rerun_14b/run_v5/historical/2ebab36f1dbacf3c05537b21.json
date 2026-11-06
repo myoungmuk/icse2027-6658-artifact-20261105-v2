@@ -1,0 +1,50 @@
+{
+  "id": "2ebab36f1dbacf3c05537b21",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_641b2cb8ba56",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_641b2cb8ba56.json",
+  "historical_output_sha256": "5bf15c641acd1b444ec7cb389dc4c64af794cc82b724d8ed018fae900a69a49c",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1107,
+  "messages_sha256": "9f69b742317184004f8f829504c12c8ffc4497ffd890c25c03a73b9b8d7415f3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by handling the EmptyResultSet exception and providing a fallback SQL condition. The change is minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code introduces a try-except block which slightly decreases readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 100,
+      "returned_model_request_id": "1160",
+      "completed_at_utc": "2026-11-06T04:07:03.953883+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by handling the EmptyResultSet exception and providing a fallback SQL condition. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code introduces a try-except block which slightly decreases readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by handling the EmptyResultSet exception and providing a fallback SQL condition. The change is minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code introduces a try-except block which slightly decreases readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

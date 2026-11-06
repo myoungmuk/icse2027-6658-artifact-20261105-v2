@@ -1,0 +1,60 @@
+{
+  "id": "8fe1e93754e6a0dae03d8eee",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a9009f24f71c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a9009f24f71c.json",
+  "historical_output_sha256": "aca6146ab01c08e585f471b799bd09c8a39a54ad67f7a9b92dcb3c9e5da11bcf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 898,
+  "messages_sha256": "5539c4193be6257ffee3396415765c9b49766e976e00e3dce21682607b71ee34",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds support for Indexed operations in PythonCodePrinter, but it lacks tests and may introduce regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests for the new _print_Indexed method, which is crucial for ensuring the functionality works as expected and does not break in future changes.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"There is a risk that the new method may introduce regressions or unexpected behavior in other parts of the codebase that rely on PythonCodePrinter.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 168,
+      "returned_model_request_id": "585",
+      "completed_at_utc": "2026-11-06T04:03:41.537042+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds support for Indexed operations in PythonCodePrinter, but it lacks tests and may introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests for the new _print_Indexed method, which is crucial for ensuring the functionality works as expected and does not break in future changes."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that the new method may introduce regressions or unexpected behavior in other parts of the codebase that rely on PythonCodePrinter."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR adds support for Indexed operations in PythonCodePrinter, but it lacks tests and may introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests for the new _print_Indexed method, which is crucial for ensuring the functionality works as expected and does not break in future changes."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that the new method may introduce regressions or unexpected behavior in other parts of the codebase that rely on PythonCodePrinter."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

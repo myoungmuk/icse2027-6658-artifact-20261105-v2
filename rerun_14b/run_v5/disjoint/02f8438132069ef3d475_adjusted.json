@@ -1,0 +1,29 @@
+{
+  "code": "02f8438132069ef3d475",
+  "instance_id": "django__django-12734",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "02f8438132069ef3d475_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 926,
+  "messages_sha256": "63a94e7a3359d3930f5809b21cdbda564888c9cc07909e56e087fc8ee83b6ee3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue by ensuring that related tables with foreign keys pointing to the altered field are also rebuilt. This prevents precision changes in fields that ManyToMany points to from being overlooked during migrations.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 59,
+      "returned_model_request_id": "2485",
+      "completed_at_utc": "2026-11-06T04:16:43.895668+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue by ensuring that related tables with foreign keys pointing to the altered field are also rebuilt. This prevents precision changes in fields that ManyToMany points to from being overlooked during migrations."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

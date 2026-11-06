@@ -1,0 +1,50 @@
+{
+  "id": "75b5696b8354763beda5ff0e",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_83d1b7eabc2a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_83d1b7eabc2a.json",
+  "historical_output_sha256": "0a89b799746b8dfa1d0864995e7cae24757e3fc8f525f09854f5019535d94da7",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1371,
+  "messages_sha256": "a9ec5668be9420a7c84895c62abc1910d0b6a506267596bba8426e0fa4a5eef1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the XOR issue correctly but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new helper method `_combine_xor_conditions` which is not minimal and could be simplified.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 94,
+      "returned_model_request_id": "1378",
+      "completed_at_utc": "2026-11-06T04:08:18.337651+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the XOR issue correctly but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new helper method `_combine_xor_conditions` which is not minimal and could be simplified."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the XOR issue correctly but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new helper method `_combine_xor_conditions` which is not minimal and could be simplified."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

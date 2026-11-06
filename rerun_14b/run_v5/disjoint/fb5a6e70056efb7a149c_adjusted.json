@@ -1,0 +1,29 @@
+{
+  "code": "fb5a6e70056efb7a149c",
+  "instance_id": "scikit-learn__scikit-learn-13910",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "fb5a6e70056efb7a149c_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1566,
+  "messages_sha256": "b31abb0e3bf76043a57b6dbf2de975b2eee6c2432991d19e2108bdbfa08a8971",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the overflow issue by upcasting intermediate calculations to float64, which should prevent overflow errors during the distance computation. The addition of a test script to reproduce the issue is also beneficial for verifying the fix. The changes are scoped appropriately and maintain readability.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 73,
+      "returned_model_request_id": "2695",
+      "completed_at_utc": "2026-11-06T04:18:08.356463+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the overflow issue by upcasting intermediate calculations to float64, which should prevent overflow errors during the distance computation. The addition of a test script to reproduce the issue is also beneficial for verifying the fix. The changes are scoped appropriately and maintain readability."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

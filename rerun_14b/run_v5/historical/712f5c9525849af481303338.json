@@ -1,0 +1,50 @@
+{
+  "id": "712f5c9525849af481303338",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_2ba452d16a0a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_2ba452d16a0a.json",
+  "historical_output_sha256": "823f29558db9f8e3689421d5970592200ffa9b707fa6595198678b060f366ed9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2422,
+  "messages_sha256": "6b7de9181414f2fcefba89aacc7be630a0ba7b1c8e80c840e9d7c8c21cc10cb8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by modifying the `none()` method to handle combined queries correctly. The new test script `reproduce.py` demonstrates the problem and verifies the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new files and structures that slightly deviate from the project's conventions, such as the use of `__init__.py` files without content.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "2040",
+      "completed_at_utc": "2026-11-06T04:13:37.408755+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by modifying the `none()` method to handle combined queries correctly. The new test script `reproduce.py` demonstrates the problem and verifies the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files and structures that slightly deviate from the project's conventions, such as the use of `__init__.py` files without content."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by modifying the `none()` method to handle combined queries correctly. The new test script `reproduce.py` demonstrates the problem and verifies the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files and structures that slightly deviate from the project's conventions, such as the use of `__init__.py` files without content."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

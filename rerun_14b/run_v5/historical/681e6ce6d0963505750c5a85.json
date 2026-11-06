@@ -1,0 +1,60 @@
+{
+  "id": "681e6ce6d0963505750c5a85",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_29dcc741fff9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_29dcc741fff9.json",
+  "historical_output_sha256": "b09453d2f055570067b649773dd10002fd60ed2363f8da02aa15b6f30a7f955f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1011,
+  "messages_sha256": "342c5c93481bda0fc4a02931e807f4ddd99c1b23a252517ef4b71150085a08cf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR improves the default logging format by adding the module name, which can be useful for debugging. However, it lacks documentation updates and potential impact on existing configurations.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not update the documentation to reflect the change in the default logging format.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"minor\",\n      \"description\": \"There is a potential risk that existing configurations relying on the old logging format might be affected.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 152,
+      "returned_model_request_id": "101",
+      "completed_at_utc": "2026-11-06T04:00:52.703947+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR improves the default logging format by adding the module name, which can be useful for debugging. However, it lacks documentation updates and potential impact on existing configurations.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not update the documentation to reflect the change in the default logging format."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "minor",
+        "description": "There is a potential risk that existing configurations relying on the old logging format might be affected."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR improves the default logging format by adding the module name, which can be useful for debugging. However, it lacks documentation updates and potential impact on existing configurations.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not update the documentation to reflect the change in the default logging format."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "minor",
+        "description": "There is a potential risk that existing configurations relying on the old logging format might be affected."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

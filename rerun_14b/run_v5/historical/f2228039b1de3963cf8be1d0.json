@@ -1,0 +1,50 @@
+{
+  "id": "f2228039b1de3963cf8be1d0",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_b3dc17c3a97b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_b3dc17c3a97b.json",
+  "historical_output_sha256": "db09af7589c09107337b9a6039b9442eb009e2d076bc9107ddacd3303475b419",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1116,
+  "messages_sha256": "3e72cfac507f4dffe8cb08615779234f16ec558b865a72c21e2b46273168de98",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a check to raise an error when prefetching a sliced queryset, which aligns with the problem statement.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch introduces a new exception that could break existing code that relies on prefetching sliced querysets without raising an error.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "1310",
+      "completed_at_utc": "2026-11-06T04:07:59.670985+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a check to raise an error when prefetching a sliced queryset, which aligns with the problem statement.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The patch introduces a new exception that could break existing code that relies on prefetching sliced querysets without raising an error."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch introduces a check to raise an error when prefetching a sliced queryset, which aligns with the problem statement.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The patch introduces a new exception that could break existing code that relies on prefetching sliced querysets without raising an error."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

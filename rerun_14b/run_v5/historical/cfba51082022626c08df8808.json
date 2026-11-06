@@ -1,0 +1,50 @@
+{
+  "id": "cfba51082022626c08df8808",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_8c60fec0956a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_8c60fec0956a.json",
+  "historical_output_sha256": "c2bf6b3cda422113667c5471748070b357ce2fffa7e35f88fdae4e291e895813",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1728,
+  "messages_sha256": "2b5392deaa4be336a0f13543ba690479b7be5af88ee1c087043f4ad93c6ff93b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of mask propagation in NDDataRef by ensuring that None masks are handled correctly. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a minor maintainability/readability defect by adding an unnecessary else clause. The code can be simplified by directly assigning the value to self._mask without the else.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 121,
+      "returned_model_request_id": "1394",
+      "completed_at_utc": "2026-11-06T04:08:36.606025+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of mask propagation in NDDataRef by ensuring that None masks are handled correctly. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding an unnecessary else clause. The code can be simplified by directly assigning the value to self._mask without the else."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of mask propagation in NDDataRef by ensuring that None masks are handled correctly. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a minor maintainability/readability defect by adding an unnecessary else clause. The code can be simplified by directly assigning the value to self._mask without the else."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "cda803cb8a95a7b579742de2",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_fac1e8171c2c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_fac1e8171c2c.json",
+  "historical_output_sha256": "abe5aea6af2d0a24ed76b19390f2c33c43c43e3a3b656480ae5ab22692053bc7",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 2055,
+  "messages_sha256": "d607a3fd00b498ac997f09a21cfc1d366f4a7a012a6ecc5fa1584321b9dbc9b1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue by ensuring the correct database is used when resolving natural keys. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new argument 'using=db' to the natural_key method, which may not align with the existing API conventions in Django.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "1321",
+      "completed_at_utc": "2026-11-06T04:07:59.673106+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue by ensuring the correct database is used when resolving natural keys. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new argument 'using=db' to the natural_key method, which may not align with the existing API conventions in Django."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue by ensuring the correct database is used when resolving natural keys. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new argument 'using=db' to the natural_key method, which may not align with the existing API conventions in Django."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

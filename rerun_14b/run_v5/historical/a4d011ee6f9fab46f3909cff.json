@@ -1,0 +1,50 @@
+{
+  "id": "a4d011ee6f9fab46f3909cff",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_56abd5ea2c26",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_56abd5ea2c26.json",
+  "historical_output_sha256": "6960ede47aad5f17958960497fb517f1e947ea2be1e08def8b39d5b22a962147",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1415,
+  "messages_sha256": "a2bcd9faab2ff9ed0af2805d6928f4142eeca50e08b69b0576c23f7d2f640a0c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces a special case for the 'extension' argument, which may not be the most general solution.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a special case for the 'extension' argument, which may not be the most general solution. It only checks for the presence of 'I' in the extension list and uses a different factorization method. This may not handle other complex numbers or extensions correctly.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 135,
+      "returned_model_request_id": "1127",
+      "completed_at_utc": "2026-11-06T04:06:46.631528+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces a special case for the 'extension' argument, which may not be the most general solution.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a special case for the 'extension' argument, which may not be the most general solution. It only checks for the presence of 'I' in the extension list and uses a different factorization method. This may not handle other complex numbers or extensions correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change introduces a special case for the 'extension' argument, which may not be the most general solution.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a special case for the 'extension' argument, which may not be the most general solution. It only checks for the presence of 'I' in the extension list and uses a different factorization method. This may not handle other complex numbers or extensions correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

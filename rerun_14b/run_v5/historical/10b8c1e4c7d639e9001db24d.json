@@ -1,0 +1,50 @@
+{
+  "id": "10b8c1e4c7d639e9001db24d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_7fb310233427",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_7fb310233427.json",
+  "historical_output_sha256": "7cc53b4021aec0453945f6d74f4d95dda5639e591129b4163e84549db35e6fa9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1428,
+  "messages_sha256": "191e67e7c1ce7bddd67323d73d4d697d7b481f45fb510bd317bfca45321e99b9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR removes a line of code that appears to be unnecessary and may have been added for a specific reason. Without understanding the original purpose, there is a risk of introducing unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The removal of the line `return s.replace('.[', '[')` without understanding its original purpose may lead to unexpected behavior or regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "642",
+      "completed_at_utc": "2026-11-06T04:03:59.184053+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR removes a line of code that appears to be unnecessary and may have been added for a specific reason. Without understanding the original purpose, there is a risk of introducing unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The removal of the line `return s.replace('.[', '[')` without understanding its original purpose may lead to unexpected behavior or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR removes a line of code that appears to be unnecessary and may have been added for a specific reason. Without understanding the original purpose, there is a risk of introducing unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The removal of the line `return s.replace('.[', '[')` without understanding its original purpose may lead to unexpected behavior or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

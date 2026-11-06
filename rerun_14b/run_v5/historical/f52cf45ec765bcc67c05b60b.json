@@ -1,0 +1,50 @@
+{
+  "id": "f52cf45ec765bcc67c05b60b",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_0b76948fe855",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_0b76948fe855.json",
+  "historical_output_sha256": "6ef333e0106c63db4d07aa8bf6b55afdd32525e4856ec8491b4807ed3a400899",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 950,
+  "messages_sha256": "387118962118223750fdfa814a9f9e4c8f5fad6eefe3db96d4cfd3f74283ad2d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but introduces a non-minimal change by removing an import and altering the way Q objects are copied.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch removes the 'copy' import and changes the way Q objects are copied, which may introduce unintended side effects or performance issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "175",
+      "completed_at_utc": "2026-11-06T04:01:09.168863+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but introduces a non-minimal change by removing an import and altering the way Q objects are copied.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch removes the 'copy' import and changes the way Q objects are copied, which may introduce unintended side effects or performance issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but introduces a non-minimal change by removing an import and altering the way Q objects are copied.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch removes the 'copy' import and changes the way Q objects are copied, which may introduce unintended side effects or performance issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

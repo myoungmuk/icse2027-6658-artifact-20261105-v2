@@ -1,0 +1,60 @@
+{
+  "id": "bd57dce10092c8b15f6bdb96",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_991ecce9b454",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_991ecce9b454.json",
+  "historical_output_sha256": "3bac1077499af4ef7f1d74eb12ad9e1bdcc52709fc4d2754d06235d084e25d6e",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1619,
+  "messages_sha256": "79a0060d09220a36680cf65998618974c6564cea4a30b97ff3f6e75f900a0631",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a new method to generate foreign key dependencies, but it lacks proper implementation details and integration with the existing codebase.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The method `generate_foreign_key_dependencies` is incomplete and does not properly integrate with the existing autodetector logic. It lacks the implementation of `_get_dependencies_for_foreign_key` and `add_dependency` methods, which are essential for generating and adding dependencies.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The code is not well-structured and lacks proper comments, making it difficult to understand the intended functionality and integration points within the existing codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.3\n}",
+      "finish_reason": "stop",
+      "output_tokens": 191,
+      "returned_model_request_id": "1438",
+      "completed_at_utc": "2026-11-06T04:08:36.614393+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a new method to generate foreign key dependencies, but it lacks proper implementation details and integration with the existing codebase.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The method `generate_foreign_key_dependencies` is incomplete and does not properly integrate with the existing autodetector logic. It lacks the implementation of `_get_dependencies_for_foreign_key` and `add_dependency` methods, which are essential for generating and adding dependencies."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code is not well-structured and lacks proper comments, making it difficult to understand the intended functionality and integration points within the existing codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.3
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a new method to generate foreign key dependencies, but it lacks proper implementation details and integration with the existing codebase.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The method `generate_foreign_key_dependencies` is incomplete and does not properly integrate with the existing autodetector logic. It lacks the implementation of `_get_dependencies_for_foreign_key` and `add_dependency` methods, which are essential for generating and adding dependencies."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code is not well-structured and lacks proper comments, making it difficult to understand the intended functionality and integration points within the existing codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.3
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

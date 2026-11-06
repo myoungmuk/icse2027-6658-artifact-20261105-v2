@@ -1,0 +1,70 @@
+{
+  "id": "9bc48978d3023c6ff6f8c8c3",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_a4d3f3580794",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_a4d3f3580794.json",
+  "historical_output_sha256": "639b1742e813f7bb1fd81308979f6ec8415150db588c16d26dcf49aafd458873",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 820,
+  "messages_sha256": "1436b6103f19bebe5651456ee9fae2c5c3314367640a938c2619179cf1013f00",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a change to strip dashes and underscores from the output of slugify, but it may not handle all edge cases and could introduce regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not address cases where the input string starts or ends with multiple dashes or underscores, which could lead to unexpected results.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"There is a risk that this change could break existing behavior for users who rely on the current behavior of slugify, especially if they expect leading or trailing dashes or underscores.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the behavior of slugify with various input strings, including edge cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 223,
+      "returned_model_request_id": "17",
+      "completed_at_utc": "2026-11-06T04:00:16.937671+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a change to strip dashes and underscores from the output of slugify, but it may not handle all edge cases and could introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not address cases where the input string starts or ends with multiple dashes or underscores, which could lead to unexpected results."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that this change could break existing behavior for users who rely on the current behavior of slugify, especially if they expect leading or trailing dashes or underscores."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the behavior of slugify with various input strings, including edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR introduces a change to strip dashes and underscores from the output of slugify, but it may not handle all edge cases and could introduce regressions.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR does not address cases where the input string starts or ends with multiple dashes or underscores, which could lead to unexpected results."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that this change could break existing behavior for users who rely on the current behavior of slugify, especially if they expect leading or trailing dashes or underscores."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the behavior of slugify with various input strings, including edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

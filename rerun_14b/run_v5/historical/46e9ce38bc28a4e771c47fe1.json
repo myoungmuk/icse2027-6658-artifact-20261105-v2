@@ -1,0 +1,50 @@
+{
+  "id": "46e9ce38bc28a4e771c47fe1",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_f180931e545d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_f180931e545d.json",
+  "historical_output_sha256": "afaa0196b2bb85c9921ae18c9a9d273f3d0d1e2d8830e69dc49020872f0f5e53",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1190,
+  "messages_sha256": "280d938e376bdd891a33b402c3143f32e35c0d1dc63dd47aebdb01efb709ed02",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly updates the hint for recursive relationships, but it may not fully address all edge cases related to recursive relationships.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The PR only updates the hint and does not address the underlying logic or checks for recursive relationships. There may be other edge cases or scenarios that are not covered by this change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "289",
+      "completed_at_utc": "2026-11-06T04:02:01.123097+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly updates the hint for recursive relationships, but it may not fully address all edge cases related to recursive relationships.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR only updates the hint and does not address the underlying logic or checks for recursive relationships. There may be other edge cases or scenarios that are not covered by this change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR correctly updates the hint for recursive relationships, but it may not fully address all edge cases related to recursive relationships.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The PR only updates the hint and does not address the underlying logic or checks for recursive relationships. There may be other edge cases or scenarios that are not covered by this change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

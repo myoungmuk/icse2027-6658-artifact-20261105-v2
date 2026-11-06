@@ -1,0 +1,50 @@
+{
+  "id": "c6012b925fca358f71044935",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_dea2eb81d9f1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_dea2eb81d9f1.json",
+  "historical_output_sha256": "78af20473579d1ac36e441cde09e5b0c5e40081c632437544d0bd3ea51184fca",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1929,
+  "messages_sha256": "c01e0a85f7e0e4f74b53ad45734429233efa64a321111efeba09e1e92b03896f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds async versions of create, get_or_create, and update_or_create methods to related managers, but it seems to have introduced a mistake in the implementation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The async methods are incorrectly calling the sync methods directly instead of using the async versions. This defeats the purpose of adding async methods and could lead to unexpected behavior.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "1255",
+      "completed_at_utc": "2026-11-06T04:07:40.856325+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds async versions of create, get_or_create, and update_or_create methods to related managers, but it seems to have introduced a mistake in the implementation.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The async methods are incorrectly calling the sync methods directly instead of using the async versions. This defeats the purpose of adding async methods and could lead to unexpected behavior."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR adds async versions of create, get_or_create, and update_or_create methods to related managers, but it seems to have introduced a mistake in the implementation.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The async methods are incorrectly calling the sync methods directly instead of using the async versions. This defeats the purpose of adding async methods and could lead to unexpected behavior."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

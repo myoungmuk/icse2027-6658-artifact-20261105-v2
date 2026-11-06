@@ -1,0 +1,60 @@
+{
+  "id": "0bd87eb4efea5db01b5ec61f",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_966eb20e20fe",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_966eb20e20fe.json",
+  "historical_output_sha256": "659baa87c2bf558a4d6a0fae9f9242258f60a68efd157c28b17708a091930185",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 988,
+  "messages_sha256": "b5817f4ede5d13ced12e95899675e96956f6052035bef638173c4b4b6710c392",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of pickling figures with draggable legends but introduces potential maintainability and readability concerns.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The changes to the `__getstate__` and `__setstate__` methods make the code less readable and maintainable by directly manipulating the object's dictionary and introducing a dummy value for the canvas.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify that the changes do not introduce regressions or that the pickling functionality works as expected with draggable legends.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.7\n}",
+      "finish_reason": "stop",
+      "output_tokens": 176,
+      "returned_model_request_id": "43",
+      "completed_at_utc": "2026-11-06T04:00:16.942605+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of pickling figures with draggable legends but introduces potential maintainability and readability concerns.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The changes to the `__getstate__` and `__setstate__` methods make the code less readable and maintainable by directly manipulating the object's dictionary and introducing a dummy value for the canvas."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the changes do not introduce regressions or that the pickling functionality works as expected with draggable legends."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.7
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of pickling figures with draggable legends but introduces potential maintainability and readability concerns.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The changes to the `__getstate__` and `__setstate__` methods make the code less readable and maintainable by directly manipulating the object's dictionary and introducing a dummy value for the canvas."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the changes do not introduce regressions or that the pickling functionality works as expected with draggable legends."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.7
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

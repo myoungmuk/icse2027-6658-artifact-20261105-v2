@@ -1,0 +1,50 @@
+{
+  "id": "5f7cf52404707b0772d56e02",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_1742585afec4",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_1742585afec4.json",
+  "historical_output_sha256": "8ad9fa2b7613bdf64bb96b5fc89fd43c0b41975ca72559c80c8ed7b8c7f2e10a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1032,
+  "messages_sha256": "d3a4c14e5eaf9c35508fee9a07c2bcca5abc6682ad2b2f6bbf2a1c95a12e0b71",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of empty strings being incorrectly serialized to None, but it lacks tests to ensure the fix is robust.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify that the fix works as expected and does not introduce new issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "112",
+      "completed_at_utc": "2026-11-06T04:00:52.707049+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of empty strings being incorrectly serialized to None, but it lacks tests to ensure the fix is robust.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the fix works as expected and does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of empty strings being incorrectly serialized to None, but it lacks tests to ensure the fix is robust.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the fix works as expected and does not introduce new issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

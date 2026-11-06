@@ -1,0 +1,60 @@
+{
+  "id": "1e20a0bac248cdfba76644c3",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_ed7ad759200a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_ed7ad759200a.json",
+  "historical_output_sha256": "ae0b6053a4d0ebb685138c472d304c39deb1ed584c149d3b2367f05a7a2becfb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2513,
+  "messages_sha256": "9cd03fbee2e09b09e14b91e9044bd27c06b71af1fedf0503b998c00d1b8b4a14",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses a specific issue with docstring detection but may not be minimal or maintainable.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal edit by adding a new condition to the existing code, which could potentially complicate future maintenance.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch could be improved for readability by adding a comment explaining why the new condition is necessary.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 147,
+      "returned_model_request_id": "145",
+      "completed_at_utc": "2026-11-06T04:01:09.161608+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses a specific issue with docstring detection but may not be minimal or maintainable.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal edit by adding a new condition to the existing code, which could potentially complicate future maintenance."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be improved for readability by adding a comment explaining why the new condition is necessary."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses a specific issue with docstring detection but may not be minimal or maintainable.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal edit by adding a new condition to the existing code, which could potentially complicate future maintenance."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be improved for readability by adding a comment explaining why the new condition is necessary."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

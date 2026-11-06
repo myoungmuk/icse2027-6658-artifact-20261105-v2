@@ -1,0 +1,60 @@
+{
+  "id": "9396cd7f5842364174004bc9",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_fdd5ad6a0e94",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_fdd5ad6a0e94.json",
+  "historical_output_sha256": "4044e1383d4c5b8b0da72c6945a447398ad666e93d7f5137890d902835e9e941",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1021,
+  "messages_sha256": "3958e6fd1e583ce71c26d777a610793fa2caad21f0d79c1ce1e6c1dfd81da49e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds support for Min and Max functions in PythonCodePrinter, but the change is not minimal and may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the _known_functions dictionary, which may have unintended side effects on other parts of the codebase that rely on this dictionary.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change does not include the proposed methods _print_Min and _print_Max, which are necessary to correctly print Min and Max expressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 166,
+      "returned_model_request_id": "1148",
+      "completed_at_utc": "2026-11-06T04:06:46.635574+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds support for Min and Max functions in PythonCodePrinter, but the change is not minimal and may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the _known_functions dictionary, which may have unintended side effects on other parts of the codebase that rely on this dictionary."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change does not include the proposed methods _print_Min and _print_Max, which are necessary to correctly print Min and Max expressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds support for Min and Max functions in PythonCodePrinter, but the change is not minimal and may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change modifies the _known_functions dictionary, which may have unintended side effects on other parts of the codebase that rely on this dictionary."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change does not include the proposed methods _print_Min and _print_Max, which are necessary to correctly print Min and Max expressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

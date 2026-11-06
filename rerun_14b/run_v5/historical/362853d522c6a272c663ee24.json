@@ -1,0 +1,50 @@
+{
+  "id": "362853d522c6a272c663ee24",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_7be750d9989a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_7be750d9989a.json",
+  "historical_output_sha256": "8780c2803c95bfbec8898c0a9fbd937a97a28975ecd6560f735964675c150a8b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1178,
+  "messages_sha256": "2ecd97665ed08b427d076ab4e4894c5242fca8a0d4ed0f7b904489d7d4906f7b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of inconsistent rendering of the 'Other parameters' section but introduces a non-minimal change by modifying the behavior of the 'Parameters' section as well.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change affects the 'Parameters' section in addition to the 'Other parameters' section, which is not directly related to the issue and introduces scope creep.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "3",
+      "completed_at_utc": "2026-11-06T04:00:16.934148+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of inconsistent rendering of the 'Other parameters' section but introduces a non-minimal change by modifying the behavior of the 'Parameters' section as well.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change affects the 'Parameters' section in addition to the 'Other parameters' section, which is not directly related to the issue and introduces scope creep."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of inconsistent rendering of the 'Other parameters' section but introduces a non-minimal change by modifying the behavior of the 'Parameters' section as well.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change affects the 'Parameters' section in addition to the 'Other parameters' section, which is not directly related to the issue and introduces scope creep."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

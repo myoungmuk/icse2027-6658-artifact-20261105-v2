@@ -1,0 +1,50 @@
+{
+  "id": "2932f60bc817c7bf7f68ff44",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_96fbbbff9ceb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_96fbbbff9ceb.json",
+  "historical_output_sha256": "d18e1be23c74ba78e955fd62c19ed5b2cdd9c88c7594b8cd8b7881b6bc0a3f96",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1106,
+  "messages_sha256": "275e5e8a6e4a4274eca1aaade06e2e55bbd41982d369251658db75885cf226cc",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the input validation issue by allowing non-float dtypes, but it may introduce unintended behavior or compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"major\",\n      \"description\": \"The change allows non-float dtypes, which might break existing code that assumes float inputs. This could lead to unexpected behavior or errors in other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "328",
+      "completed_at_utc": "2026-11-06T04:02:01.131831+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the input validation issue by allowing non-float dtypes, but it may introduce unintended behavior or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change allows non-float dtypes, which might break existing code that assumes float inputs. This could lead to unexpected behavior or errors in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the input validation issue by allowing non-float dtypes, but it may introduce unintended behavior or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change allows non-float dtypes, which might break existing code that assumes float inputs. This could lead to unexpected behavior or errors in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

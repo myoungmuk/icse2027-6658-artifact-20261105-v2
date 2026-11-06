@@ -1,0 +1,60 @@
+{
+  "id": "a41b46cd4b5c226c88db8216",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_17cadf90bc92",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_17cadf90bc92.json",
+  "historical_output_sha256": "5072c98215534171c6044611a87c3439d50d00ab21b91b3f8549361496258993",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2950,
+  "messages_sha256": "1a741733c18f92327df79b83d4d9d612a328424744aafb617ef9ff9c52f550de",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by modifying the WHERE clause handling in the query compiler. It introduces a new condition to handle cases where all children nodes are empty, ensuring the WHERE block is not removed completely.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new files and a management command for bug reproduction, which may not align with the project's conventions for handling test cases.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code introduces a new variable `all_empty` and modifies the logic flow, which slightly decreases readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 171,
+      "returned_model_request_id": "1783",
+      "completed_at_utc": "2026-11-06T04:11:18.901221+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by modifying the WHERE clause handling in the query compiler. It introduces a new condition to handle cases where all children nodes are empty, ensuring the WHERE block is not removed completely.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files and a management command for bug reproduction, which may not align with the project's conventions for handling test cases."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code introduces a new variable `all_empty` and modifies the logic flow, which slightly decreases readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by modifying the WHERE clause handling in the query compiler. It introduces a new condition to handle cases where all children nodes are empty, ensuring the WHERE block is not removed completely.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new files and a management command for bug reproduction, which may not align with the project's conventions for handling test cases."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code introduces a new variable `all_empty` and modifies the logic flow, which slightly decreases readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

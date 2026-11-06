@@ -1,0 +1,29 @@
+{
+  "code": "69d4b54b28d8534fddf6",
+  "instance_id": "django__django-16629",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "69d4b54b28d8534fddf6_strict",
+  "arm": "strict",
+  "input_tokens": 1500,
+  "messages_sha256": "020e1bece747ec43359638edad539351528991f5378d66c924b59e9b26504791",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new dependency on 'django.db.models.Choices' which is not imported correctly. Additionally, the patch lacks proper documentation and tests, which are essential for maintaining the quality and reliability of the codebase.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 65,
+      "returned_model_request_id": "2526",
+      "completed_at_utc": "2026-11-06T04:16:59.781295+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new dependency on 'django.db.models.Choices' which is not imported correctly. Additionally, the patch lacks proper documentation and tests, which are essential for maintaining the quality and reliability of the codebase."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

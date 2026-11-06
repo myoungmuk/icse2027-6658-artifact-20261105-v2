@@ -1,0 +1,38 @@
+{
+  "id": "d56480db32a6d81d31228d54",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_280780f1399f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_280780f1399f.json",
+  "historical_output_sha256": "5af95c33a79fd6b7c7fd739b3c312fc12860dfbd019750164e1e1970e18b3969",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1255,
+  "messages_sha256": "5d46a531fceeb3cb2c8ff66a286fdb791c4b668383fd31414780d58043c47941",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch adds a check to ensure the first item in `sys.path` is `\\\"\\\"`, `\\\".\\\"`, or `os.getcwd()` before removing it. This addresses the issue without introducing clear correctness, regression, or compatibility problems.\",\n  \"issues\": [],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 79,
+      "returned_model_request_id": "1022",
+      "completed_at_utc": "2026-11-06T04:06:12.545755+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch adds a check to ensure the first item in `sys.path` is `\"\"`, `\".\"`, or `os.getcwd()` before removing it. This addresses the issue without introducing clear correctness, regression, or compatibility problems.",
+    "issues": [],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The proposed patch adds a check to ensure the first item in `sys.path` is `\"\"`, `\".\"`, or `os.getcwd()` before removing it. This addresses the issue without introducing clear correctness, regression, or compatibility problems.",
+    "issues": [],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

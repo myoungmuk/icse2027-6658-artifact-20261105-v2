@@ -1,0 +1,60 @@
+{
+  "id": "a3191dae6654cc161ddef820",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_189c5afc6a93",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_189c5afc6a93.json",
+  "historical_output_sha256": "84a2dda009d091a68e51a5df35d888a66a71274161aa6f6844d24120a79dfd02",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1358,
+  "messages_sha256": "9d1eca4eebf1fd0a391f9ed80fa21b5242fd59e61c61a2e8a784e6223e724264",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a new handler for refining the argument of complex numbers, which seems to address the issue. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The handler does not cover all possible cases for the argument of complex numbers, such as when the argument is zero or when the number is purely imaginary.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The docstring for the new handler could be more detailed and include examples for different scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 161,
+      "returned_model_request_id": "347",
+      "completed_at_utc": "2026-11-06T04:02:17.669884+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a new handler for refining the argument of complex numbers, which seems to address the issue. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The handler does not cover all possible cases for the argument of complex numbers, such as when the argument is zero or when the number is purely imaginary."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for the new handler could be more detailed and include examples for different scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a new handler for refining the argument of complex numbers, which seems to address the issue. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The handler does not cover all possible cases for the argument of complex numbers, such as when the argument is zero or when the number is purely imaginary."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for the new handler could be more detailed and include examples for different scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

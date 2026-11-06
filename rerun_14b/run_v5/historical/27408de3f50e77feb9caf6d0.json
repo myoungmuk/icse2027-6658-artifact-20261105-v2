@@ -1,0 +1,70 @@
+{
+  "id": "27408de3f50e77feb9caf6d0",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_56abd5ea2c26",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_56abd5ea2c26.json",
+  "historical_output_sha256": "d52bd70f5f4baf0697a4d078926e9afd8dc93b100101b6cfb022942a1226ca6f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1228,
+  "messages_sha256": "0b8fa6d685bdc4bf9d413d7bdccbb04dbb1c459835ef9dbcb5b88e0b818fd251",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a special case for the 'extension' argument, which may not be the most maintainable or minimal solution.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal solution by handling the 'extension' argument in a special way, which may not be the most maintainable or general approach.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The code introduces a conditional import and a direct call to another factor function, which may reduce maintainability and readability.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no additional tests provided to ensure that the change does not introduce regressions or handle other edge cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 210,
+      "returned_model_request_id": "739",
+      "completed_at_utc": "2026-11-06T04:04:32.840848+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a special case for the 'extension' argument, which may not be the most maintainable or minimal solution.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal solution by handling the 'extension' argument in a special way, which may not be the most maintainable or general approach."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code introduces a conditional import and a direct call to another factor function, which may reduce maintainability and readability."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure that the change does not introduce regressions or handle other edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR introduces a special case for the 'extension' argument, which may not be the most maintainable or minimal solution.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal solution by handling the 'extension' argument in a special way, which may not be the most maintainable or general approach."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code introduces a conditional import and a direct call to another factor function, which may reduce maintainability and readability."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no additional tests provided to ensure that the change does not introduce regressions or handle other edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

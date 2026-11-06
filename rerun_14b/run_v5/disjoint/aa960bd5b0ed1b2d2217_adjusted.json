@@ -1,0 +1,29 @@
+{
+  "code": "aa960bd5b0ed1b2d2217",
+  "instance_id": "django__django-15031",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "aa960bd5b0ed1b2d2217_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 686,
+  "messages_sha256": "988a036fd6cd69631fad3bd230943e296243153b76edae96ffcc50e8adbc6a8e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue by allowing values containing commas when used with the '__in' lookup. It introduces a more robust approach by attempting to parse the value as a JSON list first, which can handle commas correctly. This change does not introduce apparent regressions or compatibility issues, and it aligns with the project's conventions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 85,
+      "returned_model_request_id": "2539",
+      "completed_at_utc": "2026-11-06T04:16:59.783893+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue by allowing values containing commas when used with the '__in' lookup. It introduces a more robust approach by attempting to parse the value as a JSON list first, which can handle commas correctly. This change does not introduce apparent regressions or compatibility issues, and it aligns with the project's conventions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

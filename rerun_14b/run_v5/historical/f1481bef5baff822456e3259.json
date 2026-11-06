@@ -1,0 +1,50 @@
+{
+  "id": "f1481bef5baff822456e3259",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_ce2b13284c90",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_ce2b13284c90.json",
+  "historical_output_sha256": "40fb2afde393733485a9185ef05d8d517a86cea5114d05f15b690ce010e763c1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1895,
+  "messages_sha256": "c8c636969a3d065da6f208f1aec1f0083a4b7ae3528ff8cc672e9e62825160f9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of mutually exclusive groups in command arguments, but it introduces a new error handling mechanism that may not be ideal.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new error handling mechanism that may not be ideal. It raises a CommandError if more than one option from a mutually exclusive group is used, even if the group is not required. This could potentially break existing behavior or introduce new edge cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 137,
+      "returned_model_request_id": "2164",
+      "completed_at_utc": "2026-11-06T04:14:46.801778+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of mutually exclusive groups in command arguments, but it introduces a new error handling mechanism that may not be ideal.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a new error handling mechanism that may not be ideal. It raises a CommandError if more than one option from a mutually exclusive group is used, even if the group is not required. This could potentially break existing behavior or introduce new edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of mutually exclusive groups in command arguments, but it introduces a new error handling mechanism that may not be ideal.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a new error handling mechanism that may not be ideal. It raises a CommandError if more than one option from a mutually exclusive group is used, even if the group is not required. This could potentially break existing behavior or introduce new edge cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

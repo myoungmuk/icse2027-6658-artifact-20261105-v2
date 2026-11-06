@@ -1,0 +1,50 @@
+{
+  "id": "49b34d7004c9c1a7d319fc72",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_626f30fda02c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_626f30fda02c.json",
+  "historical_output_sha256": "4c2d31a10f1b8f0313b1040eab595137a25771fd2fa28e8924dd11f437521327",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 2276,
+  "messages_sha256": "aca0cb4e363bce2047fbedf65e49fa5575cd015221d709b7fa4360fd50505385",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of unnecessary expansion of float values in FITS cards, but introduces a potential regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may inadvertently affect other float values that require more precision than 20 characters, leading to potential data loss or truncation.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "1452",
+      "completed_at_utc": "2026-11-06T04:08:55.020960+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of unnecessary expansion of float values in FITS cards, but introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may inadvertently affect other float values that require more precision than 20 characters, leading to potential data loss or truncation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of unnecessary expansion of float values in FITS cards, but introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may inadvertently affect other float values that require more precision than 20 characters, leading to potential data loss or truncation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

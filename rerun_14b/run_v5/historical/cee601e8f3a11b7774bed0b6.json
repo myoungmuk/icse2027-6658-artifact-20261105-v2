@@ -1,0 +1,50 @@
+{
+  "id": "cee601e8f3a11b7774bed0b6",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_f9eaf1759bcb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_f9eaf1759bcb.json",
+  "historical_output_sha256": "712e9ffff90ef05a086079f160a36d13fcae395bfec60bf3c74927aa706553bb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1074,
+  "messages_sha256": "7eb28aba0773a8ba592403b176c53525eadcb7cb3371f4ce38597c8585757700",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly handles setting a header value to None by filtering it out, but it may have unintended side effects on other header values.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch only filters out headers with a value of None, but it does not handle other falsy values (e.g., empty strings, False). This could lead to unexpected behavior if users expect falsy values to be treated the same as None.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 135,
+      "returned_model_request_id": "788",
+      "completed_at_utc": "2026-11-06T04:04:49.260945+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly handles setting a header value to None by filtering it out, but it may have unintended side effects on other header values.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch only filters out headers with a value of None, but it does not handle other falsy values (e.g., empty strings, False). This could lead to unexpected behavior if users expect falsy values to be treated the same as None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly handles setting a header value to None by filtering it out, but it may have unintended side effects on other header values.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch only filters out headers with a value of None, but it does not handle other falsy values (e.g., empty strings, False). This could lead to unexpected behavior if users expect falsy values to be treated the same as None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

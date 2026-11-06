@@ -1,0 +1,29 @@
+{
+  "code": "6460e12c87613595cfab",
+  "instance_id": "django__django-11751",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "6460e12c87613595cfab_strict",
+  "arm": "strict",
+  "input_tokens": 1140,
+  "messages_sha256": "4f09b7180e783f95110cc351fa6c89ed8413c1b7f28a24aa4c2cb552419db210",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch only addresses three out of the nine security warnings and does not include changes for other important settings like SECURE_HSTS_SECONDS, SECURE_SSL_REDIRECT, SESSION_COOKIE_SECURE, CSRF_COOKIE_SECURE, DEBUG, and ALLOWED_HOSTS. Additionally, it does not include a deprecation period for changing global defaults, which could lead to compatibility issues.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 91,
+      "returned_model_request_id": "2306",
+      "completed_at_utc": "2026-11-06T04:15:45.334171+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch only addresses three out of the nine security warnings and does not include changes for other important settings like SECURE_HSTS_SECONDS, SECURE_SSL_REDIRECT, SESSION_COOKIE_SECURE, CSRF_COOKIE_SECURE, DEBUG, and ALLOWED_HOSTS. Additionally, it does not include a deprecation period for changing global defaults, which could lead to compatibility issues."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

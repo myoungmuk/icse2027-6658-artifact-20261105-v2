@@ -1,0 +1,50 @@
+{
+  "id": "dc9f75861d7ba8e50ed53637",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_47a26a5b0d0e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_47a26a5b0d0e.json",
+  "historical_output_sha256": "0af4c873451b19342d680c01861c7161216b9e8511bc40d50379aa85459ed495",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1512,
+  "messages_sha256": "2da911669737926f83f47988092b5fdaa6c07ff7b3b121ee5a70f5f987baf822",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by catching `PolynomialError` during substitution in `Piecewise` expressions. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a try-except block which slightly decreases readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 99,
+      "returned_model_request_id": "1369",
+      "completed_at_utc": "2026-11-06T04:08:18.335512+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by catching `PolynomialError` during substitution in `Piecewise` expressions. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a try-except block which slightly decreases readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by catching `PolynomialError` during substitution in `Piecewise` expressions. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a try-except block which slightly decreases readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

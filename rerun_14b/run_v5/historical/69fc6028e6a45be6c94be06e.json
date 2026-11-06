@@ -1,0 +1,50 @@
+{
+  "id": "69fc6028e6a45be6c94be06e",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ca478477a655",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ca478477a655.json",
+  "historical_output_sha256": "982c6a201f8d5b328fa593eeff74bd969b795ed82820b57fa52ca2449c0a7f8e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 856,
+  "messages_sha256": "4c0be19d44fbb499c7c3100162aa7a990c573841d16a508e05101461f034ebea",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes an issue with incorrect model pairs in makemigrations, but it lacks tests to ensure the fix is robust.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify that the fix works correctly and does not introduce regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "755",
+      "completed_at_utc": "2026-11-06T04:04:32.844000+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes an issue with incorrect model pairs in makemigrations, but it lacks tests to ensure the fix is robust.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify that the fix works correctly and does not introduce regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes an issue with incorrect model pairs in makemigrations, but it lacks tests to ensure the fix is robust.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify that the fix works correctly and does not introduce regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

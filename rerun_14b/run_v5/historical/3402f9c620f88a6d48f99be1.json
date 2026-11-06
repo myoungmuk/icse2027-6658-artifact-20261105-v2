@@ -1,0 +1,50 @@
+{
+  "id": "3402f9c620f88a6d48f99be1",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_b7e2ffda7c04",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_b7e2ffda7c04.json",
+  "historical_output_sha256": "eddde6a149ccd4cb01e454b60788c9653279fd18883be0a3c7302a370202faf2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1962,
+  "messages_sha256": "6db4d3717030903135733586cd866ae020e67961e228edfd42d8c9fbb0228504",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of non-ASCII domain names in email headers by converting them to Punycode. The change is minimal and focused, with a new test file to reproduce the issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test file `reproduce.py` is not part of the standard test suite and should be integrated into the existing tests for better maintainability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "2033",
+      "completed_at_utc": "2026-11-06T04:13:37.407381+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of non-ASCII domain names in email headers by converting them to Punycode. The change is minimal and focused, with a new test file to reproduce the issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file `reproduce.py` is not part of the standard test suite and should be integrated into the existing tests for better maintainability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of non-ASCII domain names in email headers by converting them to Punycode. The change is minimal and focused, with a new test file to reproduce the issue.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file `reproduce.py` is not part of the standard test suite and should be integrated into the existing tests for better maintainability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

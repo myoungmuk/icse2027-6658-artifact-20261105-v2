@@ -1,0 +1,60 @@
+{
+  "id": "5fd71d0278dab37c1f9febe2",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_cf5329125c38",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_cf5329125c38.json",
+  "historical_output_sha256": "530ef17bf326214e517674fdab2fd6ba0f499862f3bf9e172723e7e77a303bdb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 714,
+  "messages_sha256": "e6bb35de939201ec9b91f13b473dd0f3c75659ff3a6a52946b53af7c762141cc",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds joblib to the dependencies listed in show_versions, which is a necessary change. However, it lacks documentation updates and may not be fully tested.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not update the documentation to reflect the addition of joblib to the dependencies listed in show_versions.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify that joblib is correctly listed in the dependencies when sklearn version is > 0.20.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 167,
+      "returned_model_request_id": "425",
+      "completed_at_utc": "2026-11-06T04:02:33.749058+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds joblib to the dependencies listed in show_versions, which is a necessary change. However, it lacks documentation updates and may not be fully tested.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not update the documentation to reflect the addition of joblib to the dependencies listed in show_versions."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that joblib is correctly listed in the dependencies when sklearn version is > 0.20."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds joblib to the dependencies listed in show_versions, which is a necessary change. However, it lacks documentation updates and may not be fully tested.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not update the documentation to reflect the addition of joblib to the dependencies listed in show_versions."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that joblib is correctly listed in the dependencies when sklearn version is > 0.20."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

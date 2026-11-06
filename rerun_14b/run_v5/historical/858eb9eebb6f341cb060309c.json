@@ -1,0 +1,50 @@
+{
+  "id": "858eb9eebb6f341cb060309c",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_c942f6033491",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_c942f6033491.json",
+  "historical_output_sha256": "291af0b49671d5c9d2c704f9a34074f4899a67cfe44a93058ba3b8a7b3c2d6ba",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1266,
+  "messages_sha256": "28a54374a3837fc4dad5934dd07ba1291445cded0724e61ec0bcbeb820a981fe",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by modifying the signature inspection to consider type aliases, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of inspect.signature by adding the 'type_aliases' parameter, which might affect other parts of the codebase that rely on the original behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "1671",
+      "completed_at_utc": "2026-11-06T04:10:03.687572+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by modifying the signature inspection to consider type aliases, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of inspect.signature by adding the 'type_aliases' parameter, which might affect other parts of the codebase that rely on the original behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by modifying the signature inspection to consider type aliases, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of inspect.signature by adding the 'type_aliases' parameter, which might affect other parts of the codebase that rely on the original behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

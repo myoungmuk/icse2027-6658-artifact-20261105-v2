@@ -1,0 +1,50 @@
+{
+  "id": "6aa764eac8150a53241b916e",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_2b09e8061867",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_2b09e8061867.json",
+  "historical_output_sha256": "987e35f51979a9d6356e1e12b9da1452b39c06a1fdcc19ae131a7c6c062e24de",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1212,
+  "messages_sha256": "d53c6cf9102da9002ff8249519d57ae4178f1c17f274a83c98d0d870e4a4c65e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a non-minimal change by adding a new function and modifying the existing one, which could lead to confusion and potential issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new function `_get_resolver` and modifies `get_resolver` to call it, which is a non-minimal change. This could lead to confusion and potential issues in the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 128,
+      "returned_model_request_id": "992",
+      "completed_at_utc": "2026-11-06T04:05:55.614421+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a non-minimal change by adding a new function and modifying the existing one, which could lead to confusion and potential issues.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new function `_get_resolver` and modifies `get_resolver` to call it, which is a non-minimal change. This could lead to confusion and potential issues in the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a non-minimal change by adding a new function and modifying the existing one, which could lead to confusion and potential issues.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new function `_get_resolver` and modifies `get_resolver` to call it, which is a non-minimal change. This could lead to confusion and potential issues in the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

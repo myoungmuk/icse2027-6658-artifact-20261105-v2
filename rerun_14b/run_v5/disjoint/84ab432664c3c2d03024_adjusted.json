@@ -1,0 +1,29 @@
+{
+  "code": "84ab432664c3c2d03024",
+  "instance_id": "pytest-dev__pytest-8447",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "84ab432664c3c2d03024_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 3221,
+  "messages_sha256": "bd5e0583fc71a2d703a97688500fd9b708b4f0901482903ede733bceba4aa8a0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces significant changes to the `FSCollector` and `Item` classes, including the addition of a `path_or_parent` parameter and a complex handling of keyword arguments. This could lead to unexpected behavior and compatibility issues with existing plugins. Additionally, the patch does not address the root cause of the issue, which is the unexpected keyword argument 'path'. A more targeted fix is needed to resolve the problem without introducing potential regressions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 111,
+      "returned_model_request_id": "2633",
+      "completed_at_utc": "2026-11-06T04:17:31.231034+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces significant changes to the `FSCollector` and `Item` classes, including the addition of a `path_or_parent` parameter and a complex handling of keyword arguments. This could lead to unexpected behavior and compatibility issues with existing plugins. Additionally, the patch does not address the root cause of the issue, which is the unexpected keyword argument 'path'. A more targeted fix is needed to resolve the problem without introducing potential regressions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

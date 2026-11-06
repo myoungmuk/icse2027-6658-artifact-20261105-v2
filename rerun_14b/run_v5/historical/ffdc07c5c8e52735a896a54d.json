@@ -1,0 +1,50 @@
+{
+  "id": "ffdc07c5c8e52735a896a54d",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_727af9627930",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_727af9627930.json",
+  "historical_output_sha256": "c5b32c61b27d8676223bc5a3a26e1a6ab3ad6fab2d09d406591339949bb0fed3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 865,
+  "messages_sha256": "e17a97073bef082e2145160986480cdaecac1b07c98f184e7daf1c7c10abe313",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of trailing slashes in directory names for django-admin startapp, but it introduces a non-minimal change by altering the scope of the validate_name call.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR changes the scope of the validate_name call, which may introduce unintended side effects or break existing behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "174",
+      "completed_at_utc": "2026-11-06T04:01:09.168683+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of trailing slashes in directory names for django-admin startapp, but it introduces a non-minimal change by altering the scope of the validate_name call.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR changes the scope of the validate_name call, which may introduce unintended side effects or break existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of trailing slashes in directory names for django-admin startapp, but it introduces a non-minimal change by altering the scope of the validate_name call.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR changes the scope of the validate_name call, which may introduce unintended side effects or break existing behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

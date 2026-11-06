@@ -1,0 +1,29 @@
+{
+  "code": "057ecad94b924fdc1d46",
+  "instance_id": "django__django-12122",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "057ecad94b924fdc1d46_strict",
+  "arm": "strict",
+  "input_tokens": 825,
+  "messages_sha256": "519e997730748fd76c0105de11de475a58a53d7210eb08cb2d996cceb8b8a5fd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a dependency on the 'email.utils' module, which is not aligned with Django's minimal dependencies policy. Additionally, the patch does not address the issue of translating day abbreviations in RFC 2822 format, which is the core problem described.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 75,
+      "returned_model_request_id": "2688",
+      "completed_at_utc": "2026-11-06T04:17:49.119932+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a dependency on the 'email.utils' module, which is not aligned with Django's minimal dependencies policy. Additionally, the patch does not address the issue of translating day abbreviations in RFC 2822 format, which is the core problem described."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

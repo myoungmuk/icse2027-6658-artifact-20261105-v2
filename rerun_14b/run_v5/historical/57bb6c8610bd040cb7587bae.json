@@ -1,0 +1,50 @@
+{
+  "id": "57bb6c8610bd040cb7587bae",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_185d0bf2000a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_185d0bf2000a.json",
+  "historical_output_sha256": "a84c84c24ba2cc8cd4bbe3356339702bcbad01f63b364273c8e04b6924c5b03e",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1044,
+  "messages_sha256": "a47b8a7c0a1d9b456622881cca536601408ad4683eb0f1cb7122155f30d3be22",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch adds a `do_not_call_in_templates` attribute to the `Choices` class, which should resolve the issue of enumeration types being callable in Django templates. The change is minimal and does not introduce any apparent regressions or compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new attribute `do_not_call_in_templates` which is not aligned with the existing naming conventions in the Django codebase. It would be more consistent to use a naming convention like `django.template.base.DO_NOT_CALL_IN_TEMPLATES`.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 160,
+      "returned_model_request_id": "1434",
+      "completed_at_utc": "2026-11-06T04:08:36.613698+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch adds a `do_not_call_in_templates` attribute to the `Choices` class, which should resolve the issue of enumeration types being callable in Django templates. The change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new attribute `do_not_call_in_templates` which is not aligned with the existing naming conventions in the Django codebase. It would be more consistent to use a naming convention like `django.template.base.DO_NOT_CALL_IN_TEMPLATES`."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch adds a `do_not_call_in_templates` attribute to the `Choices` class, which should resolve the issue of enumeration types being callable in Django templates. The change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new attribute `do_not_call_in_templates` which is not aligned with the existing naming conventions in the Django codebase. It would be more consistent to use a naming convention like `django.template.base.DO_NOT_CALL_IN_TEMPLATES`."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

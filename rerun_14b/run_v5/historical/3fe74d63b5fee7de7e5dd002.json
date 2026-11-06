@@ -1,0 +1,60 @@
+{
+  "id": "3fe74d63b5fee7de7e5dd002",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_225baf4a0dac",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_225baf4a0dac.json",
+  "historical_output_sha256": "8aff143fdbe59c34caa5de05999c29fb7aa986dd8262d8873414be979f1893a5",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 878,
+  "messages_sha256": "dc5c64883b174456701aa0997bca56fb33515751729470c58f80a3107fa9365e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of aggregates over window functions but may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a new method `contains_over_clause` which is not defined in the provided diff. This could lead to a `AttributeError` at runtime.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify the fix for the issue. Without tests, there is no assurance that the change does not introduce new regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.5\n}",
+      "finish_reason": "stop",
+      "output_tokens": 164,
+      "returned_model_request_id": "505",
+      "completed_at_utc": "2026-11-06T04:03:08.422249+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of aggregates over window functions but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a new method `contains_over_clause` which is not defined in the provided diff. This could lead to a `AttributeError` at runtime."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify the fix for the issue. Without tests, there is no assurance that the change does not introduce new regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.5
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of aggregates over window functions but may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a new method `contains_over_clause` which is not defined in the provided diff. This could lead to a `AttributeError` at runtime."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify the fix for the issue. Without tests, there is no assurance that the change does not introduce new regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.5
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "92bd59e4e2a5a8eb5b35b4c8",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_a818b3fe603b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_a818b3fe603b.json",
+  "historical_output_sha256": "07e1040f88b90541f2bde4799d2fbd96e0189aae5c55c1c617a0f2d65ef6d976",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1131,
+  "messages_sha256": "840af36db6db68aabf646c24aff13dd5fd57563ec2729dbf1a963724f66fe634",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the issue with named tuples in range queryset filters but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces an additional check for '_fields' which is not necessary for the fix and may indicate a non-minimal change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "211",
+      "completed_at_utc": "2026-11-06T04:01:25.597449+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the issue with named tuples in range queryset filters but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces an additional check for '_fields' which is not necessary for the fix and may indicate a non-minimal change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch resolves the issue with named tuples in range queryset filters but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces an additional check for '_fields' which is not necessary for the fix and may indicate a non-minimal change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

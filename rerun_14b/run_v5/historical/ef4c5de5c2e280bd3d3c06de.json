@@ -1,0 +1,50 @@
+{
+  "id": "ef4c5de5c2e280bd3d3c06de",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_412f54b1d44b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_412f54b1d44b.json",
+  "historical_output_sha256": "9c19385feb6ee91de87d1b97f17805e982f805cb2777bd85307b4735acfe2b83",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2480,
+  "messages_sha256": "c661bc98a01474b3ddf7ac6a1d90083091c263ece2516a8fec36da9da5e3d648",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by adding checks for dimensionless arguments in transcendental functions and includes new test cases. The changes are minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces new test files (`edge_cases.py` and `reproduce.py`) which are not shown in the diff. However, since the tests already pass, this is not a blocking issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 127,
+      "returned_model_request_id": "2104",
+      "completed_at_utc": "2026-11-06T04:14:03.538986+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by adding checks for dimensionless arguments in transcendental functions and includes new test cases. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new test files (`edge_cases.py` and `reproduce.py`) which are not shown in the diff. However, since the tests already pass, this is not a blocking issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by adding checks for dimensionless arguments in transcendental functions and includes new test cases. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new test files (`edge_cases.py` and `reproduce.py`) which are not shown in the diff. However, since the tests already pass, this is not a blocking issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ea871d54daee12023976c6b2",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_e0b30724ab74",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_e0b30724ab74.json",
+  "historical_output_sha256": "e111741aad2b590eb0b13b6d8a831f41078e37ed9ed1330435c272258c1ce96d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1427,
+  "messages_sha256": "a777ae0834a4a3d7f279fc478360a66a99f24916aa933b060fa505684a202b03",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces a check to ensure the first item in `sys.path` is `\\\"\\\"`, `\\\".\\\"`, or `os.getcwd()` before removing it. This addresses the reported issue without introducing clear regressions or compatibility problems.\",\n  \"issues\": [],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 77,
+      "returned_model_request_id": "1970",
+      "completed_at_utc": "2026-11-06T04:13:06.085865+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces a check to ensure the first item in `sys.path` is `\"\"`, `\".\"`, or `os.getcwd()` before removing it. This addresses the reported issue without introducing clear regressions or compatibility problems.",
+    "issues": [],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The change introduces a check to ensure the first item in `sys.path` is `\"\"`, `\".\"`, or `os.getcwd()` before removing it. This addresses the reported issue without introducing clear regressions or compatibility problems.",
+    "issues": [],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "72179a42f4315fddc0711764",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_7b772a8d657d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_7b772a8d657d.json",
+  "historical_output_sha256": "73168fd6572fb5ca708e4f96b9af6b8ce1c4e1fc0e8a943eb2b3b705c40a3312",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 982,
+  "messages_sha256": "0b43691e5b05d3156dc930bfdc2dc34bfd81ac7144bd98fdef9e84a6311ca0ba",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a line to clear the cache for get_swappable_settings_name, which is a good fix for the issue described. However, there are concerns about potential side effects and the need for additional tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"There is a risk that clearing the cache for get_swappable_settings_name could have unintended side effects on other parts of the application that rely on this cache.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests to verify that the change does not introduce any regressions or issues.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 177,
+      "returned_model_request_id": "515",
+      "completed_at_utc": "2026-11-06T04:03:08.424060+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a line to clear the cache for get_swappable_settings_name, which is a good fix for the issue described. However, there are concerns about potential side effects and the need for additional tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that clearing the cache for get_swappable_settings_name could have unintended side effects on other parts of the application that rely on this cache."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the change does not introduce any regressions or issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds a line to clear the cache for get_swappable_settings_name, which is a good fix for the issue described. However, there are concerns about potential side effects and the need for additional tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that clearing the cache for get_swappable_settings_name could have unintended side effects on other parts of the application that rely on this cache."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests to verify that the change does not introduce any regressions or issues."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "99ef3cd69c3188e198e1b46f",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_6c58a0a94ebd",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_6c58a0a94ebd.json",
+  "historical_output_sha256": "7fa56596dbbc70f162b13ab73b61f767b776669d15efe91a5c15e753727ebae7",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1188,
+  "messages_sha256": "43edc2f5b4eaf05ff7d152492677a79fa686b467d1818af3132f70f96aae5cc2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly restores the log level after a test, but it introduces a non-minimal change by adding an unnecessary handler level tracking.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a non-minimal change by adding an unnecessary handler level tracking, which is not needed for the fix.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1568",
+      "completed_at_utc": "2026-11-06T04:09:29.771525+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly restores the log level after a test, but it introduces a non-minimal change by adding an unnecessary handler level tracking.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The patch introduces a non-minimal change by adding an unnecessary handler level tracking, which is not needed for the fix."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch correctly restores the log level after a test, but it introduces a non-minimal change by adding an unnecessary handler level tracking.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The patch introduces a non-minimal change by adding an unnecessary handler level tracking, which is not needed for the fix."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

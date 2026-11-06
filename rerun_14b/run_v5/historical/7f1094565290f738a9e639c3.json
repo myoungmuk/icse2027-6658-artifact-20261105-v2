@@ -1,0 +1,60 @@
+{
+  "id": "7f1094565290f738a9e639c3",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_85febb45c3ec",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_85febb45c3ec.json",
+  "historical_output_sha256": "093b1ee23848af763bb02fb2778b9a2b17bd5bbb48091caf72d92d522151ceea",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1211,
+  "messages_sha256": "5b8728888bcf039be09244e6ddacdc6a3962b521c95f0c94652bf3d7ff068993",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a change to detect if Python was launched with the `-m` option, but it may not handle all edge cases correctly.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change does not handle cases where the script name refers to a directory or zipfile, which can cause the `__main__.__spec__.parent` to be an empty string instead of the expected package name.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the behavior of the change in different scenarios, such as when the script name refers to a directory or zipfile.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 184,
+      "returned_model_request_id": "457",
+      "completed_at_utc": "2026-11-06T04:02:50.463377+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a change to detect if Python was launched with the `-m` option, but it may not handle all edge cases correctly.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The change does not handle cases where the script name refers to a directory or zipfile, which can cause the `__main__.__spec__.parent` to be an empty string instead of the expected package name."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the behavior of the change in different scenarios, such as when the script name refers to a directory or zipfile."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR introduces a change to detect if Python was launched with the `-m` option, but it may not handle all edge cases correctly.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "blocking",
+        "description": "The change does not handle cases where the script name refers to a directory or zipfile, which can cause the `__main__.__spec__.parent` to be an empty string instead of the expected package name."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the behavior of the change in different scenarios, such as when the script name refers to a directory or zipfile."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "7e7699fce2eaf72fa80f1251",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_c9234dcf93af",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_c9234dcf93af.json",
+  "historical_output_sha256": "3f5f72a3d3126d084d262dd0176a42267517f62f467a3e14e42e2bc1c320325d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1324,
+  "messages_sha256": "8d8e78ef34d9aa561a1cac34903c224f5c82a7ecd8e442f28dbe886eaf2b689c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly resolves the issue by using the base manager for validation, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"Using the base manager instead of the default manager might break existing behavior where the default manager is expected to filter out archived articles.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "1497",
+      "completed_at_utc": "2026-11-06T04:09:11.754432+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly resolves the issue by using the base manager for validation, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "Using the base manager instead of the default manager might break existing behavior where the default manager is expected to filter out archived articles."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly resolves the issue by using the base manager for validation, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "Using the base manager instead of the default manager might break existing behavior where the default manager is expected to filter out archived articles."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "67a922007fd38727ade63214",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_39fcf88f74a5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_39fcf88f74a5.json",
+  "historical_output_sha256": "2bee811cc7694d41819092e00e5305cc74eddb89dcca101eebde006866fd3db6",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1563,
+  "messages_sha256": "c99b72d5394c9c995d3c9db1eb02fa8bf517da70f0958311db78880a464d3606",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of the 'center' kwarg being ignored when manually iterating over DataArrayRolling. The change is minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable with additional comments explaining the logic behind the offset calculation.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "1749",
+      "completed_at_utc": "2026-11-06T04:10:43.124527+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of the 'center' kwarg being ignored when manually iterating over DataArrayRolling. The change is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable with additional comments explaining the logic behind the offset calculation."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of the 'center' kwarg being ignored when manually iterating over DataArrayRolling. The change is minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable with additional comments explaining the logic behind the offset calculation."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

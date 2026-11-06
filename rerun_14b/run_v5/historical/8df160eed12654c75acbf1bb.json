@@ -1,0 +1,60 @@
+{
+  "id": "8df160eed12654c75acbf1bb",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_9f6f92fa89ca",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_9f6f92fa89ca.json",
+  "historical_output_sha256": "83f2cee12872923b86e702ce3d14a1a5ad161f11063751d9bc2161470dc331fa",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2427,
+  "messages_sha256": "f5a1101a47b91a0371694d9ad970f8a61908b7e8ff6b10b5a66c9696bfd8f4cb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of toctree warnings for 'genindex', 'modindex', and 'search' by treating them as generated documents. The changes are minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code introduces new variables and logic that slightly deviate from the existing style, such as the use of `frozenset` and `Dict` types.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding comments to explain the purpose of the `generated_docnames` set and its usage.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 179,
+      "returned_model_request_id": "1564",
+      "completed_at_utc": "2026-11-06T04:09:29.770796+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of toctree warnings for 'genindex', 'modindex', and 'search' by treating them as generated documents. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces new variables and logic that slightly deviate from the existing style, such as the use of `frozenset` and `Dict` types."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the purpose of the `generated_docnames` set and its usage."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of toctree warnings for 'genindex', 'modindex', and 'search' by treating them as generated documents. The changes are minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code introduces new variables and logic that slightly deviate from the existing style, such as the use of `frozenset` and `Dict` types."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the purpose of the `generated_docnames` set and its usage."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

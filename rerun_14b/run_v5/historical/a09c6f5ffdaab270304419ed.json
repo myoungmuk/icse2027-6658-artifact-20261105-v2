@@ -1,0 +1,50 @@
+{
+  "id": "a09c6f5ffdaab270304419ed",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_08e5becf24f6",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_08e5becf24f6.json",
+  "historical_output_sha256": "f608660dab8d918dc8c14c9ad59bdfd13ed0684329645cc9679002295f88211e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1908,
+  "messages_sha256": "d5944a47fa5be4e09d6238d5b9b08eb8b38e16c52c5248229a336592da8e8317",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of mutually exclusive groups in command arguments, but it introduces a non-minimal change by adding a new test file and modifying the core management code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new test file and modifies the core management code, which is a non-minimal change. It would be better to focus on the core fix without adding unrelated changes.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1896",
+      "completed_at_utc": "2026-11-06T04:12:04.309584+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of mutually exclusive groups in command arguments, but it introduces a non-minimal change by adding a new test file and modifying the core management code.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new test file and modifies the core management code, which is a non-minimal change. It would be better to focus on the core fix without adding unrelated changes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of mutually exclusive groups in command arguments, but it introduces a non-minimal change by adding a new test file and modifying the core management code.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new test file and modifies the core management code, which is a non-minimal change. It would be better to focus on the core fix without adding unrelated changes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

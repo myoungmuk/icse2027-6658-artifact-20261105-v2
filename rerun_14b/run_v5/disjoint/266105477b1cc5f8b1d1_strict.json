@@ -1,0 +1,29 @@
+{
+  "code": "266105477b1cc5f8b1d1",
+  "instance_id": "django__django-12504",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "266105477b1cc5f8b1d1_strict",
+  "arm": "strict",
+  "input_tokens": 960,
+  "messages_sha256": "fe145ba35bda2bce09e7b14373e8494a25db785be4a870a1661463e035be86a4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a warning for GET requests and changes the method handling, which could lead to unexpected behavior. It also deprecates GET for logout, which is not a standard practice and may confuse users. The patch does not adequately address the original issue of CSRF protection for the logout link.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 79,
+      "returned_model_request_id": "2564",
+      "completed_at_utc": "2026-11-06T04:17:15.373393+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a warning for GET requests and changes the method handling, which could lead to unexpected behavior. It also deprecates GET for logout, which is not a standard practice and may confuse users. The patch does not adequately address the original issue of CSRF protection for the logout link."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

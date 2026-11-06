@@ -1,0 +1,29 @@
+{
+  "code": "86e568a0ecfd4984db1d",
+  "instance_id": "astropy__astropy-13668",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "86e568a0ecfd4984db1d_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 2045,
+  "messages_sha256": "892f6f937eb5705be86b3c82e80efad4e8c9df86bdfa00a3bb9b87c58505fd94",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a change that may not be appropriate. The `WCS` constructor expects a header, not a header and an HDU list. This could lead to incorrect behavior or compatibility issues. Additionally, the patch does not address the underlying issue with the `wcslint` crashes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 80,
+      "returned_model_request_id": "2713",
+      "completed_at_utc": "2026-11-06T04:18:08.360251+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a change that may not be appropriate. The `WCS` constructor expects a header, not a header and an HDU list. This could lead to incorrect behavior or compatibility issues. Additionally, the patch does not address the underlying issue with the `wcslint` crashes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

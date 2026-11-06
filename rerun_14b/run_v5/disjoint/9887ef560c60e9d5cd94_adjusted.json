@@ -1,0 +1,29 @@
+{
+  "code": "9887ef560c60e9d5cd94",
+  "instance_id": "django__django-15995",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "9887ef560c60e9d5cd94_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 741,
+  "messages_sha256": "d8a760520e8cf145d2d351d5c1baf243fd2cb43b4a235f113c7b237caa2b6b29",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch comments out the primary key check without providing an alternative solution. This could lead to potential issues where the related manager is used before the instance is saved to the database, resulting in incorrect behavior or errors. The patch lacks a proper implementation to ensure the integrity of the relationship.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 77,
+      "returned_model_request_id": "2543",
+      "completed_at_utc": "2026-11-06T04:16:59.785289+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch comments out the primary key check without providing an alternative solution. This could lead to potential issues where the related manager is used before the instance is saved to the database, resulting in incorrect behavior or errors. The patch lacks a proper implementation to ensure the integrity of the relationship."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

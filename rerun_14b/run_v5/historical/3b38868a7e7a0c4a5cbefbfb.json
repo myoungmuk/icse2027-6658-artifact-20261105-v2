@@ -1,0 +1,50 @@
+{
+  "id": "3b38868a7e7a0c4a5cbefbfb",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_aef697c82d34",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_aef697c82d34.json",
+  "historical_output_sha256": "bb38f43f0467157631bcb39be2a3e06829d02c935681b159e1729c8e75ac27f8",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 10044,
+  "messages_sha256": "b741db4b23d2523f39869ad9a168d803e80ba37e5a44124c71e3772ee65466c5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a large number of new binary files without any source code changes, which is unusual and may indicate an incorrect approach.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR introduces a large number of new binary files without any source code changes, which suggests an incorrect or fragile approach. It is unclear how these files relate to the intended fix for the doc rendering issue.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "2083",
+      "completed_at_utc": "2026-11-06T04:14:03.533835+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a large number of new binary files without any source code changes, which is unusual and may indicate an incorrect approach.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The PR introduces a large number of new binary files without any source code changes, which suggests an incorrect or fragile approach. It is unclear how these files relate to the intended fix for the doc rendering issue."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR introduces a large number of new binary files without any source code changes, which is unusual and may indicate an incorrect approach.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The PR introduces a large number of new binary files without any source code changes, which suggests an incorrect or fragile approach. It is unclear how these files relate to the intended fix for the doc rendering issue."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

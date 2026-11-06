@@ -1,0 +1,50 @@
+{
+  "id": "379ba22436cb29505fcc0fc7",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_ef07965d7212",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_ef07965d7212.json",
+  "historical_output_sha256": "f1cf07add99ee83d353570aa5b09976151d332785864e3e72eb2c4bc434ecdfb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2556,
+  "messages_sha256": "f6ea3e39107216514fb721bbc1b0a666d95b95b535583236ab43ea648bf8c5c2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the IndexError issue by handling cases where best_indices_l1 is an array. It also adds new test files for elasticnet and multinomial scenarios.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces new test files without showing them in the diff, which is expected but could be noted for clarity.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "2107",
+      "completed_at_utc": "2026-11-06T04:14:03.539768+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the IndexError issue by handling cases where best_indices_l1 is an array. It also adds new test files for elasticnet and multinomial scenarios.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new test files without showing them in the diff, which is expected but could be noted for clarity."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch resolves the IndexError issue by handling cases where best_indices_l1 is an array. It also adds new test files for elasticnet and multinomial scenarios.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces new test files without showing them in the diff, which is expected but could be noted for clarity."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

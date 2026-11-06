@@ -1,0 +1,29 @@
+{
+  "code": "b9472f055160d6ffb7ae",
+  "instance_id": "django__django-13460",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "b9472f055160d6ffb7ae_strict",
+  "arm": "strict",
+  "input_tokens": 875,
+  "messages_sha256": "6310c04a6e1ee5afe82ca83ca86317cdacd84aa2b68b9dd5138b2d761ad94426",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces new files without corresponding tests, which is a concern for maintainability and ensuring the fix works as expected. Additionally, the patch does not address the root cause of the issue, which is the incompatibility between float values and gettext's string formatting. A more robust solution should be proposed that either checks the type compatibility or provides a more informative error message.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 95,
+      "returned_model_request_id": "2338",
+      "completed_at_utc": "2026-11-06T04:15:45.340897+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces new files without corresponding tests, which is a concern for maintainability and ensuring the fix works as expected. Additionally, the patch does not address the root cause of the issue, which is the incompatibility between float values and gettext's string formatting. A more robust solution should be proposed that either checks the type compatibility or provides a more informative error message."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

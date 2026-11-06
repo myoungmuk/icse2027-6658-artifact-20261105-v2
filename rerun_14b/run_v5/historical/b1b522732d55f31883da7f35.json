@@ -1,0 +1,50 @@
+{
+  "id": "b1b522732d55f31883da7f35",
+  "scope": "agents/rag-gpt4",
+  "arm": "calibrated",
+  "packet_id": "pa_f7507c727202",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/rag-gpt4/reviewer-14b-cal/pa_f7507c727202.json",
+  "historical_output_sha256": "144f1efe3a6e6094838029e6b9c005d485b80977c216c58acc574c2b15e94f99",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1292,
+  "messages_sha256": "6be8e45c7c8369db1df869255587d7b0769e22843392596cf3f516b300fa8c9d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a check to return early if either username or password is None, which should prevent unnecessary database queries and password hashing.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new early return statement, which slightly changes the control flow. While this is a minor change, it might be inconsistent with the existing style or conventions in the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 123,
+      "returned_model_request_id": "1760",
+      "completed_at_utc": "2026-11-06T04:10:43.127101+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a check to return early if either username or password is None, which should prevent unnecessary database queries and password hashing.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new early return statement, which slightly changes the control flow. While this is a minor change, it might be inconsistent with the existing style or conventions in the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a check to return early if either username or password is None, which should prevent unnecessary database queries and password hashing.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new early return statement, which slightly changes the control flow. While this is a minor change, it might be inconsistent with the existing style or conventions in the codebase."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

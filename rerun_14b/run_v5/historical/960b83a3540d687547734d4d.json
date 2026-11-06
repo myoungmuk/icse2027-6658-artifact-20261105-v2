@@ -1,0 +1,50 @@
+{
+  "id": "960b83a3540d687547734d4d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ea43408f1ec0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ea43408f1ec0.json",
+  "historical_output_sha256": "5c8ef8dbefcdb75b5bef2f5196dd32453f3caa147efc79b6d88df1d1062ce086",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 839,
+  "messages_sha256": "d50f6e0a7692ba1c68b9d75aaf345a5626d809cee491b2024f32abc76361416e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue but may not cover all edge cases related to None estimators.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch only checks for None estimators when sample weights are provided. It does not handle the case where sample weights are not provided but an estimator is None.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "720",
+      "completed_at_utc": "2026-11-06T04:04:32.836827+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue but may not cover all edge cases related to None estimators.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only checks for None estimators when sample weights are provided. It does not handle the case where sample weights are not provided but an estimator is None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue but may not cover all edge cases related to None estimators.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only checks for None estimators when sample weights are provided. It does not handle the case where sample weights are not provided but an estimator is None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "bcbba1794f59b50a4ffbd6a1",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_f3fc62615666",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_f3fc62615666.json",
+  "historical_output_sha256": "1e04f13073054176d7dbac8ec07156af0fe7c0c028bc57fecd68abfeebbe4aa3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1633,
+  "messages_sha256": "26a7163e021a0f456ab775b372c2416ce80792785c9de229ca4d122f4286ab4b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result. The change is minimal and maintains existing functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The method name serialize_result could be more descriptive, such as get_autocomplete_result_data, to better reflect its purpose.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "1135",
+      "completed_at_utc": "2026-11-06T04:06:46.633003+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result. The change is minimal and maintains existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The method name serialize_result could be more descriptive, such as get_autocomplete_result_data, to better reflect its purpose."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR refactors AutocompleteJsonView to support extra fields in the autocomplete response by introducing a new method serialize_result. The change is minimal and maintains existing functionality.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The method name serialize_result could be more descriptive, such as get_autocomplete_result_data, to better reflect its purpose."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "e3b49203e29890d64b8e65ea",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_e09e2ac2281b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_e09e2ac2281b.json",
+  "historical_output_sha256": "0ee09bea8622585fbe9b0e059523b704ec6c83016077e1adafd2e3247908c1df",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1032,
+  "messages_sha256": "1e39c34d35f82f1366f1273e37ffe50cb87e27c2dee9eb5e98dc752e7b48a91d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of rendering empty_form crashing when empty_permitted is passed to form_kwargs. However, it introduces a non-minimal change by modifying the get_form_kwargs method call.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the get_form_kwargs method call, which may have unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "90",
+      "completed_at_utc": "2026-11-06T04:00:36.151949+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of rendering empty_form crashing when empty_permitted is passed to form_kwargs. However, it introduces a non-minimal change by modifying the get_form_kwargs method call.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the get_form_kwargs method call, which may have unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of rendering empty_form crashing when empty_permitted is passed to form_kwargs. However, it introduces a non-minimal change by modifying the get_form_kwargs method call.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the get_form_kwargs method call, which may have unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

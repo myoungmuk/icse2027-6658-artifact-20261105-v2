@@ -1,0 +1,50 @@
+{
+  "id": "0a3295b961e262123cea09da",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_29887c654946",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_29887c654946.json",
+  "historical_output_sha256": "b35e6be5c9536b20bdc5b263f5f9686b70b5105ac73fcab73c0fc5f3151257fb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 917,
+  "messages_sha256": "f285dcce7147e386a96604dbd2adf7c4e6b0b339ce8cbaca9a29a188856cd746",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the migration import ordering issue but may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change sorts imports by whether they are 'import' or 'from ... import ...', which may not handle all edge cases or existing import styles correctly.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 103,
+      "returned_model_request_id": "394",
+      "completed_at_utc": "2026-11-06T04:02:33.743215+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the migration import ordering issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change sorts imports by whether they are 'import' or 'from ... import ...', which may not handle all edge cases or existing import styles correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the migration import ordering issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change sorts imports by whether they are 'import' or 'from ... import ...', which may not handle all edge cases or existing import styles correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

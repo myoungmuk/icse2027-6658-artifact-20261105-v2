@@ -1,0 +1,60 @@
+{
+  "id": "39ccef1fb6daae33a12dfe03",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_bb39d399d903",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_bb39d399d903.json",
+  "historical_output_sha256": "23034b925cdeabb01ce0e52202a21d0ab729e085612c48aa89ccef9d969f62be",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2506,
+  "messages_sha256": "a7ebb600ab50081e1a08b20e2067ff4d4224e0490a4461c7fa5e9fd596656885",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a functional issue but introduces a potential API break.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change modifies the behavior of the `mincnt` parameter when `C` is specified, which could be considered a breaking change for users relying on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include additional tests to verify the new behavior and ensure it does not introduce regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 151,
+      "returned_model_request_id": "697",
+      "completed_at_utc": "2026-11-06T04:04:16.299060+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a functional issue but introduces a potential API break.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of the `mincnt` parameter when `C` is specified, which could be considered a breaking change for users relying on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to verify the new behavior and ensure it does not introduce regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a functional issue but introduces a potential API break.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of the `mincnt` parameter when `C` is specified, which could be considered a breaking change for users relying on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to verify the new behavior and ensure it does not introduce regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

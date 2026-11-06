@@ -1,0 +1,60 @@
+{
+  "id": "3679137a9fb687a15d8020e5",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_772e0b4501a1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_772e0b4501a1.json",
+  "historical_output_sha256": "1adf37207dc1e3f71410ba99bfca4ee27321f50fd4ae8819e08cb0070a70d9e4",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1299,
+  "messages_sha256": "82e6b8c0320d51f765cf3841cdb9c38535e86776e1966c2d4604e99ae518f59e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by adding a special case for 'genindex', 'modindex', and 'search' documents, which should resolve the warnings without introducing significant risks.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch special-cases 'genindex', 'modindex', and 'search' documents, which may not be a general solution for all similar issues.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new message type 'special document' which may not align with the project's conventions for handling special cases.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 173,
+      "returned_model_request_id": "1461",
+      "completed_at_utc": "2026-11-06T04:08:55.022970+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by adding a special case for 'genindex', 'modindex', and 'search' documents, which should resolve the warnings without introducing significant risks.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The patch special-cases 'genindex', 'modindex', and 'search' documents, which may not be a general solution for all similar issues."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new message type 'special document' which may not align with the project's conventions for handling special cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by adding a special case for 'genindex', 'modindex', and 'search' documents, which should resolve the warnings without introducing significant risks.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The patch special-cases 'genindex', 'modindex', and 'search' documents, which may not be a general solution for all similar issues."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new message type 'special document' which may not align with the project's conventions for handling special cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

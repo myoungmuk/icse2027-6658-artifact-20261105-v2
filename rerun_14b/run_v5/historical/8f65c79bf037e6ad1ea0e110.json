@@ -1,0 +1,50 @@
+{
+  "id": "8f65c79bf037e6ad1ea0e110",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_6ed34a3c3626",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_6ed34a3c3626.json",
+  "historical_output_sha256": "daef1089923aabe371467318ccedc10d6db446a55ca3a4599408d68c09e0314d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2217,
+  "messages_sha256": "7386e2a91d3349ee33c49988f634a6bfab4f4fd3b605ba0d995755288aae9d0b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the IndexError issue by handling different dimensions of coefs_paths and ensuring proper calculation of C_ and l1_ratio_ when refit is False. The changes are minimal and focused on the issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding comments to explain the conditional logic for handling different dimensions of coefs_paths.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "1891",
+      "completed_at_utc": "2026-11-06T04:12:04.308311+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the IndexError issue by handling different dimensions of coefs_paths and ensuring proper calculation of C_ and l1_ratio_ when refit is False. The changes are minimal and focused on the issue.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the conditional logic for handling different dimensions of coefs_paths."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the IndexError issue by handling different dimensions of coefs_paths and ensuring proper calculation of C_ and l1_ratio_ when refit is False. The changes are minimal and focused on the issue.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the conditional logic for handling different dimensions of coefs_paths."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

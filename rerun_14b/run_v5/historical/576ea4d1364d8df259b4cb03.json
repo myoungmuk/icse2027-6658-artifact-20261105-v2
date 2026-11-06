@@ -1,0 +1,50 @@
+{
+  "id": "576ea4d1364d8df259b4cb03",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_fdf32f7b9745",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_fdf32f7b9745.json",
+  "historical_output_sha256": "8d9c3e8e781fe9196ffdea2ebc1d75723f3578b95564d82fcbc5226f1f85b15d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1481,
+  "messages_sha256": "14f841a77c51c5982308316f9dec0ce96bee2d4b69b3e61f4ad8f1c622a6c2d1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by skipping the first line when calculating indentation, which should resolve the error reported. The new test file helps reproduce the error and verify the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new test file, which is a good practice, but it is not shown in the diff. The maintainability/readability of the code is slightly impacted by the additional logic to handle the case where there are no non-empty lines after the first line.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "1956",
+      "completed_at_utc": "2026-11-06T04:12:42.352089+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by skipping the first line when calculating indentation, which should resolve the error reported. The new test file helps reproduce the error and verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new test file, which is a good practice, but it is not shown in the diff. The maintainability/readability of the code is slightly impacted by the additional logic to handle the case where there are no non-empty lines after the first line."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by skipping the first line when calculating indentation, which should resolve the error reported. The new test file helps reproduce the error and verify the fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new test file, which is a good practice, but it is not shown in the diff. The maintainability/readability of the code is slightly impacted by the additional logic to handle the case where there are no non-empty lines after the first line."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

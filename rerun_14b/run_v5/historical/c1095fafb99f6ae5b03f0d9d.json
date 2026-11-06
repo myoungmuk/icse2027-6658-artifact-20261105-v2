@@ -1,0 +1,50 @@
+{
+  "id": "c1095fafb99f6ae5b03f0d9d",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_1573bb9d7b52",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_1573bb9d7b52.json",
+  "historical_output_sha256": "cb42c63b9a80902d8657064468077f1f3403d237468c499876bdc57fcc8e28da",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2621,
+  "messages_sha256": "1b2df937105cdb8683e35a5ca8c68df22bfa81291746106388028a74850acb01",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue with GenericForeignKey and UUID primary keys by ensuring proper handling of UUID values. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new file (commit_message.txt) and a new test file (reproduce_gfk_uuid_issue.py), which are not shown in the diff. However, since the tests already pass, this is not a blocking issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 137,
+      "returned_model_request_id": "1892",
+      "completed_at_utc": "2026-11-06T04:12:04.308505+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue with GenericForeignKey and UUID primary keys by ensuring proper handling of UUID values. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new file (commit_message.txt) and a new test file (reproduce_gfk_uuid_issue.py), which are not shown in the diff. However, since the tests already pass, this is not a blocking issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue with GenericForeignKey and UUID primary keys by ensuring proper handling of UUID values. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new file (commit_message.txt) and a new test file (reproduce_gfk_uuid_issue.py), which are not shown in the diff. However, since the tests already pass, this is not a blocking issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

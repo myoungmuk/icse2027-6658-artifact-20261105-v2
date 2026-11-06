@@ -1,0 +1,50 @@
+{
+  "id": "db43eaf859e9ed5ec30dd3fc",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_259e16258c73",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_259e16258c73.json",
+  "historical_output_sha256": "055f92706315a06890c8c66bfc686836fd46528899f3c486969b47ddccf8f37b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2225,
+  "messages_sha256": "47376a864a5cf5007bcf9eab2923f7fc84cc35def54044bd05e27925b0070bb2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly updates SQLite version checks and documentation, but introduces assumptions about supported features without proper checks.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The PR assumes all SQLite versions >= 3.9.0 support certain features without checking, which could lead to runtime errors on older versions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "1798",
+      "completed_at_utc": "2026-11-06T04:11:18.903784+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly updates SQLite version checks and documentation, but introduces assumptions about supported features without proper checks.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The PR assumes all SQLite versions >= 3.9.0 support certain features without checking, which could lead to runtime errors on older versions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR correctly updates SQLite version checks and documentation, but introduces assumptions about supported features without proper checks.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The PR assumes all SQLite versions >= 3.9.0 support certain features without checking, which could lead to runtime errors on older versions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

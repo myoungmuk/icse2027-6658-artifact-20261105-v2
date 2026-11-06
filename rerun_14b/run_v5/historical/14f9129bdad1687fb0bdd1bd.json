@@ -1,0 +1,50 @@
+{
+  "id": "14f9129bdad1687fb0bdd1bd",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_b2831eafeead",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_b2831eafeead.json",
+  "historical_output_sha256": "d25a55d84a4554bfae8d0bfb450a5ef8caf8a1d9d46534dd37abc540de8c9941",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1462,
+  "messages_sha256": "250ea16a384336d7241b81af8255810cd5e8c17a23b5bf60548aa348baddd91a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly fixes the issue with `mathematica_code` for `Max` and `Min` functions, but introduces minor stylistic issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new methods `_print_Max` and `_print_Min` have similar structures, which could be refactored for better maintainability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "1947",
+      "completed_at_utc": "2026-11-06T04:12:42.350392+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly fixes the issue with `mathematica_code` for `Max` and `Min` functions, but introduces minor stylistic issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new methods `_print_Max` and `_print_Min` have similar structures, which could be refactored for better maintainability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR correctly fixes the issue with `mathematica_code` for `Max` and `Min` functions, but introduces minor stylistic issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new methods `_print_Max` and `_print_Min` have similar structures, which could be refactored for better maintainability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

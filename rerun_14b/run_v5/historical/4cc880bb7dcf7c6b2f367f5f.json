@@ -1,0 +1,60 @@
+{
+  "id": "4cc880bb7dcf7c6b2f367f5f",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_189c0c714320",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_189c0c714320.json",
+  "historical_output_sha256": "d39c492bee2f82e009c867e139ee9dc226ec22fb3c10a5e6ee2982c35161bc9f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1669,
+  "messages_sha256": "2b33d3ebae59a0b0a3b83bdb0ad69a9cdf4ca65619308124c0512c39a0e5c5fa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific bug but introduces a potential issue with handling non-finite values.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a potential behavioral regression risk by returning `None` when all values are non-finite, which may break existing code that assumes a value will always be returned.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include additional tests to verify the behavior of `_safe_first_finite` with various non-finite inputs, which is crucial for ensuring the fix is robust.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 171,
+      "returned_model_request_id": "142",
+      "completed_at_utc": "2026-11-06T04:00:52.714954+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific bug but introduces a potential issue with handling non-finite values.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a potential behavioral regression risk by returning `None` when all values are non-finite, which may break existing code that assumes a value will always be returned."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to verify the behavior of `_safe_first_finite` with various non-finite inputs, which is crucial for ensuring the fix is robust."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific bug but introduces a potential issue with handling non-finite values.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change introduces a potential behavioral regression risk by returning `None` when all values are non-finite, which may break existing code that assumes a value will always be returned."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include additional tests to verify the behavior of `_safe_first_finite` with various non-finite inputs, which is crucial for ensuring the fix is robust."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

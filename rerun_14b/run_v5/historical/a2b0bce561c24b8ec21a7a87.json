@@ -1,0 +1,50 @@
+{
+  "id": "a2b0bce561c24b8ec21a7a87",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_4aff48543ae0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_4aff48543ae0.json",
+  "historical_output_sha256": "d538874288b42b06b07f0942df18a514b58890304abd380b11de35a427abe41f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1285,
+  "messages_sha256": "db22196ec6c1b9fd0eea2f233b61a05a9645329f2ec3e7bea42a04014c13a756",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses a specific issue with middleware handling in ASGI context but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces an additional variable `adapted_handler` and an `else` block, which is not minimal and may introduce unnecessary complexity.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "715",
+      "completed_at_utc": "2026-11-06T04:04:16.302535+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses a specific issue with middleware handling in ASGI context but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces an additional variable `adapted_handler` and an `else` block, which is not minimal and may introduce unnecessary complexity."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses a specific issue with middleware handling in ASGI context but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces an additional variable `adapted_handler` and an `else` block, which is not minimal and may introduce unnecessary complexity."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

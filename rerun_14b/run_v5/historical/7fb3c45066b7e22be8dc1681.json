@@ -1,0 +1,50 @@
+{
+  "id": "7fb3c45066b7e22be8dc1681",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_ef9bc0dee267",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_ef9bc0dee267.json",
+  "historical_output_sha256": "e1eff00c696ff4d34580faf3a5ee3d88d7420cfee995e7836efa083bfad309cb",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1004,
+  "messages_sha256": "a8e479bc698d1b056d870cf1803f5d72f045a5050e76958e2c1b900c9b1c6b60",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change adds a special case for JSONField in display_for_field, which should resolve the issue of JSONField values being displayed as dict when readonly in the admin.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new import for models.JSONField, which is not shown in the diff. Ensure that the import is correctly added to avoid potential issues.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "1458",
+      "completed_at_utc": "2026-11-06T04:08:55.022098+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change adds a special case for JSONField in display_for_field, which should resolve the issue of JSONField values being displayed as dict when readonly in the admin.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new import for models.JSONField, which is not shown in the diff. Ensure that the import is correctly added to avoid potential issues."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change adds a special case for JSONField in display_for_field, which should resolve the issue of JSONField values being displayed as dict when readonly in the admin.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new import for models.JSONField, which is not shown in the diff. Ensure that the import is correctly added to avoid potential issues."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

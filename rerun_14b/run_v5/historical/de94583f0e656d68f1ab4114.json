@@ -1,0 +1,50 @@
+{
+  "id": "de94583f0e656d68f1ab4114",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_aa8e1f1ed5ad",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_aa8e1f1ed5ad.json",
+  "historical_output_sha256": "96c10bfb0524901e9d3e98d88ae2e87eee91489053bcd96c40d8c0a07ad7dcdd",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1465,
+  "messages_sha256": "425b407e684929cecfd5a3b9938080fe98b58ebfcc77251a05de392ffd8847ee",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the regression issue by ensuring that IndexVariable objects are not copied deeply, which prevents the dtype from being cast to object. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding a comment explaining why IndexVariable objects are not being copied deeply.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "1179",
+      "completed_at_utc": "2026-11-06T04:07:03.957530+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the regression issue by ensuring that IndexVariable objects are not copied deeply, which prevents the dtype from being cast to object. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding a comment explaining why IndexVariable objects are not being copied deeply."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the regression issue by ensuring that IndexVariable objects are not copied deeply, which prevents the dtype from being cast to object. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding a comment explaining why IndexVariable objects are not being copied deeply."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

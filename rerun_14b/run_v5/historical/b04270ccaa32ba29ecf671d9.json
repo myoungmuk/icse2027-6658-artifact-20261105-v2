@@ -1,0 +1,50 @@
+{
+  "id": "b04270ccaa32ba29ecf671d9",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_208b7cd86ac2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_208b7cd86ac2.json",
+  "historical_output_sha256": "2dbad74496ddea4d4974b4e721b80895f042cb4552c391599f34bedfa3f958c6",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2395,
+  "messages_sha256": "a2390051265a6b13faa693ef8d9f3337677719b467ed5a553eb54d5b013907e5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue of Unicode method names causing UnicodeDecodeError in Python 2.7.2. However, it introduces a potential regression risk by converting all method names to strings, which may not be suitable for all cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch converts the method name to a string using `str(method)`, which may not be appropriate if `method` is already a byte string. This could lead to unexpected behavior or errors in other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 152,
+      "returned_model_request_id": "692",
+      "completed_at_utc": "2026-11-06T04:04:16.298004+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue of Unicode method names causing UnicodeDecodeError in Python 2.7.2. However, it introduces a potential regression risk by converting all method names to strings, which may not be suitable for all cases.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch converts the method name to a string using `str(method)`, which may not be appropriate if `method` is already a byte string. This could lead to unexpected behavior or errors in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue of Unicode method names causing UnicodeDecodeError in Python 2.7.2. However, it introduces a potential regression risk by converting all method names to strings, which may not be suitable for all cases.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch converts the method name to a string using `str(method)`, which may not be appropriate if `method` is already a byte string. This could lead to unexpected behavior or errors in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

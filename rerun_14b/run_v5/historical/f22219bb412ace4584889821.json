@@ -1,0 +1,50 @@
+{
+  "id": "f22219bb412ace4584889821",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_5caa03ab4294",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_5caa03ab4294.json",
+  "historical_output_sha256": "0d83092c5ed7250723f3f599a0739002f2cbae8061e59e17a029a8ed2866487d",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1854,
+  "messages_sha256": "2bf07f3aa00d51d059174324874e227910c186069db603e583e41bc7e481354e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by excluding __init__.py files from collection unless explicitly allowed by the configuration.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch special-cases the handling of __init__.py files, which may not be a general solution for all similar issues.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "1359",
+      "completed_at_utc": "2026-11-06T04:08:18.333065+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by excluding __init__.py files from collection unless explicitly allowed by the configuration.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The patch special-cases the handling of __init__.py files, which may not be a general solution for all similar issues."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by excluding __init__.py files from collection unless explicitly allowed by the configuration.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The patch special-cases the handling of __init__.py files, which may not be a general solution for all similar issues."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

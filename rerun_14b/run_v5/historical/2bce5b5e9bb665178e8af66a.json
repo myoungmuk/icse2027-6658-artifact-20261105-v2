@@ -1,0 +1,50 @@
+{
+  "id": "2bce5b5e9bb665178e8af66a",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_c8dce1da2af3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_c8dce1da2af3.json",
+  "historical_output_sha256": "09aafb75103e2537326ba3835115af8f305b7800c9249fe4de73f70107f1b30f",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1512,
+  "messages_sha256": "288ca25c2a336c8e5a33c07fa3dc7e8eac3f6e83784895395fd9ae7f50080464",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by correctly identifying the end of the docinfo section, but it may not handle all edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch assumes that the end of the docinfo section is marked by an empty line, which may not be true in all cases. For example, if the docinfo section contains a directive without a following empty line, the patch may incorrectly prepend the prolog.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 136,
+      "returned_model_request_id": "1383",
+      "completed_at_utc": "2026-11-06T04:08:18.338849+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by correctly identifying the end of the docinfo section, but it may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch assumes that the end of the docinfo section is marked by an empty line, which may not be true in all cases. For example, if the docinfo section contains a directive without a following empty line, the patch may incorrectly prepend the prolog."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by correctly identifying the end of the docinfo section, but it may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch assumes that the end of the docinfo section is marked by an empty line, which may not be true in all cases. For example, if the docinfo section contains a directive without a following empty line, the patch may incorrectly prepend the prolog."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

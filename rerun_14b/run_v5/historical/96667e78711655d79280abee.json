@@ -1,0 +1,50 @@
+{
+  "id": "96667e78711655d79280abee",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_a276d32410fa",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_a276d32410fa.json",
+  "historical_output_sha256": "98ffc96a7419a26a89714af766d4cedcf278cae22558004ee3b3b9bd0b51dd0e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1151,
+  "messages_sha256": "9c0ec72c8a0ec76f25156da2d486af310ef5555f9c784c50b198ac7fb105fbd8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may not cover all edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch changes the condition to check the sum of powers instead of the maximum power, which might not cover all edge cases where the minimum degree condition is not met correctly.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "588",
+      "completed_at_utc": "2026-11-06T04:03:41.537614+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may not cover all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch changes the condition to check the sum of powers instead of the maximum power, which might not cover all edge cases where the minimum degree condition is not met correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may not cover all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch changes the condition to check the sum of powers instead of the maximum power, which might not cover all edge cases where the minimum degree condition is not met correctly."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

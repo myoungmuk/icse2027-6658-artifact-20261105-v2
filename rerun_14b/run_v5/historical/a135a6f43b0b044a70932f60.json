@@ -1,0 +1,50 @@
+{
+  "id": "a135a6f43b0b044a70932f60",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_1032c87e7a98",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_1032c87e7a98.json",
+  "historical_output_sha256": "8924f55d212531863cfa67dedb75369d9a4488cfe80912c44223d9c9e9d7bbd3",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1667,
+  "messages_sha256": "67419ba1513678cb6b1d37c6ffe7bda198503124892115319fd63ecb5acd8a4d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by modifying the `as_mysql`, `as_oracle`, and `as_sqlite` methods to handle the `__in` lookup correctly. The changes are minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new parameter `rhs` to the `as_mysql`, `as_oracle`, and `as_sqlite` methods, which is not aligned with the existing method signatures. This could be considered a minor style inconsistency.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 150,
+      "returned_model_request_id": "1249",
+      "completed_at_utc": "2026-11-06T04:07:40.855045+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by modifying the `as_mysql`, `as_oracle`, and `as_sqlite` methods to handle the `__in` lookup correctly. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new parameter `rhs` to the `as_mysql`, `as_oracle`, and `as_sqlite` methods, which is not aligned with the existing method signatures. This could be considered a minor style inconsistency."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by modifying the `as_mysql`, `as_oracle`, and `as_sqlite` methods to handle the `__in` lookup correctly. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new parameter `rhs` to the `as_mysql`, `as_oracle`, and `as_sqlite` methods, which is not aligned with the existing method signatures. This could be considered a minor style inconsistency."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "da2d3298be5df907fd58cf7d",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_fc00eac63bae",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_fc00eac63bae.json",
+  "historical_output_sha256": "ce1dd57a86c152edcdedccc1bb3e458864bffa7a152b2731445cfd94f43783c9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1814,
+  "messages_sha256": "a933561106558b0324ce117d1737fad2a1936c35b9a45a3a3a7548e9c0594177",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue by removing a specific string replacement, but it lacks context on why the replacement was necessary in the first place.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The change removes a string replacement without understanding its original purpose, which could lead to unintended side effects or regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "1848",
+      "completed_at_utc": "2026-11-06T04:11:40.859246+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue by removing a specific string replacement, but it lacks context on why the replacement was necessary in the first place.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The change removes a string replacement without understanding its original purpose, which could lead to unintended side effects or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue by removing a specific string replacement, but it lacks context on why the replacement was necessary in the first place.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The change removes a string replacement without understanding its original purpose, which could lead to unintended side effects or regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

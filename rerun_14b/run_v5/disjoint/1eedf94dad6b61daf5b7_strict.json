@@ -1,0 +1,29 @@
+{
+  "code": "1eedf94dad6b61daf5b7",
+  "instance_id": "sphinx-doc__sphinx-8674",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "1eedf94dad6b61daf5b7_strict",
+  "arm": "strict",
+  "input_tokens": 1365,
+  "messages_sha256": "f1d3c3253e7ac65fc4191f921d061bd529c95ef20176be6ca79446e3e4ba2aaa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new configuration option `highlight_options` but does not provide any documentation or tests for it. This could lead to confusion and potential bugs. Additionally, the patch assumes that `highlight_options` is a dictionary, but it does not handle cases where it might be a different type. The patch should be rejected until it includes proper documentation and tests.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 93,
+      "returned_model_request_id": "2588",
+      "completed_at_utc": "2026-11-06T04:17:15.377672+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new configuration option `highlight_options` but does not provide any documentation or tests for it. This could lead to confusion and potential bugs. Additionally, the patch assumes that `highlight_options` is a dictionary, but it does not handle cases where it might be a different type. The patch should be rejected until it includes proper documentation and tests."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

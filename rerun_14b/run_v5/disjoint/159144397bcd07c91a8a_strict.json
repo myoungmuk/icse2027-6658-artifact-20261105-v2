@@ -1,0 +1,29 @@
+{
+  "code": "159144397bcd07c91a8a",
+  "instance_id": "mwaskom__seaborn-3217",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "159144397bcd07c91a8a_strict",
+  "arm": "strict",
+  "input_tokens": 1395,
+  "messages_sha256": "02c02fbdd82ff98990dc8f6a4058d6aad6d05471a14cd80486dc6c36fdad3737",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch removes the 'width' column from the DataFrame without handling its impact on other parts of the code. This could lead to functional regressions or errors in other plotting functions that rely on 'width'. Additionally, the patch does not address the root cause of the width computation issue on log scales.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 81,
+      "returned_model_request_id": "2568",
+      "completed_at_utc": "2026-11-06T04:17:15.374075+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch removes the 'width' column from the DataFrame without handling its impact on other parts of the code. This could lead to functional regressions or errors in other plotting functions that rely on 'width'. Additionally, the patch does not address the root cause of the width computation issue on log scales."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

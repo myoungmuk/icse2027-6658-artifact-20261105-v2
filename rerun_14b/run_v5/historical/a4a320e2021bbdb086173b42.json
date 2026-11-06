@@ -1,0 +1,50 @@
+{
+  "id": "a4a320e2021bbdb086173b42",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_79accc91cbf9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_79accc91cbf9.json",
+  "historical_output_sha256": "bab6781c84e45a2f9afdb120c609d86b22968e42b5d15c6c40698fa853ee7e56",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 941,
+  "messages_sha256": "9e713402fa484073e9f58c35b1393e7733f7ab2d2aa85d2c696d70b3e98b1102",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with named tuples in range queries but introduces a non-minimal change by checking for the '_make' attribute.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by checking for the '_make' attribute, which may not be the most efficient or maintainable way to handle named tuples.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 119,
+      "returned_model_request_id": "124",
+      "completed_at_utc": "2026-11-06T04:00:52.710393+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with named tuples in range queries but introduces a non-minimal change by checking for the '_make' attribute.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by checking for the '_make' attribute, which may not be the most efficient or maintainable way to handle named tuples."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with named tuples in range queries but introduces a non-minimal change by checking for the '_make' attribute.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by checking for the '_make' attribute, which may not be the most efficient or maintainable way to handle named tuples."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

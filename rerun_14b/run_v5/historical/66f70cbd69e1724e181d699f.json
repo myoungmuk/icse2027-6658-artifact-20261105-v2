@@ -1,0 +1,50 @@
+{
+  "id": "66f70cbd69e1724e181d699f",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_72a9f7ad5be0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_72a9f7ad5be0.json",
+  "historical_output_sha256": "141c05118d9df84f174f12e15ec518e41b9906ef7daf5bd3b87517e674a97f01",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1210,
+  "messages_sha256": "01ed3cac9e027b0bd8bb60ff9c8a555ffb73592ea94e1335fd65e0181451e5dc",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the deprecation warnings but may introduce performance regressions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The use of np.where in a loop may introduce performance regressions compared to the original code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 92,
+      "returned_model_request_id": "546",
+      "completed_at_utc": "2026-11-06T04:03:24.720280+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the deprecation warnings but may introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The use of np.where in a loop may introduce performance regressions compared to the original code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the deprecation warnings but may introduce performance regressions.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The use of np.where in a loop may introduce performance regressions compared to the original code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

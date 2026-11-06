@@ -1,0 +1,50 @@
+{
+  "id": "3dc0076a79429bb7c7e1c2c0",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_2dff21afcb79",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_2dff21afcb79.json",
+  "historical_output_sha256": "bdfe3438e36ce06c8b813d0b62a6fb6b02a19ce49226768f86e035b20c3fbdcb",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1251,
+  "messages_sha256": "6882b159e4197b0d8c1ebea6602f626455234010fdd85f3f23179b827866b503",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by using the correct column names in the SQL query. However, it may introduce a bug if a field does not have a `db_column` attribute.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch assumes that every field in `unique_fields` has a `db_column` attribute. If a field does not have a `db_column`, it will use the field name directly, which may lead to incorrect SQL generation.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 140,
+      "returned_model_request_id": "1399",
+      "completed_at_utc": "2026-11-06T04:08:36.606991+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by using the correct column names in the SQL query. However, it may introduce a bug if a field does not have a `db_column` attribute.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch assumes that every field in `unique_fields` has a `db_column` attribute. If a field does not have a `db_column`, it will use the field name directly, which may lead to incorrect SQL generation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by using the correct column names in the SQL query. However, it may introduce a bug if a field does not have a `db_column` attribute.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch assumes that every field in `unique_fields` has a `db_column` attribute. If a field does not have a `db_column`, it will use the field name directly, which may lead to incorrect SQL generation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

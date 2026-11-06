@@ -1,0 +1,50 @@
+{
+  "id": "d05c8b92964dd965a564280d",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_0a56aa87fe0b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_0a56aa87fe0b.json",
+  "historical_output_sha256": "ce964c33d1d60bf6423c02078ddffe9979a0b0cf6d7c6753447350d551ba6146",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1109,
+  "messages_sha256": "fdae4cff384204a40eab4c9ffdded1c5b0a16b433add6b2036239f5e94c94adf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a method `get_prep_value` to handle UUIDField, which seems necessary for the issue described. However, the change could potentially introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a method `get_prep_value` that calls `to_python` on the value, which might not be necessary or could lead to unexpected behavior if `to_python` is not idempotent or if other methods in the inheritance chain rely on the current behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "1707",
+      "completed_at_utc": "2026-11-06T04:10:23.394240+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a method `get_prep_value` to handle UUIDField, which seems necessary for the issue described. However, the change could potentially introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a method `get_prep_value` that calls `to_python` on the value, which might not be necessary or could lead to unexpected behavior if `to_python` is not idempotent or if other methods in the inheritance chain rely on the current behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a method `get_prep_value` to handle UUIDField, which seems necessary for the issue described. However, the change could potentially introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a method `get_prep_value` that calls `to_python` on the value, which might not be necessary or could lead to unexpected behavior if `to_python` is not idempotent or if other methods in the inheritance chain rely on the current behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

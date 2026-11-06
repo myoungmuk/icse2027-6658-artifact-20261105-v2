@@ -1,0 +1,50 @@
+{
+  "id": "7c3f966dc5dc5140798108b0",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_fbeca7c3cc03",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_fbeca7c3cc03.json",
+  "historical_output_sha256": "2e9999ec2502732a6fa890e02a604307266075eb13feecf78fc71a058e754dc4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1247,
+  "messages_sha256": "b32eec2fbc0eed5aa6ee72d6d904b2281afc83485e4a4dfeeee0b8299f6dd70f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by ensuring the permute parameter is passed correctly, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces the permute parameter to the recursive call to diophantine, which may alter the behavior of existing code that relies on the default behavior of not permuting.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "798",
+      "completed_at_utc": "2026-11-06T04:04:49.262927+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by ensuring the permute parameter is passed correctly, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change introduces the permute parameter to the recursive call to diophantine, which may alter the behavior of existing code that relies on the default behavior of not permuting."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by ensuring the permute parameter is passed correctly, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change introduces the permute parameter to the recursive call to diophantine, which may alter the behavior of existing code that relies on the default behavior of not permuting."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

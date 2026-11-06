@@ -1,0 +1,50 @@
+{
+  "id": "72e69190d3cca7a9022efb5b",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_ca12938f013b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_ca12938f013b.json",
+  "historical_output_sha256": "71f569f2bb699740fda69f9ba19a7578154779610c0d2a59d44672fd531aff9b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2055,
+  "messages_sha256": "3249f703a447c8e4b677c14e33c0665bbca5f9513b40afffc2eb2c761e00de5e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses a KeyError issue in the migration autodetector by using `pop` instead of `del`. The fix is minimal and specific to the reported issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"minor\",\n      \"description\": \"The fix is specific to the failing test and may not cover other similar cases.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "832",
+      "completed_at_utc": "2026-11-06T04:05:05.884140+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses a KeyError issue in the migration autodetector by using `pop` instead of `del`. The fix is minimal and specific to the reported issue.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The fix is specific to the failing test and may not cover other similar cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change addresses a KeyError issue in the migration autodetector by using `pop` instead of `del`. The fix is minimal and specific to the reported issue.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The fix is specific to the failing test and may not cover other similar cases."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

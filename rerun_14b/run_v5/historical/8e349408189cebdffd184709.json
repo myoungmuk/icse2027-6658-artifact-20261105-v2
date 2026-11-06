@@ -1,0 +1,60 @@
+{
+  "id": "8e349408189cebdffd184709",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_2041f1cd63cb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_2041f1cd63cb.json",
+  "historical_output_sha256": "ce559abdae39875e78d247b4feabfaeea34ab8e2958df7529ef668fd195b4e9c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1182,
+  "messages_sha256": "d59b631aa630666534c14625d993b322fb7eed1f613b502208b0473655e615ab",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR removes caching of string condition evaluation, which may introduce performance regressions and is not minimal.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"Removing caching may introduce performance regressions, as evaluating expressions repeatedly can be costly.\"\n    },\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change is not minimal, as it removes caching functionality that may have been added for a reason, even if not currently used.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "41",
+      "completed_at_utc": "2026-11-06T04:00:16.942237+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR removes caching of string condition evaluation, which may introduce performance regressions and is not minimal.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "Removing caching may introduce performance regressions, as evaluating expressions repeatedly can be costly."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal, as it removes caching functionality that may have been added for a reason, even if not currently used."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR removes caching of string condition evaluation, which may introduce performance regressions and is not minimal.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "Removing caching may introduce performance regressions, as evaluating expressions repeatedly can be costly."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal, as it removes caching functionality that may have been added for a reason, even if not currently used."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

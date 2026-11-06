@@ -1,0 +1,50 @@
+{
+  "id": "4faca3cd67f967216205a9ca",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_00f3b55977bd",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_00f3b55977bd.json",
+  "historical_output_sha256": "beb0b87531571ccd2edd3925506325c70f4db63da1491c6358c554576c39193a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1868,
+  "messages_sha256": "54da27ad80bb85996e08c85151d3ed1a2c56e1b9046b068c0d7bd58eff0e2409",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the aliasing issue in QuerySet OR operations but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a significant change in alias generation logic, which may have unintended side effects or performance implications.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 99,
+      "returned_model_request_id": "2009",
+      "completed_at_utc": "2026-11-06T04:13:06.093832+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the aliasing issue in QuerySet OR operations but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a significant change in alias generation logic, which may have unintended side effects or performance implications."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the aliasing issue in QuerySet OR operations but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a significant change in alias generation logic, which may have unintended side effects or performance implications."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

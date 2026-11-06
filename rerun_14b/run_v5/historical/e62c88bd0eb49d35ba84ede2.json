@@ -1,0 +1,50 @@
+{
+  "id": "e62c88bd0eb49d35ba84ede2",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_603d555fc1bf",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_603d555fc1bf.json",
+  "historical_output_sha256": "c82bd00a042c276943605dec4bbee58fa9c9e9eed073d1a9280b32e37ac3cfed",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1469,
+  "messages_sha256": "9796a6c1b24eb83da502a63a40946dfa1c61d81a86c3c7f182e07dc62074caa7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the `fill_value` parameter to `IterativeImputer` and updates the initialization logic accordingly. The change is minimal and aligns with the expected behavior based on the documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The type of `fill_value` is set to `object`, which is not specific. It would be better to specify the expected types (e.g., `float`, `int`, `str`) to improve maintainability and readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 144,
+      "returned_model_request_id": "937",
+      "completed_at_utc": "2026-11-06T04:05:39.449253+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the `fill_value` parameter to `IterativeImputer` and updates the initialization logic accordingly. The change is minimal and aligns with the expected behavior based on the documentation.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The type of `fill_value` is set to `object`, which is not specific. It would be better to specify the expected types (e.g., `float`, `int`, `str`) to improve maintainability and readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR adds the `fill_value` parameter to `IterativeImputer` and updates the initialization logic accordingly. The change is minimal and aligns with the expected behavior based on the documentation.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The type of `fill_value` is set to `object`, which is not specific. It would be better to specify the expected types (e.g., `float`, `int`, `str`) to improve maintainability and readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

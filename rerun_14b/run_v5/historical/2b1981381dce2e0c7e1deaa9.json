@@ -1,0 +1,50 @@
+{
+  "id": "2b1981381dce2e0c7e1deaa9",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_0a0c5b8b0c20",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_0a0c5b8b0c20.json",
+  "historical_output_sha256": "18bacc057dd762f2b1f418ccb328f8f1a2df16f70a4d6cee5d82ab1f5d3e1f50",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 948,
+  "messages_sha256": "805e964a364ead2e690b5c7e3de4000a46b89aba883e50f37df482211a487bf4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a functional issue with username validation but introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change from `$` to `\\\\Z` in the regex may inadvertently break existing behavior or assumptions in other parts of the codebase that rely on the current validation logic.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "146",
+      "completed_at_utc": "2026-11-06T04:01:09.161894+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a functional issue with username validation but introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change from `$` to `\\Z` in the regex may inadvertently break existing behavior or assumptions in other parts of the codebase that rely on the current validation logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a functional issue with username validation but introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change from `$` to `\\Z` in the regex may inadvertently break existing behavior or assumptions in other parts of the codebase that rely on the current validation logic."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "92f73da01f66aa33e1221988",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_db6116cf6352",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_db6116cf6352.json",
+  "historical_output_sha256": "8a90f8a0ba0d3575b409282f7cfcdc2bcf4e07c68dae3739889a3833e6499d82",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 948,
+  "messages_sha256": "87f13a97c0779f82196c0c8bedbe213a1b1d4cafedc1df2f6c132f74ca225687",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly updates the primary key to None after deletion, but it may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may affect models with custom deletion logic or those using signals that depend on the primary key value.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 99,
+      "returned_model_request_id": "1535",
+      "completed_at_utc": "2026-11-06T04:09:11.761389+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly updates the primary key to None after deletion, but it may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may affect models with custom deletion logic or those using signals that depend on the primary key value."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly updates the primary key to None after deletion, but it may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may affect models with custom deletion logic or those using signals that depend on the primary key value."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

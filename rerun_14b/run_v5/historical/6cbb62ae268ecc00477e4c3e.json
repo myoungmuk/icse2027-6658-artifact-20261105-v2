@@ -1,0 +1,50 @@
+{
+  "id": "6cbb62ae268ecc00477e4c3e",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_e32f224c66d7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_e32f224c66d7.json",
+  "historical_output_sha256": "40568095e62fee3c65b3045cd038f76c38a3e94130f6a373fd860c3c73f21529",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2057,
+  "messages_sha256": "85bb96c7b69d23e6acaaa515905b0f2be2e0793d00739299d559bed46a53c19d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by avoiding input validation during the offset calculation, which resolves the warning. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new private method `_score_samples` which slightly deviates from the naming convention used in the rest of the class.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "911",
+      "completed_at_utc": "2026-11-06T04:05:22.641248+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by avoiding input validation during the offset calculation, which resolves the warning. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new private method `_score_samples` which slightly deviates from the naming convention used in the rest of the class."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by avoiding input validation during the offset calculation, which resolves the warning. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new private method `_score_samples` which slightly deviates from the naming convention used in the rest of the class."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

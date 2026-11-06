@@ -1,0 +1,29 @@
+{
+  "code": "61ddb72816bae4f0b487",
+  "instance_id": "django__django-11085",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "61ddb72816bae4f0b487_strict",
+  "arm": "strict",
+  "input_tokens": 942,
+  "messages_sha256": "1935605e6241d829163d4694d02514faadf2cf6e64c8aef11539af3b654b9c38",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new dictionary `contributable_attrs` to separate attributes with and without `contribute_to_class` methods. However, it does not address the root cause of the issue, which is the removal of non-contributable attributes from the original `attrs` dictionary. This could lead to unexpected behavior and maintainability issues. Additionally, the patch does not include tests to verify the fix.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 100,
+      "returned_model_request_id": "2556",
+      "completed_at_utc": "2026-11-06T04:17:15.371631+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new dictionary `contributable_attrs` to separate attributes with and without `contribute_to_class` methods. However, it does not address the root cause of the issue, which is the removal of non-contributable attributes from the original `attrs` dictionary. This could lead to unexpected behavior and maintainability issues. Additionally, the patch does not include tests to verify the fix."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

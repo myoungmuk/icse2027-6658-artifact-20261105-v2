@@ -1,0 +1,50 @@
+{
+  "id": "d7b6f83e524a077d7fb44f27",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_cda468b54284",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_cda468b54284.json",
+  "historical_output_sha256": "9578ca7a9677802cd145d47063c34ca70609711a030b30fdf1fef006b5ea37c9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 770,
+  "messages_sha256": "3a447aa32bb12aa24d0e5a394ec6210f3398b25cb4bca23d06ac002aa053bc64",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a space before 'CASE' in the template string, which may resolve the query syntax error. However, it lacks a comprehensive test to ensure the fix works across different scenarios and database backends.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify the fix for the query syntax error with the combination of a Case condition and distinct=True. This increases the risk of regressions or similar issues in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "622",
+      "completed_at_utc": "2026-11-06T04:03:41.544118+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a space before 'CASE' in the template string, which may resolve the query syntax error. However, it lacks a comprehensive test to ensure the fix works across different scenarios and database backends.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the fix for the query syntax error with the combination of a Case condition and distinct=True. This increases the risk of regressions or similar issues in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a space before 'CASE' in the template string, which may resolve the query syntax error. However, it lacks a comprehensive test to ensure the fix works across different scenarios and database backends.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify the fix for the query syntax error with the combination of a Case condition and distinct=True. This increases the risk of regressions or similar issues in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

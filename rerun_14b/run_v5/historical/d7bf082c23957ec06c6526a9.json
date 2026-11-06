@@ -1,0 +1,60 @@
+{
+  "id": "d7bf082c23957ec06c6526a9",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_0c64d986ae52",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_0c64d986ae52.json",
+  "historical_output_sha256": "84f983b5daecfea77847a70c929a1f42342aaa810c1f6af4988ed37088c81b70",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1597,
+  "messages_sha256": "0e918af9cedce612bf741bb138925b1f05fec6aee225a8f455638e1dcad6af52",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of multiple AlterField operations not being reduced correctly. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not handle cases where the field attributes differ between operations, which could lead to incorrect optimization.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new file 'reproduce.py' without following the project's naming conventions for test files.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 148,
+      "returned_model_request_id": "1962",
+      "completed_at_utc": "2026-11-06T04:12:42.353152+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of multiple AlterField operations not being reduced correctly. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle cases where the field attributes differ between operations, which could lead to incorrect optimization."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new file 'reproduce.py' without following the project's naming conventions for test files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of multiple AlterField operations not being reduced correctly. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle cases where the field attributes differ between operations, which could lead to incorrect optimization."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new file 'reproduce.py' without following the project's naming conventions for test files."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

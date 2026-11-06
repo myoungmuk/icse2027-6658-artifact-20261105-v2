@@ -1,0 +1,50 @@
+{
+  "id": "dd0cf8b9f610c0eb8b7a7e5d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_f51ba59ee211",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_f51ba59ee211.json",
+  "historical_output_sha256": "8293ab4dc50ee737e19443720cf0ee6dd3e8f03266250578f35e75c31fa8e377",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 986,
+  "messages_sha256": "728c1108327e301d04c6af938108529c0912a3abe35f7096445cde8d3d544708",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch correctly quotes the 'qop' options as per RFC2617, but it may introduce a behavioral regression risk due to the hardcoded 'auth' value.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch hardcodes the 'qop' value to 'auth' and does not account for other possible values like 'auth-int'. This may break existing implementations that rely on different 'qop' values.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 135,
+      "returned_model_request_id": "708",
+      "completed_at_utc": "2026-11-06T04:04:16.301205+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch correctly quotes the 'qop' options as per RFC2617, but it may introduce a behavioral regression risk due to the hardcoded 'auth' value.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch hardcodes the 'qop' value to 'auth' and does not account for other possible values like 'auth-int'. This may break existing implementations that rely on different 'qop' values."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch correctly quotes the 'qop' options as per RFC2617, but it may introduce a behavioral regression risk due to the hardcoded 'auth' value.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch hardcodes the 'qop' value to 'auth' and does not account for other possible values like 'auth-int'. This may break existing implementations that rely on different 'qop' values."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

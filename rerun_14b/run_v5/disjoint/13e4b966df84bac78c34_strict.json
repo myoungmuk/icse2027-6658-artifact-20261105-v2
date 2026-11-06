@@ -1,0 +1,29 @@
+{
+  "code": "13e4b966df84bac78c34",
+  "instance_id": "django__django-12951",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "13e4b966df84bac78c34_strict",
+  "arm": "strict",
+  "input_tokens": 1394,
+  "messages_sha256": "d667c51ab44ccaa65d02ed763b9bca10b36fd7966c605ea4f990bdf10ca9d469",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch modifies the behavior of the When class to allow keyword arguments similar to filter, which could lead to unexpected behavior and inconsistencies. It also introduces a new file, reproduce_bug.py, which is not necessary for the patch itself. The patch needs further review and testing to ensure it does not introduce any regressions or issues.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 86,
+      "returned_model_request_id": "2434",
+      "completed_at_utc": "2026-11-06T04:16:23.786158+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch modifies the behavior of the When class to allow keyword arguments similar to filter, which could lead to unexpected behavior and inconsistencies. It also introduces a new file, reproduce_bug.py, which is not necessary for the patch itself. The patch needs further review and testing to ensure it does not introduce any regressions or issues."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

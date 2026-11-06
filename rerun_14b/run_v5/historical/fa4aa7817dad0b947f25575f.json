@@ -1,0 +1,50 @@
+{
+  "id": "fa4aa7817dad0b947f25575f",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_09cceb80b5d5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_09cceb80b5d5.json",
+  "historical_output_sha256": "41389a96413886a369d635c973c657e0d15caa2cea677de945a562e440a58282",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1758,
+  "messages_sha256": "c9595c74cc7991cace309060159f6c685cf88461d903c91aa6119a2b1ae5fd08",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR replaces Django's custom HTML escaping with Python's standard library function, which is faster and more widely used. However, it introduces a backward-incompatible change in the HTML entity representation of single quotes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a backward-incompatible change by converting single quotes to '&#x27;' instead of '&#39;'. This could affect existing templates that rely on the specific HTML entity representation.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "1482",
+      "completed_at_utc": "2026-11-06T04:08:55.026891+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR replaces Django's custom HTML escaping with Python's standard library function, which is faster and more widely used. However, it introduces a backward-incompatible change in the HTML entity representation of single quotes.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The change introduces a backward-incompatible change by converting single quotes to '&#x27;' instead of '&#39;'. This could affect existing templates that rely on the specific HTML entity representation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR replaces Django's custom HTML escaping with Python's standard library function, which is faster and more widely used. However, it introduces a backward-incompatible change in the HTML entity representation of single quotes.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "blocking",
+        "description": "The change introduces a backward-incompatible change by converting single quotes to '&#x27;' instead of '&#39;'. This could affect existing templates that rely on the specific HTML entity representation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

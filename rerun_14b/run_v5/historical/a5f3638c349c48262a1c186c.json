@@ -1,0 +1,50 @@
+{
+  "id": "a5f3638c349c48262a1c186c",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_231f91590e6c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_231f91590e6c.json",
+  "historical_output_sha256": "a2064ffc7979ce3839fd1afed3c660b873db75e7315e6bb4baeb2c1c6fbc40ed",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1181,
+  "messages_sha256": "48c0994bed6a8bdc0bfdd1fee5f314df06ea1de2278128eb88685ac2eef42724",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch changes the error message behavior, which could potentially break existing code that relies on the current error message.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the error message behavior, which could potentially break existing code that relies on the current error message.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 102,
+      "returned_model_request_id": "1635",
+      "completed_at_utc": "2026-11-06T04:10:03.678122+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch changes the error message behavior, which could potentially break existing code that relies on the current error message.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the error message behavior, which could potentially break existing code that relies on the current error message."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch changes the error message behavior, which could potentially break existing code that relies on the current error message.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the error message behavior, which could potentially break existing code that relies on the current error message."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

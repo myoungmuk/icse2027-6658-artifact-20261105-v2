@@ -1,0 +1,50 @@
+{
+  "id": "a60a217ab69cabdd52eaf541",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_cc2822ecf4ca",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_cc2822ecf4ca.json",
+  "historical_output_sha256": "56be42a026ddd5b0aef8d49850ef48057e8a56225c7fd6da44274dd044535ece",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1000,
+  "messages_sha256": "2482e16868eb046c074ad7dae130f7f81fce5d9120be4547bc4a4113855a9885",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of `min_count` not being available for reduction with more than one dimension, but it introduces a non-minimal change by removing the check for multiple dimensions.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR removes the check for multiple dimensions, which is a functional requirement. This change is non-minimal and may lead to unexpected behavior when `min_count` is used with multiple dimensions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 133,
+      "returned_model_request_id": "630",
+      "completed_at_utc": "2026-11-06T04:03:59.181769+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of `min_count` not being available for reduction with more than one dimension, but it introduces a non-minimal change by removing the check for multiple dimensions.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The PR removes the check for multiple dimensions, which is a functional requirement. This change is non-minimal and may lead to unexpected behavior when `min_count` is used with multiple dimensions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of `min_count` not being available for reduction with more than one dimension, but it introduces a non-minimal change by removing the check for multiple dimensions.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The PR removes the check for multiple dimensions, which is a functional requirement. This change is non-minimal and may lead to unexpected behavior when `min_count` is used with multiple dimensions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

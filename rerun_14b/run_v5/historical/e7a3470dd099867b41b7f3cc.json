@@ -1,0 +1,60 @@
+{
+  "id": "e7a3470dd099867b41b7f3cc",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_9fa5797d5bc9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_9fa5797d5bc9.json",
+  "historical_output_sha256": "127fc46d7e8549011ad1cf75655f4642f1291f52b538cbc0d8e846b78686a884",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1041,
+  "messages_sha256": "153c19300578d13c08e1643f9e73ec147a56710f336adcc54a98b8fb1a4e4d0d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by handling OrderBy objects in the ordering list, but it may not be the most minimal or idiomatic solution.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal approach by adding a conditional check for OrderBy objects, which may not be the most efficient or idiomatic way to handle this issue.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch does not follow the project's convention of handling similar cases in a more generic manner, which could lead to code duplication or inconsistency.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 173,
+      "returned_model_request_id": "1071",
+      "completed_at_utc": "2026-11-06T04:06:29.903020+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by handling OrderBy objects in the ordering list, but it may not be the most minimal or idiomatic solution.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal approach by adding a conditional check for OrderBy objects, which may not be the most efficient or idiomatic way to handle this issue."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch does not follow the project's convention of handling similar cases in a more generic manner, which could lead to code duplication or inconsistency."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by handling OrderBy objects in the ordering list, but it may not be the most minimal or idiomatic solution.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal approach by adding a conditional check for OrderBy objects, which may not be the most efficient or idiomatic way to handle this issue."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch does not follow the project's convention of handling similar cases in a more generic manner, which could lead to code duplication or inconsistency."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

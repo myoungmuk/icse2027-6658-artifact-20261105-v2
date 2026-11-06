@@ -1,0 +1,50 @@
+{
+  "id": "80256ba888d8d9fe56d07202",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_8e11b6df023b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_8e11b6df023b.json",
+  "historical_output_sha256": "fcc4fbf06ab52e81bb5cdc6a8f9ea66c093acc73645630ccda3ad301a53e6fda",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1329,
+  "messages_sha256": "dbe3b4376a46eda49d3d64a5b7108774caa174fa688f7ff09156c324fd88044c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the whitespace issue in CREATE INDEX statements but introduces a potential bug when col_suffixes is empty.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch incorrectly assumes that col_suffixes will always be non-empty, which can lead to incorrect index creation when col_suffixes is empty.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "1658",
+      "completed_at_utc": "2026-11-06T04:10:03.684362+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the whitespace issue in CREATE INDEX statements but introduces a potential bug when col_suffixes is empty.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch incorrectly assumes that col_suffixes will always be non-empty, which can lead to incorrect index creation when col_suffixes is empty."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch addresses the whitespace issue in CREATE INDEX statements but introduces a potential bug when col_suffixes is empty.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch incorrectly assumes that col_suffixes will always be non-empty, which can lead to incorrect index creation when col_suffixes is empty."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

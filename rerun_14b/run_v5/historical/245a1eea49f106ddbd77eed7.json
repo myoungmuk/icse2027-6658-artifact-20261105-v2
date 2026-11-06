@@ -1,0 +1,50 @@
+{
+  "id": "245a1eea49f106ddbd77eed7",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_b901a2fc2045",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_b901a2fc2045.json",
+  "historical_output_sha256": "808315dda88c4183eeff70875e22022437f51a15fdbf0d67a09ab9c5d61840ba",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2037,
+  "messages_sha256": "78198add71b44b7375d2d77e7ee4d68187c375c41f60c813c48809e03d32f03a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the input data is in CSR format before prediction, which should resolve the warning. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces an import for `csr_matrix` which is not used elsewhere in the file. This is a minor stylistic issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "2034",
+      "completed_at_utc": "2026-11-06T04:13:37.407565+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the input data is in CSR format before prediction, which should resolve the warning. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces an import for `csr_matrix` which is not used elsewhere in the file. This is a minor stylistic issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the input data is in CSR format before prediction, which should resolve the warning. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces an import for `csr_matrix` which is not used elsewhere in the file. This is a minor stylistic issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

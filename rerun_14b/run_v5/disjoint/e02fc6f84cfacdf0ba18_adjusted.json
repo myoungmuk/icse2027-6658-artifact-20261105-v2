@@ -1,0 +1,29 @@
+{
+  "code": "e02fc6f84cfacdf0ba18",
+  "instance_id": "django__django-12458",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "e02fc6f84cfacdf0ba18_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1841,
+  "messages_sha256": "80033198951a437d9c0ef6cbaf040f739348ecae55702259cf5025a4e6078fb8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue of unnecessary serialization dependency sorting that disallows circular references, which can prevent serialization in certain cases. The changes are well-targeted, modifying the sorting behavior based on the use of natural foreign keys and adding an option to allow cycles. This should resolve the described issues without introducing significant risks or regressions.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 85,
+      "returned_model_request_id": "2581",
+      "completed_at_utc": "2026-11-06T04:17:15.376401+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue of unnecessary serialization dependency sorting that disallows circular references, which can prevent serialization in certain cases. The changes are well-targeted, modifying the sorting behavior based on the use of natural foreign keys and adding an option to allow cycles. This should resolve the described issues without introducing significant risks or regressions."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

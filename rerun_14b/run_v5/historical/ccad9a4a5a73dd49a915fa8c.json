@@ -1,0 +1,60 @@
+{
+  "id": "ccad9a4a5a73dd49a915fa8c",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_38ba50660aee",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_38ba50660aee.json",
+  "historical_output_sha256": "9d8e2b042eb1d06e14cd95821c5a476c3fc1c1a42d194a578a37a8a69e292bdf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 965,
+  "messages_sha256": "867964b1ae6da03d783103d6f3b18ff8dcb4bff9e9d77f7f65d8f98041b17b9f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the two-digit year issue but may introduce unexpected behavior due to the dynamic calculation of the century.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch dynamically calculates the century based on the current year, which could lead to unexpected behavior if the code is run in a different time zone or if the system clock is not set correctly.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any new tests to verify the behavior of the updated logic, which could lead to regressions in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 170,
+      "returned_model_request_id": "181",
+      "completed_at_utc": "2026-11-06T04:01:09.169995+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the two-digit year issue but may introduce unexpected behavior due to the dynamic calculation of the century.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch dynamically calculates the century based on the current year, which could lead to unexpected behavior if the code is run in a different time zone or if the system clock is not set correctly."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify the behavior of the updated logic, which could lead to regressions in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the two-digit year issue but may introduce unexpected behavior due to the dynamic calculation of the century.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch dynamically calculates the century based on the current year, which could lead to unexpected behavior if the code is run in a different time zone or if the system clock is not set correctly."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify the behavior of the updated logic, which could lead to regressions in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

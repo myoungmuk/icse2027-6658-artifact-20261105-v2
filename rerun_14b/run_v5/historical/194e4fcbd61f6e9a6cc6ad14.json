@@ -1,0 +1,70 @@
+{
+  "id": "194e4fcbd61f6e9a6cc6ad14",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_9e5f7fb87955",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_9e5f7fb87955.json",
+  "historical_output_sha256": "8ab92a4f229b4af1d2de0f16812edabe76c1c383c499f2d5fd6d322a72b9769b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1203,
+  "messages_sha256": "5b92d5bd519de8b4e1477b19a09afecd055e81df1947e769226cf9b73c5b5f02",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the alignment issue in HPacker but introduces potential regressions and lacks comprehensive tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may break existing behavior for other alignment options not covered in the PR.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"There are no additional tests to verify the fix for different alignment scenarios.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The code change is minimal but could be improved for readability and maintainability.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 172,
+      "returned_model_request_id": "458",
+      "completed_at_utc": "2026-11-06T04:02:50.463574+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the alignment issue in HPacker but introduces potential regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior for other alignment options not covered in the PR."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no additional tests to verify the fix for different alignment scenarios."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code change is minimal but could be improved for readability and maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR fixes the alignment issue in HPacker but introduces potential regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may break existing behavior for other alignment options not covered in the PR."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "There are no additional tests to verify the fix for different alignment scenarios."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The code change is minimal but could be improved for readability and maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

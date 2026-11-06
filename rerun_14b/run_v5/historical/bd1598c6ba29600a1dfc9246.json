@@ -1,0 +1,50 @@
+{
+  "id": "bd1598c6ba29600a1dfc9246",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_53939d60948d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_53939d60948d.json",
+  "historical_output_sha256": "1eec91166a03efebe332b177c8261d785f9e6a68df34193c14b2b63fa4b3068a",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1492,
+  "messages_sha256": "0e0f57f21d68ca51a4599b8a957df757fb53e26cfa3e743d587244cad3ba7357",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the UnboundLocalError issue by adding `else: raise NotImplementedError` clauses, which is a reasonable approach given the context. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The added `else: raise NotImplementedError` clauses slightly increase the complexity of the code, which could be a minor readability concern.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "1793",
+      "completed_at_utc": "2026-11-06T04:11:18.903056+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the UnboundLocalError issue by adding `else: raise NotImplementedError` clauses, which is a reasonable approach given the context. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The added `else: raise NotImplementedError` clauses slightly increase the complexity of the code, which could be a minor readability concern."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the UnboundLocalError issue by adding `else: raise NotImplementedError` clauses, which is a reasonable approach given the context. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The added `else: raise NotImplementedError` clauses slightly increase the complexity of the code, which could be a minor readability concern."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

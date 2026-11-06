@@ -1,0 +1,50 @@
+{
+  "id": "d3260b44b27f8420d04e24ac",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ab92f0177931",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ab92f0177931.json",
+  "historical_output_sha256": "1ceca224b8265c92d81ec5f3837df93a3ea5f609ebd1968c84d4329f386fa3ba",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2637,
+  "messages_sha256": "604765a10df4c26bc8e4a1948a561910703ffa753e8329f89881bf6de82ab2fa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the deprecation warning issue but introduces a non-minimal change by modifying the behavior of the converter for empty data.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal modification by handling empty data separately, which may not be the intended approach and could lead to unexpected behavior in other scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "709",
+      "completed_at_utc": "2026-11-06T04:04:16.301384+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the deprecation warning issue but introduces a non-minimal change by modifying the behavior of the converter for empty data.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal modification by handling empty data separately, which may not be the intended approach and could lead to unexpected behavior in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the deprecation warning issue but introduces a non-minimal change by modifying the behavior of the converter for empty data.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal modification by handling empty data separately, which may not be the intended approach and could lead to unexpected behavior in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "c1eea2e4096b95c1b1d3e47d",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_d267c12677bc",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_d267c12677bc.json",
+  "historical_output_sha256": "f4f5d9fb5569dec912c28aec9ba79eddc72f978a056da867aa5deb56b943952b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1313,
+  "messages_sha256": "b019524489ab47b196e4e84960977db38e3f4e27827b1e37cd25a91cdf298591",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds a new attribute `refit_time_` to measure the time taken to refit the best model. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any tests for the new `refit_time_` attribute. It is important to ensure that the new functionality works as expected in various scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "741",
+      "completed_at_utc": "2026-11-06T04:04:32.841353+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds a new attribute `refit_time_` to measure the time taken to refit the best model. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests for the new `refit_time_` attribute. It is important to ensure that the new functionality works as expected in various scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds a new attribute `refit_time_` to measure the time taken to refit the best model. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any tests for the new `refit_time_` attribute. It is important to ensure that the new functionality works as expected in various scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

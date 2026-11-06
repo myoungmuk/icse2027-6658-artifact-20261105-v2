@@ -1,0 +1,50 @@
+{
+  "id": "8530d1fa23d3ba365c105612",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_39dc7b25259a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_39dc7b25259a.json",
+  "historical_output_sha256": "2a186947e423f31dbf8624e5f61c7e82361b44b294ec834a0e60bcb53ae128c1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1357,
+  "messages_sha256": "ed3717cf83532e9fb3826bdc953aa3458fc1e16272a4bb546038b4f71ccce832",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch resolves the issue with named tuples in range queries but introduces a non-minimal change by adding a new test file.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new test file, which is not shown in the diff. This could indicate that the change is not minimal and may include additional changes not reflected in the provided diff.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1769",
+      "completed_at_utc": "2026-11-06T04:10:43.129305+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch resolves the issue with named tuples in range queries but introduces a non-minimal change by adding a new test file.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new test file, which is not shown in the diff. This could indicate that the change is not minimal and may include additional changes not reflected in the provided diff."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch resolves the issue with named tuples in range queries but introduces a non-minimal change by adding a new test file.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a new test file, which is not shown in the diff. This could indicate that the change is not minimal and may include additional changes not reflected in the provided diff."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

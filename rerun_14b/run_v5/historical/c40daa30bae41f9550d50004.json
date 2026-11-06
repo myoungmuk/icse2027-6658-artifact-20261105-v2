@@ -1,0 +1,50 @@
+{
+  "id": "c40daa30bae41f9550d50004",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_e83a044a2c79",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_e83a044a2c79.json",
+  "historical_output_sha256": "7ab132e03b7c9130278b40a619569fcd46b2275fa06f5cea0f4feb245f8fdd7f",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 2090,
+  "messages_sha256": "05244443455499ded51a30a1fb5c957947333c7017c5b2e3d1a73e2734b1a2b3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of multiplying BlockMatrix containing ZeroMatrix blocks by ensuring that 'Zero' objects are replaced with 'ZeroMatrix' objects. The change is minimal and focused on the specific problem.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a nested loop to replace 'Zero' objects with 'ZeroMatrix' objects, which may slightly impact maintainability and readability.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "1271",
+      "completed_at_utc": "2026-11-06T04:07:40.859517+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of multiplying BlockMatrix containing ZeroMatrix blocks by ensuring that 'Zero' objects are replaced with 'ZeroMatrix' objects. The change is minimal and focused on the specific problem.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a nested loop to replace 'Zero' objects with 'ZeroMatrix' objects, which may slightly impact maintainability and readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of multiplying BlockMatrix containing ZeroMatrix blocks by ensuring that 'Zero' objects are replaced with 'ZeroMatrix' objects. The change is minimal and focused on the specific problem.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a nested loop to replace 'Zero' objects with 'ZeroMatrix' objects, which may slightly impact maintainability and readability."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

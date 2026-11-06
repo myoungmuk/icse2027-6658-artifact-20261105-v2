@@ -1,0 +1,50 @@
+{
+  "id": "69af5a33a40464e12b4e307b",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_845bd2cf794e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_845bd2cf794e.json",
+  "historical_output_sha256": "f518eed1facc7863f6705cf56c4f27a5ef6a4ab64beb1ce6f5d0e02520614010",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1299,
+  "messages_sha256": "10758dbaf469c9a0f8e294035e29a6417f10c7e9282e088b48285f6258c23785",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with the `join` filter but introduces a non-minimal change by altering the order of operations.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by altering the order of operations, which may have unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "158",
+      "completed_at_utc": "2026-11-06T04:01:09.165321+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with the `join` filter but introduces a non-minimal change by altering the order of operations.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by altering the order of operations, which may have unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with the `join` filter but introduces a non-minimal change by altering the order of operations.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by altering the order of operations, which may have unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

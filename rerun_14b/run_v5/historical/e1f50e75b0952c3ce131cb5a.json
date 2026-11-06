@@ -1,0 +1,50 @@
+{
+  "id": "e1f50e75b0952c3ce131cb5a",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_38431dbfab8e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_38431dbfab8e.json",
+  "historical_output_sha256": "beba1920a112b8225622dc81b1974b0eb44d24d59258339e0d8d9e24563517eb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1363,
+  "messages_sha256": "c66c16cb41cd2fb4e89ee5bf4de12cb74f186b0cfd16e6fdcffe82a87b99590a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by recursively cleansing list and tuple settings, but it may not handle all iterable types.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch only handles lists and tuples, but other iterable types like sets or custom iterables are not addressed. This may lead to insufficient cleansing in some cases.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "335",
+      "completed_at_utc": "2026-11-06T04:02:01.133139+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by recursively cleansing list and tuple settings, but it may not handle all iterable types.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only handles lists and tuples, but other iterable types like sets or custom iterables are not addressed. This may lead to insufficient cleansing in some cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by recursively cleansing list and tuple settings, but it may not handle all iterable types.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch only handles lists and tuples, but other iterable types like sets or custom iterables are not addressed. This may lead to insufficient cleansing in some cases."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "f5a79f0e593417f7b8272784",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_4196cff386f2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_4196cff386f2.json",
+  "historical_output_sha256": "089a7de029bb1735e982fa272a4a8f17d87b58a82407a6673598eab6f326198d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1985,
+  "messages_sha256": "6c97e5d81b5bb339d9fdad21b2e8a135f240ecbebf888c711577efaf788add0b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of PolyFit not being robust to missing data by dropping NaN values before fitting. However, it lacks a comprehensive test to ensure the fix works as expected.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include a test that specifically checks the behavior of PolyFit with missing data. This increases the risk of regressions in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "76",
+      "completed_at_utc": "2026-11-06T04:00:36.149265+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of PolyFit not being robust to missing data by dropping NaN values before fitting. However, it lacks a comprehensive test to ensure the fix works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include a test that specifically checks the behavior of PolyFit with missing data. This increases the risk of regressions in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of PolyFit not being robust to missing data by dropping NaN values before fitting. However, it lacks a comprehensive test to ensure the fix works as expected.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include a test that specifically checks the behavior of PolyFit with missing data. This increases the risk of regressions in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

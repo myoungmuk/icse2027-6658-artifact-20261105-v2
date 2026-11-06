@@ -1,0 +1,60 @@
+{
+  "id": "a5cfe635eddbc4cb1770a135",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_e723672798a3",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_e723672798a3.json",
+  "historical_output_sha256": "56a64429140abd62e96ea53ebef1be29a75b69cf8c7326a237436c4e812aaf37",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1039,
+  "messages_sha256": "abb9ab4c7a81fe4de7c24a845a0b375f83b5a11dbd37a29b7c95c24cac507d70",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces changes to the `String` class in `sympy/codegen/ast.py` to support argument invariance, but it lacks proper testing and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify the functionality of the changes made to the `String` class.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update the documentation for the `String` class to reflect the changes made.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 162,
+      "returned_model_request_id": "680",
+      "completed_at_utc": "2026-11-06T04:04:16.295704+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces changes to the `String` class in `sympy/codegen/ast.py` to support argument invariance, but it lacks proper testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the functionality of the changes made to the `String` class."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation for the `String` class to reflect the changes made."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces changes to the `String` class in `sympy/codegen/ast.py` to support argument invariance, but it lacks proper testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify the functionality of the changes made to the `String` class."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update the documentation for the `String` class to reflect the changes made."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

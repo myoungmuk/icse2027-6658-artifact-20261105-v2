@@ -1,0 +1,29 @@
+{
+  "code": "ece18d388ad0908fa5e7",
+  "instance_id": "sympy__sympy-14627",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "ece18d388ad0908fa5e7_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 627,
+  "messages_sha256": "c558d7bc7d64e0045a48a0c411b025379bbd32704d8dcee963cc8dac9425ebe0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch correctly handles the case where `binomial(n, n)` should simplify to 1. It adds a straightforward check and return, which is maintainable and aligns with the expected behavior.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 60,
+      "returned_model_request_id": "2655",
+      "completed_at_utc": "2026-11-06T04:17:49.113869+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch correctly handles the case where `binomial(n, n)` should simplify to 1. It adds a straightforward check and return, which is maintainable and aligns with the expected behavior."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

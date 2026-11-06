@@ -1,0 +1,29 @@
+{
+  "code": "d07b0cce2b3e329919a8",
+  "instance_id": "matplotlib__matplotlib-20374",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "d07b0cce2b3e329919a8_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 2442,
+  "messages_sha256": "453344976c9f1d91c2011cd32b6c73fbfff792f43ee849c7ee2a1e103a813979",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces new files (a.rst, b.rst, conf.py, index.rst, simulate_sphinx_build.py) that are not part of the original repository. This is not a valid patch as it changes the scope beyond the issue described. Additionally, the patch does not address the core issue of the `out_of_date()` function not considering included files, which is crucial for resolving the bug.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 104,
+      "returned_model_request_id": "2245",
+      "completed_at_utc": "2026-11-06T04:15:08.244891+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces new files (a.rst, b.rst, conf.py, index.rst, simulate_sphinx_build.py) that are not part of the original repository. This is not a valid patch as it changes the scope beyond the issue described. Additionally, the patch does not address the core issue of the `out_of_date()` function not considering included files, which is crucial for resolving the bug."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

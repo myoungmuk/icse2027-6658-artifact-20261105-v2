@@ -1,0 +1,50 @@
+{
+  "id": "d8c814242e19351ac59b9e7f",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_2f92a5e5c375",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_2f92a5e5c375.json",
+  "historical_output_sha256": "cf6da9d345a40247e6487130a58d58f0ea020e5e3c50b979e9708d67439c5b22",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1528,
+  "messages_sha256": "65f2ead977ad810080a169920a94caef93950d3a77825f6d336c24802aa8c979",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a new check for forbidden characters in URLs, which may not be necessary given the behavior change in Python.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"major\",\n      \"description\": \"The patch special-cases the issue by checking for forbidden characters, which may not be a general fix if the Python behavior change is intended.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "878",
+      "completed_at_utc": "2026-11-06T04:05:22.635138+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a new check for forbidden characters in URLs, which may not be necessary given the behavior change in Python.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The patch special-cases the issue by checking for forbidden characters, which may not be a general fix if the Python behavior change is intended."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a new check for forbidden characters in URLs, which may not be necessary given the behavior change in Python.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The patch special-cases the issue by checking for forbidden characters, which may not be a general fix if the Python behavior change is intended."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

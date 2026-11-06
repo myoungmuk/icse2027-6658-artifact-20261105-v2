@@ -1,0 +1,70 @@
+{
+  "id": "128f16d94380c4f43eb42182",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_e1927b85e81e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_e1927b85e81e.json",
+  "historical_output_sha256": "fe0b48dbac79656861596c11b75dea315129db28b4350120b7143c03955e8e15",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 953,
+  "messages_sha256": "c87f2c4fb174fc8c1987356b2eb61e2fbc53befe101a309ebb5d8ab5b89989c2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a legacy encoding format for session data when DEFAULT_HASHING_ALGORITHM is 'sha1', which may break existing behavior and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may introduce a behavioral regression risk by altering the encoding format, which could break existing session data handling.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the new legacy encoding format, which is crucial for ensuring the change works as intended.\"\n    },\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The approach of using a legacy encoding format is somewhat hacky and may not be the most robust solution for handling the transition to Django 3.1.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 218,
+      "returned_model_request_id": "539",
+      "completed_at_utc": "2026-11-06T04:03:24.718908+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a legacy encoding format for session data when DEFAULT_HASHING_ALGORITHM is 'sha1', which may break existing behavior and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may introduce a behavioral regression risk by altering the encoding format, which could break existing session data handling."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the new legacy encoding format, which is crucial for ensuring the change works as intended."
+      },
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of using a legacy encoding format is somewhat hacky and may not be the most robust solution for handling the transition to Django 3.1."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR introduces a legacy encoding format for session data when DEFAULT_HASHING_ALGORITHM is 'sha1', which may break existing behavior and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may introduce a behavioral regression risk by altering the encoding format, which could break existing session data handling."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the new legacy encoding format, which is crucial for ensuring the change works as intended."
+      },
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The approach of using a legacy encoding format is somewhat hacky and may not be the most robust solution for handling the transition to Django 3.1."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

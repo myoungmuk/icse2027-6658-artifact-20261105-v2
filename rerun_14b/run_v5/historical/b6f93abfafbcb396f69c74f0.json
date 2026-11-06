@@ -1,0 +1,50 @@
+{
+  "id": "b6f93abfafbcb396f69c74f0",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_2a516213305e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_2a516213305e.json",
+  "historical_output_sha256": "32d83cfa403f333ae925364b4f5194eb338f0e845120ad58f2143d358e400645",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1507,
+  "messages_sha256": "1fa6a25c80f301d317e328c1cd50dbb3ad81ced4d6db4fb35054ca89baa9d425",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of rendering multiple input parameters in the same line in docstrings, but it may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch modifies the handling of types, specifically by removing the word 'optional' from the type string. This could potentially break existing behavior where the type string includes 'optional' and the rendered output relies on this information.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1447",
+      "completed_at_utc": "2026-11-06T04:08:55.019997+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of rendering multiple input parameters in the same line in docstrings, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch modifies the handling of types, specifically by removing the word 'optional' from the type string. This could potentially break existing behavior where the type string includes 'optional' and the rendered output relies on this information."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of rendering multiple input parameters in the same line in docstrings, but it may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch modifies the handling of types, specifically by removing the word 'optional' from the type string. This could potentially break existing behavior where the type string includes 'optional' and the rendered output relies on this information."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

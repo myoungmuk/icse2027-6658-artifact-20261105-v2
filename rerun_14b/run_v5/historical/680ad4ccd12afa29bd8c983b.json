@@ -1,0 +1,60 @@
+{
+  "id": "680ad4ccd12afa29bd8c983b",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_d6865461561e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_d6865461561e.json",
+  "historical_output_sha256": "fbf8c4a2b71e9b5bd8f86df6f6c5257f00c48e7228b2c071a7ec41d93e8f94dd",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2789,
+  "messages_sha256": "ce8d655c4b90474703f5da7e9be8aaaa7fad03c51df23f162f9a5815fead1f08",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the issue with Matrix.col_insert() by correctly shifting columns after insertion. It includes a new test file and updates to existing tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test file 'test_col_insert.py' is not consistent with the project's naming convention for test files, which typically start with 'test_' and are located in the 'tests' directory.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code in 'test_col_insert.py' is very similar to the existing test in 'sympy/matrices/tests/test_matrices.py', which could lead to maintainability issues if the tests need to be updated in the future.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 198,
+      "returned_model_request_id": "1868",
+      "completed_at_utc": "2026-11-06T04:11:40.863005+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the issue with Matrix.col_insert() by correctly shifting columns after insertion. It includes a new test file and updates to existing tests.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file 'test_col_insert.py' is not consistent with the project's naming convention for test files, which typically start with 'test_' and are located in the 'tests' directory."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code in 'test_col_insert.py' is very similar to the existing test in 'sympy/matrices/tests/test_matrices.py', which could lead to maintainability issues if the tests need to be updated in the future."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR fixes the issue with Matrix.col_insert() by correctly shifting columns after insertion. It includes a new test file and updates to existing tests.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file 'test_col_insert.py' is not consistent with the project's naming convention for test files, which typically start with 'test_' and are located in the 'tests' directory."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code in 'test_col_insert.py' is very similar to the existing test in 'sympy/matrices/tests/test_matrices.py', which could lead to maintainability issues if the tests need to be updated in the future."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

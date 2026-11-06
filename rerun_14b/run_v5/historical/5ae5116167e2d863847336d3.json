@@ -1,0 +1,60 @@
+{
+  "id": "5ae5116167e2d863847336d3",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_9042e4e0b541",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_9042e4e0b541.json",
+  "historical_output_sha256": "af67915a881dfd5308b02104414fbb2e4dfaaf8b8e0f485619e5ada854672678",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1137,
+  "messages_sha256": "9a881762ecb26151929e1b9d83925f1ce43cec7a554408d040e46a5f2dbc7e9e",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR changes ForeignKey validation to use the base manager instead of the default manager. This addresses the issue of validating archived articles in forms.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"This change may introduce behavioral regression risks for existing code that relies on the default manager for validation.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the behavior of ForeignKey validation with the base manager.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 149,
+      "returned_model_request_id": "599",
+      "completed_at_utc": "2026-11-06T04:03:41.539789+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR changes ForeignKey validation to use the base manager instead of the default manager. This addresses the issue of validating archived articles in forms.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "This change may introduce behavioral regression risks for existing code that relies on the default manager for validation."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the behavior of ForeignKey validation with the base manager."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR changes ForeignKey validation to use the base manager instead of the default manager. This addresses the issue of validating archived articles in forms.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "This change may introduce behavioral regression risks for existing code that relies on the default manager for validation."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the behavior of ForeignKey validation with the base manager."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

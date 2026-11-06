@@ -1,0 +1,50 @@
+{
+  "id": "ddb4bc5ca6862a30e2801c72",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_95473aa37802",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_95473aa37802.json",
+  "historical_output_sha256": "44ac58705deeb5b51484e1c1323ba1ac8aaeaeb1cfc95e6afad4bd41b5355a09",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1021,
+  "messages_sha256": "bb6e0c4e88eb11d3cad04a78b296e5c60d237c123c2911e238ccb7075256f545",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of `min_count` not being available for reduction with more than one dimension, but it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change modifies the behavior of `min_count` when multiple dimensions are specified, which may break existing code that relies on the current error handling.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "577",
+      "completed_at_utc": "2026-11-06T04:03:41.535471+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of `min_count` not being available for reduction with more than one dimension, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of `min_count` when multiple dimensions are specified, which may break existing code that relies on the current error handling."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of `min_count` not being available for reduction with more than one dimension, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of `min_count` when multiple dimensions are specified, which may break existing code that relies on the current error handling."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "be7c8799e37f01856a8e6e64",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_da8c8b14809a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_da8c8b14809a.json",
+  "historical_output_sha256": "330c8a45875bf42bf3f0e813280866408c6e3127b97d11e42ed85916cbd02931",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1024,
+  "messages_sha256": "b5a8ee39ccd054fe081c1e9f079a58a24d30f70645cf17a78af2fc6e60c9e55b",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR removes caching and inlines the evaluation, which may introduce performance regressions and is not minimal.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"Removing caching may introduce performance regressions as the evaluation is now performed repeatedly without caching.\"\n    },\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change is not minimal as it inlines the evaluation logic and removes the caching mechanism, which may have other implications.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "32",
+      "completed_at_utc": "2026-11-06T04:00:16.940574+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR removes caching and inlines the evaluation, which may introduce performance regressions and is not minimal.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "Removing caching may introduce performance regressions as the evaluation is now performed repeatedly without caching."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it inlines the evaluation logic and removes the caching mechanism, which may have other implications."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR removes caching and inlines the evaluation, which may introduce performance regressions and is not minimal.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "Removing caching may introduce performance regressions as the evaluation is now performed repeatedly without caching."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it inlines the evaluation logic and removes the caching mechanism, which may have other implications."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "c95dadb161ea587d6ea95bad",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_ffab7c37579d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_ffab7c37579d.json",
+  "historical_output_sha256": "53dcb88e80f9f7cab75dc0570f7a2a68402ba1247cb880c4d914e6ef10456540",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1044,
+  "messages_sha256": "220ae5e277905cb2f58d0cd145689c001acd94a761fd40dc62dbc52ea09d3a8d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly clears the lookup cache in _unregister_lookup, but the PR does not include the corresponding changes in the test file.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR does not include the corresponding changes in the test file, which is a minor issue as the tests already pass.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "986",
+      "completed_at_utc": "2026-11-06T04:05:55.613281+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly clears the lookup cache in _unregister_lookup, but the PR does not include the corresponding changes in the test file.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The PR does not include the corresponding changes in the test file, which is a minor issue as the tests already pass."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The change correctly clears the lookup cache in _unregister_lookup, but the PR does not include the corresponding changes in the test file.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "minor",
+        "description": "The PR does not include the corresponding changes in the test file, which is a minor issue as the tests already pass."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

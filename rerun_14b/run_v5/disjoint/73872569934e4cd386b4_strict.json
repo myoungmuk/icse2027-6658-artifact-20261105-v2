@@ -1,0 +1,29 @@
+{
+  "code": "73872569934e4cd386b4",
+  "instance_id": "sympy__sympy-17809",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "73872569934e4cd386b4_strict",
+  "arm": "strict",
+  "input_tokens": 865,
+  "messages_sha256": "c4d8d26a858c88db49bf5e6e3a42829a3eb4e9318ddf3988826812cff8ea46ef",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a fragile approach by directly modifying the `eval` method of the `Abs` function to handle only the `cosh` function. This could lead to maintainability issues and may not handle other similar cases. Additionally, the patch does not include tests to verify the correctness of the changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 82,
+      "returned_model_request_id": "2598",
+      "completed_at_utc": "2026-11-06T04:17:31.223679+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a fragile approach by directly modifying the `eval` method of the `Abs` function to handle only the `cosh` function. This could lead to maintainability issues and may not handle other similar cases. Additionally, the patch does not include tests to verify the correctness of the changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

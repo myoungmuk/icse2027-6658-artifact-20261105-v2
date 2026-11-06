@@ -1,0 +1,50 @@
+{
+  "id": "3730030e3854b3b3bceeb48a",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_7e133e6500c9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_7e133e6500c9.json",
+  "historical_output_sha256": "469c02975d565402b3755a056ad9890b0cc22142600c7b0605daea69ecadead8",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1217,
+  "messages_sha256": "7be46d0119207373c6180b8f4e2a0f8eeb4168e8f7e636d0894ebccb4fc84738",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a non-minimal change by adding additional logic to handle explicit group by fields.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by adding additional logic to handle explicit group by fields, which may not be necessary for resolving the issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "2070",
+      "completed_at_utc": "2026-11-06T04:14:03.530630+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a non-minimal change by adding additional logic to handle explicit group by fields.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by adding additional logic to handle explicit group by fields, which may not be necessary for resolving the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of Meta.ordering fields being included in the GROUP BY clause, but it introduces a non-minimal change by adding additional logic to handle explicit group by fields.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by adding additional logic to handle explicit group by fields, which may not be necessary for resolving the issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

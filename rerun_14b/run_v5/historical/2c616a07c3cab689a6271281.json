@@ -1,0 +1,50 @@
+{
+  "id": "2c616a07c3cab689a6271281",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_dfdb1ea63db9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_dfdb1ea63db9.json",
+  "historical_output_sha256": "869399c51b004dc4e9fa25780ce1df5dce35e83e6a7fb36d0b7669c8658e1dde",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1406,
+  "messages_sha256": "8f8d328b6c4279a06809eccb3696f05c699e6d673d54ced512373def6ed76084",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the deprecation warnings but introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change moves the `np.errstate(invalid='ignore')` context manager outside the `if xa.dtype.kind == 'f':` block, which may affect the behavior of other data types and introduce unexpected errors.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "47",
+      "completed_at_utc": "2026-11-06T04:00:16.943350+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the deprecation warnings but introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change moves the `np.errstate(invalid='ignore')` context manager outside the `if xa.dtype.kind == 'f':` block, which may affect the behavior of other data types and introduce unexpected errors."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the deprecation warnings but introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change moves the `np.errstate(invalid='ignore')` context manager outside the `if xa.dtype.kind == 'f':` block, which may affect the behavior of other data types and introduce unexpected errors."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

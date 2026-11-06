@@ -1,0 +1,50 @@
+{
+  "id": "454135ecef4e055e6a4f7f80",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_a739411d70d5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_a739411d70d5.json",
+  "historical_output_sha256": "2524a65d659408f00541d31d919993873478bc98203b6591a87c6dd05e627b7b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2747,
+  "messages_sha256": "f699dafb97cc458cb254a395830a8c109dbc824bc82e2640dc1bf5f0ce08560d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the issue with boolean weights but introduces new test files that are not shown in the diff.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces new test files (reproduce_error.py, test_edge_cases.py, test_multidim_bool.py) that are not shown in the diff. This could be considered a project convention mismatch as it deviates from the usual practice of showing all relevant changes.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 132,
+      "returned_model_request_id": "1953",
+      "completed_at_utc": "2026-11-06T04:12:42.351529+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the issue with boolean weights but introduces new test files that are not shown in the diff.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new test files (reproduce_error.py, test_edge_cases.py, test_multidim_bool.py) that are not shown in the diff. This could be considered a project convention mismatch as it deviates from the usual practice of showing all relevant changes."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR fixes the issue with boolean weights but introduces new test files that are not shown in the diff.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces new test files (reproduce_error.py, test_edge_cases.py, test_multidim_bool.py) that are not shown in the diff. This could be considered a project convention mismatch as it deviates from the usual practice of showing all relevant changes."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

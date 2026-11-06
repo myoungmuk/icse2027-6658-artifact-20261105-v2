@@ -1,0 +1,29 @@
+{
+  "code": "212ce80f2badf5b70677",
+  "instance_id": "django__django-12504",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "212ce80f2badf5b70677_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 963,
+  "messages_sha256": "e3f96487b882ab6b1529a00eae697063657df28b4350ac8607fee849310f5435",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file and modifies existing code in a way that is not aligned with the issue description. The patch adds a mock view and form to demonstrate CSRF protection, but it does not address the actual logout link in the admin app. Additionally, the patch introduces unnecessary complexity and changes the logout functionality, which may not be desired.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 89,
+      "returned_model_request_id": "2567",
+      "completed_at_utc": "2026-11-06T04:17:15.373904+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file and modifies existing code in a way that is not aligned with the issue description. The patch adds a mock view and form to demonstrate CSRF protection, but it does not address the actual logout link in the admin app. Additionally, the patch introduces unnecessary complexity and changes the logout functionality, which may not be desired."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

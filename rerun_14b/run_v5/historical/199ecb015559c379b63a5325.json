@@ -1,0 +1,60 @@
+{
+  "id": "199ecb015559c379b63a5325",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_4fdc425f8d97",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_4fdc425f8d97.json",
+  "historical_output_sha256": "eca752eabd9dcb71351fd040eb59652c5a4f1f8fa884be6d8ef5cc1e4fa41074",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1160,
+  "messages_sha256": "a6602785286d91ba4b0d1c1eec77da49456605791b304532fc9b73d7d8203487",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with saving content types to the correct database but lacks comprehensive testing and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify that the content type is saved to the correct database. This increases the risk of regressions in future changes.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not update any documentation to reflect the change. This could lead to confusion for developers who are not aware of the new behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 165,
+      "returned_model_request_id": "686",
+      "completed_at_utc": "2026-11-06T04:04:16.296875+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with saving content types to the correct database but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify that the content type is saved to the correct database. This increases the risk of regressions in future changes."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update any documentation to reflect the change. This could lead to confusion for developers who are not aware of the new behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with saving content types to the correct database but lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify that the content type is saved to the correct database. This increases the risk of regressions in future changes."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not update any documentation to reflect the change. This could lead to confusion for developers who are not aware of the new behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

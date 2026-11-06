@@ -1,0 +1,29 @@
+{
+  "code": "aded51b20d4baba070ff",
+  "instance_id": "sympy__sympy-13768",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "aded51b20d4baba070ff_strict",
+  "arm": "strict",
+  "input_tokens": 1592,
+  "messages_sha256": "d6ace19d3458b0f6af33c3ca52cfe58dc33e7c53bc56f4a296958abafdc8d504",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a compatibility function for deprecated behavior, which may lead to confusion and potential bugs. It also changes the behavior of the dot product method, which could cause unexpected results for users relying on the old behavior. Additionally, the patch lacks proper documentation and test cases to ensure the new behavior is robust and maintainable.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 85,
+      "returned_model_request_id": "2672",
+      "completed_at_utc": "2026-11-06T04:17:49.117166+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a compatibility function for deprecated behavior, which may lead to confusion and potential bugs. It also changes the behavior of the dot product method, which could cause unexpected results for users relying on the old behavior. Additionally, the patch lacks proper documentation and test cases to ensure the new behavior is robust and maintainable."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "7248045dba9bb1bbba83ef49",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_96fbbbff9ceb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_96fbbbff9ceb.json",
+  "historical_output_sha256": "992948dff3c6b57970b2396252381ebcc56b49161a9593d41b41b93dd23da9ab",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 919,
+  "messages_sha256": "45b8fffbc957866fdd95dacf3b66a71891bd2c82c28282b75d3a1e584337c424",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a regression in input validation for clustering metrics but introduces a non-minimal change by modifying unrelated parts of the code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR modifies the `dtype` parameter in unrelated parts of the code, which is not necessary for fixing the regression issue.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "136",
+      "completed_at_utc": "2026-11-06T04:00:52.713375+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a regression in input validation for clustering metrics but introduces a non-minimal change by modifying unrelated parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The PR modifies the `dtype` parameter in unrelated parts of the code, which is not necessary for fixing the regression issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The PR addresses a regression in input validation for clustering metrics but introduces a non-minimal change by modifying unrelated parts of the code.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The PR modifies the `dtype` parameter in unrelated parts of the code, which is not necessary for fixing the regression issue."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

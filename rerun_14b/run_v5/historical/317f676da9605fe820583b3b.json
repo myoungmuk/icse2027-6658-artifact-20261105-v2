@@ -1,0 +1,50 @@
+{
+  "id": "317f676da9605fe820583b3b",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_1730d467a7f2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_1730d467a7f2.json",
+  "historical_output_sha256": "d6540957a8aee77f7e269a445d4caed628b80b24d0dbceb81747ba123034a344",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 910,
+  "messages_sha256": "54cc751218d303eefc058ed638c98a904c628306038d7dedf8c12ffc3fc5b419",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of preserving wrapper assignments in method_decorator, but it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch wraps the partial object with 'wraps', which may inadvertently alter the behavior of the decorator by copying attributes from the original method. This could lead to unexpected behavior in existing decorators that rely on the original method's attributes.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "86",
+      "completed_at_utc": "2026-11-06T04:00:36.151230+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of preserving wrapper assignments in method_decorator, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch wraps the partial object with 'wraps', which may inadvertently alter the behavior of the decorator by copying attributes from the original method. This could lead to unexpected behavior in existing decorators that rely on the original method's attributes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of preserving wrapper assignments in method_decorator, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch wraps the partial object with 'wraps', which may inadvertently alter the behavior of the decorator by copying attributes from the original method. This could lead to unexpected behavior in existing decorators that rely on the original method's attributes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

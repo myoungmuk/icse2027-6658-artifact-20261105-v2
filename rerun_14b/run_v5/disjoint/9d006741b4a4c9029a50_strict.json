@@ -1,0 +1,29 @@
+{
+  "code": "9d006741b4a4c9029a50",
+  "instance_id": "sympy__sympy-16449",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "9d006741b4a4c9029a50_strict",
+  "arm": "strict",
+  "input_tokens": 808,
+  "messages_sha256": "897f17570f801de8c1c747c1259ab999ee4cb9aaa635cb0097d4c06451cb584d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch incorrectly modifies the Maxwell function to include a CDF method, which is not the correct approach. The CDF should be implemented as a separate function or method, not directly in the Maxwell class. Additionally, the test case for the CDF is incomplete and does not verify the correctness of the implementation.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 83,
+      "returned_model_request_id": "2458",
+      "completed_at_utc": "2026-11-06T04:16:43.890903+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch incorrectly modifies the Maxwell function to include a CDF method, which is not the correct approach. The CDF should be implemented as a separate function or method, not directly in the Maxwell class. Additionally, the test case for the CDF is incomplete and does not verify the correctness of the implementation."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "f04d49f124a1497544cebbae",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_e0f33b06fb3e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_e0f33b06fb3e.json",
+  "historical_output_sha256": "744ca5e342e4e49b77d021d84a03b5efd3ef8d9ad2a39cacaef57f32d8fb2d96",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1223,
+  "messages_sha256": "a7b19b831eedecbc3587c8c1d88a376de39b70527d5063f34d122bfc83ce73ba",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by filtering constraints based on the type being deleted, but it may not handle all edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch assumes that constraint names will contain 'uniq' or 'idx' which may not always be the case. This could lead to incorrect filtering of constraints.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be more readable with comments explaining the logic of filtering constraints.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 154,
+      "returned_model_request_id": "226",
+      "completed_at_utc": "2026-11-06T04:01:25.600310+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by filtering constraints based on the type being deleted, but it may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch assumes that constraint names will contain 'uniq' or 'idx' which may not always be the case. This could lead to incorrect filtering of constraints."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with comments explaining the logic of filtering constraints."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by filtering constraints based on the type being deleted, but it may not handle all edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch assumes that constraint names will contain 'uniq' or 'idx' which may not always be the case. This could lead to incorrect filtering of constraints."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable with comments explaining the logic of filtering constraints."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

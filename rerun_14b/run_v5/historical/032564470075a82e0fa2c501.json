@@ -1,0 +1,70 @@
+{
+  "id": "032564470075a82e0fa2c501",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_25dbca3c0855",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_25dbca3c0855.json",
+  "historical_output_sha256": "f0baf6e8ebb2724626aad75d6cb7c78535f961cfc0f3d83fef9562f4b041f2c2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1004,
+  "messages_sha256": "3f822caa78c1bfff78709cf02440f35cbdb812687de36ff8c621c2499d632395",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of non-integer powers in the conversion matrix, but it may introduce behavioral regressions and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch may break existing behavior by returning the original expression when non-integer powers are encountered, which could lead to unexpected results in other valid use cases.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any new tests to verify the correctness of the change, which is crucial for ensuring that the fix does not introduce new issues.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by adding a conditional check and converting powers to integers, which may affect the readability and maintainability of the code.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 227,
+      "returned_model_request_id": "68",
+      "completed_at_utc": "2026-11-06T04:00:36.147757+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of non-integer powers in the conversion matrix, but it may introduce behavioral regressions and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior by returning the original expression when non-integer powers are encountered, which could lead to unexpected results in other valid use cases."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any new tests to verify the correctness of the change, which is crucial for ensuring that the fix does not introduce new issues."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by adding a conditional check and converting powers to integers, which may affect the readability and maintainability of the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of non-integer powers in the conversion matrix, but it may introduce behavioral regressions and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior by returning the original expression when non-integer powers are encountered, which could lead to unexpected results in other valid use cases."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any new tests to verify the correctness of the change, which is crucial for ensuring that the fix does not introduce new issues."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by adding a conditional check and converting powers to integers, which may affect the readability and maintainability of the code."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

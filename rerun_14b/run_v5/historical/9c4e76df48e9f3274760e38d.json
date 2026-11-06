@@ -1,0 +1,50 @@
+{
+  "id": "9c4e76df48e9f3274760e38d",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_bc00d9903bed",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_bc00d9903bed.json",
+  "historical_output_sha256": "0f4788897b33724c367b938e4d41cb9a37adc9a9392a308af5ee27dc246576a7",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1591,
+  "messages_sha256": "ea75e1f544ecfd7eb17861f7b48e57a5b437ac6610a34091e8d468bc34c1541c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by checking if the expression has a 'resolve_expression' attribute before evaluating 'filterable'. This should prevent the NotSupportedError when filtering with a model that has a 'filterable' attribute.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new condition that checks for the 'resolve_expression' attribute, which is not immediately clear from the context. This could be improved by adding a comment explaining why this check is necessary.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 142,
+      "returned_model_request_id": "348",
+      "completed_at_utc": "2026-11-06T04:02:17.670079+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by checking if the expression has a 'resolve_expression' attribute before evaluating 'filterable'. This should prevent the NotSupportedError when filtering with a model that has a 'filterable' attribute.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new condition that checks for the 'resolve_expression' attribute, which is not immediately clear from the context. This could be improved by adding a comment explaining why this check is necessary."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by checking if the expression has a 'resolve_expression' attribute before evaluating 'filterable'. This should prevent the NotSupportedError when filtering with a model that has a 'filterable' attribute.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new condition that checks for the 'resolve_expression' attribute, which is not immediately clear from the context. This could be improved by adding a comment explaining why this check is necessary."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

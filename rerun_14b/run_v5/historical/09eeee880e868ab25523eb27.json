@@ -1,0 +1,50 @@
+{
+  "id": "09eeee880e868ab25523eb27",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_e1927b85e81e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_e1927b85e81e.json",
+  "historical_output_sha256": "097e70cc491640e955e7cbd28dee9937b8c970de973f6cb827e892526f363c21",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1140,
+  "messages_sha256": "1ae67e87b436619810a5cd4bedbd4e7bfeb2056bef19b1222d6fc51df9b2eb39",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch introduces a conditional encoding mechanism based on the DEFAULT_HASHING_ALGORITHM setting, which seems to address the issue of session data decoding during the transition to Django 3.1. However, the approach appears to be a bit hacky and may introduce compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch uses a legacy encoding format when DEFAULT_HASHING_ALGORITHM is 'sha1', which is a hacky approach and may introduce compatibility issues with other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 149,
+      "returned_model_request_id": "927",
+      "completed_at_utc": "2026-11-06T04:05:39.447361+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch introduces a conditional encoding mechanism based on the DEFAULT_HASHING_ALGORITHM setting, which seems to address the issue of session data decoding during the transition to Django 3.1. However, the approach appears to be a bit hacky and may introduce compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch uses a legacy encoding format when DEFAULT_HASHING_ALGORITHM is 'sha1', which is a hacky approach and may introduce compatibility issues with other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch introduces a conditional encoding mechanism based on the DEFAULT_HASHING_ALGORITHM setting, which seems to address the issue of session data decoding during the transition to Django 3.1. However, the approach appears to be a bit hacky and may introduce compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch uses a legacy encoding format when DEFAULT_HASHING_ALGORITHM is 'sha1', which is a hacky approach and may introduce compatibility issues with other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

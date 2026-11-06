@@ -1,0 +1,50 @@
+{
+  "id": "d34248d1118174d9cab67256",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_e58726f7e338",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_e58726f7e338.json",
+  "historical_output_sha256": "43ab2198304fae311feb8c7d04a69b38fb5836d1ea3c33bcbdea4d0ac45a67fa",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1396,
+  "messages_sha256": "cef365665f80a1bd2dfbd5d27e8485f255019164cffa3bfc1da75d6faad27c8d",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR sets a default permission for file uploads and updates the documentation. It appears to resolve the issue without introducing clear problems.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new default value for FILE_UPLOAD_PERMISSIONS, which might not align with existing project conventions or expectations.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 107,
+      "returned_model_request_id": "1930",
+      "completed_at_utc": "2026-11-06T04:12:42.346874+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR sets a default permission for file uploads and updates the documentation. It appears to resolve the issue without introducing clear problems.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new default value for FILE_UPLOAD_PERMISSIONS, which might not align with existing project conventions or expectations."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR sets a default permission for file uploads and updates the documentation. It appears to resolve the issue without introducing clear problems.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new default value for FILE_UPLOAD_PERMISSIONS, which might not align with existing project conventions or expectations."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "5fddcbac34e812cb76f4",
+  "instance_id": "django__django-15630",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "5fddcbac34e812cb76f4_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1747,
+  "messages_sha256": "4b3a24c55cef0e63915fcac99d8096550bf914466372b151268facce03f1ba3a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue of unnecessary columns in the GROUP BY clause, which can cause compatibility problems with databases other than PostgreSQL. The changes are focused on excluding raw hardcoded values from the GROUP BY clause, improving the query's compatibility and correctness without introducing significant risks.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 72,
+      "returned_model_request_id": "2391",
+      "completed_at_utc": "2026-11-06T04:16:06.973134+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue of unnecessary columns in the GROUP BY clause, which can cause compatibility problems with databases other than PostgreSQL. The changes are focused on excluding raw hardcoded values from the GROUP BY clause, improving the query's compatibility and correctness without introducing significant risks."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

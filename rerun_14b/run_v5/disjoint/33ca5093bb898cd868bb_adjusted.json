@@ -1,0 +1,29 @@
+{
+  "code": "33ca5093bb898cd868bb",
+  "instance_id": "scikit-learn__scikit-learn-26634",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "33ca5093bb898cd868bb_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1244,
+  "messages_sha256": "0166a9690a02e7b7c6c94a75d6f52b7543ac97c35711128acb3d306c28fb3ace",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue by modifying the `_check_params` method to conditionally set `_n_components` based on the `update_H` parameter. This change ensures that when `update_H` is False, the number of components is not inferred from the shape of X, preventing potential errors. The patch is well-targeted and does not introduce apparent regressions or compatibility issues.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 96,
+      "returned_model_request_id": "2535",
+      "completed_at_utc": "2026-11-06T04:16:59.783058+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue by modifying the `_check_params` method to conditionally set `_n_components` based on the `update_H` parameter. This change ensures that when `update_H` is False, the number of components is not inferred from the shape of X, preventing potential errors. The patch is well-targeted and does not introduce apparent regressions or compatibility issues."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

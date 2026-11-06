@@ -1,0 +1,50 @@
+{
+  "id": "76281624c6f6b25ed7dea23f",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_a0574e523de0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_a0574e523de0.json",
+  "historical_output_sha256": "8dc83f9940520c93edfcf532f1782b616201b64639d3dc30dcdec6f7a105a5ad",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1322,
+  "messages_sha256": "c0129606289b37961d13dd54ca00f7485bea6543b37898c00d9f8886f00859f4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of separability matrix computation for nested CompoundModels, but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a special case for the '&' operator, which may not be the most minimal or general solution for handling nested CompoundModels.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "242",
+      "completed_at_utc": "2026-11-06T04:01:44.408093+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of separability matrix computation for nested CompoundModels, but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a special case for the '&' operator, which may not be the most minimal or general solution for handling nested CompoundModels."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of separability matrix computation for nested CompoundModels, but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch introduces a special case for the '&' operator, which may not be the most minimal or general solution for handling nested CompoundModels."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

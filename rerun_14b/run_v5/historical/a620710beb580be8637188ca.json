@@ -1,0 +1,50 @@
+{
+  "id": "a620710beb580be8637188ca",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_31bf02441d71",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_31bf02441d71.json",
+  "historical_output_sha256": "ed77a473360507bcfe4818bac595b3a067a775930bc5a1486ae50c74133528ba",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1325,
+  "messages_sha256": "cee15d5ec5e646aae34a4846b7bc84164f65ccdd48b8d992c5402359d8f77a97",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes a bug in the order of leading uncontracted gamma matrices but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change is not minimal as it modifies the logic of the function in a way that is not directly related to fixing the bug. This could introduce unintended side effects.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "723",
+      "completed_at_utc": "2026-11-06T04:04:32.837627+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes a bug in the order of leading uncontracted gamma matrices but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it modifies the logic of the function in a way that is not directly related to fixing the bug. This could introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes a bug in the order of leading uncontracted gamma matrices but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it modifies the logic of the function in a way that is not directly related to fixing the bug. This could introduce unintended side effects."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

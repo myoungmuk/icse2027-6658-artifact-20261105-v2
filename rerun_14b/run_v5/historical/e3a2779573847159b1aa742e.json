@@ -1,0 +1,50 @@
+{
+  "id": "e3a2779573847159b1aa742e",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_cd13947b8ade",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_cd13947b8ade.json",
+  "historical_output_sha256": "45bbfec0683d5d98126e7f1da92b378f17b9396c7ce693431733d0bc99b91589",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2886,
+  "messages_sha256": "21aaebf1d8280310a0a49f3a7ca7881c221ac666205e39fd01f151c5e426c129",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the overflow issue in the Fowlkes-Mallows score calculation without introducing apparent regressions or compatibility breaks.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The docstring for `fowlkes_mallows_score` has been updated with additional notes, which is a minor stylistic change.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1779",
+      "completed_at_utc": "2026-11-06T04:11:18.900398+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the overflow issue in the Fowlkes-Mallows score calculation without introducing apparent regressions or compatibility breaks.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for `fowlkes_mallows_score` has been updated with additional notes, which is a minor stylistic change."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the overflow issue in the Fowlkes-Mallows score calculation without introducing apparent regressions or compatibility breaks.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The docstring for `fowlkes_mallows_score` has been updated with additional notes, which is a minor stylistic change."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

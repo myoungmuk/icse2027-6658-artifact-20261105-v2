@@ -1,0 +1,29 @@
+{
+  "code": "1c833ce5005677fc2026",
+  "instance_id": "mwaskom__seaborn-3216",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "1c833ce5005677fc2026_strict",
+  "arm": "strict",
+  "input_tokens": 775,
+  "messages_sha256": "0e94d23a64c406d410fa3570e6cfd819090d9347e31299a6fd309eace7ce66f1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch changes the behavior of the seaborn objects API to directly use the subfigure instead of its parent figure. This could lead to unexpected issues, especially when dealing with nested subfigures. Additionally, the patch does not include any tests to verify the fix, which is crucial for maintaining the robustness of the codebase.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 85,
+      "returned_model_request_id": "2562",
+      "completed_at_utc": "2026-11-06T04:17:15.373033+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch changes the behavior of the seaborn objects API to directly use the subfigure instead of its parent figure. This could lead to unexpected issues, especially when dealing with nested subfigures. Additionally, the patch does not include any tests to verify the fix, which is crucial for maintaining the robustness of the codebase."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

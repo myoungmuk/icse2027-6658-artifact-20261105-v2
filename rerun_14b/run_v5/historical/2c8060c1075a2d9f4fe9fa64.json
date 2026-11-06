@@ -1,0 +1,50 @@
+{
+  "id": "2c8060c1075a2d9f4fe9fa64",
+  "scope": "agents/rag-gpt4",
+  "arm": "calibrated",
+  "packet_id": "pa_85526adb4dc0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/rag-gpt4/reviewer-14b-cal/pa_85526adb4dc0.json",
+  "historical_output_sha256": "08cf08139d07cd1f5e553632479ac6c0ea1bf7892a0273e40378fbade9e87bc2",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1057,
+  "messages_sha256": "215a2444eaaf17607efebd3676711736c39ca5726a0240673503022c26547f36",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch adds a method to handle memoryview objects in HttpResponse, which should resolve the issue without introducing significant problems.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The method `make_bytes` is added directly to the `HttpResponse` class, which might not be the most maintainable approach. It could be better to handle this conversion in a more centralized or abstracted way.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "1759",
+      "completed_at_utc": "2026-11-06T04:10:43.126855+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch adds a method to handle memoryview objects in HttpResponse, which should resolve the issue without introducing significant problems.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The method `make_bytes` is added directly to the `HttpResponse` class, which might not be the most maintainable approach. It could be better to handle this conversion in a more centralized or abstracted way."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch adds a method to handle memoryview objects in HttpResponse, which should resolve the issue without introducing significant problems.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The method `make_bytes` is added directly to the `HttpResponse` class, which might not be the most maintainable approach. It could be better to handle this conversion in a more centralized or abstracted way."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

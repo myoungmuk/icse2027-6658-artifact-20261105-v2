@@ -1,0 +1,50 @@
+{
+  "id": "bb29cbfa5c49c080cd0eac77",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_0bfc109719b8",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_0bfc109719b8.json",
+  "historical_output_sha256": "51c54194889533648032d0a7579814efe8ce942020ebd7a6ba15b83882afe152",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1018,
+  "messages_sha256": "dc054e9cdcb802574826c4d6ac5bcc466a8b83b8b21e7be9a65d689da573d980",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with username validation but lacks tests to ensure the fix works as intended.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the new regex correctly rejects usernames ending with a newline.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 99,
+      "returned_model_request_id": "38",
+      "completed_at_utc": "2026-11-06T04:00:16.941686+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with username validation but lacks tests to ensure the fix works as intended.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the new regex correctly rejects usernames ending with a newline."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with username validation but lacks tests to ensure the fix works as intended.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the new regex correctly rejects usernames ending with a newline."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "90b84186e0fdce879f117e8e",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_ffda181cfd00",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_ffda181cfd00.json",
+  "historical_output_sha256": "4f37ae8c3db12e5cfa4d6e754bec8728d9e08abf1d8b31c0607f0d4fe8f276ee",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1032,
+  "messages_sha256": "60100809332625d4abeeb0b747cae13d035409f5a3b5e0ed7a1df04013b329e4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of `PolyElement.as_expr()` not accepting symbols correctly, but it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change modifies the behavior of `as_expr()` by allowing it to ignore the provided symbols if none are given. This could lead to unexpected behavior if users rely on the method to always use the provided symbols.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "491",
+      "completed_at_utc": "2026-11-06T04:03:08.419532+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of `PolyElement.as_expr()` not accepting symbols correctly, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of `as_expr()` by allowing it to ignore the provided symbols if none are given. This could lead to unexpected behavior if users rely on the method to always use the provided symbols."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of `PolyElement.as_expr()` not accepting symbols correctly, but it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of `as_expr()` by allowing it to ignore the provided symbols if none are given. This could lead to unexpected behavior if users rely on the method to always use the provided symbols."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

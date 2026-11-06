@@ -1,0 +1,50 @@
+{
+  "id": "fda9b9cd3752d9fc0637fd7b",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_bd8f821f131b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_bd8f821f131b.json",
+  "historical_output_sha256": "a9b9e866774f36df828007334798c6e194a436625347f838d95f98776ae981a3",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1440,
+  "messages_sha256": "51caaff777793fd09a1d1225b491a96543cca706cfea42c1cc9bf5f4d3aaf01a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly handles the 1-element tuple rendering issue but introduces a new test file that is not shown in the diff.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new test file 'test_tuple.py' is not shown in the diff, which is inconsistent with the project's convention of showing all relevant changes.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "2002",
+      "completed_at_utc": "2026-11-06T04:13:06.092440+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly handles the 1-element tuple rendering issue but introduces a new test file that is not shown in the diff.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file 'test_tuple.py' is not shown in the diff, which is inconsistent with the project's convention of showing all relevant changes."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR correctly handles the 1-element tuple rendering issue but introduces a new test file that is not shown in the diff.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new test file 'test_tuple.py' is not shown in the diff, which is inconsistent with the project's convention of showing all relevant changes."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

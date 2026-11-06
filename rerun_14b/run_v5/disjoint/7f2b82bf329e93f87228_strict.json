@@ -1,0 +1,29 @@
+{
+  "code": "7f2b82bf329e93f87228",
+  "instance_id": "astropy__astropy-7008",
+  "split": "development",
+  "kind": "official_unresolved",
+  "id": "7f2b82bf329e93f87228_strict",
+  "arm": "strict",
+  "input_tokens": 909,
+  "messages_sha256": "c771da4776701da0185ed6a2b57d2af6c016d6a36a280a716287e956b5b75b32",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a fragile approach by modifying `sys.modules` within the context manager, which can lead to unexpected behavior and compatibility issues. Additionally, the test file is incomplete and does not cover all potential edge cases or verify the correctness of the context manager.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 72,
+      "returned_model_request_id": "2216",
+      "completed_at_utc": "2026-11-06T04:15:08.239995+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a fragile approach by modifying `sys.modules` within the context manager, which can lead to unexpected behavior and compatibility issues. Additionally, the test file is incomplete and does not cover all potential edge cases or verify the correctness of the context manager."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

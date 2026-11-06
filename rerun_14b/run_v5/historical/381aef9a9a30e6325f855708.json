@@ -1,0 +1,60 @@
+{
+  "id": "381aef9a9a30e6325f855708",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_bd28ae0df34e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_bd28ae0df34e.json",
+  "historical_output_sha256": "0e41b70d4483e7e0bf6d50d57fad2a069973f9ec2bb7e628cd838902ba1c9632",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2543,
+  "messages_sha256": "5d7ea29c5ebd5c3bbdc3768a652927c44d27f83d9736d5a8c750b0cde481e9f2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific bug but introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a non-minimal change by adding an `else` block that handles cases where `ax.axis` is not a dictionary. This may not be the most appropriate solution and could lead to unexpected behavior in other scenarios.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix. Without tests, there is no assurance that the change will not regress in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 177,
+      "returned_model_request_id": "71",
+      "completed_at_utc": "2026-11-06T04:00:36.148330+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific bug but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding an `else` block that handles cases where `ax.axis` is not a dictionary. This may not be the most appropriate solution and could lead to unexpected behavior in other scenarios."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix. Without tests, there is no assurance that the change will not regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific bug but introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a non-minimal change by adding an `else` block that handles cases where `ax.axis` is not a dictionary. This may not be the most appropriate solution and could lead to unexpected behavior in other scenarios."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix. Without tests, there is no assurance that the change will not regress in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "5d777c5a49a696f26705baa9",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_ecc196a4fcf0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_ecc196a4fcf0.json",
+  "historical_output_sha256": "48b0b84ee09bf46b02721bd762743308fc8f3e2961132d987e596af4a453227c",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1286,
+  "messages_sha256": "f23998f492164176d0a24d0bf25ed4eba4e35f17de3ca274620b651b7b8ebf3f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly resolves the issue by using the provided 'id' attribute when available, but it introduces a potential performance regression by accessing 'attrs' twice.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a potential performance regression by accessing 'attrs' twice in the 'id_for_label' method.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "1214",
+      "completed_at_utc": "2026-11-06T04:07:22.383346+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly resolves the issue by using the provided 'id' attribute when available, but it introduces a potential performance regression by accessing 'attrs' twice.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The change introduces a potential performance regression by accessing 'attrs' twice in the 'id_for_label' method."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly resolves the issue by using the provided 'id' attribute when available, but it introduces a potential performance regression by accessing 'attrs' twice.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The change introduces a potential performance regression by accessing 'attrs' twice in the 'id_for_label' method."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "b5cc7fe135a9bb80811f",
+  "instance_id": "django__django-14151",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "b5cc7fe135a9bb80811f_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 626,
+  "messages_sha256": "f6fc1987a78f0adf744d283a158792143ee8446ea4c6bc08287e30b35d4df5d5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses a potential issue where the HTTP referer header might not be valid, which could lead to a ValueError when parsed. The patch adds a try-except block to handle this exception and reject the request with a specific reason. This change improves the robustness of the CsrfViewMiddleware without introducing any apparent regressions or compatibility issues.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 89,
+      "returned_model_request_id": "2431",
+      "completed_at_utc": "2026-11-06T04:16:23.785597+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses a potential issue where the HTTP referer header might not be valid, which could lead to a ValueError when parsed. The patch adds a try-except block to handle this exception and reject the request with a specific reason. This change improves the robustness of the CsrfViewMiddleware without introducing any apparent regressions or compatibility issues."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

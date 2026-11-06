@@ -1,0 +1,50 @@
+{
+  "id": "ccdc23b5d2d5b69985ae7d63",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_55b27e573766",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_55b27e573766.json",
+  "historical_output_sha256": "1efe63238bdab8bd7f1fd4eca9b83a7c79f917500fa6ee1db0f594fe553f436a",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1927,
+  "messages_sha256": "b147aa28e47e3a1ff786e76d52ec04dd93ea6a68769af47e93eb95687b797764",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch addresses the issue of `.swap_dims()` modifying the original object by ensuring variables are copied before modification. The change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces deep copying of variables, which may impact performance. However, this is a necessary fix for the reported issue.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "1312",
+      "completed_at_utc": "2026-11-06T04:07:59.671337+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch addresses the issue of `.swap_dims()` modifying the original object by ensuring variables are copied before modification. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces deep copying of variables, which may impact performance. However, this is a necessary fix for the reported issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch addresses the issue of `.swap_dims()` modifying the original object by ensuring variables are copied before modification. The change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces deep copying of variables, which may impact performance. However, this is a necessary fix for the reported issue."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

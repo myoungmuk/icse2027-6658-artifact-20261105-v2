@@ -1,0 +1,50 @@
+{
+  "id": "564a30f514215ce37f2c9673",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_0b76948fe855",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_0b76948fe855.json",
+  "historical_output_sha256": "9b74c4f476ea095d4aed4b503a6e987744bfc3f0faf50990424ea07ce2f5440c",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1137,
+  "messages_sha256": "2222e0562516473bb3440350653edd004b4d0e5dc40d40e49059395deea31057",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by avoiding the use of `copy.deepcopy` and instead using the `deconstruct` method to create a new instance of the Q object. This change is minimal and maintains readability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch removes the import of `copy`, which is a minor stylistic change.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 115,
+      "returned_model_request_id": "367",
+      "completed_at_utc": "2026-11-06T04:02:17.673638+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by avoiding the use of `copy.deepcopy` and instead using the `deconstruct` method to create a new instance of the Q object. This change is minimal and maintains readability.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch removes the import of `copy`, which is a minor stylistic change."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by avoiding the use of `copy.deepcopy` and instead using the `deconstruct` method to create a new instance of the Q object. This change is minimal and maintains readability.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch removes the import of `copy`, which is a minor stylistic change."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

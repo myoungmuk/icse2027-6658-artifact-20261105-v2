@@ -1,0 +1,29 @@
+{
+  "code": "04bf9da4c47827a8d929",
+  "instance_id": "scikit-learn__scikit-learn-12421",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "04bf9da4c47827a8d929_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 2076,
+  "messages_sha256": "b69ba50fdb8b2396d386dd3b7198535b8ffc232a33c9dbddd665a8b8268a13c9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a change that alters the behavior of the OPTICS algorithm by setting core distances greater than max_eps to inf. This change is not supported by the original OPTICS algorithm and may lead to incorrect results. Additionally, the patch modifies the core_distances_ array, which could have unintended consequences for other parts of the code that rely on this array.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 92,
+      "returned_model_request_id": "2453",
+      "completed_at_utc": "2026-11-06T04:16:43.889791+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a change that alters the behavior of the OPTICS algorithm by setting core distances greater than max_eps to inf. This change is not supported by the original OPTICS algorithm and may lead to incorrect results. Additionally, the patch modifies the core_distances_ array, which could have unintended consequences for other parts of the code that rely on this array."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

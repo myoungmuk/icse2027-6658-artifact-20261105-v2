@@ -1,0 +1,50 @@
+{
+  "id": "cf598196d87b61bcd76b5e1a",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_711ec8d18440",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_711ec8d18440.json",
+  "historical_output_sha256": "d641cb354957929074de92f84a6d4ce08c8c046c9f83b69c1feb9c8d19e314d8",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 808,
+  "messages_sha256": "cdc679e22ae91bdc03644f3f9deb3d38610a933015dc4de3066a123953764de0",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue but may introduce a behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change modifies the behavior of `model_to_dict` when `fields` is an empty list. This could potentially break existing code that relies on the current behavior of returning all fields when `fields` is not provided.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 116,
+      "returned_model_request_id": "732",
+      "completed_at_utc": "2026-11-06T04:04:32.839491+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of `model_to_dict` when `fields` is an empty list. This could potentially break existing code that relies on the current behavior of returning all fields when `fields` is not provided."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue but may introduce a behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change modifies the behavior of `model_to_dict` when `fields` is an empty list. This could potentially break existing code that relies on the current behavior of returning all fields when `fields` is not provided."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "c5e743e386e400afabff175e",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_cefbeae4a119",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_cefbeae4a119.json",
+  "historical_output_sha256": "c310edc7b268ab716eb17f4003b5ac0e9cb7a2e92b4da42e109b4f8f7aefd5d9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1476,
+  "messages_sha256": "240ab6284c2748195b0291e0f6ac0b1de2f0d18806bc998ee01c60b33a4cf7ae",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of abstract model fields comparing equal across models by modifying the __eq__, __lt__, and __hash__ methods. The changes are minimal and focused on the intended fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new attribute access (`self.model._meta.app_label` and `self.model._meta.model_name`) which may not be consistent with the project's style or conventions.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch could be slightly more readable with additional comments explaining the changes to the comparison logic.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 177,
+      "returned_model_request_id": "1534",
+      "completed_at_utc": "2026-11-06T04:09:11.761201+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of abstract model fields comparing equal across models by modifying the __eq__, __lt__, and __hash__ methods. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new attribute access (`self.model._meta.app_label` and `self.model._meta.model_name`) which may not be consistent with the project's style or conventions."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be slightly more readable with additional comments explaining the changes to the comparison logic."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of abstract model fields comparing equal across models by modifying the __eq__, __lt__, and __hash__ methods. The changes are minimal and focused on the intended fix.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new attribute access (`self.model._meta.app_label` and `self.model._meta.model_name`) which may not be consistent with the project's style or conventions."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch could be slightly more readable with additional comments explaining the changes to the comparison logic."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

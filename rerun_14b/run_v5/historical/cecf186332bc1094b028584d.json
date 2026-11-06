@@ -1,0 +1,50 @@
+{
+  "id": "cecf186332bc1094b028584d",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_2df8a0782e51",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_2df8a0782e51.json",
+  "historical_output_sha256": "1d06e57e243413543fc3bde911fcfb9929512b6c5678db813ba891b04555c952",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1385,
+  "messages_sha256": "b39e0795ebe441b67b9f6e9ed14c518f10e72b9874f8c89b57666dfabadda677",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a new method `can_reduce_through` to optimize multiple AlterFooTogether operations into one. The change is minimal and focused on the intended functionality.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The introduction of a new method `can_reduce_through` slightly increases the complexity of the code. However, this is a minor stylistic issue and does not affect the functionality.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 126,
+      "returned_model_request_id": "1746",
+      "completed_at_utc": "2026-11-06T04:10:43.123818+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a new method `can_reduce_through` to optimize multiple AlterFooTogether operations into one. The change is minimal and focused on the intended functionality.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The introduction of a new method `can_reduce_through` slightly increases the complexity of the code. However, this is a minor stylistic issue and does not affect the functionality."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a new method `can_reduce_through` to optimize multiple AlterFooTogether operations into one. The change is minimal and focused on the intended functionality.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The introduction of a new method `can_reduce_through` slightly increases the complexity of the code. However, this is a minor stylistic issue and does not affect the functionality."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

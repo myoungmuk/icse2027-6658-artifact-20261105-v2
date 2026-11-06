@@ -1,0 +1,38 @@
+{
+  "id": "6282224061bf5ac6f8249ba6",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_44f434a37cd2",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_44f434a37cd2.json",
+  "historical_output_sha256": "bd1aee07feb68c29e1fb2e8fb1b5422cd2d3bcc478905169e03247af1a318792",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1214,
+  "messages_sha256": "4c79bb4e0782d1ff36bfc20b52f5cdb4cc63017924aaaafcc039dc945dfad0fa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch simplifies the signature of `execute_sql_flush` by removing the `using` argument, which can be inferred from the connection instance. The change is minimal and does not introduce any apparent issues.\",\n  \"issues\": [],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 72,
+      "returned_model_request_id": "1889",
+      "completed_at_utc": "2026-11-06T04:12:04.307952+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch simplifies the signature of `execute_sql_flush` by removing the `using` argument, which can be inferred from the connection instance. The change is minimal and does not introduce any apparent issues.",
+    "issues": [],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The proposed patch simplifies the signature of `execute_sql_flush` by removing the `using` argument, which can be inferred from the connection instance. The change is minimal and does not introduce any apparent issues.",
+    "issues": [],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

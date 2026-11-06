@@ -1,0 +1,29 @@
+{
+  "code": "266105477b1cc5f8b1d1",
+  "instance_id": "django__django-12504",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "266105477b1cc5f8b1d1_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 972,
+  "messages_sha256": "c09147832efd03039364c657289268e5c69c78539775f77584c6711902baddc9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a warning for GET requests and changes the method handling, which could lead to unexpected behavior. It also deprecates GET logout, which is not a good practice without a clear migration path.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 62,
+      "returned_model_request_id": "2565",
+      "completed_at_utc": "2026-11-06T04:17:15.373574+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a warning for GET requests and changes the method handling, which could lead to unexpected behavior. It also deprecates GET logout, which is not a good practice without a clear migration path."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "795909ae3a11ff1cde808e35",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_59311b033d7c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_59311b033d7c.json",
+  "historical_output_sha256": "bdf7a8c746653b88e6b17d04d6e3aab7fc12f149e64ac191b8fd77f2bd2319bb",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1761,
+  "messages_sha256": "821a8a036b53becf53c0448466f6dbbf9b4833cc63f1ad947c59055ed738de19",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR improves the exception message for missing required columns, but the change is not minimal and introduces a potential regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change is not minimal as it introduces a new list comprehension and modifies the exception message format, which could have unintended side effects.\"\n    },\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"There is a risk that the new exception message format could break existing code that relies on the previous error message format.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 156,
+      "returned_model_request_id": "1286",
+      "completed_at_utc": "2026-11-06T04:07:40.862318+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR improves the exception message for missing required columns, but the change is not minimal and introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it introduces a new list comprehension and modifies the exception message format, which could have unintended side effects."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that the new exception message format could break existing code that relies on the previous error message format."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR improves the exception message for missing required columns, but the change is not minimal and introduces a potential regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change is not minimal as it introduces a new list comprehension and modifies the exception message format, which could have unintended side effects."
+      },
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "There is a risk that the new exception message format could break existing code that relies on the previous error message format."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

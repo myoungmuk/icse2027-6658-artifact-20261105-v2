@@ -1,0 +1,29 @@
+{
+  "code": "8c3d7e4c6933fba43356",
+  "instance_id": "scikit-learn__scikit-learn-10913",
+  "split": "development",
+  "kind": "developer",
+  "id": "8c3d7e4c6933fba43356_strict",
+  "arm": "strict",
+  "input_tokens": 956,
+  "messages_sha256": "896b746bd8594a07049af66af019e9c134caf0b9224fcf6507c84fe3375b8c58",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a warning for unknown classes but does not handle the transformation correctly. It should set unknown classes to 0 in the output array, not just ignore them.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 55,
+      "returned_model_request_id": "2316",
+      "completed_at_utc": "2026-11-06T04:15:45.336297+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a warning for unknown classes but does not handle the transformation correctly. It should set unknown classes to 0 in the output array, not just ignore them."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

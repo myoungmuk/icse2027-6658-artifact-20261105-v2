@@ -1,0 +1,50 @@
+{
+  "id": "1c5114f8d225b447a26d8272",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_4fc39233b99e",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_4fc39233b99e.json",
+  "historical_output_sha256": "755801baf81ebd191ed6f955cd650c401e1f1b9280fed35a66a61474f3154a90",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1413,
+  "messages_sha256": "51edb8b6aa33592c13bdf15f8baadb4271876f5dc2251472b5d324e4055830ad",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change resolves the issue of reused dictionaries in the partitions() iterator by copying them before yielding. The tests pass, and the change is minimal and focused.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"minor\",\n      \"description\": \"The docstring still mentions the old behavior of reusing dictionaries, which may cause confusion for users.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 109,
+      "returned_model_request_id": "1626",
+      "completed_at_utc": "2026-11-06T04:09:46.496576+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change resolves the issue of reused dictionaries in the partitions() iterator by copying them before yielding. The tests pass, and the change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The docstring still mentions the old behavior of reusing dictionaries, which may cause confusion for users."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The change resolves the issue of reused dictionaries in the partitions() iterator by copying them before yielding. The tests pass, and the change is minimal and focused.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "minor",
+        "description": "The docstring still mentions the old behavior of reusing dictionaries, which may cause confusion for users."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

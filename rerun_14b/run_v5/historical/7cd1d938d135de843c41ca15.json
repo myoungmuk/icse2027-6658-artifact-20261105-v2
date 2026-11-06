@@ -1,0 +1,50 @@
+{
+  "id": "7cd1d938d135de843c41ca15",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_eac86d2de099",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_eac86d2de099.json",
+  "historical_output_sha256": "99642adc4490eb136c5f4a12a6c3bcdfbb618f06d7bc6e44565357a09467c8c5",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1213,
+  "messages_sha256": "d5686d245315e1f55f194ade950addb58671592612a40b1f9f2de8b9ca7a2a71",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the response is awaited if it's a coroutine, but it may introduce a performance regression.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F10\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces an await operation in the response handling, which could lead to performance regressions if the response is not a coroutine.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "1220",
+      "completed_at_utc": "2026-11-06T04:07:22.384415+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the response is awaited if it's a coroutine, but it may introduce a performance regression.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch introduces an await operation in the response handling, which could lead to performance regressions if the response is not a coroutine."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the response is awaited if it's a coroutine, but it may introduce a performance regression.",
+    "issues": [
+      {
+        "failure_mode": "F10",
+        "severity": "major",
+        "description": "The patch introduces an await operation in the response handling, which could lead to performance regressions if the response is not a coroutine."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

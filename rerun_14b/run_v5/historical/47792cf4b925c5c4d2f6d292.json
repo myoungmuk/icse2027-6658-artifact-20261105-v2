@@ -1,0 +1,60 @@
+{
+  "id": "47792cf4b925c5c4d2f6d292",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_1eee1536470a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_1eee1536470a.json",
+  "historical_output_sha256": "054b2ebfbe63adc8610e42806078fbe0e1cca010c877926d7381dff1a83b58ba",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1743,
+  "messages_sha256": "63cb1ccec8a3b472f5dbac38dd71f106271e643b3a4487bc495f413e5f4cc09a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a non-minimal change and lacks sufficient tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change introduces a call to _set_parameters(best_params) which is not directly related to the issue of fit_predict and predict disagreeing when n_init > 1. This suggests scope creep.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any new tests to verify that fit_predict and predict now agree when n_init > 1. The existing test_gaussian_mixture_fit_predict does not cover this case.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 174,
+      "returned_model_request_id": "404",
+      "completed_at_utc": "2026-11-06T04:02:33.745139+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The change introduces a call to _set_parameters(best_params) which is not directly related to the issue of fit_predict and predict disagreeing when n_init > 1. This suggests scope creep."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify that fit_predict and predict now agree when n_init > 1. The existing test_gaussian_mixture_fit_predict does not cover this case."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a non-minimal change and lacks sufficient tests.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "blocking",
+        "description": "The change introduces a call to _set_parameters(best_params) which is not directly related to the issue of fit_predict and predict disagreeing when n_init > 1. This suggests scope creep."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any new tests to verify that fit_predict and predict now agree when n_init > 1. The existing test_gaussian_mixture_fit_predict does not cover this case."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

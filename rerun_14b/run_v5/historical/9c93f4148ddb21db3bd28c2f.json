@@ -1,0 +1,50 @@
+{
+  "id": "9c93f4148ddb21db3bd28c2f",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_30bd933af03a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_30bd933af03a.json",
+  "historical_output_sha256": "6fab1cc3d89a01fd27db4806303a5519098ad7b973540407f7ff0fb496d29818",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1145,
+  "messages_sha256": "7ac6a2e1bf295463b80734612e83dc91d258a324184bde7d3d1cc7939a35ebee",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring dimensions are correctly identified for functions, but it may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new list comprehension that may not handle all cases correctly, potentially leading to unexpected behavior for other functions or expressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "1023",
+      "completed_at_utc": "2026-11-06T04:06:12.545933+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring dimensions are correctly identified for functions, but it may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a new list comprehension that may not handle all cases correctly, potentially leading to unexpected behavior for other functions or expressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring dimensions are correctly identified for functions, but it may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a new list comprehension that may not handle all cases correctly, potentially leading to unexpected behavior for other functions or expressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

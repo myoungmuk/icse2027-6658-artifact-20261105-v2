@@ -1,0 +1,60 @@
+{
+  "id": "f90521d2e1a4daae25a1219c",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_38786680f0d9",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_38786680f0d9.json",
+  "historical_output_sha256": "17209480d56c4e3a368ba85ca0461109e30d6cff467f956cb39b69f8aa4c2316",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3189,
+  "messages_sha256": "5ca9bf68112721cb07997a1e0d58c406ff3434bdfcaa6fd0a1a72cf947b27d52",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by ensuring feature names are correctly handled during fitting and prediction. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The PR introduces print statements for debugging purposes, which should be removed before merging.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be more readable by removing unnecessary comments and improving variable naming.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 142,
+      "returned_model_request_id": "1792",
+      "completed_at_utc": "2026-11-06T04:11:18.902860+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by ensuring feature names are correctly handled during fitting and prediction. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces print statements for debugging purposes, which should be removed before merging."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable by removing unnecessary comments and improving variable naming."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by ensuring feature names are correctly handled during fitting and prediction. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The PR introduces print statements for debugging purposes, which should be removed before merging."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be more readable by removing unnecessary comments and improving variable naming."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

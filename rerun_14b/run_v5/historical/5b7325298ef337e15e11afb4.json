@@ -1,0 +1,50 @@
+{
+  "id": "5b7325298ef337e15e11afb4",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_0f617fdfc509",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_0f617fdfc509.json",
+  "historical_output_sha256": "61288833c8a9e73ea11998e04572fb671c9b23198d77995fe916812137a0d7c4",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1833,
+  "messages_sha256": "531d0066950b23d8d42baac1ba55ef69682a924639df1022e6c5322b81c6d4d3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly resolves the issue by passing the computed prog_name to CommandParser. It also adds new test files to cover the edge cases.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The default value of prog_name is set to 'django-admin', which may not be appropriate for all environments.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "2191",
+      "completed_at_utc": "2026-11-06T04:14:46.807398+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly resolves the issue by passing the computed prog_name to CommandParser. It also adds new test files to cover the edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The default value of prog_name is set to 'django-admin', which may not be appropriate for all environments."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR correctly resolves the issue by passing the computed prog_name to CommandParser. It also adds new test files to cover the edge cases.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The default value of prog_name is set to 'django-admin', which may not be appropriate for all environments."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

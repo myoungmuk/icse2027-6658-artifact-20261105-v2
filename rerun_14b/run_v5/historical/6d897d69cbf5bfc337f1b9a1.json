@@ -1,0 +1,60 @@
+{
+  "id": "6d897d69cbf5bfc337f1b9a1",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_e9101333476d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_e9101333476d.json",
+  "historical_output_sha256": "9e80eb6f6352c82162b8f67d0f1fd11e427de9e1ef6e5dae0979c0838b380d2d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1043,
+  "messages_sha256": "61585b94a6e09879be48c19612653a388e63475cc12ea9e48b3fbc5f2605a1ec",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue with `lambdify` and `MatrixSymbol` names containing curly braces, but it lacks comprehensive testing and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix for the specific issue with `MatrixSymbol` names containing curly braces.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not update the documentation to reflect the changes made to the `lambdify` function.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 163,
+      "returned_model_request_id": "105",
+      "completed_at_utc": "2026-11-06T04:00:52.705192+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue with `lambdify` and `MatrixSymbol` names containing curly braces, but it lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the specific issue with `MatrixSymbol` names containing curly braces."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not update the documentation to reflect the changes made to the `lambdify` function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue with `lambdify` and `MatrixSymbol` names containing curly braces, but it lacks comprehensive testing and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix for the specific issue with `MatrixSymbol` names containing curly braces."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "major",
+        "description": "The PR does not update the documentation to reflect the changes made to the `lambdify` function."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

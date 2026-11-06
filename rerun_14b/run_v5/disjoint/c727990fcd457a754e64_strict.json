@@ -1,0 +1,29 @@
+{
+  "code": "c727990fcd457a754e64",
+  "instance_id": "django__django-15031",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "c727990fcd457a754e64_strict",
+  "arm": "strict",
+  "input_tokens": 858,
+  "messages_sha256": "c880e1dcc658f7e637a3242539a9172f6c74c6d51ffb533282c1c945e9d2faaf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new parameter `separator` to `prepare_lookup_value`, but it does not handle cases where the value itself contains the separator. This could lead to incorrect filtering. Additionally, the patch does not include tests to verify the new functionality.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 71,
+      "returned_model_request_id": "2536",
+      "completed_at_utc": "2026-11-06T04:16:59.783258+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new parameter `separator` to `prepare_lookup_value`, but it does not handle cases where the value itself contains the separator. This could lead to incorrect filtering. Additionally, the patch does not include tests to verify the new functionality."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

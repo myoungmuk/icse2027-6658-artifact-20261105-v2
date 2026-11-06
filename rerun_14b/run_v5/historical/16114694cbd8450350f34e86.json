@@ -1,0 +1,60 @@
+{
+  "id": "16114694cbd8450350f34e86",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_020f72576552",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_020f72576552.json",
+  "historical_output_sha256": "e87a0ea88c28448f39a8994b56000b6f56804e9a5820523e3f0abbde14295605",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1826,
+  "messages_sha256": "fae3d82557e92b578eb3914c56b5ed6f4c9ce8373507147970568d8f4d31bff2",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by excluding return types for classes, but it may introduce regressions or have maintainability concerns.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change may break existing behavior for other types of objects that should include return types.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code change is minimal but could be improved with comments to explain the conditional exclusion of return types for classes.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "653",
+      "completed_at_utc": "2026-11-06T04:03:59.186280+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by excluding return types for classes, but it may introduce regressions or have maintainability concerns.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing behavior for other types of objects that should include return types."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code change is minimal but could be improved with comments to explain the conditional exclusion of return types for classes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by excluding return types for classes, but it may introduce regressions or have maintainability concerns.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change may break existing behavior for other types of objects that should include return types."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code change is minimal but could be improved with comments to explain the conditional exclusion of return types for classes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

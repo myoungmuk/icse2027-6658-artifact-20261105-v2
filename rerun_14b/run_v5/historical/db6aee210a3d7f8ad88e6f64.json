@@ -1,0 +1,60 @@
+{
+  "id": "db6aee210a3d7f8ad88e6f64",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_20fd4fa6b2dd",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_20fd4fa6b2dd.json",
+  "historical_output_sha256": "93fa58f01a771c395114d3f2115c6b3a0b5027735deab7c311b5d7e4189e9b7b",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 985,
+  "messages_sha256": "ba7958f3a39e297cdc47291efce37738ff3c2baefafc1bee93eca94f2ffa0ffa",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the incorrect parenthesizing of Subs in LaTeX output, but it may introduce unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change adds parentheses around the expression, which might alter the mathematical meaning in some contexts. It could lead to behavioral regression if other expressions are affected similarly.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any additional tests to verify that the change does not introduce new issues or regressions in other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 166,
+      "returned_model_request_id": "428",
+      "completed_at_utc": "2026-11-06T04:02:33.749612+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the incorrect parenthesizing of Subs in LaTeX output, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change adds parentheses around the expression, which might alter the mathematical meaning in some contexts. It could lead to behavioral regression if other expressions are affected similarly."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any additional tests to verify that the change does not introduce new issues or regressions in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR fixes the incorrect parenthesizing of Subs in LaTeX output, but it may introduce unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change adds parentheses around the expression, which might alter the mathematical meaning in some contexts. It could lead to behavioral regression if other expressions are affected similarly."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any additional tests to verify that the change does not introduce new issues or regressions in other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

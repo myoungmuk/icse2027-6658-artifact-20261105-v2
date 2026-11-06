@@ -1,0 +1,50 @@
+{
+  "id": "5e54fd8d8bff0a7eaa967fb1",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_8daa941ad434",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_8daa941ad434.json",
+  "historical_output_sha256": "5c8db0077d958dbffd456d36303a7a392abf1e74dc4ec67b8970642565ac5119",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1147,
+  "messages_sha256": "4a7f0c5759f339ebb3c8b3c83732026cda09297dd5ad2104ed5e8b9649cc3ca7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR aims to make AlterField a no-op for adding/changing choices on SQLite, but it introduces a non-minimal change by modifying the base schema and field classes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR modifies the base schema and field classes, which could have unintended side effects on other database backends and fields.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 117,
+      "returned_model_request_id": "439",
+      "completed_at_utc": "2026-11-06T04:02:50.459707+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR aims to make AlterField a no-op for adding/changing choices on SQLite, but it introduces a non-minimal change by modifying the base schema and field classes.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR modifies the base schema and field classes, which could have unintended side effects on other database backends and fields."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR aims to make AlterField a no-op for adding/changing choices on SQLite, but it introduces a non-minimal change by modifying the base schema and field classes.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR modifies the base schema and field classes, which could have unintended side effects on other database backends and fields."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

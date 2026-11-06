@@ -1,0 +1,50 @@
+{
+  "id": "30e533af2cbc0fbe00a88bbb",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_74c5b404bde1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_74c5b404bde1.json",
+  "historical_output_sha256": "d09251feba7302d22a07ef1883b4f5c31db48fb6507a282ff12ad45d59000659",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1079,
+  "messages_sha256": "272dcffd46601cdc6d1cebb90a6eaf84df4f67bca5c769656f7acc39cd03eb91",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of multiple INSERTs when saving a model instance with an explicit pk value if the pk field has a default. However, it introduces a potential behavioral regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the behavior of the save method, which may break existing code that relies on the previous behavior of performing an UPDATE when the primary key has a default and the instance is being added.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 134,
+      "returned_model_request_id": "569",
+      "completed_at_utc": "2026-11-06T04:03:24.725325+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of multiple INSERTs when saving a model instance with an explicit pk value if the pk field has a default. However, it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the behavior of the save method, which may break existing code that relies on the previous behavior of performing an UPDATE when the primary key has a default and the instance is being added."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of multiple INSERTs when saving a model instance with an explicit pk value if the pk field has a default. However, it introduces a potential behavioral regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch changes the behavior of the save method, which may break existing code that relies on the previous behavior of performing an UPDATE when the primary key has a default and the instance is being added."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

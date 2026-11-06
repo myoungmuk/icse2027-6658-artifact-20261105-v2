@@ -1,0 +1,60 @@
+{
+  "id": "895ea008309ed87613ef5d77",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_f24b15c95030",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_f24b15c95030.json",
+  "historical_output_sha256": "357e654de53005d04dceb9bc80700cf543ff485970555e7546b9d9d9b5569753",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1540,
+  "messages_sha256": "fb059b72fd41218ae419267b17b350de86362fbef9098149d8eb53dd70b97555",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce regressions or non-minimal changes.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a new condition that may break existing behavior if `handle_mask` expects both masks to be present.\"\n    },\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"minor\",\n      \"description\": \"The change is minimal but could be more concise by handling the `None` cases in a single branch.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 143,
+      "returned_model_request_id": "2",
+      "completed_at_utc": "2026-11-06T04:00:16.933764+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce regressions or non-minimal changes.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a new condition that may break existing behavior if `handle_mask` expects both masks to be present."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The change is minimal but could be more concise by handling the `None` cases in a single branch."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce regressions or non-minimal changes.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a new condition that may break existing behavior if `handle_mask` expects both masks to be present."
+      },
+      {
+        "failure_mode": "F4",
+        "severity": "minor",
+        "description": "The change is minimal but could be more concise by handling the `None` cases in a single branch."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "code": "a4eb38edf6dcb13bb72a",
+  "instance_id": "django__django-17046",
+  "split": "development",
+  "kind": "developer",
+  "id": "a4eb38edf6dcb13bb72a_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1675,
+  "messages_sha256": "4b4cc5b5bcc78b201b1f87f077b45b38d24bddc3ad3864514bc1e21a699a4227",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a potential issue by calling `qs.distinct()` when duplicates may exist, which could lead to incorrect behavior. Additionally, the patch modifies the `delete` method to raise an error for `self.query.distinct_fields`, which may not be the correct approach to fix the original issue.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 81,
+      "returned_model_request_id": "2313",
+      "completed_at_utc": "2026-11-06T04:15:45.335767+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a potential issue by calling `qs.distinct()` when duplicates may exist, which could lead to incorrect behavior. Additionally, the patch modifies the `delete` method to raise an error for `self.query.distinct_fields`, which may not be the correct approach to fix the original issue."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "11cc3479620d4f7472f81b51",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_0df787c9c92c",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_0df787c9c92c.json",
+  "historical_output_sha256": "fa4248cdf7fb3709db2bad77ff0d0229955727ff8a5cb18f5167807ea8b29c50",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 793,
+  "messages_sha256": "caf272bb4461779ce18c3cc631f5381782aa3fb202544040daacdb5c9e86d393",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. It adds a .distinct() call to the queryset to ensure unique options.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any new tests to verify that the fix works as expected in different scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 114,
+      "returned_model_request_id": "1",
+      "completed_at_utc": "2026-11-06T04:00:16.933370+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. It adds a .distinct() call to the queryset to ensure unique options.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify that the fix works as expected in different scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue of duplicate options in formfields when using limit_choices_to with a Q object. It adds a .distinct() call to the queryset to ensure unique options.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any new tests to verify that the fix works as expected in different scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

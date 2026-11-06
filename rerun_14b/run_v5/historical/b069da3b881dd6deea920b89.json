@@ -1,0 +1,50 @@
+{
+  "id": "b069da3b881dd6deea920b89",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_0c795910b487",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_0c795910b487.json",
+  "historical_output_sha256": "33b63a80a3d5f32147c0f96fb09525153fd588dc4f6dfac9d658430131fb0cfa",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 961,
+  "messages_sha256": "a784db84ad91d28d0a4c98660ccd7344f36e8ca268b519da89f67aafaf74f1cd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may not cover all edge cases related to GROUP BY queries.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not handle cases where GROUP BY is used with other ordering mechanisms or when ordering is applied after annotation.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 99,
+      "returned_model_request_id": "576",
+      "completed_at_utc": "2026-11-06T04:03:41.535183+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may not cover all edge cases related to GROUP BY queries.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle cases where GROUP BY is used with other ordering mechanisms or when ordering is applied after annotation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may not cover all edge cases related to GROUP BY queries.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle cases where GROUP BY is used with other ordering mechanisms or when ordering is applied after annotation."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

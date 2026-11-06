@@ -1,0 +1,50 @@
+{
+  "id": "bd95a41cd0f112467d366f2f",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_45ce1f1b8827",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_45ce1f1b8827.json",
+  "historical_output_sha256": "e3d9371c0c94e4a2fbdb17977cb1a8b28356f17df39f89a9f6a57ba21debc17f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1068,
+  "messages_sha256": "f9a20a1f7163b5700d46cf7e8830af73bf088ae9ef9f0570d5a530b52ee01ead",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch fixes a specific bug in the evaluation of coth(log(tan(x))) but introduces a potential issue with the variable name.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes the variable name from 'cotm' to 'cothm' without ensuring that 'cotm' is not used elsewhere in the code. This could lead to a NameError or other unexpected behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 129,
+      "returned_model_request_id": "1475",
+      "completed_at_utc": "2026-11-06T04:08:55.025597+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch fixes a specific bug in the evaluation of coth(log(tan(x))) but introduces a potential issue with the variable name.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch changes the variable name from 'cotm' to 'cothm' without ensuring that 'cotm' is not used elsewhere in the code. This could lead to a NameError or other unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch fixes a specific bug in the evaluation of coth(log(tan(x))) but introduces a potential issue with the variable name.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch changes the variable name from 'cotm' to 'cothm' without ensuring that 'cotm' is not used elsewhere in the code. This could lead to a NameError or other unexpected behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

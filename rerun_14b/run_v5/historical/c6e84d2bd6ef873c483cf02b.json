@@ -1,0 +1,50 @@
+{
+  "id": "c6e84d2bd6ef873c483cf02b",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_ce4187ae2110",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_ce4187ae2110.json",
+  "historical_output_sha256": "7573dd940ad2b59d62fb3ca0ad685e561bb6a57368566ca7f1977414736be273",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2137,
+  "messages_sha256": "253ef04a66917838269ecf59f444e2b98b261e3757489fed2f84eac999afcd13",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds get/set_antialiased methods to Text objects and adjusts the backend to use these methods. The changes are minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The new methods and parameters introduced in Text objects do not follow the naming convention used in other similar methods (e.g., set/get_linewidth).\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 118,
+      "returned_model_request_id": "2028",
+      "completed_at_utc": "2026-11-06T04:13:37.406447+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds get/set_antialiased methods to Text objects and adjusts the backend to use these methods. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new methods and parameters introduced in Text objects do not follow the naming convention used in other similar methods (e.g., set/get_linewidth)."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR adds get/set_antialiased methods to Text objects and adjusts the backend to use these methods. The changes are minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The new methods and parameters introduced in Text objects do not follow the naming convention used in other similar methods (e.g., set/get_linewidth)."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

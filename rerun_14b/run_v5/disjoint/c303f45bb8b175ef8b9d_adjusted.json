@@ -1,0 +1,29 @@
+{
+  "code": "c303f45bb8b175ef8b9d",
+  "instance_id": "pytest-dev__pytest-8447",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "c303f45bb8b175ef8b9d_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 2482,
+  "messages_sha256": "c9b82f4b4a91375f3ad69b4c3b566ba9d2ba1f3af759d179ada4529d6253709f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a new file `reproduce.py` that simulates the error but does not address the root cause. The changes in `src/_pytest/nodes.py` are fragile and may lead to unexpected behavior. The patch should focus on fixing the issue in a maintainable way without introducing new files or modifying existing code in a risky manner.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 91,
+      "returned_model_request_id": "2635",
+      "completed_at_utc": "2026-11-06T04:17:31.231383+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a new file `reproduce.py` that simulates the error but does not address the root cause. The changes in `src/_pytest/nodes.py` are fragile and may lead to unexpected behavior. The patch should focus on fixing the issue in a maintainable way without introducing new files or modifying existing code in a risky manner."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

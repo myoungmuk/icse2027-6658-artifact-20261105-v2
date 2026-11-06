@@ -1,0 +1,60 @@
+{
+  "id": "a00b8d3083a1d8e4b1c57c23",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_76e230bd276d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_76e230bd276d.json",
+  "historical_output_sha256": "ecce79d33ebabe195de279a1c4d2609ba6a101c0977e344a6781a990c18b8d63",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 962,
+  "messages_sha256": "489725bbeb6e3b241821968a6cf878e9210821a01bcd96cb4e6560b8e2170d24",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a conditional return in the draw method, which could potentially break other drawing logic or introduce unexpected behavior in other parts of the codebase.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not include any tests to verify that the change does not introduce regressions or that it works as expected in other scenarios.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 152,
+      "returned_model_request_id": "148",
+      "completed_at_utc": "2026-11-06T04:01:09.162520+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a conditional return in the draw method, which could potentially break other drawing logic or introduce unexpected behavior in other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any tests to verify that the change does not introduce regressions or that it works as expected in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The patch introduces a conditional return in the draw method, which could potentially break other drawing logic or introduce unexpected behavior in other parts of the codebase."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch does not include any tests to verify that the change does not introduce regressions or that it works as expected in other scenarios."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

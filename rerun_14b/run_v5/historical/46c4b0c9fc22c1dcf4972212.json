@@ -1,0 +1,50 @@
+{
+  "id": "46c4b0c9fc22c1dcf4972212",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_8b5434721516",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_8b5434721516.json",
+  "historical_output_sha256": "df808872da1022dcb04567eae8b92e7b5c060738a3e8888fbcf5c270943659be",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1183,
+  "messages_sha256": "c4aafea9034de5f29b1a77b41811f19ee916b92eb5e1375d0c85b4fd36466939",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by ensuring the environment dictionary is only created if necessary, but it introduces a potential None value for env which might not be handled correctly elsewhere in the code.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a potential None value for env which might not be handled correctly elsewhere in the code, leading to a fragile approach.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 120,
+      "returned_model_request_id": "1300",
+      "completed_at_utc": "2026-11-06T04:07:59.668487+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by ensuring the environment dictionary is only created if necessary, but it introduces a potential None value for env which might not be handled correctly elsewhere in the code.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a potential None value for env which might not be handled correctly elsewhere in the code, leading to a fragile approach."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by ensuring the environment dictionary is only created if necessary, but it introduces a potential None value for env which might not be handled correctly elsewhere in the code.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "major",
+        "description": "The patch introduces a potential None value for env which might not be handled correctly elsewhere in the code, leading to a fragile approach."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

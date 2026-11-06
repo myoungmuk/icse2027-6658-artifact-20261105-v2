@@ -1,0 +1,70 @@
+{
+  "id": "36ccc36d542ce8e01d9949ba",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_4ac2d1b927c0",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_4ac2d1b927c0.json",
+  "historical_output_sha256": "dcc7c38670c14dc098a1cf5a25f82aa102d4170ddc7752c8318ea9168c17b252",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1187,
+  "messages_sha256": "d5447b5666405c62744d166edbf5472283476f946579fa212f0442603172313f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses a specific issue but introduces potential regressions and lacks comprehensive tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch calls `do_3d_projection` within `get_facecolor` and `get_edgecolor`, which may trigger unnecessary re-projections and potentially break existing behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The PR does not include any new tests to verify the fix or ensure that the changes do not introduce new issues.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The added comments could be more descriptive and follow the project's documentation style.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 197,
+      "returned_model_request_id": "149",
+      "completed_at_utc": "2026-11-06T04:01:09.162798+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses a specific issue but introduces potential regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch calls `do_3d_projection` within `get_facecolor` and `get_edgecolor`, which may trigger unnecessary re-projections and potentially break existing behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix or ensure that the changes do not introduce new issues."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The added comments could be more descriptive and follow the project's documentation style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The PR addresses a specific issue but introduces potential regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch calls `do_3d_projection` within `get_facecolor` and `get_edgecolor`, which may trigger unnecessary re-projections and potentially break existing behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The PR does not include any new tests to verify the fix or ensure that the changes do not introduce new issues."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The added comments could be more descriptive and follow the project's documentation style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

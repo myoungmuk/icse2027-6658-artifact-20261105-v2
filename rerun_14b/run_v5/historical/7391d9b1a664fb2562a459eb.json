@@ -1,0 +1,50 @@
+{
+  "id": "7391d9b1a664fb2562a459eb",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_5f689d73f1b5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_5f689d73f1b5.json",
+  "historical_output_sha256": "9fd231cf43818341d2c976258a37f9241d81320809a8cabe105faf71dfabd829",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 842,
+  "messages_sha256": "53b8693c50149b16fdac570dbbe91934452892bc77578776dbcdc8dd24c27b20",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of incorrect MIME type guessing for 'br' and 'Z' file types, but it introduces a non-minimal change by modifying the content type setting logic.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The PR introduces a non-minimal change by modifying the content type setting logic in a way that may not be necessary or optimal. It directly checks the file extension instead of using a more generalized approach.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 135,
+      "returned_model_request_id": "584",
+      "completed_at_utc": "2026-11-06T04:03:41.536855+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of incorrect MIME type guessing for 'br' and 'Z' file types, but it introduces a non-minimal change by modifying the content type setting logic.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR introduces a non-minimal change by modifying the content type setting logic in a way that may not be necessary or optimal. It directly checks the file extension instead of using a more generalized approach."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of incorrect MIME type guessing for 'br' and 'Z' file types, but it introduces a non-minimal change by modifying the content type setting logic.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The PR introduces a non-minimal change by modifying the content type setting logic in a way that may not be necessary or optimal. It directly checks the file extension instead of using a more generalized approach."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

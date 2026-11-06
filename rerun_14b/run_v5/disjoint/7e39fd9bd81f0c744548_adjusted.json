@@ -1,0 +1,29 @@
+{
+  "code": "7e39fd9bd81f0c744548",
+  "instance_id": "pytest-dev__pytest-7481",
+  "split": "heldout",
+  "kind": "developer",
+  "id": "7e39fd9bd81f0c744548_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 3484,
+  "messages_sha256": "3dfdc54c52a0484a5ec56b8f0ac009cf65e11a5a50e24946fbc0a16ebb559bcd",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses a potential UnicodeEncodeError in the terminalwriter on Windows by catching the exception and escaping the message to ASCII. This should prevent the error from propagating and allow pytest to continue running. The patch is focused on the issue and does not introduce unrelated changes.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 74,
+      "returned_model_request_id": "2465",
+      "completed_at_utc": "2026-11-06T04:16:43.892152+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses a potential UnicodeEncodeError in the terminalwriter on Windows by catching the exception and escaping the message to ASCII. This should prevent the error from propagating and allow pytest to continue running. The patch is focused on the issue and does not introduce unrelated changes."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

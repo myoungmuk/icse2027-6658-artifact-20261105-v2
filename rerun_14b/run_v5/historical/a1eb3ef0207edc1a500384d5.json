@@ -1,0 +1,60 @@
+{
+  "id": "a1eb3ef0207edc1a500384d5",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_189c5afc6a93",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_189c5afc6a93.json",
+  "historical_output_sha256": "b31f66c48897187305e12ec047e901bc74b863342dbf6d2cce0a395ae13092e6",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1171,
+  "messages_sha256": "1761bcead67fa6f1220f7d8309b08978206afb35304641870d7febe9a184f868",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a new handler for refining the argument of complex numbers, but it lacks comprehensive tests and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the correctness of the new `refine_arg` function.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR adds a new function `refine_arg` without updating the documentation to reflect this change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 147,
+      "returned_model_request_id": "155",
+      "completed_at_utc": "2026-11-06T04:01:09.164560+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a new handler for refining the argument of complex numbers, but it lacks comprehensive tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the correctness of the new `refine_arg` function."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR adds a new function `refine_arg` without updating the documentation to reflect this change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a new handler for refining the argument of complex numbers, but it lacks comprehensive tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the correctness of the new `refine_arg` function."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR adds a new function `refine_arg` without updating the documentation to reflect this change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "b911bdf8f856092541486ee3",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_77f32f875af5",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_77f32f875af5.json",
+  "historical_output_sha256": "334984acd5238f87129ac09c417d6860549f3f3fd05dc97038c7dc0c51a96335",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1041,
+  "messages_sha256": "096c6b71d636781ba57ae8fc03cb0fbecc78d94cd2511952829ca66ba7667a5a",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce regressions and lacks comprehensive tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch may break existing behavior for other nested CompoundModels, as it changes the way the separability matrix is constructed.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any new tests to verify the correctness of the separability matrix for nested CompoundModels, leaving a risk of regressions.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The patch introduces a non-minimal change by modifying the `_cstack` function, which may affect other parts of the codebase. The change is not immediately clear in terms of maintainability.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 215,
+      "returned_model_request_id": "161",
+      "completed_at_utc": "2026-11-06T04:01:09.165975+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior for other nested CompoundModels, as it changes the way the separability matrix is constructed."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any new tests to verify the correctness of the separability matrix for nested CompoundModels, leaving a risk of regressions."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the `_cstack` function, which may affect other parts of the codebase. The change is not immediately clear in terms of maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce regressions and lacks comprehensive tests.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The patch may break existing behavior for other nested CompoundModels, as it changes the way the separability matrix is constructed."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any new tests to verify the correctness of the separability matrix for nested CompoundModels, leaving a risk of regressions."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The patch introduces a non-minimal change by modifying the `_cstack` function, which may affect other parts of the codebase. The change is not immediately clear in terms of maintainability."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

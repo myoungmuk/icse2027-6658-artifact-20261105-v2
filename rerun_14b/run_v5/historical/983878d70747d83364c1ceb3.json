@@ -1,0 +1,60 @@
+{
+  "id": "983878d70747d83364c1ceb3",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_dc2b6bed73cb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_dc2b6bed73cb.json",
+  "historical_output_sha256": "5ff5853ddd5c845a93611ea533c8c2f5d046943fc0d208b12c38a4a0b52ec85e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1009,
+  "messages_sha256": "22b8952ec4e4062d6ea3b4b5ea1546903cbf3e0679f13698ace2f7e49d8815a8",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR introduces a legacy encoding method to handle session data during the transition to Django 3.1, but it lacks proper documentation and tests.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any documentation updates or comments explaining the new legacy encoding method.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify the functionality of the new legacy encoding method.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 148,
+      "returned_model_request_id": "665",
+      "completed_at_utc": "2026-11-06T04:03:59.188530+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR introduces a legacy encoding method to handle session data during the transition to Django 3.1, but it lacks proper documentation and tests.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not include any documentation updates or comments explaining the new legacy encoding method."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the new legacy encoding method."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR introduces a legacy encoding method to handle session data during the transition to Django 3.1, but it lacks proper documentation and tests.",
+    "issues": [
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The PR does not include any documentation updates or comments explaining the new legacy encoding method."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify the functionality of the new legacy encoding method."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

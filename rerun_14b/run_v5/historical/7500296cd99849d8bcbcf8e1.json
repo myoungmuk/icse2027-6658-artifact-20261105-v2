@@ -1,0 +1,50 @@
+{
+  "id": "7500296cd99849d8bcbcf8e1",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_4a6e0696c9e1",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_4a6e0696c9e1.json",
+  "historical_output_sha256": "bcf5b7e7a89c42c6acdabe9f30b1721695b0ddca3df964906088e0341236a14f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 8540,
+  "messages_sha256": "afd5b86c68483521aa057f8fd77c536604584e07cdc1f5a0b2cf81b7cb6ddd04",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue of incorrect unit parsing in CDS format files by modifying the parsing rules in `cds.py` and adding a new `denominator` rule. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could benefit from additional comments to explain the new `denominator` rule and its logic, especially the handling of negative powers.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 131,
+      "returned_model_request_id": "1954",
+      "completed_at_utc": "2026-11-06T04:12:42.351713+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue of incorrect unit parsing in CDS format files by modifying the parsing rules in `cds.py` and adding a new `denominator` rule. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from additional comments to explain the new `denominator` rule and its logic, especially the handling of negative powers."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue of incorrect unit parsing in CDS format files by modifying the parsing rules in `cds.py` and adding a new `denominator` rule. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from additional comments to explain the new `denominator` rule and its logic, especially the handling of negative powers."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

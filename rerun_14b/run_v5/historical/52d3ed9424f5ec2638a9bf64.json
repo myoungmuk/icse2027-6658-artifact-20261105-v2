@@ -1,0 +1,60 @@
+{
+  "id": "52d3ed9424f5ec2638a9bf64",
+  "scope": "lite",
+  "arm": "strict",
+  "packet_id": "pk_6835608e22cb",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b/pk_6835608e22cb.json",
+  "historical_output_sha256": "121d1ca88b44c0457090378d6d1110555f05b885341109bdc30ab957d4fea4a0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 938,
+  "messages_sha256": "464105254d2f45e8d30e94728fe3085550e8311fdf48c220ebb46b0cc1446014",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but lacks tests and documentation.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any tests to verify that the fix works as expected.\"\n    },\n    {\n      \"failure_mode\": \"F11\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch does not include any documentation updates to explain the change.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "120",
+      "completed_at_utc": "2026-11-06T04:00:52.709356+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but lacks tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the fix works as expected."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The patch does not include any documentation updates to explain the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but lacks tests and documentation.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The patch does not include any tests to verify that the fix works as expected."
+      },
+      {
+        "failure_mode": "F11",
+        "severity": "blocking",
+        "description": "The patch does not include any documentation updates to explain the change."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

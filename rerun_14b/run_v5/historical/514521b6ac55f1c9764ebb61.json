@@ -1,0 +1,50 @@
+{
+  "id": "514521b6ac55f1c9764ebb61",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_a33b4547caaa",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_a33b4547caaa.json",
+  "historical_output_sha256": "0d962897e41b6e52a24306c7355bf58c8fc51e643aec9bc8f9868f91ee3c1feb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1282,
+  "messages_sha256": "55c538ca0da057ad31c7954f87e2dd00d27db1730ef080a6f0600d50d1f9714c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change addresses the issue by modifying the URL format for the password reset link, but it may introduce a regression risk.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"major\",\n      \"description\": \"The change assumes that the UserAdmin is always accessed via its primary key, which may not be the case if the User model uses a different field as the primary key or if the URL structure changes in the future.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 125,
+      "returned_model_request_id": "981",
+      "completed_at_utc": "2026-11-06T04:05:55.612294+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change addresses the issue by modifying the URL format for the password reset link, but it may introduce a regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change assumes that the UserAdmin is always accessed via its primary key, which may not be the case if the User model uses a different field as the primary key or if the URL structure changes in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change addresses the issue by modifying the URL format for the password reset link, but it may introduce a regression risk.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "major",
+        "description": "The change assumes that the UserAdmin is always accessed via its primary key, which may not be the case if the User model uses a different field as the primary key or if the URL structure changes in the future."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

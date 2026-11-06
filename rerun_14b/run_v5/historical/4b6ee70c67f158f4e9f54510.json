@@ -1,0 +1,50 @@
+{
+  "id": "4b6ee70c67f158f4e9f54510",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_78f0b3e39842",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_78f0b3e39842.json",
+  "historical_output_sha256": "0bd4638130377a1faa3f79867758aa925af2705d0747eb83268e67171ba1731e",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2321,
+  "messages_sha256": "ab5c92f2430b99bfc1b076227a911d2edc53e95881f8076cf8a50c839af5152f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR addresses the issue by ensuring consistency between fit_predict and predict methods when n_init > 1. The change is minimal and well-structured.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code uses print statements for logging, which is not consistent with the project's logging conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 106,
+      "returned_model_request_id": "1832",
+      "completed_at_utc": "2026-11-06T04:11:40.855840+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR addresses the issue by ensuring consistency between fit_predict and predict methods when n_init > 1. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code uses print statements for logging, which is not consistent with the project's logging conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The PR addresses the issue by ensuring consistency between fit_predict and predict methods when n_init > 1. The change is minimal and well-structured.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code uses print statements for logging, which is not consistent with the project's logging conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

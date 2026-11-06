@@ -1,0 +1,50 @@
+{
+  "id": "7aaa249a3b649c2fde9404c6",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_f3d5caaf9fca",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_f3d5caaf9fca.json",
+  "historical_output_sha256": "70d8ed563bcf6b239ca999c3a96b282e7f12ef2321c1bbf9d914731f7eb0f582",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1500,
+  "messages_sha256": "25348a744db4471147b55a785f45397fa3c3e8d49259699bf63aab3c23bc0e91",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue of conflicting `copy_X` parameters in `LassoLarsIC` by allowing `fit` to override the class parameter only if explicitly specified. The change is minimal and maintains backward compatibility.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F9\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a new default value `None` for `copy_X` in `fit`, which could potentially lead to confusion for users who expect the behavior to remain consistent with other estimators.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 141,
+      "returned_model_request_id": "1169",
+      "completed_at_utc": "2026-11-06T04:07:03.955500+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue of conflicting `copy_X` parameters in `LassoLarsIC` by allowing `fit` to override the class parameter only if explicitly specified. The change is minimal and maintains backward compatibility.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change introduces a new default value `None` for `copy_X` in `fit`, which could potentially lead to confusion for users who expect the behavior to remain consistent with other estimators."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue of conflicting `copy_X` parameters in `LassoLarsIC` by allowing `fit` to override the class parameter only if explicitly specified. The change is minimal and maintains backward compatibility.",
+    "issues": [
+      {
+        "failure_mode": "F9",
+        "severity": "major",
+        "description": "The change introduces a new default value `None` for `copy_X` in `fit`, which could potentially lead to confusion for users who expect the behavior to remain consistent with other estimators."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

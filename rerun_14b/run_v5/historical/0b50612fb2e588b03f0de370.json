@@ -1,0 +1,50 @@
+{
+  "id": "0b50612fb2e588b03f0de370",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_7c44a0493ed4",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_7c44a0493ed4.json",
+  "historical_output_sha256": "82108b079625ca1345cb13cbd5f3e58098d785651ab5911d1cb629647e478a53",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2573,
+  "messages_sha256": "7ff1a0eea0af7b749b423ff9a856601427be3d4261a885f381f87778866bdccf",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR fixes the issue with Mod(3*i, 2) and adds a test, but introduces a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces a new file (reproduce.py) and modifies the doit function in mod.py, which seems unrelated to the core issue of simplifying Mod(3*i, 2).\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "1941",
+      "completed_at_utc": "2026-11-06T04:12:42.349326+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR fixes the issue with Mod(3*i, 2) and adds a test, but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a new file (reproduce.py) and modifies the doit function in mod.py, which seems unrelated to the core issue of simplifying Mod(3*i, 2)."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR fixes the issue with Mod(3*i, 2) and adds a test, but introduces a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces a new file (reproduce.py) and modifies the doit function in mod.py, which seems unrelated to the core issue of simplifying Mod(3*i, 2)."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

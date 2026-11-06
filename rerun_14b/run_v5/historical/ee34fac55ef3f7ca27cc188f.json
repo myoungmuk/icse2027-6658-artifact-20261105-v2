@@ -1,0 +1,60 @@
+{
+  "id": "ee34fac55ef3f7ca27cc188f",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_c16d7ce50b1b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_c16d7ce50b1b.json",
+  "historical_output_sha256": "f653df511d3d2e98779f381c32ef8ba33d09c7a1acdb290558321c88527c10b1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1084,
+  "messages_sha256": "a52748304db63048bd81de8c6293f49db2fae3474bfe636ff6ee47e2534456c9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may have unintended side effects.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change may introduce behavioral regressions by affecting how other fields with default values are handled.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"The patch lacks comprehensive tests to ensure it doesn't break other scenarios involving foreign key assignments.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 131,
+      "returned_model_request_id": "472",
+      "completed_at_utc": "2026-11-06T04:02:50.466317+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may introduce behavioral regressions by affecting how other fields with default values are handled."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch lacks comprehensive tests to ensure it doesn't break other scenarios involving foreign key assignments."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may have unintended side effects.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change may introduce behavioral regressions by affecting how other fields with default values are handled."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "The patch lacks comprehensive tests to ensure it doesn't break other scenarios involving foreign key assignments."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

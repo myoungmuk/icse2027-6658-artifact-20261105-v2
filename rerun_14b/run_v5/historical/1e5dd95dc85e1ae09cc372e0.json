@@ -1,0 +1,50 @@
+{
+  "id": "1e5dd95dc85e1ae09cc372e0",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_e2b03ac48139",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_e2b03ac48139.json",
+  "historical_output_sha256": "e60ac78f234badf4bfb185a6a6218e155ea6f03e5f962f4a89d5340af4aaafa1",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1458,
+  "messages_sha256": "9b53c2ea5c23dd1e5884646b497d2b19416f52d0d8200d9795c1d53d6c7e3451",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a logical error in the subclass check, which could lead to incorrect behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch changes `isinstance(subclass, self._subclasses)` to `issubclass(subclass, self._subclasses)`, which is incorrect. `self._subclasses` is a tuple of classes, and `issubclass` expects a class as its second argument, not a tuple. This will cause a TypeError.\"\n    }\n  ],\n  \"merge_decision\": \"reject\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 144,
+      "returned_model_request_id": "494",
+      "completed_at_utc": "2026-11-06T04:03:08.420087+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a logical error in the subclass check, which could lead to incorrect behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch changes `isinstance(subclass, self._subclasses)` to `issubclass(subclass, self._subclasses)`, which is incorrect. `self._subclasses` is a tuple of classes, and `issubclass` expects a class as its second argument, not a tuple. This will cause a TypeError."
+      }
+    ],
+    "merge_decision": "reject",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a logical error in the subclass check, which could lead to incorrect behavior.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch changes `isinstance(subclass, self._subclasses)` to `issubclass(subclass, self._subclasses)`, which is incorrect. `self._subclasses` is a tuple of classes, and `issubclass` expects a class as its second argument, not a tuple. This will cause a TypeError."
+      }
+    ],
+    "merge_decision": "reject",
+    "mergeable": false,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "4e98f7c1d458ed00d705f302",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_154e06b15a5a",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_154e06b15a5a.json",
+  "historical_output_sha256": "57907e4f85890edcffba55fb6e9fea9ae24fa35c72b720b24441030fe62f1879",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 3800,
+  "messages_sha256": "225c52a7c550531c259e495bdda537e1fd473364188103ade4cc73e24161acb3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue with prefetch_related for models using UUID fields as PK. The changes are minimal and focused on the problem area.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new descriptor class and modifies existing methods, which could slightly reduce readability for maintainers.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new descriptor class and modifies existing methods, which could slightly reduce readability for maintainers.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 152,
+      "returned_model_request_id": "2059",
+      "completed_at_utc": "2026-11-06T04:13:37.412253+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue with prefetch_related for models using UUID fields as PK. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new descriptor class and modifies existing methods, which could slightly reduce readability for maintainers."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new descriptor class and modifies existing methods, which could slightly reduce readability for maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue with prefetch_related for models using UUID fields as PK. The changes are minimal and focused on the problem area.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The patch introduces a new descriptor class and modifies existing methods, which could slightly reduce readability for maintainers."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new descriptor class and modifies existing methods, which could slightly reduce readability for maintainers."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

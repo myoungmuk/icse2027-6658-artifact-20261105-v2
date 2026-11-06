@@ -1,0 +1,60 @@
+{
+  "id": "302ed7d3801ec62cd4c84c1b",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_7d784e516d1b",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_7d784e516d1b.json",
+  "historical_output_sha256": "343e4533e9926aeedffa69ac7a0d50ddd83ac9ce4bdee25e4b7a3c9a37ff71bb",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2356,
+  "messages_sha256": "9bbf71f93c77f49d96ff8ae45ab17bc9769c4e99eb56f0b2f0167ae8e07444f9",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue with `subs` on `ConditionSet` with `ImageSet` but introduces some changes that may not be necessary or clear.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"major\",\n      \"description\": \"The changes in `conditionset.py` are not minimal and include comments that are unclear or complex, which may affect maintainability.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces some style inconsistencies, such as the use of comments that do not clearly explain the changes.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 161,
+      "returned_model_request_id": "1819",
+      "completed_at_utc": "2026-11-06T04:11:18.908212+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue with `subs` on `ConditionSet` with `ImageSet` but introduces some changes that may not be necessary or clear.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The changes in `conditionset.py` are not minimal and include comments that are unclear or complex, which may affect maintainability."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces some style inconsistencies, such as the use of comments that do not clearly explain the changes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue with `subs` on `ConditionSet` with `ImageSet` but introduces some changes that may not be necessary or clear.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "major",
+        "description": "The changes in `conditionset.py` are not minimal and include comments that are unclear or complex, which may affect maintainability."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces some style inconsistencies, such as the use of comments that do not clearly explain the changes."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

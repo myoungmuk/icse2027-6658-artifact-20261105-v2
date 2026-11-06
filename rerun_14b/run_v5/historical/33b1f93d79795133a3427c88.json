@@ -1,0 +1,50 @@
+{
+  "id": "33b1f93d79795133a3427c88",
+  "scope": "agents/openhands-codeact",
+  "arm": "calibrated",
+  "packet_id": "pa_068b78e16925",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/openhands-codeact/reviewer-14b-cal/pa_068b78e16925.json",
+  "historical_output_sha256": "d96881c794d6edd54d870c7d71664840f9267695ac52854f1bc67ffd5ad612a0",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1272,
+  "messages_sha256": "0a1494dc5c4edfc4227a5518ad2a685175b5da8d1d8de4f11404bd6f7e546aa7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch simplifies the `_image` function and addresses the issue with inverted generators in `PermutationGroup`. The change is minimal and maintains readability.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding comments to explain the logic for handling inverted generators.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 108,
+      "returned_model_request_id": "1980",
+      "completed_at_utc": "2026-11-06T04:13:06.087930+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch simplifies the `_image` function and addresses the issue with inverted generators in `PermutationGroup`. The change is minimal and maintains readability.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the logic for handling inverted generators."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The proposed patch simplifies the `_image` function and addresses the issue with inverted generators in `PermutationGroup`. The change is minimal and maintains readability.",
+    "issues": [
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding comments to explain the logic for handling inverted generators."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

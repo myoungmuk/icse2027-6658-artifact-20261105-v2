@@ -1,0 +1,50 @@
+{
+  "id": "f7a9f73617c465d5a371d2a8",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_89e5733ded48",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_89e5733ded48.json",
+  "historical_output_sha256": "99a2efee1a35289ff56563e11ba5020c18f3a568a32c0c1fa0955a55840ae099",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 716,
+  "messages_sha256": "98b6614ced82a97acca6429cb9790bde93fa3cde6ff8e37511e8e642b2692fde",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR adds the MOD operator to the list of combinable operators, but it lacks tests to ensure it resolves the output field correctly for all numeric types.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"blocking\",\n      \"description\": \"The PR does not include any tests to verify that the MOD operator correctly resolves the output field for different numeric types.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 112,
+      "returned_model_request_id": "596",
+      "completed_at_utc": "2026-11-06T04:03:41.539101+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR adds the MOD operator to the list of combinable operators, but it lacks tests to ensure it resolves the output field correctly for all numeric types.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the MOD operator correctly resolves the output field for different numeric types."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR adds the MOD operator to the list of combinable operators, but it lacks tests to ensure it resolves the output field correctly for all numeric types.",
+    "issues": [
+      {
+        "failure_mode": "F7",
+        "severity": "blocking",
+        "description": "The PR does not include any tests to verify that the MOD operator correctly resolves the output field for different numeric types."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

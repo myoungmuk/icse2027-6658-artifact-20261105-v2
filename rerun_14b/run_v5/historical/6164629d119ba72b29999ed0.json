@@ -1,0 +1,50 @@
+{
+  "id": "6164629d119ba72b29999ed0",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_4fe78a1d1678",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_4fe78a1d1678.json",
+  "historical_output_sha256": "8c22e1821072464bce13ceb820744dba10c95cc9e186ad6cf82c7624f064afcf",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 913,
+  "messages_sha256": "b6594d3603b31e5a60e1669e4d3a571395f1f6a1686c3dff6dfe582f39f01af4",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR improves error messages for readonly_fields but introduces a potential issue with field_name being None.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F8\",\n      \"severity\": \"blocking\",\n      \"description\": \"The patch assumes field_name is always available, which may not be the case. This could lead to a TypeError if field_name is None.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 105,
+      "returned_model_request_id": "529",
+      "completed_at_utc": "2026-11-06T04:03:24.716916+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR improves error messages for readonly_fields but introduces a potential issue with field_name being None.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch assumes field_name is always available, which may not be the case. This could lead to a TypeError if field_name is None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR improves error messages for readonly_fields but introduces a potential issue with field_name being None.",
+    "issues": [
+      {
+        "failure_mode": "F8",
+        "severity": "blocking",
+        "description": "The patch assumes field_name is always available, which may not be the case. This could lead to a TypeError if field_name is None."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

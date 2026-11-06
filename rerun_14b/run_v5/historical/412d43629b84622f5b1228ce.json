@@ -1,0 +1,50 @@
+{
+  "id": "412d43629b84622f5b1228ce",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_01caa71af39f",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_01caa71af39f.json",
+  "historical_output_sha256": "12f79cb7e198dd312a4eee4d59e3789312dd2b7e618a7d42102ac123ebd9c154",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1506,
+  "messages_sha256": "5db33b2e897701ed0044dae645f5597a3688c52bd0649fdef0e93210e4200875",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly passes the gid to the renderer for AnnotationBbox, but it may introduce a non-minimal change.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change adds two lines of code to the draw method, which could potentially introduce unintended side effects or affect other parts of the codebase.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 110,
+      "returned_model_request_id": "968",
+      "completed_at_utc": "2026-11-06T04:05:55.609811+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly passes the gid to the renderer for AnnotationBbox, but it may introduce a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change adds two lines of code to the draw method, which could potentially introduce unintended side effects or affect other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change correctly passes the gid to the renderer for AnnotationBbox, but it may introduce a non-minimal change.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change adds two lines of code to the draw method, which could potentially introduce unintended side effects or affect other parts of the codebase."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

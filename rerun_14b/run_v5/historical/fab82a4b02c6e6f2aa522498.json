@@ -1,0 +1,50 @@
+{
+  "id": "fab82a4b02c6e6f2aa522498",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_e89ce5a38604",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_e89ce5a38604.json",
+  "historical_output_sha256": "790ec2f18db6903aa180e8166134b1ddfddc89e2c9f80c94f46ecf22c5976bb9",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1544,
+  "messages_sha256": "8d9edb9f578c04df0d792c07a5d70b9206f3c8f4a637e8f4ff4b1b8ae1b290f1",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change correctly resolves the issue by ensuring min_samples is an integer, with minor stylistic improvements.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could be slightly more readable by adding a comment explaining the purpose of the rounding operation.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 1.0\n}",
+      "finish_reason": "stop",
+      "output_tokens": 96,
+      "returned_model_request_id": "1854",
+      "completed_at_utc": "2026-11-06T04:11:40.860465+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change correctly resolves the issue by ensuring min_samples is an integer, with minor stylistic improvements.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding a comment explaining the purpose of the rounding operation."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 1.0
+  },
+  "normalized": {
+    "summary": "The change correctly resolves the issue by ensuring min_samples is an integer, with minor stylistic improvements.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The code could be slightly more readable by adding a comment explaining the purpose of the rounding operation."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 1.0
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

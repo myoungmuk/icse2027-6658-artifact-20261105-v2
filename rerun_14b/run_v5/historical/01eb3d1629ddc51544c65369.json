@@ -1,0 +1,50 @@
+{
+  "id": "01eb3d1629ddc51544c65369",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_d7f1cf5a3c07",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_d7f1cf5a3c07.json",
+  "historical_output_sha256": "09ef2042af7cda5a1e2083aa4181d019fb0fa508727de1245d7479f90413803e",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 1058,
+  "messages_sha256": "aec49be43cc42ad2d74772f718dcbda28c773b38bbc171319035eb97ded7a851",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch appears to fix the issue by removing the case normalization of the path, which seems appropriate for the described problem.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch deviates from the original code by removing the `normcase` function, which might not align with the project's conventions or intentions regarding path handling.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.9\n}",
+      "finish_reason": "stop",
+      "output_tokens": 113,
+      "returned_model_request_id": "1259",
+      "completed_at_utc": "2026-11-06T04:07:40.857053+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch appears to fix the issue by removing the case normalization of the path, which seems appropriate for the described problem.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch deviates from the original code by removing the `normcase` function, which might not align with the project's conventions or intentions regarding path handling."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.9
+  },
+  "normalized": {
+    "summary": "The patch appears to fix the issue by removing the case normalization of the path, which seems appropriate for the described problem.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch deviates from the original code by removing the `normcase` function, which might not align with the project's conventions or intentions regarding path handling."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.9
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

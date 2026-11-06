@@ -1,0 +1,29 @@
+{
+  "code": "8f8c5b1de85bc466c506",
+  "instance_id": "pytest-dev__pytest-9249",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "8f8c5b1de85bc466c506_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 777,
+  "messages_sha256": "957615f1532112db074c67676ea98cb04c080e54602840bc44d735a7e637bcb7",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"ACCEPT\",\n  \"reason\": \"The patch addresses the issue of test IDs containing slashes and square brackets, which cannot be used with the `-k` option. The proposed solution sanitizes the IDs by replacing slashes with colons and removing square brackets, making them shell-safe and selectable. This change improves usability without introducing apparent regressions or compatibility issues.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 83,
+      "returned_model_request_id": "2411",
+      "completed_at_utc": "2026-11-06T04:16:23.781890+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "ACCEPT",
+    "reason": "The patch addresses the issue of test IDs containing slashes and square brackets, which cannot be used with the `-k` option. The proposed solution sanitizes the IDs by replacing slashes with colons and removing square brackets, making them shell-safe and selectable. This change improves usability without introducing apparent regressions or compatibility issues."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

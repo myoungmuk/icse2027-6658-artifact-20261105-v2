@@ -1,0 +1,50 @@
+{
+  "id": "422b315d67be5353fb12f49a",
+  "scope": "agents/sweagent-claude35",
+  "arm": "calibrated",
+  "packet_id": "pa_71c1b1b5cde7",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/sweagent-claude35/reviewer-14b-cal/pa_71c1b1b5cde7.json",
+  "historical_output_sha256": "9e2588f3a6abb79a38787b5482eed02fa358c760f0cc752afb044b8cdb4caedd",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1634,
+  "messages_sha256": "103f2ef6150ea1b800fb4209d62d33fc92e8a4bd4e8d73ea66f3e8970e80b72c",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR correctly resolves the issue by preserving the original type of the input value in `Query.resolve_lookup_value()`. The documentation update is minimal and relevant. The test added is specific to the fix.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F3\",\n      \"severity\": \"major\",\n      \"description\": \"The test added is specific to the fix and may not cover all edge cases or other potential issues with `resolve_lookup_value()`.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 124,
+      "returned_model_request_id": "1929",
+      "completed_at_utc": "2026-11-06T04:12:42.346684+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR correctly resolves the issue by preserving the original type of the input value in `Query.resolve_lookup_value()`. The documentation update is minimal and relevant. The test added is specific to the fix.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The test added is specific to the fix and may not cover all edge cases or other potential issues with `resolve_lookup_value()`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The PR correctly resolves the issue by preserving the original type of the input value in `Query.resolve_lookup_value()`. The documentation update is minimal and relevant. The test added is specific to the fix.",
+    "issues": [
+      {
+        "failure_mode": "F3",
+        "severity": "major",
+        "description": "The test added is specific to the fix and may not cover all edge cases or other potential issues with `resolve_lookup_value()`."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

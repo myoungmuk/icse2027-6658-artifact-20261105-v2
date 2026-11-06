@@ -1,0 +1,50 @@
+{
+  "id": "98345d09a388c62a4953d81e",
+  "scope": "verified_negctrl",
+  "arm": "calibrated",
+  "packet_id": "pk_8efdb687c1ed",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified_negctrl/reviewer-14b-cal/pk_8efdb687c1ed.json",
+  "historical_output_sha256": "361ca67a09ac4deef9517c28f2fd90ddbc1d6d672e38dea89bf59e5447ce2cae",
+  "historical_negative_pass_assertion_known_false": true,
+  "input_tokens": 2468,
+  "messages_sha256": "fb6f3cb7817de3ca51f07a99772b593f6ee414708b5129bbd167c062e6344e54",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The PR resolves the issue by renaming the `method` parameter to `dim_method` in the `convert_label_indexer` function. This change is minimal and does not introduce any apparent regressions or compatibility issues.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The change introduces a new parameter `dim_method` which might be confusing as it is similar to the existing `method` parameter. It would be better to ensure consistency in naming conventions.\"\n    }\n  ],\n  \"merge_decision\": \"merge\",\n  \"confidence\": 0.95\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "1341",
+      "completed_at_utc": "2026-11-06T04:07:59.676789+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The PR resolves the issue by renaming the `method` parameter to `dim_method` in the `convert_label_indexer` function. This change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new parameter `dim_method` which might be confusing as it is similar to the existing `method` parameter. It would be better to ensure consistency in naming conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "confidence": 0.95
+  },
+  "normalized": {
+    "summary": "The PR resolves the issue by renaming the `method` parameter to `dim_method` in the `convert_label_indexer` function. This change is minimal and does not introduce any apparent regressions or compatibility issues.",
+    "issues": [
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The change introduces a new parameter `dim_method` which might be confusing as it is similar to the existing `method` parameter. It would be better to ensure consistency in naming conventions."
+      }
+    ],
+    "merge_decision": "merge",
+    "mergeable": true,
+    "confidence": 0.95
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

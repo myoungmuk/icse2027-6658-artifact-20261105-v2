@@ -1,0 +1,60 @@
+{
+  "id": "7bc5c22785783ec0c0f0c177",
+  "scope": "agents/_gold",
+  "arm": "calibrated",
+  "packet_id": "pg_4a81238991de",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/agents/_gold/reviewer-14b-cal/pg_4a81238991de.json",
+  "historical_output_sha256": "e33ee60ec86c57163db745c10db0107bbbbe1538b1789720abb055fe389d8e1f",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 2508,
+  "messages_sha256": "db0b62c446e16af8b250b24b15fcbf9711e436c1152b2ff24636464d0bd684eb",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The change introduces a potential fix for the inconsistent behavior of `world_to_pixel` in `SlicedLowLevelWCS`, but it may not be minimal or clear.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The change introduces additional logic that may not be necessary or clear. It appends sliced-out world coordinates to the world arrays, which could be a non-minimal approach to solving the issue.\"\n    },\n    {\n      \"failure_mode\": \"F5\",\n      \"severity\": \"minor\",\n      \"description\": \"The code could benefit from additional comments to explain the purpose of the new logic and why it is necessary.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 176,
+      "returned_model_request_id": "1653",
+      "completed_at_utc": "2026-11-06T04:10:03.683014+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The change introduces a potential fix for the inconsistent behavior of `world_to_pixel` in `SlicedLowLevelWCS`, but it may not be minimal or clear.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional logic that may not be necessary or clear. It appends sliced-out world coordinates to the world arrays, which could be a non-minimal approach to solving the issue."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from additional comments to explain the purpose of the new logic and why it is necessary."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The change introduces a potential fix for the inconsistent behavior of `world_to_pixel` in `SlicedLowLevelWCS`, but it may not be minimal or clear.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The change introduces additional logic that may not be necessary or clear. It appends sliced-out world coordinates to the world arrays, which could be a non-minimal approach to solving the issue."
+      },
+      {
+        "failure_mode": "F5",
+        "severity": "minor",
+        "description": "The code could benefit from additional comments to explain the purpose of the new logic and why it is necessary."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

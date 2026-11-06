@@ -1,0 +1,60 @@
+{
+  "id": "584bac5c24d9a036a6dfa875",
+  "scope": "verified",
+  "arm": "calibrated",
+  "packet_id": "pk_fa8d39ba6572",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b-cal/pk_fa8d39ba6572.json",
+  "historical_output_sha256": "3f89937454161e412778fbe39fb16593af4c142d04787630e688d97120835e73",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1145,
+  "messages_sha256": "75f7509b73ad98ff41112a19f6a28b5154e104e55a5d0ac4e0bf2e1613837c71",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue by checking for GROUP BY in the QuerySet.ordered property.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F1\",\n      \"severity\": \"major\",\n      \"description\": \"The patch does not handle other types of queries that might not have an ORDER BY clause, such as DISTINCT queries.\"\n    },\n    {\n      \"failure_mode\": \"F6\",\n      \"severity\": \"minor\",\n      \"description\": \"The patch introduces a new condition that checks for GROUP BY, which is not consistent with the existing code style.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 146,
+      "returned_model_request_id": "877",
+      "completed_at_utc": "2026-11-06T04:05:22.634945+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue by checking for GROUP BY in the QuerySet.ordered property.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle other types of queries that might not have an ORDER BY clause, such as DISTINCT queries."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new condition that checks for GROUP BY, which is not consistent with the existing code style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue by checking for GROUP BY in the QuerySet.ordered property.",
+    "issues": [
+      {
+        "failure_mode": "F1",
+        "severity": "major",
+        "description": "The patch does not handle other types of queries that might not have an ORDER BY clause, such as DISTINCT queries."
+      },
+      {
+        "failure_mode": "F6",
+        "severity": "minor",
+        "description": "The patch introduces a new condition that checks for GROUP BY, which is not consistent with the existing code style."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

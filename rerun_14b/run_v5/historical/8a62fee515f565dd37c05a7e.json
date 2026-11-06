@@ -1,0 +1,50 @@
+{
+  "id": "8a62fee515f565dd37c05a7e",
+  "scope": "lite",
+  "arm": "calibrated",
+  "packet_id": "pk_686c7c2b0a5d",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/lite/reviewer-14b-cal/pk_686c7c2b0a5d.json",
+  "historical_output_sha256": "156a547b69790685e51572e234f855625ad520ad3750aae5b0d32034d7569744",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 1491,
+  "messages_sha256": "6d610be56ad0618c7f17ab7b7cdde9689ea100288639e2ddb6ccac0959633385",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The proposed patch introduces a non-minimal change by creating empty `__init__.py` files, which may not be the correct approach to resolve the issue.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F4\",\n      \"severity\": \"major\",\n      \"description\": \"The patch creates empty `__init__.py` files, which is not a minimal change and may have unintended side effects on the project's structure and behavior.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.8\n}",
+      "finish_reason": "stop",
+      "output_tokens": 122,
+      "returned_model_request_id": "356",
+      "completed_at_utc": "2026-11-06T04:02:17.671574+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The proposed patch introduces a non-minimal change by creating empty `__init__.py` files, which may not be the correct approach to resolve the issue.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch creates empty `__init__.py` files, which is not a minimal change and may have unintended side effects on the project's structure and behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.8
+  },
+  "normalized": {
+    "summary": "The proposed patch introduces a non-minimal change by creating empty `__init__.py` files, which may not be the correct approach to resolve the issue.",
+    "issues": [
+      {
+        "failure_mode": "F4",
+        "severity": "major",
+        "description": "The patch creates empty `__init__.py` files, which is not a minimal change and may have unintended side effects on the project's structure and behavior."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.8
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}

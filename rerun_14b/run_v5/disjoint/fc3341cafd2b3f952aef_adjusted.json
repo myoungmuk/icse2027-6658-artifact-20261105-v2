@@ -1,0 +1,29 @@
+{
+  "code": "fc3341cafd2b3f952aef",
+  "instance_id": "sympy__sympy-17010",
+  "split": "heldout",
+  "kind": "official_unresolved",
+  "id": "fc3341cafd2b3f952aef_adjusted",
+  "arm": "adjusted",
+  "input_tokens": 1029,
+  "messages_sha256": "8a44d51416aa5f0c63736216294f4f8ca3f29abcc4d4b482da710f60ec400228",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "```json\n{\n  \"verdict\": \"REJECT\",\n  \"reason\": \"The patch introduces a potential issue by using `n_positive = -n if n.could_extract_minus_sign() else n`, which could still lead to infinite recursion if `n_positive` is negative. The patch does not address the root cause of the infinite recursion and may not be robust enough to prevent it.\"\n}\n```",
+      "finish_reason": "stop",
+      "output_tokens": 83,
+      "returned_model_request_id": "2687",
+      "completed_at_utc": "2026-11-06T04:17:49.119752+00:00"
+    }
+  ],
+  "parsed": {
+    "verdict": "REJECT",
+    "reason": "The patch introduces a potential issue by using `n_positive = -n if n.could_extract_minus_sign() else n`, which could still lead to infinite recursion if `n_positive` is negative. The patch does not address the root cause of the infinite recursion and may not be robust enough to prevent it."
+  },
+  "normalized": null,
+  "strict_schema_valid": true,
+  "status": "ok"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "8bae2e48ae47e78aed912c85",
+  "scope": "verified",
+  "arm": "strict",
+  "packet_id": "pk_9fecbc2cc923",
+  "historical_output_path": "/workspace/users/2022810001/review_swe/data/llm_reviews/verified/reviewer-14b/pk_9fecbc2cc923.json",
+  "historical_output_sha256": "321d71882e8df1d688262778d763ba0430906fb9dfd3a7e972b98581c9bed50d",
+  "historical_negative_pass_assertion_known_false": false,
+  "input_tokens": 881,
+  "messages_sha256": "634bfc7052817e034826183759584a2441ba078bcc118f6894e0bc0c98ec4a84",
+  "attempts": [
+    {
+      "attempt": 0,
+      "temperature": 0.0,
+      "seed": 6658,
+      "raw": "{\n  \"summary\": \"The patch addresses the issue but may introduce unintended behavior.\",\n  \"issues\": [\n    {\n      \"failure_mode\": \"F2\",\n      \"severity\": \"blocking\",\n      \"description\": \"The change modifies the behavior of the `symbols` function, which could potentially break existing code that relies on the current behavior.\"\n    },\n    {\n      \"failure_mode\": \"F7\",\n      \"severity\": \"major\",\n      \"description\": \"There are no tests provided to verify the change, which increases the risk of introducing regressions.\"\n    }\n  ],\n  \"merge_decision\": \"request_changes\",\n  \"confidence\": 0.6\n}",
+      "finish_reason": "stop",
+      "output_tokens": 138,
+      "returned_model_request_id": "395",
+      "completed_at_utc": "2026-11-06T04:02:33.743402+00:00"
+    }
+  ],
+  "parsed": {
+    "summary": "The patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of the `symbols` function, which could potentially break existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no tests provided to verify the change, which increases the risk of introducing regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "confidence": 0.6
+  },
+  "normalized": {
+    "summary": "The patch addresses the issue but may introduce unintended behavior.",
+    "issues": [
+      {
+        "failure_mode": "F2",
+        "severity": "blocking",
+        "description": "The change modifies the behavior of the `symbols` function, which could potentially break existing code that relies on the current behavior."
+      },
+      {
+        "failure_mode": "F7",
+        "severity": "major",
+        "description": "There are no tests provided to verify the change, which increases the risk of introducing regressions."
+      }
+    ],
+    "merge_decision": "request_changes",
+    "mergeable": false,
+    "confidence": 0.6
+  },
+  "strict_schema_valid": true,
+  "status": "ok"
+}
