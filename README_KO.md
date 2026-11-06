@@ -1,3 +1,5 @@
+> **v15 update:** A new 10-page candidate and author-experience disclosure are in [completion_v15](completion_v15/README.md). Frozen v14 outputs and all prior releases remain preserved. See the separate major-revision and camera-ready deadlines.
+
 # ICSE 2027 #6658 공개 자료 — 2026-11-06 v14
 
 v13은 이전에 미검증이던4사례의 원인 분리 실험을 추가했다. 최종26프로세스·

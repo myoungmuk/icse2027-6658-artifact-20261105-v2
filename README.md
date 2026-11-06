@@ -1,3 +1,5 @@
+> **v15 update:** A new 10-page candidate and author-experience disclosure are in [completion_v15](completion_v15/README.md). Frozen v14 outputs and all prior releases remain preserved. See the separate major-revision and camera-ready deadlines.
+
 # ICSE 2027 #6658 — Beyond %Resolved
 
 **Beyond %Resolved:Reassessing SWE-bench Through Human and LLM Code Review**

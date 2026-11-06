@@ -1,0 +1,183 @@
+{
+  "scope": "Post-hoc repository sensitivity of existing sealed-selection heldout outputs. No new model calls, human ratings, or harness executions.",
+  "tasks": 100,
+  "repositories": 10,
+  "rows": [
+    {
+      "repository": "django__django",
+      "tasks": 38,
+      "sample_share": 0.38,
+      "strict": 0.5394736842105263,
+      "adjusted": 0.5,
+      "adjusted_minus_strict": -0.039473684210526314
+    },
+    {
+      "repository": "sympy__sympy",
+      "tasks": 17,
+      "sample_share": 0.17,
+      "strict": 0.5,
+      "adjusted": 0.5294117647058824,
+      "adjusted_minus_strict": 0.029411764705882353
+    },
+    {
+      "repository": "scikit-learn__scikit-learn",
+      "tasks": 11,
+      "sample_share": 0.11,
+      "strict": 0.5454545454545454,
+      "adjusted": 0.45454545454545453,
+      "adjusted_minus_strict": -0.09090909090909091
+    },
+    {
+      "repository": "sphinx-doc__sphinx",
+      "tasks": 7,
+      "sample_share": 0.07,
+      "strict": 0.6428571428571429,
+      "adjusted": 0.8571428571428571,
+      "adjusted_minus_strict": 0.21428571428571427
+    },
+    {
+      "repository": "pydata__xarray",
+      "tasks": 6,
+      "sample_share": 0.06,
+      "strict": 0.5,
+      "adjusted": 0.5833333333333334,
+      "adjusted_minus_strict": 0.08333333333333333
+    },
+    {
+      "repository": "pytest-dev__pytest",
+      "tasks": 6,
+      "sample_share": 0.06,
+      "strict": 0.4166666666666667,
+      "adjusted": 0.5833333333333334,
+      "adjusted_minus_strict": 0.16666666666666666
+    },
+    {
+      "repository": "matplotlib__matplotlib",
+      "tasks": 5,
+      "sample_share": 0.05,
+      "strict": 0.4,
+      "adjusted": 0.6,
+      "adjusted_minus_strict": 0.2
+    },
+    {
+      "repository": "pylint-dev__pylint",
+      "tasks": 4,
+      "sample_share": 0.04,
+      "strict": 0.5,
+      "adjusted": 0.625,
+      "adjusted_minus_strict": 0.125
+    },
+    {
+      "repository": "astropy__astropy",
+      "tasks": 3,
+      "sample_share": 0.03,
+      "strict": 0.5,
+      "adjusted": 0.5,
+      "adjusted_minus_strict": 0.0
+    },
+    {
+      "repository": "mwaskom__seaborn",
+      "tasks": 3,
+      "sample_share": 0.03,
+      "strict": 0.6666666666666666,
+      "adjusted": 0.5,
+      "adjusted_minus_strict": -0.16666666666666666
+    }
+  ],
+  "metrics": {
+    "strict": {
+      "task_weighted_estimate": 0.525,
+      "repository_cluster_bootstrap_95ci": [
+        0.4846153846153846,
+        0.5555555555555556
+      ],
+      "equal_repository_weighted_mean": 0.5211118705855547,
+      "leave_one_repository_out": {
+        "astropy__astropy": 0.5257731958762887,
+        "django__django": 0.5161290322580645,
+        "matplotlib__matplotlib": 0.531578947368421,
+        "mwaskom__seaborn": 0.520618556701031,
+        "pydata__xarray": 0.526595744680851,
+        "pylint-dev__pylint": 0.5260416666666666,
+        "pytest-dev__pytest": 0.5319148936170213,
+        "scikit-learn__scikit-learn": 0.5224719101123596,
+        "sphinx-doc__sphinx": 0.5161290322580645,
+        "sympy__sympy": 0.5301204819277109
+      },
+      "leave_one_repository_out_range": [
+        0.5161290322580645,
+        0.5319148936170213
+      ]
+    },
+    "adjusted": {
+      "task_weighted_estimate": 0.545,
+      "repository_cluster_bootstrap_95ci": [
+        0.5051020408163265,
+        0.6395348837209303
+      ],
+      "equal_repository_weighted_mean": 0.5732766743060861,
+      "leave_one_repository_out": {
+        "astropy__astropy": 0.5463917525773195,
+        "django__django": 0.5725806451612904,
+        "matplotlib__matplotlib": 0.5421052631578948,
+        "mwaskom__seaborn": 0.5463917525773195,
+        "pydata__xarray": 0.5425531914893617,
+        "pylint-dev__pylint": 0.5416666666666666,
+        "pytest-dev__pytest": 0.5425531914893617,
+        "scikit-learn__scikit-learn": 0.5561797752808989,
+        "sphinx-doc__sphinx": 0.521505376344086,
+        "sympy__sympy": 0.5481927710843374
+      },
+      "leave_one_repository_out_range": [
+        0.521505376344086,
+        0.5725806451612904
+      ]
+    },
+    "adjusted_minus_strict": {
+      "task_weighted_estimate": 0.02,
+      "repository_cluster_bootstrap_95ci": [
+        -0.027777777777777776,
+        0.1171875
+      ],
+      "equal_repository_weighted_mean": 0.052164803720531276,
+      "leave_one_repository_out": {
+        "astropy__astropy": 0.020618556701030927,
+        "django__django": 0.056451612903225805,
+        "matplotlib__matplotlib": 0.010526315789473684,
+        "mwaskom__seaborn": 0.02577319587628866,
+        "pydata__xarray": 0.015957446808510637,
+        "pylint-dev__pylint": 0.015625,
+        "pytest-dev__pytest": 0.010638297872340425,
+        "scikit-learn__scikit-learn": 0.033707865168539325,
+        "sphinx-doc__sphinx": 0.005376344086021506,
+        "sympy__sympy": 0.018072289156626505
+      },
+      "leave_one_repository_out_range": [
+        0.005376344086021506,
+        0.056451612903225805
+      ]
+    }
+  },
+  "cluster_bootstrap_method": "Resample repository labels uniformly with replacement; retain every task within each selected cluster, count repeated draws repeatedly, and divide by the drawn task count.",
+  "resamples": 10000,
+  "seed": 665815,
+  "selected_developer_acceptance": 0.62,
+  "selected_unresolved_acceptance": 0.53,
+  "selected_proxy_specificity": 0.47,
+  "always_accept_or_always_reject_balanced_proxy_agreement": 0.5,
+  "frozen_primary_metrics_unchanged": true,
+  "not_preregistered": true,
+  "limits": [
+    "Few and unequal repository clusters; intervals are exploratory and do not establish external validity.",
+    "The balanced functional proxy is not maintainer truth; a constant decision baseline is only a numerical reference.",
+    "Do not select another arm or task subset from these post-hoc results.",
+    "Do not interpret a confidence interval crossing zero as equivalence or proof of no effect."
+  ],
+  "checks": {
+    "all100complete_pairs_retained": true,
+    "all400heldout_records_valid": true,
+    "primary_adjusted_proxy_matches_frozen_analysis": true,
+    "primary_difference_matches": true,
+    "all_repository_task_counts_sum100": true
+  }
+}
