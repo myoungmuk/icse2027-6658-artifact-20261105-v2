@@ -1,0 +1,305 @@
+{
+  "recorded_at_utc": "2026-11-08T18:44:45.539643+00:00",
+  "scope": "New PostgreSQL backend execution for one previously skipped case; combined ledger reuses unchanged v11 results for 36 cases and existing v13 Dask results for one case. Not 38 newly rerun tasks.",
+  "postgres": {
+    "base": {
+      "counts": {
+        "tests": 13,
+        "skipped": 0,
+        "failures": 1,
+        "errors": 11,
+        "executed": 13,
+        "successful": false
+      },
+      "events": [
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_eq",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/constraints/tests.py\", line 162, in test_eq\n    models.CheckConstraint(\nTypeError: CheckConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/constraints/tests.py\", line 199, in test_repr_with_violation_error_code\n    constraint = models.CheckConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: CheckConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/constraints/tests.py\", line 277, in test_validate_custom_error\n    constraint = models.CheckConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: CheckConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_eq",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/constraints/tests.py\", line 395, in test_eq\n    models.UniqueConstraint(\nTypeError: UniqueConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/constraints/tests.py\", line 590, in test_repr_with_violation_error_code\n    constraint = models.UniqueConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: UniqueConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_validate",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error",
+          "outcome": "failure",
+          "exception_type": "AssertionError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/django/test/testcases.py\", line 1428, in skip_wrapper\n    return test_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/constraints/tests.py\", line 823, in test_validate_conditon_custom_error\n    self.assertEqual(cm.exception.code, \"custom_code\")\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 885, in assertEqual\n    assertion_func(first, second, msg=msg)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 878, in _baseAssertEqual\n    raise self.failureException(msg)\nAssertionError: None != 'custom_code'\n"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/postgres_tests/test_constraints.py\", line 484, in test_eq\n    constraint_12 = ExclusionConstraint(\n                    ^^^^^^^^^^^^^^^^^^^^\nTypeError: ExclusionConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/postgres_tests/test_constraints.py\", line 400, in test_repr\n    constraint = ExclusionConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^\nTypeError: ExclusionConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/postgres_tests/test_constraints.py\", line 783, in test_validate_range_adjacent\n    constraint = ExclusionConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^\nTypeError: ExclusionConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/postgres_tests/test_constraints.py\", line 800, in test_validate_with_custom_code_and_condition\n    constraint = ExclusionConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^\nTypeError: ExclusionConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/constraints/tests.py\", line 81, in test_custom_violation_code_message\n    c = BaseConstraint(name=\"base_name\", violation_error_code=\"custom_code\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: BaseConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.BaseConstraintTests.test_deconstruction",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/base/tests/constraints/tests.py\", line 85, in test_deconstruction\n    constraint = BaseConstraint(\n                 ^^^^^^^^^^^^^^^\nTypeError: BaseConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        }
+      ],
+      "source": "research_followup/postgres16560/execution_v1/base_tests.json",
+      "sha256": "f657bc5b1b81b98e27f0872282d9e77176ca45cd098d29b4ffd6bee56406eec7"
+    },
+    "candidate": {
+      "counts": {
+        "tests": 13,
+        "skipped": 0,
+        "failures": 1,
+        "errors": 9,
+        "executed": 13,
+        "successful": false
+      },
+      "events": [
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_eq",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/constraints/tests.py\", line 162, in test_eq\n    models.CheckConstraint(\nTypeError: CheckConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/constraints/tests.py\", line 199, in test_repr_with_violation_error_code\n    constraint = models.CheckConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: CheckConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/constraints/tests.py\", line 277, in test_validate_custom_error\n    constraint = models.CheckConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: CheckConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_eq",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/constraints/tests.py\", line 395, in test_eq\n    models.UniqueConstraint(\nTypeError: UniqueConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/constraints/tests.py\", line 590, in test_repr_with_violation_error_code\n    constraint = models.UniqueConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: UniqueConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_validate",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error",
+          "outcome": "success"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/postgres_tests/test_constraints.py\", line 484, in test_eq\n    constraint_12 = ExclusionConstraint(\n                    ^^^^^^^^^^^^^^^^^^^^\nTypeError: ExclusionConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/postgres_tests/test_constraints.py\", line 400, in test_repr\n    constraint = ExclusionConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^\nTypeError: ExclusionConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/postgres_tests/test_constraints.py\", line 783, in test_validate_range_adjacent\n    constraint = ExclusionConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^\nTypeError: ExclusionConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition",
+          "outcome": "error",
+          "exception_type": "TypeError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/postgres_tests/test_constraints.py\", line 800, in test_validate_with_custom_code_and_condition\n    constraint = ExclusionConstraint(\n                 ^^^^^^^^^^^^^^^^^^^^\nTypeError: ExclusionConstraint.__init__() got an unexpected keyword argument 'violation_error_code'\n"
+        },
+        {
+          "test_id": "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.BaseConstraintTests.test_deconstruction",
+          "outcome": "failure",
+          "exception_type": "AssertionError",
+          "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 58, in testPartExecutor\n    yield\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 634, in run\n    self._callTestMethod(testMethod)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/workspace/users/2022810001/ICSE2027_6658_Completion_20261109_v17/research_followup/postgres16560/sources/candidate/tests/constraints/tests.py\", line 93, in test_deconstruction\n    self.assertEqual(\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 885, in assertEqual\n    assertion_func(first, second, msg=msg)\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 1184, in assertDictEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n  File \"/usr/local/lib/python3.12/unittest/case.py\", line 715, in fail\n    raise self.failureException(msg)\nAssertionError: {'nam[46 chars]ustom %(name)s message'} != {'nam[46 chars]ustom %(name)s message', 'violation_error_code': 'custom_code'}\n+ {'name': 'base_name',\n+  'violation_error_code': 'custom_code',\n- {'name': 'base_name', 'violation_error_message': 'custom %(name)s message'}\n? ---------------------\n\n+  'violation_error_message': 'custom %(name)s message'}\n"
+        }
+      ],
+      "source": "research_followup/postgres16560/execution_v1/candidate_tests.json",
+      "sha256": "1188ef50dbcc8c51d40939b1e6be5e8c29785f0fdbf04a14c2669f5f100c2fa8"
+    },
+    "developer": {
+      "counts": {
+        "tests": 13,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0,
+        "executed": 13,
+        "successful": true
+      },
+      "events": [
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_eq",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_repr_with_violation_error_code",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.CheckConstraintTests.test_validate_custom_error",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_eq",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_repr_with_violation_error_code",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_validate",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.UniqueConstraintTests.test_validate_conditon_custom_error",
+          "outcome": "success"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_eq",
+          "outcome": "success"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_repr",
+          "outcome": "success"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_range_adjacent",
+          "outcome": "success"
+        },
+        {
+          "test_id": "postgres_tests.test_constraints.ExclusionConstraintTests.test_validate_with_custom_code_and_condition",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.BaseConstraintTests.test_custom_violation_code_message",
+          "outcome": "success"
+        },
+        {
+          "test_id": "constraints.tests.BaseConstraintTests.test_deconstruction",
+          "outcome": "success"
+        }
+      ],
+      "source": "research_followup/postgres16560/execution_v1/developer_tests.json",
+      "sha256": "f7b1a2b1c5a3d0dbc2fc47fa64af7faacc360a86e3a351cb904f61d182703041"
+    }
+  },
+  "case_count": 38,
+  "selected_variant_processes": 114,
+  "totals": {
+    "base": {
+      "tests": 149,
+      "executed": 149,
+      "skipped": 0,
+      "failures": 65,
+      "errors": 19
+    },
+    "candidate": {
+      "tests": 149,
+      "executed": 149,
+      "skipped": 0,
+      "failures": 66,
+      "errors": 22
+    },
+    "developer": {
+      "tests": 149,
+      "executed": 149,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "combined_executed_slots": 447,
+  "combined_skipped_slots": 0,
+  "new_test_processes": 3,
+  "new_test_slots": 39,
+  "newly_enabled_previously_skipped_slots": 12,
+  "prior_environment_initialization_failures": 1,
+  "failed_init_generated_study_results": 0,
+  "replacement_selection_rule": "Keep all original target IDs. Replace only the two previously skipped cases using the existing Dask follow-up and the new PostgreSQL follow-up, irrespective of outcome.",
+  "checks": {
+    "same38cases_retained": true,
+    "same_official_target_ids_for_both_replacements": true,
+    "all149slots_per_variant_now_execute_without_skips": true,
+    "all38_developer_controls_pass": true,
+    "all38_candidate_and_base_controls_fail": true,
+    "all13_PG_methods_per_variant_zero_skips": true,
+    "no_server_left_running": true,
+    "original_sources_and_working_copies_unchanged": true
+  },
+  "coverage_unchanged": {
+    "completed": 50,
+    "total": 58,
+    "percent": 86.21
+  },
+  "B03_status": "P",
+  "new_model_calls": 0,
+  "new_human_ratings": 0,
+  "full_container_harness_runs": 0,
+  "limits": [
+    "This strengthens functional rejection evidence for the scoped 38 candidates; it does not establish truth of every rationale or an independent population error rate.",
+    "Current PostgreSQL/Python runtime differs from the historical run. No model inference or human judgment is rerun.",
+    "The 447 slots span retained and follow-up runs; the three newly executed processes contain 39 slots."
+  ]
+}
