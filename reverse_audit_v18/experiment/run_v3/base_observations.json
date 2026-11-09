@@ -1,0 +1,69 @@
+{
+  "django_version": "3.0",
+  "django_import_path": "/workspace/users/2022810001/ICSE2027_6658_NonHumanCompletion_20261105_v12/experiment_gold/sources/django__django-11179/base/django/__init__.py",
+  "database": "SQLite :memory:",
+  "scenarios": [
+    {
+      "scenario": "fast_success",
+      "pk_before": 1,
+      "can_fast_delete_before_instrumentation": true,
+      "can_fast_delete_during_scenario": true,
+      "delete_returned": true,
+      "pk_after": 1,
+      "row_exists_after": false
+    },
+    {
+      "scenario": "fast_SQL_exception",
+      "pk_before": 2,
+      "can_fast_delete_before_instrumentation": true,
+      "can_fast_delete_during_scenario": true,
+      "exception": {
+        "type": "IntegrityError",
+        "message": "deliberate SQL fault"
+      },
+      "pk_after": 2,
+      "row_exists_after": true
+    },
+    {
+      "scenario": "pre_delete_exception",
+      "pk_before": 3,
+      "can_fast_delete_before_instrumentation": true,
+      "can_fast_delete_during_scenario": false,
+      "exception": {
+        "type": "RuntimeError",
+        "message": "deliberate signal fault"
+      },
+      "pk_after": 3,
+      "row_exists_after": true
+    },
+    {
+      "scenario": "post_delete_exception",
+      "pk_before": 4,
+      "can_fast_delete_before_instrumentation": true,
+      "can_fast_delete_during_scenario": false,
+      "exception": {
+        "type": "RuntimeError",
+        "message": "deliberate signal fault"
+      },
+      "pk_after": 4,
+      "row_exists_after": true
+    },
+    {
+      "scenario": "outer_rollback_after_return",
+      "pk_before": 5,
+      "can_fast_delete_before_instrumentation": true,
+      "can_fast_delete_during_scenario": true,
+      "delete_returned": true,
+      "pk_immediately_after_return": 5,
+      "row_exists_before_outer_rollback": false,
+      "exception": {
+        "type": "RuntimeError",
+        "message": "deliberate outer rollback after successful return"
+      },
+      "pk_after": 5,
+      "row_exists_after": true
+    }
+  ],
+  "fault_injection": true,
+  "independent_adjudication": false
+}

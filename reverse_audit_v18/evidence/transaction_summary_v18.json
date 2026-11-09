@@ -1,0 +1,13 @@
+{
+  "new_successful_cpu_processes": 2,
+  "new_scenarios": 10,
+  "initial_environment_failures": 2,
+  "initial_failures_generated_study_results": 0,
+  "inputs_unchanged": true,
+  "finding": "The official gold clears PK on successful fast delete; injected SQL/signal errors preserve PK and rows. After successful delete returns, an outer rollback restores the row without restoring the gold instance PK. Distinguish object state from transaction state. The latter is a deliberately induced boundary, not a newly discovered natural defect.",
+  "new_inference_calls": 0,
+  "new_human_ratings": 0,
+  "full_harness_runs": 0,
+  "no_gpu_jobs": true,
+  "no_persistent_database_or_server": true
+}
