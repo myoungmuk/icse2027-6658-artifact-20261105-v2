@@ -1,0 +1,830 @@
+\RequirePackage[T1]{fontenc}
+\documentclass[10pt,conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{balance}
+
+\input{numbers.tex}
+
+\setlength{\tabcolsep}{4pt}
+
+\begin{document}
+
+\title{Beyond \%Resolved:Reassessing SWE-bench Through Human and LLM Code Review}
+
+
+\author{\IEEEauthorblockN{Myeongmuk Kang and Geunseok Yang\thanks{Corresponding author: Geunseok Yang (gsyang@hknu.ac.kr).}}
+\IEEEauthorblockA{Department of Computer Science and Engineering, Hankyong National University\\
+Anseong, Republic of Korea\\
+Email: \{myoungmuk819, gsyang\}@hknu.ac.kr\\
+ORCID: \href{https://orcid.org/0009-0002-5351-0269}{0009-0002-5351-0269} (Kang); \href{https://orcid.org/0000-0001-5677-5129}{0000-0001-5677-5129} (Yang)}}
+\hypersetup{pdftitle={Beyond \%Resolved:Reassessing SWE-bench Through Human and LLM Code Review},
+pdfauthor={Myeongmuk Kang and Geunseok Yang}}
+
+\maketitle
+
+
+\begin{abstract}
+Passing benchmark tests does not establish that a maintainer would merge a coding-agent
+patch. Large language model (LLM) reviewers offer a scalable additional assessment, but their
+decisions also require validation. We study test-passing patches from four coding-agent
+scaffolds on SWE-bench Lite and Verified, pairing agent patches with developer-merged gold
+patches under source-blinded review. The headline naive reviewer, Qwen2.5-Coder-14B-AWQ,
+rejects \strictFalseRejLite\% and \strictFalseRejVerified\% of the gold patches on Lite and
+Verified. After jointly adjusting test-context disclosure and the merge-blocking rubric,
+its gold rejection falls to \calFalseRejLite\% and \calFalseRejVerified\%; the same data were
+used during rubric development and evaluation, so this is not independent calibration
+validation. Across ten open-weight reviewer/prompt configurations on Verified, agent and
+gold acceptance rates correlate at $r=0.994$, while agreement across five adjusted
+reviewers is low (Fleiss $\kappa\approx0.02$). A hosted Claude reviewer accepts $164/194$
+agent patches and $191/194$ paired gold patches (exact McNemar $p<0.001$), but its exact
+model snapshot was not recorded and these decisions were not validated against maintainers.
+The archived failing-patch comparison also supplied an incorrect test-pass assertion and
+used different tasks; it cannot establish discrimination under correct test information.
+A single non-independent rater's $40$-packet pilot provides descriptive observations only.
+Our contribution is a control-based diagnosis of reviewer-dependent acceptance, together
+with packets, verdicts, and analysis procedures. Historical gold acceptance is a useful
+reference, but neither agreement with that reference nor a reviewer-specific agent--gold
+difference establishes real-world mergeability.
+\end{abstract}
+
+\section{Introduction}
+The dominant way to evaluate large language model (LLM) coding agents is execution-based:
+SWE-bench~\cite{swebench} frames the task as ``GitHub issue $\rightarrow$ patch'' and
+declares a task \emph{resolved} when the generated patch makes a held-out
+\texttt{FAIL\_TO\_PASS} test pass while preserving \texttt{PASS\_TO\_PASS} tests. The
+leaderboard metric \%Resolved has become the field's primary yardstick.
+
+Real pull requests also undergo code review, where maintainers assess functional
+completeness, regression risk, scope, maintainability, conventions and tests~\cite{modernreview,tufanoreview}.
+Test-passing but incorrect patches and test overfitting are longstanding APR
+concerns~\cite{overfitting,qirandom,patchcorrectness,patchsim}. For multi-file agent
+patches, mergeability additionally involves review criteria beyond correctness.
+We ask whether LLM reviewers can supply a validated review-based complement to
+\%Resolved~\cite{llmjudge}.
+
+
+We operationalize review-based evaluation on test-passing Agentless~\cite{agentless}
+patches from SWE-bench Lite and Verified~\cite{swebench,swebenchverified}. Each agent patch
+and its developer-merged gold counterpart is rendered as a source-blinded review packet.
+Gold acceptance measures agreement with a known historical merge outcome under those
+packet conditions. It does not establish that a gold patch is defect-free or that a new
+reviewer's objection is false. Our measured outcome is \emph{reviewer-specific acceptance},
+which we distinguish from an original maintainer's merge decision throughout the paper.
+
+For Qwen2.5-Coder-14B-AWQ, the naive prompt rejects
+\strictFalseRejLite\%/\strictFalseRejVerified\% of gold patches on Lite/Verified.
+Jointly adjusting test-context disclosure and the blocking criterion increases both agent
+and gold acceptance. Because the historical changes were not ablated under their original pass assertions
+and development inspected the same gold cohort, that comparison establishes neither
+independent calibration generalization nor its cause. A new test-blind factorial
+extension separates the two changes under different, explicitly stated conditions.
+
+The open reviewers show an empirical \emph{validity--discrimination tension}: configurations
+with high historical-gold agreement can also accept most agent patches, while more rejecting
+configurations can disagree with historical gold acceptance. Across five models and two
+prompts, aggregate agent and gold acceptance correlate at $r=0.994$. This correlation does
+not identify a per-patch decision mechanism. A hosted Claude reviewer provides a different
+operating point: \frontAgent\% agent acceptance versus \frontGold\% gold acceptance on
+\frontNpair{} paired tasks ($p\frontMcNemar$). That difference is specific to the archived
+reviewer and rubric; the exact hosted model ID was not logged, and maintainer agreement
+remains unvalidated. Moreover, the failing-patch comparison reused a false test-pass
+assertion, so it supplies no clean confirmation of functional discrimination.
+
+The panel covers Qwen scale, Llama and DeepSeek families, and four coding-agent scaffolds.
+Qwen-32B detects agent--gold differences for SWE-agent and OpenHands that Qwen-14B does
+not. The one-rater pilot is descriptive, not human-population validation.
+
+\noindent Our contributions are:
+\begin{itemize}
+\item Paired historical-gold comparisons of reviewer/prompt-dependent acceptance
+(\S\ref{sec:results}).
+\item A diagnosis of reused calibration tasks, joint prompt changes, different control
+populations and incorrect pass information (\S\ref{sec:design}).
+\item Cross-model/agent acceptance, paired differences and agreement, without claiming
+maintainer validation (\S\ref{sec:results}).
+\item Released packets, verdicts, prompts, schemas, analysis and the exploratory
+$40$-packet human pilot.
+\end{itemize}
+Control examples and human-guided rubrics have precedents~\cite{cihanreview,hitlpatch}.
+Our contribution is the SWE-bench-specific historical-acceptance comparison and its
+empirical diagnosis, not the first use of calibration or positive controls.
+
+\section{Background}
+\textbf{Execution-based agent evaluation.} SWE-bench~\cite{swebench} scores patches for
+real GitHub issues using held-out failure and regression tests. Verified is a $500$-task
+subset annotated as well-specified and solvable~\cite{swebenchverified}. Scaffolds include Agentless~\cite{agentless},
+SWE-agent~\cite{sweagent}, OpenHands~\cite{wang2024openhands},
+AutoCodeRover~\cite{zhang2024autocoderover}, and the multimodal
+extension~\cite{yang2024swebenchmm}. Benchmark contamination can inflate execution
+scores~\cite{riddell2024contamination}. Our study examines test-passing patches:
+\%Resolved certifies the specified test outcome, rather than a project's acceptance.
+
+\textbf{Anatomy of a SWE-bench task and why it shapes review.} Each SWE-bench task bundles an
+issue (the natural-language \texttt{problem\_statement}), a base commit, the developer's merged
+code change (the \emph{gold} \texttt{patch}), and a \texttt{test\_patch} adding or modifying tests. The harness separately
+identifies \texttt{FAIL\_TO\_PASS} and \texttt{PASS\_TO\_PASS} test cases.
+
+At evaluation time the candidate is assessed using held-out test information supplied by
+the benchmark harness. Our review packets contain the candidate source diff and issue
+statement, without the held-out test patch. Thus the reviewer does not see the same material
+as a full pull request with CI output and discussion. Both agent and gold packets omit the
+held-out tests. An ``insufficient tests'' concern may consequently reflect the review format;
+its frequency alone does not establish whether a particular objection is justified.
+
+\section{Our Approach}
+\label{sec:design}
+
+We first fix public predictions and official resolved labels, then render paired agent/gold
+review packets, collect structured reviewer decisions, and measure acceptance relative to
+historical gold outcomes. We also examine archived reviews of harness-failing patches,
+whose incorrect test-pass instruction is documented explicitly below. Source blinding and
+shared rendering reduce explicit source cues; they do not eliminate task familiarity,
+stylistic cues, missing context, or calibration-data reuse.
+
+\subsection{Research questions}
+\begin{itemize}
+\item \textbf{RQ1.} Under the specified LLM reviewer, what fraction of test-passing agent
+patches are accepted, and how large is the apparent Resolution--Mergeability gap?
+\item \textbf{RQ2.} How often does the reviewer accept developer-merged gold patches, and how does rubric adjustment change the paired agent--gold comparison?
+\item \textbf{RQ3.} What failure modes do reviewers cite, and how do they shift between naive and
+adjusted review?
+\item \textbf{RQ4.} How much do acceptance decisions agree across reviewer models of
+different scale and family?
+\item \textbf{RQ5.} How do paired agent--gold comparisons vary across coding-agent scaffolds and adjusted reviewers?
+\end{itemize}
+
+\section{Experiments}
+\subsection{Experimental setup}
+\subsubsection{Data and test-passing labels}
+Headline tables use archived reviews; fresh reruns are labeled separately.
+We study both standard SWE-bench splits: Lite (\nTotalLite{} tasks) and the human-validated
+Verified (\nTotalVerified{} tasks), each task pairing a GitHub issue with the developer's
+merged fix and a hidden test that encodes the bug. The agent under study is
+Agentless~v1.5~\cite{agentless}, a strong, widely-cited, and, importantly for
+reproducibility, \emph{publicly released} scaffold whose predictions we obtain directly rather
+than re-running, eliminating any sampling nondeterminism on our side.
+
+\textbf{Label provenance.} We attribute the reused predictions to the official Agentless
+GPT-4o submission by archive identity, not by inferring the model from test outcomes. We pin
+the SWE-bench experiments metadata and result lists to commit
+\texttt{40f164d5b8f1d249bf95a6df8b74b577fd8e519d} and the entry
+\texttt{20241028\_agentless-1.5\_gpt4o}. The authors' v1.5.0 release prediction files for Lite
+and Verified are byte-identical to the official submission files (all $300$ and $500$
+predictions, respectively). All $96$ Lite and $194$ Verified agent patches in our preserved
+review packets match these files. Rebuilding the main review packets reproduces all $580$
+records, keys, and their order. This establishes consistency with the attributed public
+artifacts; it does not independently observe the provider's internal generation process.
+
+We adopt the official resolved sets, which exactly match the preserved study labels:
+\nResolvedLite{}/\nTotalLite{} resolved on Lite (\pctResolvedLite\%) and
+\nResolvedVerified{}/\nTotalVerified{} on Verified (\pctResolvedVerified\%). Separately,
+archived runs of the official Docker harness on a historical $12$-instance sample agree with
+the adopted Lite labels in all $12$ cases. This sample is a limited execution check, not
+proof of full prediction identity. We did not rerun the complete $800$-task evaluation in the
+archive verification. The main acceptance comparisons concern patches labeled test-passing
+by the corresponding official submission report.
+
+\textbf{Multiple agents.} To test whether our conclusions depend on the choice of agent, we
+additionally study three further scaffolds on Verified, obtained the same way from the public
+submission archive: a weak retrieval baseline (RAG+GPT-4, \%Resolved $2.8$), and two strong
+agentic systems (SWE-agent+Claude-3.5 at $33.6$, OpenHands-CodeAct at $53.0$). With Agentless
+this gives four agents of four distinct designs spanning a $19\times$ range in \%Resolved, with
+resolved labels taken from each entry's official harness report. We verify their reviewed
+patches against official prediction files or per-instance \texttt{patch.diff} artifacts and
+review them with the adjusted reviewers against the same shared gold control. Across the
+five split--agent entries, all $737$ preserved resolved patches match their public sources,
+and all resolved-ID sets match the pinned official reports. The $302$-patch Verified
+negative-control pool also matches the official Agentless predictions; this is a provenance
+check on the pool, not a claim that every reviewer evaluated all of it.
+
+\subsubsection{Blind review packets}
+For every resolved (test-passing) instance we build two blind, pull-request-like packets: one
+containing the \emph{agent} patch and one containing the \emph{developer-merged gold} patch.
+Each packet shows the linked issue (problem statement), repository, base commit, the unified
+diff, and a changed-file summary. To mask explicit source information, packets never reveal the
+candidate source, never show the gold patch alongside the agent patch, and never include the
+held-out \texttt{test\_patch} or issue hints; packet order is shuffled with a fixed seed. The
+source label is stored in a separate key file used only at analysis time.
+
+\subsubsection{Reviewers and calibration}
+
+The open-weight panel comprises Qwen2.5-Coder-7B/14B/32B-Instruct (AWQ for 14B/32B),
+Llama-3.1-8B-Instruct, and DeepSeek-Coder-6.7B-Instruct~\cite{qwen25coder}. We use
+family-qualified names Qwen-7B, Qwen-14B, Qwen-32B, Llama-8B, and DeepSeek-6.7B.
+Coding-agent scaffolds generate the candidate patches; these reviewers perform single-pass
+judgment with a fixed JSON schema. They are not the same systems or tasks. The panel
+provides a scale comparison and two additional families, not a claim to cover the best
+available review systems.
+
+The schema contains a decision (merge, request changes, or reject), issues with severity and
+failure-mode tags, and self-reported confidence. A verdict counts as accepted only if the
+decision is merge and it has no blocking issue. Confidence is not used by any reported
+metric. The fixed taxonomy names F1 functional incompleteness, F2 regression risk, F3 test
+overfitting, F4 non-minimal change, F5 maintainability, F6 convention mismatch, F7 insufficient
+tests, F8 fragility, F9 API/compatibility, F10 performance, and F11 documentation gaps. These
+are reviewer-reported concerns, not independently adjudicated defects.
+
+\textbf{Rubric adjustment.} The naive prompt asks for rigorous review and already asserts
+that automated tests pass. The adjusted prompt additionally explains that test files are
+intentionally absent and narrows blocking severity to concerns over which the reviewer
+would refuse to merge. Its exact assertions include ``reproduction test ... and ...
+regression test suite have ALREADY been run ... and PASS'', ``absence of test files ...
+must NOT by itself be treated as a problem'', and ``Reserve a `blocking' severity ONLY
+for problems that would genuinely make you refuse to merge.'' The user-prompt heading and
+final reminder also assert a pass. The replication package preserves the complete system
+and user templates in \texttt{PROMPTS.md}, not only these excerpts.
+
+We call the revised configuration \emph{adjusted}; historical artifacts retain
+``calibrated'' as their original label. Here calibration means manual gold-referenced
+rubric adjustment, not
+probability/confidence calibration. According to the preserved development account, the
+adjustment followed inspection of naive gold verdicts from the same cohort later evaluated;
+agent verdicts were not inspected. Only the final rubric was preserved, so the number of
+intermediate revisions and inspected examples is not recoverable. ``High and stable'' gold
+acceptance was a qualitative criterion, not a preset numeric threshold. Excluding agent
+examples does not make rubric development independent of the evaluation tasks, nor exclude
+a calibration-induced reduction of an agent--gold difference. Both prompt changes were
+applied together; we cannot identify their separate contributions.
+
+\textbf{Subset stability.} We reuse fixed verdicts, sort instance IDs, and assign index
+modulo five to five groups. No rubric is developed with a group held out. For example,
+Qwen-14B gold rejection is $25.3\pm5.5\%$ across these groups and the hosted reviewer is
+$1.6\pm1.3\%$ (mean and population standard deviation of group percentages). This describes
+within-cohort variation; it is not cross-validation, does not rule out adaptation to gold
+examples, and provides no unseen-task calibration guarantee.
+
+\textbf{Serving and retries.} Open models use a local OpenAI-compatible endpoint.
+The first JSON attempt uses temperature $0.0$ and a $1{,}200$-token limit; up to two
+retries use $0.3$ after errors or unparseable output, rather than uniformly greedy decoding.
+The final valid normalized verdict is retained; remaining parse failures are excluded
+and counted. Normalization caps summaries and each issue description at $600$ characters;
+successful raw text is not retained, limiting rationale audits. For DeepSeek on Verified,
+valid naive agent/gold counts are $190/191$, adjusted counts $191/192$, and failing-patch
+counts $296/302$. Other main configurations have complete $194/194$ agent/gold outputs.
+Fresh inference depends on weights, serving software, hardware and numerical execution;
+temperature zero does not ensure bitwise reproduction.
+
+\textbf{Hosted reviewer identity.} The additional frontier comparison uses Claude Code CLI
+in headless mode, with the same assembled rubric and a JSON-only instruction. The archived
+command is \texttt{claude -p ... --output-format text}, without an explicit
+\texttt{--model}. Neither an exact model ID/snapshot nor the CLI version and provider
+decoding configuration was recorded in the verdicts. The development account places the
+runs on June 30--July 1, 2026; this is not a request-level execution log. We report the
+archived results as ``Claude CLI (snapshot unrecorded)'', without inferring an ID from
+current defaults or code-authoring metadata. Thus exact frontier inference reproduction
+remains unresolved; released verdicts support analysis reproduction only.
+
+\subsubsection{Metrics}
+
+\textbf{Rates and reference outcomes.} \%Resolved is the official execution-based test-pass
+percentage. Review Acceptance among Plausible (RAP) is the accepted fraction of resolved
+agent patches with valid verdicts. Mergeable Resolved Rate (MRR) retains the original name
+for the observed accepted-and-resolved fraction of all benchmark tasks; neither name
+establishes real-world mergeability. The apparent Resolution--Mergeability gap is
+\%Resolved minus MRR, in percentage points.
+Writing $R$ for the officially resolved set, $A_m\subseteq R$ for valid agent verdicts from
+reviewer $m$, and $N$ for all tasks,
+\[
+ \mathrm{RAP}_m=\frac{\sum_{i\in A_m}m(a_i)}{|A_m|},\qquad
+ \mathrm{MRR}^{obs}_m=\frac{\sum_{i\in A_m}m(a_i)}{N}.
+\]
+For complete outputs, $\mathrm{MRR}=|R|\mathrm{RAP}/N$. With parse failures, MRR is only
+the observed accepted fraction; missing outputs are not demonstrated rejections. All rates
+and paired tests report their applicable denominators.
+
+Gold acceptance measures agreement with historical acceptance, and \emph{gold rejection}
+is its complement. The archived term ``false rejection'' uses this historical reference;
+it does not establish that an individual concern was mistaken. \emph{Gold blocking rate}
+is the proportion of valid gold verdicts reporting at least one blocking issue. It differs
+from gold rejection because request-changes and other decisions can lack blocking issues.
+We do not label these objections hallucinations without adjudicating their factual validity.
+
+\textbf{Statistics.} We compare valid paired agent/gold binary verdicts for the same task
+using the two-sided exact McNemar test. It conditions on discordant pairs: gold-only
+acceptance versus agent-only acceptance. Wilson $95\%$ intervals describe proportions.
+Non-significance is failure to detect a difference, not evidence of equivalence; tests are
+exploratory and do not establish a universal acceptance threshold. Fleiss' $\kappa$ uses
+the common valid packets across a reviewer panel, and pairwise Cohen's $\kappa$ compares
+two raters. Low chance-corrected agreement need not mean $50\%$ raw agreement. Parse
+failures can change both the evaluated population and the shared paired subset.
+
+\subsubsection{Controls}
+
+Historical gold references comprise agent-resolved paired subsets. A separate
+full-split test-blind 7B control is reported in Section~\ref{sec:adapted}; it does not
+revalidate the historical instruments. The archived
+\emph{negative-control} pool contains \negN{} non-empty Agentless patches from $306$
+unresolved Verified instances (four patches were empty). Harness non-resolution can reflect
+failure to satisfy FAIL\_TO\_PASS, regression on PASS\_TO\_PASS, or other recorded harness
+failures; it alone does not identify an unfixed target behavior.
+
+\textbf{Incorrect pass information.} These failing-patch reviews reused the unchanged
+adjusted system prompt, user heading, and reminder asserting that tests passed. This
+assertion was false for the pool. We retain the observed rates as an archived comparison
+under incorrect pass information, not a clean test of discrimination with accurate test
+information. The condition was not independently designed in advance as a stress test, and
+the causal effect of the false assertion was not measured against a corrected condition.
+Positive and negative tasks also have zero overlap, so their rates are not a matched
+correctness contrast.
+
+All five open reviewers were attempted on $302$ packets (DeepSeek yielded $296$ valid
+verdicts). The hosted run stopped during expansion at $81$ completed packets. In the
+preserved shuffled sequence these are positions $1$--$79$ and $81$--$82$; position $80$ is
+absent and its cause is unrecorded. This is an incomplete execution sample, not an exact
+first-$81$ prefix or a prespecified random sample. We report counts and selection limits
+alongside rates, and withdraw claims that this condition validates normal functional
+discrimination or identifies a uniquely valid reviewer.
+
+\subsection{Results}
+\label{sec:results}
+\begin{table*}[t]
+\centering
+\caption{Review-based acceptance under naive vs.\ adjusted reviewers. RAP and
+gold-acceptance are percentages; the naive reviewer rejects nearly all merged code in the headline Qwen-14B setting. Adjusted Qwen comparisons do not detect a paired difference; this is not an equivalence result (exact McNemar $p$). Each row has $n$ valid agent and gold verdicts.}
+\label{tab:main}
+\small
+\input{generated/tables/main_table.tex}
+\end{table*}
+
+% Redundant scale plot omitted; preserved values remain in Table I.
+
+
+
+\textbf{RQ1 (agent-only apparent gap).} The headline reviewer in this question is
+Qwen2.5-Coder-14B-AWQ, used as an illustrative anchor rather than an optimal or
+representative judge. The scale and family panels bound this reviewer-specific result.
+Its naive prompt accepts \strictRAPLite\% of resolved Lite patches
+and \strictRAPVerified\% on Verified. Relative to official \%Resolved, the corresponding
+observed gaps are \strictGapLite{} and \strictGapVerified{} percentage points
+(Table~\ref{tab:main}). These numbers describe the chosen reviewer, without yet showing
+that a maintainer would reject those patches.
+
+\textbf{RQ2 (historical-gold comparison).} The same naive Qwen-14B reviewer rejects
+\strictFalseRejLite\% of gold patches on Lite and \strictFalseRejVerified\% on Verified.
+After joint rubric adjustment, gold acceptance rises to
+\calGoldMergeLite\%/\calGoldMergeVerified\%, while agent acceptance rises to
+\calRAPLite\%/\calRAPVerified\%. On Lite the latter has a Wilson $95\%$ interval
+$[\calRAPloLite,\calRAPhiLite]$. The adjusted paired comparisons do not detect an
+agent--gold difference ($p=\calMcNemarLite$ Lite, $\calMcNemarVerified$ Verified), but
+only $35$ Verified pairs are discordant. Neither non-significance nor shared movement in
+rates demonstrates equivalent patch quality or an independently validated rubric.
+
+Within the evaluated Qwen family, naive Lite gold rejection rises from
+\strictSevenFalseRejLite\% (7B) to \strictFalseRejLite\% (14B) and
+\strictThirtyTwoFalseRejLite\% (32B). Adjusted rates are
+\calSevenFalseRejLite\%, \calFalseRejLite\%, and \calThirtyTwoFalseRejLite\%, respectively.
+All adjusted Agentless paired comparisons in this scale ladder have $p>0.15$; this does
+not extend to every coding agent or establish that model scale causes stricter judgment.
+
+
+\textbf{Additional families.} Llama-8B and DeepSeek-6.7B extend the selected panel beyond
+Qwen (Table~\ref{tab:family}). Their naive gold-rejection rates are $84.02\%$ and $80.63\%$,
+falling to $17.53\%$ and $61.98\%$ with adjustment. On Agentless Verified no adjusted open
+reviewer has a paired $p<0.05$; Llama's $p=0.05958$ is close to that descriptive cutoff.
+The valid DeepSeek counts are incomplete and its paired test uses the common tasks,
+reported in the table. These configurations cannot establish generalization to all model
+families or independence from calibration examples.
+
+\begin{table*}[t]
+\centering
+\caption{Cross-family reviewers on Verified. Rates use valid verdicts, and $n_a/n_g/n_p$ gives adjusted agent/gold/paired counts. Non-significant paired comparisons do not establish equivalence.}
+\label{tab:family}
+\small
+\input{generated/tables/family_table.tex}
+\end{table*}
+
+\textbf{Observed validity--discrimination tension.} The highest gold-accepting adjusted
+open reviewers also accept many Agentless patches: Qwen-7B accepts $91.2\%$ of agent patches
+and Llama-8B $89.2\%$. Qwen-32B and DeepSeek-6.7B reject larger shares of gold as well as
+agent patches. This motivates checking both historical-gold agreement and decision
+sensitivity. We use ``validity--discrimination'' descriptively; there is no prespecified
+gold-acceptance cutoff, no validated functional-discrimination test in the flawed negative
+condition, and no proof that leniency causes a paired null.
+
+For all ten open model/prompt configurations on Verified, agent and gold acceptance lie
+near the diagonal (Fig.~\ref{fig:frontier}): their aggregate correlation is
+$r=\dilemmaR$ and the mean absolute difference is about \dilemmaGap{} points.
+An aggregate association across selected configurations does not show that each reviewer
+uses a single global threshold or lacks instance-level information. It does show that
+interpreting agent acceptance without the accompanying gold reference can conceal large
+reviewer/prompt differences.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.82\linewidth]{generated/figures/dilemma_frontier.pdf}
+\caption{Verified acceptance for five open reviewers under naive (circles) and adjusted
+(squares) prompts. Their aggregate agent/gold rates correlate at $r=\dilemmaR$; this does
+not establish an instance-level decision rule. The archived Claude CLI result (star;
+snapshot unrecorded) has a larger gold--agent gap in this selected panel.}
+\label{fig:frontier}
+\end{figure}
+
+
+\textbf{Archived failing-patch comparison.} Table~\ref{tab:ladder} retains the recorded
+acceptance rates while exposing both denominators and the incorrect pass condition. For
+example, Qwen-7B accepts $254/302$ failing candidates under that assertion, versus $169/194$
+gold candidates on different tasks. This is a diagnostic reason to inspect instructions
+and populations before interpreting acceptance. It is not an estimate of the causal effect
+of test status. The hosted reviewer's $43/81$ rate likewise cannot establish that it alone
+passes a clean negative control. Correctly informing the reviewer and comparing suitable
+task populations would be needed to test that claim.
+
+\begin{table}[t]
+\centering
+\caption{Archived adjusted reviews on different gold and failing task sets. Failing-patch
+prompts incorrectly asserted test passage. These rates do not validate discrimination
+under correct test information. $k/n$ denotes accepted/valid verdicts.}
+\label{tab:ladder}
+\footnotesize
+\resizebox{\columnwidth}{!}{\input{generated/tables/negative_table.tex}}
+\end{table}
+
+\textbf{Hosted reviewer paired comparison.} On all $194$ Agentless Verified paired tasks,
+the archived Claude CLI reviewer accepts $164/194$ agent and $191/194$ gold patches.
+There are $29$ gold-only and $2$ agent-only accepted pairs (two-sided exact McNemar
+$p\approx4.63\times10^{-7}$). The paired acceptance difference is
+\frontGapPt{} points, with the archived bootstrap $95\%$ interval
+$[\frontGapCIlo,\frontGapCIhi]$. This is a reviewer-specific statistical difference,
+not demonstrated maintainer agreement or functional correctness. It coexists with high
+gold acceptance in this sample, but the exact hosted snapshot is unrecorded and no
+predeclared control threshold was applied. Pairwise agreement with open reviewers ranges
+from approximately $-0.02$ to $0.13$; agreement with the pilot rater is
+$\kappa=\frontKappaHuman$. These comparisons do not validate the reviewer as a maintainer
+proxy, and we make no recommendation to use it for merge decisions.
+
+Table~\ref{tab:dec}
+reports the schema's decision categories: most non-merge actions are request-changes rather
+than reject. A merge action can still fail the binary acceptance rule if it includes a
+blocking issue, so action percentages need not equal RAP. The distribution alone does not
+establish whether concerns are excessive or justified.
+
+\begin{table}[t]
+\centering
+\caption{Decision distribution under the adjusted reviewers. Non-merge is dominated by
+request-changes rather than reject, and agent and gold distributions track each other.}
+\label{tab:dec}
+\footnotesize
+\input{generated/tables/decisions_table.tex}
+\end{table}
+
+
+\textbf{RQ3 (cited concerns).} We count reviewer-reported concerns without adjudicating
+their truth. The naive prompt often cites insufficient tests (F7), consistent with the
+omission of held-out tests from packets; the data do not identify that omission as the
+sole cause. After the joint adjustment, F7 is rare in Qwen-14B's non-accepted agent verdicts
+($1$ Lite patch, $0$ Verified patches). Regression risk (F2), fragility (F8), and convention
+mismatch (F6) remain (Table~\ref{tab:tax}). Their factual validity and practical importance
+require separate adjudication.
+
+\begin{table}[t]
+\centering
+\caption{Failure modes cited on non-accepted agent patches under the adjusted
+reviewer (count of patches flagged, any severity).}
+\label{tab:tax}
+\small
+\input{generated/tables/taxonomy_table.tex}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Adjusted Qwen verdicts on gold. Gold blocking is the share reporting at least one blocking issue, not an adjudicated hallucination rate or the complement of gold acceptance.}
+\label{tab:quality}
+\footnotesize
+\resizebox{\columnwidth}{!}{\input{generated/tables/quality_table.tex}}
+\end{table}
+
+
+Table~\ref{tab:quality} distinguishes gold rejection from gold blocking. On Lite, Qwen-14B
+rejects $26/96$ gold patches but reports blocking issues on only $3/96$. Across the adjusted
+Qwen models and splits, gold blocking is $3$--$8\%$. A non-accepting decision can therefore
+occur without a blocking label. These counts concern schema outputs, not whether the
+underlying rationale is fabricated or a maintainer considered it.
+
+\textbf{RQ4 (reviewer agreement).} Fleiss' $\kappa$ for the three adjusted Qwen models is
+\fleissAllLite{} on all Lite packets and \fleissAllVerified{} on Verified. Adding Llama and
+DeepSeek gives approximately $0.02$ on common valid Verified packets
+(Table~\ref{tab:agree}). Thus model selection changes individual review decisions as well
+as aggregate rates. A low $\kappa$ is chance-corrected disagreement in the tested panel;
+it neither identifies which reviewer is correct nor validates the benchmark's historical
+reference as an oracle.
+
+\begin{table}[t]
+\centering
+\caption{Inter-reviewer agreement (Fleiss $\kappa$) on common valid packets. The five-reviewer panel includes Qwen, Llama, and DeepSeek; $a/g$ denote agent/gold.}
+\label{tab:agree}
+\small
+\input{generated/tables/agreement_table.tex}
+\end{table}
+
+
+
+
+
+\textbf{RQ5 (coding-agent scaffolds).} We compare the adjusted Qwen panel on RAG+GPT-4
+($14$ resolved tasks), SWE-agent+Claude-3.5 ($168$), Agentless+GPT-4o ($194$), and
+OpenHands-CodeAct ($265$), each against gold on the same tasks (Table~\ref{tab:agents}).
+The $2.8$--$53.0\%$ figures are official execution-based \%Resolved, not reviewer scores.
+Qwen-14B does not detect a paired difference for any scaffold ($p=1.0$, $0.5601$,
+$0.4996$, and $0.3891$). This statement must be reviewer-qualified: Qwen-32B accepts only
+$35.1\%$ of SWE-agent patches versus $62.5\%$ of paired gold, and $29.8\%$ of OpenHands
+patches versus $58.5\%$ of paired gold, with $p<0.001$ in both cases. The null does not
+hold uniformly across the adjusted panel. Qwen-7B comparisons are non-significant, but
+this does not establish equivalence. RAG's $14$ tasks and only two discordant pairs for
+Qwen-14B provide little power, so we draw no evidence of equivalence from that result.
+None of these tests establishes how maintainers would rank the scaffolds' patches.
+
+\begin{table*}[t]
+\centering
+\caption{Across four agents spanning $2.8$--$53\%$ \%Resolved on Verified, adjusted Qwen results vary by reviewer. RAP is agent acceptance; each paired $p$ compares agent and gold on the same tasks. Qwen-32B detects differences for SWE-agent and OpenHands. RAG has low power.}
+\label{tab:agents}
+\small
+\input{generated/tables/agents_table.tex}
+\end{table*}
+
+
+\subsection{Follow-up controls and adapted pilots}
+\label{sec:adapted}
+Following the preprints (Shi: arXiv:2511.10865v1), we adapt Cihan's classification task~\cite{cihanreview} and Shi's
+\emph{unrefined draft-rubric ablation}~\cite{hitlpatch}, alongside a test-blind maintainer
+comparator. All use the same pinned Qwen2.5-Coder-7B-Instruct, greedy decoding, full issue
+and candidate diff, and binary JSON output; execution labels and candidate source are
+hidden. Shi alone additionally derives a per-bug rubric from the developer patch.
+Thus information access differs; this is not a reproduction of the full original systems.
+
+Each pilot selects ten officially resolved and ten unresolved Agentless Verified tasks by
+fixed hash order, subject to recorded length limits, and pairs agent/developer patches.
+The first $120$ judgments produced $37$ Markdown-fenced JSON format failures under the
+frozen strict parser; fence-only recovery is a separate post-hoc analysis. We then freeze
+a fence-tolerant parser and a disjoint $20$-task follow-up before collecting its $120$
+judgments (all valid), without changing judging prompts. Table~\ref{tab:adapted} reports
+only this follow-up. Across both pilots there are $240$ judgments and $40$ rubric drafts.
+
+\begin{table}[t]
+\centering
+\caption{Disjoint follow-up pilot: agreement with inherited functional labels on agent
+patches (A), rejection of unresolved patches (N), and developer-patch acceptance (G).
+These are adapted methods, not maintainer-validation or superiority results.}
+\label{tab:adapted}
+\footnotesize
+\begin{tabular}{lrrr}
+\toprule
+Adapted judge & A ($n=20$) & N ($n=10$) & G ($n=20$) \\
+\midrule
+Maintainer & $14/20$ & $7/10$ & $9/20$ \\
+Cihan & $13/20$ & $7/10$ & $8/20$ \\
+Shi draft & $15/20$ & $6/10$ & $11/20$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The $20$ agent cases per method support no superiority claim. Inherited execution
+labels are neither new tests nor mergeability truth. Cihan's function task is adapted
+to diffs without correction generation; Shi's human refinement/consensus are absent.
+Its extra developer-reference information also biases gold acceptance. These pilots
+validate neither the archived negative inputs nor historical reviewers.
+
+A separately frozen test-blind 7B extension covers all Lite ($300$) and Verified ($500$)
+gold patches without agent selection/truncation: $707$ unique gold ($93$ shared), plus
+$302$ unresolved candidates. All $1,009$ calls finish; three malformed responses remain
+missing. Gold acceptance is $143/299$ Lite and $284/499$ Verified. Among $300$ valid
+same-task failing/developer pairs, acceptance is $135/300$ versus $149/300$,
+discordants $(47,61)$, exact McNemar $p=.211$. Four empty candidates and two incomplete
+pairs are excluded, without inferring equivalence or independent calibration.
+
+
+\textbf{New test-blind factorial controls.} Before inference, we freeze a $2\times2$
+study independently toggling omission explanation (E) and narrowed blocking guidance (B).
+Both pinned Qwen models judge all $707$ unique gold patches and $496$ same-task agent
+candidates ($194$ resolved, $302$ unresolved), with full issue/diff and no test-outcome
+or source labels. All $9,624$ calls return valid responses; no input is overlength and no output is malformed or truncated.
+Table~\ref{tab:factorial} reports unique-gold acceptance. For 7B, the gold-acceptance effect averaged over the other factor is E $-4.7$ points (CI $-6.6$ to $-2.8$), B $+0.3$ points (CI $-2.1$ to $+2.7$); interaction $+3.7$ points. For 14B-AWQ, the gold-acceptance effect averaged over the other factor is E $-0.7$ points (CI $-1.6$ to $+0.1$), B $+1.3$ points (CI $+0.1$ to $+2.5$); interaction $-1.1$ points.
+Full interaction intervals are released. Intervals use task-cluster bootstrap; $24$ prespecified simple contrasts have Holm
+adjustment in the artifact. At E1B1, same-task failing/developer acceptance is
+7B: $69/302$ versus $90/302$; 14B: $5/302$ versus $6/302$. These are functional proxies. This new test-blind instrument
+does not identify the causes of the historical joint-prompt shift; task reuse excludes
+unseen-task validation, and quantization differences prevent a size-effect conclusion.
+
+\begin{table}[t]
+\centering
+\caption{New factorial extension: accepted/valid unique gold patches, out of $707$
+planned per condition. E explains omitted tests; B narrows blocking guidance. Full-split,
+matched-pair, missingness and interaction results are released.}
+\label{tab:factorial}
+\footnotesize
+\begin{tabular}{ccrr}
+\toprule
+E & B & Qwen-7B & Qwen-14B-AWQ \\
+\midrule
+0 & 0 & $256/707$ & $16/707$ \\
+1 & 0 & $210/707$ & $15/707$ \\
+0 & 1 & $245/707$ & $29/707$ \\
+1 & 1 & $225/707$ & $20/707$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+A prospectively frozen 7B follow-up excludes all $707$ prior tasks: $40$ development
+tasks select between two test-blind configurations before $100$ held-out tasks with
+developer/unresolved SWE-agent patches. Selection/output hashes precede held-out inference.
+Of $560$ inputs, $558$ are valid; two overlength developer inputs are not replaced.
+Adjusted accepts $57/99$ developer and $49/100$ unresolved patches. Complete-pair proxy
+agreement is $54.04\%$ on $99$ tasks (bootstrap $95\%$ CI $47.47$--$60.61\%$);
+adjusted-minus-strict is $2.53$ points (CI $-3.03$--$8.59$). This establishes neither
+clear proxy improvement nor maintainer validity; it excludes no pretraining exposure.
+\textbf{Fresh 14B rerun and validation.} A pinned Qwen-14B-AWQ/vLLM~0.10.2 rerun
+uses identical messages/parser/retries for all $2,197$ archived records. Strict gold
+acceptance is $6/96$ Lite and $15/194$ Verified; adjusted is $72/96$ and $153/194$.
+Adjusted Verified gold decisions match the archive on $162/194$ inputs. Unknown
+historical revision/runtime identity precludes exact recovery, and the repeated false
+pass assertion still invalidates its negative control.
+
+A separate frozen $140$-task study excludes all $847$ prior tasks. Development
+selects adjusted ($47/80$), sealed before $100$ held-out tasks. Of $560$ inputs,
+$558$ are valid; missing outputs are not rejections. Adjusted accepts $62/100$
+developer and $53/100$ unresolved patches. Complete-pair proxy agreement is
+$54.50\%$ (bootstrap $95\%$ CI $49.00$--$60.00\%$); adjusted-minus-strict
+is $2.00$ points (CI $-4.00$--$8.00$). Labels remain functional proxies, not
+maintainer truth. Different cohorts, quantization and runtimes isolate no size effect.
+
+\subsection{Qualitative inspection of cited concerns}
+A post-hoc audit selects the first two nonaccepted hosted cases lexically
+within resolved-agent ($30$), gold ($3$), and failing-agent ($38$) strata.
+Five focused claims have local probe support; Django's ordinary-path stale-PK objection is
+contradicted, including $15$ full-package SQLite scenarios. Official regressions
+for all $38$ hosted nonaccepted failing candidates fail on base/candidate and
+pass on developer. With Dask/PostgreSQL follow-ups, the combined $114$-run
+ledger executes all $447$ slots without skips; earlier attempts remain archived.
+xarray's \texttt{sortby} NameError is reproduced; several ``issue resolved''
+summaries conflict with regressions. ``Django merged'' is no exposure proof.
+
+Across three hosted nonaccepted gold cases, base fails and gold passes official targets
+($8$ processes, $24$ slots); $6$ witnesses cover $33$ scenarios. Django's stale-PK claim
+is contradicted; scikit-learn's reviewer calls the argument omission currently harmless.
+Matplotlib's empty-bin regression is real: diagnostic \texttt{mincnt=1} removes it,
+consistent with fix \#27179, while explicit zero errors. The $365$-day audit measures
+churn, not defects.
+
+Further probes find Django constraint errors behind a missing import, scikit-learn
+NameError/integer truncation, Astropy structured-mask loss and repeated xarray rolling
+labels. A PCA path remains correct. Full test/witness logs and replaced attempts remain
+archived. These post-hoc interventions support functional findings, not every rationale
+sentence or a population error rate; they are not original patches or a full container harness.
+
+\subsection{A human-review pilot}
+Author Myeongmuk Kang, a non-independent, source-blinded rater, reviewed $40$ packets from
+$20$ Agentless Verified paired tasks. The sampling script sorts task IDs, shuffles with \texttt{Random(7)}, selects
+$20$, and then shuffles the $40$ agent/gold packets. The form uses the adjusted rubric,
+but limits issues to $1{,}800$ characters and diffs to $9{,}000$, versus $6{,}000$ and
+$24{,}000$ in the LLM path. Thus shared rubric does not mean identical input context.
+Retrospectively, Kang reports code/data correctness checks in his own research, with no
+recalled experience modifying others' code. Duration and rubric-design involvement remain
+unrecorded; independent or professional review expertise is not established.
+
+This rater accepts $15/20$ agent and $13/20$ gold packets ($75\%$ and $65\%$), with
+paired $p=0.75$. Agreement with adjusted open reviewers ranges approximately from
+$-0.22$ to $0.07$, and with the archived hosted reviewer is $\kappa=0.167$. This sample
+provides descriptive observations only. It does not establish what humans in general would
+accept, whether context truncation caused disagreement, or that any LLM or human escapes
+an operational dilemma. Independent raters and context-controlled comparisons are needed
+for such claims.
+
+\section{Discussion}
+\label{sec:discussion}
+\subsection{Interpretation and diagnostic guidance}
+\textbf{An acceptance rate needs a reference.} Gold outcomes offer a known historical
+decision against which a reviewer can be compared cheaply, but not a defect-free truth
+label. A worked example shows why the reference matters: on Lite the naive Qwen-14B
+accepts $6/96$ agent patches and $5/96$ gold patches. The adjusted configuration accepts
+$68/96$ and $70/96$, respectively. Reading only the agent column would suggest a large
+change in patch quality even though the candidate patches are unchanged. The comparison
+instead shows sensitivity to the assembled review configuration. It does not isolate
+which prompt change caused that sensitivity. The diagnostic decision is to withhold
+a mergeability interpretation for both configurations: historical-gold disagreement
+limits the naive judge, while reused development tasks and the flawed failing-patch
+condition leave the adjusted judge unvalidated. Higher acceptance alone is insufficient.
+
+\textbf{Separate three questions.} Historical-gold agreement, sensitivity to functional
+failure, and agreement with present-day maintainers are different outcomes. The paired
+hosted result answers a reviewer-specific agent/gold question, and the pilot reports one
+rater's judgments. The archived failing-patch rates answer neither functional-discrimination
+under correct test information nor a causal test-status question. Consequently, neither
+the hosted reviewer nor an open model is validated for real merge-decision support.
+
+\textbf{A diagnostic protocol.} Future benchmark studies can (1) document source-blinded
+packet contents and truthful test-status information, (2) report historical-gold acceptance
+alongside agent acceptance, (3) develop rubrics using tasks separate from evaluation,
+(4) introduce appropriate failing-patch controls with explicit task selection and accurate
+instructions, (5) report valid counts, paired differences, missingness, and multiple-reviewer
+agreement, and (6) obtain independent maintainer validation before making practical merge
+recommendations. This is benchmark-design guidance, not a validated decision aid or a
+universal numeric pass/fail rule. Our study demonstrates the need for these distinctions;
+it does not claim to have completed every step.
+
+\textbf{Scope of the observed tension.} Aggregate correlation and low agreement
+show reviewer dependence, not a single leniency mechanism. Qwen-32B's
+cross-scaffold differences and the hosted result rule out a blanket agent--gold
+null. Scale alone does not explain Qwen results; training/alignment histories differ.
+
+\textbf{Analysis reproduction versus fresh inference.} Stored verdicts regenerate
+analyses, not inference. The missing hosted snapshot prevents exact replay. Computation
+supplies neither independent adjudication nor missing identity.
+
+\subsection{Threats to validity}
+\textbf{Construct.} Historical merges can contain defects and depend on PR
+context, CI, plans and social factors absent from packets. Binary labels record
+reviewer decisions, without validating maintainers or objections. Technical probes
+and the three-case history audit establish neither independent rationale truth nor
+population defect incidence. The single non-independent rater and shorter human
+inputs limit validation and human--LLM comparison.
+
+\textbf{Internal.} Development reused evaluation gold; intermediate rubrics,
+inspected IDs and iteration count were lost. Fixed-verdict subsets establish no
+task independence. Historical joint changes were not separated under the original pass assertions.
+The new factorial instrument instead withholds outcomes and reuses prior tasks. False pass assertions
+and different negative/positive populations invalidate the intended discrimination
+control. The hosted $81$-packet sample also has an unexplained missing position.
+
+\textbf{Contamination and blinding.} Agents/reviewers may recognize public issues,
+states or fixes. Source masking excludes no pretraining exposure; its direction
+and magnitude remain unknown. Equal aggregate rates cannot rule out recognition.
+This differs from documented rubric-development gold reuse; public post-merge
+histories also predate judging.
+
+\textbf{External.} Selected Python tasks, four scaffolds, five open reviewers and
+one unknown hosted snapshot cover limited methods, languages and versions.
+Historical controls use resolved subsets; new full-split factorial coverage
+uses two pinned Qwen instruments, not the whole historical panel. RAG's $14$ tasks justify no broad weak-agent claim. Industrial effort
+and deployment effects are unmeasured.
+
+\textbf{Statistical and computational.} Tests are exploratory on valid complete
+pairs. Parsing, normalization and higher-temperature retry effects were not
+isolated. Wilson intervals assume binomial sampling; correlations are descriptive.
+Non-significance is not equivalence, and disagreement identifies no correct rater.
+Serving/numerical dependencies and missing hosted identity limit exact replay.
+
+\section{Related Work}
+\textbf{Execution and patch correctness.} Plausible but incorrect repairs are a longstanding
+APR concern~\cite{overfitting,qirandom}. GenProg, Defects4J, and language-model
+repair~\cite{legoues2012genprog,just2014defects4j,xia2022alpharepair,jiang2023impact}
+motivate checking beyond available tests. Patch assessment uses behavioral or learned
+evidence~\cite{patchcorrectness,patchsim}; our outcome is acceptance of repository review
+packets relative to historical merge decisions.
+
+\textbf{Human-guided assessment.} Shi et al.~\cite{hitlpatch} generate per-bug rubrics,
+obtain human review/refinement, and judge patch validity against human consensus.
+Cihan et al.~\cite{cihanreview} compare judgments of generated HumanEval code and
+canonical solutions. Shared rubrics and positive controls are precedents, not our novelty.
+Historical repository merges are not stronger truth than adjudicated human labels.
+Our non-independent human pilot is not comparable validation; the additional method
+adaptations in \S\ref{sec:adapted} likewise omit Shi's human-refinement stage.
+
+\textbf{Review automation.} Industrial review includes design, conventions, and knowledge
+transfer~\cite{modernreview,bacchelli2013review,rigby2013convergent}.
+Tufano et al.~\cite{tufanoreview} and prompting/fine-tuning
+comparisons~\cite{promptreview} study comments and revisions. LLaMA-Reviewer~\cite{llamareviewer}
+also predicts review necessity; RovoDev~\cite{rovodev} generates comments and filters
+candidates using binary judgments. Review necessity and comment validity differ from
+binary historical patch acceptance. We do not reproduce all these systems or claim
+their deployment outcomes. The artifact replays original saved outputs for Cihan,
+LLaMA-Reviewer and Tufano: function correctness, review necessity and revision exact
+match, respectively, rather than same-task mergeability comparisons.
+
+\textbf{Judge reliability.} LLM judges~\cite{llmjudge} exhibit comparison and self-preference
+biases~\cite{wang2024fair,panickssery2024selfpref}. Our contribution is a SWE-bench-specific
+diagnosis using historical gold, cross-agent paired decisions, and reviewer agreement,
+with calibration reuse and flawed archived negative inputs explicitly limiting the claims.
+
+\section{Conclusion}
+Review-based scores depend on the judge as well as the patch. Historical comparisons
+and new test-blind factorial controls establish neither equivalent patch quality nor
+maintainer validity. The hosted identity is missing and archived negative inputs are
+flawed. Targeted probes establish no population objection-error rate. Task-disjoint
+7B/14B studies provide no clear proxy improvement and isolate no size effect.
+Independent calibration and human validation remain necessary before operational use.
+
+\section*{Data and Artifact Availability}
+Version \texttt{2026.11.09-v21} at
+\url{https://github.com/myoungmuk/icse2027-6658-artifact-20261105-v2}
+preserves inputs/outputs and regeneration scripts for historical analyses, adapted
+pilots, follow-up controls, raw factorial responses and technical/history checks.
+Offline analysis neither reruns inference nor recovers missing hosted identity or
+rubric history.
+
+\section*{Acknowledgments}
+OpenAI Codex~\cite{openaicodex} assisted revision, analysis, figures, reference checks and
+implementation. The authors are responsible for all claims and the final manuscript.
+
+\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
